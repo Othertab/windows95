@@ -291,17 +291,6 @@ V86Starter.prototype.continue_init = async function(emulator, options)
         this.screen_adapter = new DummyScreenAdapter(this.bus);
     }
 
-    if(options["serial_container"])
-    {
-        this.serial_adapter = new SerialAdapter(options["serial_container"], this.bus);
-        //this.recording_adapter = new SerialRecordingAdapter(this.bus);
-    }
-
-    if(options["serial_container_xtermjs"])
-    {
-        this.serial_adapter = new SerialAdapterXtermJS(options["serial_container_xtermjs"], this.bus);
-    }
-
     if(!options["disable_speaker"])
     {
         this.speaker_adapter = new SpeakerAdapter(this.bus);
@@ -628,7 +617,6 @@ V86Starter.prototype.continue_init = async function(emulator, options)
 
         function finish()
         {
-            this.serial_adapter && this.serial_adapter.show && this.serial_adapter.show();
 
             this.bus.send("cpu-init", settings);
 
@@ -719,7 +707,6 @@ V86Starter.prototype.destroy = function()
     this.network_adapter && this.network_adapter.destroy();
     this.mouse_adapter && this.mouse_adapter.destroy();
     this.screen_adapter && this.screen_adapter.destroy();
-    this.serial_adapter && this.serial_adapter.destroy();
 };
 
 /**
@@ -1075,35 +1062,6 @@ V86Starter.prototype.keyboard_set_status = function(enabled)
     }
 };
 
-
-/**
- * Send a string to the first emulated serial terminal.
- *
- * @param {string} data
- * @export
- */
-V86Starter.prototype.serial0_send = function(data)
-{
-    for(var i = 0; i < data.length; i++)
-    {
-        this.bus.send("serial0-input", data.charCodeAt(i));
-    }
-};
-
-/**
- * Send bytes to a serial port (to be received by the emulated PC).
- *
- * @param {Uint8Array} data
- * @export
- */
-V86Starter.prototype.serial_send_bytes = function(serial, data)
-{
-    for(var i = 0; i < data.length; i++)
-    {
-        this.bus.send("serial" + serial + "-input", data[i]);
-    }
-};
-
 /**
  * Mount another filesystem to the current filesystem.
  * @param {string} path Path for the mount point
@@ -1296,10 +1254,10 @@ V86Starter.prototype.automatically = function(steps)
 
 /**
  * Reads data from memory at specified offset.
- * 
- * @param {number} offset 
- * @param {number} length 
- * @returns 
+ *
+ * @param {number} offset
+ * @param {number} length
+ * @returns
  */
 V86Starter.prototype.read_memory = function(offset, length) {
     return this.v86.cpu.read_blob(offset, length);
@@ -1307,7 +1265,7 @@ V86Starter.prototype.read_memory = function(offset, length) {
 
 /**
  * Writes data to memory at specified offset.
- * 
+ *
  * @param {Array.<number>|Uint8Array} blob
  * @param {number} offset
  */

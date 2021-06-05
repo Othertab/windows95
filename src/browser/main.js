@@ -22,18 +22,6 @@
         return parameters;
     }
 
-    function format_timestamp(time) {
-        if (time < 60) {
-            return time + "s";
-        } else if (time < 3600) {
-            return (time / 60 | 0) + "m " + v86util.pad0(time % 60, 2) + "s";
-        } else {
-            return (time / 3600 | 0) + "h " +
-                v86util.pad0((time / 60 | 0) % 60, 2) + "m " +
-                v86util.pad0(time % 60, 2) + "s";
-        }
-    }
-
     function chr_repeat(chr, count) {
         var result = "";
 
@@ -52,7 +40,7 @@
 
         if (e.file_name.endsWith(".wasm")) {
             const parts = e.file_name.split("/");
-            el.textContent = "Fetching " + parts[parts.length - 1] + " ...";
+            el.textContent = "Loading " + parts[parts.length - 1] + " ...";
             return;
         }
 
@@ -75,7 +63,7 @@
             var per50 = Math.floor(per100 / 2);
 
             line += per100 + "% [";
-            line += chr_repeat("#", per50);
+            line += chr_repeat("█", per50);
             line += chr_repeat(" ", 50 - per50) + "]";
         } else {
             line += chr_repeat(".", progress_ticks++ % 50);
@@ -106,23 +94,6 @@
             set_profile("custom");
 
             var images = [];
-            var last_file;
-
-            var floppy_file = $("floppy_image").files[0];
-            if (floppy_file) {
-                last_file = floppy_file;
-                settings.fda = {
-                    buffer: floppy_file
-                };
-            }
-
-            var cd_file = $("cd_image").files[0];
-            if (cd_file) {
-                last_file = cd_file;
-                settings.cdrom = {
-                    buffer: cd_file
-                };
-            }
 
             var hda_file = $("hda_image").files[0];
             if (hda_file) {
@@ -131,31 +102,8 @@
                     buffer: hda_file
                 };
             }
-
-            var hdb_file = $("hdb_image") && $("hdb_image").files[0];
-            if (hdb_file) {
-                last_file = hdb_file;
-                settings.hdb = {
-                    buffer: hdb_file
-                };
-            }
-
-            if ($("multiboot_image")) {
-                var multiboot_file = $("multiboot_image").files[0];
-                if (multiboot_file) {
-                    last_file = multiboot_file;
-                    settings.multiboot = {
-                        buffer: multiboot_file
-                    };
-                }
-            }
-
             start_emulation(settings);
         };
-
-        if (DEBUG) {
-            debug_onload(settings);
-        }
 
         // Abandonware OS images are from https://winworldpc.com/library/operating-systems
         var oses = [{
@@ -263,24 +211,14 @@
         function start_profile(infos) {
             $("boot_options").style.display = "none";
 
-            settings.filesystem = infos.filesystem;
-
             if (infos.state) {
                 $("reset").style.display = "none";
                 settings.initial_state = infos.state;
             }
-
-            settings.fda = infos.fda;
-            settings.cdrom = infos.cdrom;
             settings.hda = infos.hda;
-            settings.multiboot = infos.multiboot;
-            settings.bzimage = infos.bzimage;
-            settings.initrd = infos.initrd;
-            settings.cmdline = infos.cmdline;
-            settings.bzimage_initrd_from_filesystem = infos.bzimage_initrd_from_filesystem;
             settings.preserve_mac_from_state_image = infos.preserve_mac_from_state_image;
 
-            settings.acpi = infos.acpi;
+            settings.acpi = false;
             settings.memory_size = infos.memory_size;
             settings.vga_memory_size = infos.vga_memory_size;
 
@@ -300,55 +238,6 @@
                     emulator.keyboard_send_text(query_args["c"] + "\n");
                 }, 25);
             }
-        }
-    }
-
-    function debug_onload(settings) {
-        // called on window.onload, in debug mode
-
-        var log_levels = $("log_levels");
-
-        if (log_levels) {
-            for (var i = 0; i < LOG_NAMES.length; i++) {
-                var mask = LOG_NAMES[i][0];
-
-                if (mask === 1)
-                    continue;
-
-                var name = LOG_NAMES[i][1].toLowerCase(),
-                    input = document.createElement("input"),
-                    label = document.createElement("label");
-
-                input.type = "checkbox";
-
-                label.htmlFor = input.id = "log_" + name;
-
-                if (LOG_LEVEL & mask) {
-                    input.checked = true;
-                }
-                input.mask = mask;
-
-                label.appendChild(input);
-                label.appendChild(document.createTextNode(v86util.pads(name, 4) + " "));
-                log_levels.appendChild(label);
-
-                if (i === Math.floor(LOG_NAMES.length / 2)) {
-                    log_levels.appendChild(document.createTextNode("\n"));
-                }
-            }
-
-            log_levels.onchange = function(e) {
-                var target = e.target,
-                    mask = target.mask;
-
-                if (target.checked) {
-                    LOG_LEVEL |= mask;
-                } else {
-                    LOG_LEVEL &= ~mask;
-                }
-
-                target.blur();
-            };
         }
     }
 
@@ -404,8 +293,8 @@
         }
 
         const networking_proxy = $("networking_proxy").value;
-        const disable_audio = $("disable_audio").checked;
-        const enable_acpi = settings.acpi === undefined ? $("enable_acpi").checked : settings.acpi;
+        const disable_audio = false;
+        const enable_acpi = settings.acpi === false;
 
         /** @const */
         var BIOSPATH = "bios/";
@@ -436,7 +325,6 @@
             "vga_memory_size": vga_memory_size,
 
             "screen_container": $("screen_container"),
-            "serial_container_xtermjs": $("terminal"),
 
             "boot_order": settings.boot_order || parseInt($("boot_order").value, 16) || 0,
 
@@ -445,21 +333,11 @@
             "bios": bios,
             "vga_bios": vga_bios,
 
-            "fda": settings.fda,
             "hda": settings.hda,
-            "hdb": settings.hdb,
-            "cdrom": settings.cdrom,
 
-            "multiboot": settings.multiboot,
-            "bzimage": settings.bzimage,
-            "initrd": settings.initrd,
-            "cmdline": settings.cmdline,
-            "bzimage_initrd_from_filesystem": settings.bzimage_initrd_from_filesystem,
-
-            "acpi": enable_acpi,
+            "acpi": false,
             "initial_state": settings.initial_state,
-            "filesystem": settings.filesystem || {},
-            "disable_speaker": disable_audio,
+            "disable_speaker": false,
             "preserve_mac_from_state_image": settings.preserve_mac_from_state_image,
 
             "autostart": true,
@@ -468,10 +346,6 @@
         if (DEBUG) window["emulator"] = emulator;
 
         emulator.add_listener("emulator-ready", function() {
-            if (DEBUG) {
-                debug_start(emulator);
-            }
-
             if (emulator.v86.cpu.wm.exports["profiler_is_enabled"]()) {
                 const CLEAR_STATS = false;
 
@@ -573,7 +447,6 @@
 
 
         var last_tick = 0;
-        var running_time = 0;
         var last_instr_counter = 0;
         var interval = null;
         var os_uses_mouse = false;
@@ -594,12 +467,9 @@
             total_instructions += last_ips;
 
             var delta_time = now - last_tick;
-            running_time += delta_time;
             last_tick = now;
 
             $("speed").textContent = (last_ips / 1000 / delta_time).toFixed(1);
-            $("avg_speed").textContent = (total_instructions / 1000 / running_time).toFixed(1);
-            $("running_time").textContent = format_timestamp(running_time / 1000 | 0);
         }
 
         emulator.add_listener("emulator-started", function() {
@@ -912,39 +782,6 @@
                 }
             }.bind(this));
         };
-    }
-
-    function debug_start(emulator) {
-        if (!emulator.v86) {
-            return;
-        }
-
-        // called as soon as soon as emulation is started, in debug mode
-        var debug = emulator.v86.cpu.debug;
-
-        $("dump_gdt").onclick = debug.dump_gdt_ldt.bind(debug);
-        $("dump_idt").onclick = debug.dump_idt.bind(debug);
-        $("dump_regs").onclick = debug.dump_regs.bind(debug);
-        $("dump_pt").onclick = debug.dump_page_directory.bind(debug);
-
-        $("dump_log").onclick = function() {
-            dump_file(log_data.join(""), "v86.log");
-        };
-
-        var cpu = emulator.v86.cpu;
-
-        $("debug_panel").style.display = "block";
-        setInterval(function() {
-            $("debug_panel").textContent =
-                cpu.debug.get_regs_short().join("\n") + "\n" + cpu.debug.get_state();
-
-            $("dump_log").value = "Dump log" + (log_data.length ? " (" + log_data.length + " lines)" : "");
-        }, 1000);
-
-        // helps debugging
-        window.emulator = emulator;
-        window.cpu = cpu;
-        window.dump_file = dump_file;
     }
 
     function onpopstate(e) {

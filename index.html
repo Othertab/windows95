@@ -153,10 +153,7 @@
 
 
 <div id="runtime_infos" style="display: none">
-    Running: <span id="running_time">0s</span> <br>
     Speed: <span id="speed">0</span> mIPS<br>
-    Avg speed: <span id="avg_speed">0</span> mIPS<br>
-    <br>
     <div id="info_storage" style="display: none">
         <b>IDE device (HDA or CDROM)</b><br>
         Sectors read: <span id="info_storage_sectors_read">0</span><br>
@@ -172,27 +169,3 @@
     <br>
     Mouse: <span id="info_mouse_enabled">No</span><br>
 </div>
-
-<div id="filesystem_panel" style="display: none">
-    <label>
-        Send files to emulator<br>
-        <input type="file" id="filesystem_send_file" multiple>
-    </label>
-    <br><br>
-    <label>
-        Get file from emulator<br>
-        <input type="text" id="filesystem_get_file" placeholder="Absolute path">
-    </label>
-</div>
-
-<div id="debug_panel" style="display: none">
-</div>
-
-<br style="clear: both"><br>
-
-<textarea readonly id="log" style="display: none"></textarea>
-
-<textarea spellcheck="false" cols="40" rows="12" id="serial" style="display: none">
-</textarea>
-
-<div id="terminal"></div>

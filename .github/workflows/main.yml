@@ -1,7 +1,7 @@
 name: main
 on:
   push:
-    branches: [master, wasm]
+    branches: [main]
   pull_request:
 jobs:
   jshint:

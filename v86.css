@@ -6,6 +6,10 @@
   padding-bottom: 7px;
 }
 
+#loading {
+  color: rgb(0, 255, 0);
+}
+
 #vga {
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;

@@ -46,11 +46,11 @@
 
         if (e.file_index === e.file_count - 1 && e.loaded >= e.total - 2048) {
             // last file is (almost) loaded
-            el.textContent = "Done downloading. Starting now ...";
+            el.textContent = "Done loading. Starting now ...";
             return;
         }
 
-        var line = "Downloading images ";
+        var line = "Loading images ";
 
         if (typeof e.file_index === "number" && e.file_count) {
             line += "[" + (e.file_index + 1) + "/" + e.file_count + "] ";
@@ -528,69 +528,6 @@
             $("reset").blur();
         };
 
-        add_image_download_button(settings.hda, "hda");
-
-        function add_image_download_button(obj, type) {
-            var elem = $("get_" + type + "_image");
-
-            if (!obj || obj.size > 100 * 1024 * 1024) {
-                elem.style.display = "none";
-                return;
-            }
-
-            elem.onclick = function(e) {
-                let buffer = emulator.disk_images[type];
-                let filename = settings.id + (type === "cdrom" ? ".iso" : ".img");
-
-                if (buffer.get_as_file) {
-                    var file = buffer.get_as_file(filename);
-                    download(file, filename);
-                } else {
-                    buffer.get_buffer(function(b) {
-                        if (b) {
-                            dump_file(b, filename);
-                        } else {
-                            alert("The file could not be loaded. Maybe it's too big?");
-                        }
-                    });
-                }
-
-                elem.blur();
-            };
-        }
-
-        $("memory_dump").onclick = function() {
-            const mem8 = emulator.v86.cpu.mem8;
-            dump_file(new Uint8Array(mem8.buffer, mem8.byteOffset, mem8.length), "v86memory.bin");
-            $("memory_dump").blur();
-        };
-
-        //$("memory_dump_dmp").onclick = function()
-        //{
-        //    var memory = emulator.v86.cpu.mem8;
-        //    var memory_size = memory.length;
-        //    var page_size = 4096;
-        //    var header = new Uint8Array(4096);
-        //    var header32 = new Int32Array(header.buffer);
-
-        //    header32[0] = 0x45474150; // 'PAGE'
-        //    header32[1] = 0x504D5544; // 'DUMP'
-
-        //    header32[0x10 >> 2] = emulator.v86.cpu.cr[3]; // DirectoryTableBase
-        //    header32[0x24 >> 2] = 1; // NumberProcessors
-        //    header32[0xf88 >> 2] = 1; // DumpType: full dump
-        //    header32[0xfa0 >> 2] = header.length + memory_size; // RequiredDumpSpace
-
-        //    header32[0x064 + 0 >> 2] = 1; // NumberOfRuns
-        //    header32[0x064 + 4 >> 2] = memory_size / page_size; // NumberOfPages
-        //    header32[0x064 + 8 >> 2] = 0; // BasePage
-        //    header32[0x064 + 12 >> 2] = memory_size / page_size; // PageCount
-
-        //    dump_file([header, memory], "v86memory.dmp");
-
-        //    $("memory_dump_dmp").blur();
-        //};
-
         $("save_state").onclick = function() {
             emulator.save_state(function(error, result) {
                 if (error) {
@@ -654,22 +591,6 @@
             ]);
 
             $("ctrlaltdel").blur();
-        };
-
-        $("alttab").onclick = function() {
-            emulator.keyboard_send_scancodes([
-                0x38, // alt
-                0x0F, // tab
-            ]);
-
-            setTimeout(function() {
-                emulator.keyboard_send_scancodes([
-                    0x38 | 0x80,
-                    0x0F | 0x80,
-                ]);
-            }, 100);
-
-            $("alttab").blur();
         };
 
         $("scale").onchange = function() {

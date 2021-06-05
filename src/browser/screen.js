@@ -74,6 +74,15 @@ function ScreenAdapter(screen_container, bus) {
         return n = "rgb(" + n[0] + 85 + ", " + n[1] + 85 + ", " + n[2] + ")";
     }
 
+    function number_as_color(n) {
+        n = n.toString(16);
+        n = hex_to_rgb("#" + Array(7 - n.length).join("0") + n);
+        if (n[0] == n[2] || n[1] == n[2]) return col(n);
+        if (n[0] == n[1] && n[0] == 0 && n[2] > 85)
+            return col(n);
+        return col_fix(n);
+    }
+
 
     /**
      * Charmaps that constraint unicode sequences for the default dospage

@@ -1,0 +1,142 @@
+; Registry item names -- Must match what is in resource of program
+VIEWER_DOC		= "Fax Viewer Document"
+CPE_DOC			= "Cover Page Editor Document"
+
+; Mapi provider names
+FAXAB			= "Address Book"
+FAXXP			= "Transport"
+FAXMS			= "Messaging Service"
+
+;
+; Cover page Sample LFN's
+CPE_1desc		= "Confidential!"
+CPE_2desc		= "For your information"
+CPE_4desc		= "Urgent!"
+CPE_5desc		= "Generic"
+OLD_CPE_5desc		= "General Purpose"
+;
+; for NON-US BUILD this STRING should be "NotUsed"
+; no need to localize this anymore. This is handled in the code.
+;rgMessageInTheBottle	= "Received"			; USA builds ONLY
+;rgMessageInTheBottle	= "NotUsed"			; NON-USA BUILDS
+
+; This is the 8.3 name of the OLD General Purpose CPE file
+; We Had to make a short File name so we would have correct defaults
+; even on non-Long File name systems. This name is used to delete the
+; old "General Purpose.CPE" file
+General83name		= "GENERA~1.CPE"  
+
+; Old names need for deleting links left over from previous installs
+Old_CallaFaxService	= "Retrieve File"
+Old_ShowFaxQueue	= "Show Fax Queue"
+Old_SendNewFax		= "Send New Fax"
+Old_FAXCOVER_Link_Desc	= "Fax Cover Page Editor"
+
+
+;;; These strings should not localized -- Must not change
+TransportReg		= "Software\Microsoft\At Work Fax\Transport Service Provider"
+
+;
+[FAXDelAtInWinBase]
+%General83name%
+
+; These are the files to delete IF we get installed. We delete WFW FAX files
+; when we get installed, simply because we have conflicting names between the components.
+
+[FAXDelOldWinFiles]
+efaxpump.dll,,,1
+efaxrun.dll,,,1
+awnetfax.dll,,,1
+faxopt.dll,,,1
+netfax.dll,,,1
+faxspool.dll,,,1
+viewrend.dll,,,1
+rad.exe,,,1
+awfaxio.dll,,,1
+awfxprot.dll,,,1
+awt30.dll,,,1
+dllsched.dll,,,1
+faxcodec.dll,,,1
+faxcover.dll,,,1
+faxmgr.exe,,,1
+faxview.exe	 ; Can't delete this at install, if we have previoisly 
+		 ; installed the viewer package it won't reinstall
+ifkernel.dll,,,1
+keyview.exe,,,1
+lineariz.dll,,,1
+msfax.hlp,,,1
+msfaxrad.hlp,,,1
+sigview.exe,,,1
+trnoff.dll,,,1
+rpctask.exe,,,1
+
+[FAXDelOldSysFiles]
+rbaspool.dll,,,1
+;wpsunire.dll,,,1		; Deleteing this cause setup warning
+wpsfaxqp.dll,,,1
+arasock.dll,,,1
+awrpc.dll,,,1
+bidilpt.dll,,,1
+mapistub.dll,,,1
+mapiutil.dll,,,1
+psi_spx.dll,,,1
+psicomm.dll,,,1
+faxcomp.dll,,,1
+wpsfax.drv,,,1
+lhutil.dll,,,1
+efaxdrv.drv,,,1
+fax.cpl,,,1
+faxnsp.dll,,,1
+faxstub.dll,,,1
+
+[FAXCopyAddPrinterSys]
+awadpr32.exe,,,1			;  Add printer Util
+
+[FAXCopyAppShared]
+FaxCover.exe,,,1			;  Cover Page Editor
+
+[FAXCopyFilesHelp]
+awfax.cnt ,,,1			;  At Work Help File
+awfax.hlp,,,1			;  At Work Help File
+awprt.hlp,,,1			;  At Work Help File
+Faxcover.cnt ,,,1		;  At Work Fax Coverpage Help File
+Faxcover.hlp,,,1		;  At Work Fax Coverpage Help File
+
+[FAXCopyFilesPrint]
+faxcodec.dll,,,1		;  
+genfax.apd,,,1			;  
+wpsapd.dll,,,1			;  
+wpsuni.drv,,,1			;  
+wpsunire.dll,,,1			;  
+
+[FAXCopyFilesSys]
+awbmsc32.dll,,,1			;  Bitmap Scaler
+awbtrv32.dll,,,1			;  Bit Reversal
+awcapi32.dll,,,1			;  Capability database
+awcl1_32.dll,,,1			;  Class 1 Modem Driver
+awcl2_32.dll,,,1			;  Class 2 Modem Driver
+awdevl16.dll,,,1			;  Printer Device Layer
+awdevl32.dll,,,1			;  Printer Device Layer
+awfaxp32.dll,,,1			;  MAPI Fax Tranpsort
+awfext32.dll,,,1			;  Linearizer
+awfmon32.dll,,,1			;  Print Monitor
+awfr32.dll,,,1				;  Format Resoultion
+awfxab32.dll,,,1			;  Address Book
+awfxcg32.dll,,,1			;  Property sheets for mapi
+awfxex32.exe ,,,1			;  
+awfxio32.dll,,,1			;  Fax Common IO
+awfxrn32.dll,,,1			;  
+awlft332.dll,,,1			;  
+awlhut32.dll,,,1			;  Lineraizer Utilites
+awlinz32.dll,,,1			;  Linearizer
+awlzrd32.dll,,,1			;  Lz encoder/decoder
+awnfax32.dll,,,1			;  Network Fax Client
+awpwd32.dll,,,1				;  Security Support
+awramb32.dll,,,1			;  Rambo Encoder
+awrbae32.dll,,,1			;  Rambo Decoder
+awrndr32.dll,,,1			;  Generic Renderer
+awschd32.dll,,,1			;  Fax Scheduler
+awsnto32.exe,,,1			;  Mail Print To Extentions
+awsrvr32.dll,,,1			;  Network Fax Server
+awt30_32.dll,,,1			;  T30 protocol Driver
+awutil32.dll,,,1			;  At Work Sec

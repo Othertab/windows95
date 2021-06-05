@@ -1,0 +1,146 @@
+----------------------------------------------
+
+;---- Bitmap Install Sections ----------------
+[winbmps.files]
+3dblocks.bmp
+clouds.bmp
+forest.bmp
+gator.bmp
+mesh.bmp
+sand.bmp
+weave2.bmp
+
+[winbmps.addreg]
+HKLM,%KEY_OPTIONAL%\Bitmaps,Installed,,"1"
+HKLM,%KEY_RENAME%\Win,,,%25%
+HKLM,%KEY_RENAME%\Win,3dblocks.bmp,,"%REDBLOCKS_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,clouds.bmp,,"%CLOUDS_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,forest.bmp,,"%FOREST_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,gator.bmp,,"%GATOR_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,mesh.bmp,,"%MESH_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,sand.bmp,,"%SAND_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,weave2.bmp,,"%WEAVE2_BMP%.bmp"
+
+[winbmps.delfiles.reg]
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,3dblocks.bmp,,"%REDBLOCKS_BMP%.bmp"
+HKLM,%KEY_DEL%\Win,clouds.bmp,,"%CLOUDS_BMP%.bmp"
+HKLM,%KEY_DEL%\Win,forest.bmp,,"%FOREST_BMP%.bmp"
+HKLM,%KEY_DEL%\Win,gator.bmp,,"%GATOR_BMP%.bmp"
+HKLM,%KEY_DEL%\Win,mesh.bmp,,"%MESH_BMP%.bmp"
+HKLM,%KEY_DEL%\Win,sand.bmp,,"%SAND_BMP%.bmp"
+HKLM,%KEY_DEL%\Win,weave2.bmp,,"%WEAVE2_BMP%.bmp"
+
+[winbmps.Remove.reg]
+HKLM,%KEY_OPTIONAL%\Bitmaps,Installed,,"0"
+;------------------------------------------
+
+;---- Screensaver Install Sections ------------
+;-- Bezier --
+[Bezier.copy]
+bezier.scr
+
+[Bezier.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+bezier.scr
+
+[Bezier.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,bezier.scr,,"%BEZIER%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,bezier.scr,,"%BEZIER%.scr"
+
+[Bezier.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,bezier.scr,,"%BEZIER%.scr"
+
+
+;--- Ssmyst ---
+[Ssmyst.copy]
+ssmyst.scr
+
+[Ssmyst.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ssmyst.scr
+
+[Ssmyst.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ssmyst.scr,,"%SSMYST%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,ssmyst.scr,,"%SSMYST%.scr"
+
+[Ssmyst.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ssmyst.scr,,"%SSMYST%.scr"
+
+;--- Sstars ---
+[Sstars.copy]
+ssstars.scr
+
+[Sstars.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ssstars.scr
+
+[Sstars.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ssstars.scr,,"%SSSTARS%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,ssstars.scr,,"%SSSTARS%.scr"
+
+[Sstars.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ssstars.scr,,"%SSSTARS%.scr"
+
+; --- ScrnSave ---
+[scrnsave.copy]
+scrnsave.scr
+
+[scrnsave.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+scrnsave.scr
+
+[scrnsave.install.reg]
+HKLM,%KEY_OPTIONAL%\scrnsave,Installed,,"1"
+
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,scrnsave.scr,,"%SCRNSAVE%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,scrnsave.scr,,"%SCRNSAVE%.scr"
+
+[scrnsave.remove.reg]
+HKLM,%KEY_OPTIONAL%\scrnsave,Installed,,"0"
+
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,scrnsave.scr,,"%SCRNSAVE%.scr"
+
+; --- SSmarque ---
+[ssmarque.copy]
+ssmarque.scr
+
+[ssmarque.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ssmarque.scr
+
+[ssmarque.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ssmarque.scr,,"%SSMARQUE%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to syste

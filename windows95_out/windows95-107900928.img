@@ -1,0 +1,106 @@
+SubsRemove]
+win.ini,FontSubstitutes,"Arial Tur,162=Arial,162",
+win.ini,FontSubstitutes,"Courier New Tur,162=Courier New,162",
+win.ini,FontSubstitutes,"Times New Roman Tur,162=Times New Roman,162",
+
+[BalticSubRemove]
+win.ini,FontSubstitutes,"Arial Baltic,186=Arial,186",
+win.ini,FontSubstitutes,"Courier New Baltic,186=Courier New,186",
+win.ini,FontSubstitutes,"Times New Roman Baltic,186=Times New Roman,186",
+
+;*** Remove registry entries ***
+[BalticOff]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Baltic,Installed,,"0"
+HKLM, %KEY_Nls%\Locale,00000425,,""                        ;Estonia
+HKLM, %KEY_Nls%\Locale,00000426,,""                        ;Latvia
+HKLM, %KEY_Nls%\Locale,00000427,,""                        ;Lithuania
+HKLM, %KEY_Nls%\Codepage,1257,,""
+
+[BalticDelete]
+HKLM,"%KEY_KLayout%\00000425"
+HKLM,"%KEY_KLayout%\00000426"
+HKLM,"%KEY_KLayout%\00010426"
+HKLM,"%KEY_KLayout%\00000427"
+
+[CEOff]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\CE,Installed,,"0"
+HKLM, %KEY_Nls%\Locale,0000041C,,""                        ;Albania
+HKLM, %KEY_Nls%\Locale,0000041A,,""                        ;Croatia
+HKLM, %KEY_Nls%\Locale,00000405,,""                        ;Czech
+HKLM, %KEY_Nls%\Locale,0000040E,,""                        ;Hungarian
+HKLM, %KEY_Nls%\Locale,00000415,,""                        ;Polish
+HKLM, %KEY_Nls%\Locale,00000418,,""                        ;Romania
+HKLM, %KEY_Nls%\Locale,0000041B,,""                        ;Slovak
+HKLM, %KEY_Nls%\Locale,00000424,,""                        ;Slovenian
+HKLM, %KEY_Nls%\Codepage,1250,,""
+
+[CEDelete]
+HKLM,"%KEY_KLayout%\0000041C"
+HKLM,"%KEY_KLayout%\0000041A"
+HKLM,"%KEY_KLayout%\00000405"
+HKLM,"%KEY_KLayout%\00010405"
+HKLM,"%KEY_KLayout%\0000040E"
+HKLM,"%KEY_KLayout%\0001040E"
+HKLM,"%KEY_KLayout%\00000415"
+HKLM,"%KEY_KLayout%\00010415"
+HKLM,"%KEY_KLayout%\00000418"
+HKLM,"%KEY_KLayout%\0000041B"
+HKLM,"%KEY_KLayout%\00000424"
+
+[CyrillicOff]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Cyrillic,Installed,,"0"
+HKLM, %KEY_Nls%\Locale,00000423,,""             ;Belarusian
+HKLM, %KEY_Nls%\Locale,00000402,,""             ;Bulgarian
+HKLM, %KEY_Nls%\Locale,00000419,,""             ;Russian
+HKLM, %KEY_Nls%\Locale,00000C1A,,""             ;Serbian
+HKLM, %KEY_Nls%\Locale,00000422,,""             ;Ukrainian
+HKLM, %KEY_Nls%\Codepage,1251,,""
+
+[CyrillicDelete]
+HKLM,"%KEY_KLayout%\00000423"
+HKLM,"%KEY_KLayout%\00000402"
+HKLM,"%KEY_KLayout%\00010402"
+HKLM,"%KEY_KLayout%\00000419"
+HKLM,"%KEY_KLayout%\00010419"
+HKLM,"%KEY_KLayout%\00000C1A"
+HKLM,"%KEY_KLayout%\00010C1A"
+HKLM,"%KEY_KLayout%\00000422"
+
+[GreekOff]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Greek,Installed,,"0"
+HKLM, %KEY_Nls%\Locale,00000408,,""
+HKLM, %KEY_Nls%\Codepage,1253,,""
+
+[GreekDelete]
+HKLM,"%KEY_KLayout%\00000408"
+HKLM,"%KEY_KLayout%\00010408"
+HKLM,"%KEY_KLayout%\00020408"
+HKLM,"%KEY_KLayout%\00030408"
+HKLM,"%KEY_KLayout%\00040408"
+HKLM,"%KEY_KLayout%\00050408"
+
+[TurkishOff]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Turkish,Installed,,"0"
+HKLM, %KEY_Nls%\Locale,0000041F,,""
+HKLM, %KEY_Nls%\Codepage,1254,,""
+
+[TurkishDelete]
+HKLM,"%KEY_KLayout%\0000041F"
+HKLM,"%KEY_KLayout%\0001041F"
+
+[Strings]
+
+KEY_Optional="SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+KEY_KLayout="system\currentcontrolset\control\keyboard layouts"
+KEY_Nls="system\currentcontrolset\control\Nls"
+
+Msft     = "Microsoft"
+MLTopDesc= "Multilanguage Support"
+MLTop_TIP= "Adds Albanian, Bulgarian, Belarusian, Czech, Estonian, Greek, Hungarian, Latvian, Lithuanian, Polish, Romanian, Russian, Serbian, Slovak, Slovenian, Ukrainian, and Turkish."
+GreekDes="Greek Language Support"
+CyrillicDes="Cyrillic Language Support"
+CEDes="Central European Language Support"
+TurkishDes="Turkish Language Support"
+BalticDes="Baltic Language Support"
+Greek_Tip="Adds Greek language support."
+Cyrillic_Tip="Adds Bulgarian, Belarusian, Rus

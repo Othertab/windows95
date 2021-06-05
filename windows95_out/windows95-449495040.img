@@ -1,0 +1,106 @@
+                         0x2b0
+
+[NumberOfDigitalAddresses]              4
+[DigitalAddress]                                0x290
+[DigitalAltAddress]                             0x280
+[DigitalAltAddress]                             0x2a0
+[DigitalAltAddress]                             0x2b0
+
+[NumberOfIrqs]                                  3
+[Irq]                                                   10
+[AltIrq]                                                11
+[AltIrq]                                                12
+
+[NumberOfMidiIrqs]                              3
+[MidiIrq]                                               10
+[MidiAltIrq]                                    11
+[MidiAltIrq]                                    12
+
+[NumberOfDmas]                                  2
+[Dma]                                                   5
+[AltDma]                                                6
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Gravis Ultrasound]
+[CardId]                                                124
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [gf1midi.adv]
+[RmDigitalDriverName]           [gf1digi.adv]
+[PmMidiDriverName]                              [gusmid32.dll]
+[PmDigitalDriverName]           [gusdig32.dll]
+
+
+[MidiDriverChunkNumber]                 17
+[DigitalDriverChunkNumber]              18
+
+[NumberOfMidiAddresses]                 6
+[MidiAddress]                                   0x220
+[MidiAltAddress]                                0x210
+[MidiAltAddress]                                0x230
+[MidiAltAddress]                                0x240
+[MidiAltAddress]                                0x250
+[MidiAltAddress]                                0x260
+
+[NumberOfDigitalAddresses]              6
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x210
+[DigitalAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+[DigitalAltAddress]                             0x250
+[DigitalAltAddress]                             0x260
+
+[NumberOfIrqs]                                  6
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                3
+[AltIrq]                                                5
+[AltIrq]                                                12
+[AltIrq]                                                15
+
+[NumberOfMidiIrqs]                              6
+[MidiIrq]                                               7
+[MidiAltIrq]                                    2
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    5
+[MidiAltIrq]                                    12
+[MidiAltIrq]                                    15
+
+[NumberOfDmas]                                  4
+[Dma]                                                   3
+[AltDma]                                                5
+[AltDma]                                                6
+[AltDma]                                                7
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [PC Speaker]
+[CardId]                                                108
+[CardGroup]                                             0
+
+[R

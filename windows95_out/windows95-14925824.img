@@ -1,0 +1,89 @@
+v"
+HKCR,"CLSID\%CLSID_AMOCX1%\EnablePlugin\.qt"
+;
+; property pages
+;
+HKCR,"CLSID\%CLSID_AMOCX5%",,,"%PP_AMOCX_AUDIO%"
+HKCR,"CLSID\%CLSID_AMOCX5%\InprocServer32",,,"%11%\amovie.ocx"
+HKCR,"CLSID\%CLSID_AMOCX5%\InprocServer32","ThreadingModel",,"Apartment"
+;
+HKCR,"CLSID\%CLSID_AMOCX7%",,,"%PP_AMOCX_SIZE%"
+HKCR,"CLSID\%CLSID_AMOCX7%\InprocServer32",,,"%11%\amovie.ocx"
+HKCR,"CLSID\%CLSID_AMOCX7%\InprocServer32","ThreadingModel",,"Apartment"
+;
+HKCR,"CLSID\%CLSID_AMOCX9%",,,"%PP_AMOCX_GEN%"
+HKCR,"CLSID\%CLSID_AMOCX9%\InprocServer32",,,"%11%\amovie.ocx"
+HKCR,"CLSID\%CLSID_AMOCX9%\InprocServer32","ThreadingModel",,"Apartment"
+;
+HKCR,"CLSID\%CLSID_AMOCXA%",,,"%PP_AMOCX_ADV%"
+HKCR,"CLSID\%CLSID_AMOCXA%\InprocServer32",,,"%11%\amovie.ocx"
+HKCR,"CLSID\%CLSID_AMOCXA%\InprocServer32","ThreadingModel",,"Apartment"
+;
+HKCR,"CLSID\%CLSID_AMOCXB%",,,"%PP_AMOCX_INFO%"
+HKCR,"CLSID\%CLSID_AMOCXB%\InprocServer32",,,"%11%\amovie.ocx"
+HKCR,"CLSID\%CLSID_AMOCXB%\InprocServer32","ThreadingModel",,"Apartment"
+;
+; type lib
+;
+HKCR,"TypeLib\%CLSID_AMOCXT%"
+HKCR,"TypeLib\%CLSID_AMOCXT%\1.0",,,"%TL_AMOCX%"
+HKCR,"TypeLib\%CLSID_AMOCXT%\1.0\FLAGS",,,"0"
+HKCR,"TypeLib\%CLSID_AMOCXT%\1.0\0"
+HKCR,"TypeLib\%CLSID_AMOCXT%\1.0\0\win32",,,"%11%\AMOVIE.OCX"
+HKCR,"TypeLib\%CLSID_AMOCXT%\1.0\HELPDIR",,,"%11%"
+;
+; interfaces
+;
+HKCR,"Interface\%CLSID_IAMOVI%",,,"IActiveMovie"
+HKCR,"Interface\%CLSID_IAMOVI%\ProxyStubClsid",,,"{00020424-0000-0000-C000-000000000046}"
+HKCR,"Interface\%CLSID_IAMOVI%\ProxyStubClsid32",,,"{00020424-0000-0000-C000-000000000046}"
+HKCR,"Interface\%CLSID_IAMOVI%\TypeLib",,,"%CLSID_AMOCXT%"
+HKCR,"Interface\%CLSID_IAMOVI%\TypeLib","Version",,"1.0"
+HKCR,"Interface\%CLSID_AEVENT%",,,"DActiveMovieEvents"
+HKCR,"Interface\%CLSID_AEVENT%\ProxyStubClsid",,,"{00020420-0000-0000-C000-000000000046}"
+HKCR,"Interface\%CLSID_AEVENT%\ProxyStubClsid32",,,"{00020420-0000-0000-C000-000000000046}"
+HKCR,"Interface\%CLSID_AEVENT%\TypeLib",,,"%CLSID_AMOCXT%"
+HKCR,"Interface\%CLSID_AEVENT%\TypeLib","Version",,"1.0"
+;
+; MIME
+;
+HKCR,"MIME"
+HKCR,"MIME\Database"
+HKCR,"MIME\Database\Content Type"
+HKCR,"MIME\Database\Content Type\video/mpeg","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\video/avi","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\video/x-msvideo","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\video/quicktime","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\audio/basic","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\audio/aiff","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\audio/wav","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\audio/x-aiff","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+HKCR,"MIME\Database\Content Type\audio/x-wav","CLSID",,"{05589fa1-c356-11ce-bf01-00aa0055595a}"
+;
+; FIle Types
+;
+HKCR,"AVIFile",,,"%V_MOV_AVI%"
+HKCR,"AVIFile\CLSID",,,"{00022602-0000-0000-C000-000000000046}"
+HKCR,"AVIFile\DefaultIcon",,,"quartz.dll,-100"
+HKCR,"AVIFile\shell",,,"play"
+HKCR,"AVIFile\shell\open"
+HKCR,"AVIFile\shell\open\command",,,"%V_CMD_OPEN%"
+HKCR,"AVIFile\shell\play",,,"%V_VERB_PLAY%"
+HKCR,"AVIFile\shell\play\command",,,"%V_CMD_PLAY%"
+HKCR,"AVIFile\shellex"
+HKCR,"AVIFile\shellex\PropertySheetHandlers",,,"AviPage"
+HKCR,"AVIFile\shellex\PropertySheetHandlers\AviPage",,,"{00022613-0000-0000-C000-000000000046}"
+;
+HKCR,"MOVFile",,,"%V_MOV_MOV%"
+HKCR,"MOVFile\CLSID",,,"{00022601-0000-0000-C000-000000000046}"
+HKCR,"MOVFile\DefaultIcon",,,"quartz.dll,-101"
+HKCR,"MOVFile\shell",,,"play"
+HKCR,"MOVFile\shell\open"
+HKCR,"MOVFile\shell\open\command",,,"%V_CMD_OPEN%"
+HKCR,"MOVFile\shell\play",,,"%V_VERB_PLAY%"
+HKCR,"MOVFile\shell\play\command",,,"%V_CMD_PLAY%"
+;
+HKCR,"MPEGFile",,,"%V_MOV_MPEG%"
+HKCR,"MPEGFile\CLSID",,,"{00022601-0000-0000-C000-000000000046}"
+HKCR,"MPEGFile\DefaultIcon",,,"quartz.dll,-103"
+HKCR,"MPEGFile\shell",,,"play"

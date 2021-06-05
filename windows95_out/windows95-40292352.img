@@ -1,0 +1,115 @@
+ Folder Anywhere From the Run Dialog Box]
+To open a folder, enter its local path or UNC path. For example, entering
+C:\Windows\System will open the System folder. 
+Entering \\server\share\direct will open a folder pointing to the direct 
+folder on the \\server\share share point. 
+
+[Running a Program]
+You can run a program from within any folder by opening that folder and 
+then clicking Run from the Start Menu. 
+
+
+Start menu
+-----------
+
+[Keyboard Shortcuts]
+Press CTRL+ESC to display the Start menu.
+On a Microsoft Natural Keyboard, press a Win key to display the Start menu.
+
+[Adding items to the Start Menu]
+Drag an object (a folder, shortcut, program, or document) onto the 
+Start menu to add it to the top of the Start menu. If the object is a 
+folder, the folder contents is displayed when you point to that menu item.
+
+[Modifying Start Menu Items]
+Use the right mouse button to click the Start menu, and then select Open or 
+Explore to view and modify its contents.
+
+[Quick Access to Start Menu Items]
+You can quickly open programs at the top of the Start menu by numbering 
+the icons (rename them with a number before the name). Then, press
+CTRL+ESC followed by the number to start those programs.
+
+[Emptying the Documents menu]
+1. Click the Start menu, point to Settings, and then click Taskbar.
+2. Click the Start Menu Programs tab, and then click Clear. 
+
+
+Taskbar
+-------
+
+[Taskbar Background]
+To open the taskbar's context menu when the taskbar is full, move the 
+mouse pointer to the edge of the taskbar, and then use the right mouse
+button to click the taskbar. You can also do this to drag the taskbar.
+
+[Hiding the Taskbar]
+1. Use the right mouse button to click the Start button, and then click
+   Properties. 
+2. Click the Taskbar Options tab, and then click Auto Hide. 
+   When the mouse moves near the taskbar area, the taskbar appears.
+
+[Moving the Taskbar]
+You can drag the taskbar to any side of the desktop area.
+
+[Languages and Keyboard Layouts]
+To change keyboard layouts while you work, make these changes: 
+1. In Control Panel, double click the Keyboard icon. 
+2. Click the Language tab, and then add another language as needed.
+3. Make sure the Enable Indicator on Taskbar is checked. 
+   When you complete this setup, a Language layout icon appears on the 
+   taskbar. You can click the icon to select another language.
+
+
+System Tools
+------------
+[System Monitor]
+Monitors system resources, threads, processor usage, etc.
+
+[DriveSpace]
+You can use DriveSpace to compress hard and floppy disks, which creates 
+more free space on the disks. You can also use DriveSpace to configure disk 
+drives that you have already compressed using DoubleSpace or DriveSpace.
+
+[Backup/Restore]
+You can use Backup to back up or restore files to tape, floppy, network 
+shares, etc.
+
+[Disk Defragmenter]
+Use to speed up your hard disk by defragmenting the files on your hard drive.
+
+[Netwatcher]
+You can see who is currently using resources on your computer by using 
+NetWatcher. You can also add shared folders and disconnect people from your 
+computer or from specific files.
+
+[ScanDisk]
+You can use ScanDisk to check your hard drives for both logical and physical
+errors. ScanDisk will detect any errors, and then repair damaged areas.
+
+
+
+Window Management
+------------------
+[Switching Between a Window and a Full MS-DOS Screen]
+Press ALT+Enter.
+
+[Closing Consecutive Windows]
+If you are using multiple window browse, and you want to close all open 
+windows, hold down the Shift key, and then click the close (X) button in 
+the upper right corner of the title bar. 
+
+[Cascading, Tiling, and Minimizing All] 
+Use the right mouse button to click the taskbar, and then click an option.
+
+
+
+Miscellaneous Tips and Tricks
+-----------------------------
+
+[Configuration Summary]
+To print a copy of your system configuration summary, double-click the 
+Systems icon in Control Panel, and then click the Device Manager tab.
+Click Computer, and then click Print.
+
+[Quick View

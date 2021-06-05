@@ -1,0 +1,76 @@
+,"SYSTEM\CurrentControlSet\Services\VxD\FILESEC",NetClean,1,1
+HKLM,"Security\Provider",Address_Book,,mswebab.dll
+HKLM,"Security\Provider",Platform_Type,1,02,00,00,00
+HKLM,"Security\Provider",NoCache,1,01
+
+; disk sharing property page
+HKCR,Folder\shellex\PropertySheetHandlers\MSSharing,,,"{3EFC0B01-F4AA-101A-8932-08002B327C2D}"
+HKCR,CLSID\{3EFC0B01-F4AA-101A-8932-08002B327C2D},,,"File Sharing"
+HKCR,CLSID\{3EFC0B01-F4AA-101A-8932-08002B327C2D}\InProcServer32,,,"msshrui.dll"
+HKCR,CLSID\{3EFC0B01-F4AA-101A-8932-08002B327C2D}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,Network\SharingHandler,,,"msshrui.dll"
+; printer sharing property page
+HKCR,Printers\shellex\PropertySheetHandlers\PrintSharingHandler,,,"{5F354881-1D7E-101B-A9DE-00AA0033819A}"
+HKCR,CLSID\{5F354881-1D7E-101B-A9DE-00AA0033819A},,,"Print Sharing"
+HKCR,CLSID\{5F354881-1D7E-101B-A9DE-00AA0033819A}\InProcServer32,,,"msshrui.dll"
+HKCR,CLSID\{5F354881-1D7E-101B-A9DE-00AA0033819A}\InProcServer32,ThreadingModel,,"Apartment"
+; directory shell copy hook
+HKCR,Directory\shellex\CopyHookHandlers\ShareCopyHook,,,"{6DA1A220-65D0-101B-A657-9EB70524D8E7}"
+HKCR,CLSID\{6DA1A220-65D0-101B-A657-9EB70524D8E7},,,"Folder Copy Hook"
+HKCR,CLSID\{6DA1A220-65D0-101B-A657-9EB70524D8E7}\InProcServer32,,,"msshrui.dll"
+HKCR,CLSID\{6DA1A220-65D0-101B-A657-9EB70524D8E7}\InProcServer32,ThreadingModel,,"Apartment"
+; printer shell copy hook
+HKCR,Printers\shellex\CopyHookHandlers\PrintShareHook,,,"{F365CCA0-60E5-101B-A657-9EB70524D8E7}"
+HKCR,CLSID\{F365CCA0-60E5-101B-A657-9EB70524D8E7},,,"Printer Copy Hook"
+HKCR,CLSID\{F365CCA0-60E5-101B-A657-9EB70524D8E7}\InProcServer32,,,"msshrui.dll"
+HKCR,CLSID\{F365CCA0-60E5-101B-A657-9EB70524D8E7}\InProcServer32,ThreadingModel,,"Apartment"
+; file sharing context menu
+HKCR,Folder\shellex\ContextMenuHandlers\SharingMenu,,,"{6D78EC20-5AA6-101B-8681-366FBD64CEB9}"
+HKCR,CLSID\{6D78EC20-5AA6-101B-8681-366FBD64CEB9},,,"File Sharing Menu Handlers"
+HKCR,CLSID\{6D78EC20-5AA6-101B-8681-366FBD64CEB9}\InProcServer32,,,"msshrui.dll"
+HKCR,CLSID\{6D78EC20-5AA6-101B-8681-366FBD64CEB9}\InProcServer32,ThreadingModel,,"Apartment"
+; printer sharing context menu
+HKCR,Printers\shellex\ContextMenuHandlers\SharingMenu,,,"{A57B9B40-5AA6-101B-8681-366FBD64CEB9}"
+HKCR,CLSID\{A57B9B40-5AA6-101B-8681-366FBD64CEB9},,,"Printer Sharing Menu Handlers"
+HKCR,CLSID\{A57B9B40-5AA6-101B-8681-366FBD64CEB9}\InProcServer32,,,"msshrui.dll"
+HKCR,CLSID\{A57B9B40-5AA6-101B-8681-366FBD64CEB9}\InProcServer32,ThreadingModel,,"Apartment"
+; Default to not show passwords in share tab
+HKLM,Software\Microsoft\Windows\CurrentVersion\Policies\Network,HideSharePwds,1,01,00,00,00
+
+[MSWEBSVR.Remove.Web]
+DelReg=MSWEBSVR.Rmv.Web.DelReg
+[MSWEBSVR.Rmv.Web.DelReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\mswebSP",StaticVxD
+
+[MSWEBSVR.Remove]
+DelReg=MSWEBSVR.Rmv.DelReg
+[MSWEBSVR.Rmv.DelReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\FILESEC",StaticVxD
+HKLM,"Security\Provider",Platform_Type
+HKLM,"Security\Provider",Container
+HKLM,"Security\Provider",Address_Server
+HKLM,"Security\Provider",Address_Book
+HKLM,"Security\Provider",Pass_Through
+HKLM,"Security\Provider",NoCache
+
+; disk sharing property page
+HKCR,Folder\shellex\PropertySheetHandlers\MSSharing
+HKCR,CLSID\{3EFC0B01-F4AA-101A-8932-08002B327C2D}
+HKCR,Network\SharingHandler
+; printer sharing property page
+HKCR,Printers\shellex\PropertySheetHandlers\PrintSharingHandler
+HKCR,CLSID\{5F354881-1D7E-101B-A9DE-00AA0033819A}
+; directory shell copy hook
+HKCR,Directory\shellex\CopyHookHandlers\ShareCopyHook
+HKCR,CLSID\{6DA1A220-65D0-101B-A657-9EB70524D8E7}
+; printer shell copy hook
+HKCR,Printers\shellex\CopyHookHandlers\PrintShareHook
+HKCR,CLSID\{F365CCA0-60E5-101B-A657-9EB70524D8E7}
+; file sharing context menu
+HKCR,Folder\shellex\ContextMenuHandlers\SharingMenu
+HKCR,CLSID\{6D78EC20-5AA6-101B-8681-366FBD64CEB9}
+; printer sharing context menu
+HKCR,Printers\shellex\ContextMenuHandlers\SharingMenu
+HKCR,CLSID\{A57B9B40-5AA6-101B-8681-366FBD64CEB9}
+; Default to not show passwords in share tab
+HKLM,Softwa

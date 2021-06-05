@@ -1,0 +1,123 @@
+,Driver,,mssndsys.drv
+HKR,Drivers\aux\mssndsys.drv,Driver,,mssndsys.drv
+HKR,Drivers,SubClasses,,"wave,aux,mixer"
+HKLM,%KEY_FIL%\fl.UpdateInis,device.vsndsys,,"system.ini,386Enh,""device=vsndsys.386"",,"
+HKLM,%KEY_FIL%\fl.UpdateInis,device.vaudiod,,"system.ini,386Enh,""device=vaudiod.386"",,"
+
+[CTL0001.AddReg]
+HKR,Drivers\wave\sb16snd.drv,Description,,%*CTL0001.DeviceDesc%
+HKR,Drivers\midi\sbfm.drv,Description,,%V_INTERNAL%
+HKR,Drivers\midi\sb16snd.drv,Description,,%V_EXTERNAL%
+HKR,Drivers\mixer\sb16snd.drv,Description,,%*CTL0001.DeviceDesc%
+HKR,Drivers\aux\sb16snd.drv,Description,,%*CTL0001.DeviceDesc%  
+HKR,Drivers,SubClasses,,"wave,midi,aux,mixer"
+
+[CTL0021.AddReg]
+HKR,Drivers\midi\sbawe32.drv,Description,,%*CTL0021.DeviceDesc%
+
+;---------------------------------------------------------------;
+
+[SB.AddReg]
+HKR,,Driver,,mssblst.vxd
+HKR,Drivers\wave\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers\midi\msopl.drv,Driver,,msopl.drv
+HKR,Drivers\midi\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers\midi\mssblst.drv,External,1,01,00,00,00
+HKR,Drivers\aux\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers,SubClasses,,"wave,midi,aux"
+
+[SBPro.AddReg]
+HKR,,Driver,,mssblst.vxd
+HKR,Drivers\wave\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers\midi\msopl.drv,Driver,,msopl.drv
+HKR,Drivers\midi\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers\midi\mssblst.drv,External,1,01,00,00,00
+HKR,Drivers\mixer\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers\aux\mssblst.drv,Driver,,mssblst.drv
+HKR,Drivers,SubClasses,,"wave,midi,aux,mixer"
+
+[SB16.AddReg]
+HKR,,Driver,,sb16.vxd
+HKR,Drivers\wave\sb16snd.drv,Driver,,sb16snd.drv
+HKR,Drivers\midi\sbfm.drv,Driver,,sbfm.drv
+HKR,Drivers\midi\sb16snd.drv,Driver,,sb16snd.drv
+HKR,Drivers\midi\sb16snd.drv,External,1,01,00,00,00
+HKR,Drivers\mixer\sb16snd.drv,Driver,,sb16snd.drv
+HKR,Drivers\aux\sb16snd.drv,Driver,,sb16snd.drv
+HKR,Drivers,SubClasses,,"wave,midi,aux,mixer"
+
+[SBAWE.AddReg]
+HKR,,Driver,,sbawe.vxd
+HKR,Drivers\midi\sbawe32.drv,Driver,,sbawe32.drv
+HKR,Drivers,SubClasses,,"midi"
+
+[MIXER.AddReg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Run,SystemTray,,"SysTray.Exe"
+HKLM,%KEY_IOC%\Vol,,,
+
+[WAVE.AddReg]
+HKR,,DevLoader,,mmdevldr.vxd
+HKR,Drivers,MIGRATED,,0
+HKR,Drivers\midi,,,
+HKR,Drivers\wave,,,
+HKR,Drivers\mixer,,,
+HKR,Drivers\aux,,,
+HKLM,%KEY_IOC%\acm,,,
+HKLM,%KEY_IOC%\Rec,,,
+HKLM,%KEY_IOC%\MPlay,,,
+
+;---------------------------------------------------------------;
+
+[TMV1.CopyList]
+tmv1.mpd,,
+
+[PASMF.CopyList]
+mvpas.vxd,,
+mvproaud.drv,,
+
+[PASMF.AddReg]
+HKR,,DeviceDriver,,mvpas.vxd
+HKR,,EnumPropPages,,"mvproaud.drv,DrvEnumPropPages"
+
+;---------------------------------------------------------------;
+
+[PNPB00D_Device]
+DelFiles=PAS.DelList
+LogConfig=*PNPB00D.LC1,*PNPB00D.LC2
+AddReg=MediaMF.Reg,PASMF.AddReg
+CopyFiles=PASMF.CopyList
+UpdateInis=ProAudioSpectrum.UpdateInis, SB.UpdateInis, MVFilter.AddReg
+UpdateIniFields=Drivers.fields
+
+[PNPB00D_Device.FactDef]
+ConfigPriority=NORMAL
+IOConfig=201-201
+IOConfig=9A01-9A01
+IOConfig=388-38B
+IOConfig=B88-B8B
+IOConfig=F88-F8B
+IOConfig=1388-138B
+IOConfig=8388-838B
+IOConfig=BF88-BF8B
+IOConfig=F388-F38B
+IRQConfig=7
+DMAConfig=5
+IOConfig=220
+IRQConfig=5
+DMAConfig=1
+
+[*PNPB00D.LC1]
+ConfigPriority=NORMAL
+IOConfig=201-201(FFFF::)                                  ; 00 JOYSTICK
+IOConfig=9A01-9A01(FFFF::)                                ; 01 MVSOUND
+IOConfig=388-38B(FFFF::)                                  ; 02 MVSOUND
+IOConfig=B88-B8B(FFFF::)                                  ; 03 MVSOUND
+IOConfig=F88-F8B(FFFF::)                                  ; 04 MVSOUND
+IOConfig=1388-138B(FFFF::)                                ; 05 MVSOUND
+IOConfig=8388-838B(FFFF::)                                ; 06 MVSOUND
+IOConfig=BF88-BF8B(FFFF::)                                ; 07 MVSOUND
+IOConfig=F388-F38B(FFFF::)                                ; 08 MVSOUND
+IRQConfig=3 , 4,  5 , 7 , 9 , 10 , 11 , 12 , 14 , 15      ; 09 MVSOUND
+DMAConfig=0 , 1 , 3 , 5 , 6 , 7                           ; 0A MVSOUND
+
+[*PNPB00D.L

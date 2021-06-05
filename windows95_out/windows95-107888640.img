@@ -1,0 +1,126 @@
+25%\ttfcache."
+
+;*** Copy Files ***
+[LargeTTFonts]
+arial.ttf,larial.ttf,larial.001,8
+arialbd.ttf,larialbd.ttf,larialbd.001,8
+arialbi.ttf,larialbi.ttf,larialbi.001,8
+ariali.ttf,lariali.ttf,lariali.001,8
+cour.ttf,lcour.ttf,lcour.001,8
+courbd.ttf,lcourbd.ttf,lcourbd.001,8
+courbi.ttf,lcourbi.ttf,lcourbi.001,8
+couri.ttf,lcouri.ttf,lcouri.001,8
+times.ttf,ltimes.ttf,ltimes.001,8
+timesbd.ttf,ltimesbd.ttf,ltimesbd.001,8
+timesbi.ttf,ltimesbi.ttf,ltimesbi.001,8
+timesi.ttf,ltimesi.ttf,ltimesi.001,8
+
+[BalticNLSFiles]
+cp_1257.nls,,,8
+
+[BalticKbds]
+kbdes.kbd          ;Estonian
+kbdlt.kbd          ;Lithuanian
+kbdlv.kbd          ;Latvian
+kbdlv1.kbd         ;Latvian (Latin)
+
+[CENLSFiles]
+cp_1250.nls,,,8
+
+[CEKbds]
+kbdal.kbd          ;Albanian
+kbdcr.kbd          ;Croatian
+kbdcz.kbd          ;Czech
+kbdcz1.kbd         ;Czech 101
+kbdhu.kbd          ;Hungarian
+kbdhu1.kbd         ;Hungarian 101
+kbdpl.kbd          ;Polish
+kbdpl1.kbd         ;Polish Programmers
+kbdro.kbd          ;Romanian
+kbdsl.kbd          ;Slovak
+kbdsl1.kbd         ;Slovak 101
+kbdsv.kbd          ;Slovenian
+
+[CyrillicNLSFiles]
+cp_1251.nls,,,8
+
+[CyrillicKbds]
+kbdblr.kbd         ;Belarusian
+kbdbul.kbd         ;Bulgarian (Latin)
+kbdbll.kbd         ;Bulgarian (Cyrillic)
+kbdru.kbd          ;Russian
+kbdru1.kbd         ;Russian (Typewriter)
+kbdur.kbd          ;Ukrainian
+kbdycc.kbd         ;Serbian (Cyrillic)
+kbdycl.kbd         ;Serbian (Latin)
+
+[GreekNLSFiles]
+cp_1253.nls,,,8
+
+[GreekKbds]
+kbdgk.kbd          ;Greek
+kbdgkl.kbd         ;Greek Latin
+kbdgk220.kbd       ;Greek 220
+kbdgk319.kbd       ;Greek 319
+kbdgl220.kbd       ;Greek Latin 220
+kbdgl319.kbd       ;Greek Latin 319
+
+[TurkishNLSFiles]
+cp_1254.nls,,,8
+
+[TurkishKbds]
+kbdtuf.kbd         ;Turkish (F type)
+kbdtuq.kbd         ;Turkish (Q type)
+
+;*** Add font substitutes ***
+[GreekSubs]
+win.ini,FontSubstitutes,,"Arial Greek,161=Arial,161",
+win.ini,FontSubstitutes,,"Courier New Greek,161=Courier New,161",
+win.ini,FontSubstitutes,,"Times New Roman Greek,161=Times New Roman,161",
+
+[CyrillicSubs]
+win.ini,FontSubstitutes,,"Arial Cyr,204=Arial,204"
+win.ini,FontSubstitutes,,"Courier New Cyr,204=Courier New,204"
+win.ini,FontSubstitutes,,"Times New Roman Cyr,204=Times New Roman,204"
+
+[CESubs]
+win.ini,FontSubstitutes,,"Arial CE,238=Arial,238"
+win.ini,FontSubstitutes,,"Courier New CE,238=Courier New,238"
+win.ini,FontSubstitutes,,"Times New Roman CE,238=Times New Roman,238"
+
+[TurkishSubs]
+win.ini,FontSubstitutes,,"Arial Tur,162=Arial,162"
+win.ini,FontSubstitutes,,"Courier New Tur,162=Courier New,162"
+win.ini,FontSubstitutes,,"Times New Roman Tur,162=Times New Roman,162"
+
+[BalticSubs]
+win.ini,FontSubstitutes,,"Arial Baltic,186=Arial,186"
+win.ini,FontSubstitutes,,"Courier New Baltic,186=Courier New,186"
+win.ini,FontSubstitutes,,"Times New Roman Baltic,186=Times New Roman,186"
+
+;*** Add Registry Entries ***
+[BalticInstalled]
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"1"
+HKLM, %KEY_Nls%\Locale,00000425,,%00000425%                ;Estonia
+HKLM,"%KEY_KLayout%\00000425","layout file",,kbdes.kbd
+HKLM,"%KEY_KLayout%\00000425","layout text",,%KBD_ES%
+HKLM, %KEY_Nls%\Locale,00000426,,%00000426%                ;Latvia
+HKLM,"%KEY_KLayout%\00000426","layout file",,kbdlv.kbd
+HKLM,"%KEY_KLayout%\00000426","layout text",,%KBD_LV%
+HKLM,"%KEY_KLayout%\00010426","layout file",,kbdlv1.kbd
+HKLM,"%KEY_KLayout%\00010426","layout text",,%KBD_LV1%
+HKLM,"%KEY_KLayout%\00010426","layout id",,0015
+HKLM, %KEY_Nls%\Locale,00000427,,%00000427%                ;Lithuania
+HKLM,"%KEY_KLayout%\00000427","layout file",,kbdlt.kbd
+HKLM,"%KEY_KLayout%\00000427","layout text",,%KBD_LT%
+HKLM, %KEY_Nls%\Codepage,1257,,cp_1257.nls
+
+[CEInstalled]
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"1"
+HKLM, %KEY_Nls%\Locale,0000041C,,%0000041C%           

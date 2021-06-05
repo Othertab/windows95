@@ -1,0 +1,122 @@
+ral information about operating systems installed on this system"
+"^Index"=hex:02
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8"
+"Key"="1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\1]
+"Name"="Operating System Index"
+"Description"="The index into the operating system table"
+"Column"="^ROWNUM"
+"Value"=""
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\2]
+"Name"="Operating System Name"
+"Description"="The name of this operating system"
+"Column"="2"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\OperatingSystemName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\3]
+"Name"="Operating System Version"
+"Description"="The version number of this operating system."
+"Column"="3"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\OperatingSystemVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\4]
+"Name"="Primary Operating System"
+"Description"="If true, this is the primary operating system."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\PrimaryOperatingSystem"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\4\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\5]
+"Name"="Operating System Boot Device Storage Type"
+"Description"="An index into the Disks table to indicate the device from which this operating system was booted. To fully access the Disks table, this index must be combined with the attribute Boot Device Index."
+"Column"="5"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\OperatingSystemBootDeviceStorageType"
+"!0"="B;IN(0,3)(1,1)(2,1)(3,1)(4,6)(5,8)(6,1)(7,7)(8,1)(9,1)(10,4)(132,7)"
+"Storage"="Common"
+"Type"="Enum"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Hard Disk"
+"4"="Floppy Disk"
+"5"="Optical ROM"
+"6"="Optical WORM"
+"7"="Optical RW"
+"8"="Compact Disk"
+"9"="Flash Disk"
+"10"="Bernoulli"
+"11"="Optical Floppy Disk"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\6]
+"Name"="Operating System Boot Device Index"
+"Description"="An index into the Disks table."
+"Column"="6"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\OperatingSystemBootDeviceIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\7]
+"Name"="Operating Boot Partition Index"
+"Description"="An index into the Partition table indicating the partition from which this operating system booted."
+"Column"="7"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\OperatingSystemBootPartitionIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3\8]
+"Name"="Operating System Description"
+"Description"="A description of this operating system."
+"Column"="8"
+"Storage"="Specific"
+"Type"="DisplayString(128)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\OperatingSystem\\OperatingSystemDescription"
+
+
+;===============================
+;  System BIOS Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4]
+"Name"="System BIOS"
+"Class"="DMTF|System BIOS|001"
+"Description"="This group defines the attributes for the System BIOS"
+"Key"="1"
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8|9"
+"^INDEX"=hex:02,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\1]
+"Name"="BIOS Index"
+"Description"="The index into the system BIOS table."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\2]
+"Name"="BIOS Manufacturer"
+"Description"="The name of the company that wrote this System BIOS."
+"Column"="2"
+"Access"="Read-Only"
+"Type"="String(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemBIOS\\BIOSName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\3]
+"Name"="BIOS Version"
+"Description"="The version of this BIOS."
+"Column"="3"
+"Access"="Read-Only"
+"Type"="String(64)"
+":1"="

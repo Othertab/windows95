@@ -1,0 +1,124 @@
+Pages"
+HKR,,Windows95,,yes
+; NDIS Info
+HKR,NDIS,LogDriverName,,"OCTK16"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"OLITOK$"
+HKR,NDIS\NDIS2,FileName,,"olitok16.dos"
+HKR,NDIS\ODI,DriverName,,"OCTOK16"
+HKR,NDIS\ODI,FileName,,"octok16.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"  
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"olitok.ndis3"
+HKR,Ndi\Install,ndis2,,"olitok.ndis2"
+;HKR,Ndi\Install,odi,,"octok16.odi"
+
+;Parameters
+;Adapter
+HKR,Ndi\params\adapter,ParamDesc,,"Adapter"
+HKR,Ndi\params\adapter,type,,int
+HKR,Ndi\params\adapter,default,,0
+HKR,Ndi\params\adapter,min,,0
+HKR,Ndi\params\adapter,max,,3
+HKR,Ndi\params\adapter,optional,,1
+HKR,NDI\params\adapter,flag,1,30,00,00,00
+;Maxtransmits
+HKR,Ndi\params\maxtransmits,ParamDesc,,"Maximum Transmits"
+HKR,Ndi\params\maxtransmits,type,,int
+HKR,Ndi\params\maxtransmits,default,,6
+HKR,Ndi\params\maxtransmits,min,,2
+HKR,Ndi\params\maxtransmits,max,,6
+HKR,Ndi\params\maxtransmits,step,,1 
+HKR,NDI\params\maxtransmits,flag,1,10,00,00,00
+;Maxrequests
+HKR,Ndi\params\maxrequests,ParamDesc,,"Maximum General Requests"
+HKR,Ndi\params\maxrequests,type,,int
+HKR,Ndi\params\maxrequests,default,,6
+HKR,Ndi\params\maxrequests,min,,1
+HKR,Ndi\params\maxrequests,max,,10
+HKR,Ndi\params\maxrequests,step,,1    
+HKR,NDI\params\maxrequests,flag,1,10,00,00,00
+;Recbufsize
+HKR,Ndi\params\recbufsize,ParamDesc,,"Receive Buffer Size"
+HKR,Ndi\params\recbufsize,type,,int
+HKR,Ndi\params\recbufsize,default,,512
+HKR,Ndi\params\recbufsize,min,,256
+HKR,Ndi\params\recbufsize,max,,5000
+HKR,Ndi\params\recbufsize,step,,1
+HKR,NDI\params\recbufsize,flag,1,10,00,00,00
+;Recbufcount
+HKR,Ndi\params\recbufcount,ParamDesc,,"Receive Buffers"
+HKR,Ndi\params\recbufcount,type,,int
+HKR,Ndi\params\recbufcount,default,,4
+HKR,Ndi\params\recbufcount,min,,4
+HKR,Ndi\params\recbufcount,max,,10
+HKR,Ndi\params\recbufcount,step,,1
+HKR,NDI\params\recbufcount,flag,1,10,00,00,00
+;Earlyrelease
+HKR,Ndi\params\earlyrelease,ParamDesc,,"Early Release"
+HKR,Ndi\params\earlyrelease,default,,yes
+HKR,Ndi\params\earlyrelease,type,,enum
+HKR,Ndi\params\earlyrelease\enum,Yes,,"Yes"
+HKR,Ndi\params\earlyrelease\enum,No,,"No" 
+HKR,NDI\params\earlyrelease,flag,1,30,00,00,00
+;FrameStatus
+HKR,Ndi\params\FrameStatus,ParamDesc,,"Frame Status"
+HKR,Ndi\params\FrameStatus,default,,yes
+HKR,Ndi\params\FrameStatus,type,,enum
+HKR,Ndi\params\FrameStatus\enum,Yes,,"Yes"
+HKR,Ndi\params\FrameStatus\enum,No,,"No" 
+HKR,NDI\params\FrameStatus,flag,1,20,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+
+; Install NDIS3
+[OLITOK.ndis3]
+CopyFiles=olitok.ndis3.CopyFiles
+[olitok.ndis3.CopyFiles]
+octk16.sys
+
+; Install NDIS2
+[OLITOK.ndis2]
+CopyFiles=olitok.ndis2.CopyFiles
+[olitok.ndis2.CopyFiles]
+olitok16.dos
+
+; Install ODI
+[OCTOK.odi]
+CopyFiles=octok16.odi.CopyFiles
+[octok16.odi.CopyFiles]
+octok16.com
+
+;****************************************************************************
+; OC3118 Drivers
+;****************************************************************************
+[OC3118.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,OCTK16.SYS
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+HKR,,Windows95,,yes
+; NDIS Info
+HKR,NDIS,LogDriverName,,"OCTK16"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"OLITOK$"
+HKR,NDIS\NDIS2,FileName,,"olitok16.dos"
+HKR,NDIS\ODI,DriverName,,"OCTOK16"
+HKR,NDIS\ODI,FileName,,"octok16.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"  
+HKR,Nd

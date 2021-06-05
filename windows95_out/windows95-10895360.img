@@ -1,0 +1,145 @@
+
+	IO=650-657
+Checking for: Trantor T13B 8-bit SCSI Host Adapter
+QueryIOMem: Caller=DETECTT13B, rcQuery=0
+	IO=350-35f
+QueryIOMem: Caller=DETECTT13B, rcQuery=0
+	IO=340-34f
+QueryIOMem: Caller=DETECTT13B, rcQuery=0
+	IO=250-25f
+QueryIOMem: Caller=DETECTT13B, rcQuery=0
+	IO=240-24f
+Checking for: MPU-401 Compatible (MIDI)
+QueryIOMem: Caller=DETECTMPU401, rcQuery=1
+	IO=200-201
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=210-211
+QueryIOMem: Caller=DETECTMPU401, rcQuery=1
+	IO=220-221
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=230-231
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=240-241
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=250-251
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=260-261
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=270-271
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=300-301
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=310-311
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=320-321
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=330-331
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=332-333
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=334-335
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=336-337
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=340-341
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=350-351
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=360-361
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=370-371
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=390-391
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=3a0-3a1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=1
+	IO=3d0-3d1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=3e0-3e1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=210-211
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=230-231
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=240-241
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=250-251
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=260-261
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=270-271
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=300-301
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=310-311
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=320-321
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=330-331
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=332-333
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=334-335
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=336-337
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=340-341
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=350-351
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=360-361
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=370-371
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=390-391
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=3a0-3a1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=3e0-3e1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=210-211
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=230-231
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=240-241
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=250-251
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=260-261
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=270-271
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=310-311
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=320-321
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=330-331
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=332-333
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=334-335
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=336-337
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=340-341
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=350-351
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=360-361
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=370-371
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=390-391
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=3a0-3a1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=3e0-3e1
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=210-211
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=230-231
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=240-241
+QueryIOMem: Caller=DETECTMPU401, rcQuery=0
+	IO=250-251
+QueryI

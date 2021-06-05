@@ -1,0 +1,155 @@
+stFromSectionFilename (szSym$, szSect$) STATIC
+'$ifdef DEBUG
+    if szSym$ = "" then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "MakeListFromSectionFilename", szSym$+", "+szSect$
+    end if
+'$endif ''DEBUG
+
+    IF FMakeListInfSectionField(szSym$, szSect$, 1) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "MakeListFromSectionFilename", szSym$+", "+szSect$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB MakeListFromSectionSize (szSym$, szSect$) STATIC
+'$ifdef DEBUG
+    if szSym$ = "" then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "MakeListFromSectionSize", szSym$+", "+szSect$
+    end if
+'$endif ''DEBUG
+
+    IF FMakeListInfSectionField(szSym$, szSect$, 15) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "MakeListFromSectionSize", szSym$+", "+szSect$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB MakeListFromSectionVersion (szSym$, szSect$) STATIC
+'$ifdef DEBUG
+    if szSym$ = "" then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "MakeListFromSectionVersion", szSym$+", "+szSect$
+    end if
+'$endif ''DEBUG
+
+    IF FMakeListInfSectionField(szSym$, szSect$, 19) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "MakeListFromSectionVersion", szSym$+", "+szSect$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB InitInstall STATIC
+    IF hSetup > 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeInit, "InitInstall", ""
+'$endif ''DEBUG
+    ELSEIF FInitializeInstall(HinstFrame(), HwndFrame()) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "InitInstall", ""
+'$endif ''DEBUG
+        END
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CreateDir (szDir$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidFATDir(szDir$) = 0 then
+        BadArgErr 1, "CreateDir", szDir$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+    IF FCreateDir(szDir$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CreateDir", szDir$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB RemoveDir (szDir$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidFATDir(szDir$) = 0 then
+        BadArgErr 1, "RemoveDir", szDir$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+    IF FRemoveDir(szDir$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RemoveDir", szDir$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+
+'*************************************************************************
+SUB RemoveIniSection (szFile$, szSect$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidIniFile(szFile$) = 0 then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "RemoveIniSection", szFile$+", "+szSect$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+
+    IF FRemoveIniSection(szFile$, szSect$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RemoveIniSection", szFile$+", "+szSect$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CreateIniKeyValue (szFile$, szSect$, szKey$, szValue$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidIniFile(szFile$) = 0 then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "CreateIniKeyValue",

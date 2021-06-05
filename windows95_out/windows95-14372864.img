@@ -1,0 +1,144 @@
+c
+; 	0000B7	Dove
+; 	0000BC	AB  (Allen Bradley)
+; 	0000C0	Western Digital now  SMC (Std. Microsystems Corp) acquired
+; 		1991
+; 	0000C6	HP Intelligent Networks Operation (formerly EON Systems)
+; 		acquired 1989
+; 	0000C8	Altos
+; 	0000C9	Emulex
+; 	0000D7	Dartmouth College
+;     * 0000D8	Old Novell NE1000 cards ~<= 1987
+; 	0000DD	Gould
+; 	0000DE	Unigraph
+; 	0000E2	Acer Counterpoint
+; 	0000E8	Accton Technology Corp
+; 	0000EF	Alantec
+; 	0000F0	Samsung
+;     * 0000F3	Gandalf Data Limited - Canada
+;     * 0000F4	Allied Telesis Inc
+; 	0000FD	High Level Hardware (UK)
+;     * 000163	NDC  (National Datacomm Corporation)
+; 	000168	W&G  (Wandel & Goltermann)
+; 	0001C8	Thomas Conrad Corp
+; 	0040C8	Milan Technology Corporation
+; 	00608C	3COM
+;     * 00800F	Standard Microsystem Corp
+; 	008010	Commodore
+;     * 008019	Dayna Communications
+;     * 00801B	Kodiak Technology
+;     * 008021	Newbridge Networks Corporation
+;     * 008029	Microdyne Corporation
+; 	00802D	Xylogics
+;     * 00802E	Plexcom Inc
+; 	008034	SMT-Goupil
+;     * 008051	ADC Fibermux
+;     * 00807C	FiberCom
+; 	00808C	Frontier Software Development
+; 	008087	Okidata
+; 	0080A1	Microtest
+; 	0080B2	NET  (Network Equipment Technologies)
+; 	0080C7	Xircom
+;     * 0080C8	D-Link	( also Solectek Pocket Adapters)
+;     * 0080D3	Shiva Corporation
+;     * 0080D8	Network Peripherals
+; 	00AA00	Intel
+; 	00DD00	Ungermann-Bass
+; 	00DD01	Ungermann-Bass
+; 	020406	BBN
+;     * 020701	Racal Interlan
+; 	026086	Satelcom (UK)
+; 	02608C	3COM
+; 	080002	3COM  (formerly Bridge)
+; 	080003	ACC  (Advanced Computer Communications)
+; 	080005	Symbolics
+; 	080007	Apple Computer
+; 	080008	BBN
+; 	080009	Hewlett Packard
+; 	08000A	Nestar Systems
+; 	08000B	Unisys
+; 	08000D	ICL
+; 	08000E	NCR
+; 	080011	Tektronix
+; 	080014	Excelan
+;     * 080017	NSC  (National Semiconductor Corp)
+; 	08001B	Data General
+; 	08001E	Apollo
+; 	08001F	Sharp
+; 	080020	Sun
+; 	080022	NBI
+; 	080023	Matsushita Denso
+; 	080025	CDC
+; 	080026	Norsk Data  (Nord)
+; 	080027	PCS Computer Systems GMBH
+; 	080028	TI
+; 	08002B	DEC
+; 	08002E	Metaphor
+; 	08002F	Prime Computer
+; 	080036	Intergraph
+; 	080037	Fujitsu-Xerox
+; 	080038	Bull
+; 	080039	Spider Systems
+; 	08003E	Motorola
+; 	080041	DCA  (Digital Comm. Associates)
+;     * 080044	DSI  (DAVID Systems, Inc.)
+;     * 080046	Sony
+; 	080047	Sequent
+; 	080049	Univation
+; 	08004C	Encore
+; 	08004E	BICC
+; 	080051	Experdata
+; 	080056	Stanford University
+; 	08005A	IBM
+; 	080067	Comdesign
+; 	080068	Ridge
+; 	080069	Silicon Graphics
+;     * 08006A	AT&T
+; 	08006E	Excelan
+; 	080070	Mitsubishi
+; 	080074	Casio
+; 	080075	DDE  (Danish Data Elektronik A/S)
+; 	08007C	Vitalink
+; 	080080	XIOS
+;     * 080081	Crosfield Electronics UK parent Du Pont & FujiFilm Electronic
+; 		Imaging
+; 	080083	Seiko Denshi
+; 	080086	Imagen/QMS
+; 	080087	Xyplex
+; 	080089	Kinetics
+; 	08008B	Pyramid
+; 	08008D	Xyvision
+; 	08008E	Tandem
+; 	080090	Retix
+;     * 800010	AT&T  (instead of 080010 as reported in Nov's posting)
+;     * 80AD00	CNET Technology Inc
+; 	AA0000	DEC -+	Re-assignment of physical address to DEC hardware
+; 	AA0001	DEC  |	by DECnet at startup.  Allows DECnet to assign
+; 	AA0002	DEC  |	local addressing for devices like routers, LAT
+; 	AA0003	DEC  |	devices and other DEC specific equipment for a
+; 	AA0004	DEC -+	DECnet system
+; 
+; 
+;     Manufacture Vendor ID addresses NOT assigned by IEEE, but being used
+;     anyway.
+; 
+;     * 405243	ARC  (American Research Corporation)
+;     * 415243	ARC  (American Research Corporation)
+;     * 444649	DFI
+;     * 02CF1F	CMC
+; 
+;     Numbers removed as not officially assigned by IEEE and can no longer
+;     verify actually in use or ever in use.
+; 
+;     * 001700	Kabel  removed Jan 92
+;     * 000102	BBN    removed Jan 92
+;     * 080010	AT&T   removed Jan 92
+;     * 08001A  Data General Removed Feb 92 ( they only have one address
+; 		08001B)
+
+;*** OLICOM Adapters info.
+; 
+;   Information on Olicom Token-Ring Adapters and Novell ODI and IPX
+;   Drivers:
+; 
+; 	Olicom h

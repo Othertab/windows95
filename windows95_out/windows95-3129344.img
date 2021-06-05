@@ -1,0 +1,55 @@
+Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 5,MO_RECYE.ICO<The Golden Era Recycle Empty.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 5,MO_RECYF.ICO<The Golden Era Recycle Full.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+
+[MT_Modern_cur]
+ 5,MO_BUSY.ANI<The Golden Era busy.ani>,,,,1995-10-24,,,,,,,,,SHARED,41540,,41540,,,
+ 5,MO_WAIT.ANI<The Golden Era wait.ani>,,,,1995-10-24,,,,,,,,,SHARED,37054,,37054,,,
+ 5,MO_ARROW.CUR<The Golden Era arrow.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_BEAM.CUR<The Golden Era beam.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_CROSS.CUR<The Golden Era cross.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_HELP.CUR<The Golden Era help.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_MOVE.CUR<The Golden Era move.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_NESW.CUR<The Golden Era Size NESW.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_NO.CUR<The Golden Era no.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_NS.CUR<The Golden Era Size NS.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_NWSE.CUR<The Golden Era Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_PEN.CUR<The Golden Era pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_UP.CUR<The Golden Era up.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MO_WE.CUR<The Golden Era Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+
+[MT_Modern_scr]
+ 5,MODERNE.DLL<The Golden Era.dll>,,,,1995-10-24,,1033,,,,,,,SHARED,225280,SYSTEM,225280,,4.40.0.310,
+ 3,WL32SCR.EXE<The Golden Era.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,38400,SYSTEM,38400,,4.40.0.310,
+
+[MT_Modern_ttf]
+"mo1" = 5,GOTHIC.TTF,,,,1995-10-24,,,,,,,,,SHARED,61280,SYSTEM,61280,,1.27.0.0,
+"mo2" = 5,GOTHICB.TTF,,,,1995-10-24,,,,,,,,,SHARED,53524,SYSTEM,53524,,1.1.0.0,
+"mo3" = 5,GOTHICBI.TTF,,,,1995-10-24,,,,,,,,,SHARED,56352,SYSTEM,56352,,1.1.0.0,
+"mo4" = 5,GOTHICI.TTF,,,,1995-10-24,,,,,,,,,SHARED,61156,SYSTEM,61156,,1.1.0.0,
+
+[MT_Modern_wav16]
+ 5,MO_ASTRX.WAV<The Golden Era asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,10810,,10810,,,
+ 5,MO_BEEP.WAV<The Golden Era beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,19194,,19194,,,
+ 5,MO_DEFAU.WAV<The Golden Era default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,16066,,16066,,,
+ 5,MO_EMPTY.WAV<The Golden Era empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,14856,,14856,,,
+ 5,MO_ERROR.WAV<The Golden Era program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,21874,,21874,,,
+ 5,MO_EXCLA.WAV<The Golden Era exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,12280,,12280,,,
+ 5,MO_EXIT.WAV<The Golden Era exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,39156,,39156,,,
+ 5,MO_MAX.WAV<The Golden Era maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,5478,,5478,,,
+ 5,MO_MENU.WAV<The Golden Era menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4936,,4936,,,
+ 5,MO_MENUC.WAV<The Golden Era menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,8804,,8804,,,
+ 5,MO_MIN.WAV<The Golden Era minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,6674,,6674,,,
+ 5,MO_QUEST.WAV<The Golden Era question.wav>,,,,1995-10-24,,,,,,,,,SHARED,30848,,30848,,,
+ 5,MO_START.WAV<The Golden Era startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,26936,,26936,,,
+ 5,MO_STOP.WAV<The Golden Era critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,24924,,24924,,,
+
+[MT_Modern_wav8]
+ 5,MO_ASTRX.WA8<The Golden Era asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,6596,,6596,,,
+ 5,MO_BEEP.WA8<The Golden Era beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,10788,,10788,,,
+ 5,MO_DEFAU.WA8<The Golden Era default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,9224,,9224,,,
+ 5,MO_EMPTY.WA8<The Golden Era empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,8620,,8620,,,
+ 5,MO_ERROR.WA8<The Golden Era program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,12128,,12128,,,
+ 5,MO_EXCLA.WA8<The Golden Era exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,7332,,7332,,,
+ 5,MO_EXIT.WA8<The Golden Era exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,20770,,20770,,,
+ 5,MO_MAX.WA8<The Golden Era maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,3930,,393

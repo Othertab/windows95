@@ -1,0 +1,114 @@
+ctory UI","Server #3",,"uls3.microsoft.com"
+HKCU,"Software\Microsoft\User Location Service\Directory UI","Server #4",,"uls4.microsoft.com"
+HKCU,"Software\Microsoft\User Location Service\Directory UI","Server #5",,"uls5.microsoft.com"
+
+
+; Rename directories and files for binaries
+
+
+
+
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\NetMtgFiles,,,"%24%\%ProgramFiles%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\NetMtgFiles,%NETMTGDIR_SFN%,,!$!$!$!$.MTG
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\NetMtgFiles,!$!$!$!$.MTG,,"%NETMTGDIR%,1"
+
+
+; Entries for sounds
+HKCU,AppEvents\Schemes\Apps\Conf,,,"%PRODUCT_NAME%"
+
+
+
+
+
+
+
+
+
+
+
+
+
+HKCU,AppEvents\Schemes\Apps\Conf\%ReceiveCall%\.Current,,,"%24%\%ProgramFiles%\%NETMTGDIR%\RingIn.wav"
+HKCU,AppEvents\Schemes\Apps\Conf\%ReceiveJoin%\.Current,,,"%24%\%ProgramFiles%\%NETMTGDIR%\RingIn.wav"
+HKCU,AppEvents\Schemes\Apps\Conf\%PersonJoins%\.Current,,,"%24%\%ProgramFiles%\%NETMTGDIR%\Blip.wav"
+HKCU,AppEvents\Schemes\Apps\Conf\%PersonLeaves%\.Current,,,"%24%\%ProgramFiles%\%NETMTGDIR%\Blip.wav"
+
+
+; Entries for launching
+
+
+
+
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CONF.EXE",,,"%24%\%ProgramFiles%\%NETMTGDIR%\conf.exe"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CONF.EXE","Path",,"%24%\%ProgramFiles%\%NETMTGDIR%;"
+
+
+; Entries for Active Setup
+HKLM,"SOFTWARE\Microsoft\Active Setup\Installed Components\{44BBA842-CC51-11CF-AAFA-00AA00B6015C}",,0,"%PRODUCT_NAME%"
+HKLM,"SOFTWARE\Microsoft\Active Setup\Installed Components\{44BBA842-CC51-11CF-AAFA-00AA00B6015C}","Version",1,04,00,00,00,00,00,6D,04
+
+; Entries for ConfLnk
+HKCR,CLSID\{30E7F2A0-EC4C-11ce-8865-00805F742EF6},,,%ConfLnk%
+HKCR,CLSID\{30E7F2A0-EC4C-11ce-8865-00805F742EF6}\InProcServer32,,,"ConfLnk.dll"
+HKCR,CLSID\{30E7F2A0-EC4C-11ce-8865-00805F742EF6}\InProcServer32,"ThreadingModel",,"Apartment"
+
+HKCR,.cnf,,,"ConferenceLink"
+HKCR,ConferenceLink,,,%ConfLnk%
+HKCR,ConferenceLink,"EditFlags",1,02,00,01,00
+HKCR,ConferenceLink,"IsShortcut",,""
+HKCR,ConferenceLink,"NeverShowExt",,""
+
+HKCR,ConferenceLink\ClsID,,,"{30E7F2A0-EC4C-11ce-8865-00805F742EF6}"
+HKCR,ConferenceLink\DefaultIcon,,,"ConfLnk.dll,-103"
+HKCR,ConferenceLink\shell\open\command,,,"rundll32.exe ConfLnk.dll,OpenConfLink %l"
+
+; Entries for mime
+HKCR,".uls",,,"ulsfile"
+HKCR,".uls","Content Type",,"text/iuls"
+HKCR,"ulsfile",,,"%MSIPTYPE%"
+HKCR,"MIME\Database\Content Type\text/iuls","Extension",,".uls"
+
+
+
+HKCR,"ulsfile\DefaultIcon",,,"%24%\%ProgramFiles%\%NETMTGDIR%\conf.exe,1"
+
+HKCR,"ulsfile\shell\open\command",,,"""rundll32.exe"" msconf.dll,NewMediaPhone %l"
+HKCU,"Software\Netscape\Netscape Navigator\Viewers","text/iuls",,"""rundll32.exe"" msconf.dll,NewMediaPhone %l"
+
+; Excluded Program Sharing List
+HKLM,"%KEY_CONFERENCING%\Program Sharing\Excluded","wb32.exe",1,00,00,00,00
+HKLM,"%KEY_CONFERENCING%\Program Sharing\Excluded","cb32.exe",1,00,00,00,00
+HKLM,"%KEY_CONFERENCING%\Program Sharing\Excluded","internat.exe",1,00,00,00,00
+HKLM,"%KEY_CONFERENCING%\Program Sharing\Excluded","ecco.exe",1,00,00,00,00
+HKLM,"%KEY_CONFERENCING%\Program Sharing\Excluded","ecco3.exe",1,00,00,00,00
+
+; Known GUIDs
+; (file transfer)
+
+
+
+
+HKLM,"%KEY_GUID%\{7BA58780-90C0-11CF-87BD-00AA003FEE93}","Path",,"%24%\%ProgramFiles%\%NETMTGDIR%\msconfft.exe"
+HKLM,"%KEY_GUID%\{7BA58780-90C0-11CF-87BD-00AA003FEE93}","Directory",,"%24%\%ProgramFiles%\%NETMTGDIR%"
+
+
+; Entries for Whiteboard and Chat
+HKCR,"Whiteboard",,,"%MSWBTYPE%"
+HKCR,".WHT",,,"Whiteboard"
+
+
+
+
+
+
+HKCR,"Whiteboard\DefaultIcon",,,"%24%\%ProgramFiles%\%NETMTGDIR%\WB32.EXE,1"
+HKCR,"Whiteboard\shell\open\command",,,"""%24%\%ProgramFiles%\%NETMTGDIR%\WB32.EXE"" ""%1"""
+HKCR,"Chat\DefaultIcon",,,"%24%\%ProgramFiles%\%NETMTGDIR%\CB32.EXE,1"
+HKCR,"Chat\shell\open\command",,,"""%24%\%ProgramFiles%\%NETMTGDIR%\CB32.EXE"" ""%1"""
+
+
+;Entries for Intel RRCM
+HKLM,SOFTWARE\Intel\RRCM,"WsLib",,"nac"
+HKLM,SOFTWARE\Intel\RRCM,"NumSessions",1,1e,00,00,00
+HKLM,SOFTWARE\Intel\RRCM,"NumFreeSSRC",1,10,

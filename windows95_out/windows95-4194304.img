@@ -1,0 +1,40 @@
+ion\URL\Prefixes"",""ftp."",""ftp://"""				
+1443				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\URL\Prefixes"",""gopher."",""gopher://"""				
+1444				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\URL\Prefixes"",""home."",""http://"""				
+1445				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\URL\Prefixes"",""mosaic."",""http://"""				
+1446				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\URL\Prefixes"",""www."",""http://"""				
+1460		Autodial		Group	1461 1462 1464 1465 1466
+1461				AddRegData	"""HKEY_LOCAL_MACHINE"",""System\CurrentControlSet\Services\Winsock\Autodial"",""AutodialDllName32"",""url.dll"""					
+1462				AddRegData	"""HKEY_LOCAL_MACHINE"",""System\CurrentControlSet\Services\Winsock\Autodial"",""AutodialFcnName32"",""AutodialHookCallback"""					
+1464				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Windows\CurrentVersion\Internet Settings,EnableAutodisconnect,1,4"""					
+1465				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Windows\CurrentVersion\Internet Settings,EnableSecurityCheck,1,4"""					
+1466				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Windows\CurrentVersion\Internet Settings,DisconnectIdleTime,20,4"""					
+1480		Mime		Group	1481 1482 1483 1485					
+1481				AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{FBF23B41-E3F0-101B-8488-00AA003E56F8}"","""",""MIME and Internet Property Sheet Hook"""					
+1482				AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{FBF23B41-E3F0-101B-8488-00AA003E56F8}\InProcServer32"","""",""url.dll"""					
+1483				AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{FBF23B41-E3F0-101B-8488-00AA003E56F8}\InProcServer32"",""ThreadingModel"",""Apartment"""					
+1485				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Explorer\FileTypesPropertySheetHook"","""",""{FBF23B41-E3F0-101B-8488-00AA003E56F8}"""					
+1500		*** Scripter ***		Group	1502 1510 1520 1580 1590					
+1502		*** Files ***		Group	1503 1504 1505 1507 1508 1509 1513 1514					
+1503		ProgsPath		CustomAction	"""plus.dll"",""LocalizedProgramFilesPath"",""ProgramFilesDir"""					
+1504		SCRIPTER.EXE		CopyFile	"""I_Scr_Exe"",""sxe"""				yes	%1503\ACCESS~1<%1503\Accessories>
+1505		Scripter Accessories		CopySection	"""I_Scr_Access"""				no	%1504
+1507		Scripter Help		CopySection	"""I_Scr_Help"""				no	%W\HELP<%W\Help>
+1508		Scripter Inf		CopySection	"""I_Scr_Inf"""				no	%W\INF<%W\Inf>
+1509		Scripter Doc		CopyFile	"""I_Scr_Exe"",""sdc"""				yes	%1
+1510		*Scr Shortcut*		Group	1511 1512					
+1511		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+1512		ShortCut		InstallShortcut	"""%1504\%F1504"",""Dial-Up Scripting Tool"",""%1504"""				no	%1511\ACCESS~1<%1511\Accessories>
+1513		Scripter Setup		InstallSysFile	"""I_Scr_Sys"",""sm1"""				no	%M
+1514		Scripter DLL		InstallSysFile	"""I_Scr_Sys"",""sm2"""				no	%M
+1519
+1520		*Scr Regentries*		Group	1521 1530 1550 1560 					
+1521		*Maintenance*		Group	1522 1523 1524 1525 1526 1527					
+1522				RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"",""CSLIP"""
+1523				RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\CSLIP"",""INF"""
+1524				AddRegData	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\CSLIP"",""Installed"",""1"""
+1525				RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\CSLIP"",""Section"""
+1526				AddRegData	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CSLIP"",""DisplayName"",""SLIP and Scripting for Dial-Up Networking"""
+1527				AddRegData	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\CSLIP"",""UninstallString"",""RunDll setupx.dll,InstallHinfSection MS_CSLIP_Uninstall 4 rnaplus.inf"""
+1529
+1530		*CSLIP 

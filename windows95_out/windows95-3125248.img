@@ -1,0 +1,56 @@
+SHARED,766,,766,,,
+ 4,DV_NWSE.CUR<Leonardo da Vinci Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DV_PEN.CUR<Leonardo da Vinci pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DV_UP.CUR<Leonardo da Vinci up.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DV_WAIT.CUR<Leonardo da Vinci wait.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DV_WE.CUR<Leonardo da Vinci Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+
+[MT_Davinci_scr]
+ 4,DAVINCI.DLL<Leonardo da Vinci.dll>,,,,1995-10-24,,1033,,,,,,,SHARED,910336,SYSTEM,910336,,4.40.0.310,
+ 3,WL32SCR.EXE<Leonardo da Vinci.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,38400,SYSTEM,38400,,4.40.0.310,
+
+[MT_Davinci_ttf]
+"dv1" = 4,BKANT.TTF,,,,1995-10-24,,,,,,,,,SHARED,65976,SYSTEM,65976,,1.25.0.0,
+
+[MT_Davinci_wav16]
+ 4,DV_ASTRX.WAV<Leonardo da Vinci asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,30604,,30604,,,
+ 4,DV_BEEP.WAV<Leonardo da Vinci beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,24646,,24646,,,
+ 5,DV_DEFAU.WAV<Leonardo da Vinci default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,7626,,7626,,,
+ 5,DV_EMPTY.WAV<Leonardo da Vinci empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,34890,,34890,,,
+ 5,DV_ERROR.WAV<Leonardo da Vinci program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,17198,,17198,,,
+ 5,DV_EXCLA.WAV<Leonardo da Vinci exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,14392,,14392,,,
+ 5,DV_MAX.WAV<Leonardo da Vinci maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,11696,,11696,,,
+ 5,DV_MENU.WAV<Leonardo da Vinci menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,6180,,6180,,,
+ 5,DV_MENUC.WAV<Leonardo da Vinci menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,14940,,14940,,,
+ 5,DV_MIN.WAV<Leonardo da Vinci minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,11448,,11448,,,
+ 5,DV_QUEST.WAV<Leonardo da Vinci question.wav>,,,,1995-10-24,,,,,,,,,SHARED,11866,,11866,,,
+ 5,DV_RESTD.WAV<Leonardo da Vinci restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,5696,,5696,,,
+ 5,DV_RESTU.WAV<Leonardo da Vinci restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,5860,,5860,,,
+ 5,DV_START.WAV<Leonardo da Vinci startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,27020,,27020,,,
+ 5,DV_STOP.WAV<Leonardo da Vinci critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,17072,,17072,,,
+
+[MT_Davinci_wav8]
+ 5,DV_ASTRX.WA8<Leonardo da Vinci asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,16492,,16492,,,
+ 5,DV_BEEP.WA8<Leonardo da Vinci beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,13514,,13514,,,
+ 5,DV_DEFAU.WA8<Leonardo da Vinci default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,5004,,5004,,,
+ 5,DV_EMPTY.WA8<Leonardo da Vinci empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,18636,,18636,,,
+ 5,DV_ERROR.WA8<Leonardo da Vinci program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,9790,,9790,,,
+ 5,DV_EXCLA.WA8<Leonardo da Vinci exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,8386,,8386,,,
+ 5,DV_MAX.WA8<Leonardo da Vinci maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,7038,,7038,,,
+ 5,DV_MENU.WA8<Leonardo da Vinci menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4280,,4280,,,
+ 5,DV_MENUC.WA8<Leonardo da Vinci menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,8662,,8662,,,
+ 5,DV_MIN.WA8<Leonardo da Vinci minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,6916,,6916,,,
+ 5,DV_QUEST.WA8<Leonardo da Vinci question.wav>,,,,1995-10-24,,,,,,,,,SHARED,7124,,7124,,,
+ 5,DV_RESTD.WA8<Leonardo da Vinci restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,4040,,4040,,,
+ 5,DV_RESTU.WA8<Leonardo da Vinci restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,4120,,4120,,,
+ 5,DV_START.WA8<Leonardo da Vinci startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,14702,,14702,,,
+ 5,DV_STOP.WA8<Leonardo da Vinci critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,9726,,9726,,,
+
+[MT_Modern_thm]
+ 5,MODERNE.THM<The Golden Era (high color).theme>,,,,1995-10-24,,,,,,,,,SHARED,5254,,5254,,,
+
+[MT_Modern_bmp]
+ 5,MO_WALL.JPG<The Golden Era wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,45220,,45220,,,
+ 5,MO_WALL.PAL<The Golden Era wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,1048,,1048,,,
+ 5,MO_COMP.ICO<The Golden Era My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 5,MO_NET.ICO<The Golden Era 

@@ -1,0 +1,55 @@
+                                                             "	Group	93 2380				no	%34\THEMES<%34\Themes>
+93		Restore the reg if deinstalling		CustomAction	"""plus.dll"",""RestoreRegIcons"","""""					
+95		Overall  Inflation		CustomAction	"""plus.dll"",""AddTo"",""5191680"""									
+96		Dial-up Server Inflate		CustomAction	"""plus.dll"",""AddTo"",""294912"""									
+97		Internet Jump  Inflate		CustomAction	"""plus.dll"",""AddTo"",""13631488"""									
+98		[ File Groups ]								
+99		System Agent removal checking		CustomAction	"""plus.dll"",""DiskToolsCheck"",""32,99,200:402,403,404:31,32"""				no	%M
+100		~~~ Compression ~~~		Group	102				yes	%31
+101		Disk Compression Check		CustomAction	"""plus.dll"",""CompType"",""31,100,101,102:116,118,119,126,131,132,138:31,32:116"""					%W
+102				DependAsk	101 ? 105 115 125 130 135 150 155 157 160 165 400 430					
+104										
+105		Set Automount		CustomAction	"""plus.dll"",""SetAutomount"","""""					
+106										
+115		*** BIN ***		Group	116 117 118 119 120 121 122					
+116		DRVSPACE.BIN (Win95 Tree)		CopyFile	"""ExtCompression"",""bin"""				no	%W\COMMAND<%W\Command>
+117		BootHost		CustomAction	"""plus.dll"",""BootHost"","""""					
+118		DRVSPACE.BIN On Host		CopyFile	"""ExtCompression"",""bin"""				no	%117
+119		DBLSPACE.BIN On Host		CopyFile	"""ExtCompression"",""dbl"""				no	%117
+120		DRVSPACE.BIN C:\		CopyFile	"""ExtCompression"",""bin"""				no	C:\<c:\>
+121		DBLSPACE.BIN C:\		CopyFile	"""ExtCompression"",""dbl"""				no	C:\<c:\>
+122		Reset Host Dirs		CustomAction	"""plus.dll"",""ResetHostDirs"",""117,118,119"""					
+124										
+125		*** SYS ***		Group	126					
+126		DRVSPACE.SYS (Win95 Tree)		CopyFile	"""ExtCompression"",""sys"""				no	%W\COMMAND<%W\Command>
+129										
+130		*** VXD ***		Group	131 132					
+131		DRVSPACX.VXD		CopyFile	"""ExtCompression"",""vxd"""				no	%M\IOSUBSYS<%M\iosubsys>
+132		MRCI2.VXD		CopyFile	"""ExtCompression"",""mri"""				no	%M\VMM32<%M\vmm32>
+134										
+135		*** EXE ***		Group	138 139 140 141 142					
+138		DRVSPACE.EXE		CopyFile	"""ExtCompression"",""dxe"""				no	%W
+139		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+140		ShortCut		InstallShortcut	"""%138\%F138"",""DriveSpace"",""%138"""				no	%139\ACCESS~1\SYSTEM~1<%139\Accessories\System Tools>
+141		Disable Dxxspace Win95 OptionProgram		RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"",""Dxxspace"""					
+142		Disable Dxxspace Win95 OptionProgram		RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\dxxspace"""					
+149										
+150		*** HLP ***		Group	151 152					
+151		DRVSPACE.HLP In Win95 Tree		CopyFile	"""ExtCompression"",""dhp"""				no	%W\HELP<%W\Help>
+152		DRVSPACE.CNT In Win95 Tree		CopyFile	"""ExtCompression"",""dct"""				no	%W\HELP<%W\Help>
+154										
+155		*** DAT ***		Group	156					
+156		DRVSPACE.DAT (Same DestDir as SAGE.DAT)		CopyFile	"""ExtCompression"",""dat"""				no	%32\SYSTEM<%32\System>
+157		*** CAB ***		Group	158					
+158		MINI.CAB In Win95 Tree		CopyFile	"""ExtCompression"",""cab"""				no	%M
+159										
+160		*** Boot Disk ***		Group	161 162						
+161		NOCOMP.EXE		CopyFile	"""ExtCompression"",""bd1"""				yes	%31\SYSTEM<%31\System>
+162		NOCOMP.INF		CopyFile	"""ExtCompression"",""bd2"""				yes	%31\SYSTEM<%31\System>
+164										
+165		*** Compression Tabs ***		Group	166 167 168 169						
+166		COMPEXT.DLL		CopyFile	"""ExtCompression"",""ctb"""				yes	%31\SYSTEM<%31\System>
+167		Property Sheet RegEntry		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{7C7E55A0-4397-11CE-8B06-00AA0062C7BB}\InProcServer32"","""",""%166\%F166"""					%31\SYSTEM<%31\System>
+168		Property Sheet RegEntry		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{7C7E55A0-4397-11CE-8B06-00AA0062C7BB}\InProcServer32"",""ThreadingModel"",""Apartment"""					
+169		Property Sheet RegEntry		AddRegData	"""HKEY_CLASSES_ROOT"",""Drive\shellex\PropertySheetHandlers\Compression"","""",""{7C7E55A0-4397-11CE-8B06-00AA0062C7BB}"""					
+170		

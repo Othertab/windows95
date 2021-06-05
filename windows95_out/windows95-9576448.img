@@ -1,0 +1,82 @@
+3 Creating a Default Setup Script = RK04_SVR_12_
+3 Installing Files on the Server = RK04_SVR_13_
+2 Task 2: Creating Machine Directories = RK04_SVR_14_
+2 Installing Windows 95 for Shared Installations = RK04_SVR_15_
+3 Configuring Shared Installations
+3 Introduction = RK04_SVR_17_
+4 Configuring Shared Installations for Protected-Mode Clients
+4 Introduction = RK04_SVR_19_
+4 Configuring a Computer that Starts from a Hard Disk = RK04_SVR_20_
+4 Configuring a Computer that Starts from a Floppy Disk = RK04_SVR_21_
+4 Configuring a Remote-Boot Workstation for Client for NetWare Networks = RK04_SVR_22_
+3 Configuring Shared Installations for Real-Mode Clients = RK04_SVR_23_
+3 Creating the Disk Image for RIPL = RK04_SVR_24_
+3 Technical Notes for Shared Installations
+3 Introduction = RK04_SVR_26_
+3 System Startup and Networking for Shared Installations = RK04_SVR_27_
+3 Technical Notes on MACHINES.INI and SETMDIR = RK04_SVR_28_
+3 Other Notes on Shared Installations = RK04_SVR_29_
+2 Custom, Automated, and Push Installations
+2 Introduction = RK05_CUS_1_
+2 Custom Installations for Windows 95: The Basics = RK05_CUS_2_
+2 Custom Installations of Windows 95: The Issues = RK05_CUS_3_
+3 Customizing Windows 95 with Setup Scripts
+3 Introduction = RK05_CUS_5_
+3 Using Server-Based Setup to Create Custom Scripts = RK05_CUS_6_
+3 Using BATCH.EXE to Create Setup Scripts = RK05_CUS_7_
+3 Editing MSBATCH.INF for Custom Settings = RK05_CUS_8_
+3 Customizing Setup for Accessibility Requirements = RK05_CUS_9_
+3 Installing Other Software Using Custom Scripts = RK05_CUS_10_
+2 Customizing Detection for NetWare Networks = RK05_CUS_11_
+2 Running Custom Setup Scripts = RK05_CUS_12_
+2 Customizing Windows 95 with WRKGRP.INI Files = RK05_CUS_13_
+2 Customizing Windows 95 with Profiles and Policy Files = RK05_CUS_14_
+2 Overview of Push Installations = RK05_CUS_15_
+3 Using Login Scripts for Push Installation
+3 Introduction = RK05_CUS_17_
+3 Preparing a STARTUP.GRP File = RK05_CUS_18_
+3 Preparing Login Scripts for Push Installations = RK05_CUS_19_
+3 Setting Up a Windows NT Server for Push Installations = RK05_CUS_20_
+3 Setting Up a NetWare Server for Push Installations = RK05_CUS_21_
+3 Running Login Scripts for Push Installations = RK05_CUS_22_
+2 Setup Technical Discussion
+2 Introduction = RK06_TCH_1_
+3 Phases of the Setup Process
+3 Introduction = RK06_TCH_3_
+3 Startup and Information Gathering Phase for Windows 95 Setup = RK06_TCH_4_
+3 Hardware Detection Phase = RK06_TCH_5_
+4 File Copy Phase
+4 Introduction = RK06_TCH_7_
+4 Creating the Startup Disk = RK06_TCH_8_
+4 Creating Directories and Copying Files = RK06_TCH_9_
+4 Creating Registry Entries = RK06_TCH_10_
+4 Final System Configuration Phase
+4 Introduction = RK06_TCH_12_
+4 Initializing the System after Setup = RK06_TCH_13_
+4 Modifying the Boot Drive after Setup = RK06_TCH_14_
+4 Verifying the Installation = RK06_TCH_15_
+3 Safe Detection, Safe Recovery, and Verification
+3 Introduction = RK06_TCH_17_
+4 Safe Detection in Windows 95 Setup
+4 Introduction = RK06_TCH_19_
+4 Safe Detection for Network Adapters = RK06_TCH_20_
+4 Safe Detection for SCSI Controllers = RK06_TCH_21_
+4 Safe Detection for Proprietary Adapters for CD-ROM = RK06_TCH_22_
+4 Safe Detection for Sound Cards = RK06_TCH_23_
+4 Safe Recovery with Setup Log Files
+4 Introduction = RK06_TCH_25_
+4 SETUPLOG.TXT: The Setup Log File = RK06_TCH_26_
+4 DETLOG.TXT: The Hardware Detection Log File = RK06_TCH_27_
+4 NETLOG.TXT: The Network Setup Log File = RK06_TCH_28_
+3 Windows 95 Startup Process
+3 Introduction = RK06_TCH_30_
+4 Bootstrapping in the BIOS Phase
+4 Introduction = RK06_TCH_32_
+4 Booting with a Legacy BIOS = RK06_TCH_33_
+4 Booting with a Plug and Play BIOS = RK06_TCH_34_
+3 Loading Hardware Profiles and Real-Mode Drivers = RK06_TCH_35_
+3 Initializing Static VxDs at Startup = RK06_TCH_36_
+4 Loading the Protected-Mode Operating System at Startup
+4 Introduction = RK06_TCH_38_
+4 Loading Protected-Mode VxDs at Startup = RK06_TCH_39_
+4 Loading the Final System Components at Startup = RK06_TCH_40_

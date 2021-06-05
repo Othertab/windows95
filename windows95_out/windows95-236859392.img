@@ -1,0 +1,60 @@
+JPEG_to_GIF@frontpg.HLP>(w95sec)
+5 To generate client-side clickable images=IMAGE_client_side@frontpg.HLP>(w95sec)
+5 To provide an image's alternate low-resolution image=IMAGE_add_low_resolution_alternate@frontpg.HLP>(w95sec)
+5 To set an image's default link=IMAGE_set_default_link@frontpg.HLP>(w95sec)
+5 To set clickable image style=IMAGE_setting_style@frontpg.HLP>(w95sec)
+5 To specify an image's alternate text=IMAGE_alternate_text@frontpg.HLP>(w95sec)
+2 Adding and Using Tasks
+3 About Tasks=Overview_Tasks
+3 Adding and Deleting Tasks
+4 To add a task from the FrontPage Editor=TASK_add_task_to_to_do_list_editor@frontpg.HLP>(w95sec)
+4 To add a task from the FrontPage Explorer=TASK_add_task_to_to_do_list_explorer@frontpg.HLP>(w95sec)
+4 To delete a completed task=TASK_delete_completed_task@frontpg.HLP>(w95sec)
+4 To delete an uncompleted task=TASK_delete_uncompleted_task@frontpg.HLP>(w95sec)
+3 Accessing To Do Lists
+4 To access a To Do List from the FrontPage Editor=TASK_access_to_do_list_from_editor@frontpg.HLP>(w95sec)
+4 To access a To Do List from the FrontPage Explorer=TASK_acess_to_do_list_from_explorer@frontpg.HLP>(w95sec)
+3 Other To Do List Procedures
+4 To go to a page linked to a task=TASK_go_to_linked_page@frontpg.HLP>(w95sec)
+4 To mark a task completed=TASK_mark_task_completed@frontpg.HLP>(w95sec)
+4 To modify a task=TASK_modify_a_task@frontpg.HLP>(w95sec)
+4 To view a completed task=TASK_view_completed_tasks@frontpg.HLP>(w95sec)
+2 Working With Tables
+3 About Tables=Overview_Tables
+3 Inserting Tables
+4 To insert a table=TABLES_create_table@frontpg.HLP>(w95sec)
+4 To insert a table within a table=TABLES_inserting_a_table@frontpg.HLP>(w95sec)
+3 Selecting Parts of a Table
+4 To select a cell=TABLES_selecting_cells@frontpg.HLP>(w95sec)
+4 To select a column=TABLES_selecting_columns@frontpg.HLP>(w95sec)
+4 To select a row=TABLES_selecting_rows@frontpg.HLP>(w95sec)
+4 To select a table caption=TABLES_selecting_table_captions@frontpg.HLP>(w95sec)
+4 To select a table=TABLES_selecting_tables@frontpg.HLP>(w95sec)
+3 Opening Properties Dialog Boxes
+4 To open the Caption Properties Dialog Box=TABLES_opening_caption_properties_dialog_box@frontpg.HLP>(w95sec)
+4 To open the Cell Properties Dialog Box=TABLES_opening_cell_properties_dialog_box@frontpg.HLP>(w95sec)
+4 To open the Table Properties Dialog Box=TABLES_opening_properties_dialog_box@frontpg.HLP>(w95sec)
+3 Changing a Table
+4 To change cell padding=TABLES_changing_cell_padding@frontpg.HLP>(w95sec)
+4 To change cell spacing=TABLES_changing_cell_spacing@frontpg.HLP>(w95sec)
+4 To change the position of a table caption=TABLES_changing_position_of_caption@frontpg.HLP>(w95sec)
+4 To change the width of a table border=TABLES_changing_border_widths@frontpg.HLP>(w95sec)
+4 To edit a table caption=TABLES_editing_table_captions@frontpg.HLP>(w95sec)
+4 To insert a cell=TABLES_inserting_cells@frontpg.HLP>(w95sec)
+4 To merge cells=TABLES_merging_cells@frontpg.HLP>(w95sec)
+4 To set the columns a cell spans=TABLES_setting_column_span@frontpg.HLP>(w95sec)
+4 To set the rows a cell spans=TABLES_setting_row_span@frontpg.HLP>(w95sec)
+4 To split cells into columns=TABLES_splitting_cells_into_columns@frontpg.HLP>(w95sec)
+4 To split cells into rows=TABLES_splitting_cells_into_rows@frontpg.HLP>(w95sec)
+3 Aligning a Table or Its Parts
+4 To align a table=TABLES_aligning@frontpg.HLP>(w95sec)
+4 To align text horizontally in a cell=TABLES_aligning_text_cells_horizontally@frontpg.HLP>(w95sec)
+4 To align text vertically in a cell=TABLES_aligning_text_cells_vertically@frontpg.HLP>(w95sec)
+3 Deleting a Table or Its Parts
+4 To delete a cell=TABLES_deleting_cells@frontpg.HLP>(w95sec)
+4 To delete a column=TABLES_deleting_columns@frontpg.HLP>(w95sec)
+4 To delete a row=TABLES_deleting_rows@frontpg.HLP>(w95sec)
+4 To delete a table=TABLES_deleting@frontpg.HLP>(w95sec)
+3 Adding Extended Attributes
+4 To add extended attributes to a cell=TABLES_adding_extended_attributes_to_cells@frontpg.HLP>(w95sec)
+4 To add extended attributes to a table caption=TABLES_adding_extended_attrib

@@ -1,0 +1,215 @@
+
+
+[win32s.inifields]
+;delete winmm16.dll from the drivers= line in the [boot] section of system.ini:
+system.ini, boot, drivers, winmm16.dll
+
+[del.old.help]
+BRIEF.HLP
+CONTROL.HLP
+INK.HLP
+MSPAINT.CNT
+MSPAINT.HLP
+NETWORK.CNT
+NETWORK.HLP
+NOTEPAD.HLP
+OLE.HLP
+POWER.HLP
+progman.hlp
+REGEDIT.HLP
+REGEDITV.HLP
+RNA.HLP
+SERVER.CNT
+SERVER.HLP
+SL.HLP
+TELEPHON.HLP
+WINCHAT.CNT
+windows.cnt
+windows.hlp
+winfile.hlp
+winhelp.hlp
+WINPOPUP.CNT
+
+[del.new.help]
+;leave in for RTM:
+FMPM.CNT
+FMPM.HLP
+
+[del.bootlog]
+bootlog.txt
+bootlog.prv
+
+[del.old.VxDs]
+;VxD's that are now bound into VMM386:
+vcd.386
+vdmad.386
+vpicd.386
+;vtdapi.386 (deleted by motown.inf)
+vdd.386
+vflatd.386
+dispenum.386
+mach8.386
+mach32.386
+cirrus.386
+cpq.386
+s3.386
+tseng.386
+xga.386
+ios.386
+dbkvssd.386
+socketsv.386
+PCCard.386
+msmpu401.386
+msopl.386
+mmdevldr.386
+msmpu401.386
+VASPID.386
+
+[del.ttfonts]
+mscon.ttf
+
+[del.reg.bootlog]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion,BootCount
+
+[M6.win]
+; review -- this section can be removed from final product
+; Remove M6 files that have version conflicts or won't work w/ >M6 (leave in for M8)
+accstat.exe  ; ver conflict
+backup.exe   ; won't work on >M6
+backup.hlp   ; copied into win dir before M7 so removing
+fullbkup.set ; file format changes each bld
+fullsyst.set ; new file name for full sys backup set
+cblui.exe    ; won't work on >M6
+cbw.cfg      ; won't work on >M6
+cbw.drv      ; won't work on >M6
+chiadi.dll   ; won't work on >M6
+chikdi.dll   ; won't work on >M6
+backup.cfg   ; clean out old version
+fixdrive.exe ; obsolete
+wordpad.exe  ; codepage conflict
+mspaint.exe  ; won't work on >M6
+dialer.exe   ; clean-up in case user doesn't install in M8
+
+[M6.sys]
+; review -- this section can be removed from final product
+; Remove M6 files that have version conflicts or won't work w/ >M6 (leave in for M8)
+awfxex32.exe ; ver conflict w/ M7 version
+cbw.drv      ; won't work on >M6
+pkpd.dll     ; ver conflict
+qic117.vxd   ; won't work on >M6
+rpcns4.dll   ; ver conflict
+moscp.exe    ; ver conflict w/ M7 version
+
+[M6.ht]
+; review--this section can be removed from final product
+; Remove M6 files that have version conflicts or won't work w/ >M6 (leave in for M8)
+HYPERTRM.EXE ; won't work on >M6
+
+[M6.fv]
+; review--this section can be removed from final product
+; Remove M6 files that have version conflicts or won't work w/ >M6 (leave in for M8)
+debmp.dll
+dehex.dll
+demet.dll
+dess.dll
+dewp.dll
+qvstub.exe
+sccch.dll    
+sccexp.dll
+sccfa.dll    
+sccfi.dll    
+scclo.dll    
+sccpg.dll    
+sccut.dll    
+sccview.dll
+sccvw.dll    
+vsami.dll
+vsasc8.dll
+vsbmp.dll
+vsdrw.dll
+vsexe.dll    
+vsflw.dll
+vsgif.dll
+vsmp.dll
+vsmsw.dll
+vsqpw.dll   
+vsrtf.dll
+vstiff.dll
+vsw6.dll
+vswk3.dll
+vswks.dll
+vswmf.dll
+vsword.dll
+vswork.dll
+vswp5.dll
+vswp6.dll
+vswpf.dll
+vsxl5.dll   
+vsxl.dll    
+vsxlc.dll   
+vspp.dll    
+msviewut.dll 
+vsqpw2.dll   
+
+[M6.pif]
+; review -- not needed for final product (leave in for M8)
+command.pif
+
+[Tour.sys.del]
+; review -- this section not needed for final product (leave in for M8)
+CANIMATE.VBX
+TOURSTR.DLL
+TOURUTIL.DLL
+VBIS23MX.DLL
+
+[Tour.win.del]
+; review -- this section not needed for final product (leave in for M8)
+A_BCKFLP.DIB
+A_DWNPNT.DIB
+A_INTSCR.DIB
+A_JMPBK1.DIB
+A_JMPBK2.DIB
+A_PEEK.DIB
+A_PNTUP1.DIB
+SCRIPT.ISD
+SCRIPT.ISF
+SCRIPT.ISM
+
+[del.m6pnpcomm]
+; review -- cleans up for M6 stuff, can remove for final product
+HKLM,ENUM\ROOT\*PNP0500\2F8H
+HKLM,ENUM\ROOT\*PNP0500\3E8H
+HKLM,ENUM\ROOT\*PNP0500\3F8H
+HKLM,ENUM\ROOT\*PNP0500\2E8H
+
+[del.opt]
+;Delete these files from the \windows\options dir (this is on OEM machines)
+386MAX.VXD
+40291730.WPD
+40293930.WPD
+8514.DRV
+8514FIX.FON
+8514OEM.FON
+8514SYS.FON
+APP850.FON
+ARIALB.FON
+BANINST.386
+BLUEMAX.VXD
+BP1CP2.PCM
+CAN_ADF.EXE
+CANON10E.DRV
+CANON130.DRV
+CANON330.DRV
+CGA.2GR
+CGA40850.FON
+CGA40WOA.FON
+CGA80850.FON
+CGA80WOA.FON
+CGALOGO.LGO
+CGALOGO.RLE
+CIT24US.DRV
+CIT9US.DRV
+CITOH.DRV
+COMM.DRV
+CONTROL.SRC
+COURB.FO

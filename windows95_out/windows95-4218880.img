@@ -1,0 +1,59 @@
+nstallTTFFile	"""MT_PCinside_ttf"",""pc1"",""Abadi MT Condensed Light (TrueType)"""				no	%2048
+2298		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""300000"""				yes	%2292
+2299		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""250000"""				yes	%2295
+2305				DependAsk	2025 ? 2307 : 2306					
+2306				DependAsk	2026 ? 2308					
+2307		Theme Files		CopySection	"""MT_PCinside_wav16"""				yes	%82
+2308		Theme Files		CopySection	"""MT_PCinside_wav8"""				yes	%82
+2319										
+2320		NATURE THEME (16-Bit)		Group	2321 2322 2323 2325 2326 2327 2328 2329 2330 2335					
+2321		Theme Files		CopySection	"""MT_Nature_thm"""				yes	%84
+2322		Theme Files		CopySection	"""MT_Nature_bmp"""				yes	%84
+2323		Theme Files		CopySection	"""MT_Nature_cur"""				yes	%84
+2325		Theme Files		CopySection	"""MT_Nature_scr"""				no	%M
+2326		Theme Files		CopySection	"""MT_Nature_ttf"""				no	%2048
+2327		Copperplate Gothic Bold (TrueType)		InstallTTFFile	"""MT_Nature_ttf"",""na1"",""Copperplate Gothic Bold (TrueType)"""				no	%2048
+2328		Copperplate Gothic Light (TrueType)		InstallTTFFile	"""MT_Nature_ttf"",""na2"",""Copperplate Gothic Light (TrueType)"""				no	%2048
+2329		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""300000"""				yes	%2322
+2330		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""300000"""				yes	%2325
+2335				DependAsk	2025 ? 2337 : 2336					
+2336				DependAsk	2026 ? 2338					
+2337		Theme Files		CopySection	"""MT_Nature_wav16"""				yes	%84
+2338		Theme Files		CopySection	"""MT_Nature_wav8"""				yes	%84
+2349										
+2350		TRAVEL THEME (16-Bit)		Group	2351 2352 2353 2355 2356 2357 2358 2359 2365					
+2351		Theme Files		CopySection	"""MT_Travel_thm"""				yes	%90
+2352		Theme Files		CopySection	"""MT_Travel_bmp"""				yes	%90
+2353		Theme Files		CopySection	"""MT_Travel_cur"""				yes	%90
+2355		Theme Files		CopySection	"""MT_Travel_scr"""				no	%M
+2356		Theme Files		CopySection	"""MT_Travel_ttf"""				no	%2048
+2357		Comic Sans MS (TrueType)		InstallTTFFile	"""MT_Travel_ttf"",""tr1"",""Comic Sans MS (TrueType)"""				no	%2048
+2358		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""250000"""				yes	%2352
+2359		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""200000"""				yes	%2355
+2365				DependAsk	2025 ? 2367 : 2366					
+2366				DependAsk	2026 ? 2368					
+2367		Theme Files		CopySection	"""MT_Travel_wav16"""				yes	%90
+2368		Theme Files		CopySection	"""MT_Travel_wav8"""				yes	%90
+2379									
+2380		WINDOWS95HC THEME (16-Bit)		Group	2381 2382 2383 2385 2386 2387 2388 2389 2390 2391 2395					
+2381		Theme Files		CopySection	"""MT_Windows95HC_thm"""				yes	%92
+2382		Theme Files		CopySection	"""MT_Windows95HC_bmp"""				yes	%92
+2383		Theme Files		CopySection	"""MT_Windows95HC_cur"""				yes	%92
+2385		Theme Files		CopySection	"""MT_Windows95_scr"""				no	%M
+2386		Theme Files		CopySection	"""MT_Windows95_ttf"""				no	%2048
+2387		News Gothic MT (TrueType)		InstallTTFFile	"""MT_Windows95_ttf"",""wi1"",""News Gothic MT (TrueType)"""				no	%2048
+2388		News Gothic MT Bold (TrueType)		InstallTTFFile	"""MT_Windows95_ttf"",""wi2"",""News Gothic MT Bold (TrueType)"""				no	%2048
+2389		News Gothic MT Italic (TrueType)		InstallTTFFile	"""MT_Windows95_ttf"",""wi3"",""News Gothic MT Italic (TrueType)"""				no	%2048
+2390		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""500000"""				yes	%2382
+2391		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""100000"""				yes	%2385
+2395				DependAsk	2025 ? 2397 : 2396					
+2396				DependAsk	2026 ? 2398					
+2397		Theme Files		CopySection	"""MT_Windows95_wav16"""				yes	%92
+2398		Theme Files		CopySection	"""MT_Windows95_wav8"""				yes	%92
+2399										
+2400		~~~ Visual Enhancements ~~~ (Custom Options)								
+2410		*** Full Window Drag ***		Group	2411					
+2411		FullWinDrag RegEntry		AddRegData	"""HKEY_CURRENT_USER"",""Control Panel\Desktop"",""DragFullWindows"",""1"""					
+2418										
+2419		VideoResCheck		DependAsk	79 ? 2420 : 2425					
+2420		*** Font Smoothing ***		Group	2421 2422					

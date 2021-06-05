@@ -1,0 +1,74 @@
+t Out of String Space wattdrvr error if we alloc
+    '' STRING$() that big. (See GetSymbolValue and GetListItem)
+    '' We should look into using dynamic far alloc instead of
+    '' STRING$ for large buffers.
+    '' NOTE: 8192 works okay with runtime wattdrvr, however.
+
+
+''ON ERROR Error Codes
+CONST STFERR      = 1024   ''setup system error
+CONST STFQUIT     = 1025   ''user quit
+
+CONST scmOff      = 0
+CONST scmOnIgnore = 1
+CONST scmOnFatal  = 2
+
+
+'**************************************************************************
+'********************************  Setup API's  ***************************
+'**************************************************************************
+
+'' common
+
+DECLARE FUNCTION FParseFATPathIntoPieces LIB "mscomstf.dll" (szPath$, szVol$, cbVol%, szDir$, cbDir%, szFile$, cbFile%) AS INTEGER
+DECLARE FUNCTION FOpenInf LIB "mscomstf.dll" (szFile$, fCheck%, fCheckSyms%) AS INTEGER
+DECLARE FUNCTION FSetSilent LIB "mscomstf.dll" (mode%) AS INTEGER
+DECLARE FUNCTION FSetBeepingMode LIB "mscomstf.dll" (mode%) AS INTEGER
+DECLARE FUNCTION HShowWaitCursor LIB "msshlstf.dll" AS INTEGER
+DECLARE FUNCTION FRestoreCursor  LIB "msshlstf.dll" (hPrev%) AS INTEGER
+DECLARE FUNCTION FOpenLogFile    LIB "mscomstf.dll" (szFile$, fAppend%) AS INTEGER
+DECLARE FUNCTION FCloseLogFile   LIB "mscomstf.dll" AS INTEGER
+DECLARE FUNCTION FWriteToLogFile LIB "mscomstf.dll" (sz$, fRequire%) AS INTEGER
+DECLARE FUNCTION CbGetInfSectionKeyField LIB "mscomstf.dll" (szSect$, szKey$, iField%, szBuf$, cbBuf%) AS INTEGER
+DECLARE FUNCTION FMakeListInfSectionField LIB "mscomstf.dll" (szSym$, szSect$, iField%) AS INTEGER
+
+
+''shell
+
+DECLARE FUNCTION FSetBitmap LIB "msshlstf.dll" (szDll$, Bitmap%) AS INTEGER
+DECLARE FUNCTION FSetAbout LIB "msshlstf.dll" (szAbout1$, szAbout2$) AS INTEGER
+DECLARE FUNCTION FDoDialog LIB "msuilstf.dll" (hwnd%, szDll$, Dlg%, szDlgProc$, HelpDlg%, szHelpProc$) AS INTEGER
+DECLARE FUNCTION FKillNDialogs LIB "msuilstf.dll" (n%) AS INTEGER
+DECLARE SUB SetWindowText LIB "User" (hwnd%, lpString$)
+DECLARE FUNCTION FSetSymbolValue LIB "msshlstf.dll" (szSymbol$, szValue$) AS INTEGER
+DECLARE FUNCTION FRemoveSymbol LIB "mscomstf.dll" (szSym$) AS INTEGER
+DECLARE FUNCTION CbGetSymbolValue LIB "mscomstf.dll" (szSymbol$, szValue$, Length%) AS INTEGER
+DECLARE FUNCTION UsGetListLength LIB "mscomstf.dll" (szSymbol$) AS INTEGER
+DECLARE FUNCTION CbGetListItem LIB "mscomstf.dll" (szListSymbol$, n%, szListItem$, cbMax%) AS INTEGER
+DECLARE FUNCTION FAddListItem LIB "mscomstf.dll" (szListSymbol$, szListItem$) AS INTEGER
+DECLARE FUNCTION FReplaceListItem LIB "mscomstf.dll" (szListSymbol$, n%, szListItem$) AS INTEGER
+DECLARE FUNCTION FSetSymbolToListOfInfKeys LIB "mscomstf.dll" (szSym$, szSect$, fNulls%) AS INTEGER
+
+
+''shell
+
+DECLARE FUNCTION InitializeFrame LIB "msshlstf.dll" (szCmdLine$) AS INTEGER
+DECLARE FUNCTION HwndFrame LIB "msshlstf.dll" AS INTEGER
+DECLARE FUNCTION HinstFrame LIB "msshlstf.dll" AS INTEGER
+
+
+
+''install
+
+DECLARE SUB      ProSetPos LIB "msinsstf.dll" (x%, y%)
+DECLARE FUNCTION FCreateDir LIB "msinsstf.dll" (szDir$, cmo%) AS INTEGER
+DECLARE FUNCTION FRemoveDir LIB "msinsstf.dll" (szDir$, cmo%) AS INTEGER
+DECLARE FUNCTION FAddSectionFilesToCopyList LIB "mscomstf.dll" (szSect$, szSrc$, szDest$) AS INTEGER
+DECLARE FUNCTION FAddSectionKeyFileToCopyList LIB "mscomstf.dll" (szSect$, szKey$, szSrc$, szDest$) AS INTEGER
+DECLARE FUNCTION FAddSpecialFileToCopyList LIB "mscomstf.dll" (szSect$, szKey$, szSrc$, szDest$) AS INTEGER
+DECLARE FUNCTION GrcCopyFilesInCopyList LIB "msinsstf.dll" (hInstance%) AS INTEGER
+DECLARE FUNCTION FRemoveIniSection LIB "msinsstf.dll" (szFile$, szSect$, cmo%) AS INTEGER
+DECLARE FUNCTION FCreateIniKeyValue LIB "msinsstf.dll" (szFile$, szSect$, szKey$, szValue$, cmo%) AS INTEGER
+DECLARE FUNCTION FRemoveIniKey LIB "msinsstf.dll" (szFile$, szSect$, szKey$, cmo%) AS INTEGER
+DECLARE FUNCTION FCreateSysIniKeyValue LIB "msinsstf.dll" (szFile$, szSect$, szKey$, szValue$, cmo%) AS INTEGER
+DECLARE FUNCTION FCreateProgManGroup LIB "msinsstf.dll" (szGr

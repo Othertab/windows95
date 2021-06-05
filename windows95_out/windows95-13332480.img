@@ -1,0 +1,68 @@
+,NEC_Silentwriter2_290
+"NEC Silentwriter2 990"           = NCS29901.SPD,NEC_Silentwriter2_990
+"NEC SilentWriter 95"             = NCSW_951.SPD,NEC_SilentWriter_95
+
+[OceColor]
+"OceColor G5241 PS"               = O5241503.SPD,OceColor_G5241_PS
+"OceColor G5242 PS"               = O5242503.SPD,OceColor_G5242_PS
+
+[Oki]
+"Oki ML 182 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_182_Elite_(IBM)
+"Oki ML 192 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_192_Elite_(IBM)
+"Oki ML 192 Elite (Microline)"    = OKI9.DRV,Oki_ML_192_Elite_(Microline)
+"Oki ML 193 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_193_Elite_(IBM)
+"Oki ML 193 Elite (Microline)"    = OKI9.DRV,Oki_ML_193_Elite_(Microline)
+"Oki ML 280 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_280_Elite_(IBM)
+"Oki ML 320 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_320_Elite_(IBM)
+"Oki ML 320 Elite (Microline)"    = OKI9.DRV,Oki_ML_320_Elite_(Microline)
+"Oki ML 321 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_321_Elite_(IBM)
+"Oki ML 321 Elite (Microline)"    = OKI9.DRV,Oki_ML_321_Elite_(Microline)
+"Oki ML 380 Elite"                = OKI24.DRV,Oki_ML_380_Elite
+"Oki ML 390 Elite"                = OKI24.DRV,Oki_ML_390_Elite
+"Oki ML 391 Elite"                = OKI24.DRV,Oki_ML_391_Elite
+"Oki ML 393 Elite"                = OKI24.DRV,Oki_ML_393_Elite
+"Oki ML 393C Elite"               = OKI24.DRV,Oki_ML_393C_Elite
+"Oki ML 395 Elite"                = OKI24.DRV,Oki_ML_395_Elite
+"Oki ML 395C Elite"               = OKI24.DRV,Oki_ML_395C_Elite
+"Oki ML 520 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_520_Elite_(IBM)
+"Oki ML 520 Elite (Microline)"    = OKI9.DRV,Oki_ML_520_Elite_(Microline)
+"Oki ML 521 Elite (IBM)"          = OKI9IBM.DRV,Oki_ML_521_Elite_(IBM)
+"Oki ML 521 Elite (Microline)"    = OKI9.DRV,Oki_ML_521_Elite_(Microline)
+"Oki ML 590 Elite"                = OKI24.DRV,Oki_ML_590_Elite
+"Oki ML 590C Elite"               = OKI24.DRV,Oki_ML_590C_Elite
+"Oki ML 591 Elite"                = OKI24.DRV,Oki_ML_591_Elite
+"Oki ML 591C Elite"               = OKI24.DRV,Oki_ML_591C_Elite
+"Oki ML 3410 Elite (IBM)"         = OKI9IBM.DRV,Oki_ML_3410_Elite_(IBM)
+"Oki OL-400"                      = HPPCL.DRV,Oki_OL-400
+"Oki OL-400e"                     = HPPCL.DRV,Oki_OL-400e
+"Oki OL-400ex"                    = HPPCL.DRV,Oki_OL-400ex
+"Oki OL-410"                      = HPPCL5MS.DRV,Oki_OL-410
+"Oki OL-410ex"                    = HPPCL5MS.DRV,Oki_OL-410ex
+"Oki OL-800"                      = HPPCL.DRV,Oki_OL-800
+"Oki OL-810"                      = HPPCL5MS.DRV,Oki_OL-810
+"Oki OL-830 (PCL)"                = HPPCL.DRV,Oki_OL-830_(PCL)
+"Oki OL-830/PS"                   = OL830525.SPD,Oki_OL-830/PS
+"Oki OL-840"                      = HPPCL.DRV,Oki_OL-840
+"Oki OL-840/PS"                   = OL840518.SPD,Oki_OL-840/PS
+"Oki OL-850"                      = HPPCL.DRV,Oki_OL-850
+"Oki OL-850/PS"                   = OL850525.SPD,Oki_OL-850/PS
+"Oki OL-870"                      = HPPCL5MS.DRV,Oki_OL-870
+"Oki OL-870/PS"                   = OKOL8701.SPD,Oki_OL-870/PS
+
+[Okidata]
+"Okidata LaserLine 6"             = HPPCL.DRV,Okidata_LaserLine_6
+"Okidata ML Pacemark 3410"        = OKI9IBM.DRV,Okidata_ML_Pacemark_3410
+"Okidata ML 92-IBM"               = OKI9IBM.DRV,Okidata_ML_92-IBM
+"Okidata ML 93-IBM"               = OKI9IBM.DRV,Okidata_ML_93-IBM
+"Okidata ML 184-IBM Turbo"        = OKI9IBM.DRV,Okidata_ML_184-IBM_Turbo
+"Okidata ML 192"                  = OKI9.DRV,Okidata_ML_192
+"Okidata ML 192 Plus"             = OKI9.DRV,Okidata_ML_192_Plus
+"Okidata ML 192-IBM"              = OKI9IBM.DRV,Okidata_ML_192-IBM
+"Okidata ML 193"                  = OKI9.DRV,Okidata_ML_193
+"Okidata ML 193 Plus"             = OKI9.DRV,Okidata_ML_193_Plus
+"Okidata ML 193-IBM"              = OKI9IBM.DRV,Okidata_ML_193-IBM
+"Okidata ML 292"                  = OKI9.DRV,Okidata_ML_292
+"Okidata ML 292-IBM"              = OKI9IBM.DRV,Okidata_ML_292-IBM
+"Okidata ML 293"                  = OKI9.DRV,Okidata_ML_293
+"Okidata ML 293-IBM"              = OKI9IBM.DRV,Okidata_ML_293-IBM
+"Okidata ML 320"                  = O

@@ -1,0 +1,140 @@
+watch.Win.Copy]
+netwatch.exe
+
+[netwatch.HLP.Copy]
+netwatch.cnt
+netwatch.hlp
+
+[netwatch.Win.Del]
+; Del win 3.x .hlp files (they are now in the HELP dir)
+netwatch.hlp
+
+[netwatch.Inis]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%Net_Watcher_Desc%"", NETWATCH.EXE,,, netwatch,,%Net_Watcher_ShortDesc%"       ;creates link
+
+[netwatch.Rem.Inis]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%Net_Watcher_Desc%"""                 ;deletes link
+setup.ini, group11,, """%Net_Watcher_ShortDesc%"""                 ;deletes link
+
+[netwatch.install.reg]
+HKLM,%KEY_OPTIONAL%\netwatch,Installed,,"1"
+
+[netwatch.remove.reg]
+HKLM,%KEY_OPTIONAL%\netwatch,Installed,,"0"
+;--------------------------------------------------
+
+;---- Tour Install Sections -----------------------
+[Tour.sys.files]
+tourani.dll
+TOURSTR.DLL
+TOURUTIL.DLL
+VBRUN300.DLL
+
+[Tour.win.files]
+TOUR.EXE
+
+[Tour.hlp.files]
+w_tour.cnt
+
+[VB.reg.shared]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\vbrun300.dll,1,01,00,00,00
+
+[Tour.install.reg]
+HKLM,%KEY_OPTIONAL%\tour,Installed,,"1"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SETUP,TourPath,,"tour.exe" ; for welcome screen
+
+; Run Once Wrapper entry to run winhelp initialization:
+HKLM,%KEY_RUNONCE%\Setup,"%HelpInit_Desc%",,"%25%\winhlp32.exe -g windows.hlp"
+
+[Tour.remove.reg]
+HKLM,%KEY_OPTIONAL%\tour,Installed,,"0"
+
+[Tour.remove.delreg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SETUP,TourPath,,"tour.exe"
+;---------------------------------------------------
+
+;---- Online Users Guide Install Sections ----------
+[OnlineUG.Hlp]
+overview.hlp
+w_over.cnt
+
+DRAGDROP.AVI
+EXPLORER.AVI
+MOVEWIN.AVI
+SCROLL.AVI
+SIZEWIN.AVI
+TASKSWCH.AVI
+FIND.AVI
+CLOSEWIN.AVI
+PASTE.AVI
+WHATSON.AVI
+
+[OnlineUG.install.reg]
+HKLM,%KEY_OPTIONAL%\OnlineUG,Installed,,"1"
+
+[OnlineUG.remove.reg]
+HKLM,%KEY_OPTIONAL%\OnlineUG,Installed,,"0"
+;---------------------------------------------------
+
+;---- Character Mapper Install Sections ---
+[CharMap.Win.Copy]
+charmap.exe
+
+[CharMap.Inis]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"                       ;creates folder
+setup.ini, group4,, """%CharMap_Desc%"", CHARMAP.EXE,,, charmap,,%CharMap_ShortDesc%"       ;creates link
+
+[CharMap.Rem.Inis]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"         ;creates folder
+setup.ini, group4,, """%CharMap_Desc%"""                 ;deletes link
+setup.ini, group4,, """%CharMap_ShortDesc%"""                 ;deletes link
+
+[CharMap.install.reg]
+HKLM,%KEY_OPTIONAL%\CharMap,Installed,,"1"
+
+[CharMap.remove.reg]
+HKLM,%KEY_OPTIONAL%\CharMap,Installed,,"0"
+;------------------------------------------
+
+;--- CD-Only Quick-View Install Sections -------------
+
+[QVplus.files]
+vsdrw.dll
+vsflw.dll
+;vsgif.dll
+vsmp.dll
+vspp.dll      
+;vstiff.dll
+vswmf.dll
+vswpf.dll
+
+[QVplus.addreg]
+HKCR,QuickView\.DRW,,,"Micrographix Draw"
+HKCR,QuickView\.DRW\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.PRE,,,"Freelance for Windows"
+HKCR,QuickView\.PRE\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+;HKCR,QuickView\.GIF,,,"Compuserve GIF File"
+;HKCR,QuickView\.GIF\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.MOD,,,"Multiplan v 3, 4.0, 4.1 File"
+HKCR,QuickView\.MOD\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.PPT,,,"PowerPoint, ver 4 files"
+HKCR,QuickView\.PPT\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+;HKCR,QuickView\.TIF,,,"Tiff File"
+;HKCR,QuickView\.TIF\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WMF,,,"Windows Metafile"
+HKCR,QuickView\.WMF\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WPD,,,"WordPerfect Demo Files"
+HKCR,QuickView\.WPD\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+[QVplus.uninstall.reg]
+;HKCR,QuickView\.DRW,,,"Micrographix Draw"
+HKCR,Q

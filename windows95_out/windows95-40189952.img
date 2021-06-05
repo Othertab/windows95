@@ -1,0 +1,94 @@
+ing from a floppy disk using:
+  - Client for Microsoft Networks
+  - Client for NetWare Networks
+  - Novell Workstation Shell 3.x (NETX)
+  - Novell Workstation Shell 4.x (VLM)
+  - Banyan VINES DOS/Windows client
+
+- Booting from a remote boot server using:
+  - Client for NetWare Networks
+  - Novell Workstation Shell 3.x (NETX)
+  - Novell Workstation Shell 4.x (VLM)
+
+To use one of the Microsoft clients, your network card must have 
+both an NDIS2 (16-bit real mode) *AND* an NDIS3 (32-bit protect 
+mode) driver. If your network card is a PCI, EISA, or ISAPNP card, 
+you must run Windows over a real-mode client.
+
+To Install Windows 95 over Previous Builds
+------------------------------------------
+To install this final version of Windows 95 on network computers that 
+are already running Windows 95, you have two choices:
+
+- Do a clean install on each  computer;
+  -or-
+- Upgrade each computer using the following procedure:
+
+  1. Shut down any clients running from the server.
+  2. Windows 95 must be installed on the server into the same folder 
+     that you were using for previous builds. Delete everything in the 
+     shared Windows 95 folder, and then run Netsetup.exe to install this 
+     build into that folder.
+  3. Restart the client to a command prompt.
+  4. If you are using the Microsoft Client for NetWare Networks and use 
+     map rooted  drives, you must start either NETX or VLM to run Setup.
+  5. Map drives to the machine folder and shared Windows 95 folder 
+     as before. These must use the same drive letters as used in the 
+     previous build, and map roots should be to the same folder level.
+  6. Run Setup for the new build.
+
+
+SUPPORT FOR THIRD-PARTY NETWORKS
+================================
+
+To install support for a third-party, real-mode network, you must be 
+running the network when you run Windows 95 Setup. Windows 95 does not 
+support installation of a real-mode network after Setup, unless you have 
+a Windows 95-specific .inf file from your network vendor. For example, 
+FTP includes a Windows 95 .inf in their 32-bit NFS client. Although 
+Windows 95 supports other networks, network component files for networks 
+other than Microsoft networks are not included with Windows 95. You must 
+already have the files for the network you want to install. 
+
+LANDESK 2.0
+-----------
+LANDESK version 2.0 uses a TSR named Usertsr.exe that might cause 
+Windows 95 to stop responding when you use the Microsoft IPX/SPX-
+compatible protocol (Nwlink.vxd) or file and printer sharing for 
+Microsoft Networks (Vserver.vxd).
+
+LANDESK version 2.01 fixes this problem, and the patch is available 
+on Intel's BBS or from Intel product support. For the BBS and product 
+support telephone numbers, consult the documentation that came with your 
+copy of LANDESK.
+
+SunSelect PC-NFS
+----------------
+Windows 95 supports versions 5.0 or greater of SunSelect PC-NFS. 
+If SunSelect PC-NFS is installed using an NDIS 2 LAN driver or an 
+ODI LAN driver, then SunSelect PC-NFS can be installed as an additional 
+16-bit network client along with 32-bit protected-mode clients. If you 
+are using a SunSelect PC-NFS LAN Driver, Windows 95 can support PC-NFS 
+only as the primary network. Additional 32-bit network providers are not 
+possible in this case.
+
+Banyan VINES 
+------------
+If you see a message during startup that the VINES version is not the 
+latest, edit the Vines.ini file in the Windows folder so it contains 
+the following lines:
+
+   [NEWREV]
+   dontcopy=1
+   vines.version=5.5x (x) USA      ; where x=your version
+   windows.version=3.95
+
+If you receive the message, "Vines NDIS Interface error: 1021. See 
+NDISBAN.DOC for an error description," during startup, run the VINES 
+utility PCCONFIG to change Banyan drivers to NDIS drivers. Also, make 
+sure the section name matches the driver name in the Protocol.ini file.
+
+DEC Pathworks
+-------------
+Windows 95 provides support for upgrading over existing DEC 
+PATHWORKS V5.0, V5.0A and V5.1 configurations. This makes it possi

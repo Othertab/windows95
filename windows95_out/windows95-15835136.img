@@ -1,0 +1,113 @@
+PIF%
+HKCR,piffile,EditFlags,1,01,00,00,00
+HKCR,piffile,IsShortcut
+HKCR,piffile,NeverShowExt
+HKCR,piffile\shell\open
+HKCR,piffile\shell\open\command,,,"""%%1"" %%*"
+HKCR,piffile\shellex\PropertySheetHandlers\{86F19A00-42A0-1069-A2E9-08002B30309D}
+HKCR,piffile\shellex\IconHandler,,,"{00021401-0000-0000-C000-000000000046}"
+
+HKCR,.dll,,,dllfile
+HKCR,dllfile,,,%DESC_DLL%
+HKCR,dllfile,AlwaysShowExt
+HKCR,dllfile,EditFlags,1,01,00,00,00
+HKCR,dllfile\DefaultIcon,,,"%11%\shell32.dll,-154"
+
+HKCR,.txt,,,txtfile
+HKCR,txtfile,,,%DESC_TXT%
+HKCR,txtfile\DefaultIcon,,,"%11%\shell32.dll,-152"
+HKCR,txtfile\shell\open\command,,,"%25%\NOTEPAD.EXE %%1"
+HKCR,txtfile\shell\print\command,,,"%25%\NOTEPAD.EXE /p %%1"
+
+HKCR,.ini,,,inifile
+HKCR,inifile,,,%DESC_INI%
+HKCR,inifile\DefaultIcon,,,"%11%\shell32.dll,-151"
+HKCR,inifile\shell\open\command,,,"%25%\NOTEPAD.EXE %%1"
+HKCR,inifile\shell\print\command,,,"%25%\NOTEPAD.EXE /p %%1"
+
+HKCR,.inf,,,inffile
+HKCR,inffile,,,%DESC_INF%
+HKCR,inffile\DefaultIcon,,,"%11%\shell32.dll,-151"
+HKCR,inffile\shell\open\command,,,"%25%\NOTEPAD.EXE %%1"
+HKCR,inffile\shell\print\command,,,"%25%\NOTEPAD.EXE /p %%1"
+HKCR,inffile\shell\install,,,%V_INSTALL%
+HKCR,inffile\shell\install\command,,,"%25%\rundll.exe setupx.dll,InstallHinfSection DefaultInstall 132 %%1"
+
+HKCR,.sys,,,sysfile
+HKCR,sysfile,,,%DESC_SYS%
+HKCR,sysfile,AlwaysShowExt
+HKCR,sysfile,EditFlags,1,01,00,00,00
+HKCR,sysfile\DefaultIcon,,,"%11%\shell32.dll,-154"
+
+HKCR,.vxd,,,vxdfile
+HKCR,.386,,,vxdfile
+HKCR,vxdfile,EditFlags,1,01,00,00,00
+HKCR,vxdfile,,,%DESC_VXD%
+HKCR,vxdfile,AlwaysShowExt
+HKCR,vxdfile\DefaultIcon,,,"%11%\shell32.dll,-154"
+
+HKCR,.drv,,,drvfile
+HKCR,drvfile,,,%DESC_DRV%
+HKCR,drvfile,EditFlags,1,01,00,00,00
+HKCR,drvfile,AlwaysShowExt
+HKCR,drvfile\DefaultIcon,,,"%11%\shell32.dll,-154"
+
+HKCR,.cpl,,,cplfile
+HKCR,cplfile,,,%DESC_CPL%
+HKCR,cplfile\DefaultIcon,,,"%11%\shell32.dll,-154"
+;HACK: Asymetrix created a data file type with the extension .CPL
+;set stuff up so that Compel can install over us
+;we MUST NOT install an "open" verb for this to work right
+;When Compel is not installed the following verb will be the default verb
+;When Compel is installed the user will be able to use both types of CPLs
+HKCR,cplfile\shell\cplopen,,,%DESC_VERB_CPLOPEN%
+HKCR,cplfile\shell\cplopen\command,,,"%25%\rundll32.exe shell32.dll,Control_RunDLL %%1,%%*"
+
+HKCR,.fon,,,fonfile
+HKCR,fonfile,,,%DESC_FON%
+HKCR,fonfile\DefaultIcon,,,"%11%\shell32.dll,-155"
+
+HKCR,.ttf,,,ttffile
+HKCR,ttffile,,,%DESC_TTF%
+HKCR,ttffile\DefaultIcon,,,"%11%\shell32.dll,-156"
+
+HKCR,.ico,,,icofile
+HKCR,icofile,,,%DESC_ICO%
+HKCR,icofile\DefaultIcon,,,%%1
+
+HKCR,.cur,,,curfile
+HKCR,curfile,,,%DESC_CUR%
+HKCR,curfile\DefaultIcon,,,%%1
+
+HKCR,.ani,,,anifile
+HKCR,anifile,,,%DESC_ANI%
+HKCR,anifile\DefaultIcon,,,%%1
+
+; Set the Hidden attribute on the ShellNew Folder:
+; R=1; H=2; S=4; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Win,,,%25%
+HKLM,%KEY_RENAME%\Win,ShellNew,,"ShellNew,2"
+
+; NEW MENU ENTRIES
+; Warning, next 4 lines are order dependent, do not change--Johnpa
+; REVIEW: need to point .doc ShellNew entry to winword document, christob
+HKCR,.doc,,2,Wordpad.Document.1
+HKCR,.doc\Wordpad.Document.1\ShellNew,FileName,,"winword.doc"
+HKCR,.rtf,,2,rtffile
+HKCR,.txt\ShellNew,NullFile
+HKCR,.bmp\ShellNew,NullFile
+HKCR,.wav\ShellNew,NullFile
+
+HKCR,Package,,,%DESC_PACKAGE%
+HKCR,Package\protocol\StdFileEditing\verb\0,,,%V_ACTIVATE%
+HKCR,Package\protocol\StdFileEditing\verb\1,,,%V_EDITPACKAGE%
+HKCR,Package\protocol\StdFileEditing\server,,,packager.exe
+
+; COMPOBJs
+
+HKCR,CLSID\{21B22460-3AEA-1069-A2DC-08002B30309D},,,%DESC_FILESYSATTR%
+HKCR,CLSID\{21B22460-3AEA-1069-A2DC-08002B30309D}\InProcServer32,,,shell32.dll
+HKCR,CLSID\{21B22460-3AEA-1069-A2DC-08002B30309D}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{86747AC0-42A0-1069-A2E6-08002B30309D},,,%DESC_SHELLMONIKER%
+HKCR,CLSID\{86747AC0-42A0-1069-A2E6-08002B30309D}\InProcServer32,,,shell32.dll
+HKCR,CLSID\{86747AC0-42A0-1069-A2E6-08002B30309D}\InProcServer32,Threadin

@@ -1,0 +1,106 @@
+se a port, use the same 
+   virtual port used in the procedure "Step 2. Validating the 
+   IR Communications Driver Installation" earlier in this document. 
+
+   The wizard also offers password protection. It is not necessary 
+   to establish password protection on the host computer for this 
+   test of the IR link. When you have finished the wizard, click the 
+   Finish button. DCC starts running on the IR link and displays the 
+   following message: "Status: Waiting to connect via Serial cable on 
+   Comx," where Comx is the name of the virtual port the IR link is 
+   using.
+
+4. Repeat steps 2 and 3 for the guest computer, except select the 
+   Guest option instead of the Host option. When you have finished 
+   the wizard, click the Finish button.
+
+   The DCC connection is automatically made over the IR link, and all 
+   the shared folders on the host computer are displayed on the guest 
+   computer's screen.
+
+If you are working on the guest computer, and you want to copy a shared 
+folder from the host computer to the guest computer, select the folder's 
+icon in the window that displays all the shared folders that are on the 
+host computer, and drag the icon to the desktop.
+
+To work on a shared folder on the host computer without copying it to 
+the guest computer, double-click the folder in the display on the guest 
+computer. Note that if the host computer is connected to a network, the 
+guest computer can reach shared resources on the network through the DCC 
+connection to the host.
+
+
+IR COMMUNICATIONS DRIVER COMPONENTS
+-----------------------------------
+
+The following files make up the IR communications driver:
+
+Filename        Description
+--------        -----------
+ACT200L.VXD	    Support for the ACTiSYS ACT-IR200L IR adapter
+ACT220L.VXD	    Support for the ACTiSYS ACT-IR220L IR adapter
+ADAPTEC.VXD	    Support for Adaptec IR adapter
+CRYSTAL.VXD	    Support for AMP PhasIR Serial Adapter
+ESI.VXD         Support for Extended Systems JetEye PC Infrared 
+                  Interface (ESI9680)
+INFRARED.CPL    Infrared device in the Windows 95 Control Panel
+INFRARED.DLL    Infrared device class installer
+INFRARED.INF    IR device information file for Windows 95 Setup
+INFRARED.HLP    On-line help topics for Infrared Monitor
+IRCOMM.VXD      Top layer of IR communications for Windows 95
+IRDALAN.INF     IrLan device information file for Windows 95 Setup
+IRDALAN.SYS     IrLan driver
+IRENUM.VXD      Enumerator for the "IR bus"
+IRLAMP.VXD      IrDA protocol, middle layer of IR communications 
+                  for Windows 95
+IRLAPFRM.VXD    Generic infrared framer, lower layer of IR 
+                  communications for Windows 95
+IRMON.EXE       Infrared Monitor
+IRMONHLP.EXE    IR Monitor on-line help utility	
+IR_BEGIN.WAV    Sound for Infrared Monitor user interface
+IR_END.WAV      Sound for Infrared Monitor user interface
+IR_INTER.WAV    Sound for Infrared Monitor user interface
+MSPORTS.INF     IR port information file for Windows 95 Setup
+PARALLAX.VXD    Support for Parallax IR Adapter, LiteLink PRA9500A
+W_IR.CNT        Table of contents for Infrared Monitor on-line help
+
+The documentation files supplied with the IR device driver are:
+
+Filename        Description
+--------        -----------         
+Infrared.txt    This document.
+
+
+IR ADAPTER MANUFACTURER NAMES AND ADDRESSES
+-------------------------------------------
+
+The following manufacturers supply IR adapters that have been tested 
+successfully with the Windows 95 IR Communications driver:
+
+ActiSys, Inc.
+1507 Fulton Place
+Fremont CA 94539
+Tel: (510) 490-8024
+Fax: (510) 623-7268
+E-mail: corp@actisys.com
+
+Adaptec, Inc.
+691 South Milpitas Blvd,
+Milpitas CA 95035
+Tel: 1 (800) 959-7274
+Fax: 1 (408) 957-7223
+
+AMP Product Information Center
+AMP Incorporated
+Harrisburg PA 17105
+Tel: 1 (800) 522-6752
+
+Extended Systems, Inc.
+5777 North Meeker Ave
+Boise ID 83704-1520
+Tel: (208) 322-7575
+Fax: (208) 377-1906
+
+The Parallax IR adapter distributor in North America is:
+
+TSC Electroni

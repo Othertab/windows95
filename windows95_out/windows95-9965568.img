@@ -1,0 +1,133 @@
+KR,Ndi\params\AdapterType\enum,"PCNIUex",,"PCNIUex"
+HKR,NDI\params\AdapterType,flag,1,30,00,00,00
+
+[UBNIUPC.ndi.reg]
+; Parameters
+;AdapterType
+HKR,,AdapterType,,"PCNIU"
+HKR,Ndi\params\AdapterType,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\AdapterType,default,,"PCNIU"
+HKR,Ndi\params\AdapterType,type,,enum
+HKR,Ndi\params\AdapterType\enum,"PCNIU",,"PCNIU"
+HKR,NDI\params\AdapterType,flag,1,30,00,00,00
+
+[UBNEIPC.ndi.reg]
+; Parameters
+;AdapterType
+HKR,,AdapterType,,"NIUpc"
+HKR,Ndi\params\AdapterType,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\AdapterType,default,,"NIUpc"
+HKR,Ndi\params\AdapterType,type,,enum
+HKR,Ndi\params\AdapterType\enum,"NIUpc",,"NIUpc"
+HKR,NDI\params\AdapterType,flag,1,30,00,00,00
+
+[UBNEIPC_EOTP.ndi.reg]
+; Parameters
+;AdapterType
+HKR,,AdapterType,,"NIUpc/EOTP"
+HKR,Ndi\params\AdapterType,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\AdapterType,default,,"NIUpc/EOTP"
+HKR,Ndi\params\AdapterType,type,,enum
+HKR,Ndi\params\AdapterType\enum,"NIUpc/EOTP",,"NIUpc/EOTP"
+HKR,NDI\params\AdapterType,flag,1,30,00,00,00
+
+[UBNEIPS.ndi.reg]
+;AdapterType
+HKR,,AdapterType,,"NIUps"
+HKR,Ndi\params\AdapterType,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\AdapterType,default,,"NIUPs"
+HKR,Ndi\params\AdapterType,type,,enum
+HKR,Ndi\params\AdapterType\enum,"NIUPs",,"NIUPs"
+HKR,NDI\params\AdapterType,flag,1,30,00,00,00
+
+[UBNEI.ndis3]
+CopyFiles=UBNEI.CopyFiles.ndis3
+[UBNEI.CopyFiles.ndis3]
+ubnei.vxd
+
+[UBNEI.ndis2]
+CopyFiles=UBNEI.CopyFiles.ndis2
+[UBNEI.CopyFiles.ndis2]
+ubnei.dos
+
+[UBNEI.odi]
+CopyFiles=UBNEI.CopyFiles.odi
+[UBNEI.CopyFiles.odi]
+ubodi.com
+
+
+;****************************************************************************
+; UBNEPS Drivers
+;****************************************************************************
+[UBNEPS.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"UBNEPS"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,00
+HKR,NDIS\NDIS2,DriverName,,"UBNEPS$"
+HKR,NDIS\NDIS2,FileName,,"ubneps.dos"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"UBNEPS.ndis2"
+
+[UBNEPS.ndis2]
+CopyFiles=UBNEPS.CopyFiles.ndis2
+[UBNEPS.CopyFiles.ndis2]
+ubneps.dos
+
+
+
+[Slot]
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,30,00,00,00
+
+[Common.Resources]
+; Resources
+HKR,,IRQ_Level,1,04,00,00,00
+HKR,,IO_Port,1,02,00,00,00
+HKR,,MemoryWindow,1,01,00,00,00
+HKR,Ndi\params\MemoryWindow,resc,1,01,00,00,00
+HKR,Ndi\params\MemoryWindow,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\MemoryWindow,flag,1,30,00,00,00
+HKR,Ndi\params\IO_Port,resc,1,02,00,00,00
+HKR,Ndi\params\IO_Port,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IO_Port,flag,1,30,00,00,00
+HKR,Ndi\params\IRQ_Level,resc,1,04,00,00,00
+HKR,Ndi\params\IRQ_Level,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\IRQ_Level,flag,1,70,00,00,00
+
+[Common.Params]
+; Parameters
+; MaxRequests
+HKR,Ndi\params\MaxRequests,ParamDesc,,"Maximum General Requests"
+HKR,Ndi\params\MaxRequests,type,,int
+HKR,Ndi\params\MaxRequests,default,,6
+HKR,Ndi\params\MaxRequests,min,,1
+HKR,Ndi\params\MaxRequests,max,,10
+HKR,Ndi\params\MaxRequests,step,,1
+HKR,NDI\params\MaxRequests,flag,1,10,00,00,00
+; MaxTransmits
+HKR,Ndi\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,Ndi\params\MaxTransmits,type,,int
+HKR,Ndi\params\MaxTransmits,default,,6
+HKR,Ndi\params\MaxTransmits,min,,1
+HKR,Ndi\params\MaxTransmits,max,,400
+HKR,Ndi\params\MaxTransmits,step,,1
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+; ReceiveBufSize
+HKR,Ndi\params\ReceiveBufSize,ParamDesc,,"Receive Buffer Size"
+HKR,Ndi\params\ReceiveBufSize,type,,int
+HKR,Nd

@@ -1,0 +1,142 @@
+*****************************************
+FUNCTION GetWindowsMajorVersion STATIC AS INTEGER
+    GetWindowsMajorVersion = GetVersion() MOD 256
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetWindowsMinorVersion STATIC AS INTEGER
+    GetWindowsMinorVersion = GetVersion() / 256
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetWindowsMode STATIC AS INTEGER
+    GetWindowsMode = 0
+    longTmp& = GetWinFlags()
+    IF longTmp& AND WF_STANDARD THEN
+        GetWindowsMode = 1
+    ELSEIF longTmp& AND WF_ENHANCED THEN
+        GetWindowsMode = 2
+    END IF
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetWindowsDir STATIC AS STRING
+    szBuf$ = string$(256, 32)
+    cbBuf% = GetWindowsDirectory(szBuf$, 256)
+
+    IF cbBuf% = 0 THEN
+        GetWindowsDir = ""
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetWindowsDir", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    ELSE
+        IF cbBuf% > 255 THEN
+            res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+            ERROR STFERR
+        END IF
+        szBuf$ = RTRIM$(szBuf$)
+        IF MID$(szBuf$, 1, 1) = "\" THEN
+            'szBuf$ = MID$(CURDIR$, 1, 2) + szBuf$
+            szBuf$ = MID$(GetWindowsSysDir, 1, 2) + szBuf$
+        ELSEIF MID$(szBuf$, 2, 1) <> ":" THEN
+            szBuf$ = MID$(GetWindowsSysDir, 1, 3) + szBuf$
+        END IF
+        IF MID$(szBuf$, LEN(szBuf$), 1) <> "\" THEN
+            szBuf$ = szBuf$ + "\"
+        END IF
+        GetWindowsDir = szBuf$
+    END IF
+
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetWindowsSysDir STATIC AS STRING
+    szBuf$ = string$(256, 32)
+    cbBuf% = GetSystemDirectory(szBuf$, 256)
+
+    IF cbBuf% = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetWindowsSysDir", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    ELSE
+        IF cbBuf% > 255 THEN
+            res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+            ERROR STFERR
+        END IF
+        szBuf$ = RTRIM$(szBuf$)
+        IF MID$(szBuf$, 1, 1) = "\" THEN
+            szBuf$ = MID$(CURDIR$, 1, 2) + szBuf$
+        ELSEIF MID$(szBuf$, 2, 1) <> ":" THEN
+            szBuf$ = MID$(CURDIR$, 1, 3) + szBuf$
+        END IF
+        IF MID$(szBuf$, LEN(szBuf$), 1) <> "\" THEN
+            szBuf$ = szBuf$ + "\"
+        END IF
+        GetWindowsSysDir = szBuf$
+    END IF
+
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsWindowsShared STATIC AS INTEGER
+    szWin$ = UCASE$(GetWindowsDir())
+    szSys$ = UCASE$(GetWindowsSysDir())
+
+    IF len(szWin$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "IsWindowsShared", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+
+    IF len(szSys$) <= len(szWin$) THEN
+        IsWindowsShared = 1
+    ELSE
+        szSys$ = MID$(szSys$, 1, len(szWin$))
+        IF szWin$ = szSys$ THEN
+            IsWindowsShared = 0
+        ELSE
+            IsWindowsShared = 1
+        END IF
+    END IF
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetScreenWidth STATIC AS INTEGER
+    GetScreenWidth = GetSystemMetrics(SM_CXSCREEN)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetScreenHeight STATIC AS INTEGER
+    GetScreenHeight = GetSystemMetrics(SM_CYSCREEN)
+END FUNCTION
+
+
+'*************************************************************************
+SUB SetRestartDir (szDir$) STATIC
+'$ifdef DEBUG
+    if FValidFATDir(szDir$) = 0 then
+        BadArgErr 1, "SetRestartDir", szDir$
+    end if
+'$endif ''DEBUG
+    IF FSetRestartDir(szDir$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "SetRestartDir", szDir$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'****************************************

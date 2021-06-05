@@ -1,0 +1,135 @@
+DumpCopyListToFile (szFile$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "DumpCopyList", szFile$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB ClearCopyList STATIC
+    ResetCopyList
+END SUB
+
+
+'*************************************************************************
+FUNCTION GetCopyListCost (szExtraList$, szCostList$, szNeedList$) STATIC AS LONG
+    lNeed& = LcbGetCopyListCost (szExtraList$, szCostList$, szNeedList$)
+    IF lNeed& < 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetCopyListCost", szExtraList$+", "+szCostList$+", "+szNeedList$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+    GetCopyListCost = lNeed&
+END FUNCTION
+
+
+'*************************************************************************
+SUB CreateProgmanItem (szGroup$, szItem$, szCmd$, szOther$, cmo%) STATIC
+    szItemNew$ = szItem$
+    IF szOther$ <> "" THEN
+        szItemNew$ = szItem$ + "," + szOther$
+    END IF
+'$ifdef DEBUG
+    if szGroup$ = "" or len(szGroup$) > 24 then
+        BadArgErr 1, "CreateProgmanItem", szGroup$+", "+STR$(Cmd%)+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+
+    IF FCreateProgManItem(szGroup$, szItemNew$, szCmd$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CreateProgmanItem", szGroup$+", "+szItem$+", "+szCmd$+", "+szOther$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+    szItemNew$ = ""
+END SUB
+
+
+'*************************************************************************
+SUB AddDos5Help (szProgName$, szProgHelp$, cmo%) STATIC
+'$ifdef DEBUG
+    if szProgName$ = "" OR MID$(szProgName$, 1, 1) = "@" OR LEN(szProgName$) > 8 then
+        n% = 1
+    elseif INSTR(szProgName$, " ") <> 0 OR INSTR(szProgName$, CHR$(9)) <> 0 then
+        n% = 1
+    elseif szProgHelp$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "AddDos5Help", szProgName$+", "+szProgHelp$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+    IF FAddDos5Help (szProgName$, szProgHelp$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "AddDos5Help", szProgName$+", "+szProgHelp$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CopyFilesInCopyList STATIC
+    grc% = GrcCopyFilesInCopyList (HinstFrame())
+
+    IF grc% = grcUserQuit THEN
+        ERROR STFQUIT
+    ELSEIF grc% > 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CopyFilesInCopyList", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CopyFile (szFullPathSrc$, szFullPathDst$, cmo%, fAppend%) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFullPathSrc$) = 0 then
+        n% = 1
+    elseif FValidFATPath(szFullPathDst$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "CopyFile", szFullPathSrc$+", "+szFullPathDst$+", "+STR$(cmo%)+", "+STR$(fAppend%)
+    end if
+'$endif ''DEBUG
+
+    IF  FCopyOneFile(szFullPathSrc$, szFullPathDst$, (cmo OR cmoCopy), fAppend%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CopyFile", szFullPathSrc$+", "+szFullPathDst$+", "+STR$(cmo%)+", "+STR$(fAppend%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+
+'*************************************************************************
+SUB RemoveFile (szFullPathSrc$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFullPathSrc$) = 0 then
+        BadArgErr 1, "RemoveFile", szFullPathSrc$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+    IF  YnrcRemoveFile(szFullPathSrc$, cmo%) = ynrcNo THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RemoveFile", szFullPathSrc$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB BackupFile (szFullPath$, szBackup$) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFullP

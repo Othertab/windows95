@@ -1,0 +1,331 @@
+OTAL=666
+   V_DISP=600
+   V_FP=37
+   V_SYNC=6
+   V_BP=23
+
+[800*600*16@72Hz.VESA]
+   Hz=72.190
+   kHz=48.080
+   MHz=50.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1040
+   H_DISP=800
+   H_FP=56
+   H_SYNC=120
+   H_BP=64
+
+   V_TOTAL=666
+   V_DISP=600
+   V_FP=37
+   V_SYNC=6
+   V_BP=23
+
+[800*600*32@72Hz.VESA]
+   Hz=72.190
+   kHz=48.080
+   MHz=50.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1040
+   H_DISP=800
+   H_FP=56
+   H_SYNC=120
+   H_BP=64
+
+   V_TOTAL=666
+   V_DISP=600
+   V_FP=37
+   V_SYNC=6
+   V_BP=23
+
+
+[800*600*8@75Hz.VESA]
+   Hz=75.000
+   kHz=46.875
+   MHz=49.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=160
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*15@75Hz.VESA]
+   Hz=75.000
+   kHz=46.875
+   MHz=49.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=160
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*16@75Hz.VESA]
+   Hz=75.000
+   kHz=46.875
+   MHz=49.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=160
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*32@75Hz.VESA]
+   Hz=75.000
+   kHz=46.875
+   MHz=49.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=160
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*32@75Hz.MIRO]
+   Hz=75.000
+   kHz=46.875
+   MHz=48.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*8@80Hz.MIRO]
+   Hz=79.840
+   kHz=50.780
+   MHz=52.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=96
+   H_BP=112
+
+   V_TOTAL=636
+   V_DISP=600
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[800*600*15@80Hz.MIRO]
+   Hz=79.840
+   kHz=50.780
+   MHz=52.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=96
+   H_BP=112
+
+   V_TOTAL=636
+   V_DISP=600
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[800*600*16@80Hz.MIRO]
+   Hz=79.840
+   kHz=50.780
+   MHz=52.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=96
+   H_BP=112
+
+   V_TOTAL=636
+   V_DISP=600
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[800*600*32@80Hz.MIRO]
+   Hz=79.840
+   kHz=50.780
+   MHz=52.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=96
+   H_BP=112
+
+   V_TOTAL=636
+   V_DISP=600
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[800*600*8@85Hz.VESA]
+   Hz=85.061
+   kHz=53.674
+   MHz=56.250
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1048
+   H_DISP=800
+   H_FP=32
+   H_SYNC=64
+   H_BP=152
+
+   V_TOTAL=631
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=27
+
+[800*600*15@85Hz.VESA]
+   Hz=85.061
+   kHz=53.674
+   MHz=56.250
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1048
+   H_DISP=800
+   H_FP=32
+   H_SYNC=64
+   H_BP=152
+
+   V_TOTAL=631
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=27
+
+[800*600*16@85Hz.VESA]
+   Hz=85.061
+   kHz=53.674
+   MHz=56.250
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1048
+   H_DISP=800
+   H_FP=32
+   H_SYNC=64
+   H_BP=152
+
+   V_TOTAL=631
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=27
+
+[800*600*32@85Hz.VESA]
+   Hz=85.061
+   kHz=53.674
+   MHz=56.250
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1048
+   H_DISP=800
+   H_FP=32
+   H_SYNC=64
+   H_BP=152
+
+   V_TOTAL=631
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=27
+
+[800*600*8@85Hz.VESA]
+   Hz=85.061
+   kHz=53.674
+   MHz=56.250
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1048
+   H_DISP=800
+   H_FP=32
+   H_SYNC=64
+   H_BP=152
+
+   V_TOTAL=631
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=27
+
+[800*600*8@85Hz.VESA]
+   Hz=85.061
+   kHz=53.674
+   MHz=56.25

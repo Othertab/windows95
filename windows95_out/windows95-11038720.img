@@ -1,0 +1,91 @@
+setup.ini, group6,, """%Hearts_Desc%"", MSHEARTS.EXE,,, hearts"       ;creates link
+setup.ini, group6,, """%FreeCell_Desc%"", FREECELL.EXE,,, freecell"   ;creates link
+setup.ini, group6,, """%Sol_Desc%"", SOL.EXE,,,,,%Sol_ShortDesc%"            ;creates link
+
+; Clean up old games icons
+setup.ini, progman.groups,, "OldGames=%Games_WIN31%" ; from Win31
+setup.ini, OldGames,, "%FreeCell_WIN31%"             ; from Win31
+setup.ini, OldGames,, "%Hearts_WIN31%"               ; from Win31
+setup.ini, OldGames,, "%MineSweeper_WIN31%"          ; from Win31
+; Clean up for non-English Win95 on top of English Win 3.1 (do not localize)
+setup.ini, progman.groups,, "OldGames_USA=Games" 
+setup.ini, OldGames,, "FreeCell"   
+setup.ini, OldGames,, "Hearts"     
+setup.ini, OldGames,, "Minesweeper"
+setup.ini, OldGames,, "WinMine"
+setup.ini, OldGames,, "Solitaire"
+setup.ini, OldGames,, "Solitair"
+
+[del.wingames.links]
+setup.ini, progman.groups, , "group6=%GAMES_DESC%"         ;creates folder
+setup.ini, group6,, """%Minesweeper_Desc%"""  ;removes link
+setup.ini, group6,, """%Minesweeper_ShortDesc%"""  ;removes link
+setup.ini, group6,, """%Hearts_Desc%"""       ;removes link
+setup.ini, group6,, """%FreeCell_Desc%"""     ;removes link
+setup.ini, group6,, """%Sol_Desc%"""          ;removes link
+setup.ini, group6,, """%Sol_ShortDesc%"""          ;removes link
+
+[wingames.install.reg]
+HKLM,%KEY_OPTIONAL%\Games,Installed,,"1"
+
+[wingames.remove.reg]
+HKLM,%KEY_OPTIONAL%\Games,Installed,,"0"
+;-----------------------------------------------------
+
+
+[Strings]
+;Non-Localizable strings:
+KEY_OPTIONAL   = "SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+KEY_RENAME     = "Software\Microsoft\Windows\CurrentVersion\RenameFiles"
+KEY_DEL        = "Software\Microsoft\Windows\CurrentVersion\DeleteFiles"
+
+;Localizable strings:
+AccessTop_DESC  = "Accessories"
+AccessTop_TIP   = "Includes Windows accessories and enhancements for your computer."
+CommApps_DESC   = "Communications"
+CommApps_TIP    = "Includes accessories to help you connect to other computers and online services."
+DiskToolTop_DESC= "Disk Tools"
+DiskToolTop_TIP = "Includes utilities for compressing and maintaining your disks."
+MultiM_DESC     = "Multimedia"
+MultiM_TIP      = "Includes programs for playing sound, animation, or video on computers with CD-ROM drives or sound cards."
+SYSTOOLS_DESC   = "Accessories\System Tools"    ;note that "Accessories" must be translated to be the same as APPS_DESC
+StartUp_DESC    = "StartUp"
+SCREENSAVER_DESC= "Screen Savers"
+SCREENSAVER_TIP = "Display moving images when your computer is idle to prevent damage to your screen."
+APPLETS_DESC    = "Windows Accessories"
+APPLETS_TIP     = "Winpopup, etc."
+APPS_DESC       = "Accessories"
+dxxspace_DESC   = "Disk compression tools"
+dxxspace_TIP    = "Utilities that will allow you to install disk compression after Windows is installed"
+MSPAINTOPT_DESC = "Paint"
+MSPAINTOPT_TIP  = "Enables you to create, modify, or view pictures."
+MSOLOPT_DESC    = "HyperTerminal"
+MSOLOPT_TIP     = "Enables you to connect to other computers and online services (requires a modem)."
+DiskTools_DESC  = "Defrag"
+DiskTools_TIP   = "Utility to optimize (defragment) disks"
+Win31UI_DESC0   = "Windows 3.1 (Program Manager)"
+Win95UI_DESC    = "Windows 95"
+UIClass_Desc    = "User Interface"
+CalcOpt_DESC    = "Calculator"
+Calc_TIP        = "Enables you to perform calculations."
+EDIT            = "&Edit"
+OPEN            = "&Open"
+
+DESC_BMP    = "Bitmap Image"
+DESC_PCX    = "PCX Image"
+DESC_PCX2   = "PCX Files"
+DESC_PBRUSH = "Paintbrush Picture"
+
+Paint_Desc        = "Paint"
+PAINTBRUSH_DESC   = "Paintbrush"
+Calc_Desc         = "Calculator"
+Calc_ShortDesc    = "Calc"
+SoundRec_Desc     = "Sound Recorder"
+HypTrm_Desc       = "HyperTerminal"
+HypTrm_ShortDesc  = "Hypertrm"
+HypTrm_File       = "HyperTerminal File"
+Demo_Desc         = "Multithreaded Demo"
+Defrag_Desc       = "Disk Defragmenter"
+CmpAgent_Desc     = "Compression Agent"
+CmpAgent_ShortDesc = "CmpAgent"
+Defr

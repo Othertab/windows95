@@ -1,0 +1,114 @@
+ NEC 260GW ATAPI CD-ROM that shipped with older Gateway computers
+  is now supported through protect-mode drivers. In order for protect
+  mode support to work, the real-mode driver needs to be loaded in
+  Config.sys. 
+- The NEC 3X, firmware version 2.2, can give bad data and is not supported
+  by Windows 95.
+
+
+DRIVERS
+=======
+
+The Windows Driver Library (WDL) is included on the Drivers directory on
+the Windows 95 CD. Check this directory if you need a driver that is not
+included in Windows 95. Included in this directory are miniports for 
+Trantor and QLogic SCSI adapters.
+
+EZ-Drive
+--------
+EZ-Drive is supported through the protected-mode IDE driver.
+
+Adaptec EZ SCSI
+---------------
+Adaptec EZ SCSI Windows version will not run. The MS-DOS version will
+work with Windows 95.
+
+Aspidisk.sys
+------------
+If your computer uses the Aspidisk.sys device driver in Config.sys to 
+provide MS-DOS mode support for a SCSI disk, version 4.01 or later of 
+Aspidisk.sys is required in order to support disks formatted with FAT32. 
+A FAT32-compatible version of this driver is available from Adaptec. 
+It is also available in the Microsoft Windows Driver Library, which is 
+in the Drivers directory on the Windows 95 CD-ROM disk, or you can 
+download it from various on-line services.
+
+Arco AcideJL
+------------
+If you are using this adapter, the driver AcideJL.386 causes a conflict 
+when Windows 95 is installed from earlier versions of Windows. However, 
+you can install Windows 95 from MS-DOS.
+
+Promise 2300+ Drivers
+---------------------
+MS-DOS (Eide2300.sys): Works fine; you can get extra performance by 
+installing this driver.
+
+Windows 3.1 (Eide2300.386): Works fine, but does not add any value. 
+Setup removes this driver.
+
+Windows 95 (Ptivgapi.mpd): This driver is still in beta and its use 
+is not recommended at this time. 
+
+Syquest Sqatdrv.sys and Sqdriver.sys Drivers
+--------------------------------------------
+The Sqatdrv.sys driver may cause systems containing FAT32 drives to hang 
+during startup. Remove this driver from the Config.sys file if you are using 
+FAT32 drives on a system with this device driver. Versions of these drivers 
+that are compatible with FAT32 boot drives will be added to the Windows 
+Driver Library (on the Windows CD and downloadable from the Internet) 
+shortly.
+
+
+PRINTING
+========
+
+Compaq Prolinea or DeskPro computers
+------------------------------------
+If you have one of the Compaq Prolinea or DeskPro models listed 
+following this topic, and you are using a parallel attached printer 
+that supports bidirectional communications (such as the HP LaserJet 
+Series 4 & 5 printers, some Lexmark LaserPrinters, and possibly others), 
+you may experience problems resulting in timeout errors when printing. 
+To correct this problem, copy a newer LPT driver (Lpt.vxd) from the 
+\Drivers\Printers\Lpt directory of the Windows 95 CD to your 
+\Windows\System directory. You can also obtain this file from the 
+Windows Driver Library. If the problem persists, make sure that the 
+ECP port on your computer is configured for DMA channel 3. To do this, 
+look up "DMA channel" in the Windows Help Index. 
+
+	Compaq Prolinea 450
+	Compaq Prolinea 466
+	Compaq Prolinea 4100
+	Compaq Prolinea 5100
+	Compaq Prolinea 5120
+	Compaq Prolinea 5133
+	Compaq Prolinea 575
+	Compaq Prolinea 590
+	Compaq DeskPro 450
+	Compaq DeskPro 466
+	Compaq DeskPro 4100
+	Compaq DeskPro 5100
+	Compaq DeskPro 5120
+	Compaq DeskPro 5133
+	Compaq DeskPro 575
+	Compaq DeskPro 590
+
+
+REMOVABLE MEDIA
+===============
+
+Syquest Removable IDE Cartridge
+-------------------------------
+This is supported. You need to add the following line to the [386enh]
+section of your system.ini file:
+	RemovableIDE=1
+
+
+UPDATED DIALING RULES
+=====================
+
+This release includes updated dialing rules for local, long distance, 
+and international calls in several countries. These updates (1) correct 
+problems in the original release of Windows 95 and (2) implement new 
+dialing rules for countries t

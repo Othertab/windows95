@@ -1,0 +1,39 @@
+OCAL_MACHINE"",""Software\Microsoft\Plus!\Setup"",""cool.dll"","""""					
+2533		Default FullWinDrag		CustomAction	"""plus.dll"",""SetFWDO"""					
+2534		FlushIconCache		CustomAction	"""plus.dll"",""FlushIconCache"""					
+2535		*** Splash Screen ***		Group	2536 2537 2538 2539					
+2536		BootHost		CustomAction	"""plus.dll"",""BootHost"""					
+2537		Enhanced Startup  Screen		CopyFile	"""Splash"",""lgo"""				no	%2536
+2538		NoRUNONCE.EXE		CustomAction	"""plus.dll"",""NoRUNONCE"""					
+2539		Reset Host Dirs		CustomAction	"""plus.dll"",""ResetHostDirs"",""2536,2537"""					
+2544										
+2545		*** Readme Notes ***		Group	2546 2547 2548					
+2546		Readme.txt		CopyFile	"""SupportNotes"",""rme"""				yes	%1
+2547		Support.txt		CopyFile	"""SupportNotes"",""sup"""				yes	%1
+2548		DrvSpace.txt		CopyFile	"""SupportNotes"",""btw"""				yes	%1
+2555										
+2560		*** ADVERTISING BILLBOARDS ***		Group	2563		
+2563	yes	Restart Win95		CustomAction	"""plus.dll"",""BootWin95"","""""					
+2570		ProgsPath		CustomAction	"""plus.dll"",""RedoNonVisual"",""1531,1532,1533,1534,1535,1536,1537,1538,1539,1540,1541,1542,1543,1551,1552"""					
+2571		Check Ok to removeall		CustomAction	"""plus.dll"",""OKRemoveAll"",""31,32,33,35,36"""					
+2572	yes	Remove stf if cancel		CustomAction	"""plus.dll"",""VerifySTF"",""setup.stf"""				yes	%2513
+2598										
+2599										
+2600		*** Enchanced Icons ***		Group	2605 2610 2630 2650 2685					
+2605		Shell Icon BPP             .		AddRegData	"""HKEY_CURRENT_USER"",""Control Panel\desktop\WindowMetrics"",""Shell Icon BPP"",""16"""					%M
+2610		* CLSID *		Group	2611 2612 2613 2614 2615 2616 2617 2618 2619 2620 2621 2622 2623 2624 2625 2626 2627 2628 2629					
+2611		Hard Disk                  .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Classes\Drive\DefaultIcon"","""",""%s\cool.dll,0"""					%M
+2612		Network Neighborhood       .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Classes\CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\DefaultIcon"","""",""%s\cool.dll,17"""					%M
+2613		Recycle Bin Empty          .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"",""empty"",""%s\cool.dll,20"""					%M
+2614		Recycle Bin Full           .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"",""full"",""%s\cool.dll,21"""					%M
+2615		Control Panel              .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{21EC2020-3AEA-1069-A2DD-08002B30309D}\DefaultIcon"","""",""%s\cool.dll,12"""					%M
+2616		Fonts Folder               .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{BD84B380-8CA2-1069-AB1D-08000948F534}\DefaultIcon"","""",""%s\cool.dll,14"""					%M
+2617		My Computer                .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon"","""",""%s\cool.dll,16"""					%M
+2618		Printers Folder            .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{2227A280-3AEA-1069-A2DE-08002B30309D}\DefaultIcon"","""",""%s\cool.dll,19"""					%M
+2619		Dial-up networking         .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{992CFFA0-F557-101A-88EC-00DD010CCC48}\DefaultIcon"","""",""%s\cool.dll,27"""					%M
+2620		Inbox-Installed            .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{00020D75-0000-0000-C000-000000000046}\DefaultIcon"","""",""%s\cool.dll,30"""					%M
+2621		Inbox-NotYetInstalled      .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{00020D76-0000-0000-C000-000000000046}\DefaultIcon"","""",""%s\cool.dll,30"""					%M
+2622		The Microsoft Network      .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{00028B00-0000-0000-C000-000000000046}\DefaultIcon"","""",""%s\cool.dll,31"""					%M
+2623		Briefcase                  .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\DefaultIcon"","""",""%s\cool.dll,35"""					%M
+2624		Media                      .		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{00022601-0000-0000-C000-000000000046}\DefaultIcon"","""",""%s\cool.dll,39"""					%M
+2625		MIDI sequence              .		AddRegData	""

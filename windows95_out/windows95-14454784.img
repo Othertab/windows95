@@ -1,0 +1,131 @@
+KR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBase,flag,1,10,00,00,00
+
+;****************************************************************************
+; NE3200 Drivers
+;****************************************************************************
+; Base section for ne3200 users
+[ne3200.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+; change for miniport
+HKR,,DeviceVxDs,,ne3200.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"NE3200"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NE3200$"
+HKR,NDIS\NDIS2,FileName,,"ne3200.dos"
+HKR,NDIS\ODI,DriverName,,"NE3200"
+HKR,NDIS\ODI,FileName,,"ne3200.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ne3200.ndis3"
+HKR,Ndi\Install,ndis2,,"ne3200.ndis2"
+;HKR,Ndi\Install,odi,,"ne3200.odi"
+
+; Install NDIS3
+[ne3200.ndis3]
+CopyFiles=ne3200.ndis3.CopyFiles
+[ne3200.ndis3.CopyFiles]
+; change for miniport
+ne3200.sys
+ne3200.bin
+
+; Install NDIS2
+[ne3200.ndis2]
+CopyFiles=ne3200.ndis2.CopyFiles
+AddReg=ne3200.ndis2.reg
+[ne3200.ndis2.CopyFiles]
+ne3200.dos
+[ne3200.ndis2.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",ne3200.dos,,low
+
+; Install ODI
+[ne3200.odi]
+CopyFiles=ne3200.odi.CopyFiles
+[ne3200.odi.CopyFiles]
+ne3200.com
+
+; base mca slot section
+[MCASLOT.params.reg]
+; Adapter Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,Ndi\params\slotnumber,flag,1,30,00,00,00
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir              =11 ; LDID_SYS
+ne2000.ndis3.CopyFiles      =11
+ne2000.ndis2.CopyFiles      =26 ; LDID_WINBOOT
+ne2000.odi.CopyFiles        =26
+ne1000.ndis3.CopyFiles      =11
+ne1000.ndis2.CopyFiles      =26 ; LDID_WINBOOT
+ne1000.odi.CopyFiles        =26
+ne3200.ndis3.CopyFiles      =11
+ne3200.ndis2.CopyFiles      =26
+ne3200.odi.CopyFiles        =26
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_Novell="Novell/Anthem"
+V_Artisoft="Artisoft Corporation"
+V_Intel="Intel"
+V_NatSemi="National Semiconductor"
+V_Zenith="Zenith Data Systems"
+V_Linksys="Linksys"
+V_Accton="Accton"
+V_Realtek="Realtek"
+V_DLink="D-Link Corporation"
+
+NVL0701.DeviceDesc= "EISA NE3200"
+; Novell Devices
+*pnp80d3.DeviceDesc="Novell/Anthem NE1000"
+*pnp80d4.DeviceDesc="Novell/Anthem NE2000"
+mca_7154.DeviceDesc="Novell/Anthem NE/2"
+*pnp80d6.DeviceDesc="NE2000 Compatible"
+*pnp80d5.DeviceDesc="NE1000 Compatible"
+*pnp80d9.DeviceDesc="NE2000 Plus"
+
+; Artisoft Devices
+*pnp8137.DeviceDesc="Artisoft AE-1"
+mca_67b0.DeviceDesc="Artisoft AE-2 (MCA) or AE-3 (MCA)"
+*pnp8138.DeviceDesc="Artisoft AE-2 or AE-3"
+
+; National Semiconductor
+*pnp8160.DeviceDesc="National Semiconductor AT/LANTIC EtherNODE 16-AT3"
+*pnp815f.DeviceDesc="National Semiconductor NE2000Plus Infomover or compatible"
+
+; Zenith
+*pnp820a.DeviceDesc="Zenith Data Systems NE2000 Compatible"
+
+; Intel,Novell ne3200
+*NVL0701.DeviceDesc="Novell/Anthem NE3200 or compatible"
+*NVL0702.DeviceDesc="Novell/Anthem NE3200T"
+NVL0701C.DeviceDesc="Intel EtherExpress 32"
+
+;Linksys
+LNE2000.DeviceDesc= "Linksys Ether16 LAN Card"
+Linksys.DeviceDesc= "Linksys Combo PCMCIA EthernetCard"
+
+;Accton
+Accton.DeviceDesc=  "Accton EN1660 PnP 

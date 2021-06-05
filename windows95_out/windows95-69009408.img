@@ -1,0 +1,127 @@
+CMCIA
+%Modem14% = Modem14, MOTO_Modem14, UNIMODEME6D36D73    ; 3260 fast
+%Modem14% = Modem14, UNIMODEMC8C66C8E    ; 3260 fast
+%Modem12% = Modem12, UNIMODEM582F321E    ; FasTalk 32x
+%Modem11% = Modem11, UNIMODEM8E254ADA   
+%Modem11% = Modem11, UNIMODEMC4836E7D   
+%Modem10% = Modem10, UNIMODEM2A89953C    ; V3229
+%Modem10% = Modem10, MOTO_Modem10, UNIMODEM08EE69F7    ; V3229
+%Modem9%  = Modem9,  MOTO_Modem9 
+%Modem8%  = Modem8,  MOTO_Modem8, UNIMODEM08EE69F7    ; V3225
+%Modem7%  = Modem7,  UNIMODEM44D69E90    ; ta110-120
+%Modem6%  = Modem6,  MOTO_Modem6
+%Modem5%  = Modem5,  UNIMODEM77DDB4AA    ;Cellect 14.4 pocket
+%Modem4%  = Modem4, "PCMCIA\MOTOROLA/UDS-CELLECT-8C20"      ;Cellect PCMCIA
+%Modem4%  = Modem4,  UNIMODEM2513B65A                       ;Cellect PCMCIA
+%Modem3%  = Modem3,  UNIMODEM8CEBD2B4   ; FasTalk Fax32bx
+%Modem2%  = Modem2,  UNIMODEM0E313D0B   ; Fastalk II
+%Modem1PNP% = Modem1, SERENUM\MOT1501   ; V.3400
+%Modem1%  = Modem1,  UNIMODEM5982EBD2   ; V.3400
+%Modem1%  = Modem1,  UNIMODEMF00E811C   ; V.3400 
+
+[Modem28]        ; Motorola Lifestyle, Power 28.8 Internal
+AddReg=All, MfgAddReg, Modem28.AddReg, INTERNAL    
+
+[Modem27]        ; Motorola BitSURFR
+AddReg=All, MfgAddReg, Modem27.AddReg, EXTERNAL
+
+[Modem26]
+AddReg=All, MfgAddReg, Modem26.AddReg, EXTERNAL
+
+[Modem24]
+AddReg=All, MfgAddReg, Modem24.AddReg, EXTERNAL
+
+[Modem23]
+AddReg=All, MfgAddReg, Modem23.AddReg, EXTERNAL
+
+[Modem21]
+AddReg=All, MfgAddReg, Modem21.AddReg, EXTERNAL
+
+[Modem19]
+AddReg=All, MfgAddReg, Modem19.AddReg, EXTERNAL
+
+[Modem18]
+AddReg=All, MfgAddReg, Modem18.AddReg, EXTERNAL
+
+[Modem17]
+AddReg=All, MfgAddReg, Modem17.AddReg, EXTERNAL
+
+[Modem16]
+AddReg=All, MfgAddReg, Modem16.AddReg, PCMCIA
+
+[Modem15]
+AddReg=All, MfgAddReg, Modem15.AddReg, PCMCIA
+
+[Modem14]
+AddReg=All, MfgAddReg, Modem14.AddReg, EXTERNAL
+
+[Modem12]
+AddReg=All, MfgAddReg, Modem12.AddReg, EXTERNAL
+
+[Modem11] 
+AddReg=All, MfgAddReg, Modem11.AddReg, EXTERNAL
+
+[Modem10]
+AddReg=All, MfgAddReg, Modem10.AddReg, EXTERNAL
+
+[Modem9] 
+AddReg=All, MfgAddReg, Modem9.AddReg, EXTERNAL
+
+[Modem8]
+AddReg=All, MfgAddReg, Modem8.AddReg, EXTERNAL
+
+[Modem7]
+AddReg=All, MfgAddReg, Modem7.AddReg, EXTERNAL
+
+[Modem6]
+AddReg=All, MfgAddReg, Modem6.AddReg, INTERNAL
+
+[Modem5]
+AddReg=All, MfgAddReg, Modem5.AddReg, EXTERNAL
+
+[Modem4]
+AddReg=All, MfgAddReg, Modem4.AddReg, PCMCIA
+
+[Modem3]
+AddReg=All, MfgAddReg, Modem3.AddReg, EXTERNAL
+
+[Modem2]
+AddReg=All, MfgAddReg, Modem2.AddReg, EXTERNAL
+
+[Modem1]
+AddReg=All, MfgAddReg, Modem1.AddReg, EXTERNAL
+
+
+[Modem28.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Init, 2,, "AT &F &D2 &C1 E0 V1 \V3 S90=249<cr>"
+HKR, Settings, ErrorControl_On,, "\N7"
+HKR, Settings, ErrorControl_Forced,, "\N6"
+HKR, Settings, DialSuffix,, ""
+
+[Modem27.AddReg] ; Motorola BitSURFR
+HKR,, Properties, 1, 00,00,00,00, ff,00,00,00, 00,00,00,00, 00,00,00,00, 00,00,00,00, 30,00,00,00, 00,c2,01,00, 00,fa,00,00
+HKR, Init, 2,, "AT &F &C1 &D2 E0 V1<cr>"
+
+[Modem26.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 31,03,00,00, 00,4b,00,00, 80,25,00,00
+HKR, Settings, DialSuffix,, ""
+
+[Modem24.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,96,00,00, 40,38,00,00
+HKR,, InactivityScale, 1, 01,00,00,00
+HKR, Init, 2,, "AT&F&D2&C1S0=0E0V1*XC1<cr>"
+HKR, Settings, FlowControl_Off,, "*FL0"
+HKR, Settings, FlowControl_Hard,, "*FL3"
+HKR, Settings, FlowControl_Soft,, "*FL1"
+HKR, Settings, ErrorControl_Forced,, "*SM2"
+HKR, Settings, ErrorControl_On,, "*SM3"
+HKR, Settings, ErrorControl_Off,, "*SM0"
+HKR, Settings, Compression_On,, "*DC1"
+HKR, Settings, Compression_Off,, "*DC0"
+HKR, Settings, InactivityTimeout,, "S30=<#>"
+HKR, Settings, Modulation_CCITT,, "B0"
+HKR, Settings, Modulation_Bell,, "B1"
+
+[Modem23.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03

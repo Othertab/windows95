@@ -1,0 +1,88 @@
+YSTEM\CurrentControlSet\Services\VxD\NWNBLINK",NetClean,1,1
+[NWNBLINK.copy]
+nwnblink.vxd
+
+[NWNBLINK.Remove]
+DelReg=NWNBLINK.rmv.AddReg
+[NWNBLINK.rmv.AddReg]
+HKLM,"System\CurrentControlSet\Services\VxD\NWNBLINK",StaticVxD
+
+
+;****************************************************************************
+; NWLINK
+;****************************************************************************
+[NWLINK.ndi]
+AddReg=NWLINK.ndi.reg
+DeviceID=NWLINK
+MaxInstance=4
+
+[NWLINK.ndi.reg]
+HKR,Ndi,DeviceID,,NWLINK
+HKR,Ndi,MaxInstance,,8
+HKR,Ndi,NdiInstaller,,"netdi.dll,NwlinkNdiProc"
+HKR,Ndi,StaticVxd,,"nwlink.vxd"
+; NDIS info
+HKR,NDIS,LogDriverName,,"NWLINK"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"nwlink$"
+HKR,NDIS\NDIS2,FileName,,"*nwlink"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ipx,ipxDHost,winsock"
+HKR,Ndi\Interfaces,DefLower,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,UpperRange,,"ipx,ipxDHost,winsock"
+HKR,Ndi\Interfaces,LowerRange,,"ndis2,ndis3,odi"
+; Install sections
+HKR,Ndi\Install,,,"NWLINK.Install"
+HKR,Ndi\Remove,,,"NWLINK.Remove"
+;Network Address Parameter (per instance)
+HKR,Ndi\params\Network_Id,flag,1,20,00,00,00
+HKR,Ndi\params\Network_Id,default,,0
+HKR,Ndi\params\Network_Id,ParamDesc,,%NWLINK_PARAM_NETWORK_ID%
+HKR,Ndi\params\Network_Id,type,,dword
+HKR,Ndi\params\Network_Id,base,,16
+;Flags (per instance)
+;HKR,Ndi\params\Flags,default,,0
+;HKR,Ndi\params\Flags,ParamDesc,,%NWLINK_PARAM_FLAGS%
+;HKR,Ndi\params\Flags,type,,dword
+;HKR,Ndi\params\Flags,base,,16
+;Frame Type Parameter (per instance)
+HKR,Ndi\params\Frame_Type,ParamDesc,,%NWLINK_PARAM_FRAMETYPE%
+HKR,Ndi\params\Frame_Type,default,,4
+HKR,Ndi\params\Frame_Type,type,,enum
+HKR,Ndi\params\Frame_Type\enum,"4",,"Auto"
+HKR,Ndi\params\Frame_Type\enum,"1",,"Ethernet 802.2"
+HKR,Ndi\params\Frame_Type\enum,"0",,"Ethernet 802.3"
+HKR,Ndi\params\Frame_Type\enum,"2",,"Ethernet II"
+HKR,Ndi\params\Frame_Type\enum,"5",,"Token Ring"
+HKR,Ndi\params\Frame_Type\enum,"6",,"Token Ring SNAP"
+;Maximum Connections (global)
+HKR,Ndi\params\maxconnect,location,,"System\CurrentControlSet\Services\Vxd\NWLink"
+
+HKR,Ndi\RenameBase,file1,,"%25%\winsock"
+HKR,Ndi\RenameBase,file2,,"%11%\winsock"
+HKR,Ndi\RenameBase,file3,,"%11%\win32s\winsock"
+
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxconnect,ParamDesc,,%NWLINK_PARAM_MAXCONNECT%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxconnect,optional,,1
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxconnect,type,,int
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxconnect,min,,1
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxconnect,max,,128
+;Maximum Sockets (global)
+HKR,Ndi\params\maxsockets,location,,"System\CurrentControlSet\Services\Vxd\NWLink"
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets,ParamDesc,,%NWLINK_PARAM_MAXSOCKETS%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets,optional,,1
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets,type,,int
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets,min,,2
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets,max,,255
+;Force Even Length Packets (global)
+HKR,Ndi\params\forceeven,location,,"System\CurrentControlSet\Services\Vxd\NWLink"
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven,ParamDesc,,%NWLINK_PARAM_FORCEEVEN%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven,optional,,1
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven,default,,0
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven,type,,enum
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven\enum,0,,%PARAM_NO%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven\enum,1,,%PARAM_YES%
+;Source Routing Cache Size (global)
+HKR,Ndi\params\cachesize,location,,"System\CurrentControlSet\Services\Vxd\NWLink"
+HKLM,System\CurrentContro

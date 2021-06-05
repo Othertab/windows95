@@ -1,0 +1,94 @@
+an MS-DOS window, go into the PIF directory and edit Command.pif, 
+or find Command.com and edit the properties there.
+
+[DOSKEY]
+If you want to use DOSKEY in an MS-DOS window without loading it in 
+Autoexec.bat or creating a startup batch script, you can go to the
+Program properties and enter doskey as the startup batch file. If you 
+decide later that you want to have a real startup batch file, simply 
+move DOSKEY into this batch file.
+
+[Directory Shortcuts]
+Related directories have the following shortcuts:
+. = current directory 
+.. = parent directory 
+... = parent directory once removed directory (new in Windows 95)
+.... = parent directory twice removed (new in Windows 95)
+For example, if you are in the C:\Windows\System\Viewers directory,
+and you enter cd... at the command prompt, the directory changes to C:\.
+
+
+[Command Line Parameters]
+Add a "?" to the command line of MS-DOS programs, and you will be prompted 
+to add parameters when you start the program. This is especially useful 
+with MS-DOS program shortcuts.
+
+
+[Easy Disk Copy From the Desktop]
+Create a shortcut on the desktop with diskcopy a: a: at the command prompt 
+to copy a disk (substitute b: to use b: drive).
+
+
+
+Cut, Copy, Paste, Drag and Drop
+------------------------------
+
+[Drag and Drop]
+To move an object, use the left mouse button to drag the object from one 
+folder to another on the same drive. Use Shift+Left-drag to force a move.
+
+To copy an object, use the left mouse button to drag the object from one 
+folder to another on a different drive. Use CTRL+Left+drag to force a copy.
+
+To create a shortcut to an executable, use the left mouse button to drag an 
+executable file to a new folder. 
+
+Use the right mouse button to drag an 
+object from one folder to another, and then select 'Create Shortcut(s) Here' 
+to create a shortcut to that object. The icon annotations indicate what 
+will happen: a plus sign for copy, an arrow for a shortcut, and no symbol 
+for a move. Press ESC while you are dragging the object to cancel the action.
+
+To create document shortcuts: Right drag a selection from an OLE document 
+(for example, Word 95) onto the Desktop or folder, and then select 
+"Create Document Shortcut Here." This document shortcut will open the 
+original document at the place in the document that the shortcut originated.
+
+To create document scraps: Use the left mouse button to drag a selection 
+from an OLE document (for example, Word 95) onto the desktop or folder to 
+create a scrap (a scrap is an OLE object that contains the selection). 
+Drop the scrap onto another document or back onto the original document 
+to insert or render it (whichever is most appropriate).
+
+[Right Drag and Drop] 
+Right drag and drop works like left drag and drop except that a menu is
+displayed when you drop the object. The menu for folders displays these 
+commands: Move Here, Copy Here, Create Shortcut(s) Here. The menu for OLE 
+objects includes:  Create Scrap Here, Move Scrap Here, Create Document 
+Shortcut Here).
+
+[Drag to the Taskbar] 
+You can drag objects from one open document to another open document 
+(one covering the other) by dragging the object to the target's taskbar, 
+waiting until the target window is displayed, and then dragging the object 
+onto the target window.
+
+
+
+File Operations
+----------------
+
+[Creating a New File]
+Create a new file by using the right mouse button to click the desktop 
+or folder, point to New, and then click the type of file you want to create
+from the list. 
+
+[Create a New Folder While Saving a File]
+When using the Save As command to save a file, you can also create a new 
+folder in which to store the file. Use the right mouse button to click
+the dialog box list, point to New, and then click Folder. Double-click 
+the new folder to open it, and then continue the save process.
+
+[Deleting Files Without Moving them to Recycle Bin]
+Select the file or files to be deleted. Use the right mouse button to click
+the selection, and then hold down the Shift key and clic

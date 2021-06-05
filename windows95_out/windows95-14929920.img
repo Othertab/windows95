@@ -1,0 +1,115 @@
+
+HKCR,"MPEGFile\shell\open"
+HKCR,"MPEGFile\shell\open\command",,,"%V_CMD_OPEN%"
+HKCR,"MPEGFile\shell\play",,,"%V_VERB_PLAY%"
+HKCR,"MPEGFile\shell\play\command",,,"%V_CMD_PLAY%"
+;
+HKCR,"AUFile",,,"%V_SND_AU%"
+HKCR,"AUFile\CLSID",,,"{00022601-0000-0000-C000-000000000046}"
+HKCR,"AUFile\DefaultIcon",,,"quartz.dll,-201"
+HKCR,"AUFile\shell",,,"play"
+HKCR,"AUFile\shell\open"
+HKCR,"AUFile\shell\open\command",,,"%V_CMD_OPEN%"
+HKCR,"AUFile\shell\play",,,"%V_VERB_PLAY%"
+HKCR,"AUFile\shell\play\command",,,"%V_CMD_PLAY%"
+;
+HKCR,"AIFFFile",,,"%V_SND_AIFF%"
+HKCR,"AIFFFile\CLSID",,,"{00022601-0000-0000-C000-000000000046}"
+HKCR,"AIFFFile\DefaultIcon",,,"quartz.dll,-202"
+HKCR,"AIFFFile\shell",,,"play"
+HKCR,"AIFFFile\shell\open"
+HKCR,"AIFFFile\shell\open\command",,,"%V_CMD_OPEN%"
+HKCR,"AIFFFile\shell\play",,,"%V_VERB_PLAY%"
+HKCR,"AIFFFile\shell\play\command",,,"%V_CMD_PLAY%"
+;
+; file type associations
+;
+HKCR,".mpeg",,,"MPEGFile"
+HKCR,".mpeg","Content Type",,"video/mpeg"
+HKCR, ".mpe",,,"MPEGFile"
+HKCR, ".mpe","Content Type",,"video/mpeg"
+HKCR, ".mpg",,,"MPEGFile"
+HKCR, ".mpg","Content Type",,"video/mpeg"
+HKCR, ".mpa",,,"MPEGFile"
+HKCR, ".mpa","Content Type",,"video/mpeg"
+HKCR, ".m1v",,,"MPEGFile"
+HKCR, ".m1v","Content Type",,"video/mpeg"
+HKCR, ".mp2",,,"MPEGFile"
+HKCR, ".mp2","Content Type",,"video/mpeg"
+HKCR, ".enc",,,"MPEGFile"
+HKCR, ".enc","Content Type",,"video/mpeg"
+HKCR, ".mov",,,"MOVFile"
+HKCR, ".mov","Content Type",,"video/quicktime"
+HKCR, ".qt" ,,,"MOVFile"
+HKCR, ".qt","Content Type",,"video/quicktime"
+HKCR, ".avi",,,"AVIFile"
+HKCR, ".avi","Content Type",,"video/avi"
+HKCR, ".au" ,,,"AUFile"
+HKCR, ".au","Content Type",,"audio/basic"
+HKCR, ".snd",,,"AUFile"
+HKCR, ".snd","Content Type",,"audio/basic"
+HKCR, ".aif",,,"AIFFFile"
+HKCR, ".aif","Content Type",,"audio/aiff"
+HKCR,".aiff",,,"AIFFFile"
+HKCR,".aiff","Content Type",,"audio/aiff"
+HKCR,".aifc",,,"AIFFFile"
+HKCR,".aifc","Content Type",,"audio/aiff"
+;
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce","ActiveMovie File Extensions",,"ActMovie.exe /Setup"
+;
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Media Player\Options","Ignore Registry Check",1,01,00,00,00
+;
+HKLM,"SOFTWARE\Microsoft\Active Setup\Installed Components\{44BBA848-CC51-11CF-AAFA-00AA00B6015C}",,,%MSAMovie_DESC%
+HKLM,"SOFTWARE\Microsoft\Active Setup\Installed Components\{44BBA848-CC51-11CF-AAFA-00AA00B6015C}","Version",1,04,00,00,00,60,00,d9,02
+;
+; shared dlls
+;
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs","%11%\msvcrt40.dll",1,01,00,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs","%11%\olepro32.dll",1,01,00,00,00
+;
+[quartz.deloldreg]
+;
+HKCR,"Filter\%CLSID_DSREND%"
+HKCR,"CLSID\%CLSID_DSREND%"
+HKCR,"CLSID\%CLSID_WAVSPL%\Pins\Input\Types\%MT_STREAM%\{e436eb8a-524f-11ce-9f53-0020af0ba770}"
+HKCR,"Media Type\%MT_STREAM%\{44584800-F8EE-11ce-B2D4-00DD01101B85}"
+HKCR,"ActiveMovie.AVI"
+HKCR,"ActiveMovie.MPEG"
+HKCR,"ActiveMovie.MOV"
+HKCR,"ActiveMovie.MID"
+HKCR,"ActiveMovie.RMI"
+HKCR,"ActiveMovie.AU"
+HKCR,"ActiveMovie.SND"
+HKCR,"ActiveMovie.WAV"
+HKCR,"ActiveMovie.AIFF"
+HKCR,"SNDFile"
+HKCR,"AIFFile"
+HKCR,"MPGFile"
+HKCR,"RMIFile"
+HKCR,"WAVFile"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ActiveMovie"
+;
+; MCI Driver
+;
+[quartz.updateinis]
+;
+win.ini, "mci extensions", "mpeg=quartz", ,1
+win.ini, "mci extensions", "mpg=quartz",  ,1
+win.ini, "mci extensions", "mpa=quartz",  ,1
+win.ini, "mci extensions", "enc=quartz",  ,1
+win.ini, "mci extensions", "m1v=quartz",  ,1
+win.ini, "mci extensions", "mp2=quartz",  ,1
+win.ini, "mci extensions", "mov=quartz",  ,1
+win.ini, "mci extensions", "avi=quartz",  ,1
+;
+system.ini, "mci","quartz=mciqtz.drv",
+;
+win.ini, "mci extensions", "mpeg=*", "dummy=*", 3
+win.ini, "mci extensions", , "mpeg=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "mpeg=*", 3
+;
+win.ini, "mci extensions", "mpe=*", "dummy=*", 3
+win.ini, "mci extensions", , "mpe=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "mpe=*", 3
+;
+win.ini, "mci extensions", "mpg=*", "d

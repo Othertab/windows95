@@ -1,0 +1,122 @@
+bit driver"
+HKR,NDI\params\CableType,flag,1,20,00,00,00
+HKR,NDI\params\CableType,default,,1
+HKR,NDI\params\CableType,type,,enum
+HKR,NDI\params\CableType\enum,0,,"STP"
+HKR,NDI\params\CableType\enum,1,,"UTP"
+; DMACLOCK
+HKR,NDI\params\DMACLOCK,ParamDesc,,"DMA Clock Speed"
+HKR,NDI\params\DMACLOCK,flag,1,10,00,00,00
+HKR,NDI\params\DMACLOCK,default,,8
+HKR,NDI\params\DMACLOCK,type,,enum
+HKR,NDI\params\DMACLOCK\enum,4,,4
+HKR,NDI\params\DMACLOCK\enum,8,,8
+HKR,NDI\params\DMACLOCK\enum,"BUS",,"BUS"
+; SAEN
+HKR,NDI\params\SAEN,ParamDesc,,"Enable SAEN"
+HKR,NDI\params\SAEN,flag,1,10,00,00,00
+HKR,NDI\params\SAEN,default,,"ON"
+HKR,NDI\params\SAEN,type,,enum
+HKR,NDI\params\SAEN\enum,"ON",,"ON"
+HKR,NDI\params\SAEN\enum,"OFF",,"OFF"
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum number of buffers"
+HKR,NDI\params\MaxTransmits,flag,1,30,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,40
+HKR,NDI\params\MaxTransmits,min,,3
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+; Install NDIS3
+[ndis39.ndis3]
+CopyFiles=ndis39.ndis3.CopyFiles
+[ndis39.ndis3.CopyFiles]
+proteon.vxd
+
+; Install NDIS2
+[ndis39.ndis2]
+CopyFiles=ndis39.ndis2.CopyFiles
+[ndis39.ndis2.CopyFiles]
+ndis39xr.dos
+prorapm.dwn
+
+; Install ODI
+[ndis39.odi]
+CopyFiles=ndis39.odi.CopyFiles
+[ndis39.odi.CopyFiles]
+osh990r.com
+
+; Install ODI
+[ndis392.odi]
+CopyFiles=ndis392.odi.CopyFiles
+[ndis392.odi.CopyFiles]
+osh392r.com
+
+;****************************************************************************
+; Proteon Token Ring (1990) Base Section
+;****************************************************************************
+[NDIS99XR.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+HKR,,DeviceVxDs,,proteon.vxd
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PROTEON"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NDI99XR$"
+HKR,NDIS\NDIS2,FileName,,"NDIS99XR.DOS"
+HKR,NDIS\ODI,DriverName,,"osh99xr"
+HKR,NDIS\ODI,FileName,,"osh99xr.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"NDIS99XR.ndis3"
+HKR,Ndi\Install,ndis2,,"NDIS99XR.ndis2"
+;HKR,Ndi\Install,odi,,"NDIS99XR.odi"
+;params
+;Maximum Transmits
+;HKR,Ndi\params\MAXTRANSMITS,ParamDesc,,"Maximum Transmits"
+;HKR,Ndi\params\MAXTRANSMITS,type,,int
+;HKR,Ndi\params\MAXTRANSMITS,default,,40
+;HKR,Ndi\params\MAXTRANSMITS,min,,10
+;HKR,Ndi\params\MAXTRANSMITS,max,,100
+;HKR,Ndi\params\MAXTRANSMITS,step,,1
+;HKR,NDI\params\MAXTRANSMITS,flag,1,10,00,00,00
+;Maximum REQUESTS
+;HKR,Ndi\params\MAXREQUESTS,ParamDesc,,"Maximum Requests"
+;HKR,Ndi\params\MAXREQUESTS,type,,int
+;HKR,Ndi\params\MAXREQUESTS,default,,3
+;HKR,Ndi\params\MAXREQUESTS,min,,1
+;HKR,Ndi\params\MAXREQUESTS,max,,100
+;HKR,Ndi\params\MAXREQUESTS,step,,1
+;HKR,NDI\params\MAXREQUESTS,flag,1,10,00,00,00
+;Maximum RECEIVES
+;HKR,Ndi\params\MAXRECEIVES,ParamDesc,,"Maximum Receives"
+;HKR,Ndi\params\MAXRECEIVES,type,,int
+;HKR,Ndi\params\MAXRECEIVES,default,,3
+;HKR,Ndi\params\MAXRECEIVES,min,,1
+;HKR,Ndi\params\MAXRECEIVES,max,,100
+;HKR,Ndi\params\MAXRECEIVES,step,,1
+;HKR,NDI\params\MAXRECEIVES,flag,1,10,00,00,00
+;Maximum FRAMESIZE
+;HKR,Ndi\params\MAXFRAMESIZE,ParamDesc,,"Maximum FrameSize"
+;HKR,Ndi\params\MAXFRAMESIZE,type,,int
+;HKR,Ndi\params\MAXFRAMESIZE,default,,500
+;HKR,Ndi\params\MAXFRAMESIZE,min,,500
+;HKR,Ndi\params\MAXFRAMESIZE,max,,5000
+;HKR,Ndi\params\MAXFRAMESIZE,step,,100
+;HKR,NDI\params\MAXFRAMESIZE,flag,1,10,00,0

@@ -1,0 +1,81 @@
+Clad on the same 
+computer as Windows 95. The security features of Ironclad are 
+incompatible with the Windows 95 file system.
+
+Kyrandia 3 Malcolm's Revenge: If you see an EMS memory error when 
+running this game:
+1. Right-click the Malcolm.pif file, click Properties, and then click 
+   the Memory tab. 
+2. Change the settings for Expanded Memory and Extended Memory to 4096.
+3. Click Apply, and then change the same settings back to Auto.
+
+Lotus Notes: To install Lotus Notes from a network computer, you need 
+to map a drive letter to the network computer. To do this, carry out 
+the following procedure:
+1. Click the Start button, point to Programs, and then click Windows 
+   Explorer.
+2. On the Tools menu, click Map Network Drive.
+3. In the Path box, type the path to the network server, and then 
+   click OK.
+4. Click the drive you just mapped, and find the Lotus Notes setup 
+   program.
+5. Install Lotus Notes.
+
+Lotus Notes Windows Client 3.2: If you are using the NetBIOS interface
+over IPX and the NetBEUI protocol stacks, then it is necessary to 
+configure the port for NetBIOS using the unit number that properly 
+corresponds to that protocol. The default number for the first NetBIOS 
+protocol is first set to 0, then any additional NetBIOS interface will 
+start at port 7 through 1. It is likely that NetBIOS will use 7 or 6 
+if NetBEUI is using 0. To make changes, in the Lotus Notes Windows 
+client, click the Tools menu, click Setup, and then click Ports. 
+
+Managing your Money v2.0a for Windows: This program uses the 
+Calendar.exe, Cardfile.exe, and Clock.exe files that shipped with 
+Windows 3.x. If you upgrade over Windows 3.x, all of these features 
+will be usable. If you did not upgrade over Windows 3.x you will not 
+be able to use the Calendar, Cardfile, or Clock. 
+
+MaxSoft-Ocron: Business Card Reader 2.0, ColorFax, ImagePhoto, and 
+Wordlinx 2.0 were written for Windows 3.1 and may not work correctly 
+under Windows 95. For more information inside the United States, call
+MaxSoft-Ocron, Inc. at (510) 252-0200. Outside the United States, call 
+the product support telephone number that came with your copy of 
+Perceive Personal OCR for Hand Scanners. Or write to the company at 
+MaxSoft-Ocron, Inc., 4110 Clipper Court, Freemont, CA 94538, USA.
+
+MCS Stereo version 1.05: Because of changes in the Windows 95 
+operating system, you cannot switch between standard and enhanced 
+environments in MCS Stereo version 1.05. If you do, the mixer controls 
+will be disabled. To enable them, close the program, and then reopen 
+it. If you are in the United States, contact Animotion Development Corp 
+for information about obtaining a version of this program designed for 
+Windows 95. Inside the United States: call phone (800) 536-4175 or 
+(205) 591-5715; fax (205) 591-5716; technical support (205) 591-5715; 
+technical support BBS (205) 591-5795. Outside the United States, call 
+the product support number that came with your copy of MCS Stereo.
+
+Media Blitz 3.0:  After installing Media Blitz 3.0, you must restart 
+your computer before you run the program to enable Windows 95 to pick 
+up changes made by the setup program. 
+
+Menuworks Total Security:  The security features of this product 
+are incompatible with the Windows 95 file system. It is strongly 
+recommended that you remove this software before installing Windows 95.
+
+Microprose 1942 Gold: This program uses the version of Command.com 
+located in your \Dos directory. Older versions of Command.com will 
+not run with Windows 95. To run 1942 Gold with Windows 95, copy 
+Command.com in your \Windows directory over the version in your 
+\Dos directory.
+
+MicroHelp Compression Plus 4.0: If you have problems installing
+Compression Plus on Windows 95, try carryout out the following
+procedure.
+1. Add the word progman to the end of the SHELL= line in your
+   System.ini file. For example:
+
+   shell=explorer.exe progman
+
+2. Restart your computer, and then reinstall MicroHelp Compression.
+3. Change your System.ini file back to i

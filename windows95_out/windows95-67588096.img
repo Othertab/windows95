@@ -1,0 +1,82 @@
+=Gen96,  AUS_Exicom2 ; Exicom 596
+
+[Teltra]
+%Teltra1%=Gen288, AUS_Teltra1 ; Teltra TEL 288
+%Teltra2%=Gen96,  AUS_Teltra2 ; Teltra TEL 596
+
+[Interlink]
+%Intlnk1% =Gen144, UNIMODEM190612C1 ; Interlink Voidax I 14400 Fax
+%Intlnk2% =Gen144, UNIMODEM6AAFCE3B ; Interlink Voidax II 14400 Fax
+%Intlnk3% =Gen144, UNIMODEM6977A9DB ; Interlink Voidax III 14400 Fax
+%Intlnk4% =Gen144, UNIMODEM7B5EC8CC ; Interlink Voidax PRO 14400 Fax
+%Intlnk5% =Gen24I, UNIMODEM66188720 ; Interlink Hotlink 1i 2400 Fax
+%Intlnk6% =Gen96I, UNIMODEMA54DF85F ; Interlink Hotlink 2i 9600 Fax
+%Intlnk7% =Gen144I,UNIMODEM0429867C ; Interlink Hotlink 3i 14.4 Fax
+%Intlnk8% =Gen288I,UNIMODEM454B8908 ; Interlink Hotlink 4i 28.8 Fax
+%Intlnk9% =Gen288I,UNIMODEM688A1B14 ; Interlink Hotlink 5i 28.8 V.34 Fax
+%Intlnk10%=Gen24,  UNIMODEM799D0CF9 ; Interlink Hotlink 1x 2400 Fax
+%Intlnk11%=Gen96,  UNIMODEM5C1E3266 ; Interlink Hotlink 2x 9600 Fax
+%Intlnk12%=Gen144, UNIMODEMA6A2BB2C ; Interlink Hotlink 3x 14.4 Fax
+%Intlnk13%=Gen288, UNIMODEM0F65F9F6 ; Interlink Hotlink 4x 28.8 Fax
+%Intlnk14%=Gen288, UNIMODEM20D726D3 ; Interlink Hotlink 5x 28.8 V.34 Fax
+%Intlnk15%=Gen24,  UNIMODEM056C1556 ; Interlink FM3
+%Intlnk16%=Gen144, AUS_Intlnk16     ; Interlink IQ 12345
+%Intlnk17%=Gen144, AUS_Intlnk17     ; Interlink IQ 6
+%Intlnk18%=Gen144, AUS_Intlnk18     ; Interlink Base 12345
+%Intlnk19%=Gen144, AUS_Intlnk19     ; Interlink Base 6
+%Intlnk20%=Gen144, AUS_Intlnk20     ; Interlink FastBit IICP
+%Intlnk21%=Gen144, AUS_Intlnk21     ; Interlink FastBit IIbisCP
+
+[Maestro]
+%Maestro1%=Gen96,  AUS_Maestro1   ; Maestro Executive 96
+%Maestro2%=Gen144, AUS_Maestro2   ; Maestro Executive 144
+%Maestro3%=Gen288, AUS_Maestro3   ; Maestro Executive 288
+%Maestro4%=Gen144, AUS_Maestro4   ; Maestro Companion 144
+%Maestro5%=Gen288, AUS_Maestro5   ; Maestro Companion 288
+
+[Microfax]
+%Microfax1%=Gen24,  AUS_Microfax1 ; Microfax 9624
+%Microfax2%=Gen144, AUS_Microfax2 ; Microfax 144
+%Microfax3%=Gen288, AUS_Microfax3 ; Microfax 288 V.34
+%Microfax4%=Gen144, AUS_Microfax4 ; Microfax Synergy
+
+[NetComm]
+%NetComm1% =Gen24,  AUS_NetComm1  ; NetComm AutoFaxModem 24
+%NetComm2% =Gen144, AUS_NetComm2  ; NetComm AutoModem E34F
+%NetComm3% =Gen144, AUS_NetComm3  ; NetComm AutoModem E7
+%NetComm4% =Gen144, AUS_NetComm4  ; NetComm AutoModem V6
+%NetComm5% =Gen144, AUS_NetComm5  ; NetComm AutoModem V8
+%NetComm6% =Gen24,  AUS_NetComm6  ; NetComm CardModem 24
+%NetComm7% =Gen24,  AUS_NetComm7  ; NetComm InFaxModem 24
+%NetComm8% =Gen144, AUS_NetComm8  ; NetComm Pocket PA
+%NetComm9% =Gen24,  AUS_NetComm9  ; NetComm PocketFax 24
+%NetComm10%=Gen144, AUS_NetComm10 ; NetComm SmartModem E7
+%NetComm11%=Gen144, AUS_NetComm11 ; NetComm SmartModem M11F
+%NetComm12%=Gen144, AUS_NetComm12 ; NetComm SmartModem M34F
+%NetComm13%=Gen144, AUS_NetComm13 ; NetComm SmartModem M4F
+%NetComm14%=Gen144, AUS_NetComm14 ; NetComm SmartModem M5
+%NetComm15%=Gen144, AUS_NetComm15 ; NetComm SmartModem M7F
+%NetComm16%=Gen144, AUS_NetComm16 ; NetComm SmartModem V8
+%NetComm17%=Gen144, AUS_NetComm17 ; NetComm WorldBlazer
+%NetComm18%=Gen144, AUS_NetComm18 ; NetComm Automodem E11F
+%NetComm19%=Gen144, AUS_NetComm19 ; NetComm SmartModem E5
+%NetComm20%=Gen144, AUS_NetComm20 ; NetComm SmartModem E7F
+%NetComm21%=Gen144, AUS_NetComm21 ; NetComm SmartModem M4
+%NetComm22%=Gen144, AUS_NetComm22 ; NetComm SmartModem M7F
+%NetComm23%=Gen144, AUS_NetComm23 ; NetComm SmartModem V6
+
+[Schmidt]
+%Schmidt1%=Gen24, AUS_Schmidt1    ; Schmidt 1234AT
+%Schmidt2%=Gen24, AUS_Schmidt2    ; Schmidt 123AT
+%Schmidt3%=Gen24, AUS_Schmidt3    ; Schmidt Panther 4
+
+[Simple]
+%Simple1%=Gen24,   AUS_Simple1    ; Simplemodem 24f
+%Simple2%=Gen96,   AUS_Simple2    ; Simplemodem 96f
+%Simple3%=Gen144,  AUS_Simple3    ; Simplemodem 144f
+%Simple4%=Gen288,  AUS_Simple4    ; Simplemodem 288f
+%Simple5%=Gen144P, AUS_Simple5    ; Simplemodem 144p
+%Simple6%=Gen288P, AUS_Simple6    ; Simplemodem 288p
+%Simple7%=Gen144I, AUS_Simple7    ; Simplemodem 144fi
+%Simple8%=Gen288I, AUS_Simple8    ; Simplemodem 288fi
+%Simple9%=Gen144I, AUS_Simple9    ; 

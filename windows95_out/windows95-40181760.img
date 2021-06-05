@@ -1,0 +1,95 @@
+. 
+
+Pburst.exe contains the patch for the affected servers.
+
+Opening Files on NetWare 3.11 Servers
+-------------------------------------
+Programs that open a large number of files consecutively in rapid
+succession might have occasional problems opening files on NetWare 3.11 
+servers. This can also happen when opening a file in a folder for which
+you do not have file scan rights, such as an MS Mail shared post office.
+
+Possible error messages:
+
+- "File not found" error on a file you know exists
+- "Sharing violation" or "Lock violation" error
+- "Unable to open file" error
+- "File in use" error
+
+There are two solutions to these problems:
+
+- Obtain a patch file from Novell for the NetWare 3.11 server. Using 
+  FTP, connect to ftp.novell.com. Go to /pub/netware/nwos/nw311/osnlm 
+  and run 311ptd.exe. This program will extract the file os2opnfx.nlm. 
+  Then, load the .nlm file onto the NetWare 3.11 server. 
+  ("load os2opnfx.nlm")
+
+- Disable long filename support in Client for NetWare. This means that 
+  you will not be able to use long filenames on any NetWare servers 
+  from Windows 95. To disable long-filename support, carry out the 
+  following steps:
+
+  1. Click the Start menu, click Run, and then type Regedit.
+  2. Go to 
+     HKEY_Local_Machine\System\CurrentControlSet\Services\VxD\NWRedir
+  3. Create a new binary value named supportLFN with a value of 0.
+
+Lowercase Extended-Character Passwords on NetWare 4.1 Servers
+-------------------------------------------------------------
+In a NetWare 4.1 environment, Client for NetWare does not support 
+passwords that use certain lowercase extended characters. Users 
+need to change their password to all uppercase characters.
+
+Client for NetWare and Programs That Use External Files
+-------------------------------------------------------
+If you are using Microsoft Client for NetWare, and you run a program 
+that needs to access an auxiliary file, your program will have problems 
+if the auxiliary file is on a drive other than the one the program is 
+on. This is because only the current drive is searched for auxiliary 
+files; the search path is not searched. If you experience this problem, 
+make sure the program and any auxiliary files are on the same drive.
+
+Novell NetWare Login Scripts
+----------------------------
+The Login Script Processor for the Microsoft Client for NetWare should
+correctly process all commands in your login scripts. However, you 
+cannot load memory-resident programs (TSRs) from these scripts. 
+
+Installing Novell Client32 Overwrites 
+NetWare Directory Services Files
+-------------------------------------
+When you install Novell Client32, the Novell setup program replaces 
+the Microsoft file Netdef.inf and renames it Netdef.bnw, and deletes 
+the NDS setup file Nwnds.dll. The result is that after uninstalling 
+Novell Client32, Service for NetWare Directory Services will not 
+install.
+
+To work around this problem, carry out the following steps:
+
+1. Find the file Netdef.bnw and rename it Netdef.inf.
+
+2. Copy the Nwnds.dll file to the Windows\System directory on your 
+   your hard disk by carrying out the following procedure:
+
+   1. Insert your Windows 95 installation CD into the CD-ROM drive.
+   2. Open an MS-DOS window.
+   3. Change to the Win95 directory on your CD-ROM, and then type the 
+      following at the command prompt:
+
+      extract /l c:\windows\system precopy2.cab nwnds.dll
+
+Upgrading Over an Earlier Beta Version of Windows
+-------------------------------------------------
+If you upgrade this release of Windows over an earlier beta release, 
+and you have Service for NetWare Directory Services installed, you 
+will be prompted about version conflicts for the following files:
+
+- Nwnp32.dll (v. 4.0.969)
+- Nwlsproc.exe (v. 4.0.968)
+- Netware.tmp (v. 4.0.968)
+
+When you see the version conflict prompt, click No. After Windows is 
+installed, you need to reinstall Service for NetWare Directory Services. 
+To do this, carry out the following steps:
+
+1. In Control Panel, dou

@@ -1,0 +1,136 @@
+K32.ndis2]
+CopyFiles=olitok32.ndis2.CopyFiles
+[olitok32.ndis2.CopyFiles]
+olitok16.dos
+
+; Install ODI
+[OLITOK32.odi]
+CopyFiles=octok32.odi.CopyFiles
+[octok32.odi.CopyFiles]
+octok16.com
+
+;****************************************************************************
+; SMC 3000 base section
+;****************************************************************************
+[SMC3000.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"SMC3000"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+HKR,NDIS\NDIS2,DriverName,,"SMC_ETH$"
+HKR,NDIS\NDIS2,FileName,,"smc3000.dos"
+HKR,NDIS\ODI,DriverName,,"e16odiw,smc300"
+HKR,NDIS\ODI,FileName,,"e16odiw.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"smc3000.ndis2"
+;HKR,Ndi\Install,odi,,"e16odiw.odi"
+; Resources
+HKR,,INTERRUPT,1,04,00,00,00
+HKR,,PORT_NUM,1,02,00,00,00
+HKR,NDI\params\INTERRUPT,resc,1,04,00,00,00
+HKR,NDI\params\INTERRUPT,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTERRUPT,flag,1,10,00,00,00
+HKR,NDI\params\PORT_NUM,resc,1,02,00,00,00
+HKR,NDI\params\PORT_NUM,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\PORT_NUM,flag,1,10,00,00,00
+; XT_TYPE
+HKR,NDI\params\XT_TYPE,ParamDesc,,"8 Bit Mode"
+HKR,NDI\params\XT_TYPE,type,,int
+HKR,Ndi\params\XT_TYPE,default,,0
+HKR,NDI\params\XT_TYPE,min,,0
+HKR,NDI\params\XT_TYPE,max,,1
+HKR,NDI\params\XT_TYPE,step,,1
+HKR,NDI\params\XT_TYPE,flag,1,10,00,00,00
+
+[MC_Channel]
+HKR,Ndi\params\micro_channel,ParamDesc,,"Bus Type (0=ISA, 1=MCA)"
+HKR,Ndi\params\micro_channel,type,,int
+HKR,Ndi\params\micro_channel,default,,0
+HKR,Ndi\params\micro_channel,min,,0
+HKR,Ndi\params\micro_channel,max,,1
+HKR,Ndi\params\micro_channel,step,,1
+HKR,NDI\params\micro_channel,flag,1,10,00,00,00
+
+; Install NDIS2
+[SMC3000.ndis2]
+CopyFiles=SMC3000.ndis2.CopyFiles
+[SMC3000.ndis2.CopyFiles]
+smc3000.dos
+
+; Install ODI
+[e16odiw.odi]
+CopyFiles=e16odiw.odi.CopyFiles
+[e16odiw.odi.CopyFiles]
+e16odiw.com
+
+;****************************************************************************
+; xircom Pocket Ethernet I
+;****************************************************************************
+
+[Xircom1.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PENDIS"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"XIRCOM$"
+HKR,NDIS\NDIS2,FileName,,"PENDIS.DOS"
+HKR,NDIS\ODI,DriverName,,"pemlid"
+HKR,NDIS\ODI,FileName,,"pemlid.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"PENDIS.ndis2"
+;HKR,Ndi\Install,odi,,"pemlid.odi"
+
+; Install NDIS2
+[pendis.ndis2]
+CopyFiles=pendis.ndis2.CopyFiles
+[pendis.ndis2.CopyFiles]
+pendis.dos
+
+; Install ODI
+[pemlid.odi]
+CopyFiles=pemlid.odi.CopyFiles
+[pemlid.odi.CopyFiles]
+pemlid.com
+
+;****************************************************************************
+; xircom Pocket Ethernet II
+;****************************************************************************
+
+[Xircom2.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PE2NDIS"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"XIRCOM$"
+HKR,NDIS\NDIS2,FileName,,"PE2NDIS.DOS"
+HKR,NDIS\ODI,DriverName,,"pe2odi"
+HKR,NDIS\ODI,FileName,,"pe2odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"pe2ndis.ndis2"
+;HKR,Ndi\Install,odi,,"pe2odi.odi"
+
+; Install NDIS2
+[pe2ndis.ndis2]
+Cop

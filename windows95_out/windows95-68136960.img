@@ -1,0 +1,103 @@
+operties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F S95=0 <cr>"
+HKR,, FClass, 1, 19,00,00,00
+HKR, Settings, FlowControl_Off,, "&K0"
+HKR, Settings, FlowControl_Hard,, "&K3"
+HKR, Settings, FlowControl_Soft,, "&K4"
+
+[Modem16.AddReg]	; MicroLink 28.8TQV
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, FClass, 1, 5f,00,00,00
+
+[Modem15.AddReg]	; MicroLink 28.8TQ
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem14.AddReg]	; MicroLink 14.4TQV
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 5f,00,00,00
+
+[Modem13.AddReg]	; MicroLink 14.4TQ
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem12.AddReg]	; MicroLink 2460MC
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, 37,03,00,00, 00,4b,00,00, 60,09,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem11.AddReg]	; MicroLink 2460PC
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, 37,03,00,00, 00,4b,00,00, 60,09,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem10.AddReg]	; MicroLink 2460TL
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, 37,03,00,00, 00,4b,00,00, 60,09,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem9.AddReg]	; MicroLink 2440TR
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, 37,03,00,00, 00,4b,00,00, 60,09,00,00
+HKR,, FClass, 1, 19,00,00,00
+
+[Modem8.AddReg]	; MicroLink 2440T
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, 37,03,00,00, 00,4b,00,00, 60,09,00,00
+HKR,, FClass, 1, 19,00,00,00
+
+[Modem6.AddReg]	; MicroLink 14.4PC
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem5.AddReg]	; MicroLink 14.4TM
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem3.AddReg]	; MicroLink 24oooTL
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, c0,5d,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+[Modem2.AddReg]	; MicroLink 14.4TL
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 1f,00,00,00
+HKR, Settings, FlowControl_Soft,, "\Q4"
+
+[Modem1.AddReg]	; MicroLink 288ooTL
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, FClass, 1, 1f,00,00,00
+
+; User visible strings
+
+[Strings]
+ClassName = "Modem"
+Mfg = "ELSA GmbH"
+
+; Model strings
+
+Modem28="ELSA MicroLink 24ooo TL & 288ooTL"
+Modem27="ELSA MicroLink 2460TL & 2460PC"
+Modem26="ELSA MicroLink 14.4TQ & 14.4TQV"
+Modem25="ELSA ELISA 144, ELISA 144V, & ZIFF 144"
+
+Modem24="ELSA MicroLink ISDN TD"
+Modem23="ELSA MicroLink ISDN TL PRO"
+Modem22="ELSA MicroLink ISDN TL"
+Modem20="ELSA ELISA 144V"
+Modem19="ELSA ELISA 144"
+Modem18="ELSA ZIFF 144"
+Modem17="ELSA MicroLink 14.4MC"
+Modem16="ELSA MicroLink 28.8TQV"
+Modem15="ELSA MicroLink 28.8TQ"
+Modem14="ELSA MicroLink 14.4TQV"
+Modem13="ELSA MicroLink 14.4TQ"
+Modem12="ELSA MicroLink 2460MC"
+Modem11="ELSA MicroLink 2460PC"
+Modem10="ELSA MicroLink 2460TL"
+Modem9="ELSA MicroLink 2440TR"
+Modem8="ELSA MicroLink 2440T"
+Modem6="ELSA MicroLink 14.4PC"
+Modem5="ELSA MicroLink 14.4 T, TM & TL"
+Modem3="ELSA MicroLink 24oooTL"
+Modem2="ELSA MicroLink 14.4TL"
+Modem1="ELSA MicroLink 288ooTL"
+
+
+[All]
+HKR,,FriendlyDriver,,unimodem.vxd
+HKR,,DevLoader,,*vcomm

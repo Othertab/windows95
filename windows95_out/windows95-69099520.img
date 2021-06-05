@@ -1,0 +1,117 @@
+ 2834PCS
+%Modem9%  = Modem9,   MTS_Modem9        ; 2834PCS
+%Modem8PNP% = Modem8, SERENUM\MTS0293   ; 2834BL
+%Modem8%  = Modem8,   MTS_Modem8,  UNIMODEM0026139B  ; 2834BL
+%Modem7PNP% = Modem7, SERENUM\MTS0277   ; 2834BA
+%Modem7%  = Modem7,   MTS_Modem7,  UNIMODEMEA9AFAE7  ; 2834BA
+%Modem6PNP% = Modem6, SERENUM\MTS0340   ; 1932ZPX
+%Modem6%  = Modem6,   UNIMODEMEDB44228  ; 1932ZPX
+%Modem5PNP% = Modem5, SERENUM\MTS0356   ; 1932ZDX
+%Modem5%  = Modem5,   MTS_Modem5,  UNIMODEMF305F971  ; 1932ZDX
+%Modem4PNP% = Modem4, SERENUM\MTS0355   ; 1432ZDX
+%Modem4%  = Modem4,   MTS_Modem4,  UNIMODEMF305F971  ; 1432ZDX
+%Modem3%  = Modem3,   PCMCIA\MULTI-TECH-MT1432LT-4B4C   ; 1432LT
+%Modem3%  = Modem3,   PCMCIA\MULTI-TECH-MT1432LT-CF0D   ; 1432LT
+%Modem3%  = Modem3,   UNIMODEM9C1C22DC  ; 1432LT
+%Modem2PNP% = Modem2, SERENUM\MTS0355   ; 1432MU
+%Modem2%  = Modem2,   UNIMODEM47133814  ; 1432MU
+%Modem2%  = Modem2,   UNIMODEM326F85A4  ; 1432M
+%Modem1PNP% = Modem1, SERENUM\MTS0275   ; 1432BA
+%Modem1%  = Modem1,   MTS_Modem1,  UNIMODEMEA9AFAE7  ; 1432BA
+%Modem1%  = Modem1,   UNIMODEM39081E41  ; 1432BA
+%Modem1%  = Modem1,   UNIMODEM8A164F24  ; 1432BA swedish international modem
+%Modem1%  = Modem1,   MTS_Modem1,  UNIMODEMAC7AC877  ; 1432BA swedish international modem
+
+[Modem21]
+AddReg=All, MfgAddReg, Modem21.AddReg, EXTERNAL
+
+[Modem20]
+AddReg=All, MfgAddReg, Modem20.AddReg, PCMCIA
+
+[Modem17]
+AddReg=All, MfgAddReg, Modem17.AddReg, EXTERNAL
+
+[Modem16]
+AddReg=All, MfgAddReg, Modem16.AddReg, EXTERNAL
+
+[Modem15]
+AddReg=All, MfgAddReg, Modem15.AddReg, EXTERNAL
+
+[Modem14]
+AddReg=All, MfgAddReg, Modem14.AddReg, EXTERNAL
+
+[Modem13]
+AddReg=All, MfgAddReg, Modem13.AddReg, EXTERNAL
+
+[Modem12]
+AddReg=All, MfgAddReg, Modem12.AddReg, EXTERNAL
+
+[Modem11]
+AddReg=All, MfgAddReg, Modem11.AddReg, EXTERNAL
+
+[Modem10]
+AddReg=All, MfgAddReg, Modem10.AddReg, EXTERNAL
+
+[Modem9]
+AddReg=All, MfgAddReg, Modem9.AddReg, EXTERNAL
+
+[Modem8]
+AddReg=All, MfgAddReg, Modem8.AddReg, EXTERNAL
+
+[Modem7]
+AddReg=All, MfgAddReg, Modem7.AddReg, EXTERNAL
+
+[Modem6]
+AddReg=All, MfgAddReg, Modem6.AddReg, INTERNAL
+
+[Modem5]
+AddReg=All, MfgAddReg, Modem5.AddReg, EXTERNAL
+
+[Modem4]
+AddReg=All, MfgAddReg, Modem4.AddReg, EXTERNAL
+
+[Modem3]
+AddReg=All, MfgAddReg, Modem3.AddReg, PCMCIA
+
+[Modem2]
+AddReg=All, MfgAddReg, Modem2.AddReg, EXTERNAL
+
+[Modem1]
+AddReg=All, MfgAddReg, Modem1.AddReg, EXTERNAL
+
+[Modem21.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, DialSuffix,, ""
+
+[Modem20.AddReg]
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 77,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Init, 2,, "AT &F V1 &D2 &C1 E0 Q0 S0=0 S25=20<cr>"
+HKR, Settings, Modulation_CCITT,, "B0"
+HKR, Settings, Modulation_Bell,, "B1"
+
+[Modem17.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem16.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,c2,01,00, 00,4b,00,00
+HKR, Init, 2,, "AT &F E0 S0=0 S25=20<cr>"
+
+[Modem15.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,c2,01,00, 00,4b,00,00
+
+[Modem14.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,c2,01,00, 00,4b,00,00
+
+[Modem13.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 S0=0 $BA0 S25=20<cr>"
+
+[Modem12.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,4b,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 S0=0 $BA0 S25=20<cr>"
+
+[Modem11.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 00,00,00,00, 0f,00,00,00, 37,03,00,00, 00,96,00,00, 80,25,00,00
+
+[Modem10.AddReg]
+HKR,, Properties, 1, 80,01

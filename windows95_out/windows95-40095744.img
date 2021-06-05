@@ -1,0 +1,94 @@
+e line that loads the Toscdrom.sys driver from your 
+Config.sys file. For example:
+
+	rem device=c:\cddrv\toscdrom.sys
+
+Sanyo 3-D ATAPI (IDE) CD-ROM drive
+----------------------------------
+The Sanyo 3-D ATAPI (IDE) CD-ROM drive uses a proprietary scheme to 
+support the three-disk changer. Although all three drives will appear 
+when you are running in protected mode, only one of them will be 
+accessible.
+
+To regain access to all three drives, remove the REM command from the 
+beginning of the MSCDEX line in your Autoexec.bat file. You also need 
+to disable the Windows 95 protected-mode disk driver. To do this, carry 
+out the following procedure:
+
+1. Click the Start button, and then point to Settings.
+2. Click Control Panel, and then double-click the System icon.
+3. Click the Device Manager tab.
+4. Click View Devices By Connection.
+5. Click plus signs next to devices until you find the Sanyo drive.
+6. After you find the Sanyo drive, look at the levels above it
+   until you find the parent controller.
+7. Click the controller, and then click Properties.
+8. In the Device Usage area, clear the check box next to the current 
+   configuration.
+
+This will enable access to all three drives from Windows 95 protected-
+mode; however, your disk, CD, and any other devices under the controller
+will be accessed only through real-mode drivers.
+
+For information about updating your driver to a Windows 95 driver, 
+contact your hardware vendor.
+
+Micron PowerServer M5-PE (66 MHz Pentium PCI/EISA bus)
+-------------------------------------------------------
+The BusLogic BT-946C PCI SCSI adapter may not be compatible with 
+Windows 95. If you encounter difficulties with your SCSI peripherals, 
+contact Micron to determine whether you need an updated adapter.
+
+
+SCANNERS
+========
+
+Windows 95 will detect most scanner hardware, but does not supply
+protected-mode drivers for any scanner model.
+
+All SCSI scanners use a feature called ASPI to talk to the controller
+in question. Windows 95 supports ASPI in protected mode. Hence, a
+scanner, although listed as an "unknown device" in Device Manager, is
+supported through protected-mode drivers in Windows 95, if there is a
+protected-mode driver for the SCSI controller in question.
+
+Note that theoretically you would not need the ASPI manager real-mode
+driver (such as Aspi2dos.sys) in your Config.sys file. However, some
+programs, such as HP ScanJet II and its associated real-mode drivers,
+Sj!!.sys and Sjiix.sys, require the real-mode ASPI manager to be in the
+Config.sys file or they will fail to load. In these cases, you would
+need to keep the real-mode drivers in the Config.sys file, but
+Windows 95 will still support the scanner through the protected-mode
+SCSI miniport driver (if one exists for the SCSI controller in question).
+
+Logitech Scanman
+----------------
+If you use a handheld Logitech Scanman on a computer that has more than 
+16 MB of memory, you may see the following message: "Insufficient
+system resources." To resolve this problem, you can obtain an updated 
+driver, Scanupt.exe, from the Logitech bulletin board or from CompuServe.
+
+
+MODEMS
+======
+
+Modems Control Panel
+--------------------
+In order to use your modem with the built-in communications features
+of Windows 95, including HyperTerminal, and Dial-Up Networking, your 
+modem must be configured in Modems properties in Control Panel.
+
+Settings made in Modems properties do not affect modem operation in
+programs designed for MS-DOS or Windows 3.1.
+
+Modem Detection
+---------------
+If Windows 95 detects your modem as a "Standard Modem," or incorrectly
+detects its make and model, you can use the Change button in the
+Install New Modem wizard to make a different selection. However, if
+you manually select an incorrect type, your modem may not to work with
+Windows 95 communications features. If this happens, double-click the
+Modems icon in Control Panel, remove the modem, and then add it back
+as one of the Standard modem types.
+
+When configured for "Standard Modem," 

@@ -1,0 +1,111 @@
+tep,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,20,00,00,00
+
+;****************************************************************************
+; IBMTOK4 Drivers - Common sections
+;****************************************************************************
+[IBMTOK4.ndi.reg]
+; key,subkey,valuename,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,IBMTOK4.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"IBMTOK4"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"IBMTOK$"
+HKR,NDIS\NDIS2,FileName,,"IBMTOK.DOS"
+HKR,NDIS\ODI,DriverName,,"IBMTOK"
+HKR,NDIS\ODI,FileName,,"IBMTOK4.COM"
+; Interfaces
+HKR,NDI\Interfaces,DefUpper,,"ndis3,ndis2"
+HKR,NDI\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,NDI\Interfaces,DefLower,,"TOKENRING"
+HKR,NDI\Interfaces,LowerRange,,"TOKENRING"
+; Instal Sections 
+HKR,NDI\Install,ndis3,,"IBMTOK4.ndis3"
+HKR,NDI\Install,ndis2,,"IBMTOK4.ndis2"
+;HKR,NDI\Install,odi,,"IBMTOK4.odi"
+
+[IBMTOK4.resources]
+; general ibmtok params
+; MaxPacketSize
+HKR,NDI\params\MaxPacketSize,ParamDesc,,"Maximum Packet Size"
+HKR,NDI\params\MaxPacketSize,type,,int
+HKR,Ndi\params\MaxPacketSize,default,,4096
+HKR,NDI\params\MaxPacketSize,min,,256
+HKR,NDI\params\MaxPacketSize,max,,17952
+HKR,NDI\params\MaxPacketSize,step,,8
+HKR,NDI\params\MaxPacketSize,flag,1,20,00,00,00
+; EarlyTokenRelease
+HKR,Ndi\params\EarlyTokenRelease,ParamDesc,,"Early Release Option"
+HKR,Ndi\params\EarlyTokenRelease,default,,""
+HKR,Ndi\params\EarlyTokenRelease,type,,enum
+HKR,Ndi\params\EarlyTokenRelease\enum,"",,""
+HKR,NDI\params\EarlyTokenRelease,flag,1,30,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,6
+HKR,NDI\params\MaxTransmits,min,,6
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+; This is keyonly
+; Primary
+HKR,Ndi\params\Primary,ParamDesc,,"Primary Adapter"
+HKR,Ndi\params\Primary,default,,""
+HKR,Ndi\params\Primary,type,,enum
+HKR,Ndi\params\Primary\enum,"",,""
+HKR,NDI\params\Primary,flag,1,10,00,00,00
+; Alternate
+HKR,Ndi\params\Alternate,ParamDesc,,"Alternate Adapter"
+HKR,Ndi\params\Alternate,default,,""
+HKR,Ndi\params\Alternate,type,,enum
+HKR,Ndi\params\Alternate\enum,"",,""
+HKR,NDI\params\Alternate,flag,1,10,00,00,00
+; RecvBufs
+HKR,NDI\params\RecvBufs,ParamDesc,,"Receive Buffers"
+HKR,NDI\params\RecvBufs,type,,int
+HKR,Ndi\params\RecvBufs,default,,2
+HKR,NDI\params\RecvBufs,min,,2
+HKR,NDI\params\RecvBufs,max,,60
+HKR,NDI\params\RecvBufs,step,,1
+HKR,NDI\params\RecvBufs,flag,1,10,00,00,00
+; XmitBufs
+HKR,NDI\params\XmitBufs,ParamDesc,,"Transmit Buffers"
+HKR,NDI\params\XmitBufs,type,,int
+HKR,Ndi\params\XmitBufs,default,,1
+HKR,NDI\params\XmitBufs,min,,1
+HKR,NDI\params\XmitBufs,max,,2
+HKR,NDI\params\XmitBufs,step,,1
+HKR,NDI\params\XmitBufs,flag,1,10,00,00,00
+; ProductId
+HKR,NDI\params\ProductId,ParamDesc,,"Product ID"
+HKR,NDI\params\ProductId,type,,edit
+HKR,NDI\params\ProductId,LimitText,,36
+HKR,NDI\params\ProductId,UpperCase,,1
+HKR,Ndi\params\ProductId,default,,""
+HKR,NDI\params\ProductId,flag,1,10,00,00,00
+HKR,Ndi\params\ProductId,optional,,1
+; iobase
+HKR,Ndi\params\IOBase,ParamDesc,,"Base I/O Port"
+HKR,Ndi\params\IOBase,default,,1
+HKR,Ndi\params\IOBase,type,,enum
+HKR,Ndi\params\IOBase\enum,1,,"Primary"
+HKR,Ndi\params\IOBase\enum,2,,"Alternate"
+HKR,NDI\params\IOBase,flag,1,20,00,00,00
+; RecvBufSize
+HKR,NDI\params\RecvBufSize,ParamDesc,,"Receive Buffer Size"
+HKR,NDI\params\RecvBufSize,type,,int
+HKR,Ndi\params\RecvBufSize,default,,256
+HKR,NDI\params\

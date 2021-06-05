@@ -1,0 +1,211 @@
+DSM50-148]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM50-148.AddReg, 1024, DPMS, ICM2
+
+[DSM27-514MS]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM27-514MS.AddReg, 1024, ICM2
+
+[DSM28-144MS]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM28-144MS.AddReg, 1280, DPMS, ICM2
+
+[DSM27-615]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM27-615.AddReg, 1280, DPMS, ICM2
+
+[DSM40-151]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM40-151.AddReg, 1280, DPMS, ICM2
+
+[DSM27-117]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM27-117.AddReg, 1280, DPMS, ICM2
+
+[DSM28-172EY]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM28-172EY.AddReg
+
+[DSM50-172]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM50-172.AddReg, 1280, DPMS, ICM2
+
+[DSM28-171HR]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM28-171HR.AddReg, 1280, DPMS, ICM2
+
+[DSM27-120]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM27-120.AddReg, 1600, ICM2
+
+[DSM28-201HR]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM28-201HR.AddReg, 1600, DPMS, ICM2
+
+[DSM50-201]
+DelReg=DEL_CURRENT_REG
+AddReg=DSM50-201.AddReg, 1600, DPMS, ICM2
+
+
+; -------------- RasterOps
+[CV17]
+DelReg=DEL_CURRENT_REG
+AddReg=CV17.AddReg, 1280, DPMS
+
+[CV20T]
+DelReg=DEL_CURRENT_REG
+AddReg=CV20T.AddReg, 1280, DPMS
+
+[CV21]
+DelReg=DEL_CURRENT_REG
+AddReg=CV21.AddReg, 1600, DPMS
+
+[R2020]
+DelReg=DEL_CURRENT_REG
+AddReg=R2020.AddReg, 1280, DPMS
+
+; -------------- Samsung
+[15GLe]
+DelReg=DEL_CURRENT_REG
+AddReg=15GLe.AddReg
+
+[15GLi]
+DelReg=DEL_CURRENT_REG
+AddReg=15GLi.AddReg
+
+[17GLi]
+DelReg=DEL_CURRENT_REG
+AddReg=17GLi.AddReg
+
+[17GLsi]
+DelReg=DEL_CURRENT_REG
+AddReg=17GLsi.AddReg
+
+[CT-4581]
+DelReg=DEL_CURRENT_REG
+AddReg=CT-4581.AddReg, 800
+
+[CSA-7571]
+DelReg=DEL_CURRENT_REG
+AddReg=CSA-7571.AddReg, 1024
+
+[MF-4771]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-4771.AddReg, 800
+
+[SM3]
+DelReg=DEL_CURRENT_REG
+AddReg=SM3.AddReg, 1024
+
+[SM3NE]
+DelReg=DEL_CURRENT_REG
+AddReg=SM3NE.AddReg, 1024
+
+[SM14GL]
+DelReg=DEL_CURRENT_REG
+AddReg=SM14GL.AddReg, 1024, DPMS
+
+[SM4NE]
+DelReg=DEL_CURRENT_REG
+AddReg=SM4NE.AddReg, 1024, DPMS
+
+[SM15GL]
+DelReg=DEL_CURRENT_REG
+AddReg=SM15GL.AddReg, 1024, DPMS
+
+[SM17GL]
+DelReg=DEL_CURRENT_REG
+AddReg=SM17GL.AddReg, 1280, DPMS
+
+[SM17GLs]
+DelReg=DEL_CURRENT_REG
+AddReg=SM17GLs.AddReg, 1280, DPMS
+
+[SM20GLs]
+DelReg=DEL_CURRENT_REG
+AddReg=SM20GLs.AddReg, 1280, DPMS
+
+; -------------- Siemens
+[SN-MCM1402]
+DelReg=DEL_CURRENT_REG
+AddReg=SN-MCM1402.AddReg, 1024, DPMS
+
+[SN-MCM1503]
+DelReg=DEL_CURRENT_REG
+AddReg=SN-MCM1503.AddReg, 1024, DPMS
+
+[SN-MCM1702]
+DelReg=DEL_CURRENT_REG
+AddReg=SN-MCM1702.AddReg, 1280, DPMS
+
+[SN-MCM2102]
+DelReg=DEL_CURRENT_REG
+AddReg=SN-MCM2102.AddReg, 1600, DPMS 
+
+; -------------- Unisys
+[Unisys_31-38]
+DelReg=DEL_CURRENT_REG
+AddReg=Unisys_31-38.AddReg, 1024
+
+[Unisys_30-62]
+DelReg=DEL_CURRENT_REG
+AddReg=Unisys_30-62.AddReg, 1024, DPMS
+
+[Unisys_30-82]
+DelReg=DEL_CURRENT_REG
+AddReg=Unisys_30-82.AddReg, 1280, DPMS
+
+[Unisys_31-32]
+DelReg=DEL_CURRENT_REG
+AddReg=Unisys_31-32.AddReg, 640
+
+
+; AddReg sections
+;-------------------------------------------------
+
+; -------------- ECS
+[M1401.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-50.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M1501.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"24.0-64.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M1502.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"24.0-64.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M1503.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"24.0-64.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M1700.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"24.0-64.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M1701.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"24.0-82.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M1702.AddReg]
+HKR,"MODES\1600,1280",Mode1,,"24.0-90.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M2101.AddReg]
+HKR,"MODES\1600,1280",Mode1,,"24.0-90.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+[M2102.AddReg]
+HKR,"MODES\1600,1280",Mode1,,"24.0-90.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,3
+
+; -------------- Epson
+[Ep-CG1439I.AddReg]
+HKR,"MODES\1024,768",Mode1,,"35.5,56.0-87.0,+,+"
+
+[Ep-CG1428I.AddReg]
+HKR,"MODES\1024,768",Mode1,,"35.5,56.0-87.0,+,+"
+
+[Ep-CG1428N.AddReg]
+HKR

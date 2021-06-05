@@ -1,0 +1,103 @@
+ble-click the Network icon.
+2. Click Add, click Service, and then click Add.
+3. Follow the instructions on your screen.
+
+Printing to NetWare Directory Services Printers
+-----------------------------------------------
+You cannot install Client for NetWare Networks and Service for NetWare 
+Directory Services (NDS) during the same installation session. If you 
+do, your NDS printers will appear to be offline.
+
+If your printers appear to be offline, try carrying out the following 
+steps:
+
+1. In Control Panel, double-click the Network icon.
+2. Remove both Client for NetWare Networks and Service for NDS.
+3. Restart your computer.
+4. In Control Panel, double-click the Network icon.
+5. Add Service for NDS.
+6. Restart your computer.
+
+NOTE:
+If your local area network is using NetWare 4.1 or later, there is no 
+need to install Client for NetWare Networks separately. When you install 
+Service for NDS, it also installs the Client for NetWare Networks.
+
+
+PLUG AND PLAY NETWORK CARDS AND 16-BIT REAL-MODE DRIVERS
+========================================================
+
+When you run the 16-bit real-mode driver for your Plug and Play 
+network interface card (NIC), your Plug and Play card might appear 
+not to function.
+
+The reason the card appears to malfunction is that on most computers, 
+the Plug and Play card is inactive until Windows 95 enables it. 16-bit 
+NIC drivers load before Windows 95 can turn on Plug and Play cards. 
+Some 16-bit NIC drivers do not recognize Plug and Play cards (most 
+NE2000 Plug and Play clones fall into this category). In this case, 
+follow these steps to use your Plug and Play card with a 16-bit NIC 
+driver:
+
+1. Run the Softset utility that comes with your Plug and Play card, 
+   and then set the card to non-Plug and Play mode.
+2. Remove the network card from the list of devices in the Device 
+   Manager listing: In Control Panel, double-click the System icon, 
+   click the Device Manager tab, select the network card, and then 
+   click Remove.
+3. Reinstall the network card using the Add New Hardware icon in 
+   Control Panel.
+
+When you install a 32-bit protect mode NIC driver in the future, you 
+can rerun Softset to turn on Plug and Play mode for your card. This 
+problem does not happen if you are using a 32-bit protect-mode NIC 
+driver.
+
+
+INTEL ETHEREXPRESS 16 NICs AND PCI COMPUTERS
+============================================
+
+If you are using an Intel EtherExpress 16-network interface card (NIC) 
+in a PCI computer that has a Diamond Speed Star PCI video card, your 
+system might hang or not initialize properly. These problems, according 
+to Intel customer support, are not related to Windows 95 and happen
+on a variety of operating systems. 
+
+If you have one of the following video cards, contact your vendor to 
+obtain a new video BIOS update:
+
+   * Diamond Speed Star PCI video card with BIOS version 1.01
+   * Diamond Viper PCI VGA Video Adapter
+   * Diamond Stealth video card, BIOS v1.03
+
+Other PCI video cards might also cause problems with this Intel NIC.
+In general, if you experience problems with your EtherExpress 16 in 
+a PCI computer other than those described above, please replace the 
+card before reporting the problem to Microsoft.
+
+
+WINDOWS FOR WORKGROUP SHARES
+============================
+
+When you upgrade to Windows 95 from Windows for Workgroups, your 
+shares are not maintained. The folders/directories you shared in 
+Windows for Workgroups need to be reshared. 
+
+
+RUNNING WINDOWS 95 FROM A SERVER
+================================
+
+Windows 95 can be set up to run from a network server. The Windows 95 
+Resource Kit contains complete instructions for installing Windows 
+in this environment (see Chapter 4, "Server Based Setup for Windows 95").
+
+The following configurations are supported:
+
+- Booting from hard disk using:
+  - Client for Microsoft Networks
+  - Client for NetWare Networks
+  - Novell Workstation Shell 3.x (NETX)
+  - Novell Workstation Shell 4.x (VLM)
+  - Banyan VINES DOS/Windows client
+
+- Boot

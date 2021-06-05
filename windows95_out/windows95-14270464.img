@@ -1,0 +1,120 @@
+di.reg,HPLANP.ndi.reg,hp.gen.params
+LogConfig=*pnp8158.LogConfig
+
+[*pnp8158.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8158"
+
+[*pnp8158.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=20@100-3BF%FFE0(3FF::)
+IRQConfig=3,4,5,7,9,10,11,12,15
+MemConfig=4000@C8000-EFFFF%FFFFC000
+
+;****************************************************************************
+; *pnp8159 HP PC LAN Adapter/16 TL Plus (HP27252)
+;****************************************************************************
+[*pnp8159.ndi]
+AddReg=*pnp8159.ndi.reg,HPLANP.ndi.reg,hp.gen.params
+LogConfig=*pnp8159.LogConfig
+
+[*pnp8159.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8159"
+
+[*pnp8159.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=20@100-3BF%FFE0(3FF::)
+IRQConfig=3,4,5,7,9,10,11,12,15
+MemConfig=4000@C8000-EFFFF%FFFFC000
+
+;****************************************************************************
+; HPLANB base section
+;****************************************************************************
+[HPLANB.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,HPISA.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"HPISA"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+HKR,NDIS\NDIS2,DriverName,,"HPLANB$"
+HKR,NDIS\NDIS2,FileName,,"HPLANB.dos"
+HKR,NDIS\ODI,DriverName,,"hpisaodi"
+HKR,NDIS\ODI,FileName,,"hpisaodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"HPLAN.ndis3"
+HKR,Ndi\Install,ndis2,,"HPLANB.ndis2"
+;HKR,Ndi\Install,odi,,"hpisaodi.odi"
+
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,30,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+; MaxIcNest
+HKR,NDI\params\MaxIcNest,ParamDesc,,"Max Nest/Indicate Comp"
+HKR,NDI\params\MaxIcNest,type,,int
+HKR,Ndi\params\MaxIcNest,default,,2
+HKR,NDI\params\MaxIcNest,min,,1
+HKR,NDI\params\MaxIcNest,max,,4
+HKR,NDI\params\MaxIcNest,step,,1
+HKR,NDI\params\MaxIcNest,flag,1,30,00,00,00
+
+; Install NDIS2
+[HPLANB.ndis2]
+CopyFiles=HPLANB.ndis2.CopyFiles
+[HPLANB.ndis2.CopyFiles]
+HPLANB.dos
+
+
+;****************************************************************************
+; HPLANP base section
+;****************************************************************************
+[HPLANP.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,HPISA.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"HPISA"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+HKR,NDIS\NDIS2,DriverName,,"HPLANP$"
+HKR,NDIS\NDIS2,FileName,,"HPLANP.dos"
+HKR,NDIS\ODI,DriverName,,"hpisaodi"
+HKR,NDIS\ODI,FileName,,"hpisaodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"HPLAN.ndis3"
+HKR,Ndi\Install,ndis2,,"HPLANP.ndis2"
+;HKR,Ndi\Install,odi,,"hpisaodi.odi"
+
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,,MemoryMappedBaseAddress,1,01,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,30,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+HKR,NDI\params\MemoryMappedBaseAddress,1,01,00,00,00
+HKR,NDI\params\MemoryMappedBaseAddress,ParamDesc,,"Mem Mapped Base Address"
+HKR,NDI\params\MemoryMappedBaseAddress,paragraph,,1
+HKR,NDI\params\MemoryMappedBaseAddress,flag,1,20,00,00,00
+HKR,Ndi\params\MemoryMapped

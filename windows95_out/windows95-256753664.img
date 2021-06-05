@@ -1,0 +1,146 @@
+ength% = CbGetListItem(szListSymbol$, nItem%, szListItem$, cbSymValMax)
+    GetListItem = szListItem$
+    IF Length% >= cbSymValMax THEN
+        res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+        ERROR STFERR
+    END IF
+    IF szListSymbol$ = "" THEN
+        ERROR STFERR
+    END IF
+    if nItem% <= 0 or nItem% > GetListLength(szListSymbol$) then
+        ERROR STFERR
+    end if
+    szListItem$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+SUB AddListItem(szSymbol$, szItem$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "AddListItem", szSymbol$+", "+szItem$
+    end if
+'$endif ''DEBUG
+    IF FAddListItem(szSymbol$, szItem$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "AddListItem", szSymbol$+", "+szItem$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB ReplaceListItem(szSymbol$, n%, szItem$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        nArg% = 1
+    elseif (n% <= 0) OR (n% > GetListLength(szSymbol$)) then
+        nArg% = 2
+    else
+        nArg% = 0
+    end if
+    if nArg% > 0 then
+        BadArgErr nArg%, "ReplaceListItem", szSymbol$+", "+STR$(n%)+", "+szItem$
+    end if
+'$endif ''DEBUG
+
+    IF FReplaceListItem(szSymbol$, n%, szItem$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "ReplaceListItem", szSymbol$+", "+STR$(n%)+", "+szItem$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'**************************************************************************
+SUB MakeListFromSectionKeys(szSymbol$, szSect$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "MakeListFromSectionKeys", szSymbol$+", "+szSect$
+    end if
+'$endif ''DEBUG
+
+    IF FSetSymbolToListOfInfKeys(szSymbol$, szSect$, 1) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "MakeListFromSectionKeys", szSymbol$+", "+szSect$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB SetSymbolValue(szSymbol$, szValue$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "SetSymbolValue", szSymbol$+", "+szValue$
+    end if
+'$endif ''DEBUG
+    IF FSetSymbolValue(szSymbol$, szValue$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "SetSymbolValue", szSymbol$+", "+szValue$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB RemoveSymbol(szSym$) STATIC
+'$ifdef DEBUG
+    if szSym$ = "" then
+        BadArgErr 1, "RemoveSymbol", szSym$
+    end if
+'$endif ''DEBUG
+    IF FRemoveSymbol(szSym$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RemoveSymbol", szSym$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+FUNCTION ShowWaitCursor STATIC AS INTEGER
+    ShowWaitCursor = HShowWaitCursor
+END FUNCTION
+
+
+'*************************************************************************
+SUB RestoreCursor (hPrev%) STATIC
+    i% = FRestoreCursor(hPrev%)
+    IF i% = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RestoreCursor", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+FUNCTION SetBeepingMode (mode%) STATIC AS INTEGER
+    SetBeepingMode = FSetBeepingMode(mode%)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION SetSilentMode (mode%) STATIC AS INTEGER
+    SetSilentMode = FSetSilent(mode%)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetSectionKeyDate (szSect$, szKey$) STATIC AS STRING
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 

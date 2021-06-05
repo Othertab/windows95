@@ -1,0 +1,100 @@
+C               ; IBM 7852 013 V.34 Data FAX
+%Modem30%  = Modem30, UNIMODEM43221094               ; IBM 7852 010 V.34 Data FAX
+%Modem29%  = Modem29, UNIMODEMD9DEC170               ; IBM ISA 28.8 V.34 modem with wakeup on ring
+%Modem28%  = Modem28, PCMCIA\14.4/14.4_DATA/FAX_MODEM-001-113D ; IBM 14.4 PCMCIA 
+%Modem28%  = Modem28, UNIMODEM49F994F9               ; IBM 14.4 PCMCIA 
+%Modem19%  = Modem19, UNIMODEM2AECBE97               ; IBM (butterfly) Thinkpad 701
+%Modem19%  = Modem19, BIOS\*IBM0033                  ; IBM (butterfly) Thinkpad 701
+%Modem7b%  = Modem7,  GVC_Modem7b, UNIMODEM8FC45DA6  ; IBM PS-1 Internal
+%Modem13%  = Modem13, GVC_Modem13, UNIMODEM9F2BBC58  ; IBM 24-96 Internal
+%Modem14%  = Modem14, GVC_Modem14, UNIMODEMD209269F  ; IBM SM-24HN-1
+%Modem15%  = Modem14, UNIMODEMD209269F               ; IBM+Viva modem combo
+%Modem16%  = Modem13, GVC_Modem16, UNIMODEM9F2BBC58  ; IBM Aptiva F-942H-R1, 2400 bps internal
+%Modem17%  = Modem17, UNIMODEMF7974461               ; IBM Aptiva 14.4 Data FAX Modem internal
+%Modem22%  = Modem22, GVC_Modem22, UNIMODEMCFA485CD  ; IBM Aptiva 510 - 14.4 Data FAX Modem internal
+%Modem23%  = Modem23, UNIMODEMB265D456               ; IBM Aptiva 730 - Data FAX modem
+%Modem24%  = Modem13, GVC_Modem24, UNIMODEM9F2BBC58  ; IBM Aptiva 310 - Data FAX modem
+
+[Turbomodem]
+%Modem9%   = Modem9, GVC_Modem9, UNIMODEMD6E032DF    ; Turbomodem 14.4, internal
+%Modem10%  = Modem9, UNIMODEMD6E032DF                ; Combo, Turbomodem+GVC, internal
+%Modem11%  = Modem7, GVC_Modem11, UNIMODEM7C37DAC5   ; Turbomodem Plus External
+%Modem12%  = Modem7, UNIMODEM7C37DAC5                ; Combo, Turbomodem+GVC, external
+
+[Maxtech]
+%Maxtech1% = Modem1,  GVC_Maxtech1, UNIMODEMC1E06F72
+%Maxtech2% = Modem1,  UNIMODEMC1E06F72
+%Maxtech3% = Modem33, GVC_Maxtech3, PCMCIA\CIRRUS_LOGIC-FAX_MODEM-F874
+%Maxtech3% = Modem33, GVC_Maxtech3, UNIMODEM858E1599
+%Maxtech4% = Modem34, GVC_Maxtech4, UNIMODEMEB2448CD
+%Maxtech5% = Modem34, UNIMODEMEB2448CD
+%Maxtech6% = Modem35, GVC_Maxtech6, UNIMODEM535147EF
+%Maxtech7% = Modem36, GVC_Maxtech7, UNIMODEM858E1599
+
+; Installation sections
+
+[Modem37]  
+AddReg=All, MfgAddReg, Modem37.AddReg, EXTERNAL 
+
+[Modem36]    ; Maxtech XVM144i
+AddReg=All, MfgAddReg, Modem36.AddReg, INTERNAL 
+
+[Modem35]    ; Maxtech 144i (RPI), XM144i
+AddReg=All, MfgAddReg, Modem35.AddReg, INTERNAL
+
+[Modem34]    ; Maxtech 28.8i
+AddReg=All, MfgAddReg, Modem34.AddReg, INTERNAL
+
+[Modem33]    ; Maxtech 14.4 pcmcia
+AddReg=All, MfgAddReg, Modem33.AddReg, PCMCIA
+
+[Modem32]    ; GVC GM9648E
+AddReg=All, MfgAddReg, Modem32.AddReg, EXTERNAL     
+
+[Modem31]    ; IBM 7852 013
+AddReg=All, MfgAddReg, Modem31.AddReg, EXTERNAL     
+
+[Modem30]    ; IBM 7852 010
+AddReg=All, MfgAddReg, Modem30.AddReg, EXTERNAL     
+
+[Modem29]    ; IBM ISA 28.8 V.34 modem with wakeup on ring
+AddReg=All, MfgAddReg, Modem29.AddReg, INTERNAL
+
+[Modem28]    ; IBM 14.4 Data FAX PCMCIA with DAA
+AddReg=All, MfgAddReg, Modem28.AddReg, PCMCIA
+
+[Modem23]    ; IBM Aptiva 730 Data FAX Modem
+AddReg=All, MfgAddReg, Modem23.AddReg, INTERNAL
+
+[Modem22]    ; IBM Aptiva 510 Data FAX Modem
+AddReg=All, MfgAddReg, Modem22.AddReg, INTERNAL
+
+[Modem21]    ; 24DBF internal modem
+AddReg=All, MfgAddReg, Modem21.AddReg, INTERNAL
+
+[Modem20]    ; GVC F-1114HV/R2 Internal
+AddReg=All, MfgAddReg, Modem20.AddReg, INTERNAL
+
+[Modem19]    ; IBM (butterfly) Thinkpad 701
+AddReg=All, MfgAddReg, Modem19.AddReg, INTERNAL
+
+[Modem18]    ; Packard Bell 144AM(SP) Modem-Soundcard
+AddReg=All, MfgAddReg, Modem18.AddReg, INTERNAL
+
+[Modem17]    ; IBM Aptiva 14.4 Data FAX Modem internal
+AddReg=All, MfgAddReg, Modem17.AddReg, INTERNAL
+
+[Modem14]    ; IBM SM-24HN-1
+AddReg=All, MfgAddReg, Modem14.AddReg, INTERNAL
+
+[Modem13]    ; IBM 24-96 Internal
+AddReg=All, MfgAddReg, Modem13.AddReg, INTERNAL
+
+[Modem9]    ; Turbomodem and GVC 14.4 internal
+AddReg=All, MfgAddReg, Modem9.AddReg, INTERNAL
+
+[Modem8]    ; PB-144HV/R6 
+AddReg=All, MfgAddReg, Modem8.AddReg, INTERNAL
+
+[Modem7]    ; GVC Fax 14400 V.42bis-MNP5
+AddReg=All, Mfg

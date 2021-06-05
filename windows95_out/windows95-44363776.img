@@ -1,0 +1,116 @@
+rt\%ComponentID\12\5]
+"Name"="Connector Type"
+"Description"="The connector used to interface with the I/O device on this serial port."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\ConnectorType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="DB-9 pin male"
+"4"="DB-9 pin female"
+"5"="DB-25 pin male"
+"6"="DB-25 pin female"
+"7"="RJ-11"
+"8"="RJ-45"
+"9"="Proprietary"
+"10"="Circular DIN-8 male"
+"11"="Circular DIN-8 female"
+"160"="Mini-Centronics Type-14"
+"161"="Mini-Centronics Type-26"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\6]
+"Name"="Maximum Speed"
+"Description"="Maximum transfer speed of the device on this serial port in bits per second."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+;
+; Can use current baud rate if none other available...
+; ":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\SerialPort\\BaudRate"
+
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\MaximumSpeed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\7]
+"Name"="Serial Port Capabilities"
+"Description"="The capabilities of this Serial port."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\SerialPortCapabilities"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\7\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="XT/AT compatible"
+"4"="16450 compatible"
+"5"="16550 compatible"
+"6"="16550A compatible"
+"160"="8251 compatible"
+"161"="8251FIFO compatible"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\8]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+
+;==========================
+;  Component ID Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1]
+"Name"="ComponentID Group"
+"Class"="DMTF|ComponentID|001"
+"Description"="This group defines attributes common to all components. This group is required."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1\1]
+"Name"="Manufacturer"
+"Description"="Manufacturer of this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1\2]
+"Name"="Product"
+"Description"="Product name for this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Product"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1\3]
+"Name"="Version"
+"Description"="Version of this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Version"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1\4]
+"Name"="Serial Number"
+"Description"="Serial number for this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\SerialNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1\5]
+"Name"="Installation"
+"Description"="The time and date when this component was installed."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Installation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\1\6]
+"Name"="Verify"

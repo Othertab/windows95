@@ -1,0 +1,92 @@
+riefcase",,"Briefcase"
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Briefcase,INF,,"net.inf"
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Briefcase,Section,,"FILESYNC"
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Briefcase,Installed,,"0"
+
+
+[SCRSAVE.AddReg]
+;Makes registry entries for password protection w/ screensavers
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\SCRSAVE,Description,,%ScrSaver_Desc%
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\SCRSAVE,ProviderPath,,"password.cpl"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\SCRSAVE,ChangePassword,,"PPChangePassword"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\SCRSAVE,GetPasswordStatus,,"PPGetPasswordStatus"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\MSNP32,Description,,%WNT_Desc%
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\MSNP32,ProviderPath,,"msnp32.dll"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\MSNP32,ChangePassword,,"PPChangePassword"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\MSNP32,ChangeOrder,1,80,00,00,00
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\MSNP32,GetPasswordStatus,,"PPGetPasswordStatus"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\MSNP32,NetworkProvider,1,01,00,00,00
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,Description,,%NW_Desc%
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,ProviderPath,,"nwnp32.dll"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,ChangePasswordHwnd,,"PPChangePasswordHwnd"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,GetPasswordStatus,,"PPGetPasswordStatus"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,NetworkProvider,1,01,00,00,00
+
+
+[NET_BASE.DelReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\WSock"
+HKLM,"SYSTEM\CurrentControlSet\Services\VXD\MSTCP",staticvxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VXD\MSTCP",start
+;clean up because of msodinsup split
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NDIS",StaticVxD
+
+; non primary install section
+[NET_NOTPRIMARY.add]
+AddReg=NET_NDIS386.add.reg
+CopyFiles=NET_NDIS386.add.copy,SECDLL.add.copy
+[NET_NDIS386.add.reg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\NDIS,StaticVxD,,"ndis.vxd,ndis2sup.vxd"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\NDIS,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\NDIS,NetClean,1,1
+HKLM,Software\Microsoft\RPC\SecurityService,10,,"SECUR32.DLL"
+HKLM,Software\Microsoft\RPC\SecurityService,DefaultProvider,,"SECUR32.DLL"
+HKLM,Software\Microsoft\RPC\SecurityService,DefaultAuthLevel,1,00,00,00,00
+[NET_NDIS386.add.copy]
+ndis.vxd
+ndis2sup.vxd
+[SECDLL.add.copy]
+secur32.dll
+svrapi.dll,,,32         ; suppress version conflicts
+[NET_NOTPRIMARY.rmv]
+DelReg=NET_NDIS386.rmv.reg
+[NET_NDIS386.rmv.reg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\NDIS,StaticVxD
+
+; install for any network
+[NET_ANYNET.Add]
+AddReg=NET_VNETBIOS.add.reg,NET_ANYNET.add.reg
+CopyFiles=NET_VNETBIOS.add.copy
+UpdateInis=NET_ANYNET.add.inis
+[NET_VNETBIOS.add.reg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETBIOS,StaticVxD,,"vnetbios.vxd"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETBIOS,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETBIOS,NetClean,1,1
+[NET_ANYNET.add.reg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Network,Installed,,"1"
+[NET_ANYNET.add.inis]
+%31%\msdos.sys,Options,,"Network=1"
+[NET_VNETBIOS.add.copy]
+vnetbios.vxd
+
+[NET_ANYNET.Rmv]
+DelReg=NET_VNETBIOS.Rmv.reg,NET_ANYNET.rmv.reg
+UpdateInis=NET_ANYNET.rmv.inis
+[NET_VNETBIOS.Rmv.reg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETBIOS,StaticVxD
+[NET_ANYNET.rmv.reg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Network,Installed
+[NET_ANYNET.rmv.inis]
+%31%\msdos.sys,Options,,"Network=0"
+
+[NET_BASE.Inis]
+system.ini,386Enh,"Network="
+system.ini,386Enh,"Secondnet="
+system.ini,386Enh,"Netmisc="
+system.ini,386Enh,"Transport="
+system.ini,386Enh,"Netcard="
+system.ini,386Enh,"Netcard3="
+
+[MSDOSSYS_BOOTGUI_0]
+UpdateInis = MSDOSSYS.0
+
+[MSDOSSYS_BOOTGUI_

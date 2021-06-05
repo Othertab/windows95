@@ -1,0 +1,97 @@
+d gold, and for the weapons you will need iron
+and  coal.   These  raw  materials  are  found in mines.  The mines must be
+provided with food and the raw materials must be melted in a foundry
+
+The  food supply is insured by the fishermen and the farmers, but they need
+tools,  as do all other workers.  These tools are made by smiths.  To build
+huts, houses, castles you will need construction materials and workers...
+ 
+But  don't  worry.   you  won't have to remember all this for the moment;
+everything  will  be  explained along the way.  We hope that you will enjoy
+this game.
+
+The Blue Byte team
+
+Configuration
+
+this paragraph concerns the Amiga version only.
+
+The  program  will  try  to  use  all  the capabilities of your computer We
+recommend  that  you  read the following paragraphs carefully to insure its
+proper  functioning.   If you are not familiar with computers and the words
+"Chipram" and "Fastram" don't mean anything to you do not read chapters 1.3
+and 1.5.
+
+a) General remarks about the configuration
+
+Do  not  forget  that  any program already loaded when the game is launched
+will  take  up  memory  space;  memory  space  that  might be needed by the
+Settlers  game in order to run properly.  We recommend, therefore, that you
+do  not  load  other programs into memory if you are going to use the game.
+If  several  programs  are automatically loaded when the computer boots up,
+use another startup sequence for The Settlers.
+
+b) Configuration for 512 KB of Chipram or 1 MB of total memory only.
+
+If  you have 1 MB of Chipram and at least 1.5 MB of RAM total, you can skip
+this  paragraph.   The  program  uses  Chipram  memory for the screens, the
+animation,  the  sound  effects  and the music.  If you have only 512 KB of
+Chipram,  you  will have to sacrifice something; you will hear only part of
+the  sound erects, and no music at all.  The sound effects are loaded based
+on the available memory.  You can increase the available memory by:
+
+disconnecting unnecessary disk drives
+
+not activating the hard disk (if it contains Chipram)
+
+avoiding to launch other programs
+
+The  rest  of the available memory is used by the program for the data, the
+scenery, and the graphics.  In order to use the scenarios with only 1 MB of
+memory, we recommend that you reread the points mentioned above.
+
+Hard disk installation
+
+If you want to use the game from floppy disks, you can skip this paragraph.
+
+PC:
+
+WARNING!!!   Before  using  the original floppy disks,we recommend that you
+make a backup copy of them.
+
+1) Turn your computer on as usual
+
+2) When  the system is operational, insert the first game disk into one of
+   the drives
+
+3) Enter the letter of this drive followed by a colon (;) and press the
+   Return  key.   For the internal drive, for example, enter the letter a:.
+   If you have a second drive, this is usually designated by the letter b:.
+
+4) Enter the installation program's name (INSTALL), then press the
+   RETURN key.
+
+5) When  the  program has been launched, you will have to specify the path
+   for  the  installation.   If you want to change the path proposed by the
+   program  by  default,  enter  the  new  path and confirm by pressing the
+   RETURN  key.   The  installation of the program will begin.  To quit the
+   installation program before the end of the installation procedure, press
+   the ESCAPE key.
+
+6) When  the  installation program is finished, enter (SETTLERS) to launch
+   the game.
+
+AMIGA:
+
+WARNING!!!   Before  using the original floppy disks, we recommend that you
+make a backup copy of them.
+
+1)  Start  up  your  AMIGA  as usual from the hard disk, When the Workbench
+    screen  appears,  insert the first disk (with the installation program)
+    into one of the drives.
+
+2)  Open  the  disk  by  double  clicking  on its icon.  A window will open
+    containing  other icons.  One of these icons, "Install", represents the
+    installation program for Blue Byte games.
+
+3)  Launch the installation program by double clicking o

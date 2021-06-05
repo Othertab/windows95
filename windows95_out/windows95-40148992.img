@@ -1,0 +1,87 @@
+t of extended memory for use as EMS/VCPI memory when
+    EMM386 is loaded by the DEVICE=EMM386.EXE command in your CONFIG.SYS
+    file. EMM386 may be able to provide additional EMS/VCPI memory (up to
+    the amount specified by the MEMORY parameter) if sufficient XMS memory
+    is available when a program requests EMS/VCPI memory. Values are in the
+    range 0 through the value specified by the MEMORY parameter. The default
+    value is 256. If you specify the NOEMS switch, the default value is 0.
+    If the value of MIN is greater than the value of MEMORY, EMM386 uses the
+    value specified by MIN.
+
+W=ON|W=OFF
+    Enables or disables support for the Weitek co-processor. The default
+    setting is W=OFF.
+
+Mx
+    Specifies the address of the page frame. Valid values for x are in the
+    range 1 through 14. The following list shows each value and its
+    associated base address in hexadecimal format:
+
+            1 => C000h     8 => DC00h
+            2 => C400h     9 => E000h
+            3 => C800h    10 => 8000h
+            4 => CC00h    11 => 8400h
+            5 => D000h    12 => 8800h
+            6 => D400h    13 => 8C00h
+            7 => D800h    14 => 9000h
+
+    Values in the range 10 through 14 should be used only on computers that
+    have 512K of memory.
+
+FRAME=address
+    Specifies the page-frame segment base directly. To specify a specific
+    segment-base address for the page frame, use the FRAME switch, and
+    specify the address you want. Valid values for address are in the ranges
+    8000h through 9000h and C000h through E000h, in increments of 400h. To
+    provide expanded memory and disable the page frame, you can specify
+    FRAME=NONE; however, this may cause some programs that require expanded
+    memory to work improperly.
+
+/Pmmmm
+    Specifies the address of the page frame. Valid values for mmmm are in
+    the ranges 8000h through 9000h and C000h through E000h, in increments of
+    400h.
+
+Pn=address
+    Specifies the segment address of a specific page, where n is the number
+    of the page you are specifying and address is the segment address you
+    want. Valid values for n are in the range 0 through 255. Valid values
+    for address are in the ranges 8000h through 9C00h and C000h through
+    EC00h, in increments of 400h. The addresses for pages 0 through 3 must
+    be contiguous in order to maintain compatibility with version 3.2 of the
+    Lotus/Intel/Microsoft Expanded Memory Specification (LIM EMS). If you
+    use the Mx switch, the FRAME switch, or the /Pmmmm switch, you cannot
+    specify the addresses for pages 0 through 3 for the /Pmmmm switch.
+
+X=mmmm-nnnn
+    Prevents EMM386 from using a particular range of segment addresses for
+    an EMS page or for UMBs. Valid values for mmmm and nnnn are in the range
+    A000h through FFFFh and are rounded down to the nearest 4-kilobyte
+    boundary. The X switch takes precedence over the I switch if the two
+    ranges overlap.
+
+I=mmmm-nnnn
+    Specifies a range of segment addresses to be used (included) for an EMS
+    page or for UMBs. Valid values for mmmm and nnnn are in the range A000h
+    through FFFFh and are rounded down to the nearest 4-kilobyte boundary.
+    The X switch takes precedence over the I switch if the two ranges
+    overlap.
+
+B=address
+    Specifies the lowest segment address available for EMS "banking"
+    (swapping of 16KB pages). Valid values are in the range 1000h
+    through 4000h. The default value is 4000h.
+
+l=minXMS
+    Ensures that the specified amount (in kilobytes) of extended memory will
+    still be available after EMM386 is loaded. The default value is 0.
+
+A=altregs
+    Specifies how many fast alternate register sets (used for multitasking)
+    you want to allocate to EMM386. Valid values are in the range 0 through
+    254. The default value is 7. Every alternate register set adds about 200
+    bytes to the size in memory of EMM386.
+
+H=handles
+    Specifies how many handles EMM386 can use. Valid values are in the range
+    2 through 2

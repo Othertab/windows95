@@ -1,0 +1,88 @@
+ & MTD 9624 P"
+Modem2="MTD 9624 PC"
+Modem3="MTD Dolphin 14400 PC"
+Modem4="MTD Dolphin 14400 Desktop"
+Modem5="MTD Dolphin 19200 PC"
+Modem6="MTD Dolphin 19200 Desktop"
+Modem7="MTD Lightspeed 14.400"
+Modem8="MTD MT2400 D"
+Modem9="MTD MT2400 Pocket"
+Modem10="MTD MT2400 PC"
+Modem11="MTD MT3242"
+
+; Plug and Play device names
+
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*VCOMM
+HKR,,PortSubClass,1,02
+HKR,,ConfigDialog,,modemui.dll
+HKR,, InactivityScale, 1, 01,00,00,00
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages"
+HKR, Init,      1,, "AT<cr>"
+HKR, Responses, "<cr><lf>OK<cr><lf>", 1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>ERROR<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+
+
+[ExtAddReg]
+HKR, Settings, FlowControl_Off,, "\Q0"
+HKR, Settings, FlowControl_Hard,, "\Q2"
+HKR, Settings, FlowControl_Soft,, "\Q1"
+HKR, Settings, ErrorControl_On,, "\N3"
+HKR, Settings, ErrorControl_Off,, "\N0"
+HKR, Settings, ErrorControl_Forced,, "\N4"
+HKR, Settings, Compression_On,, ""H3"
+HKR, Settings, Compression_Off,, ""H0"
+HKR, Settings, Modulation_CCITT,, "B0"
+HKR, Settings, Modulation_Bell,, "B1"
+HKR, Settings, SpeedNegotiation_Off,, "&A1"
+HKR, Settings, SpeedNegotiation_On,, "&A0"
+HKR, Settings, Blind_Off,, "X1"
+
+[Extra]
+HKR, Responses, "2<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "12<cr>", 1, 02, 00, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "13<cr>", 1, 02, 00, 80,25,00,00, 00,00,00,00
+HKR, Responses, "14<cr>", 1, 02, 00, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "15<cr>", 1, 02, 00, 40,38,00,00, 00,00,00,00
+HKR, Responses, "16<cr>", 1, 02, 00, a0,41,00,00, 00,00,00,00
+HKR, Responses, "17<cr>", 1, 02, 00, 00,4b,00,00, 00,00,00,00
+HKR, Responses, "18<cr>", 1, 02, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "20<cr>", 1, 02, 02, 2c,01,00,00, 00,00,00,00
+HKR, Responses, "21<cr>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "22<cr>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "23<cr>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "24<cr>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "25<cr>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "26<cr>", 1, 02, 02, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "27<cr>", 1, 02, 02, 40,38,00,00, 00,00,00,00
+HKR, Responses, "28<cr>", 1, 02, 02, a0,41,00,00, 00,00,00,00
+HKR, Responses, "29<cr>", 1, 02, 02, 00,4b,00,00, 00,00,00,00
+HKR, Responses, "35<cr>", 1, 02, 02, 2c,01,00,00, 00,00,00,00
+HKR, Responses, "36<cr>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "37<cr>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "38<cr>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "39<cr>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "40<cr>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "41<cr>", 1, 02, 02, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "42<cr>", 1, 02, 02, 40,38,00,00, 00,00,00,00
+HKR, Responses, "43<cr>", 1, 02, 02, a0,41,00,00, 00,00,00,00
+HKR, Responses, "44<cr>", 1, 02, 02, 00,4b,00,00, 00,00,00,00
+HKR, Responses, "50<cr>", 1, 02, 03, 2c,01,00,00, 00,00,00,00
+HKR, Responses, "51<cr>", 1, 02, 03, b0,04,00,00, 00,00,00,00
+HKR, Responses, "52<cr>", 1, 02, 03, 60,09,00,00, 00,00,00,00
+HKR, Responses, "53<cr>", 1, 02, 03, c0,12,00,00, 00,00,00,00
+HKR, Responses, "54<cr>", 1, 02, 03, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "55<cr>", 1, 02, 03, 80,25,00,00, 00,00,00,00
+HKR, Responses, "56<cr>", 1, 02, 03, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "57<cr>", 1, 02, 03, 40,38,00,00, 00,00,00,00
+HKR, Responses, "58<cr>", 1, 02, 03, a0,41,00,00, 00,00,00,00
+HKR, Responses, "59<cr>", 1, 02, 03, 00,4b,00,00, 00,00,00,00
+HKR, Responses, "65<cr>", 1, 02, 02, 2c,01,00,00, 00,00,00,00
+HKR, Responses, "66<cr>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "67<cr>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "68<cr>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "69<cr>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "70<cr>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "71<cr>", 1, 02, 02, e0

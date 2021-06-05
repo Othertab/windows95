@@ -1,0 +1,99 @@
+\shellex\ContextMenuHandlers\NetwareUNCMenu,,,"{B91C21C0-0050-101B-8A87-00AA000C4F5D}"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D},,,"Netware UNC Folder Menu"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}\InProcServer32,,,"mpr.dll"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+; property sheets
+HKCR,Netware\shellex\PropertySheetHandlers\NetwarePage,,,"{AB2662E1-083B-101B-B4C7-00AA000C4F5D}"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D},,,"Netware Pages"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}\InProcServer32,,,"NWNP32.dll"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+
+[SCRSAVE.AddReg]
+;Makes registry entries for password protection w/ screensavers
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NDS,ChangePassword,,"PPDSChangePassword"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NDS,Description,,%NW_Desc%
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NDS,ProviderPath,,"nwnp32.dll"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NDS,GetPasswordStatus,,"PPDSGetPasswordStatus"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NDS,NetworkProvider,1,01,00,00,00
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,Description,,%BND_Desc%
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,ProviderPath,,"nwnp32.dll"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,ChangePassword,,"PPChangePassword"
+;HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,ChangePasswordHwnd,,"PPChangePasswordHwnd"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,GetPasswordStatus,,"PPGetPasswordStatus"
+HKLM,SYSTEM\CurrentControlSet\Control\PwdProvider\NWNP32,NetworkProvider,1,01,00,00,00
+
+[NWNP32.Inis]
+system.ini,NWNP32,"NPProvider="
+system.ini,NWNP32,"NPName="
+system.ini,NWNP32,"NPDescription="
+
+[NWNP32.sbs]
+UpdateInis=NWNP32.sbs.inis
+
+[NWNP32.sbs.inis]
+%31%\msdos.sys,Options,,"LoadTop=0"
+
+[NWREDIR4.CleanInis]
+system.ini,boot,"network.drv="
+system.ini,boot.description,"network.drv="
+system.ini,386Enh,"network="
+system.ini,386Enh,"UniqueDosPSP="
+system.ini,386Enh,"PSPIncrement="
+system.ini,386Enh,"TimerCriticalSection="
+system.ini,386Enh,"ReflectDOSInt2A="
+
+[NWREDIR4.Files]
+nwredir.vxd,nwredir.nw4,nwredir.tmp
+netware.drv,netware.nw4,netware.nw4
+
+[NW4.inf]
+maple.adm
+
+[NWNP32.Files]
+nwlsproc.exe,nwlsproc.nw4,nwlsproc.tmp
+NWNP32.dll,nwnp32.nw4,nwnp32.nw4
+nwapi32.dll,nwapi32.nw4,nwapi32.tmp
+ndspp.dll,ndspp.nw4,ndspp.tmp
+_nwnds.bat
+
+[NWREDIR4.Remove]
+DelReg=NWREDIR4.Rmv.DelReg, NWNP32.CleanReg,SAPNSP.Rmv.DelReg
+UpdateInis=NWNP32.Inis, NWREDIR4.CleanInis
+UpdateIniFields=NWNP32.Rmv.Fields
+DelFiles=NWREDIR4.RemoveFiles
+
+[NWREDIR4.RemoveFiles]
+nwlsproc.exe
+
+[NWREDIR4.Rmv.DelReg]
+HKLM,"System\CurrentControlSet\Services\VxD\NWREDIR",StaticVxD
+HKLM,"System\CurrentControlSet\Control\Print\Providers\Microsoft Print Provider for NetWare"
+HKCR,Netware\shellex
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",NWNP32
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32"
+HKCR,Folder\shellex\ContextMenuHandlers\NetwareUNCMenu
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shellex\ContextMenuHandlers\NetWareMenus
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}
+; remove print provider info
+HKCR,Netware\shellex\PropertySheetHandlers\NWAdminMenus
+HKCR,CLSID\{E6EF27C0-7984-11CE-BA00-00AA001F3DC4}
+HKCR,Printers\shellex\PropertySheetHandlers\CaptureConfig
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}
+
+[NWNP32.Rmv.Fields]
+system.ini,Boot,Networks32,NWNP32
+
+
+;****************************************************************************
+; Destinations
+;****************************************************************************
+
+[DestinationDirs]
+ClassInstall.sys         = 11
+NWREDIR4.Files           = 11    ;LDID_SYS
+NWREDIR4.Ren.Files       = 11    ;LDID_SYS

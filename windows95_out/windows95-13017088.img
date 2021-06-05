@@ -1,0 +1,233 @@
+numlock
+power
+set
+submenu
+switches
+
+DBLSPACE.SYS
+DBLSPACE.BIN
+DRVSPACE.SYS
+DRIVER.SYS
+
+; Installed by MM setup:
+asp.sys
+csp.sys
+
+; From Beta Feedback:
+MTMCDAE.SYS
+STACKER.COM
+SSWAP.COM
+
+; From ios.ini:
+aspi4dos.sys    ; adaptec
+aspi7dos.sys
+aspiedos.sys
+aspi2dos.sys
+int13fcam.sys
+;emm386.exe
+aspidisk.sys
+aspifcam.sys
+fddevice.sys
+dcam1800.exe
+dcam950.exe
+dcam7ex.exe
+fdbios.sys
+;smartdrv.exe
+;scplus.exe
+slcd.sys
+pcds.sys
+dptddl.sys
+btdosm.sys
+btmdisk.sys
+aspimgr.sys
+uspi14.sys
+uspi24.sys
+ultrarem.sys
+rcd.sys
+dosoad.sys
+aspipc2.sys
+aspipc4.sys
+aspipc8.sys
+aspipc8p.sys
+aspippa3.sys
+;interlnk.exe, NON_DISK
+;ramdrive.sys, NON_DISK
+;dblspace.*
+ma100.sys
+ma120.sys
+ma130.sys
+ma13b.sys
+ma160.sys
+ma200.sys
+ma338.sys
+ma348.sys
+ma358.sys
+mamv1.sys
+tscsi.sys
+casmgr.exe
+faxpop.exe
+;dosdata.sys    ; Qemm
+ibmcdrom.sys
+mtmcde.sys      ; Mitsumi
+tslcdr.sys      ; Trantor
+ultracd.sys     ; Ultrastor
+;doskey.exe     ; MS-DOS
+power.exe       ; MS-DOS
+cuni_asp.sys    ; Corel
+aspils_d.sys    ; Corel
+
+[AutoCleanKeep]
+set
+PATH
+net
+REM
+netstart
+echo
+
+Chcp
+keyb
+Mode
+Nlsfunc
+Prompt
+chkdsk
+ScanDisk
+
+; From MM Setup:
+sb16set
+sbconfig
+sbp-set
+
+; from beta feedback:
+STACKER.COM
+SSWAP.COM
+
+; from ios.ini:
+power.exe       ; MS-DOS
+
+[GenInstallEBD]
+CopyFiles=EBD_CopyFiles
+
+[GenInstallEBD2]
+CopyFiles=EBD_CopyFiles2
+
+[EBD_CopyFiles]
+; Files to copy to Emergency Boot Disk
+io.sys, winboot.sys,,2
+drvspace.bin,,,2
+command.com,,,2
+format.com,,,2
+sys.com,,,2
+himem.sys,,,2
+
+[EBD_CopyFiles2]
+fdisk.exe,,,2
+attrib.exe,,,2
+edit.com,,,2
+regedit.exe,,,2
+scandisk.exe,,,2
+scandisk.ini,,,2
+debug.exe,,,2
+chkdsk.exe,,,2
+uninstal.exe,,,2
+
+;these didn't make the cut:
+;msd.exe,,,2
+;xcopy.exe,,,2
+;edit.hlp,,,2
+;fc.exe,,,2
+;mem.exe,,,2
+;more.com,,,2
+;mscdex.exe,,,2
+;setver.exe,,,2
+
+[BadCfgFiles]
+;; filename - good date   - Reference to Getting starting section
+"SSTOR.SYS"   , "03/01/91", %IDS_ERR_SPEEDSTOR%
+"DMDRVR.BIN"  , "03/01/91", %IDS_ERR_DMDRVER%
+"FIXT_DRV.SYS", "00/00/00", %IDS_ERR_VFEATURE%
+;"SYDRIVER.SYS", "00/00/00", %IDS_ERR_SYQUEST%
+;"SQDRIVER.SYS", "00/00/00", %IDS_ERR_SYQUEST%
+
+[BadAutoexecCmd]
+"DELWATCH"    , "00/00/00", %IDS_ERR_DELWATCH%
+
+[NonMSDOSCfgSys]
+chain
+gosub
+hibuffers
+hidevice
+hidos
+hiinstall
+history
+return
+switch
+timeout
+
+; 
+BASEDEV
+DEVINFO
+DISKCACHE
+IFS
+IOPL
+LIBPATH
+MAXWAIT
+MEMMAN
+PRINTMONBUFSIZE
+PRIORITY_DISK_IO
+PROTECTONLY
+PROTSHELL
+SWAPPATH
+THREADS
+
+[NonMSDOSAutoBat]
+gosub
+hiload
+return
+switch
+
+[DriveProviders]
+aspidisk.sys
+aspi4dos.sys
+atdoshc.sys
+atdosxl.sys
+aspipc16.sys            ; Iomega aspi clone
+dmdrvr.bin              ; Ontrack Disk Manager
+fddevice.sys            ; Future Domain device driver
+scsidrvr.sys            ; Iomega scsi device driver
+sstordrv.sys            ; can be used to create a new drive letter
+stachigh.sys            ; Stac 4.0 driver
+stacker.com             ; can be used to create a new drive letter
+xtradrv.sys             ; XtraDrive 3.0 driver
+
+[strings]
+IDS_ERR_SPEEDSTOR = "SpeedStor Partitions"
+IDS_ERR_DMDRVER   = "DiskManager Partitions"
+IDS_ERR_VFEATURE  = "Vfeature Deluxe"
+IDS_ERR_DELWATCH  = "Delwatch and Delpurge"
+;IDS_ERR_SYQUEST   = "Syquest Harddisk"
+;IDS_ERR_SYQUEST   = "Syquest Harddisk"
+
+[PnpCleanup]
+DelReg = PnpCleanup.DelReg
+DelFiles=PNPCleanup.files
+
+[PNPCleanup.files]
+eisa.inf
+mca.inf
+
+[PnpCleanup.DelReg]
+; These were done as a temporary action for bld 156 when we changed devloader
+; and registry stuff.
+HKLM,Config
+HKLM,Enum
+HKLM,Hardware
+;Removed to avoid nuking printer information.
+;HKLM,System  
+;Removed to avoid nuking Computer Name on upgrades, looks safe.
+;HKLM,System\CurrentControlSet\Control\ComputerName
+HKLM,System\CurrentControlSet\Control\FileSystem
+HKLM,System\CurrentControlSet\Control\IDConfigDB
+HKLM,System\CurrentControlSet\Control\InstalledFiles
+HKLM,System\CurrentControlSet\Control\Keyboard Layouts
+HKLM,System\CurrentControlSet\Control\MediaProperties
+HKLM,Syst

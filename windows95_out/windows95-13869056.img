@@ -1,0 +1,119 @@
+sVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"DEPCA$"
+HKR,NDIS\NDIS2,FileName,,"depca.dos"
+HKR,NDIS\ODI,DriverName,,"DEPCA"
+HKR,NDIS\ODI,FileName,,"depca.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"depca.ndis3"
+HKR,Ndi\Install,ndis2,,"depca.ndis2"
+;HKR,Ndi\Install,odi,,"depca.odi"
+; MaxMultiCast
+HKR,NDI\params\MaxMulticast,ParamDesc,,"Maximum Multicasts"
+HKR,NDI\params\MaxMulticast,default,,8
+HKR,NDI\params\MaxMulticast,type,,int
+HKR,NDI\params\MaxMulticast,min,,1
+HKR,NDI\params\MaxMulticast,max,,256
+; flag is in adaptername section
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,default,,16
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,NDI\params\MaxTransmits,min,,0
+HKR,NDI\params\MaxTransmits,max,,256
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+
+HKR,Ndi\params\AdapterName,ParamDesc,,"Adapter Name"
+HKR,Ndi\params\AdapterName,default,,"DE210"
+HKR,Ndi\params\AdapterName,type,,enum
+HKR,Ndi\params\AdapterName\enum,"DE210",,"DE210"
+HKR,NDI\params\AdapterName,flag,1,10,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,10,00,00,00
+;param flags
+HKR,NDI\params\MaxMulticast,flag,1,10,00,00,00
+
+
+[adaptername.DEPCA.reg]
+HKR,Ndi\params\AdapterName,ParamDesc,,"Adapter Name"
+HKR,Ndi\params\AdapterName,default,,"DEPCA"
+HKR,Ndi\params\AdapterName,type,,enum
+HKR,Ndi\params\AdapterName\enum,"DEPCA",,"DEPCA"
+HKR,NDI\params\AdapterName,flag,1,30,00,00,00
+;param flags
+HKR,NDI\params\MaxMulticast,flag,1,30,00,00,00
+
+[DEPCA210.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,declan.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"DECLAN"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"DEPCA$"
+HKR,NDIS\NDIS2,FileName,,"depca.dos"
+HKR,NDIS\ODI,DriverName,,"DEPCA"
+HKR,NDIS\ODI,FileName,,"depca.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis2,,"depca.ndis2"
+;HKR,Ndi\Install,odi,,"depca.odi"
+; MaxMultiCast
+HKR,NDI\params\MaxMulticast,ParamDesc,,"Maximum Multicasts"
+HKR,NDI\params\MaxMulticast,default,,8
+HKR,NDI\params\MaxMulticast,type,,int
+HKR,NDI\params\MaxMulticast,min,,1
+HKR,NDI\params\MaxMulticast,max,,256
+; flag is in adaptername section
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,default,,16
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,NDI\params\MaxTransmits,min,,0
+HKR,NDI\params\MaxTransmits,max,,256
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+
+
+[DEPCA.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,declan.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"DECLAN"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"DEPCA$"
+HKR,NDIS\NDIS2,FileName,,"depca.dos"
+HKR,NDIS\ODI,DriverName,,"DEPCA"
+HKR,NDIS\ODI,FileName,,"depca.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"depca.ndis3"
+HKR,Ndi\Install,ndis2,,"depca.ndis2"
+;HKR,Ndi\Install,odi,,"depca.odi"
+; MaxMultiCast
+HKR,NDI\params\MaxMulticast,ParamDesc,,"Maximum Multicasts"
+HKR,NDI\params\MaxMulticast,default,,8
+HKR,NDI\params\MaxMulticast,type,,int
+HKR,NDI\params\MaxMulticast,min,,1
+HKR,NDI\params\MaxMulticast,max,,256
+; flag is in adaptername section
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,default,,16
+HKR,NDI

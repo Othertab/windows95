@@ -1,0 +1,143 @@
+VxDs,,elpc3.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"ELPC3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"elnk3c589.ndis3"
+
+HKR,NDI,CardType,,"PCMCIA"
+
+; Resources
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+
+HKR,,IRQ,1,04,00,00,00
+HKR,NDI\params\IRQ,resc,1,04,00,00,00
+HKR,NDI\params\IRQ,ParamDesc,,"Interrupt"
+HKR,NDI\params\IRQ,flag,1,20,00,00,00
+
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\MaxTransmits,default,,6 
+HKR,NDI\params\MaxTransmits,min,,2
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+HKR,NDI\params\MaxTransmits,optional,,1
+
+HKR,,AdapterType,,1
+
+; Transceiver
+HKR,NDI\params\Transceiver,ParamDesc,,"Connector Type"
+HKR,NDI\params\Transceiver,flag,1,20,00,00,00
+HKR,NDI\params\Transceiver,type,,enum
+HKR,Ndi\params\Transceiver,default,,0 
+HKR,NDI\params\Transceiver\enum,0,,"Twisted-Pair (10BASE-T)"
+HKR,NDI\params\Transceiver\enum,3,,"BNC (Coax)"
+
+; Install NDIS3
+[ELNK3c589.ndis3]
+CopyFiles=elnk3c589.ndis3.CopyFiles
+[elnk3c589.ndis3.CopyFiles]
+elpc3.vxd
+
+;****************************************************************************
+; 3Com elnk16 base section
+;****************************************************************************
+[elnk16.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,elnk16.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"ELNK16"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"ELNK16$"
+HKR,NDIS\NDIS2,FileName,,"elnk16.dos"
+HKR,NDIS\ODI,DriverName,,"3C507"
+HKR,NDIS\ODI,FileName,,"3c507.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"elnk16.ndis3"
+HKR,Ndi\Install,ndis2,,"elnk16.ndis2"
+;HKR,Ndi\Install,odi,,"3c507.odi"
+
+; Resources
+HKR,,IOBase,1,02,00,00,00
+HKR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBase,flag,1,20,00,00,00
+
+; Install NDIS3
+[ELNK16.ndis3]
+CopyFiles=elnk16.ndis3.CopyFiles
+[elnk16.ndis3.CopyFiles]
+elnk16.vxd
+
+; Install NDIS2
+[ELNK16.ndis2]
+CopyFiles=elnk16.ndis2.CopyFiles
+[elnk16.ndis2.CopyFiles]
+elnk16.dos
+
+; Install ODI
+[3C507.odi]
+CopyFiles=3C507.odi.CopyFiles
+[3C507.odi.CopyFiles]
+3C507.com
+
+
+;****************************************************************************
+; 3Com elnkmc base section
+;****************************************************************************
+[elnkmc.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,elnkmc.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"ELNKMC"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"ELNKMC$"
+HKR,NDIS\NDIS2,FileName,,"elnkmc.dos"
+HKR,NDIS\ODI,DriverName,,"3C523"
+HKR,NDIS\ODI,FileName,,"3c523.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"elnkmc.ndis3"
+HKR,Ndi\Install,ndis2,,"elnkmc.ndis2"
+;HKR,Ndi\Install,odi,,"3c523.odi"
+
+; Install NDIS3
+[elnkmc.ndis3]
+CopyFiles=elnkmc.ndis3.CopyFiles
+[elnkmc.ndis3.CopyFiles]
+elnkmc.vxd
+
+; Install NDIS2
+[elnkmc.ndis2]
+CopyFiles=elnkmc.ndis2.CopyFiles
+[elnkmc.ndis2.CopyFiles]
+elnkmc.dos
+
+; Install ODI
+[3C523.odi]
+C

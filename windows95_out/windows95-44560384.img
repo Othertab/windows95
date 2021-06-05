@@ -1,0 +1,110 @@
+KLM\\DesktopManagement\\DATA\\%ComponentID\\Resources\\ResourceSize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\6]
+"Name"="Resource Flags"
+"Description"="This attribute contains fields representing the status of
+this resource entry.  The meaning of this field varies according to the
+Resource Type field in this group."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\7]
+"Name"="Group ID"
+"Description"="This attribute is a 'back pointer' to a group within this
+MIF, if applicable.  If the back pointer is not known, either because
+the device is not represented by a group, or the actual device type is
+not known, then the value of this attribute will be 0."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=dword:00000000
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  The NW Adapter 802 Port Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4]
+"Name"="Network Adapter 802 Port Group"
+"Class"="DMTF|Network Adapter 802 Port|001"
+"Description"="Contains objects related to each of the network ports on the network adapter."
+"Key"="1"
+"^INDEX"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8|9|10|11|12|13"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\1]
+"Name"="Port Index"
+"Description"="This attribute is the ordinal of the network port within the network adapter, i.e. the 'port number'."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\2]
+"Name"="Permanent Network Address"
+"Description"="This is the node address stored permanently in the adapter."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(12)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\PermanentNetworkAddress"
+"!1"="B;DS"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\3]
+"Name"="Current Network Address"
+"Description"="This is the node address that can be modified by software, sometimes referred to as the Locally Administered Address(LAA)."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(12)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\CurrentNetworkAddress"
+"!1"="B;DS"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\4]
+"Name"="Connector Type"
+"Description"="This is the type of connector currently being used to physically attach this port to the LAN."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802PortGroupExtra\\ConnectorType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\4\Enum]
+"1"="Unknown"
+"2"="AUI"
+"3"="UTP category 3"
+"4"="UTP category 4"
+"5"="UTP category 5"
+"6"="BNC"
+"7"="STP RJ45"
+"8"="STP DB9"
+"9"="Fiber MIC"
+"10"="Apple AUI"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\5]
+"Name"="Data Rate"
+"Description"="This is the rate at which data is transferred over the LAN in Mbps."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802PortGroupExtra\\DataRate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\6]
+"Name"="Total Packets Transmitted"
+"Description"="This is the total number of packets transmitted."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalPacketsTransmitted"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\7]
+"Name"="Total Bytes Transmitted"
+"Description"="This is the total number of bytes transmitted."
+"Column"="7"
+"Access"="Read-O

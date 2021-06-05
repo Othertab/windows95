@@ -1,0 +1,97 @@
+effect.
+
+
+6.  Known Problems with This Release
+====================================
+MSN SIGN IN APPEARS AFTER DISCONNECT:
+Some programs like Outlook Express and some Web-based 
+content like Microsoft Investor periodically check for updated 
+information. If you are not already connected to the Internet when these checks
+occur, MSN will attempt to dial in to the Internet for you.
+
+There are two ways to prevent this from happening:
+*  Close all Internet applications after you disconnect from the 
+   Internet.
+*  Disable the default dialer option for Internet access.  This
+   will require that you first start your MSN connection before using 
+   Internet applications. To do this:
+     1. Click the MSN Quick View icon (the small hand
+   	icon next to your clock in the Windows task bar). 
+     2. Click MSN, then Connection Settings.
+     3. Click the Options tab.
+     4. Uncheck the Use this service for all dial-up Internet access option.
+
+
+SIGNUP OR REQUEST NEW PASSWORD SERVERS ARE NOT AVAILABLE:
+When you sign up for a new MSN account, or if you want to
+change the password on your current account, MSN will step you 
+through a process that puts your computer into "kiosk mode" (the 
+IE 4.0 browser with no user interface controls). If there are 
+Internet server problems while you are in kiosk mode, you can use 
+the Alt-F4 keyboard command to cancel the operation and
+close out of IE 4.0.
+
+
+IE AS DEFAULT BROWSER:
+Internet Explorer launches when you click e-mail, chat, or 
+history links. MSN does not replace your default browser and 
+will be activated only if you double-click the MSN icon on your 
+desktop or click the MSN Quick View icon in the Windows system 
+tray to connect to MSN.
+
+
+JAVA SCRIPT OR VB SCRIPT ERROR:
+Java or Visual Basic script errors could occur in the MSN 
+Program Viewer for a couple of reasons:
+1. The MSN Program Viewer does not support the "window.open" 
+   command, which is supported by IE 3.0, IE 4.0, and
+   Netscape 2.0, 3.0 & 4.0.  
+   Pages that use this command will cause a script error in the 
+   MSN Program Viewer.
+
+2. MSN is now based on IE 4.0, which includes higher security 
+   safeguards that will prevent some script commands from 
+   executing on your machine.
+
+
+MSN QUICK VIEW COMES BACK EVEN AFTER IT IS CLOSED:
+The MSN Quick View icon in your Windows taskbar provides 
+you with periodic information about your e-mail message count and
+the status of your friends online, and it checks to make sure 
+that your MSN client software is up to date.  
+
+Even if you close MSN Quick View, it will be restarted if you 
+visit a Web page that requires its functionality.  For example,
+MSN's On Stage and Communicate home pages use MSN Quick View to 
+display your new e-mail count.  
+
+
+REMOVING MSN QUICK VIEW FROM STARTUP:
+If you do not want MSN Quick View to start when you turn on 
+your computer, you can remove it from your Windows Startup group.  
+
+To remove MSN Quick View from your Startup group:
+1. Click the Windows Start button, then click Settings, Taskbar.
+2. Click the Start Menu Programs tab. 
+3. Click the Remove button.
+4. Click the plus (+) sign next to the Startup folder that appears
+   in the list.
+5. Click MSN Quick View to select it.
+6. Click the Remove button. MSN Quick View will no longer start up 
+   with Windows. 
+
+Please note that MSN Quick View will still automatically start when 
+you connect to MSN or when you connect via a LAN or a proprietary dialer. 
+MSN Quick View will also start up whenever you visit a page that uses 
+Quick View's services, such as MSN's Communicate home page.
+
+
+MSN QUICK VIEW BEHAVIOR WHEN USING A LAN TO CONNECT TO MSN:
+If you connect to MSN using a LAN, MSN Quick View will be unable
+to tell when you are done using MSN. If you want to disconnect 
+from MSN, you will need to select that option from the MSN Quick 
+View menu. 
+
+Otherwise, MSN Quick View will restart anytime you 
+visit a page that uses MSN Quick View's services.
+MSN Quick View will detect that you are configured to conn

@@ -1,0 +1,130 @@
+Keyboard,,"layout=kbdbe.kbd"
+[KBD_UKIni]
+system.cb,Keyboard,,"layout=kbduk.kbd"
+[KBD_DAIni]
+system.cb,Keyboard,,"layout=kbdda.kbd"
+[KBD_FIIni]
+system.cb,Keyboard,,"layout=kbdfi.kbd"
+[KBD_FRIni]
+system.cb,Keyboard,,"layout=kbdfr.kbd"
+[KBD_FCIni]
+system.cb,Keyboard,,"layout=kbdfc.kbd"
+[KBD_GRIni]
+system.cb,Keyboard,,"layout=kbdgr.kbd"
+[KBD_ICIni]
+system.cb,Keyboard,,"layout=kbdic.kbd"
+[KBD_IT1Ini]
+system.cb,Keyboard,,"layout=kbdit1.kbd"
+[KBD_ITIni]
+system.cb,Keyboard,,"layout=kbdit.kbd"
+[KBD_LAIni]
+system.cb,Keyboard,,"layout=kbdla.kbd"
+[KBD_IRIni]
+system.cb,Keyboard,,"layout=kbdir.kbd"
+[KBD_NEIni]
+system.cb,Keyboard,,"layout=kbdne.kbd"
+[KBD_NOIni]
+system.cb,Keyboard,,"layout=kbdno.kbd"
+[KBD_POIni]
+system.cb,Keyboard,,"layout=kbdpo.kbd"
+[KBD_SPIni]
+system.cb,Keyboard,,"layout=kbdsp.kbd"
+[KBD_SWIni]
+system.cb,Keyboard,,"layout=kbdsw.kbd"
+[KBD_SFIni]
+system.cb,Keyboard,,"layout=kbdsf.kbd"
+[KBD_SGIni]
+system.cb,Keyboard,,"layout=kbdsg.kbd"
+[KBD_USIni]
+system.cb,Keyboard,,"layout=kbdus.kbd"
+[KBD_DVIni]
+system.cb,Keyboard,,"layout=kbddv.kbd"
+[KBD_DVLIni]
+system.cb,Keyboard,,"layout=kbddvl.kbd"
+[KBD_DVRIni]
+system.cb,Keyboard,,"layout=kbddvr.kbd"
+[KBD_USXIni]
+system.cb,Keyboard,,"layout=kbdusx.kbd"
+[KBD_CAIni]
+system.cb,Keyboard,,"layout=kbdca.kbd"
+[KBD_BRIni]
+system.cb,Keyboard,,"layout=kbdbr.kbd"
+[KBD_GR1Ini]
+system.cb,Keyboard,,"layout=kbdgr1.kbd"
+[KBD_BRUSXIni]
+system.cb,Keyboard,,"layout=kbdusx.kbd"
+
+;*******************************************
+;**** Copy over files for entire system ****
+;*******************************************
+
+[KeyboardCopyFiles]
+kbdus.kbd
+indicdll.dll
+internat.exe
+
+[KeyboardReg]
+HKEY_CURRENT_USER, "keyboard layout\LPK Dll's",,,"NONE"
+
+;** These IDs are complete (in groups of 3) **
+
+HKLM,"%KEY_KLayout%\00000816","layout file",,kbdpo.kbd
+HKLM,"%KEY_KLayout%\00000816","layout text",,%KBD_PO%
+
+;Brazillian default = USIntl
+HKLM,"%KEY_KLayout%\00000403","layout file",,kbdsp.kbd
+HKLM,"%KEY_KLayout%\00000403","layout text",,%KBD_SP%
+
+HKLM,"%KEY_KLayout%\00000416","layout file",,kbdusx.kbd
+HKLM,"%KEY_KLayout%\00000416","layout text",,%KBD_BRUSX%
+
+HKLM,"%KEY_KLayout%\00010416","layout file",,kbdbr.kbd
+HKLM,"%KEY_KLayout%\00010416","layout text",,%KBD_BR%
+HKLM,"%KEY_KLayout%\00010416","layout id",,0010
+
+HKLM,"%KEY_KLayout%\00000406","layout file",,kbdda.kbd
+HKLM,"%KEY_KLayout%\00000406","layout text",,%KBD_DA%
+
+HKLM,"%KEY_KLayout%\00000407","layout file",,kbdgr.kbd
+HKLM,"%KEY_KLayout%\00000407","layout text",,%KBD_GR%
+
+HKLM,"%KEY_KLayout%\00010407","layout file",,kbdgr1.kbd
+HKLM,"%KEY_KLayout%\00010407","layout text",,%KBD_GR1%
+HKLM,"%KEY_KLayout%\00010407","layout id",,0011
+
+HKLM,"%KEY_KLayout%\00000409","layout file",,kbdus.kbd
+HKLM,"%KEY_KLayout%\00000409","layout text",,%KBD_US%
+
+HKLM,"%KEY_KLayout%\0000040A","layout file",,kbdsp.kbd
+HKLM,"%KEY_KLayout%\0000040A","layout text",,%KBD_SP%
+
+HKLM,"%KEY_KLayout%\0000040B","layout file",,kbdfi.kbd
+HKLM,"%KEY_KLayout%\0000040B","layout text",,%KBD_FI%
+
+HKLM,"%KEY_KLayout%\0000040C","layout file",,kbdfr.kbd
+HKLM,"%KEY_KLayout%\0000040C","layout text",,%KBD_FR%
+
+HKLM,"%KEY_KLayout%\0000040F","layout file",,kbdic.kbd
+HKLM,"%KEY_KLayout%\0000040F","layout text",,%KBD_IC%
+
+HKLM,"%KEY_KLayout%\00000410","layout file",,kbdit.kbd
+HKLM,"%KEY_KLayout%\00000410","layout text",,%KBD_IT%
+
+HKLM,"%KEY_KLayout%\00010410","layout file",,kbdit1.kbd
+HKLM,"%KEY_KLayout%\00010410","layout text",,%KBD_IT1%
+HKLM,"%KEY_KLayout%\00010410","layout id",,0003
+
+HKLM,"%KEY_KLayout%\00000413","layout file",,kbdne.kbd
+HKLM,"%KEY_KLayout%\00000413","layout text",,%KBD_NE%
+
+HKLM,"%KEY_KLayout%\00000414","layout file",,kbdno.kbd
+HKLM,"%KEY_KLayout%\00000414","layout text",,%KBD_NO%
+
+HKLM,"%KEY_KLayout%\00000814","layout file",,kbdno.kbd
+HKLM,"%KEY_KLayout%\00000814","layout text",,%KBD_NO%
+
+HKLM,"%KEY_KLayout%\0000041D","layout file",,kbdsw.kbd
+HKLM,"%KEY_KLayout%\0000041D","layout text",,%KBD_SW%
+
+HKLM,"%KEY_KLayout%\0000042D","layout file",,kbdsp.kbd
+HKLM,"%KEY_KLayout

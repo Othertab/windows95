@@ -1,0 +1,324 @@
+C_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=176
+   H_BP=192
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*15@90Hz.MIRO]
+   Hz=90.420
+   kHz=81.380
+   MHz=125.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=176
+   H_BP=192
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*16@90Hz.MIRO]
+   Hz=90.420
+   kHz=81.380
+   MHz=125.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=176
+   H_BP=192
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*32@90Hz.MIRO]
+   Hz=90.420
+   kHz=81.380
+   MHz=125.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=176
+   H_BP=192
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*8@100Hz.MIRO]
+   Hz=100.830
+   kHz=91.150
+   MHz=140.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=144
+   H_BP=224
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*864*15@100Hz.MIRO]
+   Hz=100.830
+   kHz=91.150
+   MHz=140.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*864*16@100Hz.MIRO]
+   Hz=100.830
+   kHz=91.150
+   MHz=140.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*864*32@100Hz.MIRO]
+   Hz=100.830
+   kHz=91.150
+   MHz=140.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=144
+   H_BP=224
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1280*1024*8@60Hz.VESA]
+   Hz=60.020
+   kHz=63.981
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1688
+   H_DISP=1280
+   H_FP=48
+   H_SYNC=112
+   H_BP=248
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=38
+
+[1280*1024*15@60Hz.VESA]
+   Hz=60.020
+   kHz=63.981
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1688
+   H_DISP=1280
+   H_FP=48
+   H_SYNC=112
+   H_BP=248
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=38
+
+[1280*1024*16@60Hz.VESA]
+   Hz=60.020
+   kHz=63.981
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1688
+   H_DISP=1280
+   H_FP=48
+   H_SYNC=112
+   H_BP=248
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=38
+
+[1280*1024*24@60Hz.VESA]
+   Hz=60.020
+   kHz=63.981
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1668
+   H_DISP=1280
+   H_FP=48
+   H_SYNC=112
+   H_BP=248
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=38
+
+[1280*1024*32@60Hz.VESA]
+   Hz=60.020
+   kHz=63.981
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1688
+   H_DISP=1280
+   H_FP=48
+   H_SYNC=112
+   H_BP=248
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=38
+
+[1280*1024*8@60Hz.MIRO]
+   Hz=59.990
+   kHz=63.950
+   MHz=110.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1728
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=192
+   H_BP=224
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=2
+   V_SYNC=4
+   V_BP=36
+
+[1280*1024*15@60Hz.MIRO]
+   Hz=59.990
+   kHz=63.950
+   MHz=110.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1728
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=192
+   H_BP=224
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=2
+   V_SYNC=4
+   V_BP=36
+
+[1280*1024*16@60Hz.MIRO]
+   Hz=59.990
+   kHz=63.950
+   MHz=110.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1728
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=192
+   H_BP=224
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=2
+   V_SYNC=4
+   V_BP=36
+
+[1280*1024*24@60Hz.MIRO]
+   Hz=59.990
+   kHz=63.950
+   MHz=110.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_T

@@ -1,0 +1,82 @@
+ts original setting.
+
+Microsoft Client for NetWare, running with Dial-Up Networking: This
+may cause some problems with Pagemaker 5.0 and Quark Xpress 3.3. 
+QuarkXpress 3.3 may not work properly when only the DIAL-UP\IPX 
+components are loaded but the computer is not connected to a valid 
+network. If you see the message "Unable to access network [116]" when 
+starting QuarkXpress 3.3, remove the DIAL-UP\IPX components or connect 
+to a valid network. This problem will be fixed in QuarkXPress 3.32.
+
+Microsoft FORTRAN 5.1: If you want to create QuickWin applications 
+using Microsoft FORTRAN 5.1 running on Windows 95, you need to either 
+delete or comment out the following line in the Fl.def file:
+
+     APPOADER '___MSLANGLOAD'
+
+After you remove this line, you need to recompile any QuickWin programs
+that were built with version 5.1 in order for these programs to run
+in Windows 95.
+
+Microsoft FORTRAN PowerStation: Microsoft FORTRAN PowerStation for
+MS-DOS and Windows is designed to work optimally under Windows 3.1.
+If you use Microsoft FORTRAN PowerStation with Windows 95, graphics
+programs that you compiled using the program will fail when you run
+them. A runtime error appears instead of the usual graphics output.
+
+A patch is available to solve this problem. If you are still using
+version 1.0 instead of version 1.0a, you need to obtain an updated
+version of the program. To determine which version you are running,
+change to the Bin directory, and then run Link.exe. If you are
+running version 1.0a, the text "Version 1.0F" should appear.
+
+To obtain the patch, contact Microsoft product support services at 
+the number listed in your documentation. Or, if you live in the 
+United States or Canada, call (206) 635-7015. You can also download 
+the file Fpsfix.exe from the Microsoft Software Library (MSL) on 
+http://www.microsoft.com.
+
+Microsoft Mail 3.2 and Microsoft Schedule+: Microsoft Exchange is
+an upgrade to Microsoft Mail v3.2 and replaces many of the older 
+components. For this reason, Microsoft Mail v3.2 will not work if you 
+have installed Microsoft Exchange. Also, the Windows 3.1 version of 
+Microsoft Schedule+ will not be able to use Exchange to send Email. 
+
+Microsoft Visual C++ version 1.5: With the Windows 95 interface 
+enhancements, dialog boxes in Visual C++ version 1.5x may appear in 
+different screen locations than on Windows 3.1 or Windows NT. When 
+you are debugging a program under the Visual C++ environment, it is 
+recommended that you not minimize the Visual C++ main window. This 
+may cause debug dialog boxes to be displayed off-screen, which would
+result in your not being able to maximize the Visual C++ main window.
+
+Microtek ScanWizard 2.0b7: If you have problems installing this
+program, try carrying out the following procedure:
+1. Add the following line to the [Compatibility] section of your
+   Win.ini file:
+
+   DSHELL=0x00400000
+
+2. Restart your computer, and then re-install Microtek ScanWizard.
+3. Remove this line from your Win.ini file.
+
+Nickelodeon Director's Lab: Some messages may display at the end of
+the setup program. You will need to close the setup program manually. 
+This does no harm, because Director's Lab has already been installed. 
+After the setup program has added the new shortcuts, you may see the 
+following message: "Setup Message: Script or DLL has been corrupted. 
+Unable to load dialog template: 'mscuistf.dll: 2'." If this message 
+appears, follow these steps.
+1. Press CTRL+ALT+DEL.
+2. Click the Director's Lab setup program, and then click End Task.
+
+Norton Backup: Windows 95 requires new settings for this program. 
+Before you run Norton Backup, delete the Nbackup.pif file located in 
+the Norton Backup directory.
+
+Office Accelerator: Because there is no Print Manager, Office 
+Accelerator will not load using the Office Accelerator menus. Instead, 
+configure your printers by clicking the Start menu, clicking Settings, 
+and then clicking Printers.
+
+Paint Shop Pro v2.0: You will not be able to use this program to dra

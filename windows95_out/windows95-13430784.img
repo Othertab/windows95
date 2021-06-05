@@ -1,0 +1,55 @@
+t.htm"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"Dir Browse Control",1,1e,00,00,c0
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"CacheExtensions",1,01
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"CheckForWAISDB",,"1"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"DebugFlags",1,ff,ff
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"Directory Image",,"/images/dir.gif"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"GlobalExpire",1,ff,ff,ff,ff
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"MaxConnections",1,2c,01
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"LogFileDirectory",,"%25%"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"LogType",1,01
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"LogFilePeriod",1,03
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"LogFileTruncateSize",1,00,00,10
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"ServerAsProxy",1,00
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"ServerComment",,"Server Comment"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"ScriptTimeout",1,84,03
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"ServerSideIncludesEnabled",1,00
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"ServerSideIncludesExtension",,".stm"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"CreateProcessAsUser",1,00
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"NTAuthenticationProviders",,"NTLM"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Virtual Roots","/",,"%24%\%Webshare%\wwwroot,,1"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Virtual Roots","/Scripts",,"%24%\%Webshare%\scripts,,4"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Virtual Roots","/Htmla",,"%24%\%Program_Files%\%Web_Svr%\Htmla,,1"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Virtual Roots","/Docs",,"%24%\%Program_Files%\%Web_Svr%\Docs,,1"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Virtual Roots","/HtmlaScripts",,"%24%\%Program_Files%\%Web_Svr%\Htmlascr,,4"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Script Map",".py",,"%24%\%Webshare%\Scripts\pyt.dll"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Script Map",".idc",,"%24%\%Webshare%\Scripts\httpodbc.dll"
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Deny IP List",,,""
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Grant IP List",,,""
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Share Setup","/Docs",,""
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Share Setup","/Htmla",,""
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Share Setup","/HtmlaScripts",,""
+HKLM,"System\CurrentControlSet\Services\W3Svc\Parameters\Share Setup","/Scripts",,""
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RunServices,"Microsoft WebServer",,"%24%\%Program_Files%\%Web_Svr%\%Web_Svcs%\inetsw95 -w3svc"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,"Microsoft WebServer",,"%24%\%Program_Files%\%Web_Svr%\%Web_Svcs%\svctrl /init"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce, "Microsoft WebServer",,"%24%\%Program_Files%\%Web_Svr%\%Web_Svcs%\svctrl /setup"
+
+
+[server.del.reg]
+HKLM,System\CurrentControlSet\Services\EventLog\System\W3SVC
+HKLM,System\CurrentControlSet\Services\EventLog\System\MSFTPSVC
+HKLM,System\CurrentControlSet\Services\MsFtpSvc
+HKLM,System\CurrentControlSet\Control\ServiceProvider\ServiceTypes\MSFTPSVC
+HKLM,System\CurrentControlSet\Control\ServiceProvider\ServiceTypes\W3Svc
+HKLM,System\CurrentControlSet\Services\W3Svc
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RunServices,"Microsoft WebServer"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,"Microsoft WebServer"
+
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+V_CLASSNAME="Network Service"
+V_MS="Microsoft"
+KEY_RENAME     ="Soft

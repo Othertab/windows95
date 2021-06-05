@@ -1,0 +1,328 @@
+ V_TOTAL=667
+   V_DISP=624
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[832*624*15@75Hz.APPL]
+   Hz=74.546
+   kHz=95.100
+   MHz=49.722
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1152
+   H_DISP=832
+   H_FP=32
+   H_SYNC=64
+   H_BP=224
+
+   V_TOTAL=667
+   V_DISP=624
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[832*624*16@75Hz.APPL]
+   Hz=74.546
+   kHz=95.100
+   MHz=49.722
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1152
+   H_DISP=832
+   H_FP=32
+   H_SYNC=64
+   H_BP=224
+
+   V_TOTAL=667
+   V_DISP=624
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[832*624*32@75Hz.APPL]
+   Hz=74.546
+   kHz=95.100
+   MHz=49.722
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1152
+   H_DISP=832
+   H_FP=32
+   H_SYNC=64
+   H_BP=224
+
+   V_TOTAL=667
+   V_DISP=624
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[1024*768*8@87Hz.VESAi]
+   Hz=87.260
+   kHz=35.520
+   MHz=44.910
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1264
+   H_DISP=1024
+   H_FP=8
+   H_SYNC=176
+   H_BP=56
+
+   V_TOTAL=407
+   V_DISP=384
+   V_FP=4
+   V_SYNC=4
+   V_BP=17
+
+[1024*768*15@87Hz.VESAi]
+   Hz=87.260
+   kHz=35.520
+   MHz=44.910
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1264
+   H_DISP=1024
+   H_FP=8
+   H_SYNC=176
+   H_BP=56
+
+   V_TOTAL=407
+   V_DISP=384
+   V_FP=4
+   V_SYNC=4
+   V_BP=17
+
+[1024*768*16@87Hz.VESAi]
+   Hz=87.260
+   kHz=35.520
+   MHz=44.910
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1264
+   H_DISP=1024
+   H_FP=8
+   H_SYNC=176
+   H_BP=56
+
+   V_TOTAL=407
+   V_DISP=384
+   V_FP=4
+   V_SYNC=4
+   V_BP=17
+
+[1024*768*32@87Hz.VESAi]
+   Hz=87.260
+   kHz=35.520
+   MHz=44.910
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1264
+   H_DISP=1024
+   H_FP=8
+   H_SYNC=176
+   H_BP=56
+
+   V_TOTAL=407
+   V_DISP=384
+   V_FP=4
+   V_SYNC=4
+   V_BP=17
+
+[1024*768*8@60Hz.VESA]
+   Hz=60.004
+   kHz=48.363
+   MHz=65.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1344
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=136
+   H_BP=160
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*15@60Hz.VESA]
+   Hz=60.00
+   kHz=48.36
+   MHz=65.000000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1344
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=128
+   H_BP=160
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*16@60Hz.VESA]
+   Hz=60.00
+   kHz=48.36
+   MHz=65.000000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1344
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=128
+   H_BP=160
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*32@60Hz.VESA]
+   Hz=60.000
+   kHz=48.360
+   MHz=65.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1344
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=136
+   H_BP=160
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*8@70Hz.VESA]
+   Hz=70.070
+   kHz=56.480
+   MHz=75.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1328
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=136
+   H_BP=144
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*15@70Hz.VESA]
+   Hz=70.06
+   kHz=56.46
+   MHz=75.000000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1328
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*16@70Hz.VESA]
+   Hz=70.06
+   kHz=56.46
+   MHz=75.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1328
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*32@70Hz.VESA]
+   Hz=70.070
+   kHz=56.480
+   MHz=75.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1328
+   H_DISP=1024
+   H_FP=24
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=806
+   V_DISP=768
+   V_FP=3
+   V_SYNC=6
+   V_BP=29
+
+[1024*768*8@72Hz.VESA]
+   Hz=71.970
+   kHz=57.290
+   MHz=77.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1344
+   H_DISP=1024
+   H_FP=32
+   H_SYNC=128
+   H_BP=160
+
+   V_TOTAL=796
+   V_DISP=768
+   V_FP=1
+   V_SYNC=3
+   V_BP=24
+
+[1024*768*15@72Hz.VESA]
+   H

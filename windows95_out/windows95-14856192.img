@@ -1,0 +1,287 @@
+
+MTDDRV.EXE  	
+MTSRAM.EXE  	
+CARD_BAP.EXE
+PCIC.EXE
+MEMDRV.EXE
+DBLFLASH.EXE
+SS6941.EXE
+SS6942.EXE
+SSPPEC.EXE
+MTAA.EXE
+MTAB.EXE
+MTI1.EXE
+MTI2P.EXE
+MTAMP.EXE
+SSMSFLSH.EXE
+FTL.EXE
+CS_APM.EXE
+CARDLITE.EXE
+
+;
+; phoenix/toshiba
+;
+CACCESS.SYS
+PCMP615B.EXE
+PCMCS.EXE
+PCMMTD.EXE
+PCMATA.SYS
+PCMATADD.SYS
+PCMSCD.EXE
+PCMFDD.EXE
+PCMFFCS.EXE
+PCMSS.EXE
+CNFIGNAM.EXE
+PCM.EXE
+PCMRMAN.EXE 
+PCMRMAN.SYS
+PCMSSCL.EXE 	
+PCMSSDB.EXE 	
+PCMSSIT.EXE 	
+PCMSSRC.EXE 
+PCMSSVD.EXE 
+PCMWARN.EXE 
+
+;
+; award
+;
+PCSS.EXE
+SSPCIC.EXE     
+SSPHIC.EXE
+SSTACT.EXE     
+SSTCIC.EXE
+SSTPP163.EXE
+PCCS.EXE
+PCRM.EXE       
+PCENABLE.EXE   
+PCDISK.EXE     
+PCPREP.EXE     
+PCCARD.EXE
+SS82086.SYS
+PCDIRTY.EXE
+DOSCARD.EXE
+TOPIC.SYS
+
+;
+; ibm
+;
+IBMDOSCS.SYS
+PCMCIA.SYS
+IBMDSS01.SYS
+IBM2SS01.SYS
+DICRMU01.SYS
+ICRMU01.SYS
+$ICPMDOS.SYS
+$ICPMOS2.SYS
+PCMCIAON.EXE
+PCMCIAOF.EXE
+EZPLAY.EXE
+EZPLAYW.EXE
+AUTODRV.SYS
+AUTODRV2.SYS
+SRAMDRV2.SYS
+DISKDRV.SYS
+IBM2SS02.SYS
+IBM2SS03.SYS
+IBMDSS02.SYS
+IBMDSS03.SYS
+SS2PCIC1.SYS
+SSDPCIC1.SYS
+SS2TCIC1.SYS
+SSDTCIC1.SYS
+VPCMCIA.SYS
+IBMDOSCS.SYS
+IBMDSCSE.SYS
+RMUDOSAT.SYS
+PCM2FLSH.SYS
+PAWATA.SYS
+PAWATAS.SYS
+PAWATASF.SYS
+FLSH2MTD.SYS
+PCMSSDIF.SYS
+FLSHDMTD.SYS
+EZLAUNCH.EXE
+
+
+;
+; TDK
+;
+TDKMODEM.EXE
+MODINSTL.EXE
+MODACTIV.EXE
+SET3300.COM
+TDKCARD.EXE
+SSDOS.COM
+
+;
+; HP
+;
+OBSS.EXE
+
+;
+; Enablers
+;
+ENABLEEA.EXE
+SKTNDIS.EXE
+MA460.SYS
+cendis.exe
+b8895.com
+modem.exe
+PCMSM.COM
+ETHERNET.SYS
+POINTETH.SYS
+TOSHETH.SYS
+PCMDMCS.COM
+PCMNICCS.DOS
+CONXDRV.EXE
+PMODEM.SYS
+PCMCIA1.SYS
+PCMCIA2.SYS
+SETPCMC.EXE
+PCMCIA.EXE
+S-PCMCIA.EXE
+T-PCMCIA.EXE
+MSETUP.EXE
+PRR.EXE     
+MODCFG.EXE  
+ADAPTER.EXE 	
+SS365SL.EXE 	
+SSDBOOK.EXE 	
+CS.EXE      
+CSALLOC.EXE 	
+PCMDM.COM   
+ECCTEST.EXE 	
+POINTETH.SYS	
+TOSHETH.SYS 	
+SHARPETH.SYS
+PCMDM.DOS   	
+NICESS.COM
+VMISS.SYS
+FJTMAC.DOS
+PSETUP.EXE
+POINTETH.SYS
+TOSHTR.SYS         
+TOKENRNG.SYS    
+POINTTR.SYS        
+PDLTOK.DOS
+PCMDMCS.COM
+PCMNICCS.DOS
+SETMHZ.EXE
+NMCMSSND.SYS
+SWAPBOX.SYS
+1130_XX.SYS
+
+;
+;   Autoexec.Bat drivers to remove
+;
+[AutoexecBatDrivers]
+ENABLEEA
+SKTNDIS
+SETMHZ
+CS_APM
+CECFG
+OBSS
+WJSSENAB
+CEMCFG
+CE2CFG
+CXCFG
+CFG2INI
+
+;
+;   System.Ini drivers to remove
+;
+[SystemIniDrivers]
+;
+; compaq
+;
+cs.386
+cpqevent.386
+ssvrdd.386
+ssvcd311.386
+pccard.386
+pccardrm.386
+
+;
+; Phoenix
+;
+PCMVCD.386
+
+;
+; SystemSoft
+;
+cs_pmc.386
+vpmc.386
+NMCMSSND.386
+
+;
+;   System.Ini drivers= DLLs to remove
+;
+[SystemIniDriversLine]
+sswincs.dll
+nmcmssnd.drv
+
+;
+; SystemSoft
+;
+cardpwrd.drv
+pmc.drv
+
+
+;
+;   Win.Ini run= EXEs to remove
+;
+[WinIniRunLine]
+cpqevent
+pccard
+cardview
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_8086&DEV_1221
+ExcludeFromSelect=PCI\VEN_1013&DEV_1100
+ExcludeFromSelect=PCI\VEN_1179&DEV_060A
+CopyFilesOnly=*DBK0402
+CopyFilesOnly=*DBK1402
+CopyFilesOnly=*DBK0214
+CopyFilesOnly=*CPQA0DE
+CopyFilesOnly=*VDM0469
+CopyFilesOnly=*SCM0469
+
+[Strings]
+ClassName="PCMCIA socket"
+MS="Microsoft"
+
+;
+;   Manufacturer name strings
+;
+GenDrvs="(Standard PCMCIA drivers)"
+IntelMfg="Intel"
+DatabookMfg="Databook"
+VLSIMfg="VLSI"
+CompaqMfg="Compaq"
+CirrusMfg="Cirrus Logic"
+VademMfg="Vadem"
+MXTR="Maxtor"
+SCM="SCM SwapBox"
+Toshiba="Toshiba"
+TI="Texas Instruments"
+OPTi="OPTi"
+Ricoh="RICOH"
+
+;
+;   Device Decription strings
+;
+GenPCIC="PCIC or compatible PCMCIA controller"
+IntelProto="Intel PCIC compatible PCMCIA controller"
+Cirrus.DeviceDesc="Cirrus Logic PCIC compatible PCMCIA controller"
+PCI\VEN_1013&DEV_1100.DeviceDesc="Cirrus Logic PCIC compatible PCI to PCMCIA bridge"
+Vadem.DeviceDesc="Vadem PCIC compatible PCMCIA controller"
+*VDM0469.DeviceDesc="Vadem PCIC compatible Plug and Play PCMCIA controller"
+SCM.DeviceDesc="SCM SwapBox Family PCMCIA controller"
+*SCM0469.DeviceDesc="SCM SwapBox Family Plug and Play PCMCIA controller"
+
+;
+;   Strings with "*PNPxxxx" are descriptions used by hardware detection
+;   for PCMCIA controllers
+;
+*PNP0E00.DeviceDesc="PCIC Compatible PCMCIA Controller"
+*PNP0E02.DeviceDesc="VLSI PCIC Comp

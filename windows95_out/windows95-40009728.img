@@ -1,0 +1,107 @@
+ an 
+existing version of Windows or Windows for Workgroups. If 
+Windows 95 is installed in a separate directory, all Windows-based 
+programs need to be reinstalled.
+
+
+[Q: How do I set up Windows 95 on a computer running Windows NT?]
+
+The Windows NT computer must be configured to multi-boot between 
+Windows NT and MS-DOS. 
+
+1. Start the Windows NT computer in MS-DOS mode.
+2. Run Windows 3.x, and then in Program Manager, select the File 
+   menu, and then choose the Run command.
+3. Type:
+
+     x:\Setup.exe
+
+     where x is the drive letter containing your Windows 95 
+     Setup disk or CD-ROM.
+4. Install Windows 95 in a new directory. 
+
+NOTES:
+* Windows 95 cannot be installed into the same directory as
+  Windows NT or into a shared Windows NT/Windows 3.x directory. 
+
+* A FAT16 partition is required for the Windows 95 / Windows NT
+  dual-boot configuration to work. Windows 95 must be installed
+  into a separate directory on the FAT partition. The Windows NT
+  OS Loader automatically provides a choice for Windows 95 or
+  MS-DOS on the menu.
+
+* Windows 95 cannot access data stored in NTFS partitions and,
+  Windows NT cannot access data stored in FAT32 partitions.
+
+
+[Q: I have 25 MB free on my hard disk, and when I try to upgrade 
+    to Windows 95 it tells me I do not have enough disk space. 
+    How much do I need for Windows 95 if I am upgrading?]
+
+When you upgrade over Windows 95, you need 90 to 100 MB of free 
+disk space, as opposed to 100 to 110 MB for a full installation.
+
+NOTE: Actual numbers vary depending on the options and accessories 
+you select during Setup. If you use disk compression (MS-DOS 
+DoubleSpace or DriveSpace, or Stacker), Setup may require more 
+than 90 to 100 MB because of the way disk compression estimates 
+available space. Setup adjusts the required free space to ensure 
+that you do not run out of disk space during Setup. 
+
+
+[Q: Can I install Windows 95 on a computer that has 
+    OS/2\MS-DOS\Windows? Can I still dual boot?]
+
+Windows 95 Setup.exe will not run on OS/2. To install Windows 95,
+start the computer in MS-DOS mode, and then run Setup.exe from 
+the MS-DOS prompt.
+
+NOTE: If you are upgrading over OS/2 on an HPFS partition, you 
+will need your OS/2 disk 1 during Setup.
+
+If you are using OS/2 Boot Manager to choose operating systems 
+at startup, Setup will disable Boot Manager to ensure that 
+Windows 95 can restart the computer and complete its installation. 
+You can reactivate Boot Manager by running the FDISK utility that 
+comes with Windows 95 (see procedure at the end of this section).
+
+If you are not using Boot Manager, configure your computer to use 
+Boot Manager, and then follow the instructions above. Consult your 
+OS/2 documentation for information about Boot Manager.
+
+If you start MS-DOS from a floppy disk and then run Setup, you will 
+not be able to start OS/2 after Windows 95 is installed. You need 
+to delete the Autoexec.bat and Config.sys files that OS/2 uses 
+before running Setup.
+
+To remove OS/2 from your computer after you install Windows 95:
+1. Back up the files you want to keep onto a floppy disk or 
+   network drive.
+2. Delete the files in each of your OS/2 directories and 
+   subdirectories, and then delete the OS/2 directories.
+3. In the root directory, delete the following hidden files:
+
+    EA DATA.SF
+    OS2LDR.MSG
+    OS2KRNL
+    OS2BOOT
+    WP DATA.SF
+
+To make sure hidden files are visible, in My Computer or Windows 
+Explorer, click the View menu, click Options, and then click Show 
+All Files. Then delete the OS/2 files listed above.
+
+NOTE: If you have a version of OS/2 other than version 2.0, the 
+names of your OS/2 files may differ from those in this procedure. 
+Also, depending on which version of OS/2 you have, you may see 
+the following files in your root directory. You can also delete 
+these files:
+
+    OS2DUMP
+    OS2LDR
+    OS2LOGO
+    OS2VER
+
+4. Empty the Recycle Bin to permanently remove the files from 
+   your computer. 
+5. If you had Boot Manager insta

@@ -1,0 +1,58 @@
+dulation_Bell,, 
+HKR, Settings, SpeedNegotiation_Off,, 
+HKR, Settings, SpeedNegotiation_On,, 
+HKR, Settings, Pulse,, "P"
+HKR, Settings, Tone,, "T"
+HKR, Settings, Blind_Off,, "X4"
+HKR, Settings, Blind_On,, "X3"
+HKR, Settings, CallSetupFailTimer,, "S7=<#>"
+HKR, Settings, InactivityTimeout,, "S30=<#>"
+
+HKR, Responses,"<cr><lf>OK<cr><lf>",           1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>RING<cr><lf>",        1, 08, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO CARRIER<cr><lf>",  1, 04, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>ERROR<cr><lf>",       1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO DIALTONE<cr><lf>", 1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO DIAL TONE<cr><lf>",1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>BUSY<cr><lf>",        1, 06, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO ANSWER<cr><lf>",   1, 07, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>FAX<cr><lf>",         1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>DATA<cr><lf>",        1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NUMBER DELAYED:TIMER<cr><lf>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NUMBER LOCKED OUT<cr><lf>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CALL LOCKED:BLACKLISTED<cr><lf>", 1, 01, 00, 00,00,00,00, 00,00,00,00 
+HKR, Responses, "<cr><lf>DALAYED<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>BLACKLISTED<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>+FCERROR<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT LAPM<cr><lf>", 1, 02, 02, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200 LAPM<cr><lf>", 1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400 LAPM<cr><lf>", 1, 02, 02, 00,00,00,00, 60,09,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800 LAPM<cr><lf>", 1, 02, 02, 00,00,00,00, c0,12,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200 LAPM<cr><lf>", 1, 02, 02, 00,00,00,00, 20,1c,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600 LAPM<cr><lf>", 1, 02, 02, 00,00,00,00, 80,25,00,00
+HKR, Responses, "<cr><lf>CONNECT 14400 LAPM<cr><lf>", 1, 02, 02, 00,00,00,00, 40,38,00,00
+
+HKR, Responses, "<cr><lf>CONNECT RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200 RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, b0,04,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400 RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, 60,09,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800 RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, c0,12,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200 RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, 20,1c,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600 RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, 80,25,00,00
+HKR, Responses, "<cr><lf>CONNECT 14400 RELIABLE<cr><lf>", 1, 02, 02, 00,00,00,00, 40,38,00,00
+
+
+HKR, Responses, "<cr><lf> CONNECT 1200 LAPM COMPRESSED<cr><lf>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400 LAPM COMPRESSED<cr><lf>", 1, 02, 03, 00,96,00,00, 60,09,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800 LAPM COMPRESSED<cr><lf>", 1, 02, 03, 00,96,00,00, c0,12,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200 LAPM COMPRESSED<cr><lf>", 1, 02, 03, 00,96,00,00, 20,1c,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600 LAPM COMPRESSED<cr><lf>", 1, 02, 03, 00,96,00,00, 80,25,00,00
+HKR, Responses, "<cr><lf>CONNECT 14400 LAPM COMPRESSED<cr><lf>", 1, 02, 03, 00,96,00,00, 40,38,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 1200<cr><lf>", 1, 02, 00, 00,96,00,00, b0,04,00,00
+HKR, Responses, "<cr><lf>CONNECT 1275<cr><lf>", 1, 02, 00, 00,96,00,00, b0,04,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400<cr><lf>", 1, 02, 00, 00,96,00,00, 60,09,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800<cr><lf>", 1, 02, 00, 00,96,00,00, c0,12,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200<cr><lf>", 1, 02, 00, 00,96,00,00, 20,1c,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600<cr><lf>", 1, 02, 00, 00,96,00,00, 80,25,00,00
+HKR, Respons

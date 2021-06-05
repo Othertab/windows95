@@ -1,0 +1,147 @@
+bat\arswait,Search,,"*net start*"
+HKR,Ndi\autoexec.bat\arswait,Replace,,""
+HKR,Ndi\autoexec.bat\arswait,Skip,,"*arswait*"
+HKR,Ndi\autoexec.bat\arswait,Position,1,01,00,00,00
+; login
+HKR,Ndi\autoexec.bat\login,Line,,"z:login"
+HKR,Ndi\autoexec.bat\login,Search,,"*arswait*"
+HKR,Ndi\autoexec.bat\login,Replace,,"*login*"
+HKR,Ndi\autoexec.bat\login,Skip,,"*z:login*"
+HKR,Ndi\autoexec.bat\login,Position,1,01,00,00,00
+
+
+[NDISBAN.inst]
+AddReg=NDISBAN.inst.reg
+UpdateAutoBat=NDISBAN.autobat
+
+[NDISBAN.inst.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dynamic,1,01,00,00,00
+
+[NDISBAN.autobat]
+CmdDelete=net
+CmdDelete=netbind
+CmdDelete=call
+
+[NDISBAN.rmv]
+DelReg=NDISBAN.rmv.reg
+[NDISBAN.rmv.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dynamic
+
+;****************************************************************************
+; NFSLINK
+;****************************************************************************
+[NFSLINK.ndi]
+AddReg=NFSLINK.ndi.reg
+DeviceID=NFSLINK
+MaxInstance=1
+[NFSLINK.ndi.reg]
+HKR,Ndi,DeviceID,,NFSLINK
+HKR,NDIS,LogDriverName,,NFSLINK
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,SectionName,,"NFS-NDIS"
+HKR,NDIS\NDIS2,DriverName,,NFSLINK$
+HKR,NDIS\NDIS2,FileName,,"nfs-ndis.sys,pcnfs.sys,sockdrv.sys"
+HKR,Ndi\Interfaces,DefUpper,,"pcnfs"
+HKR,Ndi\Interfaces,DefLower,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,UpperRange,,"pcnfs"
+HKR,Ndi\Install,,,NFSLINK.inst
+[NFSLINK.inst]
+CopyFiles=NFSLINK.copyfiles
+UpdateInis=NFSLINK.inis
+UpdateAutoBat=NFSLINK.autobat
+UpdateCfgSys=NFSLINK.cfgsys
+
+[NFSLINK.inis]
+system.ini,"Network Drivers",,"pcnfs.sys=/F30 /C^"
+
+[NFSLINK.autobat]
+CmdDelete=netbind
+
+[NFSLINK.cfgsys]
+DevDelete=pcnfs.sys
+DevDelete=sockdrv.sys
+DevDelete=protman.sys
+DevDelete=nfs-ndis.sys
+
+[NFSLINK.copyfiles]
+nfs-ndis.sys,,,16
+pcnfs.sys,,,16
+sockdrv.sys,,,16
+
+[WSOCK.sys.copyfiles]
+wsock.vxd,,,32          ;suppress version conflicts
+wsasrv.exe
+
+;*********************************************
+;    WINSOCK
+;*********************************************
+[WSOCK.del.sys]
+winsock.dll
+
+[WSOCK.del.win32s]
+winsock.dll
+
+[WSOCK.win.copyfiles]
+winsock.dll,,,32        ; suppress version conflicts
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+NetTrans.CopyFiles          = 11 ; LDID-SYS
+NETBEUI.CopyFiles           = 11 ; LDID_SYS
+NWLINK.CopyFiles            = 11 ; LDID_SYS
+MSTCP.CopyFiles.sys         = 11 ; LDID_SYS
+MSTCP.CopyFiles.win         = 25 ; LDID_SHARED
+NFSLINK.copyfiles           = 26 ; LDID_WINBOOT
+DEC50NDIS.Copyfiles.sys     = 11 ; LDID_SYS
+DEC50NDIS.Copyfiles.winboot = 26 ; LDID_WINBOOT
+DEC50ODI.Copyfiles.winboot  = 26
+DEC50UPG.Copyfiles.winboot  = 26
+WSOCK.sys.copyfiles         = 11 ; LDID_SYS
+NWNBLINK.Copy               = 11 ; LDID_SYS
+WSOCK.del.sys               = 11    ; LDID_SYS
+WSOCK.del.win32s            = 11,win32s    ; system\win32s
+WSOCK.win.copyfiles         = 25 ; LDID_SHARED
+
+[SourceDisksNames]
+;NOTE: USE ONLY DISK NUMBERS 45-54:
+45=%DSK_DEC%,      "", 0001
+46=%DSK_NFS%,      "", 0001
+
+[SourceDisksFiles]
+;pathwrks.drv    =45,,1024
+decpw.386       =45,,1024
+decnet.386      =45,,1024
+pwwfwcfg.exe    =45,,1024
+pwwfwcfg.dat    =45,,1024
+pwwfwcfg.tpl    =45,,1024
+pwwfw.hlp       =45,,1024 
+cmdialog.vbx    =45,,1024
+pwicon.exe      =45,,1024
+pwgroup.tpl     =45,,1024
+;pwconfig.dll    =45,,1024
+nfs-ndis.sys    =46,,1024
+pcnfs.sys       =46,,1024
+sockdrv.sys     =46,,1024
+dllodi.exe      =45,,1024
+dllndis.exe     =45,,1024
+dllndist.exe    =45,,1024
+srm.exe         =45,,1024
+
+
+
+
+
+
+
+
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+V_MS="Microsoft"
+V_CLASSNAME="Network Protoco

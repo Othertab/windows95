@@ -1,0 +1,147 @@
+****************
+
+[*ATK1500.ndi]
+AddReg=*ATK1500.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*ATK1500.ndi.reg]
+HKR,Ndi,DeviceID,,"*ATK1500"
+
+[*ATK1500.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*SKD8000   ;SysKonnect Inc
+;****************************************************************************
+
+[*SKD8000.ndi]
+AddReg=*SKD8000.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*SKD8000.ndi.reg]
+HKR,Ndi,DeviceID,,"*SKD8000"
+
+[*SKD8000.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*SVE0001   ;SVEC
+;****************************************************************************
+
+[*SVE0001.ndi]
+AddReg=*SVE0001.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*SVE0001.ndi.reg]
+HKR,Ndi,DeviceID,,"*SVE0001"
+
+[*SVE0001.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*BRI1001       ;Boca pcNET isa/PNP
+;****************************************************************************
+
+[*BRI1001.ndi]
+AddReg=*BRI1001.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*BRI1001.ndi.reg]
+HKR,Ndi,DeviceID,,"*BRI1001"
+
+[*BRI1001.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*TCI00D0       ;Tulip NCC-16 ISA +
+;****************************************************************************
+
+[*TCI00D0.ndi]
+AddReg=*TCI00D0.ndi.reg,PCnet.ndi.reg,AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*TCI00D0.ndi.reg]
+HKR,Ndi,DeviceID,,"*TCI00D0"
+
+[*TCI00D0.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*MDY1901       Microdyne NE2500T
+;****************************************************************************
+[*MDY1901.ndi]
+AddReg=*MDY1901.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*MDY1901.ndi.reg]
+HKR,Ndi,DeviceID,,"*MDY1901"
+
+[*MDY1901.LogConfig]
+IOConfig=20@200-3FF%FFE0(3FF::)
+IRQConfig=3,4,5,9,10,11,12,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+[*MDY1901.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*MDY1900       Microdyne NE2500
+;****************************************************************************
+[*MDY1900.ndi]
+AddReg=*MDY1900.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*MDY1900.LogConfig
+
+[*MDY1900.ndi.reg]
+HKR,Ndi,DeviceID,,"*MDY1900"
+
+[*MDY1900.LogConfig]
+IOConfig=20@200-3FF%FFE0(3FF::)
+IRQConfig=3,4,5,9,10,11,12,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+[*MDY1900.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+;*ADV55AA       ;AMD pcNET isa/PNP
+;****************************************************************************
+[*ADV55AA.ndi]
+AddReg=*ADV55AA.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*ADV55AA.LogConfig
+
+[*ADV55AA.ndi.reg]
+HKR,Ndi,DeviceID,,"*ADV55AA"
+HKR,Ndi,MatchAndMoveID,,"*pnp828c,PCI\VEN_1022&DEV_2000"
+
+[*ADV55AA.LogConfig]
+IOConfig=20@200-3FF%FFE0(3FF::)
+IRQConfig=3,4,5,9,10,11,12,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+[*ADV55AA.ndi.PosDup]
+*pnp828c
+
+;****************************************************************************
+; PCIpcnet       ;AMD pcNET PCI
+;****************************************************************************
+
+[PCIpcnet.ndi]
+AddReg=PCIpcnet.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=PCIpcnet.LogConfig
+
+[PCIpcnet.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_1022&DEV_2000"
+HKR,Ndi,MatchAndMoveID,,"*pnp828c,PCI\VEN_1022&DEV_2000,PCI\VEN_1022&DEV_2000&REV_02"
+HKR,NDI,CardType,,"PCI"
+
+[PCIpcnet.LogConfig]
+IOConfig=20@200-3FF%FFE0(3FF::)
+IRQConfig=3,4,5,9,10,11,12,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+[PCIpcnet.ndi.PosDup]
+*

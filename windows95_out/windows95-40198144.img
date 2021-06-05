@@ -1,0 +1,96 @@
+SOFT TCP/IP PROTOCOL
+=========================
+
+If Microsoft's TCP/IP is the only protocol you have loaded on your 
+system, the IP Address will not be added during Setup. If you have 
+a DHCP server, open Control Panel, double-click the Network icon, and 
+then close it. This will update the IP Address. (If you don't know if 
+you have a DHCP server, check with your network administrator, or check
+if your IP address is already entered.)
+
+If you don't have a DHCP server, start Control Panel, double-click 
+the Network icon, double-click TCP/IP, click the IP Address tab, and 
+then enter your IP Address.
+
+If you are not updating from a previous Windows 95 installation (you 
+are doing a "clean install"), to use DNS or LMHOSTS name resolution, 
+make sure you have DNS enabled in the Network properties. To enable
+DNS, double-click the Network icon in Control Panel, double-click 
+TCP/IP, click the DNS configuration tab, and then click Enable DNS.
+
+
+USER PROFILES OVER THE NETWORK
+==============================
+
+If you are using user profiles over a Windows NT or Novell NetWare 
+network, and you include Start Menu/Programs, Network Neighborhood,
+and/or desktop icons in your profile, the server must have long 
+filename support to ensure that these parts of the user profile work 
+over the network. 
+
+
+NETWORK BACKUP AGENTS
+=====================
+
+Arcada Backup Exec Network Backup Agent
+---------------------------------------
+To use the Arcada Backup Exec network backup agent included in 
+Windows 95, you must have Arcada Backup Exec version 5.x.
+
+
+Cheyenne ARCserve Network Backup Agent
+--------------------------------------
+To use the Cheyenne ARCserve network backup agent included in 
+Windows 95, you must have Cheyenne ARCserve version 5.01F. You might 
+also use earlier versions if you obtain updated NLMs from Cheyenne 
+Software.
+
+
+REAL-MODE PROTOCOLS: WARNING ICONS ON YOUR NETWORK ADAPTER
+==========================================================
+
+If you install a network that does not use protected-mode protocols, 
+such as Novell Netware 3.x, you might see a yellow warning icon next 
+to your network adapter in Device Manager. You can ignore this warning; 
+your network is fully functional. To remove the warning icon, use the 
+program, Extract.exe on Setup disk 1 to extract the file Ndis.vxd from 
+your Windows 95 disks. Then, copy Ndis.vxd into your Windows\System 
+folder. When you reboot your system, the yellow warning icon will no 
+longer appear.
+
+
+USING AN IBM THINKPAD WITH A DOCK II
+====================================
+If you enable 32-bit PCMCIA support, and your network cards do not 
+appear to work properly when inserted into the Dock II's PCMCIA slots; 
+or, if you have an ISA network card in the Dock II that has a "Code 10" 
+error in its properties in Device Manager, call the IBM Help Center. 
+They will provide you with a file to correct this problem.
+
+
+INTEL ETHEREXPRESS PRO /100B CARD NOT CORRECTLY DETECTED
+========================================================
+
+Windows 95 does not correctly detect an Intel EtherExpress Pro /100B 
+card during Setup or hardware detection. After Setup, an entry for 
+"PCI Ethernet controller" appears under Other Devices in Device Manager, 
+which shows that the device is functioning properly; however, the card 
+doesn't work.
+
+To properly install the card, remove the PCI Ethernet controller from 
+Device Manager, and then restart your computer. The card will then be 
+detected; the Update Device Driver wizard will appear.  Insert the 
+driver disk that came with the card, and then click Next. The wizard 
+will search the disk and find drivers for the Intel 82557-based PCI 
+Ethernet. This is correct. Click Finish and the card should work.
+
+
+SETTING UP A WINS SERVER
+========================
+
+To set up a WINS server, carry out the following steps:
+
+1. In Control Panel, double-click the Network icon.
+2. Click TCP/IP, and then click Properties.
+3. Click the WINS Configuration tab.
+4. Make sure that both the Primary

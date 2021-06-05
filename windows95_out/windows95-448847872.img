@@ -1,0 +1,80 @@
+ck  menu  allows you to specify the number of knights remaining in
+the  castle  to  defend  it.  Don't forget that the castle is important not
+only  for  your  troops'  moral,  but also because it is the only warehouse
+directly  protected by knights, and thus much safer than the warehouses you
+constructed later in the game.
+
+To Continue
+-----------
+
+The Other Menus
+
+Tool fabrication, merchandise priorities and evacuation menu 
+
+In the menu, click on the central left icon.  The 9 different tools will be
+displayed  with  a  bar  showing  the  number of tools manufactured by your
+workers.   The  default  settings are as follows:  high rate of hammers and
+picks,  low  rate  for scythes and pliers.  Masons, geologists, blacksmiths
+and  iron  workers need hammers but scythes are only needed by the farmers.
+You  can modify the tool fabrication rate during the game.  For example, if
+you  urgently  need  a  specific tool (you may have enough hammers, but you
+need  pliers for a new blacksmith), you can speed up the manufacturing rate
+for  the pliers while reducing that rate for the other tools.  Don't forget
+to  change  these  settings  later  on in the game.  The length of the bars
+shows the number of manufactured tools.  If the hammer bar is twice as long
+as  the  saw  bar this means that your workers will manufacture two hammers
+for each saw.  But as long as you don't have a blacksmith, this menu is not
+useful.   If  you  want  to  avoid  having to set priorities for the tools,
+manufacture  as  many  tools as possible and as soon as you can.  This will
+allow to more easily control the warehouse statistics.
+
+Click  on  the  central  icon to open the merchandise priorities menu.  You
+will  see  a list of merchandise and icons.  This menu allows you to define
+priorities  for  merchandise:  some of them will be transported in priority
+by  your  transporters.   The  wood  is  the  first priority in the default
+settings,  because  it is very important for construction works and must be
+delivered  as  soon  as  possible  to the sawmills.  Gold, inversely, has a
+lower  priority  level:   even  if  it  strengthens  your troops moral, its
+transporiation is less urgent; and this will have no negative effect on the
+game.   But  you may also have your very own idea, and you can change these
+priority  settings.   Click  on  the desired merchandise.  The small arrows
+allow  you to lower or raise the priority level, the large one to place the
+merchandise  directly at the top or bottom of the priority list.  The upper
+left  icon  allows  you  to  return  to  the  initial settings.  If you are
+fighting  against  the  enemy,  weapons  should generally be transported in
+priority,  before  construction materials.  The choice of the best strategy
+is up to you.
+
+The  most  important  menu  allows  you  to  evacuate  merchandise,  and is
+activated by the central right icon:  If the enemy gets too close to one of
+your  warehouses  and you decide to evacuate it, it would be a pity to save
+more  wheat  than  gold.   In  this  menu,  you  will decide the evacuation
+priority   of  the  merchandise.   This  option  works  like  the  delivery
+priorities menu.
+
+Messages and preferences
+
+During  the  game,  you will always know what the important events are with
+the messages displayed by the program.  But you can also use these messages
+for playing the game.  This chapter is related to the various messages sent
+during the game.
+
+You will receive a message for the following events:
+
+A  new guard building is occupied for the first time by a knight.  You will
+thus annex new territories and will be able to plan your city's expansion.
+
+A new warehouse has been constructed.
+
+A geologist discovered new underground riches.
+
+A  mine  yields  no more ore and must be demolished as it consumes food for
+nothing
+
+You are attacked.
+
+You conquered an enemy guard building and gained new territories.
+
+One of your buildings has been taken over by the enemy.
+
+The enemy placed a hut near your territory,

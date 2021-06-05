@@ -1,0 +1,106 @@
+00000414
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000414
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb no,,keyboard.sys"
+
+[KeyReg_BR]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00010416
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00010416
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb br,,keyboard.sys"
+
+[KeyReg_BRUSX]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000416
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000416
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb br,,keyboard.sys"
+
+[KeyReg_PO]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000816
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000816
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb po,,keyboard.sys"
+
+[KeyReg_LA]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000080A
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000080A
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb la,,keyboard.sys"
+
+[KeyReg_SP]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000040A
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000040A
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb sp,,keyboard.sys"
+
+[KeyReg_SP2]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000C0A
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000C0A
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb sp,,keyboard.sys"
+
+[KeyReg_SW]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000041D
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000041D
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb sv,,keyboard.sys"
+
+[KeyReg_SF]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000100C
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000100C
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb sf,,keyboard.sys"
+
+[KeyReg_SG]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000807
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000807
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb sg,,keyboard.sys"
+
+[KeyReg_US]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000409
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000409
+
+[KeyReg_DV]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00020409
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00020409
+
+[KeyReg_DVL]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00030409
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00030409
+
+[KeyReg_DVR]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00040409
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00040409
+
+[KeyReg_USX]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00010409
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00010409
+
+[KeyReg_CA]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000C0C
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000C0C
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard2
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb cf,,keybrd2.sys"
+
+[KeyReg_IR]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00001809
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00001809
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb uk,,keyboard.sys"
+
+
+[DelEBD]
+HKLM, %KEY_EBD%
+
+[DelEBD_Keyboard]
+HKLM, %KEY_EBD%\EBDAutoexecBatKeyboard
+HKLM, %KEY_EBD%\EBDConfigSyKeyboard
+HKLM, %KEY_EBD%\EBDFilesBatKeyboard
+
+;*******************************************************
+;**** Make all System.CB entries for Fail Safe Boot ****
+;*******************************************************
+
+[KBD_BEIni]
+system.cb,

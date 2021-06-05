@@ -1,0 +1,120 @@
+LM,"SYSTEM\CurrentControlSet\Services\Winsock\Parameters",NWREDIR,,""
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR\Parameters\Winsock",HelperDllName,,sapnsp.dll
+
+[NWNP32.Inis]
+system.ini,nwnp32,"NPProvider="
+system.ini,nwnp32,"NPName="
+system.ini,nwnp32,"NPDescription="
+
+[NWNP32.sbs]
+UpdateInis=NWNP32.sbs.inis
+
+[NWNP32.sbs.inis]
+%31%\msdos.sys,Options,,"LoadTop=0"
+
+[NWREDIR.CleanInis]
+system.ini,boot,"network.drv="
+system.ini,boot.description,"network.drv="
+system.ini,386Enh,"network="
+system.ini,386Enh,"UniqueDosPSP="
+system.ini,386Enh,"PSPIncrement="
+system.ini,386Enh,"TimerCriticalSection="
+system.ini,386Enh,"ReflectDOSInt2A="
+
+[NWREDIR.Files]
+nwredir.vxd,,,32        ;suppress version conflicts
+netware.drv,netware.ms,netware.tmp
+nscl.vxd
+nwsp.vxd
+nwab32.dll
+sapnsp.dll
+;Client files
+pmspl.dll
+netapi.dll
+
+[NWNP32.Files]
+nwlscon.exe
+nwlsproc.exe
+nwnp32.dll
+nw16.dll
+nwnet32.dll
+nwpp32.dll
+
+[NWREDIR.Remove]
+AddReg=winpopup.rmv.addreg
+DelReg=NWREDIR.Rmv.DelReg, SAPNSP.Rmv.DelReg, winpopup.delreg
+UpdateInis=NWNP32.Inis, NWREDIR.CleanInis, WINPOPUP.Rem.Inis
+UpdateIniFields=NWNP32.Rmv.Fields
+
+[NWREDIR.Rmv.DelReg]
+HKLM,"System\CurrentControlSet\Services\VxD\NWREDIR",StaticVxD
+HKLM,"System\CurrentControlSet\Services\VxD\NSCL",StaticVxD
+HKLM,"System\CurrentControlSet\Control\Print\Providers\Microsoft Print Provider for NetWare"
+HKCR,Netware\shellex
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",NWNP32
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32"
+HKCR,Folder\shellex\ContextMenuHandlers\NetwareUNCMenu
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shellex\ContextMenuHandlers\NetWareMenus
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}
+; remove print provider info
+HKCR,Netware\shellex\ContextMenuHandlers\NWAdminMenus
+HKCR,CLSID\{9C358B60-02A2-101B-9A16-00AA0033819A}
+HKCR,Printers\shellex\PropertySheetHandlers\CaptureConfig
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}
+
+
+[SAPNSP.Rmv.DelReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",ServiceProvider
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",Parameters
+HKLM,"SYSTEM\CurrentControlSet\Services\Winsock\Parameters",NWREDIR
+HKLM,"SYSTEM\CurrentControlSet\Control\ServiceProvider\Order\ProviderOrder",NWREDIR
+
+[NWNP32.Rmv.Fields]
+system.ini,Boot,Networks32,NWNP32
+
+;*********************************************
+;    SECURITY section
+;*********************************************
+[SECURITY.Files]
+filesec.vxd
+choosusr.dll
+mapi32.dll,,,32      ;32 flag to suppress version conflicts
+vlb32.dll
+
+;*********************************************
+;    WINPOPUP section
+;*********************************************
+[winpopup.files]
+winpopup.exe
+
+[winpopup.del.files]
+; Delete Win 3.x help files (they are copied to HELP dir now)
+winpopup.hlp
+
+[winpopup.help]
+winpopup.hlp
+winpopup.cnt
+
+[winpopup.addreg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"winpopup",,"winpopup"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\winpopup,INF,,"winpopup.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\winpopup,Section,,"Winpopup"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\winpopup,Installed,,"1"
+
+[winpopup.delreg]
+;Remove entries for Maint Mode Setup
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"winpopup"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\winpopup
+
+[WINPOPUP.Rem.Inis]
+; make sure winpopup is no longer in startup group
+setup.ini, progman.groups,, "group1=%StartUp_DESC%"         ;creates folder
+setup.ini, group1,, """%Winpopup_Desc%"""                      ;deletes link
+
+[winpopup.rmv.addreg]
+; Run Once Wrapper entry to run Group converter:
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,"%Grpconv_Desc%",,"%25%\grpconv.exe -o"
+

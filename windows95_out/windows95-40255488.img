@@ -1,0 +1,98 @@
+l the product support number
+that came with your software. You may also have problems using Typestry
+to print to a PostScript printer under Windows 95. The workaround is
+to use a non-PostScript or UniDrive printer.
+
+Ultima VI/Wing Commander CD: Because Windows 95 does not support the 
+JOIN command, you will need to run the Ultima VI/Wing Commander CD 
+from your hard drive. The procedure for doing this is outlined below 
+and in the documentation for this CD game. You will need to copy all 
+programs to your hard drive, and then run Install.exe to configure the 
+program. You will need approximately 13 MB of space for Wing Commander 
+and 5 MB of space for Ultima VI.
+
+To copy all files for either Wing Commander or Ultima VI:
+1. Click the Start menu, click Programs, and then click Explorer.
+2. Double click your CD-ROM drive.
+3. Click the icon for the folder you want to move, and then drag it 
+   to the icon for your hard disk.
+4. Run the install program from your hard drive to configure the 
+   proper video and sound options.
+
+
+XtraDrive: You must load SETVER before the file Xtradrv.sys loads. 
+
+YiJaak Graphic Suite: Some problems may occur when running Smuggler.exe 
+with Windows 95. To avoid problems:
+- Use the screen capture utility for only short periods of time.
+- Periodically restart your computer to regain system resources when 
+  running Smuggler.exe for long periods of time.
+
+For information about obtaining a Windows 95 version of this program, 
+in the United States call Inset Systems, Inc., at (800) DR-INSET. 
+Outside the United States, call (203) 740-2400.
+
+THIRD-PARTY MEMORY MANAGERS
+===========================
+
+386MAX 7.0
+----------
+Windows 95 removes the following lines from the Config.sys file during
+Setup:
+	Device=\386MAX\ExtraDOS.max pro=\386MAX\ExtraDOS.pro
+	Install=\386MAX\ExtraDOS.max
+
+If Windows 95 fails to start after Setup, try carrying out the
+following procedure:
+1. Refer to the \Manual\Readme.txt file (packaged with 386MAX) about
+   specific software and hardware incompatibilities with the 386MAX
+   software.
+2. Run the MAXIMIZE program, and then follow these steps:
+   a. After MAXIMIZE restarts your computer for the first time, press 
+      F8 when you see the "Starting Windows 95" message. 
+   b. Choose Safe Mode Command Prompt Only. 
+   c. Open your Config.sys file by using any text editor, such as 
+      MS-DOS Editor, and remove the following lines:
+	Device=\386MAX\ExtraDOS.max pro=\386MAX\ExtraDOS.pro
+	Install=\386MAX\ExtraDOS.max
+
+   d. Open your 386max.pro file, which is located in the directory 
+      where 386MAX is installed, and remove the following lines if 
+      they exist:
+	Line beginning with "PRGREG"
+	Line beginning with "HPDAREG"
+	Line beginning with "STACKREG"
+
+   e. Restart your computer.
+   f. When you see the "Starting Windows 95" message, press F8.
+   g. Choose Command Prompt Only. MAXIMIZE should continue setting up.
+   h. Each time the computer restarts, repeat steps f and g until
+      MAXIMIZE has finished.
+
+NOTE: If you see the message "ExtraDOS Error," click OK.
+
+
+386MAX v7.02, BLUEMAX v7.02, and later versions
+--------------------------------------------
+Version 7.02 and later of BLUEMAX and 386MAX were designed to run with
+Windows 95, and a free update can be obtained from Qualitas, Inc. at the
+following locations:
+
+Qualitas BBS - Dial (301) 907-8030
+Ferve - PCVENA, GO QUALITAS
+America OnLine - Keyword Qualitas
+Qualitas Customer Service - (301) 907-7400
+
+If you have version 7.02 or later of these memory managers, you do not need to
+follow the work-arounds described in the following sections.  However, if you
+install Windows 95 on a system that already has a later version of BLUEMAX or
+386MAX, you should run the MAXIMIZE utility to reinstall the ExtraDOS utility
+that Windows 95 removes during setup.
+
+
+BLUEMAX 7.0
+-----------
+Windows 95 removes the following lines from the Config.sys file during
+Setup:
+	Device=\BlueMAX\ExtraDOS.max pro=\BlueMAX\ExtraDOS.pro
+	Install=\BlueMAX\Ex

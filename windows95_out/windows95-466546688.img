@@ -1,0 +1,83 @@
+COM.AU", http://www.au.msn.com/custom/home.htm
+
+[Shop]
+djs = "David Jones", http://www.davidjones.com.au/
+myer = "Myer Grace Brothers", http://www.mel.aone.net.au/myersanta
+nc = "Newsclassifieds", http://www.newsclassifieds.com.au/
+tp = "Trading Post", http://www.tradingpost.com.au/
+wool = "Woolworth's", http://www.woolworths.com.au/	
+
+[cars]
+carp = "CarPoint", http://carpoint.msn.com/product.asp
+carnet = "CarNet", http://www.carnet.com.au/
+ford = "Ford", http://www.ford.com.au/
+hsv = "Holden Special Vehicles", http://www.hsv.com.au/
+toyota = "Toyota", http://www.toyota.com.au/
+trade = "Trading Post - Cars", http://www.tradingpost.com.au/cgi-bin/guest/search?SS=AUT
+
+[people]
+empoz = "Employment Opportunities Australia", http://www.employment.com.au/
+accu = "Email Finder", http://www.accumail.com/
+ypgs = "Yellow Pages", http://www.yellowpages.com.au/search/
+wpgs = "White Pages", http://www.whitepages.com.au/
+
+[Trav]
+ozt = "Expedia Australia", http://expedia.au.msn.com/
+curren = "Expedia Currency Converter", http://expedia.msn.com/pub/curcnvrt.dll?qscr=alcc
+getaway = "Getaway", http://www.getaway.com.au/
+
+[Intl]
+CA="Canada (CAN)", http://essentials.msn.com/International/iniSwitch.asp?from=AU&to=CA
+FR="France (FRA)", http://essentials.msn.com/International/iniSwitch.asp?from=AU&to=FR
+DE="Germany (DEU)", http://essentials.msn.com/International/iniSwitch.asp?from=AU&to=DE
+JP="Japan (JPN)", http://essentials.msn.com/International/iniSwitch.asp?from=AU&to=JP
+UK="UK && Ireland (GBR)", http://essentials.msn.com/International/iniSwitch.asp?from=AU&to=UK
+US="United States (USA)", http://essentials.msn.com/International/iniSwitch.asp?from=AU&to=US
+
+[AnE]
+Music = "Music Central", http://musiccentral.msn.com/Home.htm
+Cinem = "Cinemania", http://cinemania.msn.com/home.asp
+abc = "ABC Online", http://www.abc.net.au/
+atq = "Antiques and Art Australia", http://www.antique-art.com.au/	
+arts = "AusArts", http://online.anu.edu.au/ITA/AusArts/	
+tv = "Local TV Listings", http://www.sofcom.com.au/TV/
+imd = "Internet Movie Database", http://us.imdb.com/
+guc = "Greater Union Cinemas", http://www.greaterunion.com.au/
+hyts = "Hoyts Cinemas", http://www.sofcom.com.au/hoyts/
+vil = "Village Cinemas", http://www.village.com.au/
+
+[Ref]
+Encarta = "Encarta", http://encarta.msn.com/
+Parent = "Parent Handbook",http://parent.msn.com/
+Wine = "Wine Guide",http://vinsight.msn.com/reference/default.asp
+gov = "Australian Government", http://www.ogia.gov.au/
+legal = "Australian Legal Information Institute", http://www.austlii.edu.au/
+auswine = "Australian Wine Guide ", http://www.winetitles.com.au/wineonline.html	
+guide = "Guide to Australia", http://www.csu.edu.au/education/australia.html	
+law = "Law Foundation of NSW", http://www.fl.asn.au/
+tel = "Telstra Springboard", http://springboard.telstra.com.au/
+
+[Finance]
+asx = "Australian Stock Exchange", http://www.asx.com.au/
+epcur = "Expedia Currency Converter", http://expedia.msn.com/pub/curcnvrt.dll?qscr=alcc
+inform = "Investmentlink", http://www.investmentlink.com.au/home.htm
+Banks="Banks",[Banks]
+Race = "Racebase Mortgage", http://www.racebase.com/
+ymort = "Your Mortgage Magazine", http://www.hww.com.au/ymm/indexmsn.htm
+
+[Banks]
+b0 = "Adelaide Bank", http://www.adelaidebank.com.au/
+b1 = "Advance Bank",  http://www.advance.com.au/
+b2 = "ANZ Bank", http://www.anz.com.au/
+b3 = "Commonwealth Bank", http://www.commbank.com.au/
+b4 = "Macquarie Bank", http://www.macqbl.com.au/
+b5 = "National Australia Bank", http://www.national.com.au/
+b6 = "St.George Bank", http://www.stgeorge.com.au/
+b7 = "Westpac Banking Corporation", http://www.westpac.com.au/
+b8 = "AMP - Australian Mutual Provident Society", http://www.amp.com.au/
+b9 = "PriorityOne - AMP Direct Home Loans", http://www.priorityone.com.au/		
+ba = "Bankers Trust - funds management", http://www.btfunds.com.au/	
+bb = "AAMI - insurance, national", http://www.aami.com.au/	
+bc = "Norwich Union", http://www.norwich.com.au/	
+bd = "New England Credit Union", http://www.necu.com.au/	
+be = "SGE Cr

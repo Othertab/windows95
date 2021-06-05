@@ -1,0 +1,53 @@
+,,1995-10-24,,,,,,,,,SHARED,18368,,18368,,,
+ 6,PC_EXCLA.WAV<Inside your Computer exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,14862,,14862,,,
+ 6,PC_EXIT.WAV<Inside your Computer exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,27780,,27780,,,
+ 6,PC_MAX.WAV<Inside your Computer maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,11524,,11524,,,
+ 6,PC_MENU.WAV<Inside your Computer menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4896,,4896,,,
+ 6,PC_MENUC.WAV<Inside your Computer menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,4176,,4176,,,
+ 6,PC_MIN.WAV<Inside your Computer minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,11548,,11548,,,
+ 6,PC_QUEST.WAV<Inside your Computer question.wav>,,,,1995-10-24,,,,,,,,,SHARED,18308,,18308,,,
+ 6,PC_RESTD.WAV<Inside your Computer restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,9818,,9818,,,
+ 6,PC_RESTU.WAV<Inside your Computer restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,10100,,10100,,,
+ 6,PC_START.WAV<Inside your Computer startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,50162,,50162,,,
+ 6,PC_STOP.WAV<Inside your Computer critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,12970,,12970,,,
+
+[MT_PCinside_wav8]
+ 6,PC_ASTRX.WA8<Inside your Computer asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,5694,,5694,,,
+ 6,PC_BEEP.WA8<Inside your Computer beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,4400,,4400,,,
+ 6,PC_DEFAU.WA8<Inside your Computer default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,4772,,4772,,,
+ 6,PC_EMPTY.WA8<Inside your Computer empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,13350,,13350,,,
+ 6,PC_ERROR.WA8<Inside your Computer program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,10374,,10374,,,
+ 6,PC_EXCLA.WA8<Inside your Computer exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,8622,,8622,,,
+ 6,PC_EXIT.WA8<Inside your Computer exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,15082,,15082,,,
+ 6,PC_MAX.WA8<Inside your Computer maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,6954,,6954,,,
+ 6,PC_MENU.WA8<Inside your Computer menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,3638,,3638,,,
+ 6,PC_MENUC.WA8<Inside your Computer menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,3278,,3278,,,
+ 6,PC_MIN.WA8<Inside your Computer minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,6964,,6964,,,
+ 6,PC_QUEST.WA8<Inside your Computer question.wav>,,,,1995-10-24,,,,,,,,,SHARED,10344,,10344,,,
+ 6,PC_RESTD.WA8<Inside your Computer restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,6100,,6100,,,
+ 6,PC_RESTU.WA8<Inside your Computer restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,6242,,6242,,,
+ 6,PC_START.WA8<Inside your Computer startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,26272,,26272,,,
+ 6,PC_STOP.WA8<Inside your Computer critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,7676,,7676,,,
+
+[MT_Nature_thm]
+ 6,NATURE.THM<Nature (high color).theme>,,,,1995-10-24,,,,,,,,,SHARED,4995,,4995,,,
+
+[MT_Nature_bmp]
+ 6,NA_WALL.JPG<Nature wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,57803,,57803,,,
+ 6,NA_WALL.PAL<Nature wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,1048,,1048,,,
+ 6,NA_COMP.ICO<Nature My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 6,NA_NET.ICO<Nature Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 6,NA_RECYE.ICO<Nature Recycle Empty.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 6,NA_RECYF.ICO<Nature Recycle Full.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+
+[MT_Nature_cur]
+ 6,NA_BUSY.ANI<Nature busy.ani>,,,,1995-10-24,,,,,,,,,SHARED,11298,,11298,,,
+ 6,NA_WAIT.ANI<Nature wait.ani>,,,,1995-10-24,,,,,,,,,SHARED,15842,,15842,,,
+ 6,NA_ARROW.CUR<Nature arrow.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 6,NA_BEAM.CUR<Nature beam.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 6,NA_BUSY.CUR<Nature busy.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_CROSS.CUR<Nature cross.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_HELP.CUR<Nature help.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_MOVE.CUR<Nature move.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_NESW.CUR<Nature Size NESW.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_NO.CUR<Nature no.cur>,,,,1995-10-2

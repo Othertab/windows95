@@ -1,0 +1,162 @@
+tNumber,1,04,00,00,00
+;ring speed
+HKR,Ndi\params\RingSpeed,ParamDesc,,"Ring Speed"
+HKR,Ndi\params\RingSpeed,default,,16
+HKR,Ndi\params\RingSpeed,type,,enum
+HKR,Ndi\params\RingSpeed\enum,4,, "4 MBS"
+HKR,Ndi\params\RingSpeed\enum,16,, "16 MBS"
+HKR,NDI\params\Ringspeed,flag,1,28,00,00,00
+
+; OVERRIDE FOR 4K RAM WINDOW
+HKR,Override,0000,1,\
+;
+00,04,00,00, \
+00,00,00,00, \
+;
+; I/O Resource Descriptor
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00,0C,00, \
+00,00,00,00, \
+00,00,00,00, \
+E0,FF,20,00, \
+00,00,FF,FF, \
+00,00,00,00, \
+00,00,00,00, \
+;
+; IRQ Resource Descriptor
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00,00,00, \
+FF,FF,00,00, \
+20,00,00,00, \
+;
+; Memory Resource Descriptor 0
+;
+34,00,00,00, \
+01,00,00,00, \
+01,00,14,00, \
+00,00,00,00, \
+00,00,00,00, \
+00,00,00,00, \
+00,F0,FF,FF, \
+00,10,00,00, \
+00,00,00,00, \
+FF,FF,FF,FF, \
+00,00,00,00, \
+02,00,00,00, \
+00,00,00,00, \
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00,02,00, \
+32,32,32,02, \
+00,08,00,00, \
+00,00,00,01, \
+03, \
+;
+00,00,00,00
+
+
+[XIRCOMTOK.ndis3.CopyFiles]
+ctndw.vxd
+
+;****************************************************************************
+; XircomPE3 Xircom Pocket Ethernet 3
+;****************************************************************************
+[Xircom3.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,pe3ndis.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PE3NDIS"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"XIRCOM$"
+HKR,NDIS\NDIS2,FileName,,"pe3ndis.exe"
+HKR,NDIS\ODI,DriverName,,"pe3odi"
+HKR,NDIS\ODI,FileName,,"pe3odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"pe3ndis.ndis2"
+;HKR,Ndi\Install,odi,,"pe3odi.odi"
+HKR,Ndi\Install,ndis3,,"pe3ndis.ndis3"
+
+; Install NDIS3
+[pe3ndis.ndis2]
+CopyFiles=pe3ndis.ndis2.CopyFiles
+
+[pe3ndis.ndis3]
+CopyFiles=pe3ndis.ndis3.CopyFiles
+
+[pe3ndis.ndis2.CopyFiles]
+pe3ndis.exe
+
+[pe3ndis.ndis3.CopyFiles]
+pe3ndis.vxd
+
+; Install ODI
+[pe3odi.odi]
+CopyFiles=pe3odi.odi.CopyFiles
+[pe3odi.odi.CopyFiles]
+pe3odi.com
+
+; Custom parameters
+[Xircom3.Params]
+;HKR,,INT,1,04,00,00,00
+;HKR,NDI\params\INT,resc,1,04,00,00,00
+;HKR,NDI\params\INT,ParamDesc,,"Interrupt Level"
+;HKR,NDI\params\INT,flag,1,02,00,00,00
+HKR,NDI\params\INT,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INT,default,,7
+HKR,NDI\params\INT,type,,enum
+HKR,NDI\params\INT\enum,"5",,"5"
+HKR,NDI\params\INT\enum,"7",,"7"
+HKR,NDI\params\INT,flag,1,20,00,00,00
+
+HKR,NDI\params\IOAddress,ParamDesc,,"LPT Port or I/O Address"
+HKR,NDI\params\IOAddress,default,,"LPT1"
+HKR,NDI\params\IOAddress,type,,enum
+HKR,NDI\params\IOAddress\enum,"278",,"278"
+HKR,NDI\params\IOAddress\enum,"378",,"378"
+HKR,NDI\params\IOAddress\enum,"3BC",,"3BC"
+HKR,NDI\params\IOAddress\enum,"LPT1",,"LPT1"
+HKR,NDI\params\IOAddress\enum,"LPT2",,"LPT2"
+HKR,NDI\params\IOAddress\enum,"LPT3",,"LPT3"
+HKR,NDI\params\IOAddress,flag,1,A0,00,00,00
+HKR,NDI\params\IOAddress,ResType,1,02,00,00,00
+
+;[Xircom3.LogConfig]
+;ConfigPriority=HARDRECONFIG
+;IRQConfig=7,5
+
+;****************************************************************************
+; *pnp82c2 Xircom CE10 NDIS 3.0
+;****************************************************************************
+[*pnp82c2.ndi]
+AddReg=*pnp82c2.ndi.reg,CE10.ndi.reg,CE10.reg
+LogConfig=*pnp82c2.LogConfig
+
+[*pnp82c2.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp82c2"
+
+[*pnp82c2.LogConfig]
+IRQConfig=3,4,5,6,7,8,9,10,11,12,13,14,15
+IOConfig=20@240-39F%FFE0(3FF::)
+MemConfig=1000@C0000-E8FFF%FFFFF000
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+; *pnp82c3 Xircom CEM2 NDIS 3.0
+;****************************************************************************
+[*pnp82c3.ndi]
+AddReg=*pnp82c3.ndi.reg,CE10.ndi.reg,CEM2.reg
+LogConfi

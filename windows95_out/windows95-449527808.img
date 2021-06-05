@@ -1,0 +1,103 @@
+          0x260
+
+[NumberOfIrqs]                                  4
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                3
+[AltIrq]                                                5
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               2
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    5
+[MidiAltIrq]                                    7
+
+[NumberOfDmas]                                  2
+[Dma]                                                   1
+[AltDma]                                                3
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               4
+[MidiAddressJumper]
+[DigitalAddressJumper]
+[MidiIrqJumper]
+[MidiDmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Generic OPL4 FM Board]
+[CardId]                                                132
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [mt32mpu.adv]
+[RmDigitalDriverName]           [sbdig.adv]
+[PmMidiDriverName]                              [a32mt32.dll]
+[PmDigitalDriverName]           [a32sbdg.dll]
+
+[MidiDriverChunkNumber]                 2
+[DigitalDriverChunkNumber]              6
+
+[NumberOfMidiAddresses]                 6
+[MidiAddress]                                   0x330
+[MidiAltAddress]                                0x300
+[MidiAltAddress]                                0x310
+[MidiAltAddress]                                0x320
+[MidiAltAddress]                                0x340
+[MidiAltAddress]                                0x360
+
+[NumberOfDigitalAddresses]              6
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x210
+[DigitalAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+[DigitalAltAddress]                             0x250
+[DigitalAltAddress]                             0x260
+
+[NumberOfIrqs]                                  7
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                3
+[AltIrq]                                                4
+[AltIrq]                                                5
+[AltIrq]                                                6
+[AltIrq]                                                9
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               2
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    5
+[MidiAltIrq]                                    7
+
+[NumberOfDmas]                                  4
+[Dma]                                                   1
+[AltDma]                                                3
+[AltDma]                                                5
+[AltDma]                                                7
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               4
+[MidiAddressJumper]
+[DigitalAddressJumper]
+[MidiIrqJumper]
+[MidiDmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+[StartRecord]
+
+[CardName]                                              [Aria Type Cards]
+[CardId]                                                125
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [ariatsr.adv]
+[RmDigitalDriverName]           [ariadig.adv]
+[PmMidiDriverName]                          

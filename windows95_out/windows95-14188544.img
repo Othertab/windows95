@@ -1,0 +1,119 @@
+DI\params\xstations0,min,,0
+HKR,NDI\params\xstations0,max,,127
+HKR,NDI\params\xstations0,step,,1
+HKR,NDI\params\xstations0,optional,,1
+; xstations1
+HKR,NDI\params\xstations1,ParamDesc,,"xstations1"
+HKR,NDI\params\xstations1,flag,1,10,00,00,00
+HKR,NDI\params\xstations1,type,,int
+HKR,Ndi\params\xstations1,default,,0
+HKR,NDI\params\xstations1,min,,0
+HKR,NDI\params\xstations1,max,,127
+HKR,NDI\params\xstations1,step,,1
+HKR,NDI\params\xstations1,optional,,1
+; stations
+HKR,NDI\params\stations,ParamDesc,,"stations"
+HKR,NDI\params\stations,flag,1,10,00,00,00
+HKR,NDI\params\stations,type,,int
+HKR,Ndi\params\stations,default,,20
+HKR,NDI\params\stations,min,,1
+HKR,NDI\params\stations,max,,255
+HKR,NDI\params\stations,step,,1
+HKR,NDI\params\stations,optional,,0
+; saps
+HKR,NDI\params\saps,ParamDesc,,"saps"
+HKR,NDI\params\saps,flag,1,10,00,00,00
+HKR,NDI\params\saps,type,,int
+HKR,Ndi\params\saps,default,,3
+HKR,NDI\params\saps,min,,1
+HKR,NDI\params\saps,max,,255
+HKR,NDI\params\saps,step,,1
+HKR,NDI\params\saps,optional,,0
+; xsaps0
+HKR,NDI\params\xsaps0,ParamDesc,,"xsaps0"
+HKR,NDI\params\xsaps0,flag,1,10,00,00,00
+HKR,NDI\params\xsaps0,type,,int
+HKR,Ndi\params\xsaps0,default,,0
+HKR,NDI\params\xsaps0,min,,1
+HKR,NDI\params\xsaps0,max,,127
+HKR,NDI\params\xsaps0,step,,1
+HKR,NDI\params\xsaps0,optional,,1
+; xsaps1
+HKR,NDI\params\xsaps1,ParamDesc,,"xsaps1"
+HKR,NDI\params\xsaps1,flag,1,10,00,00,00
+HKR,NDI\params\xsaps1,type,,int
+HKR,Ndi\params\xsaps1,default,,0
+HKR,NDI\params\xsaps1,min,,1
+HKR,NDI\params\xsaps1,max,,127
+HKR,NDI\params\xsaps1,step,,1
+HKR,NDI\params\xsaps1,optional,,1
+; swap
+HKR,Ndi\params\swap,ParamDesc,,"swap"
+HKR,Ndi\params\swap,default,,1
+HKR,Ndi\params\swap,type,,enum
+HKR,Ndi\params\swap\enum,"0",,"0"
+HKR,Ndi\params\swap\enum,"1",,"1"
+HKR,NDI\params\swap,optional,,0
+; usedix
+HKR,Ndi\params\usedix,ParamDesc,,"usedix"
+HKR,Ndi\params\usedix,default,,0
+HKR,Ndi\params\usedix,type,,enum
+HKR,Ndi\params\usedix\enum,"0",,"0"
+HKR,Ndi\params\usedix\enum,"1",,"1"
+HKR,NDI\params\usedix,optional,,0
+; adaptrate
+HKR,NDI\params\adaptrate,ParamDesc,,"adaptrate"
+HKR,NDI\params\adaptrate,flag,1,10,00,00,00
+HKR,NDI\params\adaptrate,type,,int
+HKR,Ndi\params\adaptrate,default,,0
+HKR,NDI\params\adaptrate,min,,0
+HKR,NDI\params\adaptrate,max,,65535
+HKR,NDI\params\adaptrate,step,,1
+HKR,NDI\params\adaptrate,optional,,1
+; bufqelements
+HKR,NDI\params\bufqelements,ParamDesc,,"bufqelements"
+HKR,NDI\params\bufqelements,flag,1,10,00,00,00
+HKR,NDI\params\bufqelements,type,,int
+HKR,Ndi\params\bufqelements,default,,64
+HKR,NDI\params\bufqelements,min,,1
+HKR,NDI\params\bufqelements,max,,2048
+HKR,NDI\params\bufqelements,step,,1
+HKR,NDI\params\bufqelements,optional,,1
+; class1timeout
+HKR,NDI\params\class1timeout,ParamDesc,,"class1timeout"
+HKR,NDI\params\class1timeout,flag,1,10,00,00,00
+HKR,NDI\params\class1timeout,type,,int
+HKR,Ndi\params\class1timeout,default,,120
+HKR,NDI\params\class1timeout,min,,0
+HKR,NDI\params\class1timeout,max,,65535
+HKR,NDI\params\class1timeout,step,,1
+HKR,NDI\params\class1timeout,optional,,1
+; commands
+HKR,NDI\params\commands,ParamDesc,,"commands"
+HKR,NDI\params\commands,flag,1,10,00,00,00
+HKR,NDI\params\commands,type,,int
+HKR,Ndi\params\commands,default,,24
+HKR,NDI\params\commands,min,,1
+HKR,NDI\params\commands,max,,255
+HKR,NDI\params\commands,step,,1
+HKR,NDI\params\commands,optional,,1
+; dlcretries
+HKR,NDI\params\dlcretries,ParamDesc,,"dlcretries"
+HKR,NDI\params\dlcretries,flag,1,10,00,00,00
+HKR,NDI\params\dlcretries,type,,int
+HKR,Ndi\params\dlcretries,default,,8
+HKR,NDI\params\dlcretries,min,,1
+HKR,NDI\params\dlcretries,max,,65535
+HKR,NDI\params\dlcretries,step,,1
+HKR,NDI\params\dlcretries,optional,,1
+; ipackets
+HKR,NDI\params\ipackets,ParamDesc,,"ipackets"
+HKR,NDI\params\ipackets,flag,1,10,00,00,00
+HKR,NDI\params\ipackets,type,,int
+HKR,Ndi\params\ipackets,default,,24
+HKR,NDI\params\ipackets,min,,1
+HKR,NDI\params\ipackets,max,,1000
+HKR,NDI\params\ipackets,step,,1
+HKR,NDI\params\ipackets,optional,,1
+; looppackets
+HKR,NDI\params

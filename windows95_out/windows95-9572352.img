@@ -1,0 +1,91 @@
+P_36_
+4 Using The Microsoft Network = RK02_IMP_37_
+4 Using Disk Management Tools = RK02_IMP_38_
+3 Performing the Lab Test: The Details
+3 Introduction = RK02_IMP_40_
+3 Preparing the Test Site and Equipment = RK02_IMP_41_
+3 Installing Windows 95 on Test Computers = RK02_IMP_42_
+3 Testing the Installation = RK02_IMP_43_
+3 Testing the Restoration Process = RK02_IMP_44_
+3 Planning the Pilot Rollout: The Details
+3 Introduction = RK02_IMP_46_
+3 Installing the Source Files for Setup = RK02_IMP_47_
+3 Automating the Installation = RK02_IMP_48_
+3 Documenting Rollout Logistics = RK02_IMP_49_
+3 Notifying Users of the Rollout = RK02_IMP_50_
+3 Developing User Training = RK02_IMP_51_
+3 Developing the Support Plan = RK02_IMP_52_
+3 Conducting the Pilot Rollout: The Details
+3 Introduction = RK02_IMP_54_
+3 Simulating the Installation Process = RK02_IMP_55_
+3 Testing Windows 95 Performance and Capabilities = RK02_IMP_56_
+3 Surveying Users for Feedback = RK02_IMP_57_
+3 Finalizing the Rollout Plan: The Details
+3 Introduction = RK02_IMP_59_
+3 Completing the Rollout Logistics and Budget = RK02_IMP_60_
+3 Updating the Policies and Practices Guidelines = RK02_IMP_61_
+3 Creating a Template for the Rollout Database = RK02_IMP_62_
+2 Rolling Out Windows 95: The Details = RK02_IMP_63_
+1 Installation
+1 Introduction = rkp2_0_
+2 Introduction to Windows 95 Setup
+2 Introduction = RK03_SET_1_
+3 Windows 95 Setup Overview
+3 Introduction = RK03_SET_3_
+3 Quick Start for Windows 95 Setup = RK03_SET_4_
+3 New Windows 95 Setup Features = RK03_SET_5_
+3 Installation Requirements
+3 Introduction = RK03_SET_7_
+3 Operating System Requirements = RK03_SET_8_
+3 Requirements for Windows 95 Setup = RK03_SET_9_
+3 System Requirements for Windows 95 = RK03_SET_10_
+3 Partition Requirements = RK03_SET_11_
+3 Options for Windows 95 Installations
+3 Introduction = RK03_SET_13_
+3 Deciding to Run Setup from MS-DOS or Windows = RK03_SET_14_
+3 Deciding to Use Typical, Portable, Compact, or Custom Setup = RK03_SET_15_
+3 Deciding Between Local and Shared Installation = RK03_SET_17_
+3 Deciding to Use Customized or Automated Setup = RK03_SET_18_
+3 Deciding to Use Maintenance or Repair Setup = RK03_SET_19_
+2 Before Starting Windows 95 Setup = RK03_SET_20_
+3 Starting Windows 95 Setup
+3 Introduction = RK03_SET_22_
+3 Using Setup Command-Line Switches = RK03_SET_23_
+3 Beginning Windows 95 Setup and Safe Recovery = RK03_SET_24_
+3 Running Windows 95 Setup
+3 Introduction = RK03_SET_26_
+4 Gathering Information
+4 Introduction = RK03_SET_28_
+4 Choosing the Windows Directory = RK03_SET_29_
+4 Selecting the Type of Setup = RK03_SET_30_
+4 Checking Disk Space for Windows 95 = RK03_SET_31_
+4 Providing User Information = RK03_SET_32_
+3 Analyzing the Computer = RK03_SET_33_
+3 Selecting Software Components = RK03_SET_34_
+4 Selecting Network Components in Custom Setup
+4 Introduction = RK03_SET_36_
+4 Selecting the Network Client = RK03_SET_37_
+4 Selecting and Configuring a Network Adapter = RK03_SET_38_
+4 Selecting and Configuring the Network Protocols = RK03_SET_39_
+4 Selecting and Configuring a Network Service = RK03_SET_40_
+3 Specifying Computer Identification = RK03_SET_41_
+3 Changing Computer Settings in Custom Setup = RK03_SET_42_
+3 Creating a Startup Disk = RK03_SET_43_
+4 Copying Files and Completing Setup
+4 Introduction = RK03_SET_45_
+4 Setting the Local Time Zone = RK03_SET_46_
+4 Installing and Configuring a Printer = RK03_SET_47_
+4 Configuring Microsoft Exchange = RK03_SET_48_
+4 Completing Windows 95 Setup = RK03_SET_49_
+2 Server-Based Setup for Windows 95
+2 Introduction = RK04_SVR_1_
+2 Server-Based Setup: The Basics = RK04_SVR_2_
+3 Server-Based Setup: The Issues
+3 Introduction = RK04_SVR_4_
+3 Planning for Machine Directories = RK04_SVR_5_
+3 Planning for Shared Installations = RK04_SVR_6_
+2 Server-Based Setup: An Overview = RK04_SVR_7_
+3 Task 1: Copying Windows 95 Files to a Server
+3 Introduction = RK04_SVR_9_
+3 Selecting the Server = RK04_SVR_10_
+3 Setting the Destination Path and Installation Policy = RK04_SVR_11_

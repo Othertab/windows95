@@ -1,0 +1,115 @@
+rred; check status code"
+"1"="This component does not exist"
+"2"="Verification is not supported"
+"3"="Reserved"
+"4"="This component exists, but the functionality is untested"
+"5"="This component exists, but the functionality is unknown"
+"6"="This component exists, and is not functioning correctly"
+"7"="This component exists, and is functioning correctly"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  System Resources Description Group
+;
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\2]
+"Name"="System Resources Description"
+"Class"="DMTF|System Resources Description|001"
+"Description"="The System Resources Description group describes the number of entries in the System Resources Group. "
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\2\1]
+"Name"="Device Count"
+"Description"="A count of the number of different hardware devices represented in this table."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\2\2]
+"Name"="System Resource Count"
+"Description"="A count of the total number of system resources on this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+;  # of system resources can be fetched from NumRows in the rsrcs table.
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\MIF\\%ComponentID\\3\\^NumRows"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  System Resources Group
+;
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3]
+"Name"="System Resources"
+"Class"="DMTF|System Resources|001"
+"Description"="The System Resources group contains hardware descriptions which are commonly used on PC style computers such as IRQs, IO ports, and memory address ranges."
+"Key"="1,2"
+"^INDEX"=dword:00000003
+"^ROW"="1|^ROWNUM|3|4|5|6|7"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\1]
+"Name"="Device ID"
+"Description"="On systems that implement a PnP-like subsystem, the
+device ID should be the ID used by that subsystem. On systems that do
+not have inherent device numbering, then the instrumentation supporting
+the system resources group should devise a device number scheme. In
+either case, the table will naturally group all of the resources
+associated with a device."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+;  Default value - all resources are for the current component (NIC)
+"Value"="1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\2]
+"Name"="Resource Number"
+"Description"="This attribute is the ordinal of the resource within a
+device. Within the table, any device may have one or more resources."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\3]
+"Name"="Resource Type"
+"Description"="The type of system resource represented by this entry."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Resources\\ResourceType"
+"!0"="B;IN(1,3)(2,4)(3,6)(4,5)"
+;  			Instr enum
+;  Memory range		1
+;  I/O port			2
+;  DMA			3
+;  IRQ			4
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Memory Range"
+"4"="I/O Port"
+"5"="IRQ"
+"6"="DMA"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\4]
+"Name"="Resource Base"
+"Description"="The starting address of the system resource in the
+appropriate address space."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Resources\\ResourceBase"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\3\5]
+"Name"="Resource Size"
+"Description"="The size of the system resource."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="H

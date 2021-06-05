@@ -1,0 +1,102 @@
+se on each desktop 
+computer. Then, each time you connect your portable to a docking station,
+the Briefcase on the desktop computer synchronizes the files. 
+
+[Creating a Second Undocked Configuration]
+To create a second, undocked configuration for your portable (for example,
+one configuration has a printer and the other does not), follow these steps:
+
+1. Make sure your computer is in the configuration you want, and then use 
+   the right mouse button to click the My Computer icon. 
+2. Click Properties, and then click the Configuration tab.
+3. Select the undocked configuration, and then choose Copy. 
+4. Select the new configuration and give it a unique name. 
+5. Go to Device Manager and click Refresh. This will re-enumerate all the 
+   hardware devices on your system and build the new configuration.
+
+[Viewing Remaining Battery Life of Laptop]
+For computers with APM functionality, click the Battery icon on the 
+taskbar to view a detailed battery meter.
+
+
+Multimedia and Sound
+---------------------
+
+To remove Auto Run when an audio CD is inserted, hold down the Shift key
+when you insert the CD-ROM, or make the following changes:
+
+1. Open a folder (for example, My Computer).
+2. On the View menu, click Options, and then click File Types.
+3. Click AudioCD, and then click Edit.
+4. In the Action list, click Play.
+5. Click Set Default to turn off Auto Run.
+
+Note: If the Play command is bold, the CD will play when it is inserted, 
+if Play is not bold, it will not.
+
+[Opening the Media Player From an AVI]
+When an AVI file is playing, you can open Media Player by double-clicking
+the title bar of the AVI. Double-click the Media Player title bar to exit.
+
+[Master Volume Icon]
+You can put a master volume control on the taskbar by following these
+steps:
+
+1. In Control Panel, double-click the Multimedia icon.
+2. Click the Audio tab, and then click Show Volume Control on the taskbar.
+3. Click the volume (speaker) icon on the taskbar to open the master volume
+   control. Double-click the volume (speaker) icon to open Volume Control.
+
+[Cache Size for CD-ROMs]
+You can set the cache size for CD-ROMs via the System icon in Control Panel.
+ 
+1. Double click the System icon in Control Panel, and then click the
+   Performance tab.
+2. Click File System to view the CD-ROM optimization control.
+
+[Assigning Sounds to Events]
+To assign sounds to events, double-click the Sounds icon in Control Panel.
+
+
+Network
+-------
+
+[Hints]
+Instead of connecting a drive letter to a network share, put shortcuts
+to those shares on your desktop or Start menu (for example, add a shortcut 
+to \\documents\user\dave instead of redirecting this share to drive Z). 
+This way, network shares are only connected when needed. 
+
+If you work in a group, you may want to keep a folder on a public server for
+shortcuts to useful network locations. Interested individuals can 
+keep a shortcut to this folder on their desktop for quick access.
+
+[Searching for a File on a Remote Server]
+1. Click the Start button, point to Find, and then click Files or Folders.
+2. Enter the file name in the Named box.
+3. Enter the path in the Look In box, and then press Enter.
+
+[Easy Access to Network Information]
+Add shortcuts to network locations in Network Neighborhood. They'll stay
+there when you're logged off the network and will cascade to Dial-Up 
+Networking features as long as they are installed.
+
+[Easy Connection to a Network Server/Share]
+Click the Start button, click Run, and then enter the UNC path. For example, 
+entering \\server will open a window showing shared resources for the 
+computer named server. Entering \\server\share\direct opens the folder
+named direct on the \\server\share share point.
+
+[Easy Access to Network Properties]
+Use the right mouse button to click Network Neighborhood to view network 
+properties.
+
+
+Run Dialog Box
+---------------
+
+[Via the Keyboard]
+Press CTRL+ESC+R to open the Run dialog box.
+On a Microsoft Natural Keyboard, press Win+R to open the Run dialog box. 
+
+[Opening a

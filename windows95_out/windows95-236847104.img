@@ -1,0 +1,63 @@
+t Lists=Overview_Lists
+3 Creating Lists
+4 To create a bulleted list=LISTS_create_bulleted@frontpg.HLP>(w95sec)
+4 To create a definition list=LISTS_create_definition@frontpg.HLP>(w95sec)
+4 To create a directory list=LISTS_create_directory@frontpg.HLP>(w95sec)
+4 To create a list within a list=LISTS_list_within_list@frontpg.HLP>(w95sec)
+4 To create a menu list=LISTS_create_menu@frontpg.HLP>(w95sec)
+4 To create a numbered list=LISTS_create_numbered@frontpg.HLP>(w95sec)
+3 Deleting Lists and List Items
+4 To delete a list=LISTS_delete
+4 To delete a list item=LISTS_delete_list_items@frontpg.HLP>(w95sec)
+3 Other List Procedures
+4 To add extended attributes to a list=LISTS_add_extended_attributes@frontpg.HLP>(w95sec)
+4 To change a list type=LISTS_change_list_types@frontpg.HLP>(w95sec)
+4 To end a list=LISTS_end_list@frontpg.HLP>(w95sec)
+4 To insert a list item=LISTS_insert_list_items@frontpg.HLP>(w95sec)
+4 To open the List Properties Dialog Box=LISTS_open_list_properties_dialog_box@frontpg.HLP>(w95sec)
+4 To select a list=LISTS_select_a_list@frontpg.HLP>(w95sec)
+2 Working With Files
+3 About Files=Overview_Files
+3 Opening Files
+4 To open a file from the FrontPage Explorer=FILES_open_file_from_explorer@frontpg.HLP>(w95sec)
+4 To open a text file from the FrontPage Editor=FILE_open_text_from_editor@frontpg.HLP>(w95sec)
+4 To open an HTML file from the FrontPage Editor=FILE_open_html_from_editor@frontpg.HLP>(w95sec)
+4 To open an RTF file from the FrontPage Editor=FILE_open_rtf_from_editor@frontpg.HLP>(w95sec)
+3 Inserting Files
+4 To insert a  text file=FILE_insert_text@frontpg.HLP>(w95sec)
+4 To insert an HTML file=FILE_insert_html@frontpg.HLP>(w95sec)
+4 To insert an RTF file=FILE_insert_rtf@frontpg.HLP>(w95sec)
+3 Associating Files With Editors
+4 To associate a file type with an editor=FILE_associate_with_editor@frontpg.HLP>(w95sec)
+4 To change the associated editor for a file type=FILE_associate_with_editor_change@frontpg.HLP>(w95sec)
+4 To remove the association between an editor and a file type=FILE_associate_with_editor_remove@frontpg.HLP>(w95sec)
+3 Importing and Exporting Files
+4 To export a page or file from a web=WEB_exporting_from@frontpg.HLP>(w95sec)
+4 To import files to the web=FILE_import@frontpg.HLP>(w95sec)
+3 Renaming Files
+4 To change a file's page URL=FILE_change_url@frontpg.HLP>(w95sec)
+4 To change a file's title=FILE_change_title@frontpg.HLP>(w95sec)
+4 To move a file=FILE_move@frontpg.HLP>(w95sec)
+2 Creating and Using Links and Bookmarks
+3 About Links and Bookmarks=Overview_Links_Bookmarks
+3 Creating Text Links
+4 To create a text link from the FrontPage Explorer=LINK_create_from_explorer@frontpg.HLP>(w95sec)
+4 To create a text link to a new page=LINK_create_new_page@frontpg.HLP>(w95sec)
+4 To create a text link to a page in the World Wide Web=LINK_create_world_wide_web@frontpg.HLP>(w95sec)
+4 To create a text link to a page in the current web=LINK_create_current_web@frontpg.HLP>(w95sec)
+4 To create a text link to an open page=LINK_create_open_page@frontpg.HLP>(w95sec)
+3 Creating Image Links
+4 To create an image link to a new page=LINK_image_new_page@frontpg.HLP>(w95sec)
+4 To create an image link to a page in the World Wide Web=LINK_image_world_wide_web@frontpg.HLP>(w95sec)
+4 To create an image link to a page in the current web=LINK_image_current_web@frontpg.HLP>(w95sec)
+4 To create an image link to an open page=LINK_image_open_page@frontpg.HLP>(w95sec)
+3 Following Links
+4 To follow a link backward=LINK_follow_link_back@frontpg.HLP>(w95sec)
+4 To follow a text link forward=LINK_follow_link_text@frontpg.HLP>(w95sec)
+4 To follow an image link forward=LINK_follow_link_hotspot@frontpg.HLP>(w95sec)
+4 To stop a following a link=LINK_stop_following@frontpg.HLP>(w95sec)
+3 Deleting and Changing Links
+4 To change a text link=LINK_changing_from_text@frontpg.HLP>(w95sec)
+4 To change an image link=LINK_changing_from_hotspot@frontpg.HLP>(w95sec)
+4 To delete an entire text link=LINK_text_delete_entire@frontpg.HLP>(w95sec)
+4 To delete an image link=LINK_hotspot_delete@frontpg.HLP>(w9

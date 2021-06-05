@@ -1,0 +1,93 @@
+C2]
+ConfigPriority=NORMAL
+IOConfig=201-201(FFFF::)                                  ; 00 JOYSTICK
+IOConfig=9A01-9A01(FFFF::)                                ; 01 MVSOUND
+IOConfig=388-38B(FFFF::)                                  ; 02 MVSOUND
+IOConfig=B88-B8B(FFFF::)                                  ; 03 MVSOUND
+IOConfig=F88-F8B(FFFF::)                                  ; 04 MVSOUND
+IOConfig=1388-138B(FFFF::)                                ; 05 MVSOUND
+IOConfig=8388-838B(FFFF::)                                ; 06 MVSOUND
+IOConfig=BF88-BF8B(FFFF::)                                ; 07 MVSOUND
+IOConfig=F388-F38B(FFFF::)                                ; 08 MVSOUND
+IRQConfig=3 , 4,  5 , 7 , 9 , 10 , 11 , 12 , 14 , 15      ; 09 MVSOUND
+DMAConfig=0 , 1 , 3 , 5 , 6 , 7                           ; 0A MVSOUND
+IOConfig=210-21F,220-22F,230-23F,240-24F,250-25F,260-26F  ; 0B MVTB
+IRQConfig=3 , 5 , 7 , 9                                   ; 0C MVTB
+DMAConfig=1                                               ; 0D MVTB
+
+[PNPB00D_Device.HW]
+AddReg=PNPB00D.RegHW
+
+[PNPB00D.RegHW]
+HKR,Child0000,HardwareID,,MF\PNPB00D_Dev0
+HKR,Child0000,ResourceMap,1,01,02,03,04,05,06,07,08,09,0A
+HKR,Child0001,HardwareID,,MF\PNPB00D_Dev1
+HKR,Child0001,ResourceMap,1,0B,0C,0D
+HKR,Child0001,MFFlags,1,02,00,00,00
+HKR,Child0002,HardwareID,,MF\PNPB00D_Dev2
+HKR,Child0002,ResourceMap,1,00
+
+;---------------------------------------------------------------;
+
+[PNPB00E_Device]
+DelFiles=PAS.DelList
+LogConfig=*PNPB00E.LC1,*PNPB00E.LC2,*PNPB00E.LC3
+AddReg=MediaMF.Reg,PASMF.AddReg
+CopyFiles=TMV1.CopyList,PASMF.CopyList
+UpdateInis=ProAudioSpectrum.UpdateInis, SB.UpdateInis, MVFilter.AddReg
+UpdateIniFields=Drivers.fields
+
+[PNPB00E_Device.FactDef]
+ConfigPriority=NORMAL
+IOConfig=201-201
+IOConfig=9A01-9A01
+IOConfig=388-38B
+IOConfig=B88-B8B
+IOConfig=F88-F8B
+IOConfig=1388-138B
+IOConfig=8388-838B
+IOConfig=BF88-BF8B
+IOConfig=F388-F38B
+IRQConfig=7
+DMAConfig=5
+IOConfig=1F88-1F8B
+IOConfig=3F88-3F8B
+IOConfig=4388-438B
+IOConfig=5F88-5F8B
+IRQConfig=12
+IOConfig=220-22F
+IRQConfig=5
+DMAConfig=1
+
+[*PNPB00E.LC1]
+ConfigPriority=NORMAL
+IOConfig=201-201(FFFF::)                                  ; 00 JOYSTICK
+IOConfig=9A01-9A01(FFFF::)                                ; 01 MVSOUND
+IOConfig=388-38B(FFFF::)                                  ; 02 SCSI/MVSOUND
+IOConfig=B88-B8B(FFFF::)                                  ; 03 MVSOUND
+IOConfig=F88-F8B(FFFF::)                                  ; 04 MVSOUND
+IOConfig=1388-138B(FFFF::)                                ; 05 MVSOUND
+IOConfig=8388-838B(FFFF::)                                ; 06 SCSI/MVSOUND
+IOConfig=BF88-BF8B(FFFF::)                                ; 07 SCSI/MVSOUND
+IOConfig=F388-F38B(FFFF::)                                ; 08 MVSOUND
+IRQConfig=3 , 4,  5 , 7 , 9 , 10 , 11 , 12 , 14 , 15      ; 09 MVSOUND
+DMAConfig=0 , 1 , 3 , 5 , 6 , 7                           ; 0A MVSOUND
+IOConfig=1F88-1F8B(FFFF::)                                ; 0B SCSI
+IOConfig=3F88-3F8B(FFFF::)                                ; 0C SCSI
+IOConfig=4388-438B(FFFF::)                                ; 0D SCSI
+IOConfig=5F88-5F8B(FFFF::)                                ; 0E SCSI
+
+[*PNPB00E.LC2]
+ConfigPriority=NORMAL
+IOConfig=201-201(FFFF::)                                  ; 00 JOYSTICK
+IOConfig=9A01-9A01(FFFF::)                                ; 01 MVSOUND
+IOConfig=388-38B(FFFF::)                                  ; 02 SCSI/MVSOUND
+IOConfig=B88-B8B(FFFF::)                                  ; 03 MVSOUND
+IOConfig=F88-F8B(FFFF::)                                  ; 04 MVSOUND
+IOConfig=1388-138B(FFFF::)                                ; 05 MVSOUND
+IOConfig=8388-838B(FFFF::)                                ; 06 SCSI/MVSOUND
+IOConfig=BF88-BF8B(FFFF::)                                ; 07 SCSI/MVSOUND
+IOConfig=F388-F38B(FFFF::)                                ; 08 MVSOUND
+IRQConfig=3 , 4,  5 , 7 , 9 , 10 , 11 , 12 , 14 , 15      ; 09 MVSOUND
+DMAConfig=0 , 1 , 3 , 5 , 6 , 7                           ; 0A MVSOUND
+IOConfig=1

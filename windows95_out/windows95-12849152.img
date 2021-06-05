@@ -1,0 +1,179 @@
+.HLP
+ONLSTMT.HLP
+W_MSN.CNT
+W_MSN.HLP
+W_MSN2.CNT
+W_MSNOV.CNT
+W_MSNOV.HLP
+W_OLREG.CNT
+
+[Old_PFMSN_Files]
+CCAPI.DLL
+CONFAPI.DLL
+DUNZIPNT.DLL
+DZIPNT.DLL
+FINDLVCL.EXE
+FTMAPI.DLL
+IMCLIENT.DLL
+LGINT.DLL
+MAILMSG.DLL
+MAILUTIL.DLL
+MCM.DLL
+MOSABP32.DLL
+MOSCFG32.DLL
+MOSCC.DLL
+MOSCL.DLL
+MOSCUDLL.DLL
+MOSMISC.DLL
+MOSRXP32.DLL
+MSN.MSN
+;;; needed by other apps - don't delete ;;; MVCL13N.DLL
+MVPR13N.DLL
+MVTTL13C.DLL
+REG.DLL
+SVCPROP.DLL
+THEMIC~1.{00
+TREENVCL.DLL
+WELCOME.SHG
+
+[Old_Desktop_Files]
+DESKTOP.MSN
+MSN.MSN
+THEMIC~1.{00
+
+; ********************************************************************
+; [BaseWin_XXX_Files]
+;
+; These sections list all the files which are part of the base Windows
+; installation.  This is the bare minimum set to support Online
+; Registration of Win95.
+; This is a very polite section, always respecting the version of
+; newer components with version stamps, and never writing
+; over files without version stamps.
+; ********************************************************************
+
+; ********************************************************************
+; [Marvel_Copy_Files], [Marvel_Help], [Marvel_WinSys_Files]
+;
+; These sections list all files which are installed as part of the
+; optional component for MSN. These are all marked to silently
+; leave later versions on the user's computer (in the case of
+; binaries) or not replace (in the case of non-binaries).
+; ********************************************************************
+
+; NOTE: The order of these sections is very important for automated
+; setup scripting to work.  Please do not change them.
+
+[BaseWin_RegWiz_Files]
+PRODINV.DLL,,,32
+REGWIZ.EXE,,,32
+
+[BaseWin_MSN_Files]
+800950.DAT,,,16
+BILLADD.DLL,,,32
+CCDIALER.EXE,,,32
+CCEI.DLL,,,32
+CCPSH.DLL,,,32
+ENGCT.EXE,,,32
+GUIDE.EXE,,,32
+MOSCOMP.DLL,,,32
+MOSCP.EXE,,,32
+MPCCL.DLL,,,32
+MSNVER.TXT,,,16
+PHONE.PBK,,,16
+SUUTIL.DLL,,,32
+SIGNUP.EXE,,,32
+;;MSNSIG13.EXE,,,32
+STATE.PBK,,,16
+
+[BaseWin_WinSys_Files]
+CCAPI.DLL,,,32
+DUNZIPNT.DLL,,,32
+FTMAPI.DLL,,,32
+MCM.DLL,,,32
+MOSCC.DLL,,,32
+MOSCL.DLL,,,32
+MOSCUDLL.DLL,,,32
+MOSMISC.DLL,,,32
+MSNSSPC.DLL,,,32
+;;SEC_SSPI.DLL,,,32
+SVCPROP.DLL,,,32
+TREENVCL.DLL,,,32
+
+[BaseWin_OLS_Files]
+;MSNINST.EXE,,,32
+
+[BaseWin_WinHelp_Files]
+MSN.HLP,,,16
+MSNINT.HLP,,,16
+MSNPSS.HLP,,,16
+
+[Marvel_Copy_Files]
+
+[Marvel_WinSys_Files]
+
+[Marvel_Help]
+
+; ********************************************************************
+; [Uninstall.v1_Xxx]
+;
+; Restores the version 1.0 online registration file set.  These lists
+; are the same as the BaseWin lists, but these lists are marked with
+; the VNLP_NOVERCHECK (0x0004) flag so version stamping is ignored.
+; These sections are used when uninstalling MSN only.
+; ********************************************************************
+
+[Uninstall.v1_RegWiz]
+PRODINV.DLL,,,4
+REGWIZ.EXE,,,4
+
+[Uninstall.v1_PFMSN]
+800950.DAT,,,4
+BILLADD.DLL,,,4
+CCDIALER.EXE,,,4
+CCEI.DLL,,,4
+CCPSH.DLL,,,4
+ENGCT.EXE,,,4
+GUIDE.EXE,,,4
+MOSCOMP.DLL,,,4
+MOSCP.EXE,,,4
+MPCCL.DLL,,,4
+MSNVER.TXT,,,4
+PHONE.PBK,,,4
+SUUTIL.DLL,,,4
+SIGNUP.EXE,,,4
+;;MSNSIG13.EXE,,,4
+STATE.PBK,,,4
+
+[Uninstall.v1_WinSys]
+CCAPI.DLL,,,4
+DUNZIPNT.DLL,,,4
+FTMAPI.DLL,,,4
+MCM.DLL,,,4
+MOSCC.DLL,,,4
+MOSCL.DLL,,,4
+MOSCUDLL.DLL,,,4
+MOSMISC.DLL,,,4
+MSNINST.EXE,,,4
+;;SEC_SSPI.DLL,,,4
+SVCPROP.DLL,,,4
+TREENVCL.DLL,,,4
+
+[Uninstall.v1_WinHelp]
+MSN.HLP,,,4
+MSNINT.HLP,,,4
+MSNPSS.HLP,,,4
+
+[BaseWin_UpdateInis]
+; system.ini,section,"old_line","new_line"
+
+; Create "group#" pointers to Start menu folders
+setup.ini, progman.groups,, "group0="
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, progman.groups,, "desktop=""..\..\%Shared_Desktop%"""
+
+; Create online registration shortcut in Accessories (group4) folder
+setup.ini, group4,, """%OLR_Link_Desc%"", ""%11%\regwiz.exe /i software\microsoft\windows\currentversion"""
+
+; changed to point to MSNINST.exe (the program formerly known as msnlaunch.exe)
+; Create link on desktop to the MSN/Exchange installer EXE in OLS dir

@@ -1,0 +1,151 @@
+f,161",
+win.ini,FontSubstitutes,"Tms Rmn,0=MS Serif,161",
+win.ini,FontSubstitutes,"MS Shell Dlg,161=MS Sans Serif,161",
+win.ini,FontSubstitutes,"MS Shell Dlg,0=MS Sans Serif,161",
+
+[ttfonts.inis]
+win.ini,fonts,,"Arial (TrueType)=ARIAL.TTF"
+win.ini,fonts,,"Arial %Bold% (TrueType)=ARIALBD.TTF"
+win.ini,fonts,,"Arial %Bold.Italic% (TrueType)=ARIALBI.TTF"
+win.ini,fonts,,"Arial %Italic% (TrueType)=ARIALI.TTF"
+win.ini,fonts,,"Courier New (TrueType)=COUR.TTF"
+win.ini,fonts,,"Courier New %Bold% (TrueType)=COURBD.TTF"
+win.ini,fonts,,"Courier New %Bold.Italic% (TrueType)=COURBI.TTF"
+win.ini,fonts,,"Courier New %Italic% (TrueType)=COURI.TTF"
+win.ini,fonts,,"Times New Roman (TrueType)=TIMES.TTF"
+win.ini,fonts,,"Times New Roman %Bold% (TrueType)=TIMESBD.TTF"
+win.ini,fonts,,"Times New Roman %Bold.Italic% (TrueType)=TIMESBI.TTF"
+win.ini,fonts,,"Times New Roman %Italic% (TrueType)=TIMESI.TTF"
+win.ini,fonts,,"WingDings (TrueType)=WINGDING.TTF"
+win.ini,fonts,,"Symbol (TrueType)=SYMBOL.TTF"
+win.ini,fonts,,"Modern (Plotter)=MODERN.FON"
+
+; delete this line:
+win.ini,fonts,"MS Console (TrueType)="
+
+[FontSubs]
+win.ini,FontSubstitutes,,"Helv=MS Sans Serif"
+win.ini,FontSubstitutes,,"Tms Rmn=MS Serif"
+win.ini,FontSubstitutes,"Courier=Courier New",         ; Delete this entry
+win.ini,FontSubstitutes,,"Times=Times New Roman"
+win.ini,FontSubstitutes,,"Helvetica=Arial"
+win.ini,FontSubstitutes,,"MS Shell Dlg=MS Sans Serif"
+
+; Copy.Files References
+
+[MS_SMALL_CopyFiles]
+vgasys.fon,,,8
+vgafix.fon,,,8
+vgaoem.fon,,,8
+sserife.fon,,,8
+serife.fon,,,8
+coure.fon,,,8
+symbole.fon,,,8
+smalle.fon,,,8
+
+[MS_SMALL_DelFiles]
+;Delete these from the Sys Dir since they're now copied to the Fonts Folder
+vgasys.fon
+vgafix.fon
+vgaoem.fon
+sserife.fon
+serife.fon
+coure.fon
+symbole.fon
+smalle.fon
+
+[MS_LARGE_CopyFiles]
+8514sys.fon,,,8
+8514fix.fon,,,8
+8514oem.fon,,,8
+sseriff.fon,,,8
+seriff.fon,,,8
+courf.fon,,,8
+symbolf.fon,,,8
+smallf.fon,,,8
+
+;****************************************************
+;*** This section added for MultiLanguage Support ***
+;****************************************************
+
+[BalticNLSFiles]
+cp_1257.nls,,,1
+
+[BalticKbds]
+kbdes.kbd          ;Estonian
+kbdlt.kbd          ;Lithuanian
+kbdlv.kbd          ;Latvian
+kbdlv1.kbd         ;Latvian (Latin)
+
+[CENLSFiles]
+cp_1250.nls,,,1
+
+[CEKbds]
+kbdal.kbd          ;Albanian
+kbdcr.kbd          ;Croatian
+kbdcz.kbd          ;Czech
+kbdcz1.kbd         ;Czech 101
+kbdhu.kbd          ;Hungarian
+kbdhu1.kbd         ;Hungarian 101
+kbdpl.kbd          ;Polish
+kbdpl1.kbd         ;Polish Programmers
+kbdro.kbd          ;Romanian
+kbdsl.kbd          ;Slovak
+kbdsl1.kbd         ;Slovak 101
+kbdsv.kbd          ;Slovenian
+
+[CyrillicNLSFiles]
+cp_1251.nls,,,1
+
+[CyrillicKbds]
+kbdblr.kbd         ;Belarusian
+kbdbul.kbd         ;Bulgarian (Latin)
+kbdbll.kbd         ;Bulgarian (Cyrillic)
+kbdru.kbd          ;Russian
+kbdru1.kbd         ;Russian (Typewriter)
+kbdur.kbd          ;Ukrainian
+kbdycc.kbd         ;Serbian (Cyrillic)
+kbdycl.kbd         ;Serbian (Latin)
+
+[GreekNLSFiles]
+cp_1253.nls,,,1
+
+[GreekKbds]
+kbdgk.kbd          ;Greek
+kbdgkl.kbd         ;Greek Latin
+kbdgk220.kbd       ;Greek 220
+kbdgk319.kbd       ;Greek 319
+kbdgl220.kbd       ;Greek Latin 220
+kbdgl319.kbd       ;Greek Latin 319
+
+[TurkishNLSFiles]
+cp_1254.nls,,,1
+
+[TurkishKbds]
+kbdtuf.kbd         ;Turkish (F type)
+kbdtuq.kbd         ;Turkish (Q type)
+
+;** END MultiLanguage Support
+
+[MS_LARGE_DelFiles]
+;Delete these from the Sys Dir since they're now copied to the Fonts Folder
+8514sys.fon
+8514fix.fon
+8514oem.fon
+sseriff.fon
+seriff.fon
+courf.fon
+symbolf.fon
+smallf.fon
+
+[MS_FONTSIZE_DelReg]
+HKLM,%KEY_FontSize%,96
+HKLM,%KEY_FontSize%,120
+HKLM,%KEY_FontSize%\96\system
+
+[MS_FONTSIZE_AddReg]
+HKLM,%KEY_FontSize%\96,Description,,%Small.Desc%
+HKLM,%KEY_FontSize%\96\System,vgasys.fon,,fonts.fon
+HKLM,%KEY_FontSize%\96\System,vgafix.fon,,fixedfon.fon
+HKLM,%KEY_FontSize%\96\System,vgaoem.fon,,oemfonts.fon
+HKLM,%KEY_FontSize%\96\User,serife.fon,,%Small.S

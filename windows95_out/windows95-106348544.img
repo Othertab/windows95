@@ -1,0 +1,89 @@
+frared Device Wizard prompts you to choose a 
+   manufacturer's name for the IR device:
+
+   - If the computer has a built-in device, choose Standard Infrared 
+     Devices)
+   - If an IR adapter is attached to the computer, choose the name 
+     of the manufacturer and the model of the adapter.
+
+   Then click Next.
+
+5. When the Add Infrared Device Wizard prompts you to choose the 
+   communications port that the IR device is physically connected to, 
+   click the port in the list. If you are uncertain which physical 
+   communications port the IR device is using, select the first COM 
+   port in the list (for example, COM1). Then click Next.
+
+6. When the Add Infrared Device Wizard prompts you to select the 
+   virtual COM and LPT ports, accept the default values by clicking 
+   Next. After the wizard copies the IR communications driver files 
+   to the hard disk, watch for the wizard to display two New Hardware 
+   Found messages.
+
+7. When you are prompted by the Add Infrared Device Wizard, click 
+   Finish to complete the IR device installation. If the wizard did 
+   not display New Hardware Found messages as it carried out step 4, 
+   then restart the computer. (If the New Hardware Found messages were 
+   displayed, there is no need to restart the computer).
+
+8. Activate the IR device by double-clicking the Infrared icon in 
+   Control Panel. If there is no Infrared icon in Control Panel, then 
+   either click the View menu and then click Refresh, or press F5 to 
+   make the Infrared icon appear.
+
+For general information about how to use the Infrared Monitor, click 
+the Help button in the lower-right corner of the Infrared Monitor 
+screen. For information about specific items in a dialog box, such as 
+check boxes, right-click the item, and then click the "What's this?" 
+command.
+
+The Options tab of the Infrared Monitor interface contains the 
+following two particularly useful items:
+
+- The Enable Infrared Communication On check box, which enables and 
+  disables the IR device.
+
+- The Limit Connection Speed To option, which limits the link speed 
+  the IR device can negotiate. 
+
+   The Limit Connection Speed To option might be used if an adapter 
+   is attached to a COM port that is using an 8250 UART instead of a 
+   16550 UART, or if an adapter is connected to a relatively slow 
+   computer (such as a 386 running at 20 MHz). In these cases, this 
+   option can be used to limit the connection speed to 19.2 kbps.
+
+Step 2: Validating the IR Communications Driver Installation
+------------------------------------------------------------
+You can use any of the following methods to validate the IR 
+communications driver installation:
+
+- Print from a program over an IR link to the printer (if an IR-capable 
+  printer is available),
+
+- Exchange data between two IR-capable computers over an IR link, using 
+  a communications program.
+
+- View the computer's Network Neighborhood over an IR link (if an IrLan 
+  access point device is available).
+
+Printing to an IR-Capable Printer:
+
+To test the printing capability of a Windows 95 program over an IR link 
+to an IrDA-compliant printer, carry out the following steps:
+
+- Make sure the IR communications driver is installed on the computer.
+- Make sure the printer driver for the IR-capable printer is installed 
+  on the computer.
+- Try the Print option in a program.
+
+Printers without built-in IR ports can be made IR-capable by connecting 
+an IR adapter made for printers into the printer's parallel port. An 
+example of an IR adapter for printers is the Extended Systems JetEye 
+Infrared Printer Port ESI-9580. If a parallel cable is also used to 
+connect the computer to the IR printer adapter, you can use either the 
+IR link or the parallel cable to print. The IR link is used when you 
+select the virtual parallel port; the cable is used when you select the 
+physical parallel port.
+
+To validate the IR link to the printer, make sure the correct printer 
+driver is installed for the IR-capable printer. (Most

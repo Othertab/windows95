@@ -1,0 +1,55 @@
+on",,,"%11%\shell32.dll,1"
+HKCR,".3in",,,"3INfile"
+HKCR,".NAV",,,"NAVfile"
+HKCR,"NAVfile",,,"%MSN_App_Extension%"
+HKCR,"NAVfile","AlwaysShowExt",," "
+HKCR,"NAVfile\Shell",,," "
+HKCR,"NAVfile\DefaultIcon",,,"%11%\SHELL32.DLL,0"
+HKCR,".NED",,,"NEDfile"
+HKCR,"NEDfile",,,"%MSN_App_Extension%"
+HKCR,"NEDfile","AlwaysShowExt",," "
+HKCR,"NEDfile\Shell",,," "
+HKCR,"NEDfile\DefaultIcon",,,"%11%\SHELL32.DLL,0"
+HKCR,".MNF",,,"MSN_Find"
+HKCR,"MSN_Find",,,"%Saved_MSN_Search%"
+HKCR,"MSN_Find\DefaultIcon",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNFIND.EXE,0"
+HKCR,"MSN_Find\Shell\Open\Command",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNFIND.EXE %%1"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\FTMCL.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\FTMCL.EXE"
+HKLM,"Software\Microsoft\MOS\Applications\App #1","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsnav.nav"
+HKLM,"Software\Microsoft\MOS\Applications\App #1","Friendly name",,"Directory_Service"
+HKLM,"Software\Microsoft\MOS\Applications\App #1","Node Editor App #",1,12,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #2","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\bbsnav.nav"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #2","Friendly name",,"BBS_Service"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #2","Node Editor App #",1,13,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #3","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\guidenav.nav"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #3","Friendly name",,"Guide_Service"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #3","Node Editor App #",1,1C,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #4","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\textchat.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #4","Friendly name",,"TextConference"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #4","Node Editor App #",1,14,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #5","Friendly name",,"WhatsNew"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #5","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #6","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\mosview.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #6","Friendly name",,"Media_Viewer"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #6","Node Editor App #",1,15,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #7","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dnr.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #7","Friendly name",,"Down_Load_And_Run"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #7","Node Editor App #",1,16,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #8","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\hellocla.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #8","Friendly name",,"hellocla"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #8","Node Editor App #",1,17,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #9","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\helloclb.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #9","Friendly name",,"helloclb"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #9","Node Editor App #",1,18,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #10","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\bbsnav.nav"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #10","Friendly name",,"BBS_Internet_Service"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #10","Node Editor App #",1,19,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #11","Friendly name",,"Encarta"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #11","Node Editor App #",1,1A,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #11","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\encart95.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #12","Friendly name",,"Bookshelf"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #12","Node Editor App #",1,1B,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #12","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\bshelf.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #13","Friendly name",,"CoreHelp"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #13","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\M

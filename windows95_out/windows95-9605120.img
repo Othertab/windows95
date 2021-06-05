@@ -1,0 +1,93 @@
+e Start and Programs menus = RK22_APP_12_
+3 Using the Windows 3.x Program Manager with Windows 95 = RK22_APP_13_
+3 Closing Failed Programs = RK22_APP_14_
+3 Configuring MS-DOS-Based Applications
+3 Introduction = RK22_APP_16_
+3 Changing MS-DOS-Based Application Properties (PIF Files) = RK22_APP_17_
+3 Changing Memory Settings for MS-DOS-Based Applications = RK22_APP_18_
+3 Setting Properties for MS-DOS-Based Applications = RK22_APP_19_
+3 Setting Paths for MS-DOS-Based Applications = RK22_APP_20_
+3 Understanding the APPS.INF File = RK22_APP_21_
+2 Using OLE to Share Data Between Applications  = RK22_APP_22_
+3 Technical Notes on Application Support
+3 Introduction = RK22_APP_24_
+4 System Changes Affecting Application Support
+4 Support for Win32-Based Applications = RK22_APP_26_
+4 Support for Win16-Based Applications = RK22_APP_27_
+4 Support for MS-DOS-Based Applications = RK22_APP_28_
+4 How Windows 95 Accommodates Application Problems
+4 Introduction = RK22_APP_30_
+4 Running TSRs = RK22_APP_31_
+4 Fixing Version-Checking Errors = RK22_APP_32_
+4 Running Applications That Replace System DLLs = RK22_APP_33_
+2 Troubleshooting Applications = RK22_APP_34_
+2 Printing and Fonts
+2 Introduction = RK23_PRT_1_
+2 Windows 95 Printing and Fonts: The Basics = RK23_PRT_2_
+2 Printing and Fonts: The Issues = RK23_PRT_3_
+2 Windows 95 Printing Support Overview = RK23_PRT_4_
+3 Installing a Printer
+3 Introduction = RK23_PRT_6_
+3 Installing Plug and Play Printers = RK23_PRT_7_
+3 Installing Remote Printers with Point and Print = RK23_PRT_8_
+3 Printing Documents = RK23_PRT_9_
+2 Using Microsoft Print Services for NetWare = RK23_PRT_10_
+2 Using DEC PrintServer Software for Windows 95 = RK23_PRT_11_
+2 Using the Hewlett-Packard JetAdmin Utility = RK23_PRT_12_
+2 Using the Microsoft RPC Print Provider = RK23_PRT_13_
+3 Technical Notes on Windows 95 Printing
+3 Enhanced Metafile Spooling Support = RK23_PRT_15_
+3 Bidirectional Communication Support = RK23_PRT_16_
+4 Printer Driver Support
+4 Introduction = RK23_PRT_18_
+4 Universal Printer Driver = RK23_PRT_19_
+4 PostScript Mini-Driver = RK23_PRT_20_
+3 Extended Capabilities Port Support = RK23_PRT_21_
+3 Improved Printing Support for MS-DOS–Based Applications = RK23_PRT_22_
+3 Deferred Printing Support = RK23_PRT_23_
+3 Image Color Matching Support = RK23_PRT_24_
+2 Windows 95 Fonts Overview = RK23_PRT_25_
+2 TrueType Fonts = RK23_PRT_26_
+2 Windows 95 Raster Fonts = RK23_PRT_27_
+2 Windows 95 Vector Fonts = RK23_PRT_28_
+2 Screen and Printer Fonts = RK23_PRT_29_
+2 Fonts Provided for Compatibility = RK23_PRT_30_
+2 Font Matching Table = RK23_PRT_31_
+2 How Fonts Are Matched in Windows 95 = RK23_PRT_32_
+2 Loading Fonts in Windows 95 = RK23_PRT_33_
+2 Installing Additional Fonts = RK23_PRT_34_
+3 Troubleshooting Printing Problems
+3 Introduction = RK23_PRT_36_
+3 Correcting Problems with Printer Installation = RK23_PRT_37_
+3 Correcting Specific Printing Problems = RK23_PRT_38_
+2 Troubleshooting Font Errors = RK23_PRT_39_
+1 Communications
+1 Introduction = rkp6_0_
+2 Introduction to Windows 95 Communications
+2 Introduction = RK24_COM_1_
+2 Overview of Communications in Windows 95 = RK24_COM_2_
+2 Improved Communications in Windows 95 = RK24_COM_3_
+2 Communications Architecture = RK24_COM_4_
+2 Modems and Communications Tools
+2 Introduction = RK25_MOD_1_
+2 Modems and Communications Tools: The Basics = RK25_MOD_2_
+2 Modems and Communications Tools: The Issues = RK25_MOD_3_
+3 Setting Up a Modem
+3 Introduction = RK25_MOD_5_
+3 Defining Your Location = RK25_MOD_6_
+3 Setting Modem Properties = RK25_MOD_7_
+3 Dialing Manually = RK25_MOD_8_
+3 Displaying the Terminal Window = RK25_MOD_9_
+3 Modem Registry Keys
+3 Introduction = RK25_MOD_11_
+3 Init Key = RK25_MOD_12_
+3 Responses Key = RK25_MOD_13_
+3 Settings Key = RK25_MOD_14_
+3 Using HyperTerminal
+3 Introduction = RK25_MOD_16_
+3 File Transfer Protocols = RK25_MOD_17_
+3 Terminal Emulation Types = RK25_MOD_18_
+2 Using Phone Dialer = RK25_MOD_19_
+3 Using Dialing Properties
+3 Introduction = RK25_MOD_21_
+3 Defining Ca

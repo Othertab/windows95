@@ -1,0 +1,47 @@
+icrosoft\MOS\Applications\App #14","Friendly name",,"Registration"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #14","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #15","Friendly name",,"Billing"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #15","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #16","Friendly name",,"PhoneBook"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #16","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #17","Friendly name",,"Signup"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #17","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #18","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #18","Friendly name",,"DSed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #18","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #19","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #19","Friendly name",,"BBSed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #19","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #20","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #20","Friendly name",,"TEXTCHATed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #20","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #21","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #21","Friendly name",,"MEDVIEWed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #21","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #22","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #22","Friendly name",,"DLRed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #22","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #23","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #23","Friendly name",,"HELLOCLAed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #23","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #24","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #24","Friendly name",,"HELLOCLBed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #24","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #25","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #25","Friendly name",,"BBSINETed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #25","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #26","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #26","Friendly name",,"ENCARTAed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #26","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #27","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #27","Friendly name",,"BSHELFed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #27","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #28","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\dsned.ned"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #28","Friendly name",,"GUIDEed"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #28","Node Editor App #",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #31","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\msncall.exe"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #31","Friendly name",,"MSN Custom Application"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #31","Node Editor App #",1,20,00,00,00
+HKLM,"SOFTWARE\Microsoft\MOS\Custom Applications\MSNCALL","Version",,"1.4"
+HKLM,"SOFTWARE\Microsoft\MOS\Applications\App #32","Filename",,"%24%\%PROGRAMF%\%THEMICRO%\callned.ned"
+HKLM,"SOFTWARE\Microsof

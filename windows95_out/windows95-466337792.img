@@ -1,0 +1,92 @@
+5
+AOL 3.0 should work fine when you install MSN.  In order to use both MSN 
+and AOL at the same time you will need to disable autodial functionality 
+before you connecto to MSN.  Perform the following setups to
+turn off Autodial:
+
+1. Click on the MSN Quick View icon in the system tray and 
+   select MSN Options, then Connection Settings.  
+2. Click the options tab.
+3. Uncheck the option for "Use this service for all dial-up Internet access."  
+
+You then need to configure AOL to use TCP/IP access. Complete the following 
+steps:
+
+1. Click on Setup at the AOL login screen
+2. Select Edit Location 
+3. Choose TCP/IP for the type of network.  
+
+You can then use both MSN and AOL by starting your connection 
+through MSN first and then starting AOL.
+
+
+AT&T WORLDNET USERS WHO INSTALL MSN 2.51:
+AT&T Worldnet should work fine after installing MSN 
+2.51. If there are any problems getting connected to AT&T 
+Worldnet or using AT&T Worldnet to access the Internet 
+check the "Connection Configuration of MSN" section for 
+instructions on how to manually configure your Internet 
+connection.  If you are unable to fix the problem manually, 
+then you should re-install AT&T Worldnet to reset your 
+connection configuration.
+
+A new version of Microsoft Dial-Up Networking and Winsock is included on the 
+MSN Setup CD.  MSN will work better with AT&T if you install this newer version.
+To do so follow the instructions below for installing the COMMUPDT package.
+
+PRODIGY USERS WHO INSTALL MSN 2.51:
+Users of Prodigy may find that the Prodigy Internet browser does not work after 
+installing the MSN 2.51.  This is because MSN 2.51 installs the latest version of 
+Internet Explorer (4.0), which includes new security features that conflict 
+with the Prodigy browser.  You will need to uninstall Internet Explorer 4.0
+from your machine and then reinstall Internet Explorer 4.0 from the Internet.  
+This will allow both MSN 2.51 and Prodigy to be used on the same PC.
+
+A new version of Microsoft Dial-Up Networking and Winsock is included 
+on the MSN Setup CD.  MSN will work better with Prodigy if you install this 
+newer version.  To do so follow the below for installing the COMMUPDT package.
+
+INSTALLING THE COMMUPDT (DIAL-UP NETWORKING/WINSOCK UPGRADE) PACKAGE:
+To install the latest version of Microsoft Dial-Up Networking 1.2b and 
+Winsock 2.0, complete the following steps:
+
+1. Put the MSN 2.51 Setup CD in your CD-ROM drive. 
+   The MSN Setup screen will appear.
+2. Click the Browse the MSN CD button.  
+   Note: If you have a real mode CD-ROM drive, the MSN CD Autorun will fail.
+   In that case, you will need to double-click the My Computer icon on your desktop 
+   and select the CD-ROM drive icon from the My Computer Folder.
+3. Open the MSNSetup folder.
+4. Open the Compnts folder.
+5. Double-click the file named "COMMUPDT.EXE" to begin the installation.
+
+Installation Notes:
+If you get a Version Conflict dialog box, choose to keep the latest version
+of the file in question. 
+
+The installation process requires that you restart your computer twice. 
+
+After completion, you can continue to use MSN normally with the
+following benefits:
+1. Multicast stream can be turned off without requiring that you hang up 
+   the modem.
+2. Connections started from Dial-Up Networking will put
+   MSN Quick View to sleep upon disconnect.
+3. Enhanced support for modems and improved Internet performance.
+
+
+CONNECTION CONFIGURATION OF MSN:
+To reconfigure any of the connection settings in the following chart, 
+first:
+1. Click the Windows Start button, then click Settings, Control Panel.
+2. Double-click the "Internet" icon.
+3. Click the Connection Tab.
+
+DESIRED CONNECTION	SETTINGS IN INTERNET PROPERTIES
+CONFIGURATION		CONNECTION TAB
+-----------------------------------------------------------------
+Dial Up Using MSN	In the Connection section, check the 
+			"Connect to the Internet using a modem" 
+			option. Click the Settings 
+			button and make sure that "MSN" is the
+			highlighted connection.  Make sure 

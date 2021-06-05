@@ -1,0 +1,159 @@
+    VALUE "0 0 0"
+			    VALUENAME Scrollbar      VALUE "192 192 192"
+			    VALUENAME TitleText      VALUE "0 0 0"
+			    VALUENAME Window         VALUE "255 255 255"
+			    VALUENAME WindowFrame    VALUE "0 0 0"
+			    VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+		END ITEMLIST
+		END PART
+	END POLICY
+END CATEGORY	; desktop
+
+CATEGORY !!Network
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+	CATEGORY !!Sharing
+		POLICY !!DisableFileSharingCtrl
+		VALUENAME NoFileSharingControl
+		END POLICY
+
+		POLICY !!DisablePrintSharingCtrl
+		VALUENAME NoPrintSharingControl
+		END POLICY
+	END CATEGORY  ; Sharing
+END CATEGORY  ; Network
+
+CATEGORY !!Shell
+KEYNAME "Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders"
+	CATEGORY !!CustomFolders
+		POLICY !!CustomFolders_Programs
+			PART !!CustomFolders_ProgramsPath EDITTEXT REQUIRED
+			VALUENAME "Programs"
+			END PART
+		END POLICY
+
+		POLICY !!CustomFolders_Desktop
+			PART !!CustomFolders_DesktopPath EDITTEXT REQUIRED
+			VALUENAME "Desktop"
+			END PART
+		END POLICY
+
+		POLICY !!HideStartMenuSubfolders
+			KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+			VALUENAME NoStartMenuSubFolders
+			PART !!HideStartMenuSubfolders_Tip1 TEXT  END PART
+			PART !!HideStartMenuSubfolders_Tip2 TEXT  END PART
+		END POLICY
+
+		POLICY !!CustomFolders_Startup
+			PART !!CustomFolders_StartupPath EDITTEXT REQUIRED
+			VALUENAME "Startup"
+			END PART
+		END POLICY
+
+		POLICY !!CustomFolders_NetHood
+			PART !!CustomFolders_NetHoodPath EDITTEXT REQUIRED
+			VALUENAME "NetHood"
+			END PART
+		END POLICY
+	
+		POLICY !!CustomFolders_StartMenu
+			PART !!CustomFolders_StartMenuPath EDITTEXT REQUIRED
+			VALUENAME "Start Menu"
+			END PART
+		END POLICY
+	END CATEGORY
+
+	CATEGORY !!Restrictions
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+			POLICY !!RemoveRun
+			VALUENAME "NoRun"
+			END POLICY
+
+			POLICY !!RemoveFolders
+			VALUENAME "NoSetFolders"
+			END POLICY
+
+			POLICY !!RemoveTaskbar
+			VALUENAME "NoSetTaskbar"
+			END POLICY
+
+			POLICY !!RemoveFind
+			VALUENAME "NoFind"
+			END POLICY
+
+			POLICY !!HideDrives
+			VALUENAME "NoDrives"
+			VALUEON NUMERIC 67108863	; low 26 bits on (1 bit per drive)
+			END POLICY
+
+			POLICY !!HideNetHood
+			VALUENAME "NoNetHood"
+			END POLICY
+
+			POLICY !!NoEntireNetwork
+				KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+				VALUENAME "NoEntireNetwork"
+			END POLICY
+
+			POLICY !!NoWorkgroupContents
+				KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+				VALUENAME "NoWorkgroupContents"
+			END POLICY
+
+			POLICY !!HideDesktop
+			VALUENAME "NoDesktop"
+			END POLICY
+
+			POLICY !!DisableClose
+			VALUENAME "NoClose"
+			END POLICY
+
+			POLICY !!NoSaveSettings
+			VALUENAME "NoSaveSettings"
+			END POLICY
+
+	END CATEGORY													   
+END CATEGORY	; Shell
+
+CATEGORY !!System
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+	CATEGORY !!Restrictions
+  		POLICY !!DisableRegedit
+		VALUENAME DisableRegistryTools
+		END POLICY
+
+		POLICY !!RestrictApps
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+		VALUENAME RestrictRun
+			PART !!RestrictAppsList LISTBOX
+			KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
+				VALUEPREFIX ""
+			END PART
+		END POLICY
+
+		POLICY !!DisableMSDOS
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp
+		VALUENAME Disabled
+		END POLICY
+
+		POLICY !!DisableSingleMSDOS
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp
+		VALUENAME NoRealMode
+		END POLICY
+
+	END CATEGORY
+END CATEGORY
+
+[strings]
+System="System"
+NetworkSetupPath="Network path for Windows Setup"
+NetworkSetupPath_Path="Path:"
+NetworkTourPath="Network path for Windows Tour"
+NetworkTourPath_Path="Path:"
+NetworkTourPath_Tip="Note: the path must end in TOUR.EXE"
+EnableUserProfiles="Enable User Profiles"
+Network="Network"
+Logon="Logon"
+LogonBanner="Logon B

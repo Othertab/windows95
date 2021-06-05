@@ -1,0 +1,50 @@
+Defaults\Data\CDROM\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\CDROM\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\CDROM\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\CDROM\%%ComponentID\ComponentID,"Verify",1,02
+
+;  FRU (Field Replacable Unit)
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"Description",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"Model",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"PartNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"FRUSerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"RevisionLevel",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"WarrantyStartDate",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"WarrantyDuration",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\FRU,"SupportPhoneNumber",,"Unknown"
+
+;  Operational State info
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"OperationalStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"UsageState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"AvailabilityStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"AdministrativeState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"FatalErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"MajorErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\OperationalState,"WarningErrorCount",1,00
+
+;  Component ID group
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID\ComponentID,"Verify",1,02
+
+;  FRU (Field Replacable Unit)
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"Description",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"Model",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"PartNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"FRUSerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"RevisionLevel",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"WarrantyStartDate",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"WarrantyDuration",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\FRU,"SupportPhoneNumber",,"Unknown"
+
+;  Operational State info
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"OperationalStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"UsageState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"AvailabilityStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"AdministrativeState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"FatalErrorCount",1,00

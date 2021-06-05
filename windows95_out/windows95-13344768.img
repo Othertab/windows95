@@ -1,0 +1,75 @@
+PS 2200"                     = Q2200_MS.SPD,QMS-PS_2200
+"QMS-PS 2210"                     = Q2210_MS.SPD,QMS-PS_2210
+"QMS-PS 2220"                     = Q2220523.SPD,QMS-PS_2220
+
+[QuadLaser]
+"QuadLaser I"                     = HPPCL.DRV,QuadLaser_I
+
+[Ricoh]
+"Ricoh LP-1200"                   = HPPCL5MS.DRV,Ricoh_LP-1200
+
+[Royal]
+"Royal CJP 450"                   = JP350.DRV,Royal_CJP_450
+
+[Seiko]
+"Seiko ColorPoint PS"             = CP_PS241.SPD,Seiko_ColorPoint_PS
+"Seiko ColorPoint PSX"            = CPPSX241.SPD,Seiko_ColorPoint_PSX
+"Seiko ColorPoint PSN"            = CPPSNB10.SPD,Seiko_ColorPoint_PSN
+"Seiko ColorPoint2 PSF"           = SKPSFA_1.SPD,Seiko_ColorPoint2_PSF
+"Seiko Personal ColorPoint PS"    = CPPER241.SPD,Seiko_Personal_ColorPoint_PS
+"Seiko Pro ColorPoint PSH"        = CPPRO518.SPD,Seiko_Pro_ColorPoint_PSH
+
+[Seikosha]
+"Seikosha LT-20"                  = SEIKO24E.DRV,Seikosha_LT-20
+"Seikosha SL-80 IP"               = SEIKO24E.DRV,Seikosha_SL-80_IP
+"Seikosha SL-92"                  = SEIKO24E.DRV,Seikosha_SL-92
+"Seikosha SL-92 Plus"             = SEIKO24E.DRV,Seikosha_SL-92_Plus
+"Seikosha SL-95 Color"            = SEIKO24E.DRV,Seikosha_SL-95_Color
+"Seikosha SP-1900"                = SEIKOSH9.DRV,Seikosha_SP-1900
+"Seikosha SP-1900+"               = SEIKOSH9.DRV,Seikosha_SP-1900+
+"Seikosha SP-2415"                = SEIKOSH9.DRV,Seikosha_SP-2415
+"Seikosha SP-2400"                = SEIKOSH9.DRV,Seikosha_SP-2400
+"Seikosha SP-2000"                = SEIKOSH9.DRV,Seikosha_SP-2000
+"Seikosha SpeedJET 200"           = JP350.DRV,Seikosha_SpeedJET_200
+
+[Sharp]
+"Sharp JX-9300"                   = HPPCL.DRV,Sharp_JX-9300
+"Sharp JX-9460"                   = HPPCL5MS.DRV,Sharp_JX-9460
+"Sharp JX-9500"                   = HPPCL.DRV,Sharp_JX-9500
+"Sharp JX-9500E"                  = HPPCL.DRV,Sharp_JX-9500E
+"Sharp JX-9500H"                  = HPPCL.DRV,Sharp_JX-9500H
+"Sharp JX-9600"                   = HPPCL5MS.DRV,Sharp_JX-9600
+"Sharp JX-9660"                   = HPPCL5MS.DRV,Sharp_JX-9660
+"Sharp JX-9700"                   = HPPCL.DRV,Sharp_JX-9700
+"Sharp JX-9700E"                  = HPPCL5MS.DRV,Sharp_JX-9700E
+
+[Star]
+"Star FR-15"                      = STAR9E.DRV,Star_FR-15
+"Star FR-10"                      = STAR9E.DRV,Star_FR-10
+"Star LaserPrinter 4"             = HPPCL.DRV,Star_LaserPrinter_4
+"Star LaserPrinter 4 StarScript"  = STLS04SS.SPD,Star_LaserPrinter_4_StarScript
+"Star LaserPrinter 4III"          = HPPCL5MS.DRV,Star_LaserPrinter_4III
+"Star LaserPrinter 5"             = HPPCL.DRV,Star_LaserPrinter_5
+"Star LaserPrinter 5EX"           = HPPCL5MS.DRV,Star_LaserPrinter_5EX
+"Star LaserPrinter 5 TT/UK"       = STLS5TTU.SPD,Star_LaserPrinter_5_TT/UK
+"Star LaserPrinter 8"             = HPPCL.DRV,Star_LaserPrinter_8
+"Star LaserPrinter 8 II"          = HPPCL.DRV,Star_LaserPrinter_8_II
+"Star LaserPrinter 8III"          = HPPCL5MS.DRV,Star_LaserPrinter_8III
+"Star LaserPrinter 8 DB"          = HPPCL.DRV,Star_LaserPrinter_8_DB
+"Star LaserPrinter 8 DX"          = HPPCL.DRV,Star_LaserPrinter_8_DX
+"Star LaserPrinter 8 LincPage"    = STLS08LP.SPD,Star_LaserPrinter_8_LincPage
+"Star LC-10"                      = STAR9E.DRV,Star_LC-10
+"Star LC-10 Colour"               = STAR9E.DRV,Star_LC-10_Colour
+"Star LC-15"                      = STAR9E.DRV,Star_LC-15
+"Star LC-20"                      = STAR9E.DRV,Star_LC-20
+"Star LC-100 Colour"              = STAR9E.DRV,Star_LC-100_Colour
+"Star LC-200"                     = STAR9E.DRV,Star_LC-200
+"Star LC24-10"                    = STAR24E.DRV,Star_LC24-10
+"Star LC24-15"                    = STAR24E.DRV,Star_LC24-15
+"Star LC24-15 II"                 = STAR24E.DRV,Star_LC24-15_II
+"Star LC24-20"                    = STAR24E.DRV,Star_LC24-20
+"Star LC24-22"                    = STAR24E.DRV,Star_LC24-22
+"Star LC24-30"                    = STAR24E.DRV,Star_LC24-30
+"Star LC24-100"                   = STAR24E.DRV,Star_LC24-100
+"Star LC24-200"                   = STAR24E.DRV,Star_LC24-200
+"Star LC24-200 Colour"            = STAR24E.DRV,

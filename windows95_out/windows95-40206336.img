@@ -1,0 +1,84 @@
+re incorrectly configured on 
+the NetWare server. Unless banner pages are correctly configured on the 
+NetWare server, they will cause errors and nothing will print. To solve 
+this problem, you can either disable banner pages by removing the check 
+mark from the Banner Pages box in Capture printer properties, or 
+contact your network administrator to correctly configure banner pages 
+on the NetWare server for a PostScript printer.
+
+Unwanted Banner Pages on a NetWare Network from MS-DOS Programs
+---------------------------------------------------------------
+If you are still receiving unwanted banner pages when printing from 
+MS-DOS programs after checking the Banner Page setting as described 
+above, you’ll need to change the port designation for the printer from 
+the network path (UNC) name, to the Captured port. To do this:
+ 
+1. On the Details tab of printer properties, click the down-arrow on 
+   the box that shows the \\Server\Printqueue name, and look for an 
+   entry that shows LPTx:, where LPTx: is the LPT port you have captured. 
+2. Select LPTx: (\\Server\Printqueue), and then click Apply. 
+3. Click the Capture tab, and then disable the banner page setting as 
+   described above.
+
+
+TRUETYPE FONT AVAILABILITY FOR PRINTING
+=======================================
+
+TrueType fonts are not usually available when printing in lower 
+resolutions (75-150 dpi) on inkjet printers. This does not apply to 
+laser and dot-matrix printers. TrueType fonts are also not available 
+when using the Generic/Text Only printer driver.
+
+
+CANON COLOR BUBBLE-JET SUPPORT
+==============================
+
+You may notice some printing differences in the Windows 95 drivers 
+for the Canon Color Bubble-Jet (BJC) printers if you upgrade from 
+Windows 3.1. The Canon BJC-70, BJC-600, BJC-600e, BJC-800, and BJC-4000 
+drivers from Windows 3.1 are automatically upgraded to Windows 95 
+drivers as part of the Windows 95 installation because the Windows 3.1 
+versions do not work under Windows 95. Please contact your local Canon 
+representative company (or refer to the information in the "Where to 
+Find More Help" section of your printer's manual) for information about 
+updated driver availability for optimal support of these devices.
+
+
+FARGO PRIMERA AND PRIMERA PRO SUPPORT
+=====================================
+
+Some older versions of the Fargo Primera and Primera Pro printer 
+drivers do not operate correctly under Windows 95. The Fargo Primera 
+requires version 4.3 or later, and the Primera Pro requires version 
+2.7 or later. To obtain either of these drivers, contact Fargo’s BBS 
+or their technical support at the numbers listed in the printer 
+documentation.
+
+
+HEWLETT-PACKARD DESKJET PRINTER SUPPORT
+=======================================
+
+Versions 6.1 and earlier of the Hewlett-Packard DeskJet printer drivers 
+will not function under Windows 95, and it is not possible to install 
+them. If you are using them with Windows 3.1, they will be upgraded to 
+version 6.5 with Windows 95. See the following section if you are using 
+a DeskJet 600 or 800 series model.
+
+Hewlett-Packard DeskJet 600, 660C, and 850C Printer Support 
+-----------------------------------------------------------
+To optimally use your DeskJet 600, 660C, or 850C, determine if your 
+DeskJet printer includes a printer driver that is compatible with 
+Windows 95. (To determine if your printer driver is compatible with 
+with Windows 95, refer to the disk label.)
+
+Case 1: If you have a printer driver that is compatible with Windows 95.
+
+If you already have Windows 95 installed and are installing a new 
+DeskJet 600 or 800 series printer, Windows 95 automatically identifies 
+your printer and installs the printer driver. When you see the prompt 
+asking for the OEM-provided disk, click OK, and then insert the HP 
+DeskJet Printer disk #1 that came with your printer into the appropriate 
+floppy disk driver.  Follow the steps displayed on your screen.
+
+If Windows 95 does not automatically detect your HP DeskJet printer, 
+follo

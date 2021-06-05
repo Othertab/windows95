@@ -1,0 +1,139 @@
+"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\2]
+"Name"="System Cache Level"
+"Description"="Is this the primary System Cache, or a subsidiary cache?"
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\Level"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\2\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Primary"
+"4"="Secondary"
+"5"="Tertiary"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\3]
+"Name"="System Cache Speed"
+"Description"="The speed of this System Cache module in nanoseconds."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\Speed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\4]
+"Name"="System Cache Size"
+"Description"="The size of this System Cache module in kilobytes."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\Size"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\5]
+"Name"="System Cache Write Policy"
+"Description"="Is this a write-back or a write-through cache?"
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\WritePolicy"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Write Back"
+"4"="Write Through"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\6]
+"Name"="System Cache Error Correction"
+"Description"="The error correction scheme supported by this cache component."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\ErrorCorrection"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="None"
+"4"="Parity"
+"5"="Single Bit ECC"
+"6"="MultiBit ECC"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\7]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\FRUGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\8]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemCache\\OperationalGroupIndex"
+
+
+;================================
+;  IRQ Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13]
+"Name"="IRQ"
+"Class"="DMTF|IRQ|001"
+"Description"="This group defines attributes for IRQs in this system."
+"Key"="1"
+"^Index"=dword:00000001
+"^ROW"="1|2|3|4|5"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\1]
+"Name"="IRQ Number"
+"Description"="The number of this IRQ."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\IRQ\\IRQNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\2]
+"Name"="IRQ Availability"
+"Description"="Is this IRQ available or in use?"
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\IRQ\\IRQAvailability"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\2\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Available"
+"4"="In Use"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\3]
+"Name"="IRQ Trigger Type"
+"Description"="The trigger type of the IRQ."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\IRQ\\IRQTriggerType"
+"!0"="B;IN(0,1)(1,2)(2,3)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"

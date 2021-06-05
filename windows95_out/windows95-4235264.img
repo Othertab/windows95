@@ -1,0 +1,25 @@
+%s\cool.dll,7"""					%M
+2659		3.5 Floppy                 .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""6"",""%s\cool.dll,8"""					%M
+2660		5.25 Floppy                .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""5"",""%s\cool.dll,9"""					%M
+2661		CD-ROM Drive               .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""11"",""%s\cool.dll,10"""					%M
+2662		Folders                    .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""3"",""%s\cool.dll,11"""					%M
+2663		Control Panel in StartMenu .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""35"",""%s\cool.dll,12"""					%M
+2664		Network                    .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""13"",""%s\cool.dll,13"""					%M
+2665		Fonts Folder in StartMenu  .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""38"",""%s\cool.dll,14"""					%M
+2666		StartMenu IDI_STHELP       .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""23"",""%s\cool.dll,15"""					%M
+2667		Network Neighborhood       .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""17"",""%s\cool.dll,17"""					%M
+2668		Open Folder                .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""4"",""%s\cool.dll,18"""					%M
+2669		Printers Folder in StartMenu		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""37"",""%s\cool.dll,19"""					%M
+2670		Recycle empty              .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""31"",""%s\cool.dll,20"""					%M
+2671		Recycle full               .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""32"",""%s\cool.dll,21"""					%M
+2672		Printer                    .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""16"",""%s\cool.dll,22"""					%M
+2673		RNA/Program groups         .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""36"",""%s\cool.dll,24"""					%M
+2674		AudioCD                    .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""40"",""%s\cool.dll,26"""					%M
+2675		.                          .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""33"",""%s\cool.dll,27"""					%M
+2676		Server                     .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""15"",""%s\cool.dll,28"""					%M
+2677		Disconnected net drive     .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""10"",""%s\cool.dll,29"""					%M
+2678		Start menu eject           .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""26"",""%s\cool.dll,32"""					%M
+2679		Start menu suspend         .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""25"",""%s\cool.dll,33"""					%M
+2680		Share                      .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""28"",""%s\cool.dll,34"""					%M
+2681		Generic file               .		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\explorer\Shell Icons"",""0"",""%s\cool.dll,37"""					%M
+2682		ReApply		CustomAction	"""plus.dll"",""RedoNonVisual"",""2651,2652,2653,2654,2655,2656,2657,26

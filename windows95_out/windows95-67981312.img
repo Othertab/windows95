@@ -1,0 +1,95 @@
+cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+HKR, Settings, ErrorControl_On,, ""
+HKR, Settings, ErrorControl_Off,, ""
+HKR, Settings, ErrorControl_Forced,, ""
+HKR, Settings, SpeedNegotiation_Off,, ""
+HKR, Settings, SpeedNegotiation_On,, ""
+
+[Modem16.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 50,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Soft,, ""
+HKR, Settings, ErrorControl_Off,, ""
+HKR, Settings, ErrorControl_On,, ""
+HKR, Settings, ErrorControl_Forced,, ""
+HKR, Settings, SpeedNegotiation_Off,, ""
+HKR, Settings, SpeedNegotiation_On,, ""
+
+
+[Modem17.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, c0,12,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<cr>"
+
+[Modem18.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 50,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1 &D2 <cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+
+[Modem19.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 50,03,00,00, 60,09,00,00, 60,09,00,00
+
+[Modem20.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, c0,12,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<cr>"
+
+[Modem23.AddReg]
+HKR,, Properties, 1, 40,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 50,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+
+[Modem24.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Settings, SpeedNegotiation_Off,, ""
+HKR, Settings, SpeedNegotiation_On,, ""
+
+[Modem25.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Settings, SpeedNegotiation_Off,, "%%E0"
+HKR, Settings, SpeedNegotiation_On,, "%%E1"
+
+[Modem26.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 80,25,00,00, 60,09,00,00
+
+[Modem27.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 80,25,00,00, 60,09,00,00
+
+[Modem28.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F \V2 <cr>"
+HKR, Settings, SpeedNegotiation_Off,, ""
+HKR, Settings, SpeedNegotiation_On,, ""
+
+[Modem29.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Init,      2,, "AT &F&C1&D2\V2<cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+
+[Modem30.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem31.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem32.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem36.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F <cr>"
+HKR, Settings, SpeedNegotiation_Off,, ""
+HKR, Settings, SpeedNegotiation_On,, ""
+
+[Modem37.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 00,4b,00,00
+HKR, Init,      2,, "AT &F <cr>"
+HKR, Set

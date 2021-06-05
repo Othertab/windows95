@@ -1,0 +1,46 @@
+ft\Internet Explorer\Plugins\MIME",,0,
+HKLM,"Software\Microsoft\Internet Explorer\Plugins\PluginsPageFriendlyName",,0,"%ACTIVEX_GALLERY%"
+HKLM,"Software\Microsoft\Internet Explorer\Plugins\PluginsPage",,0,"%PLUGIN_PAGE%"
+;	Don't Install for OSR2
+;HKLM,"Software\Microsoft\Internet Explorer\MediaTypeClass\{00000000-0000-0000-0000-000000000000}","audio/wav",2,""
+HKCU,"Software\Microsoft\Internet Explorer\Document Windows","width",3,00,00,00,80
+HKCU,"Software\Microsoft\Internet Explorer\Document Windows","height",3,00,00,00,00
+HKCU,"Software\Microsoft\Internet Explorer\Document Windows","x",3,00,00,00,80
+HKCU,"Software\Microsoft\Internet Explorer\Document Windows","y",3,00,00,00,00
+HKCU,"Software\Microsoft\Internet Explorer\Document Windows","Maximized",2,"no"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Local Page",0,"%11%\blank.htm"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Show_ToolBar",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Show_URLToolBar",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Show_StatusBar",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Show_URLinStatusBar",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Show_FullURL",2,"no"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Use_DlgBox_Colors",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Display Inline Images",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Anchor Underline",2,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Save_Session_History_On_Exit",0,"no"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Anchor_Visitation_Horizon",1,01,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Use_Async_DNS",0,"yes"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Placeholder_Width",1,1A,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Placeholder_Height",1,1A,00,00,00
+HKCU,"Software\Microsoft\Internet Explorer\Settings","Anchor Color",2,"0,0,255"
+HKCU,"Software\Microsoft\Internet Explorer\Settings","Anchor Color Visited",2,"128,0,128"
+HKCU,"Software\Microsoft\Internet Explorer\Settings","Background Color",2,"192,192,192"
+HKCU,"Software\Microsoft\Internet Explorer\Settings","Text Color",2,"0,0,0"
+HKCU,"Software\Microsoft\Internet Explorer\Services",,2,""
+HKCU,"Software\Microsoft\Internet Explorer\Security","Sending_Security",2,"Medium"
+HKCU,"Software\Microsoft\Internet Explorer\Security","Viewing_Security",2,"Low"
+HKCU,"Software\Microsoft\Internet Explorer\TypedURLs","url1",2,"%START_PAGE%"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","Count_Style_Sheets",1,05,00,00,00
+HKLM,"System\CurrentControlSet\Services\Winsock\Autodial","AutodialDllName32",2,"url.dll"
+HKLM,"System\CurrentControlSet\Services\Winsock\Autodial","AutodialFcnName32",2,"AutodialHookCallback"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Last Update\IEXPLOREV3","CurrentVerTimestamp",0,"Sun, 21 April 1996 01:00:00 GMT"
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","EmailName",2,"IE30User@"
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","MimeExclusionListForCache",," multipart/mixed multipart/x-mixed-replace multipart/x-byteranges "
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","HeaderExclusionListForCache",,"Date: Server: Set-Cookie: Last-Modified: Expires: Forwarded: "
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","HttpDefaultExpiryTimeSecs",1,C0,A8,00,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","FtpDefaultExpiryTimeSecs",1,80,51,01,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","GopherDefaultExpiryTimeSecs",1,80,51,01,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","SyncMode",1,02,00,00,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","UseSchannelDirectly",1,01,00,00,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","Trust Warning Level",2,"High"
+HKCU,"SOFTWARE\Microsoft\Internet Explorer\Security","Safety Warning Level",2,

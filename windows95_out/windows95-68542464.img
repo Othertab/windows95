@@ -1,0 +1,78 @@
+vd  |XonLim|XofLim|   |   |   |Xon|Xof|Err|Eof|Evt
+[9600]
+HKR,, DCB, 1, 1C,00,00,00, 80,25,00,00, 15,20,00,00, 00,00, 0a,00, 0a,00, 08, 00, 00, 11, 13, 00, 00, 00
+[19200]
+HKR,, DCB, 1, 1C,00,00,00, 00,4B,00,00, 15,20,00,00, 00,00, 0a,00, 0a,00, 08, 00, 00, 11, 13, 00, 00, 00
+
+[M1700Reg] ; Hayes Smartmodem 1200
+HKR, Init, 2,, "ATE0Q0V0X1S0=0<cr>"
+HKR,, Properties, 1, 00,00,00,00, ff,00,00,00, 00,00,00,00, 00,00,00,00, 07,00,00,00, 00,01,00,00, b0,04,00,00, b0,04,00,00
+
+[M1701Reg] ; feature-less Smartmodem 2400
+HKR, Init, 2,, "AT&FE0V0&C1&D2S0=0<cr>"
+HKR,, Properties, 1, 80,01,00,00, 3b,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 60,09,00,00, 60,09,00,00
+
+[M1702Reg] ; feature-less Smartmodem 9600
+HKR, Init, 2,, "AT&FE0V0&C1&D2S0=0<cr>"
+HKR,, Properties, 1, 80,01,00,00, 3b,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 80,25,00,00, 80,25,00,00
+
+[M1803Reg] ; Hayes 9600 Optima & Accura
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,96,00,00, 80,25,00,00
+
+[M1804Reg] ; Hayes 14400 Optima & Accura
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[M1805Reg] ; Hayes 9600 Ultra
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,96,00,00, 80,25,00,00
+
+[M1806Reg] ; Hayes 14400 Ultra
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,96,00,00, 40,38,00,00
+
+[M1811Reg] ; Hayes 28800 Optima
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+
+[M1812Reg] ; Hayes 2400 Optima & Accura
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Settings, Compression_Off,, "&Q8S46=136"
+HKR, Settings, ErrorControl_Off,, "&Q6"
+
+[M1823Reg] ; Hayes 14400 Optima PCMCIA and Accura 14.4
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[M1825Reg] ; Hayes V-series Smartmodem 9600
+HKR, Init, 2,, "AT&FE0V0W2&C1&D2<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,4b,00,00, 80,25,00,00
+
+[M1827Reg] ; Hayes 2400 - 9600 PCMCIA
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Settings, Compression_Off,, "&Q8S46=136"
+
+[M1828Reg] ; Hayes 28800 Optima - no CCITT/Bell
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, b7,03,00,00, 00,c2,01,00, 80,70,00,00
+
+[M1831Reg] ; Hayes 28800 Optima PCMCIA - no CCITT/Bell or dial suffix
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, b7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, DialSuffix,, "" 
+
+[M1832Reg] ; Hayes Ultra 24 with Express 96
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+
+[M1837Reg] ; Hayes Accura 2400
+HKR, Init, 2,, "AT&FE0V0W1&C1&D2S95=47<cr>"
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+
+[M1845Reg] ; Hayes 28800 Accura 288B + FAX
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Init, 2,, "AT&FE0V0W2&C1&D2S95=47<cr>"
+HKR,, InactivityScale,

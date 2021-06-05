@@ -1,0 +1,118 @@
+
+HKR,Ndi,DeviceID,,IPXODI
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"nwipxodi,ipx"
+HKR,Ndi\Interfaces,DefLower,,"odi"
+HKR,Ndi\Interfaces,UpperRange,,"nwipxodi,ipx"
+HKR,Ndi\Interfaces,LowerRange,,"odi"
+; compatibilities
+HKR,Ndi\Compatibility,ExcludeAll,,"IPXMONO"
+
+
+;****************************************************************************
+; NETBEUI
+;****************************************************************************
+[NETBEUI.ndi]
+AddReg=NETBEUI.ndi.reg
+;Unique PnP ID, entry need to be present so that setup can back track
+;the device name from the driver
+DeviceID=NETBEUI
+;Specify if the device can be installed more than once
+;if not specify, default is MaxInstance=1
+MaxInstance=8
+
+[NETBEUI.ndi.reg]
+HKR,Ndi,DeviceID,,NETBEUI
+HKR,Ndi,MaxInstance,,8
+; NDIS Info
+HKR,NDIS,LogDriverName,,NETBEUI
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NETBEUI$"
+HKR,NDIS\NDIS2,FileName,,"*netbeui"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"netbios"
+HKR,Ndi\Interfaces,DefLower,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,UpperRange,,"netbios"
+HKR,Ndi\Interfaces,LowerRange,,"ndis2,ndis3,odi"
+; Install sections
+HKR,Ndi\Install,,,"NETBEUI.Install"
+HKR,Ndi\Remove,,,"NETBEUI.Remove"
+;Sessions Parameter (global)
+HKR,Ndi\params\sessions,location,,"System\CurrentControlSet\Services\Vxd\NetBeui"
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\sessions,ParamDesc,,%NETBEUI_PARAM_SESSIONS%
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\sessions,default,,10
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\sessions,type,,int
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\sessions,min,,3
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\sessions,max,,117
+;NCBS Parameter (global)
+HKR,Ndi\params\ncbs,location,,"System\CurrentControlSet\Services\Vxd\NetBeui"
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\Params\ncbs,ParamDesc,,%NETBEUI_PARAM_NCBS%
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\Params\ncbs,default,,12
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\Params\ncbs,type,,int
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\Params\ncbs,min,,7
+HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\Params\ncbs,max,,255
+; Context help
+HKR,Ndi,HelpText,,%NETBEUI_HELP%
+
+[NETBEUI.Install]
+AddReg=NETBEUI.AddReg
+CopyFiles=NETBEUI.CopyFiles
+[NETBEUI.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,netbeui.vxd
+; RPC
+HKLM,"Software\Microsoft\Rpc\ClientProtocols",ncacn_nb_nb,,rpcltc5.dll
+HKLM,"Software\Microsoft\Rpc\ServerProtocols",ncacn_nb_nb,,rpclts5.dll
+[NETBEUI.CopyFiles]
+netbeui.vxd
+; RPC
+rpcltc5.dll
+rpclts5.dll
+
+[NETBEUI.Remove]
+AddReg=NETBEUI.Rmv.AddReg
+[NETBEUI.Rmv.AddReg]
+; RPC
+HKLM,"Software\Microsoft\Rpc\ClientProtocols",ncacn_nb_nb,
+HKLM,"Software\Microsoft\Rpc\ServerProtocols",ncacn_nb_nb,
+
+;****************************************************************************
+; NWNBLINK
+;****************************************************************************
+[NWNBLINK.ndi]
+AddReg=NWNBLINK.ndi.reg
+DeviceID=NWNBLINK
+MaxInstance=1
+
+[NWNBLINK.ndi.reg]
+HKR,Ndi,DeviceID,,NWNBLINK
+HKR,Ndi,MaxInstance,,1
+HKR,Ndi,StaticVxd,,"nwnblink.vxd"
+HKR,Ndi\Compatibility,RequireAll,,"NWLINK"
+; NDIS info
+HKR,NDIS,LogDriverName,,"NWNBLINK"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"netbios"
+HKR,Ndi\Interfaces,DefLower,,"ipx"
+HKR,Ndi\Interfaces,UpperRange,,"netbios"
+HKR,Ndi\Interfaces,LowerRange,,"ipx"
+; Install sections
+HKR,Ndi\Install,netbios,,"NWNBLINK.Install"
+
+; Context help
+HKR,Ndi,HelpText,,%NWNBLINK_HELP%
+
+[NWNBLINK.Install]
+AddReg=NWNBLINK.AddReg
+CopyFiles=NWNBLINK.copy
+[NWNBLINK.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,nwnblink.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWNBLINK",StaticVxD,,nwnblink.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWNBLINK",Start,1,00
+HKLM,"S

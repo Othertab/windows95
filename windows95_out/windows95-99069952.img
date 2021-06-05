@@ -1,0 +1,122 @@
+etBIOS, type NET START NETBEUI at the command prompt.
+ISyntax for Microsoft Network Diagnostics:
+DIAG [/status] [/names]
+     /status    Displays local or remote adapter status information
+     /names     Enables you to specify a custom NetBIOS name for diagnostics
+I
+This computer will now begin acting as a diagnostic server.
+
+Press any key to stop acting as a diagnostic server.
+?
+IIPX and NetBIOS have been detected.
+IPress I to use IPX for diagnostics, N to use NetBIOS, or E to exit this program.
+IYou have pressed an invalid key. Please enter I for IPX, N for NetBIOS, or E to exit.
+IEISearching for diagnostic server...
+
+IThe diagnostic server has been located on the network.
+?
+INo diagnostic servers were detected on the network.
+IIs Microsoft Network Diagnostics currently running on any other computers
+on the network ? (Y/N)I
+This computer is unable to communicate with the diagnostic server. This often
+results from a problem with the network card, configuration, or cables.
+IYINIAn error occurred while adding the name on LANA %X
+IERROR: Unable to open IPX socket.
+IIPX Listen has failed!
+IThe client has sent corrupted packets to the server.
+IERROR: Timed out while waiting for packet from client!
+IERROR: Timed out while waiting for checksum from server!
+ISending reply to workstation.
+ICommunicating with diagnostic server. This may take several seconds.
+IValidating reply from diagnostic server.
+IERROR while receiving packet #%u
+IERROR while sending packet #%u
+IThe diagnostic server's reply is correct.
+This indicates that network information is being sent and received properly.
+?
+I
+Validation failure!
+The diagnostic server received inaccurate information.
+This indicates that there may be a problem with the network adapter
+card, cables, or connectors.
+IPlease type a name (up to 15 characters), and the press ENTER.
+?
+IThere was an error attempting to receive on LANA %X.
+IThere was an error attempting to hangup on LANA %X.
+IThere was an error attempting to listen on LANA %X.
+IThere was an error attempting to call on LANA %X.
+IThere was an error attempting to send on LANA %X.
+I
+You have chosen to specify a custom name that will be used
+during the diagnostic session.  You must enter the same custom
+name on all workstations involved in the diagnostics, and this
+name should not match any computer names that are currently on
+the network.
+
+IPlease enter the remote computer's NetBIOS name, or press ENTER to examine
+a local adapter's status.
+IPlease enter the LANA number you want to use.
+Select from the following NetBIOS providing LANA(s): 
+INetBIOS is not installed on this LANA.
+I
+Remote adapter status:
+
+IPermanent node name: IAdapter operational for %u minutes.
+I%u free NCBs Iout of %u Iwith %u the maximum.
+I%u sessions in use 
+I%u sessions allocated 
+I%lu packets transmitted I%lu packets received.
+I%u retransmissions I%u retries exhausted.
+I%u crc errors I%u alignment errors 
+I%u collisions I%u interrupted transmissions.
+Iname %d %-16.16s  status %2.2x
+I
+Machine cannot be found using this LANA.
+INetBIOS command timed-out
+IThat local session number is invalid. The session has probably been dropped.
+IThe diagnostic server did not respond.
+IThe session has been unexpectedly terminated.
+IUnable to communicate with network adapter.
+INetBIOS error %XH occurred.
+IAttempt to get local target address failed! Error code %X
+Routing ability will be disabled.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+ILogin Information:
+IYou are not connected to any other servers.
+IServer NameIServer VersionILogin NameIConnection NumberI(Attached but not logged in)IJanuaryIFebruaryIMarchIAprilIMayIJuneIJulyIAugustISeptemberIOctoberINovemberIDecemberISundayIMondayITuesdayIWednesdayIThursdayIFridayISaturdayILogin TimeIA.M.IP.M.IClient for NetWare versionIOther Servers
+IAdditional peer servers in workgroup %1.
+IAttached to server %1
+ECould not locate a NetWare-compatible server.EThe workstation is out of connection slots.
+?
+?
+?
+?
+

@@ -1,0 +1,117 @@
+ENAME%\Hypertrm,mci.ht,,"%HyperTrm_MCI%.ht"
+
+; review -- move the old folder so we don't have a path clash
+HKLM,%KEY_RENAME%\Win,,2,"%25%"
+HKLM,%KEY_RENAME%\Win,HyperTrm,,"%OldHyperTerminal%"
+
+; set up the per-app path
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\HYPERTRM.EXE",,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%\HYPERTRM.EXE"
+
+[online.install.reg]
+HKLM,%KEY_OPTIONAL%\msonline,Installed,,"1"
+
+[online.remove.reg]
+HKLM,%KEY_OPTIONAL%\msonline,Installed,,"0"
+
+HKLM,%KEY_DEL%\Hypertrm,,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%"
+HKLM,%KEY_DEL%\Hypertrm,at&t.ht,,"%HyperTrm_ATT%.ht"
+HKLM,%KEY_DEL%\Hypertrm,cis.ht,,"%HyperTrm_CIS%.ht"
+HKLM,%KEY_DEL%\Hypertrm,mci.ht,,"%HyperTrm_MCI%.ht"
+HKLM,%KEY_DEL%\Hypertrm,hypertrm.dll,,"hypertrm.dll"
+HKLM,%KEY_DEL%\Hypertrm,hticons.dll,,"hticons.dll"
+;------------------------------------------------------
+
+;---- Disk Compression Install Sections ----------------
+[dxxspace.sys.files]
+mini.cab
+dskapi16.dll
+dskapi32.dll
+
+[dxxspace.ios.files]
+drvspacx.vxd,,,32  ;32 flag suppresses ver conflict dlg
+
+[dxxspace.cmd.files]
+drvspace.sys,,,32  ;32 flag suppresses ver conflict dlg
+
+[dxxspace.win.files]
+DRVSPACE.EXE,,,32  ;32 flag suppresses ver conflict dlg
+DRVSPACE.INF
+
+[dxxspace.dummy]
+;dummy section to make sure that path for drvspace.sys is updated in autoexec.bat, config.sys
+
+[dxxspace.hlp.files]
+drvspace.cnt,,,32  ;32 flag suppresses ver conflict dlg
+drvspace.hlp,,,32  ;32 flag suppresses ver conflict dlg
+
+[dxxspace.vmm32.files]
+mrci2.vxd,,,32     ;32 flag suppresses ver conflict dlg
+
+[dxxspace.plus.files]
+cmpagent.exe
+
+[dxxspace.plus.system.files]
+compext.dll
+nocomp.exe
+nocomp.inf
+drvspace.dat
+
+[dxxspace.links]
+;Create Link to DriveSpace
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%DrvSpace_Desc%"", DRVSPACE.EXE,,,,,%DrvSpace_ShortDesc%"
+setup.ini, group11,, """%CmpAgent_Desc%"", "%24%\%PROGRAMF%\%PLUS!%\CMPAGENT.EXE",,,,,%CmpAgent_ShortDesc%"
+
+[dxxspace.install.reg]
+;this is a DelReg Section b/c we want to disable uninstalling dxxspace
+HKLM,%KEY_OPTIONAL%,"Dxxspace",,"dxxspace"
+HKLM,%KEY_OPTIONAL%\dxxspace
+
+[dxxspace.addreg]
+;Needed to rename Program Files directory
+HKLM,%KEY_RENAME%\AppFilesRoot,,,%24%
+HKLM,%KEY_RENAME%\AppFilesRoot,%PROGRAMF%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFilesRoot,!$!$!$!$.$!$,,"%Program_Files%,1"
+
+; set up the per-app path for CmpAgent
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\CMPAGENT.EXE",,,"%24%\%PROGRAMF%\%PLUS!%\CMPAGENT.EXE"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\CMPAGENT.EXE","Path",,"%24%\%PROGRAMF%\%PLUS!%\%SYSTEM%;"
+
+; Create reg entries to load compression tab
+HKCR,CLSID\{7C7E55A0-4397-11CE-8B06-00AA0062C7BB}\InProcServer32,,,"%24%\%PROGRAMF%\%PLUS!%\%SYSTEM%\COMPEXT.DLL"
+HKCR,CLSID\{7C7E55A0-4397-11CE-8B06-00AA0062C7BB}\InProcServer32,"ThreadingModel",,"Apartment"
+HKCR,Drive\shellex\PropertySheetHandlers\Compression,,,"{7C7E55A0-4397-11CE-8B06-00AA0062C7BB}"
+
+; Setup SAGE settings for CmpAgent?
+
+;-------------------------------------------------------
+
+
+;---- Disk Tools Install Sections ----------------
+[DiskTools.win]
+DEFRAG.EXE,,,4  ;(4-ignore ver conflict, overwrite newer files (REVIEW, this can be removed after RTM.)
+
+[DiskTools.links]
+;Create Link to Defragger:
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%Defrag_Desc%"", DEFRAG.EXE,,,,,%Defrag_ShortDesc%"
+
+[DiskTools.install.reg]
+; this is a DelReg Section b/c we want to disable uninstalling Disk Tools
+; because Disk Compression depends on them
+HKLM,%KEY_OPTIONAL%,"DiskTools",,"disktools"
+HKLM,%KEY_OPTIONAL%\disktools
+;-------------------------------------------------------
+
+
+;--- Dialer Install Sections -----------------
+[Dialer.Shared.Copy]
+dialer.exe
+
+[Dialer.HLP.Copy]
+DIALER.CNT
+DIALER.HLP
+
+[Dialer.Inis]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"       ;creates folder
+setup.ini, group4,, """%Dialer_Desc%"", DIALER.EX

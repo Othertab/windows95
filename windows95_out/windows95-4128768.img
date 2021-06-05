@@ -1,0 +1,51 @@
+								
+199										
+200		~~~ System Agent ~~~		DependAsk	99 ? 201 220 224 230 235 240 250 400					
+201		*** UI Manager ***		Group	202 203 204 213 214 215 216 217 218					
+202		System Agent (SYSAGENT.EXE)		CopyFile	"""SystemAgent"",""sui"""				yes	%32
+203		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+204		ShortCut		InstallShortcut	"""%202\%F202"",""System Agent"",""%202\System"""				no	%203\ACCESS~1\SYSTEM~1<%203\Accessories\System Tools>
+213		System Agent AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\SYSAGENT.EXE"","""",""%202\%F202"""					
+214		System Agent Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\SYSAGENT.EXE"",""Path"",""%202\System;"""					
+215		System Agent Log		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent"",""NoLog"",""0"""					
+216		System Agent LogSize		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent"",""MaxLogSizeKB"",""100"""					
+217		System Agent LogPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent"",""LogPath"",""%202\SAGELOG.TXT"""					
+218		Remove System Agent Reg Keys		CustomAction	"""plus.dll"",""RemoveSageReg"",""202"""									
+219										
+220		*** UI Help ***		Group	221 222					
+221		SYSAGENT.HLP		CopyFile	"""SystemAgent"",""shp"""				no	%W\HELP<%W\Help>
+222		SYSAGENT.CNT		CopyFile	"""SystemAgent"",""sct"""				no	%W\HELP<%W\Help>
+223										
+224		*** Engine EXE ***		Group	225 226 227 228					
+225		Sage (SAGE.EXE)		CopyFile	"""SystemAgent"",""sag"""				no	%M
+226		Sage RunStart		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Run"",""SystemAgent"",""%225\%F225"""					
+227		Sage AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\SAGE.EXE"","""",""%225\%F225"""					
+228		Sage Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\SAGE.EXE"",""Path"",""%225;"""					
+229										
+230		*** Engine DLL ***		Group	231					
+231		Sage Library (SAGE.DLL)		CopyFile	"""SystemAgent"",""sdl"""				no	%M
+234										
+235		*** Engine VXD ***		Group	236 237 238					
+236		Sage VxD (SAGE.VXD)		CopyFile	"""SystemAgent"",""sxd"""				no	%M
+237		VxD AutoLoad		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\VxD\SAGE,Start,01,1"""					
+238		VxD AutoLoad		AddRegData	"""HKEY_LOCAL_MACHINE"",""System\CurrentControlSet\Services\VxD\SAGE"",""StaticVxD"",""%F236"""					
+239										
+240		*** Disk Alarms ***		Group	241 242 243 244					
+241		DISKALM.EXE		CopyFile	"""SystemAgent"",""sda"""				yes	%32\SYSTEM<%32\System>
+242		Disk Alarm AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\DISKALM.EXE"","""",""%241\%F241"""					
+243		Disk Alarm  Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\DISKALM.EXE"",""Path"",""%241;"""					
+244	yes	Configure Disk Alarms		CustomAction	"""plus.dll"",""WizExec"",""DISKALM.EXE /CONFIG"""					%241
+249										
+250		*** Engine DAT / SAGE Awareness ***		Group	252					
+251		Check ver of SAGE.DAT		CustomAction	"""plus.dll"",""SageDatVer"",""1"""					
+252				Depend	251 ? 254 269 270					
+253		Check for Type3 CVFs		CustomAction	"""plus.dll"",""Type3Check"""					
+254				Depend	253 ? 256 : 258					
+255	no	Type3 Nightly Tasks		CustomAction	"""plus.dll"",""NightSAGE"""					
+256				Depend	255 ? 259 260 : 261 262					
+257	no	Non-3 Nightly Tasks		CustomAction	"""plus.dll"",""NightSAGE"""					
+258				Depend	257 ? 263 264 : 265 266					
+259		SAGE.DEF (pm w/ CA)		CopyFile	"""SystemAgent"",""bdf"""				yes	%32\SYSTEM<%32\System>
+260		SAGE.DAT (pm w/ CA)		CopyFile	"""SystemAgent"",""bdt"""				yes	%32\SYSTEM<%32\System>
+261		SAGE.DEF (am w/ CA)		CopyFile	"""SystemAgent"",""ddf"""				yes	%32\SYSTEM<%32\System>
+262		SAGE.DAT (am w/ CA)		CopyFile	"""SystemAgent"",""ddt"""				yes	%32\SYSTEM<%32\Syste

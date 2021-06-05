@@ -1,0 +1,110 @@
+ommDrvTemp~=*",3
+system.ini,boot,"comm.drv=*r0dmdcom.drv", "~CommDrvTemp~=*",3
+system.ini,boot,,"comm.drv=comm.drv"
+system.ini,boot,"~CommDrvTemp~=*","comm.drv=*",3
+
+wininit.ini, CombineVxDs,,"%22%\vshare.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vwin32.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vfbackup.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vcomm.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\combuff.vxd=%11%\vmm32.vxd"
+
+; Set *VCD unless preserving a known win3.1 VCD
+system.ini,386Enh,"device=*r0dmdvcd.386","~VCDTemp~=*",3
+system.ini,386Enh,,"device=*vcd"
+system.ini,386Enh,"~VCDTemp~=*","device=*vcd",3
+
+wininit.ini, CombineVxDs,,"%22%\vcd.vxd=%11%\vmm32.vxd"
+
+system.ini,386Enh,,"device=*vpd"
+wininit.ini, CombineVxDs,,"%22%\vpd.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\spooler.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vfat.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vcache.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vcond.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vcdfsd.vxd=%11%\vmm32.vxd"
+
+; Install "device=*int13"
+system.ini, 386Enh,, "device=*int13"
+wininit.ini, CombineVxDs,,"%22%\int13.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vxdldr.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vdef.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\dynapage.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\configmg.vxd=%11%\vmm32.vxd"
+
+
+
+
+
+; Always combine EBIOS.VxD, but only add the device= line on clean installs
+; (see the [Setup.Init.Inis] section)
+wininit.ini, CombineVxDs,,"%22%\ebios.vxd=%11%\vmm32.vxd"
+
+; Always combine vmd.vxd--it solves problems w/ older setup programs:
+wininit.ini, CombineVxDs,,"%22%\vmd.vxd=%11%\vmm32.vxd"
+
+;REVIEW This should really be done by Net setup--they should pick
+;it up once they convert to the new VxD naming conventions:
+wininit.ini, CombineVxDs,,"%22%\dosnet.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vpicd.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vtd.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\reboot.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vdmad.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vsd.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\v86mmgr.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\pageswap.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\dosmgr.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vmpoll.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\shell.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\parity.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\biosxlat.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vmcpd.vxd=%11%\vmm32.vxd"
+
+wininit.ini, CombineVxDs,,"%22%\vtdapi.vxd=%11%\vmm32.vxd"
+
+system.ini,386Enh,,"maxbps=270"
+
+wininit.ini, CombineVxDs,,"%22%\perf.vxd=%11%\vmm32.vxd"
+
+;Keep some things in the extensions section for compatibility with cc-Mail
+win.ini,Extensions,,"txt=notepad.exe ^.txt"
+;win.ini,Extensions,,"bmp=mspaint.exe ^.bmp" ; moved to applets.inx
+
+;Create StartUp Folder and modify links in it:
+setup.ini, progman.groups,, "group1=""%StartUp_DESC%"""                ;creates folder
+setup.ini, group1,, """%PenPal_DESC%"""                           ;deletes existing link from StartUp folder
+					
+;Create Links that will show up in the Programs Folder (Not in a sub-folder)
+;This replaces the old 'Main' folder/group:
+setup.ini, progman.groups,, "group0="            ;creates "null" folder
+setup.ini, group0,, """%Explorer_DESC%"""        ;REVIEW: deletes previous link (name oblsolete) not needed for final product
+setup.ini, group0,, """%WinExplorer_DESC%"", ""Explorer.exe /n,/e,%30%"", EXPLORER.EXE, 1,,,%WinExplorer_ShortDESC%"
+setup.ini, group0,, """%MSDOSPrmpt_DESC%"""   ;delete the old link
+setup.ini, group0,, """%MSDOSPrmpt_ShortDESC%"""   ;delete the old link
+setup.ini, group0,, """%MSDOSPrmpt_DESC%"", command.com, PIFMGR.DLL, 0,,%10%,%MSDOSPrmpt_ShortD

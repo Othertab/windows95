@@ -1,0 +1,108 @@
+Y%"
+HKCR,SoundRec\shell\play\command,,,"%25%\sndrec32.exe /play /close %%1"
+HKCR,SoundRec\protocol\StdExecute\Server,,,%25%\sndrec32.exe
+HKCR,SoundRec\protocol\StdFileEditing\PackageObjects,,,
+HKCR,SoundRec\protocol\StdFileEditing\Server,,,%25%\sndrec32.exe
+HKCR,SoundRec\protocol\StdFileEditing\verb\0,,,"%V_SOUND_PLAY%"
+HKCR,SoundRec\protocol\StdFileEditing\verb\1,,,"%V_SOUND_EDIT%"
+HKCR,SoundRec\Insertable,,,
+HKCR,SoundRec\CLSID,,,"%KEY_SOUND2ID%"
+HKCR,SoundRec\ShellNew,,,NullFile
+HKCR,SoundRec\shellex\PropertySheetHandlers,,,WavPage
+HKCR,SoundRec\shellex\PropertySheetHandlers\WavPage,,,"%KEY_CLSPROP%"
+
+HKCR,%KEY_SOUND1%,,,"%V_SOUND%"
+HKCR,%KEY_SOUND1%\Insertable,,,
+HKCR,%KEY_SOUND1%\TreatAs,,,"%KEY_SOUND2ID%"
+HKCR,%KEY_SOUND1%\ProgID,,,"SoundRec"
+HKCR,%KEY_SOUND1%\Ole1Class,,,"SoundRec"
+
+HKCR,%KEY_SOUND2%,,,"%V_SOUND%"
+HKCR,%KEY_SOUND2%\Insertable,,,
+HKCR,%KEY_SOUND2%\MiscStatus,,,"2"
+HKCR,%KEY_SOUND2%\ProgID,,,"SoundRec"
+HKCR,%KEY_SOUND2%\Verb\0,,,"%V_SOUND_PLAY%,0,3"
+HKCR,%KEY_SOUND2%\Verb\1,,,"%V_SOUND_EDIT%,0,2"
+HKCR,%KEY_SOUND2%\AuxUserType\2,,,"%SoundRec_AuxName2%"
+HKCR,%KEY_SOUND2%\AuxUserType\3,,,"%SoundRec_AuxName3%"
+HKCR,%KEY_SOUND2%\LocalServer,,,"%25%\sndrec32.exe"
+HKCR,%KEY_SOUND2%\LocalServer32,,,"%25%\sndrec32.exe"
+HKCR,%KEY_SOUND2%\InProcHandler32,,,"ole32.dll"
+HKCR,%KEY_SOUND2%\DataFormats\DefaultFile,,,"12"
+HKCR,%KEY_SOUND2%\DataFormats\DefaultSet,,,"SoundRec"
+HKCR,%KEY_SOUND2%\DataFormats\GetSet\1,,,"8,-1,1,3"
+HKCR,%KEY_SOUND2%\DataFormats\GetSet\0,,,"3,1,32,1"
+HKLM,%KEY_FIL%,,,"PostInstall"
+HKLM,%KEY_FIL%\PostInstall,AddReg,,"AddReg=fl.AddReg"
+HKLM,%KEY_FIL%\fl.AddReg,,,"1"
+HKLM,%KEY_FIL%\fl.AddReg,.wav,,"HKCR,.wav,,,SoundRec"
+HKLM,%KEY_FIL%\fl.AddReg,WavPropSheet,,"HKCR,SoundRec\shellex\PropertySheetHandlers,,,WavPage"
+HKLM,%KEY_FIL%\fl.AddReg,WavPage,,"HKCR,SoundRec\shellex\PropertySheetHandlers\WavPage,,,""%KEY_CLSPROP%"""
+
+[Rec.remove.reg]
+HKLM,%KEY_OPTIONAL%\Rec,Installed,,"0"
+
+[Rec.remove.DelReg]
+;Remove SoundRec Entries:
+HKCR,.wav
+HKCR,SoundRec
+HKCR,%KEY_SOUND1%
+HKCR,%KEY_SOUND2%
+HKLM,%KEY_FIL%\fl.AddReg,.wav
+HKLM,%KEY_FIL%\fl.AddReg,WavPropSheet
+HKLM,%KEY_FIL%\fl.AddReg,WavPage
+
+[Vol.copy]
+sndvol32.exe
+
+[Vol.hlp.copy]
+sndvol32.cnt
+sndvol32.hlp
+
+[Vol.links]
+setup.ini, progman.groups,, "group12=%MMEDIA_DESC%"                ;create Accessories/MultiMedia if necessary
+setup.ini, group12,, """%SndVolLinkDesc%"", SNDVOL32.EXE,,,,,%SndVolLinkShortDesc%"    ;creates link
+
+[Vol.links.remove]
+setup.ini, progman.groups,, "group12=%MMEDIA_DESC%"                ;create Accessories/MultiMedia if necessary
+setup.ini, group12,, """%SndVolLinkDesc%"""    ;deletes link
+setup.ini, group12,, """%SndVolLinkShortDesc%"""    ;deletes link
+
+[Vol.install.reg]
+HKLM,%KEY_OPTIONAL%\Vol,Installed,,"1"
+
+[Vol.remove.reg]
+HKLM,%KEY_OPTIONAL%\Vol,Installed,,"0"
+
+[MPlay.copy]
+mplayer.exe
+
+[MPlay.hlp.copy]
+mplayer.cnt
+mplayer.hlp
+
+[MPlay.links]
+setup.ini, progman.groups,, "group12=%MMEDIA_DESC%"                ;create Accessories/MultiMedia if necessary
+setup.ini, group12,, """%MPlayerLinkDesc%"", MPLAYER.EXE,,,,,%MPlayerLinkShortDesc%"    ;creates link
+;PowerPoint extensions
+powerpnt.ini,"OLE Play Options",,"AVIFile=Movie,1,1"
+powerpnt.ini,"OLE Play Options",,"MIDFile=Sound,1,2"
+
+[MPlay.links.remove]
+setup.ini, progman.groups,, "group12=%MMEDIA_DESC%"                ;create Accessories/MultiMedia if necessary
+setup.ini, group12,, """%MPlayerLinkDesc%"""    ;deletes link
+setup.ini, group12,, """%MPlayerLinkShortDesc%"""    ;deletes link
+
+[MPlay.install.reg]
+HKLM,%KEY_OPTIONAL%\MPlay,Installed,,"1"
+
+HKCU,%KEY_APPS%\MPlayer,,,"%MPlayerLinkDesc%"
+HKCU,%KEY_APPS%\MPlayer\Open\.Current,,2,
+HKCU,%KEY_APPS%\MPlayer\Close\.Current,,2,
+
+HKLM,%KEY_CHKVER%,mplayer.exe,2,0
+HKLM,%KEY_CHKVER%,mplayer.hlp,2,0
+
+;PowerPoint extensions
+HKLM,%KEY_FIL%\fl.UpdateInis,powerpntAVIFile,,"powerpnt.ini,""OLE Play Options"",,""AVIFile=Movie,1,1"""
+HKLM,%KEY_FIL%\fl.UpdateInis,powerpntMIDFile,,"powerpnt.ini,""OLE Play Options"",,""MIDFile=Sound,1,

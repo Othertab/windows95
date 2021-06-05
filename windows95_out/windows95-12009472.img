@@ -1,0 +1,159 @@
+de con cp select=850"
+HKLM, %KEY_EBD%\EBDFilesLocale,locale.inf,,EBD_CopyFiles
+
+[DelRegCP850]
+HKLM,%KEY_FontSize%\96\System
+
+[RegCP437]
+HKLM, %KEY_Codepage%,ACP,,"1252"
+HKLM, %KEY_Codepage%,OEMCP,,"437"
+
+[DelEBD]
+HKLM, %KEY_EBD%
+
+[DelEBD_Locale]
+HKLM, %KEY_EBD%\EBDAutoexecBatLocale
+HKLM, %KEY_EBD%\EBDConfigSysLocale
+HKLM, %KEY_EBD%\EBDFilesBatLocale
+
+;***********************************************
+;These are all of the NLS registy entries
+;***********************************************
+
+[SysLocale_042D]
+HKCU, "Control Panel\International",Locale,,0000042D
+HKLM, %KEY_Locale%,,,0000042D
+
+[SysLocale_0403]
+HKCU, "Control Panel\International",Locale,,00000403
+HKLM, %KEY_Locale%,,,00000403
+
+[SysLocale_0406]
+HKCU, "Control Panel\International",Locale,,00000406
+HKLM, %KEY_Locale%,,,00000406
+
+[SysLocale_0413]
+HKCU, "Control Panel\International",Locale,,00000413
+HKLM, %KEY_Locale%,,,00000413
+
+[SysLocale_0813]
+HKCU, "Control Panel\International",Locale,,00000813
+HKLM, %KEY_Locale%,,,00000813
+
+[SysLocale_0409]
+HKCU, "Control Panel\International",Locale,,00000409
+HKLM, %KEY_Locale%,,,00000409
+
+[SysLocale_0809]
+HKCU, "Control Panel\International",Locale,,00000809
+HKLM, %KEY_Locale%,,,00000809
+
+[SysLocale_0C09]
+HKCU, "Control Panel\International",Locale,,00000C09
+HKLM, %KEY_Locale%,,,00000C09
+
+[SysLocale_1009]
+HKCU, "Control Panel\International",Locale,,00001009
+HKLM, %KEY_Locale%,,,00001009
+
+[SysLocale_1409]
+HKCU, "Control Panel\International",Locale,,00001409
+HKLM, %KEY_Locale%,,,00001409
+
+[SysLocale_1809]
+HKCU, "Control Panel\International",Locale,,00001809
+HKLM, %KEY_Locale%,,,00001809
+
+[SysLocale_040B]
+HKCU, "Control Panel\International",Locale,,0000040B
+HKLM, %KEY_Locale%,,,0000040B
+
+[SysLocale_040C]
+HKCU, "Control Panel\International",Locale,,0000040C
+HKLM, %KEY_Locale%,,,0000040C
+
+[SysLocale_080C]
+HKCU, "Control Panel\International",Locale,,0000080C
+HKLM, %KEY_Locale%,,,0000080C
+
+[SysLocale_0C0C]
+HKCU, "Control Panel\International",Locale,,00000C0C
+HKLM, %KEY_Locale%,,,00000C0C
+
+[SysLocale_100C]
+HKCU, "Control Panel\International",Locale,,0000100C
+HKLM, %KEY_Locale%,,,0000100C
+
+[SysLocale_0407]
+HKCU, "Control Panel\International",Locale,,00000407
+HKLM, %KEY_Locale%,,,00000407
+
+[SysLocale_0807]
+HKCU, "Control Panel\International",Locale,,00000807
+HKLM, %KEY_Locale%,,,00000807
+
+[SysLocale_0C07]
+HKCU, "Control Panel\International",Locale,,00000C07
+HKLM, %KEY_Locale%,,,00000C07
+
+[SysLocale_040F]
+HKCU, "Control Panel\International",Locale,,0000040F
+HKLM, %KEY_Locale%,,,0000040F
+
+[SysLocale_0421]
+HKCU, "Control Panel\International",Locale,,00000421
+HKLM, %KEY_Locale%,,,00000421
+
+[SysLocale_0410]
+HKCU, "Control Panel\International",Locale,,00000410
+HKLM, %KEY_Locale%,,,00000410
+
+[SysLocale_0810]
+HKCU, "Control Panel\International",Locale,,00000810
+HKLM, %KEY_Locale%,,,00000810
+
+[SysLocale_0414]
+HKCU, "Control Panel\International",Locale,,00000414
+HKLM, %KEY_Locale%,,,00000414
+
+[SysLocale_0814]
+HKCU, "Control Panel\International",Locale,,00000814
+HKLM, %KEY_Locale%,,,00000814
+
+[SysLocale_0416]
+HKCU, "Control Panel\International",Locale,,00000416
+HKLM, %KEY_Locale%,,,00000416
+
+[SysLocale_0816]
+HKCU, "Control Panel\International",Locale,,00000816
+HKLM, %KEY_Locale%,,,00000816
+
+[SysLocale_040A]
+HKCU, "Control Panel\International",Locale,,0000040A
+HKLM, %KEY_Locale%,,,0000040A
+
+[SysLocale_080A]
+HKCU, "Control Panel\International",Locale,,0000080A
+HKLM, %KEY_Locale%,,,0000080A
+
+[SysLocale_0C0A]
+HKCU, "Control Panel\International",Locale,,00000C0A
+HKLM, %KEY_Locale%,,,00000C0A
+
+[SysLocale_041D]
+HKCU, "Control Panel\International",Locale,,0000041D
+HKLM, %KEY_Locale%,,,0000041D
+
+[SysLocale_0436]
+HKCU, "Control Panel\International",Locale,,00000436
+HKLM, %KEY_Locale%,,,00000436
+
+[SysLocale_1C09]
+HKCU, "Control Panel\International",Locale,,00001C09
+HKLM, %KEY_Locale%,,,00001C09
+
+[SysLocale_140C]
+HKCU, "Control Panel\International",Locale,,0000140C
+HKLM, %KEY_Locale%,,,0000140C
+
+[SysLocale

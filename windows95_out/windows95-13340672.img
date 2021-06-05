@@ -1,0 +1,65 @@
+"Olivetti JP 450 (Color)"         = JP350.DRV,Olivetti_JP_450_(Color)
+"Olivetti PG 108"                 = HPPCL.DRV,Olivetti_PG_108
+"Olivetti PG 208 M2"              = HPPCL.DRV,Olivetti_PG_208_M2
+"Olivetti PG 306"                 = HPPCL.DRV,Olivetti_PG_306
+"Olivetti PG 308"                 = HPPCL.DRV,Olivetti_PG_308
+"Olivetti PG 308 HS"              = HPPCL.DRV,Olivetti_PG_308_HS
+"Olivetti PG 404"                 = HPPCL5MS.DRV,Olivetti_PG_404
+"Olivetti PG 408"                 = HPPCL5MS.DRV,Olivetti_PG_408
+
+[Panasonic]
+"Panasonic KX-P1081"              = PANSON9.DRV,Panasonic_KX-P1081
+"Panasonic KX-P1121"              = PANSON24.DRV,Panasonic_KX-P1121
+"Panasonic KX-P1123"              = PANSON24.DRV,Panasonic_KX-P1123
+"Panasonic KX-P1124"              = PANSON24.DRV,Panasonic_KX-P1124
+"Panasonic KX-P1124i"             = PANSON24.DRV,Panasonic_KX-P1124i
+"Panasonic KX-P1150"              = PANSON9.DRV,Panasonic_KX-P1150
+"Panasonic KX-P1170"              = PANSON9.DRV,Panasonic_KX-P1170
+"Panasonic KX-P1180"              = PANSON9.DRV,Panasonic_KX-P1180
+"Panasonic KX-P1624"              = PANSON24.DRV,Panasonic_KX-P1624
+"Panasonic KX-P1654"              = PANSON24.DRV,Panasonic_KX-P1654
+"Panasonic KX-P1695"              = PANSON9.DRV,Panasonic_KX-P1695
+"Panasonic KX-P2023"              = PANSON24.DRV,Panasonic_KX-P2023
+"Panasonic KX-P2180"              = PANSON9.DRV,Panasonic_KX-P2180
+"Panasonic KX-P2123"              = PANSON24.DRV,Panasonic_KX-P2123
+"Panasonic KX-P2124"              = PANSON24.DRV,Panasonic_KX-P2124
+"Panasonic KX-P2624"              = PANSON24.DRV,Panasonic_KX-P2624
+"Panasonic KX-P3123"              = ESCP2MS.DRV,Panasonic_KX-P3123
+"Panasonic KX-P3124"              = ESCP2MS.DRV,Panasonic_KX-P3124
+"Panasonic KX-P3134"              = ESCP2MS.DRV,Panasonic_KX-P3134
+"Panasonic KX-P3634"              = ESCP2MS.DRV,Panasonic_KX-P3634
+"Panasonic KX-P4400"              = HPPCL.DRV,Panasonic_KX-P4400
+"Panasonic KX-P4410"              = HPPCL.DRV,Panasonic_KX-P4410
+"Panasonic KX-P4420"              = HPPCL.DRV,Panasonic_KX-P4420
+"Panasonic KX-P4430"              = HPPCL5MS.DRV,Panasonic_KX-P4430
+"Panasonic KX-P4440"              = HPPCL5MS.DRV,Panasonic_KX-P4440
+"Panasonic KX-P4450"              = HPPCL.DRV,Panasonic_KX-P4450
+"Panasonic KX-P4450i"             = HPPCL.DRV,Panasonic_KX-P4450i
+"Panasonic KX-P4451"              = HPPCL5MS.DRV,Panasonic_KX-P4451
+"Panasonic KX-P4455"              = P4455514.SPD,Panasonic_KX-P4455
+"Panasonic KX-P5400"              = PAP54001.SPD,Panasonic_KX-P5400
+"Panasonic KX-P5410"              = PAP54101.SPD,Panasonic_KX-P5410
+
+[QMS]
+"QMS ColorScript 100 Model 10"    = QCS10503.SPD,QMS_ColorScript_100_Model_10
+"QMS ColorScript 100 Model 30"    = QCS30503.SPD,QMS_ColorScript_100_Model_30
+"QMS ColorScript 210"             = QMSCS210.SPD,QMS_ColorScript_210
+"QMS ColorScript 230"             = QMSCS230.SPD,QMS_ColorScript_230
+"QMS ColorScript Laser 1000"      = QCS1000.SPD,QMS_ColorScript_Laser_1000
+"QMS 420 Print System"            = QMS420.SPD,QMS_420_Print_System
+"QMS 860 Print System"            = QMS860.SPD,QMS_860_Print_System
+"QMS 860+ Print System"           = Q860PLS2.SPD,QMS_860+_Print_System
+"QMS 1725 Print System"           = QMS1725.SPD,QMS_1725_Print_System
+"QMS 3225 Print System"           = QMS3225.SPD,QMS_3225_Print_System
+"QMS 4525 Print System"           = QMS45252.SPD,QMS_4525_Print_System
+"QMS-PS 1700"                     = QM1700_1.SPD,QMS-PS_1700
+"QMS-PS 410"                      = QMPS4101.SPD,QMS-PS_410
+"QMS-PS 800"                      = Q800_MS.SPD,QMS-PS_800
+"QMS-PS 800 Plus"                 = QMS8P461.SPD,QMS-PS_800_Plus
+"QMS-PS 810"                      = Q810_MS.SPD,QMS-PS_810
+"QMS-PS 810 Turbo"                = Q810T_MS.SPD,QMS-PS_810_Turbo
+"QMS-PS 820"                      = Q820_MS.SPD,QMS-PS_820
+"QMS-PS 820 Turbo"                = Q820T517.SPD,QMS-PS_820_Turbo
+"QMS-PS 825 MR"                   = QM825MR1.SPD,QMS-PS_825_MR
+"QMS-PS 2000"                     = QM2000_1.SPD,QMS-PS_2000
+"QMS-

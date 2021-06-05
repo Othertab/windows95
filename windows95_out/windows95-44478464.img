@@ -1,0 +1,105 @@
+ACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\4]
+"Name"="Manufacturer"
+"Description"="The name of the company manufacturing or providing this Field Replaceable Unit."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(80)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\5]
+"Name"="Model"
+"Description"="The manufacturer's model number for this Field Replaceable Unit."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\Model"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\6]
+"Name"="Part Number"
+"Description"="A part number by which a replacement part can be ordered for this Field Replaceable Unit."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\PartNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\7]
+"Name"="FRU Serial Number"
+"Description"="The manufacturer's serial number for this Field Replaceable Unit."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\FRUSerialNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\8]
+"Name"="Revision Level"
+"Description"="The revision level of this Field Replaceable Unit."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\RevisionLevel"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\9]
+"Name"="Warranty Start Date"
+"Description"="The start date of the service warranty for this Field Replaceable Unit."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\WarrantyStartDate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\10]
+"Name"="Warranty Duration"
+"Description"="The total duration of this Field Replaceable Unit warranty in months."
+"Column"="10"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\WarrantyDuration"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\30\11]
+"Name"="Support Phone Number"
+"Description"="The phone number(s) for support for this Field Replaceable Unit."
+"Column"="11"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\SupportPhoneNumber"
+
+
+;==========================
+;  Operational State Table
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31]
+"Name"="Operational State"
+"Class"="DMTF|Operational State|001"
+"Description"="This group provides the operational state, usage, and availability status, and administrative state indicators for specific device instances."
+"Key"="1"
+"^Index"=hex:03,00,00,00
+"^ROW"="1|2|3|4|5|6|7|8|9"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\1]
+"Name"="Operational State Instance Index"
+"Description"="The Index into the Operational State table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\2]
+"Name"="Device Group Index"
+"Description"="The group ID of the group referencing this instance."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:1d,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\3]
+"Name"="Operational Status"
+"Description"="The oper

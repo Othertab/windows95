@@ -1,0 +1,87 @@
+t it? %1:PDo you want to start the Workstation service? %1:PIs it OK to continue disconnecting and force them closed? %1:PThe queue does not exist.  Do you want to create it? %1:?
+?
+?
+?
+?
+?
+?
+?
+?
+E The network control block (NCB) request was completed successfully.
+E Illegal network control block (NCB) buffer length on SEND DATAGRAM, SEND BROADCAST, ADAPTER STATUS, or SESSION STATUS.
+E The data descriptor array specified in the network control block (NCB) is invalid.
+E The command specified in the network control block (NCB) is illegal.
+E The message correlator specified in the network control block (NCB) is
+ invalid.
+E A network control block (NCB) command timed-out. An NCB command to a remote 
+ computer failed because the remote computer did not respond in time. The 
+ remote computer is not listening. The session to the remote computer may have been dropped.
+E An incomplete network control block (NCB) message was received.
+E The buffer address specified in the network control block (NCB) is illegal.
+E The session number specified in the network control block (NCB) is not active.
+E No resource was available in the network adapter. 
+ A network control block (NCB) request was refused. There is no space available 
+ on the network adapter for another session.
+E The session specified in the network control block (NCB) was closed.
+E The network control block (NCB) command was canceled.
+E The message segment specified in the network control block (NCB) is illogical.
+E The name already exists in the local adapter name table.
+ The network control block (NCB) request was refused.
+E The network adapter name table is full.
+ The network control block (NCB) request was refused.
+E The network name has active sessions and is now de-registered.  
+ The network control block (NCB) command completed.
+E A previously issued Receive Lookahead command is active
+ for this session.  The network control block (NCB) command was rejected.
+E The local session table is full. The network control block (NCB) request 
+ was refused because the session table on the network adapter was full. 
+ To check or change this setting, double-click the Network icon in Control Panel. 
+E A network control block (NCB) session open was rejected. No LISTEN is 
+ outstanding on the remote computer.
+E The name number specified in the network control block (NCB) is illegal.
+E The call name specified in the network control block (NCB) can not be found or
+ did not answer.
+E The name specified in the network control block (NCB) was not found. 
+ Cannot put '*' or  '00h' in the NCB name.
+E The name specified in the network control block (NCB) is in use on a remote adapter.
+E The name specified in the network control block (NCB) has been deleted.
+E The session specified in the network control block (NCB) ended abnormally.
+E The network protocol has detected two or more identical names on the network.
+E An unexpected protocol packet was received. 
+ There may be an incompatible remote device.
+?
+?
+?
+?
+?
+?
+E The NetBIOS interface is busy. 
+ The network control block (NCB) request was refused.
+E The network control block (NCB) request was refused because there are too 
+ many NCB commands outstanding. The command will be tried again later. 
+ To check or change this setting, double-click the Network icon in Control Panel.
+E The adapter number specified in the network control block (NCB) is illegal.
+E The network control block (NCB) command completed while a cancel was occurring.
+E The name specified in the network control block (NCB) is reserved.
+E The network control block (NCB) command is not valid to cancel.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+E There are multiple network control block (NCB) requests for the same session.
+ The NCB request was refused.
+E There has been a network adapter error. The only NetBIOS command that may be
+ issued is a network control block (NCB) RESET. The NCB is the data.
+?
+E The maximum number of applications was exceeded. 
+ The network control block (NCB) request was refused.
+?
+E The r

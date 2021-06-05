@@ -1,0 +1,164 @@
+79C9
+%SMART2% = Gen24P, PCMCIA\SMART_MODULAR_TECHNOLOGIES-ST9624-6F3C
+%SMART3% = Gen24P, PCMCIA\SMART_MODULAR_TECHNOLOGIES-ST9624E-F38E
+
+[NewMedia]
+%NewMedia1% = Gen144P, GEN_NewMedia1, PCMCIA\RIPICAA-RC144ACL-845A         ; Same as Rockwell1
+%NewMedia1% = Gen144P, GEN_NewMedia1, PCMCIA\CIRRUS_LOGIC-FAX_MODEM-F874
+
+[GVC]
+%GVC1% = Gen24NFC, UNIMODEM901DD6E5
+%GVC1% = Gen24, UNIMODEM8A085313
+
+[Boca]
+%Boca1% = Gen144P, PCMCIA\RIPICAA-RC144ACL-A0E5 ; Same as Rockwell1
+
+[Piiceon]
+%Piiceon1% = Gen144P, GEN_Piiceon1, PCMCIA\RIPICAA-RC144ACL-845A  ; Same as Rockwell1
+
+[ETech]
+%ETech1% = Gen144P, PCMCIA\E-TECH-C1414AX-0839
+
+[Rockwell]
+%Rockwell1% = Gen144P, PCMCIA\RIPICAA-RC144ACL-845A
+%Rockwell2% = Gen144P, PCMCIA\RIPICAA-RC144ACL-08E5
+
+[IBM]
+%IBM1% = Gen144P, "PCMCIA\IBM-PUSH/POP_MODEM(14.4K)-DD48"
+
+; --------------------------------------------------
+; Generic modem install sections
+
+[Gen]
+AddReg=All, GenericAddReg, GenReg, EXTERNAL
+
+[Gen3]
+AddReg=All, GenericAddReg, Gen3Reg, EXTERNAL
+
+[Gen12]
+AddReg=All, GenericAddReg, Gen12Reg, EXTERNAL
+
+[Gen24]
+AddReg=All, GenericAddReg, Gen24Reg, EXTERNAL
+
+[Gen24NFC]
+AddReg=All, GenericAddReg, Gen24NFCReg, EXTERNAL
+
+[Gen24I]
+AddReg=All, GenericAddReg, Gen24Reg, INTERNAL
+
+[Gen24P]
+AddReg=All, GenericAddReg, Gen24Reg, PCMCIA
+
+[Gen96]
+AddReg=All, GenericAddReg, Gen96Reg, EXTERNAL
+
+[Gen96I]
+AddReg=All, GenericAddReg, Gen96Reg, INTERNAL
+
+[Gen96P]
+AddReg=All, GenericAddReg, Gen96Reg, PCMCIA
+
+[Gen144]
+AddReg=All, GenericAddReg, Gen144Reg, EXTERNAL
+
+[Gen144I]
+AddReg=All, GenericAddReg, Gen144Reg, INTERNAL
+
+[Gen144P]
+AddReg=All, GenericAddReg, Gen144Reg, PCMCIA
+
+[Gen192]
+AddReg=All, GenericAddReg, Gen192Reg, EXTERNAL
+
+[Gen288]
+AddReg=All, GenericAddReg, Gen288Reg, EXTERNAL
+
+[PNPC100]
+AddReg=All, GenericAddReg, Gen96Reg, EXTERNAL
+
+[PNPC101]
+AddReg=All, GenericAddReg, Gen144Reg, EXTERNAL
+
+[PNPC102]
+AddReg=All, GenericAddReg, Gen288Reg, EXTERNAL
+
+[PNPC103]
+AddReg=All, GenericAddReg, GenAnyReg, EXTERNAL
+
+[PNPC104]
+AddReg=All, GenericAddReg, EnhancedAddReg, Enh96Reg, EXTERNAL
+
+[PNPC105]
+AddReg=All, GenericAddReg, EnhancedAddReg, Enh144Reg, EXTERNAL
+
+[PNPC106]
+AddReg=All, GenericAddReg, EnhancedAddReg, Enh288Reg, EXTERNAL
+
+[PNPC107]
+AddReg=All, GenericAddReg, EnhancedAddReg, EnhAnyReg, EXTERNAL
+
+[PNPC108]
+AddReg=All, GenericAddReg, Gen96Reg, INTERNAL
+
+[PNPC109]
+AddReg=All, GenericAddReg, Gen144Reg, INTERNAL
+
+[PNPC10A]
+AddReg=All, GenericAddReg, Gen288Reg, INTERNAL
+
+[PNPC10B]
+AddReg=All, GenericAddReg, GenAnyReg, INTERNAL
+
+[PNPC10C]
+AddReg=All, GenericAddReg, EnhancedAddReg, Enh96Reg, INTERNAL
+
+[PNPC10D]
+AddReg=All, GenericAddReg, EnhancedAddReg, Enh144Reg, INTERNAL
+
+[PNPC10E]
+AddReg=All, GenericAddReg, EnhancedAddReg, Enh288Reg, INTERNAL
+
+[PNPC10F]
+AddReg=All, GenericAddReg, EnhancedAddReg, EnhAnyReg, INTERNAL
+
+; Generic PCMCIA Device -- specified as the compatible id for unknown pcmcia
+; modems.
+[PNPC200]
+;PCMCIA_GEN overrides the GenReg behavior of assuming speeds >= 38400
+; are DTE speeds -- this breaks the Megahertz xj4288 and cc4288 pcmcia modems,
+; which mystifyingly return connect 23400
+; Note also that GenReg doesn't specify a DCB, so there is no uppper bound on
+; post speed and in practice 115K is used.
+AddReg=All, GenericAddReg, GenReg, PCMCIA, PCMCIA_GEN
+
+; --------------------------------------------------
+; Common AddReg sections
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*VCOMM
+HKR,,ConfigDialog,,modemui.dll
+HKR,,PortSubClass,1,02
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages"
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[INTERNAL]
+HKR,, DeviceType, 1, 02
+
+[PCMCIA]
+HKR,,PortDriver,,Serial.vxd
+HKR,,Contention,,*vcd
+HKR,, DeviceType, 1, 03
+
+[EnhancedAddReg]
+HKR, Settings, DialSuffix,, ";"
+HKR, Settings, Blind_Off,, "X4"
+HKR, Settings, Blind_On,, "X3"
+HKR, Settings, SpeakerVolume_Low,, "L0"
+HKR, Settings, SpeakerVolume_Med,, "L2"
+HKR, Settings, SpeakerVolume_High,, "L3"
+HKR, Settings, SpeakerMode_Off,, "M0"
+HKR, Settings, Speak

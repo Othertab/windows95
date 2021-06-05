@@ -1,0 +1,155 @@
+ICW_FULL%"
+
+
+;	International CodePages
+HKLM,"System\CurrentControlSet\control\Nls\CodePage","20866",0,"cp_20866.nls"
+HKLM,"System\CurrentControlSet\control\Nls\CodePage","28592",0,"cp_28592.nls"
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+;===================================================================
+;	REMOVE Registry Entries
+;===================================================================
+
+
+[B.DelReg]
+HKCR,Shell.Browser
+HKCR,Shell.Browser.1
+
+HKCR,"news\shell\open\ddeexec"
+
+HKCR,"htmlfile\DocObject"
+HKCR,"htmlfile\Protocol"
+HKCR,"htmlfile\Insertable"
+HKLM,"SOFTWARE\Classes\htmlfile\DocObject"
+HKLM,"SOFTWARE\Classes\htmlfile\Protocol"
+HKLM,"SOFTWARE\Classes\htmlfile\Insertable"
+HKCR,"CLSID\{%CLSID_MSHTML%}\DocObject"
+HKCR,"CLSID\{%CLSID_MSHTML%}\Insertable"
+
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\cache1"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\cache2"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\cache3"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\cache4"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path5"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path6"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path7"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path8"
+
+HKLM,"System\CurrentControlSet\control\SecurityProviders\SCHANNEL\CertificationAuthorities\internetMCI Mall"
+
+;	Remove Java VM's uninstall option
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Java VM","DisplayName"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Java VM","UninstallString"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Java VM","Default"
+
+
+[W95.DelReg]
+
+
+
+
+[NT.DelReg]
+
+
+
+
+
+
+
+
+
+
+;
+;	INI MODIFICATIONS
+
+
+[B.StartMenu.UpdateIni]
+setup.ini, progman.groups,,"IE_INTERNET=%IEXPLORE_PROGGROUP%"
+setup.ini, IE_INTERNET,,"""%OLDIEXPLORE_DESC%""
+setup.ini, IE_INTERNET,,"""%INETWIZ_DESC%""
+
+
+;	ADD Start Menu Items During Install
+setup.ini, progman.groups,, "IE_PROGRAMS="
+setup.ini, IE_PROGRAMS,,"""%IEXPLORE_DESC%"", %24%%OEM_PROGRAMF%\%OEM_MICROS%\IEXPLORE.EXE,,,,,%IEXPLORE_SHORT_DESC%"
+
+
+[W95.StartMenu.UpdateIni]
+
+;	ADD Win95 Start Menu Items During Install
+setup.ini, progman.groups,,"IE_INET_TOOLS=%ACCESSORIES_PATH%\%INTERNET_TOOLSPROGGROUP%"
+setup.ini, progman.groups,,"IE_SYS_TOOLS=%ACCESSORIES_PATH%\%SYSTEM_TOOLSPROGGROUP%"
+setup.ini, IE_INET_TOOLS,,"""%IEXPLORE_DESC%"", %24%%OEM_PROGRAMF%\%OEM_MICROS%\IEXPLORE.EXE,,,,,%IEXPLORE_SHORT_DESC%"
+setup.ini, IE_INET_TOOLS,,"""%ICWCONN1_DESC%"",""%24%%OEM_PROGRAMF%\%ICW_SHORT%\ICWCONN1.EXE"""
+setup.ini, IE_INET_TOOLS,,"""%INETWIZ_DESC%"",,,
+setup.ini, IE_SYS_TOOLS,,"""%INETWIZ_DESC%""
+setup.ini, IE_SYS_TOOLS,,"""%OLDIEXPLORE_DESC%""
+setup.ini, IE_SYS_TOOLS,,"""%IEXPLORE_DESC%""
+
+
+
+
+
+
+[B.DelStartMenu.UpdateIni]
+;	REMOVE Start Menu Items During Uninstall
+setup.ini, progman.groups,, "IE_PROGRAMS="
+setup.ini, IE_PROGRAMS,,"""%IEXPLORE_DESC%""
+
+
+
+[W95.DelStartMenu.UpdateIni]
+
+
+
+
+
+
+
+
+;
+;	STRINGS
+
+[Strings]
+
+;Non-Localizable
+
+; Registry Values
+IEXPLORE_SHORT_DESC		= "IEXPLORE"
+INETWIZ_SHORT_DESC		= "INETWIZ"
+
+; Directory Paths
+CACHE_DIR				= "Temporary Internet Files"
+
+; ClassIDs
+CLSID_IE_App			= "0002DF01-0000-0000-C000-000000000046"
+CLSID_IE_TypeLib		= "EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B"
+CLSID_MSHTML			= "25336920-03F9-11cf-8FD0-00AA00686F13"
+CLSID_MSHTML_EMBED		= "25336921-03F9-11cf-8FD0-00AA00686F13"
+CLSID_URLMON			= "79eac9f1-baf9-11ce-8c82-00aa004ba90b"
+CLSID_IPersistMoniker	= "79eac9c9-baf9-11ce-8c82-00aa004ba90b"
+;	HyperLinking Interfaces
+CLSID_HLinkPSFactory	= "79eac9c0-baf9-11ce-8c82-00aa004ba90b"
+CLSID_IBindStatusCallback	= "79eac9c1-baf9-11ce-8c82-00aa004ba90b"
+CLSID_IHlinkSite		= "79eac9c2-baf9-11ce-8c82-00aa004ba90b"
+CLSID_IHlink			= "79eac9c3-baf9-11ce-8c82-00aa0

@@ -1,0 +1,103 @@
+
+       3      80 x 148 x 25 color (text)
+       4      320 x 148 x 200 4-color (graphics)
+       5      320 x 148 x 200 monochrome (graphics)
+       6      640 x 148 x 200 monochrome (graphics)
+       7      Enables line wrapping
+      13      320 x 148 x 200 color (graphics)
+      14      640 x 148 x 200 color (16-color graphics)
+      15      640 x 148 x 350 monochrome (2-color graphics)
+      16      640 x 148 x 350 color (16-color graphics)
+      17      640 x 148 x 480 monochrome (2-color graphics)
+      18      640 x 148 x 480 color (16-color graphics)
+      19      320 x 148 x 200 color (256-color graphics)
+
+ESC[=Psl
+    Reset Mode: Resets the mode by using the same values that Set Mode
+    uses, except for 7, which disables line wrapping. The last character
+    in this escape sequence is a lowercase L.
+
+ESC[code;string;...p
+    Set Keyboard Strings: Redefines a keyboard key to a specified string.
+    The parameters for this escape sequence are defined as follows:
+
+    o  Code is one or more of the values listed in the following table.
+       These values represent keyboard keys and key combinations. When using
+       these values in a command, you must type the semicolons (;) shown in 
+       this table in addition to the semicolons required by the escape 
+       sequence. The codes in parentheses are not available on some 
+       keyboards. ANSI.SYS will not interpret the codes in parentheses for 
+       those keyboards unless you specify the /X switch in the DEVICE 
+       command for ANSI.SYS.
+
+    o  String is either the ASCII code for a single character or a string
+       contained in quotation marks ("). For example, both 65 and "A" can be
+       used to represent an uppercase A.
+
+IMPORTANT:  Some of the values in the following table are not valid for all
+            computers. Check your computer's documentation for values that
+            are different.
+
+Key                       Code      SHIFT+code  CTRL+code  ALT+code
+---------------------------------------------------------------------------
+
+F1                        0;59      0;84        0;94       0;104
+
+F2                        0;60      0;85        0;95       0;105
+
+F3                        0;61      0;86        0;96       0;106
+
+F4                        0;62      0;87        0;97       0;107
+
+F5                        0;63      0;88        0;98       0;108
+
+F6                        0;64      0;89        0;99       0;109
+
+F7                        0;65      0;90        0;100      0;110
+
+F8                        0;66      0;91        0;101      0;111
+
+F9                        0;67      0;92        0;102      0;112
+
+F10                       0;68      0;93        0;103      0;113
+
+F11                       0;133     0;135       0;137      0;139
+
+F12                       0;134     0;136       0;138      0;140
+
+HOME (num keypad)         0;71      55          0;119      --
+
+UP ARROW (num keypad)     0;72      56          (0;141)    --
+
+PAGE UP (num keypad)      0;73      57          0;132      --
+
+LEFT ARROW (num keypad)   0;75      52          0;115      --
+
+RIGHT ARROW (num          0;77      54          0;116      --
+keypad)
+
+END (num keypad)          0;79      49          0;117      --
+
+DOWN ARROW (num keypad)   0;80      50          (0;145)    --
+
+PAGE DOWN (num keypad)    0;81      51          0;118      --
+
+INSERT (num keypad)       0;82      48          (0;146)    --
+
+DELETE  (num keypad)      0;83      46          (0;147)    --
+
+HOME                      (224;71)  (224;71)    (224;119)  (224;151)
+
+UP ARROW                  (224;72)  (224;72)    (224;141)  (224;152)
+
+PAGE UP                   (224;73)  (224;73)    (224;132)  (224;153)
+
+LEFT ARROW                (224;75)  (224;75)    (224;115)  (224;155)
+
+RIGHT ARROW               (224;77)  (224;77)    (224;116)  (224;157)
+
+END                       (224;79)  (224;79)    (224;117)  (224;159)
+
+DOWN ARROW                (224;80)  (224;80)    (224;145)  (224;154)
+
+PAGE DOWN                

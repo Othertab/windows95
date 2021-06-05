@@ -1,0 +1,147 @@
+ i%
+        END IF
+    END IF
+END FUNCTION
+
+
+'**************************************************************************
+SUB SetBitmap(szDll$, Bitmap%) STATIC
+    IF FSetBitmap(szDll$, Bitmap%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "SetBitmap", szDll$+","+STR$(Bitmap%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'**************************************************************************
+SUB SetAbout(szAbout1$, szAbout2$) STATIC
+    IF FSetAbout(szAbout1$, szAbout2$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "SetAbout", szAbout1$ + "," + szAbout2$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB SetTitle(sz$) STATIC
+    SetWindowText HwndFrame(), sz$
+END SUB
+
+
+'*************************************************************************
+SUB ReadInfFile (szFile$) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFile$) = 0 then
+        BadArgErr 1, "ReadInfFile", szFile$
+    end if
+    IF FOpenInf(szFile$, 1, 1) = 0 THEN
+        StfApiErr saeFail, "ReadInfFile", szFile$
+'$else  ''!DEBUG
+    IF FOpenInf(szFile$, 1, 0) = 0 THEN
+'$endif ''!DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+FUNCTION UIStartDlg(szDll$, Dlg%, szDlgProc$, HelpDlg%, szHelpProc$) STATIC AS STRING
+'$ifdef DEBUG
+    if szDll$ = "" then
+        n% = 1
+    elseif szDlgProc$ = "" then
+        n% = 3
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "UIStartDlg", szDll$+", "+STR$(Dlg%)+", "+szDlgProc$+", "+STR$(HelpDlg%)+", "+szHelpProc$
+    end if
+'$endif ''DEBUG
+
+    IF FDoDialog(HwndFrame(), szDll$, Dlg%, szDlgProc$, HelpDlg%, szHelpProc$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "UIStartDlg", szDll$+", "+STR$(Dlg%)+", "+szDlgProc$+", "+STR$(HelpDlg%)+", "+szHelpProc$
+'$endif ''DEBUG
+        ERROR STFERR
+    ELSE
+        UIStartDlg = GetSymbolValue("DLGEVENT")
+    END IF
+END FUNCTION
+
+
+'*************************************************************************
+SUB UIPop (n%) STATIC
+    IF FKillNDialogs(n%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "UIPop", STR$(n%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB UIPopAll STATIC
+    IF FKillNDialogs(65535) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "UIPopAll", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+FUNCTION GetSymbolValue(szSymbol$) STATIC AS STRING
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetSymbolValue", szSymbol$
+    end if
+'$endif ''DEBUG
+    szValue$ = string$(cbSymValMax,32)
+    Length% = CbGetSymbolValue(szSymbol$, szValue$, cbSymValMax)
+    GetSymbolValue = szValue$
+    IF Length% >= cbSymValMax THEN
+        res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+        ERROR STFERR
+    END IF
+    IF szSymbol$ = "" THEN
+        ERROR STFERR
+    END IF
+    szValue$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetListLength(szSymbol$) STATIC AS INTEGER
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetListLength", szSymbol$
+    end if
+'$endif ''DEBUG
+    GetListLength = UsGetListLength(szSymbol$)
+    IF szSymbol$ = "" THEN
+        ERROR STFERR
+    END IF
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetListItem(szListSymbol$, nItem%) STATIC AS STRING
+'$ifdef DEBUG
+    if szListSymbol$ = "" then
+        BadArgErr 1, "GetListItem", szListSymbol$+", "+STR$(nItem%)
+    end if
+
+    if nItem% <= 0 or nItem% > GetListLength(szListSymbol$) then
+        BadArgErr 2, "GetListItem", szListSymbol$+", "+STR$(nItem%)
+    end if
+'$endif ''DEBUG
+
+    szListItem$ = string$(cbSymValMax,32)
+    L

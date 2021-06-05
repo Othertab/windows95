@@ -1,0 +1,236 @@
+shellb.com
+shellc.exe
+tree.exe
+vdisk.sys
+xmaem.sys
+zcache.sys
+zspool.com
+
+[ios.files]
+apix.vxd
+bigmem.drv
+cdfs.vxd
+cdtsd.vxd
+cdvsd.vxd
+disktsd.vxd
+diskvsd.vxd
+esdi_506.pdr
+hsflop.pdr
+necatapi.vxd
+scsi1hlp.vxd
+scsiport.pdr
+smartvsd.vxd
+voltrack.vxd
+rmm.pdr
+ncrc810.mpd
+ncrc710.mpd
+amsint.mpd
+aic78xx.mpd
+torisan3.vxd
+atapchng.vxd
+
+
+[ios.files.del]
+;Delete these--they have been replaced w/ .vxd versions
+apix.386
+cdfs.386
+cdtsd.386
+cdvsd.386
+disktsd.386
+diskvsd.386
+scsi1hlp.386
+voltrack.386
+
+[setup.files.inf]
+adapter.inf
+apps.inf
+awupd.inf
+mscdrom.inf
+diskdrv.inf
+fonts.inf
+gps.inf
+keyboard.inf
+joystick.inf
+layout.inf
+locale.inf
+machine.inf
+mf.inf
+midi.inf
+msdet.inf
+msdisp.inf
+msfdc.inf
+mshdc.inf
+msmouse.inf
+msports.inf
+msprint.inf
+msprint2.inf
+multilng.inf
+netinfo.inf
+nodriver.inf
+
+
+
+pcmcia.inf
+pcmciamf.inf
+prtupd.inf
+scsi.inf
+setupc.inf
+unknown.inf
+
+
+
+vidcap.inf
+wave.inf
+
+[setup.files.sys]
+setupx.dll
+msprint.dll,,,32        ;suppress version conflicts
+msprint2.dll
+sysdetmg.dll
+
+[setup.files.win]
+logos.sys          ;shutdown logo
+logow.sys          ;shutdown logo
+setup.bmp          ;setup wash
+winver.exe
+
+[setup.files.machine]
+wininit.exe,,,1
+
+
+[base.help.files]
+31users.hlp
+apps.hlp
+license.hlp
+license.txt
+mouse.hlp
+mouse.cnt
+notepad.cnt
+notepad.hlp
+progman.cnt
+progman.hlp
+windows.cnt
+windows.hlp
+winfile.cnt
+winfile.hlp
+winhlp32.cnt
+winhlp32.hlp
+
+[base.help.winhelp]
+winhelp.exe
+winhlp32.exe
+
+[base.help.sys]
+ftsrch.dll
+stem0409.dll
+whlp16t.dll
+whlp32t.dll
+
+[net.help.files]
+NETWORK.HLP
+SERVER.HLP
+
+[ole.help.files]
+common.hlp
+
+[printer.files.sys]
+control.inf
+msprint.dll
+msprint2.dll
+spool32.exe
+spoolss.dll,,,32        ; suppress version conflicts
+winspl16.drv
+winspool.drv
+
+[printer.inis]
+win.ini,windows,,"NullPort=None"
+win.ini,ports,,"LPT1:="
+win.ini,ports,,"LPT2:="
+win.ini,ports,,"LPT3:="
+win.ini,ports,,"COM1:=9600,n,8,1,x"
+win.ini,ports,,"COM2:=9600,n,8,1,x"
+win.ini,ports,,"COM3:=9600,n,8,1,x"
+win.ini,ports,,"COM4:=9600,n,8,1,x"
+win.ini,ports,,"FILE:="
+win.ini,windows,"spooler=",
+win.ini,windows,"DosPrint=",
+
+[config_default]
+DevDefXms=himem.sys,10-23-92,4.00
+DevUmbProv=emm386.exe,10-23-92,4.00
+DevXmsProv=386max.sys
+DevXmsProv=bluemax.sys
+DevXmsProv=qemm386.sys
+DevXmsProv=rm386.exe
+DevRename=emm386.sys,emm386.exe
+DevRename=emm386.dos,emm386.exe
+DevDelete=smartdrv.sys,10-23-92,4.00
+DevDelete=smartdrv.exe     ;to remove double_buffering
+Files=30
+Buffers=30,0
+Stacks=9,256
+Fcbs=4
+DOS=high,noumb,auto
+PreFixPath=26,25,10,13
+RemOldPath=33,32
+TmpDir=27,TEMP ; line to Validate the TMP and TEMP variables in CONFIG.SYS
+;RemKey=LastDrive
+shell=command.com
+DevDelete=ifshlp.sys
+DevDelete=dlshelp.sys ;ibm's ifshlp.sys
+DevDelete=fastopen
+DevDelete=fastopen.exe
+DevDelete=append
+DevDelete=append.exe
+DevDelete=share.exe
+DevDelete=share.com
+DevDelete=share
+DevDelete=mirror.exe
+DevDelete=mirror.com
+DevDelete=mirror
+DevDelete=ega.sys
+DevDelete=DRIVER.SYS
+
+DevDelete=redirect.exe
+
+;PCTOOLS MS-DOS Shell:
+DevDelete=PCSHELL
+DevDelete=PCSHELL.EXE
+
+;Old Iclandic keybd drivers:
+DevDelete=ISLAND.SYS
+DevDelete=ISL861.SYS 
+DevDelete=ISL850.SYS
+
+DevDelete=MEMDRV.EXE
+
+; Remove TSR that Carbon Copy installs:
+DevDelete=doshost.exe
+
+; Remove TSR that comes installed on at&t globalyst 360 pentium
+DevDelete=wbide.exe
+
+; Remove Video 7 VGA driver:
+DevDelete=RAMBIOS.SYS
+
+; Remove MS-DOS 6.x UNDELTE utility
+DevDelete=undelete.exe
+
+; BlueMax utility that does things that Windows now does autoematically:
+DevDelete=EXTRADOS.MAX
+
+; QEMM 7,x utilities that do things that Win 95 now does automatically:
+DevDelete=DOSDATA.SYS
+DevDelete=DOS-UP.SYS
+DevDelete=ST-DBL.SYS
+DevDelete=ST-DSPC.SYS
+
+; Remove Compaq PnP handler (replace w/ built-in Win 95 PnP)
+DevDelete=CPQCM.SYS
+
+DevDelete=DWCFGMG.SYS    ;Intel PnP handler
+DevDelete=ADI2C130.SYS   ;Appian PCI IDE Controller driver
+DevDelete=um8673.sys     ;Compaq
+
+;3rd party remote net TSRs:
+DevDelete = r

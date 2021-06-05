@@ -1,0 +1,103 @@
+Gen.Resources,MC_Channel,SMCARC.ndi.reg,*pnp80e1.DevID
+LogConfig=PC220.LogConfig
+[*pnp80e1.DevID]
+HKR,Ndi,DeviceID,,"*pnp80e1"
+
+;****************************************************************************
+; SMC ARCNET PS110,PS210
+;****************************************************************************
+[mca_6014.ndi]
+AddReg=ARC.Gen.Resources,MCPS_Channel,SMCARC.ndi.reg,mca_6014.DevID
+LogConfig=PS110.LogConfig
+[mca_6014.DevID]
+HKR,Ndi,DeviceID,,"mca_6014"
+
+;****************************************************************************
+; SMC ARCNET PC270/E
+;****************************************************************************
+[*PNP80e2.ndi]
+AddReg=ARC.Gen.Resources,MC_Channel,SMCARC.ndi.reg,*PNP80e2.DevID
+LogConfig=PC130.LogConfig
+[*PNP80e2.DevID]
+HKR,Ndi,DeviceID,,"*pnp80e2"
+
+;****************************************************************************
+; SMC ARCNET PC130/E
+;****************************************************************************
+[*PNP80e0.ndi]
+AddReg=ARC.Gen.Resources,MC_Channel,SMCARC.ndi.reg,*PNP80e0.DevID
+LogConfig=PC130.LogConfig
+[*PNP80e0.DevID]
+HKR,Ndi,DeviceID,,"*pnp80e0"
+
+;****************************************************************************
+; SMC EtherCard (All Types except 8013/A)
+;****************************************************************************
+[*PNP8323.ndi]
+AddReg=STAR.ndi.reg,SMC.Gen.Resources,Slot,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8323.DevID
+LogConfig=ELITE.LogConfig
+[*PNP8323.DevID]
+HKR,Ndi,DeviceID,,"*pnp8323"
+
+;****************************************************************************
+; SMC EtherCard PLUS/A (MCA,BNC/AUX) (WD 8013EP/A)
+;****************************************************************************
+[mca_61c8.ndi]
+AddReg=SMC.Mulitcast.Param,Slot,SMC.ndi.reg,mca_61c8.DevID
+[mca_61c8.DevID]
+HKR,Ndi,DeviceID,,"mca_61c8"
+HKR,NDIS\NDIS2,DriverName,,"SMC8000$"
+
+;****************************************************************************
+; SMC EtherCard PLUS/A (MCA,TP/AUX) (WD 8013EW/A)
+;****************************************************************************
+[mca_61c9.ndi]
+AddReg=SMC.Mulitcast.Param,Slot,SMC.ndi.reg,mca_61c9.DevID
+[mca_61c9.DevID]
+HKR,Ndi,DeviceID,,"mca_61c9"
+HKR,NDIS\NDIS2,DriverName,,"SMC8000$"
+
+;****************************************************************************
+; SMC EtherCard PLUS 16 With Boot ROM Socket (WD/8013EBT)
+;****************************************************************************
+[*PNP812a.ndi]
+AddReg=EBT.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.ndi.reg,*PNP812a.DevID
+LogConfig=EBT.LogConfig
+[*PNP812a.DevID]
+HKR,Ndi,DeviceID,,"*pnp812a"
+
+;****************************************************************************
+; SMC ARCNETPC
+;****************************************************************************
+[*PNP80dd.ndi]
+AddReg=ARC.Gen.Resources,MC_Channel,SMCARC.ndi.reg,*PNP80dd.DevID
+LogConfig=ARC.LogConfig
+[*PNP80dd.DevID]
+HKR,Ndi,DeviceID,,"*pnp80dd"
+
+;****************************************************************************
+; SMC ARCNET PC100,PC200
+;****************************************************************************
+[*PNP80de.ndi]
+AddReg=ARC.Gen.Resources,MC_Channel,SMCARC.ndi.reg,*PNP80de.DevID
+LogConfig=ARC.LogConfig
+[*PNP80de.DevID]
+HKR,Ndi,DeviceID,,"*pnp80de"
+
+;****************************************************************************
+; SMC ARCNET PC110,PC210,PC250
+;****************************************************************************
+[*PNP80df.ndi]
+AddReg=ARC.Gen.Resources,MC_Channel,SMCARC.ndi.reg,*PNP80df.DevID
+LogConfig=ARC.LogConfig
+[*PNP80df.DevID]
+HKR,Ndi,DeviceID,,"*pnp80df"
+
+;****************************************************************************
+; SMC EtherCard PLUS TP (WD/8003WT)
+;****************************************************************************
+[*PNP8128.ndi]
+AddReg=STAR.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8128.DevID
+LogConfig=STAR.LogConfig
+[*PNP8128.DevID]
+HKR,Ndi,DeviceID,,"*pn

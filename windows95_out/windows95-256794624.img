@@ -1,0 +1,93 @@
+IB "msdetstf.dll" AS INTEGER
+DECLARE FUNCTION WGetConfigNumBuffers LIB "msdetstf.dll" AS INTEGER
+DECLARE FUNCTION WGetConfigNumFiles LIB "msdetstf.dll" AS INTEGER
+DECLARE FUNCTION WGetConfigLastDrive LIB "msdetstf.dll" AS INTEGER
+DECLARE FUNCTION FIsDriverInConfig LIB "msdetstf.dll" (szDrv$) AS INTEGER
+DECLARE FUNCTION CbFindTargetOnEnvVar LIB "msdetstf.dll" (szFile$, szEnvVar$, szBuf$, cbBuf%) AS INTEGER
+DECLARE FUNCTION CbFindFileInTree LIB "msdetstf.dll" (szFile$, szDir$, szBuf$, cbBuf%) AS INTEGER
+DECLARE FUNCTION GetTypeFaceNameFromTTF LIB "msdetstf.dll" (szFile$, szBuf$, cbBuf%) AS INTEGER
+DECLARE FUNCTION GetExistingFOTFileForTTF LIB "msdetstf.dll" (szFile$, szBuf$, cbBuf%) AS INTEGER
+
+
+
+'*************************************************************************
+'****************  Detect Basic Wrapper Declarations  ********************
+'*************************************************************************
+
+
+'' detect
+
+DECLARE FUNCTION IsDriveValid (szDrive$) AS INTEGER
+DECLARE FUNCTION IsDriveLocalHard (szDrive$) AS INTEGER
+DECLARE FUNCTION IsDriveRemovable (szDrive$) AS INTEGER
+DECLARE FUNCTION IsDriveNetwork (szDrive$) AS INTEGER
+DECLARE SUB GetValidDrivesList (szSymbol$)
+DECLARE SUB GetLocalHardDrivesList (szSymbol$)
+DECLARE SUB GetRemovableDrivesList (szSymbol$)
+DECLARE SUB GetNetworkDrivesList (szSymbol$)
+DECLARE FUNCTION GetTotalSpaceForDrive (szDrive$) AS LONG
+DECLARE FUNCTION GetFreeSpaceForDrive (szDrive$) AS LONG
+
+DECLARE FUNCTION GetDOSMajorVersion AS INTEGER
+DECLARE FUNCTION GetDOSMinorVersion AS INTEGER
+DECLARE FUNCTION GetEnvVariableValue (szEnvVar$) AS STRING
+DECLARE FUNCTION GetNumWinApps AS INTEGER
+
+DECLARE FUNCTION DoesFileExist (szFile$, mode%) AS INTEGER
+DECLARE FUNCTION GetDateOfFile (szFile$) AS STRING
+DECLARE FUNCTION GetYearFromDate (szDate$) AS INTEGER
+DECLARE FUNCTION GetMonthFromDate (szDate$) AS INTEGER
+DECLARE FUNCTION GetDayFromDate (szDate$) AS INTEGER
+DECLARE FUNCTION GetHourFromDate (szDate$) AS INTEGER
+DECLARE FUNCTION GetMinuteFromDate (szDate$) AS INTEGER
+DECLARE FUNCTION GetSecondFromDate (szDate$) AS INTEGER
+DECLARE FUNCTION GetVersionOfFile (szFile$) AS STRING
+DECLARE FUNCTION GetVersionNthField (szVersion$, nField%) AS LONG
+DECLARE FUNCTION GetSizeOfFile (szFile$) AS LONG
+DECLARE FUNCTION FindTargetOnEnvVar (szFile$, szEnvVar$) AS STRING
+DECLARE FUNCTION FindFileInTree (szFile$, szDir$) AS STRING
+DECLARE FUNCTION DoesDirExist (szDir$) AS INTEGER
+
+DECLARE FUNCTION DoesIniSectionExist (szFile$, szSect$) AS INTEGER
+DECLARE FUNCTION DoesIniKeyExist (szFile$, szSect$, szKey$) AS INTEGER
+DECLARE FUNCTION GetIniKeyString (szFile$, szSect$, szKey$) AS STRING
+
+DECLARE FUNCTION GetConfigSmartdrvSize AS INTEGER
+DECLARE FUNCTION GetConfigRamdriveSize AS INTEGER
+DECLARE FUNCTION GetConfigNumBuffers AS INTEGER
+DECLARE FUNCTION GetConfigNumFiles AS INTEGER
+DECLARE FUNCTION GetConfigLastDrive AS STRING
+DECLARE FUNCTION IsDriverInConfig (szDrv$) AS INTEGER
+
+DECLARE FUNCTION GetProcessorType AS INTEGER
+DECLARE SUB GetParallelPortsList (szSymbol$)
+DECLARE SUB GetSerialPortsList (szSymbol$)
+DECLARE FUNCTION Has87MathChip AS INTEGER
+DECLARE FUNCTION HasMonochromeDisplay AS INTEGER
+DECLARE FUNCTION HasMouseInstalled AS INTEGER
+
+
+'*************************************************************************
+FUNCTION IsDriveValid (szDrive$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if FValidDrive(szDrive$) = 0 then
+        BadArgErr 1, "IsDriveValid", szDrive$
+    end if
+'$endif ''DEBUG
+    IsDriveValid = FIsValidDrive(ASC(UCASE$(szDrive$)) - ASC("A") + 1)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsDriveLocalHard (szDrive$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if FValidDrive(szDrive$) = 0 then
+        BadArgErr 1, "IsDriveLocalHard", szDrive$
+    end if
+'$endif ''DEBUG
+    IsDriveLocalHard = FIsLocalHardDrive(ASC(UCASE$(szDrive$)) - ASC("A") + 1)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsDriveRemova

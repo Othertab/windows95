@@ -1,0 +1,114 @@
+l\Defaults\MIF\Mouse\%ComponentID\31\6]
+"Name"="Administrative State"
+"Description"="The administrative state of the device instance."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AdministrativeState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\31\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Locked"
+"4"="Unlocked"
+"5"="Not Applicable"
+"6"="Shutting Down"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\31\7]
+"Name"="Fatal Error Count"
+"Description"="The accumulated fatal error count for this device instance."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\FatalErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\31\8]
+"Name"="Major Error Count"
+"Description"="The accumulated major error count for this device instance."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\MajorErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\31\9]
+"Name"="Warning Error Count"
+"Description"="The accumulated warning error count for this device instance."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\WarningErrorCount"
+
+
+;=======================
+;  Keyboard
+;=======================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID]
+"Name"="Keyboard"
+"Description"="This component implements a set of groups relating to the Keyboard."
+
+;=======================
+;  Keyboard group 
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29]
+"Name"="Keyboard"
+"Class"="DMTF|Keyboard|002"
+"Description"="This group defines the characteristics of the system keyboard."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29\1]
+"Name"="Keyboard Layout"
+"Description"="A description of the layout of this keyboard."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(80)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Keyboard\\KeyboardLayout"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29\2]
+"Name"="Keyboard Type"
+"Description"="The type description of this keyboard."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(80)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\KeyboardType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29\3]
+"Name"="Keyboard Connector Type"
+"Description"="The type of keyboard connector used by this keyboard."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\KeyboardConnectorType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Mini-Din"
+"4"="Micro-Din"
+"5"="PS/2"
+"6"="Infrared"
+"7"="HP-HIL"
+"8"="DB-9"
+"9"="Access Bus"
+"160"="PC-98"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29\4]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\29\5]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01
+
+;==========================

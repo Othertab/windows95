@@ -1,0 +1,138 @@
+iles=PCnet.ndis3.CopyFiles
+[PCnet.ndis3.CopyFiles]
+pcntn3.vxd
+
+; Install NDIS2
+[PCnet.ndis2]
+CopyFiles=PCnet.ndis2.CopyFiles
+AddReg=PCnet.ndis2.reg
+[PCnet.ndis2.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",pcntnd.dos,,low
+[PCnet.ndis2.CopyFiles]
+pcntnd.dos
+
+; Install ODI
+[PCnet.odi]
+CopyFiles=PCnet.odi.CopyFiles
+[PCnet.odi.CopyFiles]
+pcntnw.com
+
+;****************************************************************************
+; AM2100 Drivers
+;****************************************************************************
+[AM2100.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,am1500t.VXD
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"AM1500T"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"AM2100$"
+HKR,NDIS\NDIS2,FileName,,"am2100.dos"
+HKR,NDIS\ODI,DriverName,,"NE2100"
+HKR,NDIS\ODI,FileName,,"ne2100.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"AM1500t.ndis3"
+HKR,Ndi\Install,ndis2,,"AM2100.ndis2"
+;HKR,Ndi\Install,odi,,"AM2100.odi"
+
+;****************************************************************************
+; AM1500 Drivers
+;****************************************************************************
+[AM1500.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,am1500t.VXD
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"AM1500T"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"AM2100$"
+HKR,NDIS\NDIS2,FileName,,"AM2100.dos"
+HKR,NDIS\ODI,DriverName,,"NE1500T"
+HKR,NDIS\ODI,FileName,,"ne1500t.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"AM1500t.ndis3"
+HKR,Ndi\Install,ndis2,,"AM2100.ndis2"
+;HKR,Ndi\Install,odi,,"AM1500.odi"
+
+; Copy file sections
+; Install NDIS3
+[AM1500t.ndis3]
+CopyFiles=AM1500t.ndis3.CopyFiles
+[AM1500t.ndis3.CopyFiles]
+am1500t.vxd
+
+; Install NDIS2
+[AM2100.ndis2]
+CopyFiles=AM2100.ndis2.CopyFiles
+AddReg=AM2100.ndis2.reg
+[AM2100.ndis2.CopyFiles]
+am2100.dos
+[AM2100.ndis2.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",am2100.dos,,low
+
+; Install ODI
+[AM2100.odi]
+CopyFiles=AM2100.odi.CopyFiles
+[AM2100.odi.CopyFiles]
+ne2100.com
+
+; Install ODI
+[AM1500.odi]
+CopyFiles=AM1500.odi.CopyFiles
+[AM1500.odi.CopyFiles]
+ne1500t.com
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir              =11 ; LDID_SYS
+AM2100.ndis3.CopyFiles       =11
+AM2100.ndis2.CopyFiles       =26 ; LDID_WINBOOT
+AM2100.odi.CopyFiles         =26
+PCnet.ndis3.CopyFiles        =11 ; LDID_WINBOOT
+PCnet.ndis2.CopyFiles        =26
+PCnet.odi.CopyFiles          =26
+AM1500.ndis2.CopyFiles       =26 ; LDID_WINBOOT
+AM1500.odi.CopyFiles         =26
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_AMD="Advanced Micro Devices (AMD)"
+V_BOCA="Boca Research"
+V_EXOS="EXOS"
+V_NOVELL="Novell/Anthem"
+V_TULIP="Tulip"
+V_MICRO="Microdyne"
+V_SVEC="SVEC"
+V_MITRON="Mitron"
+V_ALLIED="Allied Telesyn"
+V_SYS="SysKonnect"
+V_CPQ="Compaq"
+
+; PNP Devices
+*pnp8231.DeviceDesc="AMD AM2100/AM1500t and compatibles"
+*ADV55AA.DeviceDesc="AMD PCNET Family Ethernet Adapter/ISA+"
+*BRI1001.DeviceDesc="Boca Research BOCALANcard"
+*TCI00D0.DeviceDesc="Tulip NCC-16 ISA+"
+*pnp828d.DeviceDe

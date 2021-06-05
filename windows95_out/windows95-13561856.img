@@ -1,0 +1,131 @@
+opyFiles=3C523.odi.CopyFiles
+[3C523.odi.CopyFiles]
+3C523.com
+
+[SLOTNUMBER]
+; Parameters
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,30,00,00,00
+
+[SLOT]
+; Parameters
+;Slot Number
+HKR,Ndi\params\slot,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slot,type,,int
+HKR,Ndi\params\slot,default,,1
+HKR,Ndi\params\slot,min,,1
+HKR,Ndi\params\slot,max,,8
+HKR,Ndi\params\slot,step,,1
+HKR,Ndi\params\slot,optional,,1
+HKR,NDI\params\slot,flag,1,30,00,00,00
+
+;****************************************************************************
+; TokenLinkIII Token Ring base section
+;****************************************************************************
+[Tlnk3.ndi.reg]
+HKR,,DevLoader,,ndis.VXD
+HKR,,DeviceVxDs,,tlnk3.VXD
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"TLNK3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"TLNK3$"
+HKR,NDIS\NDIS2,FileName,,"tlnk3.dos"
+HKR,NDIS\ODI,DriverName,,"3ctoken"
+HKR,NDIS\ODI,FileName,,"3ctoken.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"tlnk3.ndis3"
+HKR,Ndi\Install,ndis2,,"tlnk3.ndis2"
+;HKR,Ndi\Install,odi,,"tlnk3.odi"
+
+; Install tlnk3 NDIS3
+[tlnk3.ndis3]
+CopyFiles=tlnk3.ndis3.CopyFiles
+[tlnk3.ndis3.CopyFiles]
+tlnk3.VXD
+
+; Install tlnk3 NDIS2
+[tlnk3.ndis2]
+CopyFiles=tlnk3.ndis2.CopyFiles
+[tlnk3.ndis2.CopyFiles]
+tlnk3.dos
+
+; Install ODI
+[tlnk3.odi]
+CopyFiles=tlnk3.odi.CopyFiles
+[tlnk3.odi.CopyFiles]
+3ctoken.com
+
+[Tlnk3.General.Params]
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,6
+HKR,NDI\params\MaxTransmits,min,,6
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+; RecvBufs
+HKR,NDI\params\RecvBufs,ParamDesc,,"Receive Buffers"
+HKR,NDI\params\RecvBufs,type,,int
+HKR,Ndi\params\RecvBufs,default,,2
+HKR,NDI\params\RecvBufs,min,,2
+HKR,NDI\params\RecvBufs,max,,60
+HKR,NDI\params\RecvBufs,step,,1
+HKR,NDI\params\RecvBufs,flag,1,10,00,00,00
+; XmitBufs
+HKR,NDI\params\XmitBufs,ParamDesc,,"Transmit Buffers"
+HKR,NDI\params\XmitBufs,type,,int
+HKR,Ndi\params\XmitBufs,default,,1
+HKR,NDI\params\XmitBufs,min,,1
+HKR,NDI\params\XmitBufs,max,,2
+HKR,NDI\params\XmitBufs,step,,1
+HKR,NDI\params\XmitBufs,flag,1,10,00,00,00
+; MaxPacketSize
+HKR,NDI\params\MaxPacketSize,ParamDesc,,"Maximum Packet Size"
+HKR,NDI\params\MaxPacketSize,type,,int
+HKR,Ndi\params\MaxPacketSize,default,,1024
+HKR,NDI\params\MaxPacketSize,min,,256
+HKR,NDI\params\MaxPacketSize,max,,17952
+HKR,NDI\params\MaxPacketSize,step,,8
+HKR,NDI\params\MaxPacketSize,flag,1,20,00,00,00
+HKR,Ndi\params\MaxPacketSize,optional,,1
+
+;all isa ibm token params
+[tlnk3.Isa.Params]
+; iobase
+HKR,Ndi\params\IOBase,ParamDesc,,"Base I/O Port"
+HKR,Ndi\params\IOBase,default,,1
+HKR,Ndi\params\IOBase,type,,enum
+HKR,Ndi\params\IOBase\enum,1,,"Primary"
+HKR,Ndi\params\IOBase\enum,2,,"Alternate"
+HKR,NDI\params\IOBase,flag,1,20,00,00,00
+
+; generic and token 4's info
+[Tlnk34.Params]
+; EarlyRelease
+HKR,Ndi\params\EarlyRelease,ParamDesc,,"Early Release Option"
+HKR,Ndi\params\EarlyRelease,default,,""
+HKR,Ndi\params\EarlyRelease,type,,enum
+HKR,Ndi\params\EarlyRelease\enum,"",,""
+HKR,NDI\params\EarlyRelease,flag,1,10,00,00,00
+; RecvBufSize
+HKR,NDI\params\RecvBufSize,ParamDesc,,"Receive Buffer Size"
+HKR,NDI\params\RecvBufSize,type,,int
+HKR,Ndi\params\RecvBufSize,default,,1024
+HKR,NDI\params\RecvBufSize,min,,256
+HKR,NDI\params\RecvBufSize,max,,17952
+HKR,NDI\params\RecvBufSize,step,

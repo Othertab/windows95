@@ -1,0 +1,118 @@
+%\0000042D","layout text",,%KBD_SP%
+
+HKLM,"%KEY_KLayout%\00000807","layout file",,kbdsg.kbd
+HKLM,"%KEY_KLayout%\00000807","layout text",,%KBD_SG%
+
+HKLM,"%KEY_KLayout%\00000809","layout file",,kbduk.kbd
+HKLM,"%KEY_KLayout%\00000809","layout text",,%KBD_UK%
+
+HKLM,"%KEY_KLayout%\0000080A","layout file",,kbdLa.kbd
+HKLM,"%KEY_KLayout%\0000080A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000080C","layout file",,kbdbe.kbd
+HKLM,"%KEY_KLayout%\0000080C","layout text",,%KBD_BE%
+
+HKLM,"%KEY_KLayout%\00000813","layout file",,kbdne.kbd
+HKLM,"%KEY_KLayout%\00000813","layout text",,%KBD_NE%
+
+HKLM,"%KEY_KLayout%\00000C0A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\00000C0A","layout text",,%KBD_SP2%
+
+HKLM,"%KEY_KLayout%\00000C0C","layout file",,kbdca.kbd
+HKLM,"%KEY_KLayout%\00000C0C","layout text",,%KBD_CA%
+
+HKLM,"%KEY_KLayout%\00001009","layout file",,kbdfc.kbd
+HKLM,"%KEY_KLayout%\00001009","layout text",,%KBD_FC%
+
+HKLM,"%KEY_KLayout%\0000100C","layout file",,kbdsf.kbd
+HKLM,"%KEY_KLayout%\0000100C","layout text",,%KBD_SF%
+
+HKLM,"%KEY_KLayout%\00002009","layout file",,kbdus.kbd
+HKLM,"%KEY_KLayout%\00002009","layout text",,%KBD_US%
+
+HKLM,"%KEY_KLayout%\00002409","layout file",,kbdus.kbd
+HKLM,"%KEY_KLayout%\00002409","layout text",,%KBD_US%
+
+HKLM,"%KEY_KLayout%\00010409","layout file",,kbdusx.kbd
+HKLM,"%KEY_KLayout%\00010409","layout text",,%KBD_USX%
+HKLM,"%KEY_KLayout%\00010409","layout id",,0001
+
+HKLM,"%KEY_KLayout%\00020409","layout file",,kbddv.kbd
+HKLM,"%KEY_KLayout%\00020409","layout text",,%KBD_DV%
+HKLM,"%KEY_KLayout%\00020409","layout id",,0002
+
+HKLM,"%KEY_KLayout%\00030409","layout file",,kbddvl.kbd
+HKLM,"%KEY_KLayout%\00030409","layout text",,%KBD_DVL%
+HKLM,"%KEY_KLayout%\00030409","layout id",,001A
+
+HKLM,"%KEY_KLayout%\00040409","layout file",,kbddvr.kbd
+HKLM,"%KEY_KLayout%\00040409","layout text",,%KBD_DVR%
+HKLM,"%KEY_KLayout%\00040409","layout id",,001B
+
+HKLM,"%KEY_KLayout%\00001809","layout file",,kbdir.kbd
+HKLM,"%KEY_KLayout%\00001809","layout text",,%KBD_IR%
+
+HKLM,"%KEY_KLayout%\0000100A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000100A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000140A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000140A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000180A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000180A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\00001C0A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\00001C0A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000200A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000200A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000240A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000240A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000280A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000280A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000300A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000300A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000340A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000340A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\00003C0A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\00003C0A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\00002C0A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\00002C0A","layout text",,%KBD_LA%
+
+HKLM,"%KEY_KLayout%\0000380A","layout file",,kbdla.kbd
+HKLM,"%KEY_KLayout%\0000380A","layout text",,%KBD_LA%
+
+[Strings]
+;Registry Keys
+
+KEY_KLayout="system\currentcontrolset\control\keyboard layouts"
+KEY_EBD="Software\Microsoft\Windows\CurrentVersion\setup\EBD"
+
+Default_Keyboard="KEYBOARD_00000409"
+Msft = "Microsoft"
+KeyboardLayout="Keyboard Layout"
+KBD_BE="Belgian"
+KBD_UK="British"
+KBD_DA="Danish"
+KBD_FI="Finnish"
+KBD_FR="French"
+KBD_FC="Canadian Multilingual"
+KBD_GR="German (Standard)"
+KBD_GR1="German (IBM)"
+KBD_IC="Icelandic"
+KBD_IT="Italian"
+KBD_LA="Latin American"
+KBD_NE="Dutch"
+KBD_NO="Norwegian"
+KBD_BRUSX="Portuguese (Brazilian standard)"
+KBD_BR="Portuguese (Brazilian ABNT2)"
+KBD_PO="Portuguese (Standard)"
+KBD_SW="Swedish"
+KBD_SF="Swiss French"
+KBD_SG="Swi

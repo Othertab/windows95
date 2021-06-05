@@ -1,0 +1,103 @@
+Windows 95 will use your modem
+with its factory default settings. The modem will make optimal high-
+speed connections with Windows 95 communications features. However,
+you will not be able to adjust some of the modem's settings, such as
+speaker volume and cellular protocols.
+
+Racal Modems
+------------
+If you have a Racal modem, do not use detection in the Install New Modem
+wizard. Instead, click Don't Detect My Modem, and then pick one of the
+standard modem types. If you have already run detection and your modem
+is not responding, turn the modem off and then back on again.
+
+Minitel (France)
+----------------
+Some modems may not be able to connect to French Minitel in
+HyperTerminal by using the Windows 95 default settings. To correct this,
+carry out the following procedure:
+
+1. Check your modem manual for a command that will enable your modem to
+   connect in V.23 modulation to Minitel.
+2. In Control Panel, double-click the Modems icon, click the name of
+   your modem, and then click Properties.
+3. Click the Connection tab, and then click Advanced.
+4. In the Extra Settings box, type the command.
+
+Modem Detection May Start AutoRun CDs
+-------------------------------------
+On some computers, running modem detection may start the CD Autorun 
+application.
+
+PCCard Modem Power Management: Modem Not Found or Not Ready
+-----------------------------------------------------------
+When PC Card Power Management is enabled, some PC card modems require 
+an extra delay before they are ready. If you encounter this with your 
+PC card modem, the symptoms are that it may not work when you try to 
+use it, and then works if you try again right away.
+
+To increase the delay, carry out the following steps:
+
+1. Click the Start button, click Run, and then type Regedit.
+2. Go to \HKey_Local_Machine\System\CurrentControlSet\Services\Class\Modem.
+3. Click the key for the modem that you are trying to use.
+4. To add a key in the root of the modem, click the Edit menu, and then 
+   point to New.
+5. Click DWORD Value, and create a DWord named ConfigDelay.
+6. Set the value equal to "3000" for a 3-second delay. 
+
+TAPE DRIVES
+===========
+
+Tape Drive Detection
+--------------------
+Plug and Play software does not detect tape drives. As a result, the
+only tape drives that appear in Device Manager are SCSI tape drives,
+which appear as either an unknown device or a tape drive. 
+
+However, most backup programs do detect tape drives, so don't be
+concerned if your tape drive does not appear in Device Manager. If
+your backup software does not detect your tape drive, contact the
+company that wrote the software.
+
+Tape Drive Compatibility
+------------------------
+Microsoft Backup works only with the 1992 or later versions of the
+tape drives listed below. If your tape drive does not appear in the
+list below, contact your tape drive manufacturer for information about
+backup software that you can use with Windows 95.
+
+The following tape drives are compatible with Backup:
+- QIC 40, 80, and 3010 tape drives made by the following companies,
+  and connected to the primary floppy disk controller:
+	Colorado Memory Systems
+	Conner
+	IOmega
+	Wangtek (only in hardware phantom mode)
+- Colorado Memory Systems QIC 40, 80, and 3010 tape drives connected
+  through a parallel port.
+
+The following are not compatible with Backup:
+- Drives connected to a secondary floppy disk controller or to an
+  accelerator card
+- Archive drives
+- Irwin AccuTrak tapes
+- Irwin drives
+- Mountain drives
+- QIC Wide tapes
+- QIC 3020 drives 
+- SCSI tape drives
+- Travan drives
+- Summit drives
+
+
+RUNNING ZIP TOOLS ON AN IOMEGA PARALLEL ZIP DISK
+================================================
+
+From within My Computer or Windows Explorer, if you right-click the 
+ZIP drive and then click Format, the IOMEGA Format windows display 
+an option for you to do a Full format of the drive. If you select 
+this option, the following blue-screen fatal-exception error might 
+occur:
+	
+     A fatal exception 0E has occurred at 0028:

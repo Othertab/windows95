@@ -1,0 +1,169 @@
+End Sub
+
+Private Sub mnuScaleToGray_Click()
+'toggle image in 4 bit grayscale
+If mnuScaleToGray.Checked = True Then
+    oleImgEdit1.DisplayScaleAlgorithm = 0
+    oleImgEdit1.Refresh
+    mnuScaleToGray.Checked = False
+Else
+    oleImgEdit1.DisplayScaleAlgorithm = 2
+    oleImgEdit1.Refresh
+    mnuScaleToGray.Checked = True
+End If
+End Sub
+
+
+
+Private Sub mnuSelect_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+
+Private Sub mnuSelectPointer_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoSelection
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = True
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = False
+mnuHollowRect.Checked = False
+mnuStamp.Checked = False
+mnuStraightLine.Checked = False
+mnuTextFromFile.Checked = False
+mnuTypedText.Checked = False
+
+End Sub
+
+
+Private Sub mnuSend_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+Private Sub mnuShowTools_Click()
+'If the tool palette is visible, close it.  If it's
+'not visible, open it.
+If Annot8Visible = True Then
+    oleImgEdit1.HideAnnotationToolPalette
+    Annot8Visible = False
+    mnuShowTools.Checked = False
+Else
+    oleImgEdit1.ShowAnnotationToolPalette
+    Annot8Visible = True
+    mnuShowTools.Checked = True
+End If
+
+End Sub
+
+
+Private Sub mnuStamp_Click()
+'Bring up the Rubber Stamp Properties dialog to choose the stamp you want.
+oleImgEdit1.ShowRubberStampDialog
+
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = False
+mnuHollowRect.Checked = False
+mnuStamp.Checked = True
+mnuStraightLine.Checked = False
+mnuTextFromFile.Checked = False
+mnuTypedText.Checked = False
+
+End Sub
+
+
+Private Sub mnuStraightLine_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoStraightLine
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = False
+mnuHollowRect.Checked = False
+mnuStamp.Checked = False
+mnuStraightLine.Checked = True
+mnuTextFromFile.Checked = False
+mnuTypedText.Checked = False
+
+End Sub
+
+Private Sub mnuTextFromFile_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoTextFromFile
+
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = False
+mnuHollowRect.Checked = False
+mnuStamp.Checked = False
+mnuStraightLine.Checked = False
+mnuTextFromFile.Checked = True
+mnuTypedText.Checked = False
+
+End Sub
+
+Private Sub mnuThumbnail_Click()
+'Size the thumbnail window to the app window and
+'display it. Hide the image window.
+oleImgThumbnail1.Left = frmSample.ScaleLeft
+oleImgThumbnail1.Top = frmSample.ScaleTop
+oleImgThumbnail1.Width = frmSample.ScaleWidth
+oleImgThumbnail1.Height = frmSample.ScaleHeight
+oleImgThumbnail1.Visible = True
+oleImgEdit1.Visible = False
+'oleImgThumbnail1.Image = oleImgEdit1.Image
+mnuThumbnail.Checked = True
+mnuOnePage.Checked = False
+mnuPageThumbnail.Checked = False
+
+End Sub
+
+Private Sub mnuToolbar_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+
+Private Sub mnuTypedText_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoText
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand

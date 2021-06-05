@@ -1,0 +1,90 @@
+OS_Inis
+
+[PRESARIO_PNPBIOS_DRV]
+AddReg=PNPBIOS_REG,PNPBIOS_DRV_AddReg,System_Dev_Properties_AddReg
+copyfiles=PNPBIOS_Copyfiles,PNPBIOS_PRESARIO_Copyfiles
+DelFiles=PNPBIOS_DelFiles
+UpdateInis=PNPBIOS_Inis
+UpdateAutoBat=PRESARIO_Update_Autobat
+
+[PROLINEA_PNPBIOS_DRV]
+AddReg=PNPBios_Reg,PNPBIOS_DRV_AddReg,System_Dev_Properties_AddReg
+copyfiles=PNPBIOS_Copyfiles,PNPBIOS_PROLINEA_Copyfiles
+DelFiles=PNPBIOS_DelFiles
+UpdateInis=PNPBIOS_Inis
+UpdateAutoBat=PROLINEA_Update_Autobat
+
+[EISA_DRV]
+AddReg=EISA_DRV_AddReg,System_Dev_Properties_AddReg
+copyfiles=EISA_Copyfiles
+DelFiles=EISA_DelFiles
+
+[ISA_DRV]
+AddReg=ISA_DRV_AddReg,System_Dev_Properties_AddReg
+
+[ISA_DRV.NoResDup]
+*PNP0A00
+
+[MCA_DRV]
+;Add when we will want it.
+;AddReg=MCA_DRV_AddReg,System_Dev_Properties_AddReg
+;copyfiles=MCA_Copyfiles
+AddReg=System_Dev_Properties_AddReg
+
+[MCA_DRV_AddReg]
+HKR,,DevLoader,,mca.vxd
+
+[PCI_DRV]
+AddReg=PCI_DRV_AddReg,PCI_Dev_Properties_AddReg
+copyfiles=PCI_Copyfiles
+DelFiles=PCI_DelFiles
+
+[PCI_DRV_AddReg]
+HKR,,DevLoader,,pci.vxd
+; Options setting
+; Bit 0 is set for using BIOS services instead of hardware
+; Bit 1 is set for using IRQ steering
+; Bit 2 is set for overriding bridge programming by BIOS
+; Bit 3 is set to disable GAT bit override
+; Bit 4 is set to force GAT always on when overriding (bit 3 must be clear)
+HKLM,System\CurrentControlSet\Services\VxD\PCI,Options,3,02,00,00,00
+; Devices specific settings (value name is DevID cat with VenID)
+; Bit 0: Devices video wanting no IRQ
+; Bit 1: Devices PCMCIA wanting IRQ
+; Bit 2: Devices Dual PCI IDE without programming code with bit 3 set
+HKLM,System\CurrentControlSet\Services\VxD\PCI,C6211045,1,04,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,06401095,1,04,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,12308086,1,04,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,70108086,1,04,00,00,00
+; Bit 3: Devices needing no enum at all
+HKLM,System\CurrentControlSet\Services\VxD\PCI,0140104B,1,08,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,06031179,1,08,00,00,00
+; Bit 4: Devices needing no resources but having garbage in base address registers
+HKLM,System\CurrentControlSet\Services\VxD\PCI,10000E11,1,10,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,20000E11,1,10,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,04061039,1,10,00,00,00
+; Bit 5: Devices needing dword access
+HKLM,System\CurrentControlSet\Services\VxD\PCI,06001080,1,20,00,00,00
+; Bit 6: Devices being single function parading as multiple functions
+HKLM,System\CurrentControlSet\Services\VxD\PCI,11001013,1,40,00,00,00
+; Bit 7: Device always enabled
+; Bit 8: Device is IDE even though not class code of 0101
+HKLM,System\CurrentControlSet\Services\VxD\PCI,00011C1C,1,00,01,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,00381097,1,00,01,00,00
+; Bit 9: Device is video even though not class code of 0001 or 03xx
+; Bit 10: Automatically fail to start the device. It is not supported in pmode
+HKLM,System\CurrentControlSet\Services\VxD\PCI,D001100B,1,00,04,00,00
+; Bit 11: Device can only appear on bus 0 (improperly decode type 1 transactions)
+HKLM,System\CurrentControlSet\Services\VxD\PCI,04A38086,1,00,08,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,000010AA,1,00,08,00,00
+; Bit 12: Device can only appear on dev <16
+HKLM,System\CurrentControlSet\Services\VxD\PCI,06051179,1,00,10,00,00
+; Bit 13: Bridge device can only have children at Dev0
+HKLM,System\CurrentControlSet\Services\VxD\PCI,11101013,1,00,20,00,00
+; Bit 14: Do not modify the command bits of the device
+HKLM,System\CurrentControlSet\Services\VxD\PCI,01021004,1,00,40,00,00
+; Bit 15: Device is VGA even though not class code of 0001 or 0300 (only has meaning if bit 9 is set).
+; Bit 16: Device is MF CardBus controller that shares Command register
+HKLM,System\CurrentControlSet\Services\VxD\PCI,AC12104C,1,00,00,01,00
+; Bit 17: Device is a PCI/PCI bridge with straight thru routing (pin A to pin A, etc).
+; Bit 18: Device is a subtractive decode PCI-PCI bridge

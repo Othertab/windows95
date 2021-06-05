@@ -1,0 +1,73 @@
+Star_LC24-200_Colour
+"Star LC24-300"                   = STAR24E.DRV,Star_LC24-300
+"Star NB24-10"                    = STAR24E.DRV,Star_NB24-10
+"Star NB24-15"                    = STAR24E.DRV,Star_NB24-15
+"Star NL-10"                      = STAR9E.DRV,Star_NL-10
+"Star NX-1000"                    = STAR9E.DRV,Star_NX-1000
+"Star NX-1000 Rainbow"            = STAR9E.DRV,Star_NX-1000_Rainbow
+"Star NX-1001"                    = STAR9E.DRV,Star_NX-1001
+"Star NX-1020 Rainbow"            = STAR9E.DRV,Star_NX-1020_Rainbow
+"Star NX-1500"                    = STAR9E.DRV,Star_NX-1500
+"Star NX-2410"                    = STAR24E.DRV,Star_NX-2410
+"Star NX-2415"                    = STAR24E.DRV,Star_NX-2415
+"Star NX-2415 II"                 = STAR24E.DRV,Star_NX-2415_II
+"Star NX-2420"                    = STAR24E.DRV,Star_NX-2420
+"Star NX-2420 Rainbow"            = STAR24E.DRV,Star_NX-2420_Rainbow
+"Star NX-2420 Rainbow II"         = STAR24E.DRV,Star_NX-2420_Rainbow_II
+"Star NX-2400"                    = STAR24E.DRV,Star_NX-2400
+"Star NX-2430"                    = STAR24E.DRV,Star_NX-2430
+"Star NX-2450"                    = STAR24E.DRV,Star_NX-2450
+"Star NX-2480"                    = STAR24E.DRV,Star_NX-2480
+"Star SJ-48"                      = STAR24E.DRV,Star_SJ-48
+"Star SJ-144"                     = STAR24E.DRV,Star_SJ-144
+"Star XB24-10"                    = STAR24E.DRV,Star_XB24-10
+"Star XB24-15"                    = STAR24E.DRV,Star_XB24-15
+"Star XB24-200"                   = STAR24E.DRV,Star_XB24-200
+"Star XB24-250"                   = STAR24E.DRV,Star_XB24-250
+"Star XB-2410"                    = STAR24E.DRV,Star_XB-2410
+"Star XB-2415"                    = STAR24E.DRV,Star_XB-2415
+"Star XB-2420"                    = STAR24E.DRV,Star_XB-2420
+"Star XB-2425"                    = STAR24E.DRV,Star_XB-2425
+"Star XR-1000"                    = STAR9E.DRV,Star_XR-1000
+"Star XR-1020"                    = STAR9E.DRV,Star_XR-1020
+"Star XR-1500"                    = STAR9E.DRV,Star_XR-1500
+"Star XR-1520"                    = STAR9E.DRV,Star_XR-1520
+"Star ZA-200"                     = STAR9E.DRV,Star_ZA-200
+"Star ZA-250"                     = STAR9E.DRV,Star_ZA-250
+
+[Tandy]
+"Tandy LP-1000"                   = HPPCL.DRV,Tandy_LP-1000
+
+[Tegra]
+"Tegra Genesis"                   = HPPCL.DRV,Tegra_Genesis
+
+[Tektronix]
+"Tektronix Phaser 200e 17"        = TK200172.SPD,Tektronix_Phaser_200e_17
+"Tektronix Phaser 200i"           = TKP200I2.SPD,Tektronix_Phaser_200i
+"Tektronix Phaser 220e 17"        = TK220171.SPD,Tektronix_Phaser_220e_17
+"Tektronix Phaser 220i"           = TKP220I1.SPD,Tektronix_Phaser_220i
+"Tektronix Phaser 300i"           = TKP300I1.SPD,Tektronix_Phaser_300i
+"Tektronix Phaser 480"            = TKPH4801.SPD,Tektronix_Phaser_480
+"Tektronix Phaser II PX"          = PHIIPX.SPD,Tektronix_Phaser_II_PX
+"Tektronix Phaser II PXi"         = TKPHZR22.SPD,Tektronix_Phaser_II_PXi
+"Tektronix Phaser IISDX"          = TKP2SDX1.SPD,Tektronix_Phaser_IISDX
+"Tektronix Phaser III PXi"        = TKPHZR32.SPD,Tektronix_Phaser_III_PXi
+
+[TI]
+"TI 850/855"                      = TI850.DRV,TI_850/855
+"TI microLaser Pro 600"           = HPPCL5MS.DRV,TI_microLaser_Pro_600,TImicroLaser_Pro3DEE
+"TI microLaser Pro 600 2014 PS23" = TIMLP232.SPD,LPTENUM\TImicroLaser_Pro3DEE,TImicroLaser_Pro3DEE,TI_microLaser_Pro_600_2014_PS23
+"TI microLaser PS17"              = TIM17521.SPD,TI_microLaser_PS17
+"TI microLaser PS35"              = TIM35521.SPD,TI_microLaser_PS35
+
+[Toshiba]
+"Toshiba ExpressWriter 420"       = EXPRSS24.DRV,Toshiba_ExpressWriter_420
+"Toshiba ExpressWriter 440"       = EXPRSS24.DRV,Toshiba_ExpressWriter_440
+"Toshiba GX-400"                  = HPPCL5MS.DRV,Toshiba_GX-400
+"Toshiba P1351"                   = TOSHIBA.DRV,Toshiba_P1351
+"Toshiba P351"                    = TOSHIBA.DRV,Toshiba_P351
+"Toshiba P351SX"                  = P351SX2.DRV,Toshiba_P351SX
+"Toshiba PageLaser12"             = HPPCL.DRV,Toshiba_PageLaser12
+
+[Triumph]
+"Triumph Adler SDR 7706"          = HPPCL.DRV,Triumph_Adler_SDR_7

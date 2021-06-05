@@ -1,0 +1,111 @@
+"HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\ComponentID\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\2]
+"Name"="Product"
+"Description"="Product name for this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\ComponentID\\Product"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\3]
+"Name"="Version"
+"Description"="Version of this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\ComponentID\\Version"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\4]
+"Name"="Serial Number"
+"Description"="Serial number for this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\ComponentID\\SerialNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\5]
+"Name"="Installation"
+"Description"="The time and date when this component was installed."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\ComponentID\\Installation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\6]
+"Name"="Verify"
+"Description"="A code that provides a level of verification that the component is still installed and working."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\ComponentID\\Verify"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\6\Enum]
+"0"="An error occurred; check status code."
+"1"="This component does not exist."
+"2"="Verification is not supported."
+"3"="Reserved."
+"4"="This component exists, but the functionality is untested."
+"5"="This component exists, but the functionality is unknown."
+"6"="This component exists, and is not functioning correctly."
+"7"="This component exists, and is functioning correctly."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2]
+"Name"="General Information"
+"Class"="DMTF|General Information|001"
+"Description"="This group defines general information about this system."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2\1]
+"Name"="System Name"
+"Description"="A name to identify this system."
+"Access"="Read-Write"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\GeneralInformation\\SystemName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2\2]
+"Name"="System Location"
+"Description"="The physical location of this system."
+"Access"="Read-Write"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\GeneralInformation\\SystemLocation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2\3]
+"Name"="System Primary User Name"
+"Description"="The name of the primary user or owner of this system."
+"Access"="Read-Write"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\GeneralInformation\\SystemPrimaryUserName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2\4]
+"Name"="System Primary User Phone"
+"Description"="The phone number of the primary user of this system."
+"Access"="Read-Write"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\GeneralInformation\\SystemPrimaryUserPhone"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2\5]
+"Name"="System Bootup Time"
+"Description"="The time at which the system was last booted."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\GeneralInformation\\Time\\SystemBootupTime"
+"!Value"="S;DD"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\2\6]
+"Name"="System Date Time"
+"Description"="The actual system date and time."
+"Access"="Read-Write"
+"Storage"="Specific"
+"Type"="Date"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\GeneralInformation\\Time\\SystemDateTime"
+"!Value"="S;DD"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\3]
+"Name"="Operating System"
+"Class"="DMTF|Operating System|001"
+"Description"="This group defines gene

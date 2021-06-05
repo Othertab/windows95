@@ -1,0 +1,108 @@
+>".
+
+   If you do not know what to type in the Proxy Server, or Bypass 
+   Proxy On boxes, see your network administrator. For Help on 
+   these items, click the ? in the title bar, and then click the 
+   item. 
+
+
+USING PROGRESSIVE NETWORKS' REALAUDIO SUPPORT
+=============================================
+
+The Microsoft Internet Explorer includes support for Progressive 
+Networks' RealAudio. This enables you to listen to audio files in 
+real time over a dial-up modem or direct-network Internet connection. 
+To use RealAudio, you must have a Windows 95-supported sound card 
+installed in your computer. RealAudio works best on 486/33 or faster 
+processors.
+
+To try RealAudio, connect to http://www.realaudio.com.
+
+NOTE: RealAudio will not work if your connection is routed through 
+      a local area network proxy or firewall. 
+
+
+USING INTERNET EXPLORER WITH VIRTUAL MEMORY
+===========================================
+
+Internet Explorer requires you to use virtual memory. Otherwise, 
+Internet Explorer will not run properly. To make sure you are using 
+virtual memory:
+
+1. Click the Start button, then point to Settings, and then click 
+   Control Panel.
+
+2. Double-click the System icon, and then click the Performance tab.
+
+3. Click the Virtual Memory button.
+
+4. If you are specifying your own virtual memory settings, make 
+   sure the Disable Virtual Memory box is unchecked. If this box 
+   is checked, then you are not using virtual memory and Internet 
+   Explorer won't run.
+
+   TIP: You can let Windows manage virtual memory for you by 
+        selecting the Let Windows Manage My Virtual Memory 
+        Settings option.
+
+
+USING CITRIX WINFRAME WEB CLIENT
+================================
+
+With the WinFrame Web Client, you can run Windows programs over 
+the Internet and the intranet. Because the WinFrame Web Client is 
+installed on your computer, you can run some sample Windows 
+programs over the Internet from the Citrix Internet site at the 
+following address:
+
+     http://www.citrix.com/hotspot.htm
+
+To run these programs over the Internet, you need an Internet 
+account that does not use a proxy server. After you connect to 
+the site listed above, just click the program icons on the Web 
+page to launch a program. The demo room designed by Citrix is 
+in English.
+
+
+Saving a File to Your Desktop
+-----------------------------
+If the Windows-based program that you run allows you to save a document, 
+you can save the file to your desktop by carrying out the following 
+steps:
+
+1. Click the File menu, and then click Save As.
+2. Click Network, and then connect to your client by clicking the 
+   network connection named Client.
+3. Choose your drive, assign a network drive, and then click OK.
+4. Click Save.
+
+The WinFrame server can be configured so that it doesn't allow users 
+to save to the client computer. Also, some programs might not allow 
+you to create a network connection with your computer.
+
+
+Printing to the User's Printer
+------------------------------
+The WinFrame Web Client has the client printing feature turned off. 
+In an intranet network, the WinFrame server can be configured to share 
+out the network printer to the user, and the user can print to this 
+printer if the Server Administrator allows the user to access it.
+
+
+OVERVIEW OF THE CACHE STRUCTURE
+===============================
+
+With the release of Internet Explorer 3.0 and the Internet SDK, it is 
+expected that many different programs will take advantage of the caching 
+support provided. This means that there could be thousands of URLs 
+downloaded and kept in the cache.
+
+Having thousands of URLs cached into a single directory causes performance 
+to degrade on computers running Windows 95, which use the FAT file system. 
+The FAT file system might take a long time to look up a file in a directory 
+when the directory contains thousands of entries. There are two primary 
+reasons:
+
+- There is a linear search algorithm in FAT to look up a directory entry.
+
+- The in-memory st

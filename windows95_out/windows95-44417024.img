@@ -1,0 +1,122 @@
+Defaults\MIF\DiskDrive\%ComponentID\30\9]
+"Name"="Warranty Start Date"
+"Description"="The start date of the service warranty for this Field Replaceable Unit."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\WarrantyStartDate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\30\10]
+"Name"="Warranty Duration"
+"Description"="The total duration of this Field Replaceable Unit warranty in months."
+"Column"="10"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\WarrantyDuration"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\30\11]
+"Name"="Support Phone Number"
+"Description"="The phone number(s) for support for this Field Replaceable Unit."
+"Column"="11"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\SupportPhoneNumber"
+
+
+;==========================
+;  Operational State Table
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31]
+"Name"="Operational State"
+"Class"="DMTF|Operational State|001"
+"Description"="This group provides the operational state, usage, and availability status, and administrative state indicators for specific device instances."
+"Key"="1"
+"^Index"=hex:03,00,00,00
+"^ROW"="1|2|3|4|5|6|7|8|9"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\1]
+"Name"="Operational State Instance Index"
+"Description"="The Index into the Operational State table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\2]
+"Name"="Device Group Index"
+"Description"="The group ID of the group referencing this instance."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:17,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\3]
+"Name"="Operational Status"
+"Description"="The operational status of the device instance."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\OperationalStatus"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Enabled"
+"4"="Disabled"
+"5"="Not Applicable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\4]
+"Name"="Usage State"
+"Description"="The usage state of the device instance."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\UsageState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\4\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Idle"
+"4"="Active"
+"5"="Busy"
+"6"="Not Applicable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\5]
+"Name"="Availability Status"
+"Description"="The availability status of the device instance."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AvailabilityStatus"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Running"
+"4"="Warning"
+"5"="In Test"
+"6"="Not Applicable"
+"7"="Power Off"
+"8"="Off Line"
+"9"="Off Duty"
+"10"="Degraded"
+"11"="Not Installed"
+"12"="Install Error"
+"13"="Power Save"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\6]
+"Name"="Administrative State"
+"Description"="The administrative state of the device instance."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOC

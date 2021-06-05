@@ -1,0 +1,124 @@
+he Background Print Monitor)
+
+- When you share an application with an Input Method Editor (IME), 
+  you should show the IME status bar so that other people can use 
+  the mouse to activate the IME.
+
+  If the IME does not support showing the status bar, or if other 
+  people are having trouble activating the IME, you should activate 
+  and deactivate the IME for them.
+
+- If the IME window fails to repaint during a meeting, you can
+  cause it to repaint by clicking anywhere on the desktop.
+
+- Ecco Pro cannot be shared.
+
+- Maximizing shared applications when computers in the meeting
+  have different screen resolutions might not work properly.
+
+- It is recommended that you wait at least 20 seconds after
+  initiating or joining a new conference before sharing an 
+  application.
+
+WHITEBOARD
+==========
+
+The Whiteboard enables you to draw simultaneously with other 
+users. Everyone in the meeting can see what is drawn on the 
+Whiteboard. When one person in a meeting runs Whiteboard, it 
+appears on everyone's screen.
+
+Warnings and Known Bugs
+-----------------------
+- Some colors do not appear the same when used to draw filled 
+  rectangles and circles as they do when they are used to draw 
+  text or lines.
+
+- The Whiteboard does not maximize to the full size of a 1024x768
+  or larger display.
+
+- Some graphics will not be displayed properly when pasted into
+  the Whiteboard
+
+- If you make several changes without pausing in the whiteboard,
+  other users might be prevented from making changes.
+
+
+CHAT
+====
+
+Chat enables you to type messages for other users to see. When 
+one person in a meeting runs Chat, it appears on everyone's screen.
+
+Chat files are stored with the .csv file extension.  If Microsoft
+Excel, or another program that can read files in .csv format is 
+installed on your computer, it can be used to open chat files.  To
+open a Chat file with Chat, run Chat, click the File menu, click Open,
+and select the file to be opened.
+
+Warnings and Known Bugs
+-----------------------
+- In Chat, if you click Options and then check Clear Screen When
+  Joining a Call, this option will only work when you initiate a
+  meeting.
+
+
+FILE TRANSFER
+=============
+
+Files dragged onto the listing of people in the meeting are 
+sent to all the people in the meeting.  
+
+To send a file to a specific person, right click that person's 
+icon in the list of people in the meeting, and then click Send File. 
+
+To send a file to everyone in the meeting, click the Tools menu, and 
+then click Send File.  
+
+To cancel sending a file, click the Tools menu, and then click
+Cancel Send.
+
+Warnings and Known Bugs
+-----------------------
+- If you try to send a shortcut to a file, the actual file will be
+  sent instead.
+
+- Exchanging files with Intel ProShare 2.0 does not always work
+  properly.
+
+
+AUDIO COMMUNICATION
+===================
+
+By default, audio communication is enabled for TCP/IP calls. 
+
+To place an audio-only or data-only call, open the Advanced 
+Calling dialog box, select Network (TCP/IP), and choose the 
+appropriate option.  
+
+Audio is supported only over TCP/IP and between no more than 
+two people.
+
+Sound quality can vary significantly depending on your sound 
+card and microphone. To automatically adjust 
+your settings, use the Audio Tuning Wizard.
+
+Full-duplex audio enables you to speak at the same time as the
+person you are speaking to.  If your sound card supports 
+only half-duplex audio, or if you have not enabled full-duplex 
+audio in NetMeeting, you and the other person in your call will 
+have to take turns speaking.
+
+
+Warnings and Known Bugs
+-----------------------
+- Pressing CTRL+ALT+DELETE might disconnect the audio connection.
+
+- If you join a meeting, or call a person who has selected 
+  Conference Host in the Call menu, you will not be able to use
+  the audio features in your meeting.
+
+- The Audio Tuning Wizard works only when you are not in a
+  call with audio.
+
+- If you are experiencing choppy full-duplex sound quality, tr

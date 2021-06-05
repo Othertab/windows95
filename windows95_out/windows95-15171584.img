@@ -1,0 +1,99 @@
+ESC%"  ;add new link
+
+;Stuff items into Program Manager for access to printer/control panel/Explorer, Etc.
+; Also used if user selects Win 3.1 User Interface Option
+setup.ini, progman.only,,"PMGroup3=%MAIN_DESC%"   ; creates group
+setup.ini, PMGroup3,,"""%Printers_DESC%"",""rundll32.exe shell32.dll,SHHelpShortcuts_RunDLL PrintersFolder"",shell32.dll,37
+setup.ini, PMGroup3,,"""%CPanel_DESC%"",control.exe,shell32.dll,35
+setup.ini, PMGroup3,,"""%WinExplorer_DESC%"", ""Explorer.exe /n,/e,%30%"", EXPLORER.EXE, 1"
+setup.ini, PMGroup3,,"""%MSDOSPrmpt_DESC%"""   ;delete the old link
+setup.ini, PMGroup3,,"""%MSDOSPrmpt_DESC%"", command.com, PIFMGR.DLL, 0"  ;add new link
+setup.ini, PMGroup3,,"""%Fileman_DESC%"", WINFILE.EXE"
+
+; And delete "Printers" and Explorer from MAIN group so it doesn't show up on Start Menu on subsequent installs:
+setup.ini, progman.groups,, "group3=%MAIN_DESC%"      ;creates folder
+setup.ini, group3,, """%Printers_DESC%"""             ;deletes link
+setup.ini, group3,, """%WinExplorer_DESC%"""          ;deletes link
+setup.ini, group3,, """%CPanel_DESC%"""               ;deletes link
+
+;Turn on bootgui in msdos.sys (formerly winboot.ini) always.
+%31%\msdos.sys,Options,,"BootGUI=1"
+
+;fixes registry/win.ini sync probs:
+win.ini,Desktop,"WallpaperOriginX=*"
+win.ini,Desktop,"WallpaperOriginY=*"
+
+[winbase.inifields]
+system.ini, NonWindowsApp, localtsrs,dosedit
+system.ini, NonWindowsApp, localtsrs,ced
+system.ini, NonWindowsApp, localtsrs,pced
+
+; REVIEW: the foll. will also nuke field like fooatikey.exe!
+win.ini, windows, load,*atikey.exe,,1
+
+; Remove Compaq PnP support (replaced w/ built-in Win 95 PnP)
+win.ini, windows, load,*cpqevent.exe,,1
+win.ini, windows, run,*cpqevent.exe,,1
+
+; Remove Toshiba's maxtime utility which trashes the tray's buttons
+win.ini, windows, load,*maxtime.exe,,1
+win.ini, windows, run,*maxtime.exe,,1
+
+; Remove plugin a common shareware shell extension
+win.ini, windows, load,*plugin.exe,,1
+win.ini, windows, run,*plugin.exe,,1
+
+; Remove iconhearit which was shipped free to some people
+win.ini, windows, load,*ihearit.exe,,1
+win.ini, windows, run,*ihearit.exe,,1
+
+
+
+[winbase.reg]
+;Media content directory
+HKLM,%KEY_CURRENT%,MediaPath,,"%25%\%media_dir%"
+
+;Local machine, non-user specific configurations
+HKLM,%KEY_CURRENT%,ConfigPath,,"%10%\config"
+
+;Setup root directory for winboot.sys
+HKLM,%KEY_CURRENT%,SystemRoot,,%10%
+
+;Keep track of the previous windows dir
+HKLM,%KEY_CURRENT%,OldWinDir,,"%33%"
+
+; Mark setuplog.txt, setuplog.old, msdos.---  w/ the HIDDEN attrib on first boot:
+; (Note that you need to use CAPS so the filesystem doesn't treat is as a LFN)
+; R=1; H=2; S=4; HR=3; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Boot,,,%30%
+HKLM,%KEY_RENAME%\Boot,SETUPLOG.TXT,,"SETUPLOG.TXT,2"
+HKLM,%KEY_RENAME%\Boot,SETUPLOG.OLD,,"SETUPLOG.OLD,2"
+HKLM,%KEY_RENAME%\Boot,"MSDOS.---",,"MSDOS.---,2"
+
+; Add location of Product and other info for Registration Wizard
+HKLM,%KEY_CURRENT%,ProductName,,"%ProductName%"
+
+; Mark MFC 3.01 DLL's as read only so MSVC 2.00 setup doesn't overwrite them with 3.00 versions
+;HKLM,%KEY_RENAME%\Sys,,,%11%
+;HKLM,%KEY_RENAME%\Sys,MFC30.DLL,,"MFC30.DLL,1"
+;HKLM,%KEY_RENAME%\Sys,MFCANS32.DLL,,"MFCANS32.DLL,1"
+;HKLM,%KEY_RENAME%\Sys,MFCUIA32.DLL,,"MFCUIA32.DLL,1"
+;HKLM,%KEY_RENAME%\Sys,MFCO30.DLL,,"MFCO30.DLL,1"
+;HKLM,%KEY_RENAME%\Sys,MFCD30.DLL,,"MFCD30.DLL,1"
+;HKLM,%KEY_RENAME%\Sys,MFCN30.DLL,,"MFCN30.DLL,1"
+
+; Set policies update mode for policy downloader
+HKLM,System\CurrentControlSet\Control\Update,UpdateMode,3,01
+
+;Sets CONFIGMG default values
+HKLM,%KEY_CFGMGR%,StaticVxD,,"*CONFIGMG"
+HKLM,%KEY_CFGMGR%,Start,1,00
+HKLM,%KEY_CFGMGR%,SysDM,,"SYSDM.CPL"
+HKLM,%KEY_CFGMGR%,SysDMFunc,,"DMSetupDevnode"
+HKLM,%KEY_CFGMGR%,Detect,,"SYSDM.CPL"
+HKLM,%KEY_CFGMGR%,DetectFunc,,"DMRedetect"
+HKLM,%KEY_CFGMGR%,Private,,"SYSDM.CPL"
+HKLM,%KEY_CFGMGR%,PrivateFunc,,"DMPrivateProblem"
+HKLM,%KEY_CFGMGR%,RemoveRomOkay,,"SYSDM.CPL"
+HKLM,%KEY_CFGMGR%,RemoveRomOkayFunc,,"DMRemoveRomOkay"
+HKLM,%KEY_CFGMGR%,AskForConfig,,"SYSDM.C

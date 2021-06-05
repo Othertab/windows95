@@ -1,0 +1,100 @@
+ter the wizard runs, you will no 
+longer be loading the device drivers in your configuration files, 
+and you will be running with protected mode drivers from within 
+Windows 95.
+
+
+======
+Modems
+======
+
+[Q: Setup didn't detect my modem, how do I install it?]
+
+To install a modem in Windows 95, go to Control Panel, and double-
+click the Modem icon. Start the Modem installation wizard which 
+will guide you through the installation of your modem.
+
+NOTE: This procedure is for internal or external modems. PCMCIA 
+modems automatically install when inserted (requires protected mode 
+PCMCIA drivers).
+
+
+[Q: My modem won't dial or connect. Why?]
+
+NOTE: There is a troubleshooter for modem problems in Windows 
+Help.
+
+If your modem is not set up correctly, communications features 
+may not function properly. The following procedures list steps 
+to verify the correct operation of your modem and Windows 95 
+communications.
+
+Because some communications programs designed for Windows 3.1 
+install incompatible driver files, which may cause COM ports and 
+modems to stop working, first verify that the correct Windows 95 
+files are being loaded.
+
+To verify that the required communications files are present:
+1. Verify the files sizes and dates of COMM.DRV and SERIAL.VXD 
+   in the System directory against the original versions from 
+   the Windows 95 floppy disks or CD-ROM.
+2. Confirm that the following lines are present in System.ini:
+     [boot]
+     Comm.drv=Comm.drv
+     [386enh]
+     device=*vcd
+3. To revert to the default communications drivers for Windows 95, 
+   select communications port entries in Device Manager.
+4. Run the Add New Hardware wizard in Control Panel to detect and
+   install the Windows 95 drivers.
+
+NOTE: Windows 95 does not load the SERIAL.VXD driver in System.ini. 
+Rather, Windows 95 loads it on demand using the registry. Also, 
+there is no corresponding file for the *vcd entry in System.ini. 
+This is an internal file built into VMM32.VXD.
+
+To verify the modem configuration
+1. In Control Panel, double-click the Modems icon.
+2. Verify that the manufacturer and model for your modem is correct. 
+   If not, run the Install New Modem wizard to detect the modem and 
+   confirm it with the current registry configuration.
+3. If your current modem does not appear in the list of installed 
+   modems, click Add, and then select the appropriate modem.
+4. If the manufacturer and model are not correct and are not 
+   available from the list, try the Hayes-compatible option for 
+   Generic Modem driver, set to the maximum baud rate supported 
+   by the modem, and then click OK.
+
+   Remove any other modem entries in the list of eliminate 
+   conflicts.
+
+To verify the modem is enabled 
+1. Double-click the System icon in Control Panel, and then click 
+   the Device Manager tab.
+2. Select your modem from the list and click Properties.
+3. Make sure the option, The Device Is Present, Please Use It, is 
+   checked.
+
+To verify that the port is correct
+1. Double-click the Modems icon in the Control Panel.
+2. Select your modem, and then click Properties.
+3. On the General tab, verify that the listed port is correct. If 
+   it is not, select the correct port, and then click OK.
+
+To determine if a serial port I/O address and IRQ settings are 
+properly defined
+1. Double-click the System icon in the Control Panel.
+2. Click the Device Manager tab, and then click Ports.
+3. Select a specific port, and click the Properties button.
+4. Click the Resources tab to display the current resource settings 
+   for that port. To find out the correct settings, consult the 
+   modem manual.
+5. In the Resources dialog box, check the Conflicting Devices List 
+   to see if the modem is using resources in conflict with other 
+   devices.
+6. If the modem is in conflict with other devices, click Change 
+   Settings, and then click a configuration that does not have 
+   resource conflicts.
+
+NOTE: Do not try to use a modem on COM3 if there is a serial mouse 
+or other device o

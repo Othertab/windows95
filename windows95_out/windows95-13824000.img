@@ -1,0 +1,130 @@
+DLL,1,01,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\PCNFS",StaticVxD,,"pcnfs.386"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\PCNFS",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\PCNFS",NetClean,1,1
+
+[PCNFS.delreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",PCNFS
+HKLM,"SYSTEM\CurrentControlSet\Services\PCNFS"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\PCNFS"
+
+[PCNFS.copyfiles]
+pcnfs.drv,,,16
+pcnfs.386,,,16
+
+;****************************************************************************
+;   16-Bit WinNet Provider
+;****************************************************************************
+
+[WNPP32]
+AddReg=WNPP32.addreg
+CopyFiles=WNPP32.copyfiles
+
+[WNPP32.addreg]
+HKLM,"System\CurrentControlSet\Control\Print\Providers\WinNet Print Provider",Name,,"wnpp32.dll"
+
+[WNPP32.copyfiles]
+wnpp32.dll
+
+[NET_EXE.copyfiles]
+net.exe
+net.msg
+neth.msg
+
+[RMNET.Addreg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Setup",KeepRMDrivers,1,01
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Network,RealModeNet,,"1"
+
+[RMNET.Delreg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Setup",KeepRMDrivers
+HKLM,"System\CurrentControlSet\Control\Print\Providers\WinNet Print Provider"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Network,RealModeNet
+
+[PrimaryNet.AddReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Network,PrimaryNet,,"1"
+
+[PrimaryNet.DelReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Network,PrimaryNet
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+
+[DestinationDirs]
+LANMAN.copyfiles    = 11    ;LDID_SYS
+LANTASTI.copyfiles  = 11    ;LDID_SYS
+LANTNET.copyfiles   = 11    ;LDID_SYS
+MSNET.copyfiles     = 11    ;LDID_SYS
+PATHWKS.copyfiles   = 11    ;LDID_SYS
+PCNFS.copyfiles     = 11    ;LDID_SYS
+WTNET.copyfiles     = 11    ;LDID_SYS
+WTNET.copyfiles.ini = 10    ;LDID_WIN
+WNPP32.copyfiles    = 11    ;LDID_SYS
+NWNP32.copyfiles    = 11    ;LDID_SYS
+Netware.copyfiles   = 11    ;LDID_SYS
+NETWARE.Ren.Files   = 11    ;LDID_SYS
+VINES.renfiles      = 11    ;LDID_SYS
+NET_EXE.copyfiles   = 26    ;LDID_WINBOOT
+
+;****************************************************************************
+; Source Directories
+;****************************************************************************
+
+[SourceDisksNames]
+; NOTE:  ONLY USE DISKS 30-44
+31=%DKS_ARTISOFT%, "", 0001
+; 32=B&W NFS
+33=%DSK_DEC%,      "", 0001
+34=%DSK_LANMAN%,   "", 0001
+35=%DSK_DLR%,      "", 0001
+36=%DSK_PCNFS%,    "", 0001
+38=%DSK_NOVELL%,   "", 0001
+
+[SourceDisksFiles]
+lantnet.drv     =31,,1024
+lantasti.386    =31,,1024
+lanman.drv      =34,,1024
+netapi30.dll    =34,,1024
+pmspl20.dll     =34,,1024
+lansrv.drv      =35,,1024
+pcnfs.drv       =36,,1024
+pcnfs.386       =36,,1024
+vnetware.386    =38,,1024
+vipx.386        =38,,1024
+netware.hlp     =38,,1024
+nwpopup.exe     =38,,1024
+netware.drv     =38,,1024
+
+
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+
+[strings]
+; Provider
+V_MS="Microsoft"
+
+; Manufacturers
+V_3COM="3Com"
+V_ARTISOFT="Artisoft"
+V_BANYAN="Banyan"
+V_DEC="Digital Equipment (DEC)"
+V_IBM="IBM"
+V_NOVELL="Novell"
+V_SUN="SunSoft"
+
+; Source Disks
+DKS_ARTISOFT=           "Artisoft LANtastic Windows driver disk"
+DSK_DEC=                "DEC PATHWORKS Windows driver disk"
+DSK_LANMAN=             "IBM OS/2 LAN Server Windows driver disk"
+DSK_DLR=                "IBM OS/2 LAN Server Windows driver disk"
+DSK_PCNFS=              "PC-NFS Windows driver disk"
+DSK_NOVELL=             "Novell NetWare Windows driver disk"
+
+; Devices
+3OPEN.DeviceDesc=       "3Com 3+Open (all versions)"
+3SHARE.DeviceDesc=      "3Com 3+Share (all versions)"
+LANT5.DeviceDesc=       "Artisoft LANtastic (version 5.X and above)"
+VINES552.DeviceDesc=    "Banyan DOS/Windows 3.1 client"
+PATHWKS.De

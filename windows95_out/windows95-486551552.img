@@ -1,0 +1,147 @@
+the User and Windows Directory are correct.
+Select [CHANGE] if you want to make a change.
+$
+
+#MESSAGE = 11
+TITLE="SOUND TEST"
+LINES=3x36
+$
+Select a Sound Test option below. 
+Select [DONE] when test is done and 
+go back to the previous Window.
+$
+
+#MESSAGE = 12
+TITLE="SOUND TEST"
+LINES=6x46
+$
+Sound test can not be run now.
+The sound card's audio device resources 
+are not available or have been changed.
+The new audio configuration will 
+not take effect until it is ACCEPTED.
+Please run sound test at a later time.
+$
+
+#MESSAGE = 13
+TITLE="Select MSCDEX.EXE"
+LINES=7x44
+$
+To use your CD-ROM drive, you need a CD-ROM
+utility 'MSCDEX.EXE' from Microsoft. After 
+scanning your Disk, INSTALL found MSCDEX(s)
+and listed them below. MSCDEX is DOS version 
+dependent. Please select the ONE which is 
+compatible with your DOS version. The best
+choice is the ONE that came with your DOS.
+$
+
+#MESSAGE = 14
+TITLE="No MSCDEX.EXE in your System"
+LINES=10x50
+$
+To use your CD-ROM Drive, you need the program
+MSCDEX.EXE from	Microsoft. INSTALL has scanned 
+your hard disk(s) and did not find one. Besides, 
+your DOS version is very old. We don't have a 
+MSCDEX version good for you. INSTALL has inserted 
+a MSCDEX line with leading 'REM' into your 
+AUTOEXEC.BAT anyway. If you locate a MSCDEX file
+later, please copy it into the SOUNDEXP directory
+and remove the REMark from the MSCDEX line.
+$
+
+#MESSAGE = 15
+TITLE="System Files Update"
+LINES=6x48
+$
+INSTALLER is going to update your DOS
+system files CONFIG.SYS and AUTOEXEC.BAT.
+Select [OK] if you want INSTALLER to make the
+changes NOW or select [BACKUP ONLY] if you
+want INSTALLER only to save the changes to
+sample files CONFIG.MAD and AUTOEXEC.MAD.
+$
+
+#MESSAGE = 16
+TITLE="Windows System Files Update"
+LINES=4x46
+$
+INSTALLER is going to update your WINDOWS
+system files SYSTEM.INI and MIDIMAP.CFG.
+Select [OK] if you want INSTALLER to make the
+changes NOW or select [BACKUP ONLY] if you
+want INSTALLER only to save the changes to 
+sample files SYSTEM.MAD and MIDIMAP.MAD.
+$
+
+#MESSAGE = 17
+TITLE="Windows Sound Application Installation"
+LINES=5x46
+$
+
+INSTALLER has also installed Windows Sound
+Applications into your system. The Sound 
+Applications Group and its Applet Icons will 
+show on your screen when you run Windows the 
+very next time.
+$
+
+
+#MESSAGE = 18
+TITLE="Installation Successful"
+LINES=10x46
+$
+Installer has completed successfully. You
+must reboot your system in order to run
+sound applications. Select [REBOOT] now to
+reboot or select [EXIT TO DOS] to return to
+DOS. If selecting [REBOOT], please first
+remove any diskettes from your floppy drives.
+Type "SNDINIT" at the DOS prompt to test and
+reconfigure your Sound Card settings when
+necessary at a later time.
+Thank you for purchasing the SE34SRS/SE14SRS.
+$
+
+
+#MESSAGE = 19
+TITLE="Not Enough Conventional Memory Detected"
+LINES=10x56
+$
+Your system has LESS THAN 500 KBytes of recommended 
+conventional memory. To run DOS games, you need at 
+least the recommended size above. It is also
+recommended that this amount of memory be available
+in order to successfully run this program. You can 
+increase your memory either by running a memory maker 
+program that comes with your operating system; or 
+remove any memory resident programs that resides in 
+your system memory. Do you wish to Exit this program 
+and increase your system memory now?
+$
+
+
+#MESSAGE = 21
+TITLE="Please Wait..."
+LINES=6x46
+$
+The next screen will ask you for the type
+of CD-ROM drive (if any) in your system.
+If your CD-ROM drive uses its own interface
+card, then select 'none'. After the CD-ROM
+screen is the configuration screen. The HELP
+button has answers to most common questions.
+$
+
+#MESSAGE = 22
+TITLE="Welcome to the SNDINIT Program"
+LINES=9x42
+$
+SNDINIT is a Testing and Configuration
+Program for the SE14SRS/SE34SRS.
+A mouse is recommended. If you do not 
+have a mouse, use the following keys:
+  [TAB]       to move to option
+  [ENTER]     to execute option
+  []  

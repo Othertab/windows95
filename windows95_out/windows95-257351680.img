@@ -1,0 +1,140 @@
+
+
+'*************************************************************************
+FUNCTION GetNumWinApps STATIC  AS INTEGER
+    GetNumWinApps = WGetNumWinApps
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION DoesFileExist (szFileName$, mode%) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if FValidFATPath(szFileName$) = 0 then
+        BadArgErr 1, "DoesFileExist", szFileName$+", "+STR$(mode%)
+    end if
+'$endif ''DEBUG
+    DoesFileExist = FDoesFileExist(szFileName$, mode%)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetDateOfFile (szFile$) STATIC  AS STRING
+'$ifdef DEBUG
+    if FValidFATPath(szFile$) = 0 then
+        BadArgErr 1, "GetDateOfFile", szFile$
+    end if
+'$endif ''DEBUG
+    cb% = 20
+    szBuf$ = STRING$(cb%, 32)
+    cbRet% = CbGetDateOfFile(szFile$, szBuf$, cb%)
+    GetDateOfFile = szBuf$
+'$ifdef DEBUG
+    IF cbRet% >= cb% THEN
+        StfApiErr saeOvfl, "GetDateOfFile", szFile$
+        ERROR STFERR
+    END IF
+'$endif ''DEBUG
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetYearFromDate (szDate$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDate = "" then
+        BadArgErr 1, "GetYearFromDate", szDate$
+    end if
+'$endif ''DEBUG
+    GetYearFromDate = VAL(MID$(szDate$, 1, 4))
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetMonthFromDate (szDate$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDate = "" then
+        BadArgErr 1, "GetMonthFromDate", szDate$
+    end if
+'$endif ''DEBUG
+    GetMonthFromDate = VAL(MID$(szDate$, 6, 2))
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetDayFromDate (szDate$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDate = "" then
+        BadArgErr 1, "GetDayFromDate", szDate$
+    end if
+'$endif ''DEBUG
+    GetDayFromDate = VAL(MID$(szDate$, 9, 2))
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetHourFromDate (szDate$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDate = "" then
+        BadArgErr 1, "GetHourFromDate", szDate$
+    end if
+'$endif ''DEBUG
+    GetHourFromDate = VAL(MID$(szDate$, 12, 2))
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetMinuteFromDate (szDate$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDate = "" then
+        BadArgErr 1, "GetMinuteFromDate", szDate$
+    end if
+'$endif ''DEBUG
+    GetMinuteFromDate = VAL(MID$(szDate$, 15, 2))
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetSecondFromDate (szDate$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDate = "" then
+        BadArgErr 1, "GetSecondFromDate", szDate$
+    end if
+'$endif ''DEBUG
+    GetSecondFromDate = VAL(MID$(szDate$, 18, 2))
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetVersionOfFile (szFile$) STATIC  AS STRING
+'$ifdef DEBUG
+    if FValidFATPath(szFile$) = 0 then
+        BadArgErr 1, "GetVersionOfFile", szFile$
+    end if
+'$endif ''DEBUG
+    cb% = 30
+    szBuf$ = STRING$(cb%, 32)
+    cbRet% = CbGetVersionOfFile(szFile$, szBuf$, cb%)
+    GetVersionOfFile = szBuf$
+'$ifdef DEBUG
+    IF cbRet% >= cb% THEN
+        StfApiErr saeOvfl, "GetVersionOfFile", szFile$
+        ERROR STFERR
+    END IF
+'$endif ''DEBUG
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetVersionNthField (szVersion$, nField%) STATIC  AS LONG
+'$ifdef DEBUG
+    if (nField% < 1) OR (nField% > 4) then
+        BadArgErr 2, "GetVersionNthField", szVersion$+", "+STR$(nField%)
+    end if
+'$endif ''DEBUG
+    GetVersionNthField = LGetVersionNthField(szVersion$, nField%)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetSizeOfFile (szFile$) S

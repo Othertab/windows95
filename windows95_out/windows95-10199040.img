@@ -1,0 +1,85 @@
+ln.exe
+DevDelete = rlnAsync.exe
+
+DevDelete = S64DDPMS     ;Stealth 64 PCI driver
+DevDelete = S64DDPMS.COM
+
+DevDelete = PCDISK.EXE   ;Zenith Znote driver
+
+; Remove Anti-Virus Programs
+DevDelete = vsafe.sys    ;Central Point
+DevDelete = vsafe.com    ;Central Point/MS-DOS 6
+DevDelete = vdefend.sys  ;PC-Tools
+DevDelete = vdefend.com  ;PC-Tools
+DevDelete = vwatch.com   ;PC-Tools
+DevDelete = vaccine.exe  ;Vaccine Antivirus Program
+DevDelete = virstop.exe  ;F-Prot Anti-Virus
+DevDelete = navtsr.exe   ;Norton Anti-virus
+DevDelete = nav_.sys     ;Norton Anti-virus
+DevDelete = nav.drv      ;Norton Anti-virus
+DevDelete = nav&.sys     ;Norton Anti-virus
+
+;Remove lines that start any of the following disk caches:
+DevDelete       = cache-at.sys  ; Golden Bow Software
+DevDelete       = cache-em.sys  ; Golden Bow Software
+DevDelete       = cache.exe           ; Disk Cache Utility
+DevDelete       = cacheclk.exe    ;Helix MultiMedia Cloaking Ver 1.0
+DevDelete       = cloaking.exe
+DevDelete       = mouseclk.exe 
+DevDelete       = fast512.sys
+DevDelete       = fast.exe
+DevDelete       = faste.exe
+DevDelete       = fastx.exe
+DevDelete       = flash.exe           ; Flash Disk Cache Utility"hyper386.exe ;"Hyper Disk Cache Utility
+DevDelete       = hyper286.exe  ; Hyper Disk Cache Utility"
+DevDelete       = hyper386.exe  ; Shareware disk cache
+DevDelete       = hyperdkc.exe  ; Hyper Disk Cache Utility
+DevDelete       = hyperdke.exe  ; Hyper Disk Cache Utility
+DevDelete       = hyperdkx.exe  ; Hyper Disk Cache Utility
+DevDelete       = ibmcache.sys
+DevDelete       = icache.sys
+DevDelete       = l.com         ; Lightning Disk Cache
+DevDelete       = mcache.sys    ; Paul Mace Utilites
+DevDelete       = ncache.exe    ; Norton Disk Cache Utility
+DevDelete       = ncache2.exe    ; Norton Disk Cache Utility
+DevDelete       = pc-cache.com  ; PC Tools Disk Cache Utility
+DevDelete       = pc-kwik.exe   ; PC-Kwik Disk Cache Utility
+DevDelete       = pcache.com    ; Print cache
+DevDelete       = pckkey.exe    ; Multisoft Super PC Kwik Windows driver
+DevDelete       = pckscrn.exe   ; Multisoft Super PC Kwik Windows driver
+DevDelete       = pckwin.sys    ; Multisoft Super PC Kwik Windows driver
+DevDelete       = poweron.bat   ; Batch file which turns on Super PC Kwik (from v 3.1 PowerPack)
+DevDelete       = qcache.exe    ; 386 Max Disk Cache Utility
+DevDelete       = qcache.win    ; 386 Max/BlueMax Disk Cache Utility
+DevDelete       = scpcdext.exe  ; Norton CD-ROM Cache
+DevDelete       = sdcdext.exe   ; Norton CD-ROM Cache
+DevDelete       = scplus.exe    ; SpeedCache for Disks and CD-ROM
+DevDelete       = speedrv.exe   ; Norton Speed Drive
+DevDelete       = super.exe     ; Super PC Kwik
+DevDelete       = superon.bat   ; Batch file which turns on Super PC Kwik
+DevDelete       = superpck.exe  ; Multisoft Super PC Kwik disk cache
+DevDelete       = zcache.sys    ; Zenith Data Systems OEM from DOS 3.3 & 4.01
+
+;Remove the following from previous versions of OEM-DOS
+DevDelete       = astcache.sys  ; AST 3.30
+DevDelete       = cache.sys     ; Compaq 3.20, Dell 3.30
+DevDelete       = cacher.sys    ; AST 3.30, Olivetti 3.30
+DevDelete       = cemm.exe      ; DOS 3.20, 3.21, 3.30, 3.31, 4.00
+DevDelete       = cemmp.exe     ; DOS 3.20, 3.21, 3.30, 3.31, 4.00, Compaq 5.00
+DevDelete       = enhdisk.sys   ; Compaq 3.20, 3.31, 4.00
+DevDelete       = emmdrv.sys    ; NCR 3.30
+DevDelete       = fastdisk.sys  ; AST 3.30
+DevDelete       = hardrive.sys  ; HP 3.20, 3.30, 4.00
+DevDelete       = hpdcache.sys  ; HP 4.0
+DevDelete       = kboard.sys    ; Toshiba 3.20
+DevDelete       = mlpart.sys    ; Tandy 3.20, 3.30
+DevDelete       = olicache.sys  ; Olivetti 3.30
+DevDelete       = ramboost.exe  ; IBM 6.3
+DevDelete       = shelldrv.sys  ; NCR 3.30
+DevDelete       = spooler.sys   ; Tandy 3.20, 3.30
+DevDelete       = xdisk.sys     ; Unisys 3.20
+DevDelete       = xma2ems.sys   ; DOS 4.00
+DevDelete       = xmaem.sys     ; DOS 4.00
+DevDelete       = zspool.sys    ; Zenith 3.20, 3.21
+
+;For non MS-DOS operating 

@@ -1,0 +1,59 @@
+, Responses, "3<cr>", 1, 04, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "4<cr>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "5<cr>", 1, 02, 00, b0,04,00,00, 00,00,00,00
+HKR, Responses, "6<cr>", 1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "7<cr>", 1, 06, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "8<cr>", 1, 07, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "9<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "10<cr>", 1, 02, 00, 60,09,00,00, 00,00,00,00
+HKR, Responses, "11<cr>", 1, 02, 00, c0,12,00,00, 00,00,00,00
+HKR, Responses, "12<cr>", 1, 02, 00, 80,25,00,00, 00,00,00,00
+HKR, Responses, "13<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "14<cr>", 1, 02, 00, 00,4b,00,00, 00,00,00,00
+HKR, Responses, "15<cr>", 1, 02, 00, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "16<cr>", 1, 02, 00, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "17<cr>", 1, 02, 00, 40,38,00,00, 00,00,00,00
+HKR, Responses, "18<cr>", 1, 02, 00, a0,41,00,00, 00,00,00,00
+HKR, Responses, "19<cr>", 1, 02, 00, 00,00,00,00, 00,96,00,00
+HKR, Responses, "20<cr>", 1, 02, 00, 00,00,00,00, 00,e1,00,00
+HKR, Responses, "21<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+
+HKR, Responses, "30<cr>", 1, 02, 02, 00,00,00,00, 00,00,00,00
+HKR, Responses, "31<cr>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "32<cr>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "33<cr>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "34<cr>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "35<cr>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "36<cr>", 1, 02, 02, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "37<cr>", 1, 02, 02, 40,38,00,00, 00,00,00,00
+HKR, Responses, "38<cr>", 1, 02, 02, a0,41,00,00, 00,00,00,00
+HKR, Responses, "39<cr>", 1, 02, 02, 00,4b,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 1200<cr><lf>", 1, 02, 00, b0,04,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200/ARQ/MNP4<cr><lf>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200/ARQ/V42 <cr><lf>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200/ARQ/V42 /SREJ<cr><lf>", 1, 02, 02, b0,04,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200/ARQ/MNP5<cr><lf>", 1, 02, 03, b0,04,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200/ARQ/V42b<cr><lf>", 1, 02, 03, b0,04,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 1200/ARQ/V42b/SREJ<cr><lf>", 1, 02, 03, b0,04,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 2400<cr><lf>", 1, 02, 00, 60,09,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400/ARQ/MNP4<cr><lf>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400/ARQ/V42 <cr><lf>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400/ARQ/V42 /SREJ<cr><lf>", 1, 02, 02, 60,09,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400/ARQ/MNP5<cr><lf>", 1, 02, 03, 60,09,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400/ARQ/V42b<cr><lf>", 1, 02, 03, 60,09,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 2400/ARQ/V42b/SREJ<cr><lf>", 1, 02, 03, 60,09,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 4800<cr><lf>", 1, 02, 00, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/MNP4<cr><lf>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/V42 <cr><lf>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/V42 /SREJ<cr><lf>", 1, 02, 02, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/MNP5<cr><lf>", 1, 02, 03, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/V42b<cr><lf>", 1, 02, 03, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/V42b/SREJ<cr><lf>", 1, 02, 03, c0,12,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 7200<cr><lf>", 1, 02, 00, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/MNP4<cr><lf>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V42 <cr><lf>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<c

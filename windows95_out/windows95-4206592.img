@@ -1,0 +1,53 @@
+elector CP Applet		CopyFile	"""MT_Engine"",""mtc"""				no	%M
+2003		Theme Selector Default THM		CopyFile	"""MT_Engine"",""mtd"""				yes	%34\THEMES<%34\Themes>
+2004		Themes AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\THEMES.EXE"","""",""%2001\%F2001"""					
+2005		Themes  Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\THEMES.EXE"",""Path"",""%2001\Themes;"""					
+2006		AutoApplyTheme		AddRegData	"""HKEY_CLASSES_ROOT"",""ThemeFile\Shell\Apply Settings\command"","""",""%2001\%F2001 /s %%1"""					
+2007	yes	Windows 95 (256 color).theme		CustomAction	"""plus.dll"",""ThemeExec"",""THEMES.EXE"""				yes	%34\THEMES<%34\Themes>
+2008										
+2009		THM Association		Group	2010 2011 2012 2013					
+2010				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Classes\.theme"","""",""ThemeFile"""					
+2011				AddRegData	"""HKEY_CLASSES_ROOT"",""ThemeFile"","""",""Desktop Theme File"""					
+2012				AddRegData	"""HKEY_CLASSES_ROOT"",""ThemeFile\DefaultIcon"","""",""%2001\%F2001,0"""					
+2013				AddRegData	"""HKEY_CLASSES_ROOT"",""ThemeFile\Shell\Open\Command"","""",""%2001\%F2001 %%1"""					
+2014										
+2015		ScreenSaver Engine		CopySection	"""MT_ss"""				no	%M
+2019										
+2020		Safety Hack		CopyFile	"""MT_Engine"",""sos"""				no	%M
+2024										
+2025	yes	SoundCardCheck		CustomAction	"""plus.dll"",""SoundCheck"",""16"""					
+2026	yes	SoundCardCheck		CustomAction	"""plus.dll"",""SoundCheck"",""8"""					
+2029										
+2030		JPG/PAL Support		Group	2031 2032 2033 2034 2035					
+2031		JPEG DLL		CopyFile	"""MT_Engine"",""jpg"""				no	%W\MSAPPS\GRPHFLT<%W\MsApps\Grphflt>
+2032		JPEG Filter		CopyFile	"""MT_Engine"",""flt"""				no	%W\MSAPPS\GRPHFLT<%W\MsApps\Grphflt>
+2033				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Shared Tools\Graphics Filters\Import\JPEG"",""Name"",""JPEG Filter"""					
+2034				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Shared Tools\Graphics Filters\Import\JPEG"",""Path"",""%2032\%F2032"""					
+2035				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Shared Tools\Graphics Filters\Import\JPEG"",""Extensions"",""jpg"""					
+2040		Inflation for Theme select		CustomAction	"""plus.dll"",""AddTo"",""2000000"""				yes	%M									
+2047										
+2048		WinFont Path		CustomAction	"""plus.dll"",""LocalizedPath"",""Fonts"""					
+2049										
+2050		WINDOWS95 THEME (8-Bit)		Group	2051 2052 2053 2055 2056 2057 2058 2059 2060 2065 2069					
+2051		Theme Files		CopySection	"""MT_Windows95_thm"""				yes	%91
+2052		Theme Files		CopySection	"""MT_Windows95_bmp"""				yes	%91
+2053		Theme Files		CopySection	"""MT_Windows95_cur"""				yes	%91
+2055		Theme Files		CopySection	"""MT_Windows95_scr"""				no	%M
+2056		Theme Files		CopySection	"""MT_Windows95_ttf"""				no	%2048
+2057		News Gothic MT (TrueType)		InstallTTFFile	"""MT_Windows95_ttf"",""wi1"",""News Gothic MT (TrueType)"""				no	%2048
+2058		News Gothic MT Bold (TrueType)		InstallTTFFile	"""MT_Windows95_ttf"",""wi2"",""News Gothic MT Bold (TrueType)"""				no	%2048
+2059		News Gothic MT Italic (TrueType)		InstallTTFFile	"""MT_Windows95_ttf"",""wi3"",""News Gothic MT Italic (TrueType)"""				no	%2048
+2060		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""450000"""				yes	%2052
+2065				DependAsk	2025 ? 2067 : 2066					
+2066				DependAsk	2026 ? 2068					
+2067		Theme Files		CopySection	"""MT_Windows95_wav16"""				yes	%91
+2068		Theme Files		CopySection	"""MT_Windows95_wav8"""				yes	%91
+2069		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""100000"""				yes	%2055
+2079										
+2080		SIXTIES THEME (8-Bit)		Group	2081 2082 2083 2085 2086 2087 2088 2089 2090 2095 2100 2101 2102					
+2081		Theme Files		CopySection	"""MT_Sixties_thm"""				yes	%88
+2082		Theme Files		CopySection	"""MT_Sixties_bmp"""				yes	%88
+2083		Theme Files		CopySection	"""MT_Sixties_cur"""				yes	%88
+2085		Theme Files		CopySection	"""MT_Sixties_scr"""				no	%M
+2086		Theme Files		CopySection	"""MT_Sixties_ttf"""				no	%2048
+2087		Lucida H

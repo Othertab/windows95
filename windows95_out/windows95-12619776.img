@@ -1,0 +1,223 @@
+NT_REG
+AddReg=SM-5514B.AddReg, 1024
+
+[SM-5514A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=SM-5514A.AddReg, 1024
+
+[SM-5514E.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=SM-5514E.AddReg, 1024
+
+[SM-5515.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=SM-5515.AddReg, 1024
+
+[ADI4GP]
+DelReg=DEL_CURRENT_REG
+AddReg=ADI4GP.AddReg, 1280, DPMS
+
+; -------------- A0C
+
+[CM-324.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-324.AddReg, 800
+
+[CM-325.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-325.AddReg, 1024
+
+[CM-326.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-326.AddReg, 1024
+
+[Bus_VGA.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Bus_VGA.AddReg, 1024
+
+[CT1381A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CT1381A.AddReg, 800
+
+[EG2040.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=EG2040.AddReg, 1024
+
+[CT-1458.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CT-1458.AddReg, 1024
+
+[CT-1958.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CT-1958.AddReg, 1024
+
+[7250.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7250.AddReg, 1024
+
+[7351.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7351.AddReg, 1280
+
+[7214.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7214.AddReg, 1024
+
+[7241.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7241.AddReg, 1024
+
+[7550.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7550.AddReg, 1600
+
+[9250.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=9250.AddReg, 1024
+
+[7126.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7126.AddReg, 800
+
+[7211.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=7211.AddReg, 1024
+
+[CMC-141M.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-141M.AddReg, 1024
+
+[CMC-1500BF.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1500BF.AddReg, 1024
+
+[CMC-1500M.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1500M.AddReg, 1280
+
+[CMC-1500TF.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1500TF.AddReg, 1024
+
+[CMC-1700M.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1700M.AddReg, 1280
+
+[CMC-2100H.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-2100H.AddReg, 1280
+
+[CMC-2100M.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-2100M.AddReg, 1280
+
+; -------------- Darius
+
+[TSM-1431.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=TSM-1431.AddReg, 1024
+
+; -------------- Everex
+
+[Eversync_SVGA.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Eversync_SVGA.AddReg, 1024
+
+[FMS.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=FMS.AddReg, 1024
+
+[MON-7C5.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MON-7C5.AddReg, 800
+
+[MTS-9608S.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MTS-9608S.AddReg, 1024
+
+; -------------- Fujikama
+
+[PVGA-1024A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=PVGA-1024A.AddReg, 1024
+
+
+; -------------- Gateway
+
+[14svga.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=14svga.AddReg, 1024, DPMS
+
+[cs1024.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs1024.AddReg, 1024, DPMS
+
+[cs1024ni.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs1024ni.AddReg, 1024, DPMS
+
+[cs1024ni2g.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs1024ni2g.AddReg, 1024, DPMS
+
+[cs1572dgm.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs1572dgm.AddReg, 1280, DPMS
+
+[cs1572dg.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs1572dg.AddReg, 1024, DPMS
+
+[cs1572fs.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs1572fs.AddReg, 1280, DPMS
+
+[Vivitron15.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Vivitron15.AddReg, 1280, DPMS
+
+[cs17762leg.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=cs17762leg.AddReg, 1280, DPMS
+
+[Vivitron17.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Vivitron17.AddReg, 1280, DPMS
+
+[Vivitron20.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Vivitron20.AddReg, 1280, DPMS
+
+
+; -------------- Golden Dragon
+
+[TY-1411.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=TY-1411.AddReg, 1024
+
+[TY-2015.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=TY-2015.AddReg, 1280
+
+[1423.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1423.AddReg, 640
+
+[1423+VGA.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1423+VGA.AddReg, 640
+
+[1453_Plus.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1453_Plus.AddReg, 1024
+
+[1460+VGA.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1460+VGA.AddReg, 1024
+
+[1470_Plus.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1470_Plus.AddReg, 1024
+
+[1490.Install]
+D

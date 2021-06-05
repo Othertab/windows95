@@ -1,0 +1,98 @@
+of 640 x 480.
+ 
+ATI Mach8/32/64
+---------------
+Windows 95 cannot use high-resolution modes properly unless your
+adapter is configured correctly using the ATI Install.exe program.  
+
+Choosing the correct setting for your monitor type is especially
+important. Otherwise, high-resolution modes may not be available,
+or your computer may stop responding when it attempts to switch to 
+them.
+
+If your computer occasionally stops responding on PCI mach32 or 
+mach64 adapters, try adding the line "outengine=0" to the [display] 
+section of your System.ini file. The file is located in the folder 
+that contains your Windows 95 files. If this does not work, try 
+adding "VAD=1" in the same location.  This switch disables linear 
+framebuffer mode, which can cause problems on some computers.
+
+Number Nine Imagine 128
+-----------------------
+A driver for this adapter is available from the Windows Driver Library. 
+Windows 95 will install and use the Cirrus Logic driver for these
+adapters by default--limiting the maximum display settings to 800x600,
+256 colors. For more information, see the Windows Driver Library section 
+earlier in this file.
+
+Hercules Graphite, Boca Vortek, Orchid Celsius (IIT AGX)
+--------------------------------------------------------
+The Windows 95 Setup program does not automatically install the driver
+for these adapters and other adapters that use the IIT AGX controller.
+To manually change to the correct display type, open Display properties
+in Control Panel, click the Settings tab, and then click Change Display 
+Type.
+
+This will install the correct driver files, and enable you to select 
+256-color, 16-bit color, and high-resolution modes.
+
+Chips and Technologies
+--------------------
+This driver is not installed by default on some laptop computers,
+including the Zenith 433. To manually install the correct driver, 
+open Display properties in Control Panel, click the Settings tab, 
+and then click Change Display Type.
+
+IBM ThinkPad
+------------
+To run resolutions above 640x480, you must configure your ThinkPad
+correctly. Check the ThinkPad utilities supplied by IBM; these are
+usually located on the Start menu. 
+
+Some older ThinkPad models require that the Ibmvesa.com driver be
+loaded by your Autoexec.bat file during startup for 256-color modes
+to work.
+
+If you have a ThinkPad 755cx, open Display properties, click the
+Settings tab, and then click Change Display Type. Change your display
+type from "Western Digital" to "IBM ThinkPad 755cx." This will allow
+the built-in panel to display 800x600 modes and may correct some
+cursor-related problems.
+
+Matrox MGA
+----------
+For proper operation, your adapter and monitor settings must be
+correct in the Matrox setup utility, which is usually located on
+your hard disk in the \Mga\Setup folder. If your computer stops
+responding during startup, it may be caused by a conflict with a
+network adapter.
+
+If you encounter text problems--for example, incorrect or "garbage" 
+characters--try adding "FontCache=OFF" to the [mga.drv] section of 
+your System.ini file, which is located in the folder that contains 
+your Windows 95 files. 
+
+Trident Display Adapters
+------------------------
+If you have the Windows 95 CD-ROM, an enhanced driver for Trident 
+Super VGA and accelerator adapters is available in the 
+\Drivers\Display\Trident folder.
+
+This driver is also available in the Windows Driver Library. For 
+more information, see the Windows Driver Library section earlier 
+in this file.
+
+Video Logic 928Movie
+--------------------
+For 16-bit color modes to work correctly, make sure your display
+adapter type is set to "Video Logic 928Movie" in Display properties.
+
+Western Digital
+---------------
+On some laptop computers, the mouse pointer may change to a wide 
+band of colored dots when you switch from a command prompt or 
+MS-DOS-based program. To correct this problem, carry out the 
+following procedure.
+
+1. Click the Start button, and then point to Settings.
+2. Click Control Panel, and then double-click the S

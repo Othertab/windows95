@@ -1,0 +1,185 @@
+eg=Prev.DelReg
+AddReg=Std.AddReg, Bus.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Std.Ini
+UpdateIniFields=Std.UpdateIniFields
+LogConfig=Bus.LogConfig
+
+[Bus.AddReg]
+HKR,,MouseType,,"Bus"
+HKR,,NoSetupUI,,1
+
+[Bus.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=23c-23f(3ff::)
+IRQConfig=3,4,5,9
+
+; -------------- Microsoft Mouse
+[MSAny]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg
+CopyFiles=MS.Copy, Pointer.Copy
+UpdateInis=MS.Ini
+
+[MS.Copy]
+mouse.drv
+msmouse.vxd
+
+[Pointer.Copy]
+pointer.exe
+pointer.dll
+
+[MS.Ini]
+system.ini,boot.description,,"mouse.drv=%MSMouse%"
+system.ini,boot,,"mouse.drv=mouse.drv"
+system.ini,386Enh,,"mouse=*vmouse, msmouse.vxd"
+
+; -------------- Microsoft Serial Mouse
+[MSSer]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, Serial.AddReg
+CopyFiles=MS.Copy, Pointer.Copy
+UpdateInis=MS.Ini
+UpdateIniFields=Std.UpdateIniFields
+
+; -------------- Microsoft Serial Mouse (PnP)
+[MSSerPnP]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, Serial.AddReg
+CopyFiles=MS.Copy, Pointer.Copy
+UpdateInis=MS.Ini
+UpdateIniFields=Std.UpdateIniFields
+
+[MSSerPnP.PosDup]
+*PNP0F0C,*PNP0F0F,*PNP0F01,*PNP0F09
+
+; -------------- Microsoft InPort Mouse
+[MSInP]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, InPort.AddReg
+CopyFiles=MS.Copy, Pointer.Copy
+UpdateInis=MS.Ini
+UpdateIniFields=Std.UpdateIniFields
+LogConfig=InPort.LogConfig
+
+; -------------- Microsoft PS/2 Mouse
+[MSPS2]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, PS2.AddReg
+CopyFiles=MS.Copy, Pointer.Copy
+UpdateInis=MS.Ini
+UpdateIniFields=Std.UpdateIniFields
+LogConfig=PS2.LogConfig
+
+[MSPS2.PosDup]
+*PNP0F03,*PNP0F0B,*PNP0F0E,*PNP0F12,*PNP0F1C
+
+; -------------- Microsoft Bus Mouse
+[MSBus]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, Bus.AddReg
+CopyFiles=MS.Copy, Pointer.Copy
+UpdateInis=MS.Ini
+UpdateIniFields=Std.UpdateIniFields
+LogConfig=Bus.LogConfig
+
+; -------------- Logitech Mouse
+[LogiAny]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Logi.Ini
+
+[Logi.AddReg]
+HKR,,DevLoader,,*vmouse
+HKR,,MouseDriver,,lmouse.vxd
+
+[Logi.Copy]
+lmouse.drv
+lmouse.vxd
+
+[Logi.Ini]
+system.ini,boot.description,,"mouse.drv=%LogiMouse%"
+system.ini,boot,,"mouse.drv=lmouse.drv"
+system.ini,386Enh,,"mouse=*vmouse"
+
+; -------------- Logitech Serial Mouse
+[LogiSer]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg, Serial.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Logi.Ini
+
+; -------------- Logitech Serial Mouse (PnP)
+[LogiSerPnP]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg, Serial.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Logi.Ini
+
+[LogiSerPnP.PosDup]
+*PNP0F0C,*PNP0F0F,*PNP0F01,*PNP0F09,*PNP0F08
+
+; -------------- Logitech PS/2 Mouse
+[LogiPS2]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg, PS2.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Logi.Ini
+LogConfig=PS2.LogConfig
+
+[LogiPS2.PosDup]
+*PNP0F03,*PNP0F0B,*PNP0F0E,*PNP0F12,*PNP0F1C
+
+; -------------- Logitech Bus Mouse
+[LogiBus]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg, Bus.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Logi.Ini
+LogConfig=Bus.LogConfig
+
+
+; -------------- Compaq PS/2 mouse or trackball
+[CpqPS2]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg, PS2.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Cpq.Ini
+LogConfig=PS2.LogConfig
+
+[Cpq.Ini]
+system.ini,boot.description,,"mouse.drv=%CpqMouse%"
+system.ini,boot,,"mouse.drv=lmouse.drv"
+system.ini,386Enh,,"mouse=*vmouse"
+
+[CpqPS2.PosDup]
+*PNP0F03,*PNP0F0B,*PNP0F0E,*PNP0F12,*PNP0F1C
+
+; -------------- Compaq LTE trackball (serial)
+[CpqSer]
+DelReg=Prev.DelReg
+AddReg=Logi.AddReg, Serial.AddReg
+CopyFiles=Logi.Copy
+UpdateInis=Cpq.Ini
+
+; -------------- Kensingon serial trackball
+[KensSer]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, Serial.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Kens.Ini
+UpdateIniFields=Std.UpdateIniFields
+
+[Kens.Ini]
+system.ini,boot.description,,"mouse.drv=%KensExpMouse%"
+system.ini,boot,,"mouse.drv=mouse.drv"
+system.ini,386Enh,,"mouse=*vmouse, msmouse.vxd"
+
+; -------------- TI QuickPort BallPoint
+[TIBall]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, PS2.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Std.Ini, TIBall.Ini
+UpdateIniFields=Std.UpdateIniFields

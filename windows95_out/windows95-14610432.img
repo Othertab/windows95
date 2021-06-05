@@ -1,0 +1,108 @@
+00,00,00, \      ; PCCARD flags, 0x02 = attribute mem, or
+               ;         0x08 = 16-bit common mem
+00,00,02,00, \      ; Memory card address
+;
+; Memory Resource Descriptor 1
+;
+34,00,00,00, \      ; Total length of Memory Resource Descriptor
+01,00,00,00, \      ; ResType_Mem = 0x00000001
+01,00, \       ; MD_Count;
+14,00, \       ; MD_Type;          // MType_Range = 0x0014
+00,00,00,00, \      ; MD_Alloc_Base;
+00,00,00,00, \      ; MD_Alloc_End;
+00,00, \       ; MD_Flags;
+00,00, \       ; MD_Reserved;
+00,F0,FF,FF, \      ; MR_Align;         // Mask for base alignment
+00,10,00,00, \      ; MR_nBytes;        // Count of bytes (4K)
+00,00,00,00, \      ; MR_Min;      // Min Address
+FF,FF,FF,FF, \      ; MR_Max;      // Max Address
+00,00, \       ; MR_Flags;         // Flags
+00,00, \       ; MR_Reserved;
+02,00,00,00, \      ; PCCARD flags, 0x02 = attribute mem, or
+               ;         0x08 = 16-bit common mem
+00,00,00,00, \      ; Memory card address
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \      ; Total length of REQUEST_CONFIG_PKT Descriptor
+7C,89,00,00, \      ; (ResType_Ignored_Bit + PCCARD_DEVICE_ID) = 0x897C
+00,00, \       ; Socket;
+02,00, \       ; Attributes;
+32, \               ; Vcc;
+32, \               ; Vpp1;
+32, \               ; Vpp2;
+02, \               ; IntType;
+00,00,01,00, \      ; ConfigBase;
+00, \               ; Status;
+00, \               ; Pin;
+00, \               ; Copy;
+01, \               ; ConfigIndex;
+03, \               ; Present;
+;
+00,00,00,00         ; TERMINATOR
+
+; Install NDIS3
+[SMC.ndis3]
+CopyFiles=SMC.ndis3.CopyFiles
+
+[SMC.ndis3.CopyFiles]
+smc80pc.vxd
+
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir             =11 ; LDID_SYS
+SMCMAC.ndis3.CopyFiles     =11 ; LDID_SYS
+Smc9000.ndis3.CopyFiles    =11
+SMC.ndis3.CopyFiles        =11
+Smc9000.ndis2.CopyFiles    =26
+SMCMAC.ndis2.CopyFiles     =26 ; LDID_WINBOOT
+SMCARC.ndis2.CopyFiles     =26 ; LDID_WINBOOT
+smcarcws.odi.CopyFiles     =26 ; LDID_WINBOOT
+smc8000.odi.CopyFiles      =26 ; LDID_WINBOOT
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_Arcnet="ArcNet"
+V_PureData="Pure Data"
+V_SMC="SMC"
+V_DELL="Dell"
+
+; PNP Devices for generic arcnet
+*pnp8324.DeviceDesc="ARCNET Compatible"
+
+; PNP Devices for Pure Data
+*pnp81e6.DeviceDesc="Pure Data PDI508+ (ArcNet)"
+*pnp81e7.DeviceDesc="Pure Data PDI516+ (ArcNet)"
+
+; PNP Devices for SMC
+*pnp81c3.DeviceDesc="SMC EtherCard PLUS Elite (WD/8003EP)"
+*pnp81c4.DeviceDesc="SMC EtherCard PLUS 10T (WD/8003W)"
+*pnp81c5.DeviceDesc="SMC EtherCard PLUS Elite 16 (WD/8013EP)"
+*pnp81c6.DeviceDesc="SMC EtherCard PLUS Elite 16T (WD/8013W)"
+*pnp81c7.DeviceDesc="SMC EtherCard PLUS Elite 16 Combo (WD/8013EW or 8013EWC)"
+*pnp8127.DeviceDesc="SMC EtherCard PLUS With Boot ROM Socket (WD/8003EB)"
+mca_6fc0.DeviceDesc="SMC EtherCard PLUS/A (MCA) (WD 8003E/A or 8003ET/A)"
+mca_6fc1.DeviceDesc="SMC StarCard PLUS/A (MCA) (WD 8003ST/A)"
+mca_6fc2.DeviceDesc="SMC EtherCard PLUS 10T/A (MCA) (WD 8003W/A)"
+*pnp8123.DeviceDesc="SMC StarCard PLUS (WD/8003S)"
+*pnp8124.DeviceDesc="SMC StarCard PLUS With On Board Hub (WD/8003SH)"
+*pnp8125.DeviceDesc="SMC EtherCard PLUS (WD/8003E)"
+*pnp8126.DeviceDesc="SMC EtherCard PLUS With Boot ROM Socket (WD/8003EBT)"
+*pnp8128.DeviceDesc="SMC EtherCard PLUS TP (WD/8003WT)"
+*pnp812a.DeviceDesc="SMC EtherCard PLUS 16 With Boot ROM Socket (WD/8013EBT)"
+mca_61c8.DeviceDesc="SMC EtherCard PLUS/A (MCA,BNC/AUX) (WD 8013EP/A)"
+mca_61c9.DeviceDesc="SMC EtherCard PLUS/A (MCA,TP/AUX) (WD 8013EW/A)"
+*pnp8323.DeviceDesc="SMC EtherCard (All ISA Types except 8013/A)"
+
+pcmcia.DeviceDesc="SMC EliteCard PCMCIA (SMC 8016)"
+
+*pnp80dd.DeviceDesc="SMC ARCNETPC"
+*p

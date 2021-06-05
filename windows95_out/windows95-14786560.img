@@ -1,0 +1,70 @@
+%11%\regsvr32.exe /s %11%\intrinsc.ocx"
+HKLM,%Key_Runonce%,"IE3_RegSvr_msrating.dll",0,"%11%\regsvr32.exe /s %11%\msrating.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_mshtml.dll",0,"%11%\regsvr32.exe /s %11%\mshtml.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_comcat.dll",0,"%11%\regsvr32.exe /s %11%\comcat.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_jscript.dll",0,"%11%\regsvr32.exe /s %11%\jscript.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_vbscript.dll",0,"%11%\regsvr32.exe /s %11%\vbscript.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_hlink.dll",0,"%11%\regsvr32.exe /s %11%\hlink.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_hlinkprx.dll",0,"%11%\regsvr32.exe /s %11%\hlinkprx.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_sendmail.dll",0,"%11%\regsvr32.exe /s %11%\sendmail.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_urlmon.dll",0,"%11%\regsvr32.exe /s %11%\urlmon.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_licmgr10.dll",0,"%11%\regsvr32.exe /s %11%\licmgr10.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_marquee.ocx",0,"%11%\regsvr32.exe /s %11%\marquee.ocx"
+HKLM,%Key_Runonce%,"IE3_RegSvr_plugin.ocx",0,"%11%\regsvr32.exe /s %11%\plugin.ocx"
+HKLM,%Key_Runonce%,"IE3_RealAudio_Reg",0,"""%40005%\regexp.exe"" %11%"
+HKLM,%Key_Runonce%,"IE3_RegSvr_raocx32.dll",0,"%11%\regsvr32.exe /s %11%\raocx32.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_wintrust.dll",0,"%11%\regsvr32.exe /s %11%\wintrust.dll"
+;	Java
+HKLM,%Key_Runonce%,"%REGISTER_MSJAVA%",0,"%11%\regsvr32.exe /s %11%\msjava.dll"
+HKLM,%Key_Runonce%,"%REGISTER_VMHELPER%",0,"%11%\regsvr32.exe /s %11%\vmhelper.dll"
+HKLM,%Key_Runonce%,"%REGISTER_JAVAPRXY%",0,"%11%\regsvr32.exe /s %11%\javaprxy.dll"
+HKLM,%Key_Runonce%,"%REGISTER_APPLETFRAME%",0,"rundll32.exe %11%\msjava.dll,RegisterJavaClass com.ms.applet.BrowserAppletFrame {9365cf60-dac1-11cf-9034-00aa006024ba}"
+HKLM,%Key_Runonce%,"%REGISTER_JDBGMGR%",0,"%11%\jdbgmgr.exe -regserver"
+HKLM,"Software\Microsoft\Active Setup","OSRInstall",,"%1%\ie4setup.exe /C:""ie4wzd.exe /P:WC /M:2 /S:#e"""
+
+;	Java VM Registration
+HKLM,"Software\Microsoft\Java VM","Classpath",0,"%10%\java\classes\classes.zip;%10%\java\classes;."
+HKLM,"Software\Microsoft\Java VM","TrustedClasspath",0,"%10%\java\trustlib\tclasses.zip"
+HKLM,"Software\Microsoft\Java VM","LibsDirectory",0,"%10%\java\lib"
+HKLM,"Software\Microsoft\Java VM","TrustedLibsDirectory",0,"%10%\java\trustlib"
+HKCU,"Software\Microsoft\Java VM","EnableJIT",1,1,0,0,0
+HKLM,"Software\Microsoft\Java VM","ClassesBuild",0,"1155"
+
+;	MSHTML.DLL Interface Registration
+HKCR,"CLSID\{%CLSID_MSHTML%}",,0,"Windows HTML Viewer"
+HKCR,"CLSID\{%CLSID_MSHTML%}\MiscStatus",,0,"0"
+HKCR,"CLSID\{%CLSID_MSHTML%}\verb\0",,0,"&Edit,0,2"
+HKCR,"CLSID\{%CLSID_MSHTML%}\verb\1",,0,"&Open,0,2"
+HKCR,"CLSID\{%CLSID_MSHTML%}\AuxUserType\2",,0,"Windows HTML Viewer"
+HKCR,"CLSID\{%CLSID_MSHTML%}\AuxUserType\3",,0,"Windows HTML Viewer"
+HKCR,"CLSID\{%CLSID_MSHTML%}\BrowseInPlace",,0,"0"
+HKCR,"CLSID\{%CLSID_MSHTML%}\InProcServer32",,0,"mshtml.dll"
+HKCR,"CLSID\{%CLSID_MSHTML%}\InProcServer32","ThreadingModel",0,"Apartment"
+HKCR,"CLSID\{%CLSID_MSHTML%}\ProgID",,0,"htmlfile"
+
+HKCR,"CLSID\{%CLSID_MSHTML_EMBED%}",,0,"Windows HTML Viewer"
+HKCR,"CLSID\{%CLSID_MSHTML_EMBED%}\MiscStatus",,0,"0"
+HKCR,"CLSID\{%CLSID_MSHTML_EMBED%}\BrowseInPlace",,0,"0"
+HKCR,"CLSID\{%CLSID_MSHTML_EMBED%}\InProcServer32",,0,"mshtml.dll"
+HKCR,"CLSID\{%CLSID_MSHTML_EMBED%}\InProcServer32","ThreadingModel",0,"Apartment"
+
+
+
+
+;	SHDOCVW.DLL Registry Entries (Shell DocObject Viewer)
+
+HKCR,"CLSID\{%CLSID_CShellDocFolder%}",,,"Shell DocObject Viewer"
+HKCR,"CLSID\{%CLSID_CShellDocFolder%}\InProcServer32",,,"%11%\shdocvw.dll"
+HKCR,"CLSID\{%CLSID_CShellDocFolder%}\InProcServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\{%CLSID_CShellDocFolder%}\ShellFolder","Attributes",1,50,00,00,A0
+
+HKCR,"CLSID\{%CLSID_CURLRoot%}",,0,"%THENET%"
+HKCR,"CLSID\{%CLSID_CURLRoot%}\InProcServer32",,0,"shdocvw.dll"
+HKCR,"CLSID\{%CLSID_CURLRoot%}\InProcServer32","ThreadingModel",0,"Apartment"
+HKCR,"CLSID\{%CLSID_CURLRoot%}\ShellFolder","Attributes",1,50,00,00,A4
+
+
+
+;	URL.DLL Registry Entries
+
+HKCR,"CLSID\{%CLSID_URL_DLL%}",,0,"MIM

@@ -1,0 +1,64 @@
+ns", http:/forums.msn.com/healthprofessions,,,"A great place to learn about the medical field."
+Medicine2="Nursing Network", http://forums.msn.com/nursing,,,"A cybermall of information for nurses."
+
+[Sciences]
+Sciences1="Astronomy && Space", http://forums.msn.com/astronomy,,,"Your launching pad to the universe!"
+Sciences2="Engineering", http://forums.msn.com/engineering,,,"Professional and amateur engineers welcome here!"
+Sciences3="Eureka!", http://forums.msn.com/eureka,,,"Explore the mysteries & wonders of science & nature."
+
+[Philosophy]
+Philosophy1="Philosophy", http://forums.msn.com/philosophy,,,"Pursuing fundamental ideas & philosophical issues."
+Philosophy2="Religion", http://forums.msn.com/religion,,,"All the faiths of the world meet here."
+
+[ForPeople]
+ForPeople1="ChatWorld", http://chatworld.msn.com,,,"The world's chat hangout!"
+ForPeople2="Cultures", [Cultures]
+ForPeople3="Home && Family", [HomeFamily]
+ForPeople4="Issues, Politics && Government", [PolitGov]
+ForPeople5="Philosophy && Religion", [PhiloRelig]
+ForPeople6="Teen", http://forums.msn.com/teen,,,"We won't make you clean your room!"
+
+[Cultures]
+Cultures1="African American", http://forums.msn.com/africanamerican,,,"A meeting place for African Americans online."
+Cultures2="Generation X", http://forums.msn.com/generationx,,,"The future is ours: don't X it out!"
+Cultures3="Lesbian && Gay", http://forums.msn.com/lesbiangay,,,"Out of the closet and onto the Web!"
+Cultures4="Native American", http://forums.msn.com/nativeamerican,,,"Native discussions and resources."
+
+[HomeFamily]
+HomeFamily1="Genealogy", http://forums.msn.com/genealogy,,,"Trace your roots and learn about your ancestry."
+HomeFamily2="Seniors", http://forums.msn.com/seniors,,,"Join a worldwide community of computer-using seniors!"
+HomeFamily3="Wedding", http://forums.msn.com/wedding,,,"An excellent resource for planning the big day."
+HomeFamily4="Work-at-Home Parents", http:/forums.msn.com/workathome,,,"A support resource for work-at-home parents."
+HomeFamily5="Pets", http://forums.msn.com/pets,,,"The best place to keep up with Fluffy & Fido."
+
+[PolitGov]
+PolitGov1="Men's Issues", http://forums.msn.com/men,,,"Where men speak their minds."
+PolitGov2="Women Online", http://forums.msn.com/women,,,"A place for women to share issues and interests."
+PolitGov3="Politics && Debate", http://forums.msn.com/politics,,,"Come see what the other party's up to."
+PolitGov4="Armed Forces", http:/forums.msn.com/armedforces,,,"A global online military community."
+
+[PhiloRelig]
+PhiloRelig1="Philosophy", http://forums.msn.com/philosophy,,,"Pursuing fundamental ideas & philosophical issues."
+PhiloRelig2="Religion", http://forums.msn.com/religion,,,"All the faiths of the world meet here"
+
+[ForSports]
+ForSports1="Astronomy && Space", http://forums.msn.com/astronomy,,,"Your launching pad to the universe!"
+ForSports2="Aviation", http://forums.msn.com/aviation,,,"For pilots and other aviation enthusiasts."
+ForSports3="Gardening", http://forums.msn.com/gardening,,,"Make your garden fragrant, flowering, & fruitful!"
+ForSports4="MotoCentral Motorcycling", http://forums.msn.com/motocentral,,,"Motorcycle riding, racing, and more!"
+
+[ForTravel]
+ForTravel1="Friends of Europe", http://forums.msn.com/friendsofeurope,,,"Learn about the people and cultures of Europe!"
+ForTravel2="Israel", http://forums.msn.com/israel,,,"Visit the unique country of Israel!"
+ForTravel3="Theme Parks!", http://expedia.msn.com/daily/forums/Theme/,,,"Disney, roller coasters, and much, much more!"
+ForTravel4="MotoCentral Motorcycling", http://forums.msn.com/motocentral,,,"Motorcycle riding, racing, and more!"
+
+[Specials]
+sev="Special Events", http://specials.msn.com/,,,"Our sites are so cool you'll need a sweater."
+u2="U2 PopMart Online", http://u2popmart.msn.com/,,,"Official site of U2's PopMart tour"
+ire="E-String", http://estring.msn.com/,,,"Hey pal! It's guitar lessons, not underwear."
+
+[Find]
+URLKey = find.msn.com
+URL = http://find.msn.com/srchmain.htm
+Find = "Search by Word or Phrase", ht

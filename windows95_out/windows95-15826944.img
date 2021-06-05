@@ -1,0 +1,86 @@
+to lauch "welcome to windows" screen (done after the Wrapper is run):
+;HKLM,%KEY_CURRENT%\RunOnce,Welcome,,"%25%\grpconv.exe -i"
+
+;File system settings templates
+;absent values cause deletion so that the component is forced to pick a default
+HKLM,"%KEY_CURRENT%\FS Templates",,,"Desktop"
+HKLM,"%KEY_CURRENT%\FS Templates\Desktop",,,%DiskPerfDesktop%
+HKLM,"%KEY_CURRENT%\FS Templates\Mobile",,,%DiskPerfMobile%
+HKLM,"%KEY_CURRENT%\FS Templates\Mobile",PathCache,1,10,00,00,00
+HKLM,"%KEY_CURRENT%\FS Templates\Mobile",NameCache,1,51,01,00,00
+HKLM,"%KEY_CURRENT%\FS Templates\Server",,,%DiskPerfServer%
+HKLM,"%KEY_CURRENT%\FS Templates\Server",PathCache,1,40,00,00,00
+HKLM,"%KEY_CURRENT%\FS Templates\Server",NameCache,1,a9,0a,00,00
+
+;Add IconSpacingFactor so it can be localized:
+HKCU,"Control Panel\Desktop\WindowMetrics",IconSpacingFactor,,%IconSpacingFactor%
+
+;Default cursor schemes:
+HKCU,"Control Panel\Cursors\Schemes","%CursorSchemeAni%",,",,%25%\Cursors\appstart.ani,%25%\Cursors\hourglas.ani,,,,,,,,,,"
+HKCU,"Control Panel\Cursors\Schemes","%CursorScheme%",,",,,,,,,,,,,,,"
+
+;disk tools
+HKCR,Drive\shellex\PropertySheetHandlers\{D3B1DE00-6B94-1069-8754-08002B2BD64F}
+HKCR,CLSID\{D3B1DE00-6B94-1069-8754-08002B2BD64F},,,%DISK_TOOLS%
+HKCR,CLSID\{D3B1DE00-6B94-1069-8754-08002B2BD64F}\InProcServer32,,,%11%\disktool.dll
+HKCR,CLSID\{D3B1DE00-6B94-1069-8754-08002B2BD64F}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,Folder,,,%FOLDER%
+HKCR,Folder\DefaultIcon,,,"%11%\shell32.dll,3"
+HKCR,Folder,EditFlags,1,D2,01,00,00
+HKCR,Folder\shell
+HKCR,Folder\shell\open
+HKCR,Folder\shell\open\command,,,"%25%\Explorer.exe /idlist,%%I,%%L"
+HKCR,Folder\shell\open\ddeexec,,,"[ViewFolder(""%%l"", %%I, %%S)]"
+HKCR,Folder\shell\open\ddeexec,NoActivateHandler
+HKCR,Folder\shell\open\ddeexec\application,,,Folders
+HKCR,Folder\shell\open\ddeexec\topic,,,AppProperties
+HKCR,Folder\shell\open\ddeexec\ifexec,,,"[]"
+HKCR,Folder\shell
+HKCR,Folder\shell\explore
+HKCR,Folder\shell\explore\command,,,"%25%\Explorer.exe /e,/idlist,%%I,%%L"
+HKCR,Folder\shell\explore\ddeexec,,,"[ExploreFolder(""%%l"", %%I, %%S)]"
+HKCR,Folder\shell\explore\ddeexec\application,,,Folders
+HKCR,Folder\shell\explore\ddeexec\topic,,,AppProperties
+HKCR,Folder\shell\explore\ddeexec\ifexec,,,"[]"
+HKCR,Folder\shell\explore\ddeexec,NoActivateHandler
+
+HKCR,Directory,,,%FSFOLDER%
+HKCR,Directory\DefaultIcon,,,"%11%\shell32.dll,3"
+HKCR,Directory,EditFlags,1,D2,01,00,00
+HKCR,Directory,AlwaysShowExt
+HKCR,Directory\shell
+HKCR,Directory\shell\find
+HKCR,Directory\shell\find\command,,,%25%\Explorer.exe
+HKCR,Directory\shell\find\ddeexec,,,"[FindFolder(""%%l"", %%I)]"
+HKCR,Directory\shell\find\ddeexec\application,,,Folders
+HKCR,Directory\shell\find\ddeexec\topic,,,AppProperties
+HKCR,Directory\shellex\CopyHookHandlers\FileSystem,,,"{217FC9C0-3AEA-1069-A2DB-08002B30309D}"
+
+;Scrap datahandler
+HKCR,CLSID\{56117100-C0CD-101B-81E2-00AA004AE837},,,%SCRAP_DATAHANDLER%
+HKCR,CLSID\{56117100-C0CD-101B-81E2-00AA004AE837}\InProcServer32,,,shscrap.dll
+HKCR,CLSID\{56117100-C0CD-101B-81E2-00AA004AE837}\InProcServer32,ThreadingModel,,"Apartment"
+
+;DiskCopy handler
+HKCR,Drive\shellex\ContextMenuHandlers\{59099400-57FF-11CE-BD94-0020AF85B590}
+HKCR,CLSID\{59099400-57FF-11CE-BD94-0020AF85B590},,,%DISKCOPY_DATAHANDLER%
+HKCR,CLSID\{59099400-57FF-11CE-BD94-0020AF85B590}\InProcServer32,,,%11%\diskcopy.dll
+HKCR,CLSID\{59099400-57FF-11CE-BD94-0020AF85B590}\InProcServer32,ThreadingModel,,"Apartment"
+
+;DocShortcut applets
+HKCR,.shb,,,DocShortcut
+HKCR,DocShortcut,,,%DESC_BMK%
+HKCR,DocShortcut,IsShortcut
+HKCR,DocShortcut,NeverShowExt
+HKCR,DocShortcut\shell
+HKCR,DocShortcut\shell\open\command,,,"%25%\rundll32.exe shscrap.dll,OpenScrap_RunDLL /r /x %%1"
+HKCR,DocShortcut\DefaultIcon,,,"%11%\shscrap.dll,-100"
+HKCR,DocShortcut\shellex\DataHandler,,,"{56117100-C0CD-101B-81E2-00AA004AE837}"
+;HKCR,DocShortcut,EditFlags,1,01,00,00,00
+
+HKCR,.shs,,,ShellScrap
+HKCR,ShellScrap,,,%DESC_SCRAP%
+HKCR,ShellScrap,NeverShowExt
+HKCR,ShellScrap\shell
+HKCR,ShellScrap\shell\open\command,,

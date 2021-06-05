@@ -1,0 +1,143 @@
+uickView,INF,,"appletpp.inf"
+HKLM,%KEY_OPTIONAL%\QuickView,Section,,"FileViewers"
+HKLM,%KEY_OPTIONAL%\QuickView,Installed,,"0"
+
+[Optional Components]
+Tour
+OnlineUG
+sysmon
+netwatch
+CharMap
+FileViewers
+
+
+[sysmon]
+OptionDesc  = %SYSMONOpt_DESC%
+Tip         = %SYSMON_TIP%
+Parent      = AccessTop
+CopyFiles   = Sysmon.Win.Copy, Sysmon.HLP.Copy
+UpdateInis  = Sysmon.Inis
+AddReg      = Sysmon.install.reg
+InstallType = 0               ;Manual only
+IconIndex   = 48              ;Machine mini-icon for dialogs
+Uninstall   = Sysmon_remove
+
+[Sysmon_remove]
+DelFiles    = Sysmon.Win.Copy, Sysmon.HLP.Copy
+AddReg      = Sysmon.remove.reg
+UpdateInis  = Sysmon.Rem.Inis
+
+[netwatch]
+OptionDesc  = %NETWATCHopt_DESC%
+Tip         = %NETWATCH_TIP%
+Parent      = AccessTop
+CopyFiles   = netwatch.Win.Copy, netwatch.HLP.Copy
+DelFiles    = netwatch.Win.Del
+UpdateInis  = netwatch.Inis
+AddReg      = netwatch.install.reg
+InstallType = 0               ;Manual only
+IconIndex   = 46               ;Network wires mini-icon for dialogs
+Uninstall   = netwatch_remove
+
+[netwatch_remove]
+DelFiles    = netwatch.Win.Copy, netwatch.HLP.Copy
+AddReg      = netwatch.remove.reg
+UpdateInis  = netwatch.Rem.Inis
+
+
+[Tour]
+OptionDesc  = %TOUR_DESC%
+Tip         = %TOUR_TIP%
+Parent      = AccessTop
+CopyFiles   = Tour.sys.files, Tour.win.files, Tour.hlp.files
+AddReg      = Tour.install.reg, VB.reg.shared
+InstallType = 0              ;Manual only
+IconIndex   = 49              ;Windows mini-icon for dialog
+Uninstall   = Tour_remove
+
+[Tour_remove]
+DelFiles    = Tour.sys.files, Tour.win.files, Tour.hlp.files
+AddReg      = Tour.remove.reg
+DelReg      = Tour.remove.delreg
+
+
+[OnlineUG]
+OptionDesc  = %OnlineUG_DESC%
+Tip         = %OnlineUG_TIP%
+Parent      = AccessTop
+CopyFiles   = OnlineUG.Hlp
+AddReg      = OnlineUG.install.reg
+InstallType = 0               ;Manual only
+IconIndex   = 49              ;Question Mark mini-icon for dialogs
+Uninstall   = OnlineUG_remove
+
+[OnlineUG_remove]
+DelFiles    = OnlineUG.Hlp
+AddReg      = OnlineUG.remove.reg
+
+
+[CharMap]
+OptionDesc  = %CharMapOpt_DESC%
+Tip         = %CharMap_TIP%
+Parent      = AccessTop
+CopyFiles   = CharMap.Win.Copy
+UpdateInis  = CharMap.Inis
+AddReg      = CharMap.install.reg
+InstallType = 0               ;Manual only
+IconIndex   = 44               ;Keyboard mini-icon for dialogs
+Uninstall   = CharMap_remove
+
+[CharMap_remove]
+DelFiles    = CharMap.Win.Copy
+AddReg      = CharMap.remove.reg
+UpdateInis  = CharMap.Rem.Inis
+
+
+[QVplus_remove]
+AddReg      = QVplus.remove.reg
+
+[FileViewers]
+OptionDesc  = %FV_DESC%
+Tip         = %FV_TIP%
+Parent      = AccessTop
+CopyFiles   = FileViewer.Sys.Copy, QVplus.files, FileViewer.Exe.Copy
+DelFiles	= FileViewer.Sys.Del, FileViewer.Win.Del
+AddReg      = FileViewer.AddReg, FileViewer.install.reg, QVplus.addreg
+
+DelReg      = FileViewer.DelReg
+InstallType = 0                ;Manual only
+IconIndex   = 28               ;Windows flag mini-icon for dialogs
+Uninstall   = FileViewers_remove
+
+[FileViewers_remove]
+DelFiles    = FileViewer.Sys.Copy, QVplus.files
+AddReg      = FileViewer.remove.reg
+DelReg      = FileViewer.uninstall.reg, QVplus.uninstall.reg
+
+
+;---- System Monitor Install Sections -----------------------
+[Sysmon.Win.Copy]
+sysmon.exe
+
+[Sysmon.HLP.Copy]
+sysmon.cnt
+sysmon.hlp
+
+[Sysmon.Inis]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"            ;creates folder
+setup.ini, group11,, """%SysMon_Desc%"", SYSMON.EXE,,, sysmon,,%SysMon_ShortDesc%"   ;creates link
+
+[Sysmon.Rem.Inis]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%SysMon_Desc%"""                       ;deletes link
+setup.ini, group11,, """%SysMon_ShortDesc%"""                       ;deletes link
+
+[Sysmon.install.reg]
+HKLM,%KEY_OPTIONAL%\sysmon,Installed,,"1"
+
+[Sysmon.remove.reg]
+HKLM,%KEY_OPTIONAL%\sysmon,Installed,,"0"
+;---------------------------------------------------------
+
+;---- Net Watcher Install Sections -----------------------
+[net

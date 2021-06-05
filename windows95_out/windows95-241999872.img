@@ -1,0 +1,272 @@
+………<<<………………///………<<<<<ooπffffffff·ô¶ÊÊÊÊ¶¶···ffoof{ddddddd}}}}}}∞DD‚ë‡™&&&&&&&&&b»$DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDîî©FFFFF ß°°°°SPPPPPP««««PPŸŸŸŸŸPPPPŸŸâ,,,,,,,,,,,,!∑€nÀÀ∑€∑€
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+€∑€∑À∑n∑!≤≤≤≤mmmmmmmmm$DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD$»9™&&&&&™&&™Ø»‚Dñ¥¥¥¥¥¥¥¥¥¥¥¥¥q∏††∏∏∏∏∏∏∏∏∏6¬∏∏∏∏∏††††iÄsss~~~~~~sssssssssss~~~~~~~~~sssÄÄi††††¥6∏∏∏∏∏∏s~~ Aâqqqqqqq¬¬¬¥¥¥¥ øøøDDDDDDDDDDDDDDDDDDDDDDD≠√uDDDDDDDDDDDDDDD≠Tûdddddddd>{{{{{Êπ<…/ªf¶¶¶Êfffffe›πoo<<<<<………………………<<<<<<<<<<……………………<<<<ooπffffffff›ô¶ÊÊÊÊÊ¶¶¶···¶ooπ{dddddd}}}}}}–t-DD?Ø&&&&&&&&&™9»DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD$©FFFFF °°°°°«PPPPP«««««PPŸŸŸŸPPPPPŸPE,,,,,,,,,,,,n∑ÀÀ∑€∑€!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!€∑€∑€ÀÀ∑n!≤≤≤≤?mmmmmmmm$îDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDî‚pÈ&&&™&&&&™b÷?îDñ¥¥¥¥¥¥¥¥¥¥¥¥ﬂ†i∏∏∏∏∏∏∏∏∏∏6¬∏∏∏∏∏††††iÄÄsssÄÄÄÄ    Äiiii†iiÄÄss~~~~~sssÄÄi††††¬6∏∏∏∏∏∏∏†Ä~~iâqqqqqq¬¬¬¬¥¥¥¥ æøDøDDDDDDDDDDDDDDDDDDDDDDDD≠√uDDDDDDDDDDDDDDDDDDD<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<title>Customer Support -- Tech Note #1</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body>
+<h5>[CompanyName] Customer Support -- Tech Note #1</h5>
+<h2>Title of the Technical Note:<br>
+Subtitle of the Technical Note</h2>
+<hr>
+<p><strong>Applies to:</strong> [ProductName] Release 1.<br>
+<strong>Last updated:</strong> <!--VERMEER 
+   BOT=TimeStamp
+   S-Type="EDITED"
+   S-Format="%A %B %d, %Y"
+ -->.</p>
+<hr>
+<h3>SUMMARY</h3>
+<p>This is a brief description of the problem, and any solutions provided in this article. This is a brief 
+description of the problem, and any solutions provided in this article. This is a brief description of the 
+problem, and any solutions provided in this article. This is a brief description of the problem, and any 
+solutions provided in this article. This is a brief description of the problem, and any solutions 
+provided in this article. This is a brief description of the problem, and any solutions provided in this 
+article. </p>
+<p><strong>Note: </strong>This is an explanation of an important point.</p>
+<hr>
+<h3>PROCEDURE</h3>
+<ol>
+<li>This is the one-sentence description of Step One.<p>Whenever file names are mentioned, such as <tt>C:\AUTOEXEC.BAT</tt>, use the fixed-width 
+character formatting option. </p>
+<p>Whenever menu options are mentioned, such as <tt>File-&gt;Open</tt>, use the same technique. </p>
+<p>If you need to show the contents of a disk file, place it in a formatted paragraph, and then 
+make it bold so it's obvious where the quoted content begins and ends. Like this: </p>
+<pre><strong>C:\EZSCSI\MSCDEX.EXE /D:ASPICD0 /M:12
+C:\DOS\SMARTDRV.EXE /X
+@ECHO OFF
+PROMPT $p$g
+PATH C:\WINDOWS;C:\DOS
+SET TEMP=C:\DOS</strong> </pre>
+<blockquote>
+<p><em>Place alternatives or side notes in indented italics like this. For example, 
+you might point out that the user's path options may be different than 
+what is shown above.</em></p>
+</blockquote>
+<p>Save your changes. </p>
+</li>
+<li>This is the one-line description of Step Two.<p>Try to break up steps into a series of short paragraphs. Another good technique is to show 
+the user &quot;before&quot; and &quot;after&quot; snapshots, using either formatted text paragraphs or screen shots. </p>
+<p><img src="images/scrnshot.gif" align=bottom width=512 height=318> </p>
+<p>Save your changes. </p>
+</li>
+<li>This is the one-line description of Step Three.<p>You have completed the procedure. </p>
+</li>
+</o

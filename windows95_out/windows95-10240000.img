@@ -1,0 +1,109 @@
+ Bold (TrueType)"
+  win.ini, Fonts, "Courier Bold Italic (TrueType)"
+  win.ini, Fonts, "Courier Italic (TrueType)"
+  win.ini, Fonts, "Times New Roman (Scalable)="
+  win.ini, Fonts, "Times New Roman Bold (Scalable)="
+  win.ini, Fonts, "Times New Roman Bold Italic (Scalable)="
+  win.ini, Fonts, "Times New Roman Italic (Scalable)="
+  win.ini, Fonts, "Symbol PS (Scalable)="
+  win.ini, Fonts, "Symbol (Scalable)="
+  ;
+
+  ; Remove these font entries if they exist because these .ini entries
+  ; are obsolete. We use "Plotter" rather than "All res" Also, 8 point was
+  ; added to the EGA res courier so we remove the old "Courier 10,12,15" font.
+  ;
+  win.ini, Fonts, "Roman (All res)="
+  win.ini, Fonts, "Script (All res)="
+  win.ini, Fonts, "Modern (All res)="
+  win.ini, Fonts, "Courier 10,12,15 (EGA res)="
+
+;Remove link to SETUP.EXE if in startup group:
+setup.ini, group1,, """%Setup2_DESC%"""
+setup.ini, group1,, """%Setup_DESC%"""
+setup.ini, group1,, """%Setup_WFW311%"""
+
+;Remove link to exiticon.exe put in Startup Group on Dell Machines:
+setup.ini, group1,, """Exit Windows"""
+
+;Remove link from Toshiba machines from startup group:
+setup.ini, group1,, "MagiCDisc"
+
+;Remove link to Packard Bell's Navigator:
+setup.ini, group1,, """%PBNavigator_DESC%"""
+
+;Remove link to LogOnOff or Net Watcher if in startup group:
+setup.ini, group1,, """%NetWatch_DESC%"""
+setup.ini, group1,, """%LogOnOFF_DESC%"""
+
+;Smuggler and FN-ESSE apps in startup group:
+setup.ini, group1,, "Smuggler"
+setup.ini, group1,, "FN-ESSE"
+
+;Remove link to MS-DOS 6.x Undelete:
+setup.ini, progman.groups,, "MSTools=""%MSTools_DESC%"""
+setup.ini, MSTools,, """%Undelete_DESC%"""
+
+;Remove link to Maxtime
+setup.ini, group1,, """MaxTime"""
+
+;Remove link to bad app Icon Hear It from startup group
+setup.ini, group1,, """Icon Hear It"""
+setup.ini, group1,, """IHearIt"""
+
+; Cleanup of English icons for non-us upgrade for above items (do not localize)
+setup.ini, progman.groups,, "group1_USA=StartUp"
+setup.ini, group1_USA,, """Windows Setup"""
+setup.ini, group1_USA,, """Setup"""
+setup.ini, group1_USA,, """Exit Windows"""
+setup.ini, group1_USA,, """%PBNavigator_DESC%"""
+setup.ini, group1_USA,, """Net Watcher"""
+setup.ini, group1_USA,, """Log On/Off"""
+setup.ini, group1_USA,, """MaxTime"""
+setup.ini, group1_USA,, """Icon Hear It"""
+setup.ini, group1_USA,, """IHearIt"""
+setup.ini, progman.groups,, "MSTools_USA=""Microsoft Tools"""
+setup.ini, MSTools_USA,, """Undelete"""
+
+;Remove link on some Compaq machines:
+setup.ini, progman.groups,, "CpqUtils=""Compaq Utilities"""
+setup.ini, CpqUtils,, "WinMode"
+
+;Remove link for Cirrus Logic chipsets:
+setup.ini, progman.groups,, "VGAUTIL=VGAUTIL"
+setup.ini, VGAUTIL,, "Setres"
+
+; remove bad line for wordpad.document in embedding section of win.ini
+win.ini, embedding,"WordPad.Document=*"
+
+;Remove NEC video util from Main group
+setup.ini, progman.groups,, "group3=%MAIN_DESC%"
+setup.ini, group3,, "WinMode"
+
+[Upgrade.LinkCleanup.Inis]
+setup.ini, group1,, """%DRWATSON_DESC%""" 
+setup.ini, group1,, """Drwatson""" 
+setup.ini, group1,, """%PRINTMAN_DESC%""" 
+setup.ini, group1,, """%PRINTMAN_WFW311%""" 
+setup.ini, group1,, """Printman""" 
+setup.ini, group1,, """%PRGMAN_DESC%""" 
+setup.ini, group1,, """Progman""" 
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, group4,, """%WinMeter_DESC%"""
+setup.ini, group1,, """%WinMeter_DESC%"""
+setup.ini, group4,, """%Recorder_DESC%"""
+setup.ini, group4,, """%Recorder_WFW311%"""
+setup.ini, group4,, """%Note32_DESC%"""
+setup.ini, group4,, """%Write_DESC%"""
+setup.ini, group4,, """%Write_WFW311%"""
+setup.ini, group4,, """%Clock32_DESC%"""
+setup.ini, group4,, """%PIFED_DESC%"""
+setup.ini, group4,, """%PIFED_WFW311%"""
+setup.ini, group4,, """%Terminal_DESC%"""
+setup.ini, group4,, """%Terminal_WFW311%"""
+setup.ini, progman.groups,, "group3=%MAIN_DESC%"
+setup.ini, group3,, """%ClipBook_DESC%"""
+setup.ini, group3,, """%Clipbd_DESC%"""
+setup.ini, group3,, """%Clip_DESC%"""
+setup.ini, group3,, """%Setup_DESC%"""
+set

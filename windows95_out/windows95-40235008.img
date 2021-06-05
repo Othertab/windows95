@@ -1,0 +1,84 @@
+er to a remote disk drive. This was the default 
+   behavior in Windows 3.1 and is still supported in Windows 95.
+
+Using a UNC name removes much of the ambiguity of the older method that 
+Windows 3.1 used. UNC names tend to be longer than their Windows 3.1 
+equivalents and this can cause problems for some programs. If you 
+experience such problems, you can revert to the Windows 3.1 method 
+of addressing network resources. For more information, look up 
+"capturing, printer ports" and "mapping, drive letters" in the 
+Windows Help index. 
+   
+This may affect the following programs: Design CAD 2D for Windows, 
+CorelDraw for Windows, Corel Photo Paint 5, ccMail, Quickbooks 3.0, 
+Lotus Notes, MS Profit 1.0b.
+
+Notes on Specific MS-DOS-Based and Windows-Based Programs
+---------------------------------------------------------
+Adaptec EZ-SCSI 3.1: When this program is run with Windows 95, 
+you may experience the following product limitations:
+
+-  Adaptec EZ-SCSI will not modify your Config.sys and/or 
+   Autoexec.bat files like it does under Windows 3.1. To use 
+   real-mode device drivers with Windows 95, you will need to run 
+   EZ-SCSI for DOS. To do this, start Windows 95, and then when you 
+   see the message "Starting Windows 95", choose Command Prompt Only. 
+   Your Config.sys and and Autoexec.bat files will be modified 
+   automatically as needed.
+-  The SCSI Power Management device driver included with Adaptec 
+   EZ-SCSI 3.1 is not compatible with Windows 95.
+-  The SCSI tape backup package does not support backing up long 
+    filenames.
+
+For information about Adaptec software products designed specifically
+for Windows 95, please contact Adaptec direct at (800) 959-7274 or
+(408) 945-8600.
+
+Adobe Persuasion: You cannot install Adobe Persuasion version 3.0 
+if your Config.sys file is empty or has not been created. This is not 
+a problem if you are upgrading over an earlier version of Windows or 
+MS-DOS.
+   
+To create a Config.sys file:
+1. Click the Start menu, click Programs, click Accessories, and then 
+   click Notepad.
+2. Type "rem This is a temporary config.sys file."
+3. Click File, and then click Save.
+4. Type C:\Config.sys, and then press ENTER.
+5. Continue to install Adobe Persuasion 3.0.
+       
+For questions about Adobe Persuasion, call Adobe Systems, Inc.
+Customer Service at (800) 833-6687. Outside the United States, call
+(206) 622-5500 or the number that came with your program.
+
+Alacrity E-Quip: If you have Alacrity E-Quip or E-Quip + release 
+1.33D or earlier, you may experience faxing and/or OCR problems. For 
+upgrade information, contact Alacrity at: fax (908) 813-2490, 
+BBS (908) 813-2495.
+
+Ami Pro v3.01: To run the Ami Pro v3.01 tutorial correctly, you must 
+set your Windows 95 taskbar to Auto-Hide. To do this:
+1. Click the Start menu, click Settings, and then click Taskbar.
+2. Make sure the Auto hide option is checked.
+
+AST Works: If you have problems with the voicemail program that comes 
+with AST Works, you will need to obtain updated files. Those files are 
+available on the Windows driver library, which can be ordered 
+separately. 
+
+Astound 2.x: If you experience printing problems, open the properties
+for your printer and turn off EMS spooling.
+
+ATM fonts: ATM fonts will not show up on the font list when certain
+printer drivers for fax programs are selected as the default. You will 
+have this problem with WinFax (all versions), FaxWorks, and older 
+Quick Link 2 versions. A substitute TrueType font will be used instead.
+
+AT&T Mail Access PLUS: If you use AT&T Mail Access PLUS for DOS or
+AT&T Mail Access Plus for Windows (earlier than version 2.7), you need
+to upgrade to the latest release of Access PLUS for Windows in order
+to work well on Windows 95. With the latest release, you'll get AT&T's
+new mail engine, Mail Transport, which eliminates the need for the
+Background Mailer TSR that was in earlier releases. To order an Access
+PLUS upgrade or to get more information about other AT&T messaging
+products and services, call

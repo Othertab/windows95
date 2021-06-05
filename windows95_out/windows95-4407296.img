@@ -1,0 +1,175 @@
+UENAME "UpdateMode" VALUE NUMERIC 0
+		END ACTIONLISTOFF
+
+			PART !!UpdateMode DROPDOWNLIST REQUIRED
+			VALUENAME "UpdateMode"
+			ITEMLIST
+				NAME !!UM_Automatic VALUE NUMERIC 1
+				NAME !!UM_Manual	VALUE NUMERIC 2
+			END ITEMLIST
+			END PART
+
+			PART !!UM_Manual_Path EDITTEXT
+			VALUENAME "NetworkPath"
+			END PART
+
+			PART !!DisplayErrors CHECKBOX
+			VALUENAME "Verbose"
+			END PART
+		
+			PART !!LoadBalance CHECKBOX
+			VALUENAME "LoadBalance"
+			END PART
+		END POLICY
+
+	END CATEGORY	; Update
+
+END CATEGORY	; Network
+CATEGORY !!System
+KEYNAME Software\Microsoft\Windows\CurrentVersion\Setup
+	POLICY !!EnableUserProfiles
+		KEYNAME Network\Logon
+		VALUENAME UserProfiles
+	END POLICY
+
+	POLICY !!NetworkSetupPath
+		PART !!NetworkSetupPath_Path EDITTEXT REQUIRED
+		VALUENAME "SourcePath"
+		END PART
+	END POLICY
+
+	POLICY !!NetworkTourPath
+		PART !!NetworkTourPath_Path EDITTEXT REQUIRED
+		VALUENAME "TourPath"
+		END PART
+		PART !!NetworkTourPath_TIP TEXT END PART
+	END POLICY
+
+	POLICY !!Run
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Run
+		PART !!RunListbox LISTBOX EXPLICITVALUE
+		END PART
+	END POLICY
+
+	POLICY !!RunOnce
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\RunOnce
+		PART !!RunOnceListbox LISTBOX EXPLICITVALUE
+		END PART
+	END POLICY
+
+	POLICY !!RunServices
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\RunServices
+		PART !!RunServicesListbox LISTBOX EXPLICITVALUE
+		END PART
+	END POLICY
+END CATEGORY
+
+CLASS USER
+
+CATEGORY !!ControlPanel
+	CATEGORY !!CPL_Display
+		POLICY !!CPL_Display_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+			PART !!CPL_Display_Disable CHECKBOX
+			VALUENAME NoDispCPL
+			END PART
+
+			PART !!CPL_Display_HideBkgnd CHECKBOX
+			VALUENAME NoDispBackgroundPage
+			END PART
+
+			PART !!CPL_Display_HideScrsav CHECKBOX
+			VALUENAME NoDispScrSavPage
+			END PART
+
+			PART !!CPL_Display_HideAppearance CHECKBOX
+			VALUENAME NoDispAppearancePage
+			END PART
+
+			PART !!CPL_Display_HideSettings CHECKBOX
+			VALUENAME NoDispSettingsPage
+			END PART
+		END POLICY
+	END CATEGORY	; Display
+
+	CATEGORY !!CPL_Network
+		POLICY !!CPL_Network_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Network
+			PART !!CPL_Network_Disable CHECKBOX
+			VALUENAME NoNetSetup
+			END PART
+	
+			PART !!CPL_Network_HideID CHECKBOX
+			VALUENAME NoNetSetupIDPage
+			END PART
+
+			PART !!CPL_Network_HideAccessCtrl CHECKBOX
+			VALUENAME NoNetSetupSecurityPage
+			END PART
+		END POLICY
+	END CATEGORY	; Network
+
+	CATEGORY !!CPL_Security
+		POLICY !!CPL_Security_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+			PART !!CPL_Security_Disable CHECKBOX
+			VALUENAME NoSecCPL
+			END PART
+
+			PART !!CPL_Security_HideSetPwds CHECKBOX
+			VALUENAME NoPwdPage
+			END PART
+
+			PART !!CPL_Security_HideRemoteAdmin CHECKBOX
+			VALUENAME NoAdminPage
+			END PART
+
+			PART !!CPL_Security_HideProfiles CHECKBOX
+			VALUENAME NoProfilePage
+			END PART
+		END POLICY
+	END CATEGORY	; Security
+
+	CATEGORY !!CPL_Printers
+		POLICY !!CPL_Printers_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+			PART !!CPL_Printers_HidePages CHECKBOX
+			VALUENAME NoPrinterTabs
+			END PART
+
+			PART !!CPL_Printers_DisableRemoval CHECKBOX
+			VALUENAME NoDeletePrinter
+			END PART
+
+			PART !!CPL_Printers_DisableAdd CHECKBOX
+			VALUENAME NoAddPrinter
+			END PART
+		END POLICY
+	END CATEGORY	; Printers
+
+	CATEGORY !!CPL_System
+		POLICY !!CPL_System_Restrict
+		KEYNAME Software\Microsoft\Windows\CurrentVersion\Policies\System
+			PART !!CPL_System_HideDevMgr CHECKBOX
+			VALUENAME NoDevMgrPage
+			END PART
+
+			PART !!CPL_System_HideConfig CHECKBOX
+			VALUENAME NoConfigPage
+			END PART
+
+			PART !!CPL_System_NoFileSys CHECKBOX
+			VALUENAME NoFileSysPage
+			END PART
+
+			PART !!CPL_System_NoVirtMem CHECKBOX
+			VALUENAME NoVirtMemPage
+			END PART
+
+		END POLICY
+	END CATEGORY	; System
+
+END CATEGORY	; Control Panel
+
+CATEGORY !!Desktop
+KEYNAME "Con

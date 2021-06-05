@@ -1,0 +1,125 @@
+\params\MaxTransmits,type,,int
+HKR,NDI\params\MaxTransmits,min,,0
+HKR,NDI\params\MaxTransmits,max,,256
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+
+[Gen.HWResources]
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,,RamAddress,1,01,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+HKR,NDI\params\RamAddress,resc,1,01,00,00,00
+HKR,NDI\params\RamAddress,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\RamAddress,paragraph,,1
+HKR,NDI\params\RamAddress,flag,1,30,00,00,00
+
+[Gen.IRQ2.HWResources]
+; Resources
+HKR,NDI\params\Interrupt,flag,1,70,00,00,00
+
+; Install NDIS3
+[DEPCA.ndis3]
+CopyFiles=depca.ndis3.CopyFiles
+[depca.ndis3.CopyFiles]
+declan.vxd
+
+; Install NDIS2
+[DEPCA.ndis2]
+CopyFiles=depca.ndis2.CopyFiles
+[depca.ndis2.CopyFiles]
+depca.dos
+
+; Install ODI
+[DEPCA.odi]
+CopyFiles=depca.odi.CopyFiles
+[depca.odi.CopyFiles]
+depca.com
+
+;****************************************************************************
+; Common ISA/EISA Etherworks 3 Registry Parameter Sections
+;****************************************************************************
+[EWRK3.ndi.reg]
+HKR,,DevLoader,,*ndis          
+HKR,,DeviceVxDs,,ewrk3.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"EWRK3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"EWRK3$"
+HKR,NDIS\NDIS2,FileName,,"ewrk3.dos"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3,ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3,ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ewrk3.ndis3"
+HKR,Ndi\Install,ndis2,,"ewrk3.ndis2"
+
+; MemoryMode
+HKR,NDI\params\MemMode,ParamDesc,,"Memory Window Size"
+HKR,NDI\params\MemMode,default,,2
+HKR,NDI\params\MemMode,type,,enum
+HKR,NDI\params\MemMode\enum,2,,"2K/Configuration Type 0"
+HKR,NDI\params\MemMode\enum,32,,"32K/Configuration Type 1"
+HKR,NDI\params\MemMode\enum,64,,"64K/Configuration Type 2"
+HKR,NDI\params\MemMode,flag,1,20,00,00,00
+
+[Gen1.HWResources]
+; Resources
+HKR,,MemBaseAddress,1,01,00,00,00
+HKR,,IoBaseAddress,1,02,00,00,00
+HKR,,IrqNumber,1,04,00,00,00
+HKR,NDI\params\MemBaseAddress,resc,1,01,00,00,00
+HKR,NDI\params\MemBaseAddress,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\MemBaseAddress,flag,1,20,00,00,00
+HKR,NDI\params\IOBaseAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOBaseAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBaseAddress,flag,1,20,00,00,00
+HKR,NDI\params\IrqNumber,resc,1,04,00,00,00
+HKR,NDI\params\IrqNumber,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\IrqNumber,flag,1,20,00,00,00
+
+HKR,NDI\params\RAMAddress,resc,1,01,00,00,00
+HKR,NDI\params\RAMAddress,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\RAMAddress,paragraph,,1
+HKR,NDI\params\RAMAddress,flag,1,10,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,10,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,10,00,00,00
+
+; Install NDIS3
+[EWRK3.ndis3]
+CopyFiles=EWRK3.ndis3.CopyFiles
+[EWRK3.ndis3.CopyFiles]
+ewrk3.sys
+
+; Install NDIS2
+[EWRK3.ndis2]
+CopyFiles=EWRK3.ndis2.CopyFiles
+[EWRK3.ndis2.CopyFiles]
+ewrk3.dos
+
+[Slot]
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,20,00,00,00
+
+;****************************************************************************
+; Destination Directories
+;********************************************************************

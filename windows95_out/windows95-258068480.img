@@ -1,0 +1,35 @@
+not want the Video 7 or XGA drivers!)  When you find one, select that setting by clicking on it, then click on OK.
+
+If you don’t find a driver for your card, you can still use Other display at the end of the list. In this case, you’ll definitely have to tell the Settings program where your driver is, since it already can’t find it.
+
+Most likely, what you want is installed already. If so, you’ll get a prompt asking you if you want to use the currently installed driver or use a new one. Most of the time you’ll want to use the currently installed driver (unless you have a newer version of what’s installed). If it’s not installed, you’ve got your Windows disks handy. Insert any disks as requested.
+
+Click the Restart Windows button when instructed.
+
+It Don’t Work. Now What?
+It is possible that after Windows restarts with the new driver that your display will blank out or not function properly. This indicates, at the very least, that you have loaded the wrong driver for your video card. It may also mean that you will need a specific driver for your card.
+
+Don’t panic. Here’s how to put things back the way they were.
+1. Get to your C:\> prompt.
+	If your computer goes straight into Windows without you typing anything, you must prevent that from happening. If you have DOS 6.0 or higher, you can press the F5 key when you see the prompt “Starting MS-DOS.” If you have an earlier version of DOS, you must use a boot disk to boot from your A: drive.
+2. Get to the Windows directory (type CD\WINDOWS [Enter]).
+3. At the C:\WINDOWS> prompt, type SETUP [Enter]). This loads the DOS version of the setup program you used to change your video driver.
+4. Use the keyboard arrow keys to move to the DISPLAY line and hit [Enter].
+5. Now you can use your arrow keys to scroll the listed options to VGA. Hit [Enter]
+6. Use the arrow keys to go back down to Accept these settings...
+Load windows like you normally would. 
+Specialized Video Stuff
+Diamond Stealth 64 DRAM/VRAM
+If you have a Diamond Stealth 64 DRAM or VRAM video card, you should disable all "Power Saver" features (even the DOS ones)! Otherwise, your system can actually turn off while SimTower is in the foreground. We’re not sure why this happens, which makes it very difficult to fix.
+
+Cirrus Logic Chipset
+Certain older drivers shipped with Cirrus Logic video cards may be incompatible with SimTower for Windows. Make sure you have the most recent versions of the video driver for your card or use the Microsoft Generic SVGA drivers, available on most on-line systems or from Microsoft.
+Windows for Workgroups 3.11
+If you have Windows for Workgroups 3.11, you should look at the options for "SuperVGA". Make sure to select one that lists 256 colors. "SuperVGA (640x480, 256 colors)" or "SuperVGA (800x600, 256 colors)" should be good choices. These are generic Microsoft drivers that work with many cards. These Microsoft generic drivers are available through many shareware dealers or from Microsoft. Even though they aren't optimized for your card specifically, they should get you going. If you have problems with them, we recommend that you get a driver that is specific to your card. Usually, you can get such a driver from your dealer or the card's manufacturer.
+
+You may also see a message from the Windows Graphics package, WinG. It runs a calibration test the first time it installs to optimize video performance. It may warn you that it is using a slower method of video due to "an older version" of your video card software; SimTower and WinG will run for now, but we would recommend obtaining an updated version of your display driver (one that is WinG-friendly) at your first convenience, from the dealer or manufacturer of your video card. It is a good rule of thumb to keep your video and sound drivers updated with the best version available from the manufacturer.
+
+Memory Issues
+The General Idea
+SimTower for Windows requires that you run Windows in 386 Enhanced Mode (Microsoft calls it that whether you've got a 386, 486 or a Pentium).
+You can check to see if you are in Enha

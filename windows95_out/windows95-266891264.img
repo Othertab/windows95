@@ -1,0 +1,113 @@
+	* You can turn music OFF to increase game speed
+
+	* Decreasing the BAUD rate may increase game speed
+
+
+---------------------------------------------------------------------
+- 8.  TROUBLESHOOTING
+---------------------------------------------------------------------
+Most systems should experience no difficulties running Warcraft.  
+However, a small percentage of systems may experience occasional
+system conflicts.  Many of these problems are quite easy to fix
+using the information provided below.  Before attempting to
+remedy any problem, we urge you to save your important system 
+files (AUTOEXEC.BAT and CONFIG.SYS in particular) before making
+any modifications.  Please refer to your system's documentation
+before making any changes.
+
+--------------
+Problem #1:
+    The SAVE/LOAD game feature doesn't work properly,
+    or causes my system to "freeze" occasionally.
+--------------
+If you have SMARTDRIVE installed with WRITE-CACHING, the SAVE/LOAD 
+feature may not work properly.  This is due to problems with
+SMARTDRIVE and DOS. Every version of SMARTDRIVE we have tested
+from v4.0 through v5.01 has write-caching conflicts.  Either disable 
+write-caching on the hard disk containing WAR.EXE or remove SMARTDRIVE
+altogether.
+
+Example:  if WAR.EXE is installed on the C: drive, try using the
+following command to remove write-caching:
+
+	SMARTDRV C
+
+
+--------------
+Problem #2:
+    The install program cannot install the program
+    to my hard disk due to an error condition.
+--------------
+A SMARTDRIVE conflict is the most likely cause of this problem.  
+see the solution to Problem #1 above.
+
+If you are using NDOS from SYMANTEC/Norton Utilites, the installer
+may be unable to copy Warcraft onto your hard disk.  Remove NDOS
+and try to install again.
+
+
+--------------
+Problem #3:
+    Warcraft occasionally "freezes" or displays irregular behavior.
+--------------
+EMM386.EXE is the most likely cause of irregular behavior.  There are
+several known problems with EMM386.EXE which prevent proper program
+operation.  We recommend trying the following alternatives:
+(this list courtesy of Rational Systems Extenders)
+
+    * Run with HIMEM.SYS only (This will also speed 
+      your system performance).
+
+    * Replace EMM386 with another memory manager, such 
+      as QEMM-386 or 386Max.
+
+    * Run in a Windows DOS box.
+
+    * Configure EMM386 with both the NOEMS and NOVCPI options.
+
+    * Convert the DEVICEHIGH statements in your CONFIG.SYS to 
+      DEVICE statements, and remove the LH (Load High) commands
+      from your AUTOEXEC.BAT.
+
+
+--------------
+Problem #4:
+    Warcraft does not work properly when I run it from a network drive.
+--------------
+Warcraft should run properly using most network cards.  A few network
+cards may cause sporadic crashes while running Warcraft.  Try
+playing Warcraft from the CD (MINIMAL install), or perform a PARTIAL
+or FULL install to your local hard disk.
+
+
+--------------
+Problem #5:
+    I have two monitors, and Warcraft runs very slowly on my system.
+--------------
+If you are using a monochrome monitor in addition to your VGA color monitor,
+the Diamond Stealth video card will cause the game to run very slowly.
+Other video cards may also display similar problems.  Removing the 
+monochrome card is highly recommended.  
+
+
+--------------
+Problem #6:
+    I don't have enough free memory to play Warcraft
+--------------
+Here are several solutions to increase your free memory:
+
+   * Remove unneeded TSR programs from memory
+
+   * Remove SMARTDRIVE, or reduce the size of its disk buffer
+
+   * Run the memory optimizer that comes with your memory manager
+     (MemMaker for EMM386, Maximize for 386MAX, etc)
+
+--------------
+Problem #7:
+    The installer told me I don't have enough disk space
+to install Warcraft
+--------------
+Before Warcraft is installed onto your hard disk, the installer will
+check to make sure there is enough free space available.  Some disk
+compression utilites like Stacker and DoubleSpace estimate the amoun

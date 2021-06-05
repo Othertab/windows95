@@ -1,0 +1,68 @@
+X-810"                    = EPSON9.DRV,Epson_LX-810
+"Epson LX-850"                    = EPSON9.DRV,Epson_LX-850
+"Epson LX-850+"                   = EPSON9.DRV,Epson_LX-850+
+"Epson LX-1050"                   = EPSON9.DRV,Epson_LX-1050
+"Epson MX-80"                     = EPSON9.DRV,Epson_MX-80
+"Epson MX-80 F/T"                 = EPSON9.DRV,Epson_MX-80_F/T
+"Epson MX-100"                    = EPSON9.DRV,Epson_MX-100
+"Epson RX-80"                     = EPSON9.DRV,Epson_RX-80
+"Epson RX-80 F/T"                 = EPSON9.DRV,Epson_RX-80_F/T
+"Epson RX-80 F/T+"                = EPSON9.DRV,Epson_RX-80_F/T+
+"Epson RX-100"                    = EPSON9.DRV,Epson_RX-100
+"Epson RX-100+"                   = EPSON9.DRV,Epson_RX-100+
+"Epson SQ-850"                    = EPSON24.DRV,Epson_SQ-850
+"Epson SQ-870 ESC/P 2"            = ESCP2MS.DRV,Epson_SQ-870_ESC/P_2
+"Epson SQ-1170 ESC/P 2"           = ESCP2MS.DRV,Epson_SQ-1170_ESC/P_2
+"Epson SQ-2000"                   = EPSON24.DRV,Epson_SQ-2000
+"Epson SQ-2500"                   = EPSON24.DRV,Epson_SQ-2500
+"Epson SQ-2550"                   = EPSON24.DRV,Epson_SQ-2550
+"Epson Stylus 300 ESC/P 2"        = ESCP2MS.DRV,Epson_Stylus_300_ESC/P_2
+"Epson Stylus 800 ESC/P 2"        = ESCP2MS.DRV,Epson_Stylus_800_ESC/P_2
+"Epson Stylus 1000 ESC/P 2"       = ESCP2MS.DRV,Epson_Stylus_1000_ESC/P_2
+"Epson Stylus COLOR ESC/P 2"      = STYLUS_COLOR,Epson_Stylus_COLOR_ESC/P_2
+"Epson T-750"                     = EPSON9.DRV,Epson_T-750
+"Epson T-1000"                    = EPSON9.DRV,Epson_T-1000
+
+[Fujitsu]
+"Fujitsu Breeze 100"              = JP350.DRV,Fujitsu_Breeze_100
+"Fujitsu Breeze 200"              = JP350.DRV,Fujitsu_Breeze_200
+"Fujitsu DL 900"                  = FUJI24.DRV,Fujitsu_DL_900
+"Fujitsu DL 1100"                 = FUJI24.DRV,Fujitsu_DL_1100
+"Fujitsu DL 1100 Color"           = FUJI24.DRV,Fujitsu_DL_1100_Color
+"Fujitsu DL 1150"                 = FUJI24.DRV,Fujitsu_DL_1150
+"Fujitsu DL 1200"                 = FUJI24.DRV,Fujitsu_DL_1200
+"Fujitsu DL 1250"                 = FUJI24.DRV,Fujitsu_DL_1250
+"Fujitsu DL 2400"                 = FUJI24.DRV,Fujitsu_DL_2400
+"Fujitsu DL 2600"                 = FUJI24.DRV,Fujitsu_DL_2600
+"Fujitsu DL 3300"                 = FUJI24.DRV,Fujitsu_DL_3300
+"Fujitsu DL 3350"                 = FUJI24.DRV,Fujitsu_DL_3350
+"Fujitsu DL 3400"                 = FUJI24.DRV,Fujitsu_DL_3400
+"Fujitsu DL 3450"                 = FUJI24.DRV,Fujitsu_DL_3450
+"Fujitsu DL 3600"                 = FUJI24.DRV,Fujitsu_DL_3600
+"Fujitsu DL 4400"                 = FUJI24.DRV,Fujitsu_DL_4400
+"Fujitsu DL 4600"                 = FUJI24.DRV,Fujitsu_DL_4600
+"Fujitsu DL 5600"                 = FUJI24.DRV,Fujitsu_DL_5600
+"Fujitsu DX 2100"                 = FUJI9.DRV,Fujitsu_DX_2100
+"Fujitsu DX 2200"                 = FUJI9.DRV,Fujitsu_DX_2200
+"Fujitsu DX 2300"                 = FUJI9.DRV,Fujitsu_DX_2300
+"Fujitsu DX 2400"                 = FUJI9.DRV,Fujitsu_DX_2400
+"Fujitsu RX7100PS"                = F71RX503.SPD,Fujitsu_RX7100PS
+
+[Hermes]
+"Hermes H 606"                    = HPPCL.DRV,Hermes_H_606
+
+[HP]
+"HP DeskJet"                      = HPDSKJET.DRV,HP_DeskJet
+"HP DeskJet 1200C (MS)"           = HP1200C,HP_DeskJet_1200C_(MS)
+"HP DeskJet 1200C/PS"             = HP1200C1.SPD,HP_DeskJet_1200C/PS
+"HP DeskJet 310 Printer"          = DESKJETC.DRV,HP_DeskJet_310_Printer
+"HP DeskJet 320 Printer"          = DESKJETC.DRV,HP_DeskJet_320_Printer
+"HP DeskJet 500"                  = HPDSKJET.DRV,HP_DeskJet_500
+"HP DeskJet 500C Printer"         = DESKJETC.DRV,HP_DeskJet_500C_Printer
+"HP DeskJet 510"                  = HPDSKJET.DRV,HP_DeskJet_510
+"HP DeskJet 520 Printer"          = DESKJETC.DRV,HP_DeskJet_520_Printer
+"HP DeskJet 540 Printer"          = DESKJETC.DRV,LPTENUM\Hewlett-PackardDeskJ8D69,Hewlett-PackardDeskJ8D69,HP_DeskJet_540_Printer
+"HP DeskJet 550C Printer"         = DESKJETC.DRV,HP_DeskJet_550C_Printer
+"HP DeskJet 560C Printer"         = DESKJETC.DRV,HP_DeskJet_560C_Printer
+"HP DeskJet Plus"                 = HPDSKJET.DRV,HP_DeskJet_Plus
+"HP DeskJ

@@ -1,0 +1,46 @@
+Space"","""",""20"""					
+351		*Low Disk Space Alarm		Group	352 353 354 355 356					
+352		Sage Awareness		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Low disk space notification,Settings,01,1"""					
+353		Sage Awareness		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\Low disk space notification"",""Program"",""DISKALM.EXE"""					
+354		Sage Awareness		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\Low disk space notification"",""Friendly Name"",""Low disk space notification"""					
+355		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\Low disk space notification\Result Codes"",""Success"",""0"""					
+356		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\Low disk space notification\Result Codes"",""0"",""Completed successfully"""					
+361		BatchMode ADMIN.REG File		Group	362 363					
+362		Copy ADMIN.REG		CopySection	"""Admin_Reg"""				no	%W
+363	yes	Apply ADMIN.REG		CustomAction	"""plus.dll"",""WizExec"",""REGEDIT -s ADMIN.REG"""					%W
+398		Checks that there is not a newer DS3		CustomAction	"""plus.dll"",""DS3VerCheck"",""116"""				no	%M
+399										
+400		~~~ Disk Tools (common to Compression & SystemAgent) ~~~		DependAsk	398 ? 401 415 450 455					
+401		*** ScanDisk ***		Group	402 403 404						
+402		DSKMAINT.DLL		CopyFile	"""DiskTools"",""mnt"""				no	%M
+403		SCANDISK.EXE		CopyFile	"""DiskTools"",""sdd"""				no	%W\COMMAND<%W\Command>
+404		SCANDSKW.EXE		CopyFile	"""DiskTools"",""sdw"""				no	%W
+414										
+415		*** Defrag ***		Group	417 1905					
+416		Does DEFRAG.EXE exist?		DetectOlderFile	"""defrag.exe"""				no	%W
+417				Depend	416 ? 419 : 420 421 422				no	%W
+418		Is DEFRAG.EXE old?		DetectOlderFile	"""defrag.exe"",""4.00.0.950"""				no	%W
+419				Depend	418 ? 420 421 422				no	%W
+420		GenInstall DEFRAG.EXE		CustomAction	"""plus.dll"",""DTApplet"","""""				no	%W
+421		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+422		ShortCut		InstallShortcut	"""%420\DEFRAG.EXE"",""Disk Defragmenter"",""%420"""				no	%421\ACCESS~1\SYSTEM~1<%421\Accessories\System Tools>
+429										
+430		*** Compression Agent ***		Group	431 432 433 442 443				
+431		Compression Agent (CMPAGENT.EXE)		CopyFile	"""ExtCompression"",""cpa"""				yes	%1
+432		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+433		ShortCut		InstallShortcut	"""%431\%F431"",""Compression Agent"",""%431"""				no	%432\ACCESS~1\SYSTEM~1<%432\Accessories\System Tools>
+442		Compression Agent AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\CMPAGENT.EXE"","""",""%431\%F431"""					
+443		Compression Agent Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\CMPAGENT.EXE"",""Path"",""%431\System;"""					
+444										
+450		*** Upg Disk Alarm ***		Group	451 452 453					
+451		Upgrade Disk Alarm (UPGRDALM.EXE)		CopyFile	"""ExtCompression"",""uda"""				yes	%1\SYSTEM<%1\System>
+452		Upgrade Alarm AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\UPGRDALM.EXE"","""",""%451\%F451"""					
+453		Upgrade Alarm Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\UPGRDALM.EXE"",""Path"",""%451;"""					
+454										
+455		*** Disable DiskTools Win95 OptionPrograms ***		Group	456 457					
+456		disktools		RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"",""DiskTools"""					
+457		disktools		RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\disktools"""					
+497										
+498		Check ver of SAGE.DAT		CustomAction	"""plus.dll"",""InternetVer"",""100 33 498 499 501 525 535 540 550 1000 1400 1500 1600 1650 1660 1670"""					
+499				DependAsk	498 ? 501 525 535 540 550 1000 1400 1500 1600 1650 1660 1670					
+500

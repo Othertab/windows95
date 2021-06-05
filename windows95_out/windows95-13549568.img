@@ -1,0 +1,146 @@
+02"
+
+[Farallon2.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=10@200-3FF%FFF0(3FF::)
+
+;****************************************************************************
+; Farallon EtherWave ISAPNP
+;****************************************************************************
+
+[Farallon3.ndi]
+AddReg=Farallon3.ndi.reg,elnk3.ndi.reg,elnk3.params
+
+[Farallon3.ndi.reg]
+HKR,Ndi,DeviceID,,"*FAR0002"
+
+;************************************************************************
+;
+; Fast Etherlink/Etherlink III PCI boards.
+;
+;************************************************************************
+[PCIEL595.ndi]
+AddReg=PCIEL595.ndi.reg,EL59x.ndi.reg,EL59x.params
+
+[PCIEL590.ndi]
+AddReg=PCIEL590.ndi.reg,EL59x.ndi.reg,EL59x.params
+
+[PCIEL595.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_10b7&DEV_5950"
+
+[PCIEL590.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_10b7&DEV_5900"
+
+;************************************************************************
+;
+; Fast Etherlink/Etherlink III EISA boards.
+;
+;************************************************************************
+[EISAEL597.ndi]
+AddReg=EISAEL597.ndi.reg,EL59x.ndi.reg,EL59x.params,slot
+
+[EISAEL592.ndi]
+AddReg=EISAEL592.ndi.reg,EL59x.ndi.reg,EL59x.params,slot
+
+[EISAEL597.ndi.reg]
+HKR,Ndi,DeviceID,,"*TCM597"
+
+[EISAEL592.ndi.reg]
+HKR,Ndi,DeviceID,,"*TCM592"
+
+;
+; Generic paramaters for Fast Etherlink EL59x board.
+;
+[EL59x.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,EL59x.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"EL59x"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"EL59x$"
+HKR,NDIS\NDIS2,FileName,,"EL59x.dos"
+HKR,NDIS\ODI,DriverName,,"EL59x"
+HKR,NDIS\ODI,FileName,,"3c59x.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"EL59x.ndis3"
+HKR,Ndi\Install,ndis2,,"EL59x.ndis2"
+;HKR,Ndi\Install,odi,,"EL59x.odi"
+
+
+; Install NDIS3
+;
+[EL59x.ndis3]
+CopyFiles=EL59x.ndis3.CopyFiles
+
+[EL59x.ndis3.CopyFiles]
+EL59x.vxd
+
+; Install NDIS2
+;
+[EL59x.ndis2]
+CopyFiles=EL59x.ndis2.CopyFiles
+
+[EL59x.ndis2.CopyFiles]
+EL59x.dos
+
+; Install ODI
+;
+[EL59x.odi]
+CopyFiles=EL59x.odi.CopyFiles
+
+[EL59x.odi.CopyFiles]
+3c59x.com
+
+[EL59x.params]
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,20,00,00,00
+; Interrupt
+HKR,,Interrupt,1,04,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,20,00,00,00
+
+;****************************************************************************
+; 3Com Elnkii base section
+;****************************************************************************
+[3Com.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,elnkii.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"ELNKII"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"ELNKII$"
+HKR,NDIS\NDIS2,FileName,,"elnkii.dos"
+HKR,NDIS\ODI,DriverName,,"3C503"
+HKR,NDIS\ODI,FileName,,"3c503.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"*PNP80F3.ndis3"
+HKR,Ndi\Install,ndis2,,"*PNP80F3.ndis2"
+;HKR,Ndi\Install,odi,,"3C503.odi"
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,70,00,00,00 ;ndis2,ndis3,irq2 is allowed
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+; params
+HKR,NDI\para

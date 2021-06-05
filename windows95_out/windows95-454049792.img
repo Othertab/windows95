@@ -1,0 +1,82 @@
+CM.DLL,,,4
+MOSCC.DLL,,,4
+MOSCL.DLL,,,4
+MOSCUDLL.DLL,,,4
+MOSMISC.DLL,,,4
+MSNEXCH.EXE,,,4
+SEC_SSPI.DLL,,,4
+SVCPROP.DLL,,,4
+TREENVCL.DLL,,,4
+
+[Uninstall.v1_WinHelp]
+MSN.HLP,,,4
+MSNINT.HLP,,,4
+MSNPSS.HLP,,,4
+
+[BaseWin_UpdateInis]
+; system.ini,section,"old_line","new_line"
+
+; Create "group#" pointers to Start menu folders
+setup.ini, progman.groups,, "group0="
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, progman.groups,, "desktop=""..\..\%Shared_Desktop%"""
+
+; Create online registration shortcut in Accessories (group4) folder
+setup.ini, group4,, """%OLR_Link_Desc%"", ""%11%\regwiz.exe /i software\microsoft\windows\currentversion"""
+
+; Create link on desktop to the MSN/Exchange installer EXE
+setup.ini, desktop,, """%Setup_MSN_DESC%"",""MSNEXCH.EXE ""%Setup_MSN_DESC%"""""
+
+; Delete old shortcuts on Start Menu
+setup.ini, group0,, """%M8_Link_Desc%"""            ; M8 Signup/Explore Home Base
+setup.ini, group4,, """%Signup_Link_Desc%"""        ; pre-M8 signup
+setup.ini, group4,, """%Old_Signup_Link_Desc%"""    ; M7 signup
+
+; Delete obsolete pointer to MSN Mail Help (now in registry)
+exchng32.ini, "Custom Extensions",, "MSN Menu Extensions"
+
+[Convert_Start_Menu]
+; Add item to open Home Base in Explorer mode to Start/Programs
+setup.ini, progman.groups,, "group0="
+setup.ini, group0,, """The Microsoft Network"", ""explorer.exe /e,/root,{00028B00-0000-0000-C000-000000000046}"", %24%\%PROGRAMF%\%THEMICRO%\GUIDE.EXE,1,,,MSN"
+; Delete link on desktop to MSN installer EXE
+setup.ini, progman.groups,, "desktop=""..\..\%Shared_Desktop%"""
+setup.ini, desktop,, """%Setup_MSN_DESC%"""
+
+[Install.AddReg]
+; Set the installed flag for maint mode
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork","Installed",,"1"
+; sets identification of current version
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnDisk",0,"1.3"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnSource",2,"1.3"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnWeb",2,"0.0"
+
+; ********************************************************************
+; [BaseWin_AddReg]
+;
+; Registry keys for all Windows installations.  Includes full set of
+; MSN keys, and those needed to hide files installed in BaseWin.
+; ********************************************************************
+
+[BaseWin_AddReg]
+; Create the long filenames for C:\Program Files\The Microsoft Network
+;   Note that when you rename a long name, VFAT changes the short name from
+;   foobar~1 to foobar~2.
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,,,%24%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,%OLD_PROGRAMF%,,"%Old_Program_Files%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,%PROGRAMF%,,!$!$!$!$.$!$
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,!$!$!$!$.$!$,,"%Program_Files%,1"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,,,%24%\%PROGRAMF%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,%THEMICRO%,,!$!$!$!$.JWP
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,!$!$!$!$.JWP,,"The Microsoft Network,1"
+
+; Hide BaseWin files in \Program Files\The Microsoft Network that are not
+; useful for the user to see or double-click.
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,,,"%24%\%PROGRAMF%\%THEMICRO%"
+; =============== Paste "RegOnly = yes" SHR keys below this line ==============
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,800950.DAT,,"800950.DAT,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CCDIALER.EXE,,"CCDIALER.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CCEI.DLL,,"CCEI.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CCPSH.DLL,,"CCPSH.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,ENGCT.EXE,,"ENGCT.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Renam

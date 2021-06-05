@@ -1,0 +1,81 @@
+oup$, szPath$, cmo%) AS INTEGER
+DECLARE FUNCTION FCreateProgManItem LIB "msinsstf.dll" (szGroup$, szItem$, szCmd$, cmo%) AS INTEGER
+DECLARE FUNCTION FShowProgManGroup LIB "msinsstf.dll" (szGroup$, szCmd$, cmo%) AS INTEGER
+DECLARE FUNCTION FStampResource LIB "msinsstf.dll" (szSect$, szKey$, szDst$, wResType%, wResId%, szData$, cbData%) AS INTEGER
+DECLARE FUNCTION FDumpCopyListToFile LIB "msinsstf.dll" (szFile$) AS INTEGER
+DECLARE SUB      ResetCopyList LIB "msinsstf.dll"
+DECLARE FUNCTION LcbGetCopyListCost LIB "msinsstf.dll" (szExtraList$, szCostList$, szNeedList$) AS LONG
+DECLARE FUNCTION FAddDos5Help LIB "msinsstf.dll" (szProgName$, szProgHelp$, cmo%) AS INTEGER
+DECLARE FUNCTION FCopyOneFile LIB "msinsstf.dll" (szSrc$, szDest$, cmo%, fAppend%) AS INTEGER
+DECLARE FUNCTION YnrcRemoveFile LIB "msinsstf.dll" (szFullPathSrc$, cmo%) AS INTEGER
+DECLARE FUNCTION YnrcBackupFile LIB "msinsstf.dll" (szFullPath$, szBackup$, cmo%) AS INTEGER
+DECLARE FUNCTION FInitializeInstall LIB "msinsstf.dll" (hinst%, hwndFrame%) AS INTEGER
+DECLARE FUNCTION WFindFileUsingFileOpen LIB "msinsstf.dll" (szFile$, szBuf$, cbBuf%) AS INTEGER
+DECLARE FUNCTION FIsDirWritable LIB "msinsstf.dll" (szDir$) AS INTEGER
+DECLARE FUNCTION FIsFileWritable LIB "msinsstf.dll" (szFile$) AS INTEGER
+DECLARE FUNCTION FAddToBillboardList LIB "msinsstf.dll" (szDll$, idDlg%, szProc$, lTicks&) AS INTEGER
+DECLARE FUNCTION FClearBillboardList LIB "msinsstf.dll" AS INTEGER
+DECLARE FUNCTION FSetRestartDir LIB "msinsstf.dll" (szDir$) AS INTEGER
+DECLARE FUNCTION FRestartListEmpty LIB "msinsstf.dll" AS INTEGER
+DECLARE FUNCTION FExitExecRestart LIB "msinsstf.dll" AS INTEGER
+DECLARE FUNCTION SetCopyMode LIB "msinsstf.dll" (fMode%) AS INTEGER
+DECLARE FUNCTION GetCopyMode LIB "msinsstf.dll" AS INTEGER
+DECLARE FUNCTION SetDecompMode LIB "msinsstf.dll" (fMode%) AS INTEGER
+DECLARE FUNCTION GetDecompMode LIB "msinsstf.dll" AS INTEGER
+DECLARE FUNCTION SetSizeCheckMode LIB "msinsstf.dll" (scmMode%) AS INTEGER
+DECLARE FUNCTION FPrependToPath LIB "msinsstf.dll" (szSrc$, szDst$, szDir$, cmo%) AS INTEGER
+
+DECLARE FUNCTION SetTimeValue LIB "msinsstf.dll" (usHours%, usMinutes%, usSeconds%) AS INTEGER
+
+
+
+'*************************************************************************
+'****************  Setup Basic Wrapper Declarations  *********************
+'*************************************************************************
+
+
+''shell
+
+DECLARE SUB SetBitmap(szDll$, Bitmap%)
+DECLARE SUB SetAbout(szAbout1$, szAbout2$)
+DECLARE FUNCTION UIStartDlg(szDll$, Dlg%, szDlgProc$, HelpDlg%, szHelpProc$) AS STRING
+DECLARE SUB UIPop (n%)
+DECLARE SUB UIPopAll
+DECLARE SUB SetTitle (sz$)
+DECLARE SUB ReadInfFile (szFile$)
+DECLARE SUB SetSymbolValue (szSymbol$, szValue$)
+DECLARE SUB RemoveSymbol (szSym$)
+DECLARE FUNCTION GetSymbolValue (szSymbol$) AS STRING
+DECLARE FUNCTION GetListLength(szSymbol$) AS INTEGER
+DECLARE SUB MakeListFromSectionKeys (szSymbol$, szSect$)
+DECLARE FUNCTION GetListItem(szSymbol$, n%) AS STRING
+DECLARE SUB AddListItem(szSymbol$, szItem$)
+DECLARE SUB ReplaceListItem(szSymbol$, n%, szItem$)
+
+DECLARE FUNCTION InitFrame (szCmdLine$) AS INTEGER
+DECLARE FUNCTION InitSetup (szCmdLine$) AS INTEGER
+
+DECLARE FUNCTION ShowWaitCursor AS INTEGER
+DECLARE SUB RestoreCursor (hPrev%)
+
+DECLARE FUNCTION SetBeepingMode (mode%) AS INTEGER
+DECLARE FUNCTION SetSilentMode (mode%) AS INTEGER
+
+DECLARE FUNCTION GetSectionKeyDate (szSect$, szKey$) AS STRING
+DECLARE FUNCTION GetSectionKeyFilename (szSect$, szKey$) AS STRING
+DECLARE FUNCTION GetSectionKeySize (szSect$, szKey$) AS LONG
+DECLARE FUNCTION GetSectionKeyVersion (szSect$, szKey$) AS STRING
+
+DECLARE SUB MakeListFromSectionDate (szSym$, szSect$)
+DECLARE SUB MakeListFromSectionFilename (szSym$, szSect$)
+DECLARE SUB MakeListFromSectionSize (szSym$, szSect$)
+DECLARE SUB MakeListFromSectionVersion (szSym$, szSect$)
+
+
+''install
+
+
+DECLARE SUB CreateDir (szDir$, cmo%)
+DECLARE SUB RemoveDir (szDir$, cmo%)
+DECLARE SUB AddSectionFilesToCopyList (szSect$, szSrc$, szDest$)
+DECLARE SUB AddSectionKey

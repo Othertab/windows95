@@ -1,0 +1,93 @@
+,"
+HKLM,%KEY_FIL%\fl.UpdateInis,wavemix.Remix,,"wavemix.ini,default,,""Remix=1"","
+HKLM,%KEY_FIL%\fl.UpdateInis,joystick:ibmjoy,,"system.ini,drivers,""joystick=ibmjoy.drv"","
+
+;Joystick types supported
+HKLM,%KEY_OEM%\CH_1,OEMName,,"%V_JOY_CH_1%"
+HKLM,%KEY_OEM%\CH_1,OEMData,1, 7, 0, 0, 0 , 4, 0, 0, 0
+HKLM,%KEY_OEM%\CH_2,OEMName,,"%V_JOY_CH_2%"
+HKLM,%KEY_OEM%\CH_2,OEMData,1, 11, 0, 0, 0, 2, 0, 0, 0
+HKLM,%KEY_OEM%\CH_3,OEMName,,"%V_JOY_CH_3%"
+HKLM,%KEY_OEM%\CH_3,OEMData,1, 1, 0, 0, 0, 2, 0, 0, 0
+HKLM,%KEY_OEM%\Gravis_1,OEMName,,"%V_JOY_GRAVIS_1%"
+HKLM,%KEY_OEM%\Gravis_1,OEMData,1, 1, 0, 0, 0, 4, 0, 0, 0
+HKLM,%KEY_OEM%\Gravis_2,OEMName,,"%V_JOY_GRAVIS_2%"
+HKLM,%KEY_OEM%\Gravis_2,OEMData,1, 0, 0, 0, 0, 2, 0, 0, 0
+HKLM,%KEY_OEM%\Gravis_3,OEMName,,"%V_JOY_GRAVIS_3%"
+HKLM,%KEY_OEM%\Gravis_3,OEMData,1, 20, 0, 0, 0, 4, 0, 0, 0
+HKLM,%KEY_OEM%\ThrustMaster_1,OEMName,,"%V_JOY_THRUSTMASTER_1%"
+HKLM,%KEY_OEM%\ThrustMaster_1,OEMData,1, a, 0, 0, 0, 4, 0, 0, 0
+HKLM,%KEY_OEM%\LogitechThunderPad,OEMName,,"%V_JOY_LOGITECH_1%"
+HKLM,%KEY_OEM%\LogitechThunderPad,OEMData,1, 20, 0, 0, 0, 4, 0, 0, 0
+HKLM,%KEY_OEM%\LogitechWingMan,OEMName,,"%V_JOY_LOGITECH_2%"
+HKLM,%KEY_OEM%\LogitechWingMan,OEMData,1, 1, 0, 0, 0, 2, 0, 0, 0
+HKLM,%KEY_OEM%\LogitechWingManExtreme,OEMName,,"%V_JOY_LOGITECH_3%"
+HKLM,%KEY_OEM%\LogitechWingManExtreme,OEMData,1, a, 0, 0, 0, 4, 0, 0, 0
+HKLM,%KEY_OEM%\LogitechWingManLight,OEMName,,"%V_JOY_LOGITECH_4%"
+HKLM,%KEY_OEM%\LogitechWingManLight,OEMData,1, 0, 0, 0, 0, 2, 0, 0, 0
+
+;Non-General MIDI support
+HKLM,%KEY_GEN%,gsopl2.drv,,"general.idf<%PERCUSSION%>"
+HKLM,%KEY_GEN%,sapipss.drv,,"general.idf<%PERCUSSION%>"
+HKLM,%KEY_GEN%,sapipss2.drv,,"general.idf<%PERCUSSION%>"
+HKLM,%KEY_GEN%,sapi!opl.drv,,"general.idf<%PERCUSSION%>"
+HKLM,%KEY_GEN%,es488win.drv,,"general.idf<%PERCUSSION%>"
+HKLM,%KEY_GEN%,sg16.drv,,"general.idf<%PERCUSSION%>"
+
+;Event Schemes
+HKCU,AppEvents\Schemes,,2,.Default
+HKCU,AppEvents\Schemes\Names\.Default,,,"%V_CHICAGO%"
+HKCU,AppEvents\Schemes\Names\.None,,,"%V_NOSOUNDS%"
+HKCU,AppEvents\Schemes\Apps\.Default,,,"%V_DEFAULT%"
+
+
+HKCU,%KEY_DEF%\SystemStart\.Default,,,%25%\media\%MS_WINDOWSSTART%.wav
+
+HKCU,%KEY_DEF%\SystemStart\.Current,,2,%25%\media\%MS_WINDOWSSTART%.wav
+
+HKCU,%KEY_APPS%\Explorer,,,"%V_EXPLORER%"
+HKCU,%KEY_APPS%\Explorer\EmptyRecycleBin\.Default,,2,
+
+HKCU,%KEY_DEF%\.Default\.Default,,2,
+HKCU,%KEY_DEF%\SystemExit\.Default,,2,
+HKCU,%KEY_DEF%\SystemHand\.Default,,2,
+HKCU,%KEY_DEF%\SystemQuestion\.Default,,2,
+HKCU,%KEY_DEF%\SystemExclamation\.Default,,2,
+HKCU,%KEY_DEF%\SystemAsterisk\.Default,,2,
+HKCU,%KEY_DEF%\Open\.Default,,2,
+HKCU,%KEY_DEF%\Close\.Default,,2,
+HKCU,%KEY_DEF%\Maximize\.Default,,2,
+HKCU,%KEY_DEF%\Minimize\.Default,,2,
+HKCU,%KEY_DEF%\RestoreDown\.Default,,2,
+HKCU,%KEY_DEF%\RestoreUp\.Default,,2,
+HKCU,%KEY_DEF%\AppGPFault\.Default,,2,
+HKCU,%KEY_DEF%\MenuCommand\.Default,,2,
+HKCU,%KEY_DEF%\MenuPopup\.Default,,2,
+
+HKCU,%KEY_DEF%\Open\.Current,,2,
+HKCU,%KEY_DEF%\Close\.Current,,2,
+HKCU,%KEY_DEF%\Maximize\.Current,,2,
+HKCU,%KEY_DEF%\Minimize\.Current,,2,
+HKCU,%KEY_DEF%\RestoreDown\.Current,,2,
+HKCU,%KEY_DEF%\RestoreUp\.Current,,2,
+HKCU,%KEY_DEF%\AppGPFault\.Current,,2,
+HKCU,%KEY_DEF%\MenuCommand\.Current,,2,
+HKCU,%KEY_DEF%\MenuPopup\.Current,,2,
+
+HKCU,%KEY_LABELS%\.Default,,,"%V_SNDDEFAULT%"
+HKCU,%KEY_LABELS%\SystemStart,,,"%V_SNDSTART%"
+HKCU,%KEY_LABELS%\SystemExit,,,"%V_SNDEXIT%"
+HKCU,%KEY_LABELS%\SystemHand,,,"%V_SNDSTOP%"
+HKCU,%KEY_LABELS%\SystemQuestion,,,"%V_SNDQUESTION%"
+HKCU,%KEY_LABELS%\SystemExclamation,,,"%V_SNDEXCLAM%"
+HKCU,%KEY_LABELS%\SystemAsterisk,,,"%V_SNDASTERISK%"
+HKCU,%KEY_LABELS%\Maximize,,,"%V_SNDMAXIMIZE%"
+HKCU,%KEY_LABELS%\Minimize,,,"%V_SNDMINIMIZE%"
+HKCU,%KEY_LABELS%\RestoreDown,,,"%V_SNDRESTOREDOWN%"
+HKCU,%KEY_LABELS%\RestoreUp,,,"%V_SNDRESTOREUP%"
+HKCU,%KEY_LABELS%\Open,,,"%V_SNDOPEN%"
+HKCU,%KEY_LABELS%\Close,,,"%V_SNDCLOSE%"
+HKCU,%KEY_LABELS%\AppGPFault,,,"%V_SNDGPFAULT%"
+HKCU,%KEY_LABELS%\MenuCommand,,,"%V_SNDMENUCMD%"
+HKCU,%KEY_LABELS%\MenuPopup,,,"%V_SNDMENUPOPUP%"
+HKCU,%KEY_

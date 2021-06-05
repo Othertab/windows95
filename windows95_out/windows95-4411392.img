@@ -1,0 +1,102 @@
+trol Panel\Desktop"
+	POLICY !!Wallpaper
+		PART !!WallpaperName COMBOBOX REQUIRED
+		SUGGESTIONS
+			!!Wallpaper1 !!Wallpaper2 !!Wallpaper3 !!Wallpaper4 !!Wallpaper5
+			!!Wallpaper6 !!Wallpaper7 !!Wallpaper8 !!Wallpaper9 !!Wallpaper10
+		END SUGGESTIONS
+		VALUENAME "Wallpaper"
+		END PART
+
+		PART !!TileWallpaper CHECKBOX DEFCHECKED
+		VALUENAME "TileWallpaper"
+		VALUEON "1" VALUEOFF "0"
+		END PART
+	END POLICY
+
+	POLICY !!ColorScheme
+		PART !!SchemeName DROPDOWNLIST
+		KEYNAME "Control Panel\Appearance"
+		VALUENAME Current REQUIRED
+		ITEMLIST
+			NAME !!Lavender VALUE !!Lavender
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "174 168 217"
+				VALUENAME ActiveTitle    VALUE "128 128 128"
+				VALUENAME AppWorkspace   VALUE "90 78 177"
+				VALUENAME Background     VALUE "128 128 192"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "174 168 217"
+				VALUENAME ButtonHilight  VALUE "216 213 236"
+				VALUENAME ButtonLight	 VALUE "174 168 217"
+				VALUENAME ButtonShadow   VALUE "90 78 177"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "90 78 177"
+				VALUENAME Hilight        VALUE "128 128 128"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "174 168 217"
+				VALUENAME InactiveTitle  VALUE "90 78 177"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "174 168 217"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "174 168 217"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "174 168 217"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Tan256 VALUE !!Tan256
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "202 184 149"
+				VALUENAME ActiveTitle    VALUE "0 0 0"
+				VALUENAME AppWorkspace   VALUE "156 129 78"
+				VALUENAME Background     VALUE "128 64 64"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "202 184 149"
+				VALUENAME ButtonHilight  VALUE "228 220 203"
+				VALUENAME ButtonLight	 VALUE "202 184 149"
+				VALUENAME ButtonShadow   VALUE "156 129 78"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "156 129 78"
+				VALUENAME Hilight        VALUE "0 0 0"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "202 184 149"
+				VALUENAME InactiveTitle  VALUE "156 129 78"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "202 184 149"
+				VALUENAME MenuText       VALUE "0 0 0"
+				VALUENAME InfoText       VALUE "202 184 149"
+				VALUENAME InfoWindow     VALUE "0 0 0"
+				VALUENAME Scrollbar      VALUE "202 184 149"
+				VALUENAME TitleText      VALUE "255 255 255"
+				VALUENAME Window         VALUE "255 255 255"
+				VALUENAME WindowFrame    VALUE "0 0 0"
+				VALUENAME WindowText     VALUE "0 0 0"
+			END ACTIONLIST
+
+			NAME !!Wheat256 VALUE !!Wheat256
+			ACTIONLIST
+				KEYNAME "Control Panel\Colors"
+				VALUENAME ActiveBorder   VALUE "215 213 170"
+				VALUENAME ActiveTitle    VALUE "0 0 0"
+				VALUENAME AppWorkspace   VALUE "173 169 82"
+				VALUENAME Background     VALUE "0 64 64"
+				VALUENAME ButtonDkShadow VALUE "0 0 0"
+				VALUENAME ButtonFace     VALUE "215 213 170"
+				VALUENAME ButtonHilight  VALUE "235 234 214"
+				VALUENAME ButtonLight	 VALUE "215 213 170"
+				VALUENAME ButtonShadow   VALUE "173 169 82"
+				VALUENAME ButtonText     VALUE "0 0 0"
+				VALUENAME GrayText       VALUE "173 169 82"
+				VALUENAME Hilight        VALUE "0 0 0"
+				VALUENAME HilightText    VALUE "255 255 255"
+				VALUENAME InactiveBorder VALUE "215 213 170"
+				VALUENAME InactiveTitle  VALUE "173 169 82"
+				VALUENAME InactiveTitleText VALUE "0 0 0"
+				VALUENAME Menu           VALUE "215 213 170"
+				VALUENAME MenuText      

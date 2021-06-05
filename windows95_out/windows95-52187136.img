@@ -1,0 +1,165 @@
+t window to maximize the display
+
+If mnuFullScreen.Checked Then
+    frmSample.WindowState = 0
+    mnuFullScreen.Checked = False
+Else
+    frmSample.WindowState = 2
+    mnuFullScreen.Checked = True
+End If
+End Sub
+
+Private Sub mnuGoTo_Click()
+'Save current page if modified, then store the current
+'page number and display the GoTo Page dialog box
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox(ImageChanged, vbYesNo) = vbYes Then
+        mnuSave_Click
+    End If
+End If
+LastPage = oleImgEdit1.page
+frmGotoDlg.Show
+End Sub
+
+Private Sub mnuHelp_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+
+Private Sub mnuHideAnnotation_Click()
+'Toggle the display of annotations
+If mnuHideAnnotation.Checked = True Then
+    'show all hidden annotations
+    oleImgEdit1.ShowAnnotationGroup
+    oleImgEdit1.Refresh
+    mnuHideAnnotation.Checked = False
+Else
+    'hide all displayed annotations
+    oleImgEdit1.HideAnnotationGroup
+    oleImgEdit1.Refresh
+    mnuHideAnnotation.Checked = True
+End If
+
+End Sub
+
+Private Sub mnuHiLight_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoHiLight
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = True
+mnuHollowRect.Checked = False
+mnuStamp.Checked = False
+mnuStraightLine.Checked = False
+mnuTextFromFile.Checked = False
+mnuTypedText.Checked = False
+
+End Sub
+
+Private Sub mnuHollowRect_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoHollowRect
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = False
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = False
+mnuHollowRect.Checked = True
+mnuStamp.Checked = False
+mnuStraightLine.Checked = False
+mnuTextFromFile.Checked = False
+mnuTypedText.Checked = False
+
+End Sub
+
+Private Sub mnuInsert_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+Private Sub mnuLast_Click()
+'Save current page if modified, then store the current
+'page number and display the last page
+Dim page As Long 'number of last page
+
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox(ImageChanged, vbYesNo) = vbYes Then
+        mnuSave_Click
+    End If
+End If
+LastPage = oleImgEdit1.page
+page = oleImgEdit1.PageCount
+oleImgEdit1.page = page
+oleImgEdit1.Display
+
+'Update the selected page thumbnail
+oleImgThumbnail1.DeselectAllThumbs
+oleImgThumbnail1.ThumbSelected(oleImgEdit1.page) = True
+
+End Sub
+
+Private Sub mnuLeft_Click()
+'Rotate image 90 degrees to the left
+oleImgEdit1.RotateLeft
+
+End Sub
+
+Private Sub mnuNew_Click()
+'if the current image was modified, give the user
+'a chance to save it, then open a new blank image
+'of the same size.
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox(ImageChanged, vbYesNo) = vbYes Then
+        mnuSave_Click
+    End If
+End If
+'Use generic display values
+oleImgEdit1.DisplayBlankImage 500, 400, 200, 200, 1
+oleImgEdit1.Image = ""
+oleImgThumbnail1.Image = oleImgEdit1.Image
+
+
+'Now that we have an image, enable the needed menus.
+mnuSaveAs.Enabled = True
+mnuSave.Enabled = True
+mnuPrint.Enabled = True
+mnuEdit.Enabled = True
+mnuView.Enabled = True
+mnuPage.Enabled = True
+mnuZoom.Enabled = True
+mnuAnnotation.Enabled = True
+'This is a 1 page image, so disable the page
+'change menu items
+mnuBack.Enabled = False
+mnuFirst.Enabled = False
+mnuGoTo.Enabled = False
+mnuLast.Enabled = False
+mnuNext.Enabled = False
+mnuPrevious.Enabled = False
+
+
+
+End Sub
+
+Private Sub mnuNext_Click()
+'Save current page if modified, then store the current
+'page number and display the next page
+Dim page As Long 'Page place holder
+
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox(ImageChanged, vbYesNo) 

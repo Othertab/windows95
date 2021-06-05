@@ -1,0 +1,167 @@
+4,768",Mode1,,"31.5,50-90,+,+"
+HKR,"MODES\1024,768",Mode2,,"35.2,50-90,+,+"
+HKR,"MODES\1024,768",Mode3,,"35.5,50-90,+,+"
+HKR,"MODES\1024,768",Mode4,,"37.9,50-90,+,+"
+
+[D2804A.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.5,50-90,+,+"
+HKR,"MODES\1024,768",Mode2,,"35.2,50-90,+,+"
+HKR,"MODES\1024,768",Mode3,,"35.5,50-90,+,+"
+HKR,"MODES\1024,768",Mode4,,"37.9,50-90,+,+"
+
+[D2805A.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30-62,50-100,+,+"
+
+[D2806A.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-64,50-100,+,+"
+
+[D2807A.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-64,50-160,+,+"
+
+[D2808A.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"31-50,50-100,+,+"
+
+[D2814A.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.5,50-90,+,+"
+HKR,"MODES\1024,768",Mode2,,"35.2,50-90,+,+"
+HKR,"MODES\1024,768",Mode3,,"35.5,50-90,+,+"
+HKR,"MODES\1024,768",Mode4,,"37.9,50-90,+,+"
+
+[D2815A.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31-48.4,50-100,+,+"
+
+[D3857A.AddReg]
+HKR,"MODES\640,480",Mode1,,"31.0-48.4,60.0-75.0,+,+"
+HKR,"MODES\800,600",Mode1,,"31.0-48.4,56.0-75.0,+,+"
+HKR,"MODES\1024,768",Mode1,,"31.0-48.4,40.0-60.0,+,+"
+HKR,,ICMProfile,1,9
+
+[D3858A.AddReg]
+HKR,"MODES\640,480",Mode1,,"31.0-48.4,60.0-75.0,+,+"
+HKR,"MODES\800,600",Mode1,,"31.0-48.4,56.0-75.0,+,+"
+HKR,"MODES\1024,768",Mode1,,"31.0-48.4,40.0-60.0,+,+"
+HKR,,ICMProfile,1,9
+
+
+; Common AddReg/DelReg sections
+;-------------------------------------------------
+[DEL_CURRENT_REG]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+[640]
+HKR,,MaxResolution,,"640,480"
+[800]
+HKR,,MaxResolution,,"800,600"
+[1024]
+HKR,,MaxResolution,,"1024,768"
+[1280]
+HKR,,MaxResolution,,"1280,1024"
+[1600]
+HKR,,MaxResolution,,"1600,1200"
+
+[DPMS]
+HKR,,DPMS,,1
+
+
+; User visible strings
+;-------------------------------------------------
+[Strings]
+MS="Microsoft"
+
+Acer="Acer"
+7111D="AcerView 11D"
+7133D="AcerView 33D"
+7133DL="AcerView 33DL"
+7134T="AcerView 34T"
+7134TL="AcerView 34TL"
+7155="AcerView 55"
+7155L="AcerView 55L"
+7156L="AcerView 56L"
+7176N="AcerView 76N"
+7176i="AcerView 76i"
+7178i="AcerView 78i"
+7198i="AcerView 98i"
+7133s="AcerView 7133s"
+7134e="AcerView 7134e"
+7134s="AcerView 7134s"
+7154e="AcerView 7154e"
+7154s="AcerView 7154s"
+7156e="AcerView 7156e"
+7156i="AcerView 7156i"
+7156s="AcerView 7156s"
+7156is="AcerView 7156is"
+7176ie="AcerView 7176ie"
+7176is="AcerView 7176is"
+7178ie="AcerView 7178ie"
+Acer_7015="AcerView 7015"
+Acer_15P="AcerView 15P"
+Acer_33="AcerView 33"
+Acer_35="AcerView 35"
+
+AT&T="AT&T"
+CRT-365 ="AT&T CRT-365"
+CRT-395 ="AT&T CRT-395"
+14Mono  ="AT&T 14 in. Mono"
+14Econ  ="AT&T 14 in. Color Economy"
+14Value ="AT&T 14 in. Color Value"
+14ValLR ="AT&T 14 in. Color Value - Low Radiation"
+15Color ="AT&T 15 in. Color"
+17Value ="AT&T 17 in. Color Value"
+17Pro   ="AT&T 17 in. Color Professional"
+
+Compaq="COMPAQ"
+CVGA  ="COMPAQ VGA"
+IVGA  ="COMPAQ Internal VGA Panel"
+AGS   ="COMPAQ Advanced Graphics"
+SVGA  ="COMPAQ SVGA"
+Pres  ="COMPAQ Presario Integrated Monitor"
+1024  ="COMPAQ 1024"
+151FS ="COMPAQ 151FS"
+171FS ="COMPAQ 171FS"
+172   ="COMPAQ 172"
+140   ="COMPAQ 140"
+150   ="COMPAQ 150"
+PR140 ="COMPAQ Presario 140"
+PR150 ="COMPAQ Presario 150"
+QV150 ="COMPAQ QVision 150"
+QV170 ="COMPAQ QVision 170"
+QV172 ="COMPAQ QVision 172"
+QV200 ="COMPAQ QVision 200"
+QV210 ="COMPAQ QVision 210"
+
+CTX="CTX - Chuntex Electronic"
+1451 ="CTX 1451"
+1551 ="CTX 1551"
+1562 ="CTX 1562"
+1565 ="CTX 1565"
+1765 ="CTX 1765"
+1785 ="CTX 1785"
+2085 ="CTX 2085"
+2185 ="CTX 2185"
+CTX-1562ES="CTX 1562ES"
+CTX-1562GM="CTX 1562GM"
+CTX-1565GM="CTX 1565GM"
+CTX-1765GM="CTX 1765GM"
+CTX-1785GM="CTX 1785GM"
+CTX-1451ES="CTX 1451ES"
+CTX-1451GM="CTX 1451GM"
+CTX-1462GM="CTX 1462GM"
+CPS-1460="CTX CPS-1460"
+CPS-1560="CTX CPS-1560"
+CPS-1750="CTX CPS-1750"
+CPS-1760="CTX CPS-1760"
+CPS-2160="CTX CPS-2160"
+CPS-2180="CTX CPS-2180"
+CVS-3450="CTX CVS-3450"
+CVS-3436="CTX CVS-3436"
+CVP-5439="CTX CVP-5439"
+CVP-5468="CTX CVP-5468"
+CVP-5468NL="CTX CVP-5468NL"
+CVP-5468NI="CTX CVP-5468NI"
+Multiscan-3436="CTX Multiscan 3436"
+
+Dell="Dell Computer Corp."
+Dell_

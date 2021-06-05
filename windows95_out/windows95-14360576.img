@@ -1,0 +1,229 @@
+mc130"
+LanManKeys="smc_arc"
+ODIKeys="smcarcws"
+IEEEIDs=0x0000c0
+
+[*pnp80e1]	;SMC ARCNET PC120,PC220,PC260
+NCDID=225
+DeviceIDs=*pnp80e1
+Flags=ISA,NoDetect
+IO1=16,%1
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$smc220"
+LanManKeys="smc_arc"
+ODIKeys="smcarcws"
+IEEEIDs=0x0000c0
+
+[*pnp80e2]	;SMC ARCNET PC270/E
+NCDID=226
+DeviceIDs=*pnp80e2
+Flags=ISA,NoDetect
+IO1=16,%1
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$smc270"
+LanManKeys="smc_arc"
+ODIKeys="smcarcws"
+IEEEIDs=0x0000c0
+
+[*pnp80e5]	;SMC ARCNET PC600W,PC650W
+NCDID=229
+DeviceIDs=*pnp80e5
+Flags=ISA,NoDetect
+IO1=16,%1
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$smc600"
+LanManKeys="smc_arc"
+ODIKeys="smcarcws"
+IEEEIDs=0x0000c0
+
+[*pnp8227]	;SMC 3000 Series
+NCDID=551
+DeviceIDs=*pnp8227
+Flags=ISA,NoDetect
+IO1=32,%4
+IRQ1=1,%0
+WFWKeys="ms$smc3k"
+LanManKeys="smc3016"
+ODIKeys="e16odiw"
+
+[*pnp80fc]	;Thomas-Conrad TC6042
+NCDID=252
+DeviceIDs=*pnp80fc
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$tc6042e"
+ODIKeys="tccarc"
+IEEEIDs=0xffffffff
+
+[*pnp80fb]	;Thomas-Conrad TC6045
+NCDID=251
+DeviceIDs=*pnp80fb
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$tc6045e"
+ODIKeys="tccarc"
+IEEEIDs=0xffffffff
+
+[*pnp80fd]	;Thomas-Conrad TC6142
+NCDID=253
+DeviceIDs=*pnp80fd
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$tc6142e"
+ODIKeys="tccarc"
+IEEEIDs=0xffffffff
+
+[*pnp80fe]	;Thomas-Conrad TC6145
+NCDID=254
+DeviceIDs=*pnp80fe
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$tc6145e"
+ODIKeys="tccarc"
+IEEEIDs=0xffffffff
+
+[*pnp80ff]	;Thomas-Conrad TC6242
+NCDID=255
+DeviceIDs=*pnp80ff
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$tc6242e"
+ODIKeys="tccarc"
+IEEEIDs=0xffffffff
+
+[*pnp8100]	;Thomas-Conrad TC6245
+NCDID=256
+DeviceIDs=*pnp8100
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$tc6245e"
+ODIKeys="tccarc"
+IEEEIDs=0xffffffff
+
+[*pnp8326]	;Thomas-Conrad (All Arcnet Types)
+NCDID=806
+DeviceIDs=*pnp8326
+Flags=ISA,NoDetect
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$gentcc"
+LanManKeys="tccarc"
+ODIKeys="tccarc"
+NovellIDs=0x00c6
+
+[*pnp8263]	;Tulip NCC-16
+NCDID=611
+DeviceIDs=*pnp8263
+Flags=ISA,NoDetect
+WFWKeys="ms$NCC16"
+LanManKeys="ncc16"
+
+[*pnp8214]	;Xircom Pocket Ethernet I
+NCDID=532
+DeviceIDs=*pnp8214
+Flags=ISA,NoDetect
+WFWKeys="ms$xirc1"
+ODIKeys="pemlid"
+
+[*pnp8213]	;Xircom Pocket Ethernet II
+NCDID=531
+DeviceIDs=*pnp8213
+Flags=ISA,NoDetect
+WFWKeys="ms$xirc2","ms$xirc"
+ODIKeys="pe2odi"
+
+[*pnp8215]	;Xircom Pocket Ethernet III
+NCDID=533
+DeviceIDs=*pnp8215
+Flags=ISA,ReportGenericOnFail,OptionalIO,OptionalMem,OptionalIRQ
+IO1=32,%0
+Mem1=0x1000,%9
+IRQ1=1,%1
+WFWKeys="ms$xirc3","pe3ndis","xircmac","ms$pe3"
+ODIKeys="pe3odi"
+
+[*pnp8209]	;Zenith Data Systems Z-Note
+NCDID=521
+DeviceIDs=*pnp8209
+Flags=ISA
+IO1=16,%0
+IRQ1=1,%0
+WFWKeys="ms$znote"
+ODIKeys="mlm","intel593"
+
+[*pnp820a]	;Zenith Data Systems NE2000 Compatible
+NCDID=522
+DeviceIDs=*pnp820a
+Flags=ISA
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$zstation"
+ODIKeys="ne2000"
+IEEEIDs=0x000062
+
+[*pnp8004]	;Compaq NE3200
+NCDID=4
+DeviceIDs=*pnp8004
+Flags=EISA,NoDetect
+WFWKeys="ms$cpq32"
+ODIKeys="ne3200","cpqethnw"
+
+[*pnp8006]	;Intel EtherExpress 32
+NCDID=6
+DeviceIDs=*pnp8006,*NVL0701
+Flags=EISA,NoDetect
+WFWKeys="ms$ee32"
+LanManKeys="exp32"
+ODIKeys="ne3200"
+
+[*pnp8001]	;Novell/Anthem NE3200 or compatible
+NCDID=1
+DeviceIDs=*pnp8001,*NVL0701
+Flags=EISA,NoDetect
+WFWKeys="ms$ne3200"
+LanManKeys="ne3200"
+ODIKeys="ne3200"
+
+[*pnp811c]	;UB NIUpc
+NCDID=284
+DeviceIDs=*pnp811c
+Flags=ISA,NoDetect
+IO1=8,%5
+Mem1=0x8000,%6
+IRQ1=1,%3
+WFWKeys="ms$niupc","ms$ubnei1"
+LanManKeys="ubneipc"
+ODIKeys="ubodi"
+NovellIDs=0x003f
+IEEEIDs=0xffffffff
+
+[*pnp8328]	;UB NIU (All Types)
+NCDID=808
+DeviceIDs=*pnp8328
+Flags=ISA,NoDetect
+IO1=8,%5
+Mem1=0x8000,%6
+IRQ1=1,%3
+WFWKeys="ms$genub"
+
+[*pnp8120]	;UB NIUpc/EOTP
+NCDID=288
+DeviceIDs=*pnp8120
+Flags=ISA
+IO1=8,%5
+Mem1=0x8000,%6
+IRQ1=1,%3
+WFWKeys="ms$niupctp","ms$ubnei2"
+LanManKeys="ubneitp","ubesmwx"
+ODIKeys="ubodi"
+NovellIDs=0x0442
+IEEEI

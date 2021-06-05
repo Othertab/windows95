@@ -1,0 +1,60 @@
+"",""Book Antiqua (TrueType)"""				no	%2048
+2178		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""200000"""				yes	%2172
+2179		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""900000"""				yes	%2175
+2185				DependAsk	2025 ? 2187 : 2186					
+2186				DependAsk	2026 ? 2188					
+2187		Theme Files		CopySection	"""MT_Davinci_wav16"""				yes	%83
+2188		Theme Files		CopySection	"""MT_Davinci_wav8"""				yes	%83
+2199										
+2200		MODERN THEME (16-Bit)		Group	2201 2202 2203 2205 2206 2207 2208 2209 2210 2211 2212 2215					
+2201		Theme Files		CopySection	"""MT_Modern_thm"""				yes	%85
+2202		Theme Files		CopySection	"""MT_Modern_bmp"""				yes	%85
+2203		Theme Files		CopySection	"""MT_Modern_cur"""				yes	%85
+2205		Theme Files		CopySection	"""MT_Modern_scr"""				no	%M
+2206		Theme Files		CopySection	"""MT_Modern_ttf"""				no	%2048
+2207		Century Gothic (TrueType)		InstallTTFFile	"""MT_Modern_ttf"",""mo1"",""Century Gothic (TrueType)"""				no	%2048
+2208		Century Gothic Bold (TrueType)		InstallTTFFile	"""MT_Modern_ttf"",""mo2"",""Century Gothic Bold (TrueType)"""				no	%2048
+2209		Century Gothic Bold Italic (TrueType)		InstallTTFFile	"""MT_Modern_ttf"",""mo3"",""Century Gothic Bold Italic (TrueType)"""				no	%2048
+2210		Century Gothic Italic (TrueType)		InstallTTFFile	"""MT_Modern_ttf"",""mo4"",""Century Gothic Italic (TrueType)"""				no	%2048
+2211		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""550000"""				yes	%2202
+2212		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""450000"""				yes	%2205
+2215				DependAsk	2025 ? 2217 : 2216					
+2216				DependAsk	2026 ? 2218					
+2217		Theme Files		CopySection	"""MT_Modern_wav16"""				yes	%85
+2218		Theme Files		CopySection	"""MT_Modern_wav8"""				yes	%85
+2229										
+2230		SPORTS THEME (8-Bit)		Group	2231 2232 2233 2235 2236 2237 2238 2239 2245					
+2231		Theme Files		CopySection	"""MT_Sports_thm"""				yes	%89
+2232		Theme Files		CopySection	"""MT_Sports_bmp"""				yes	%89
+2233		Theme Files		CopySection	"""MT_Sports_cur"""				yes	%89
+2235		Theme Files		CopySection	"""MT_Sports_scr"""				no	%M
+2236		Theme Files		CopySection	"""MT_Sports_ttf"""				no	%2048
+2237		OCR A Extended (TrueType)		InstallTTFFile	"""MT_Sports_ttf"",""si1"",""OCR A Extended (TrueType)"""				no	%2048
+2238		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""250000"""				yes	%2232
+2239		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""350000"""				yes	%2235
+2245				DependAsk	2025 ? 2247 : 2246					
+2246				DependAsk	2026 ? 2248					
+2247		Theme Files		CopySection	"""MT_Sports_wav16"""				yes	%89
+2248		Theme Files		CopySection	"""MT_Sports_wav8"""				yes	%89
+2259										
+2260		MYSTERY THEME (16-Bit)		Group	2261 2262 2263 2265 2266 2267 2268 2269 2275					
+2261		Theme Files		CopySection	"""MT_Mystery_thm"""				yes	%86
+2262		Theme Files		CopySection	"""MT_Mystery_bmp"""				yes	%86
+2263		Theme Files		CopySection	"""MT_Mystery_cur"""				yes	%86
+2265		Theme Files		CopySection	"""MT_Mystery_scr"""				no	%M
+2266		Theme Files		CopySection	"""MT_Mystery_ttf"""				no	%2048
+2267		Calisto MT (TrueType)		InstallTTFFile	"""MT_Mystery_ttf"",""my1"",""Calisto MT (TrueType)"""				no	%2048
+2268		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""500000"""				yes	%2262
+2269		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""500000"""				yes	%2265
+2275				DependAsk	2025 ? 2277 : 2276					
+2276				DependAsk	2026 ? 2278					
+2277		Theme Files		CopySection	"""MT_Mystery_wav16"""				yes	%86
+2278		Theme Files		CopySection	"""MT_Mystery_wav8"""				yes	%86
+2289										
+2290		PCINSIDE THEME (16-Bit)		Group	2291 2292 2293 2295 2296 2297 2298 2299 2305					
+2291		Theme Files		CopySection	"""MT_PCinside_thm"""				yes	%82
+2292		Theme Files		CopySection	"""MT_PCinside_bmp"""				yes	%82
+2293		Theme Files		CopySection	"""MT_PCinside_cur"""				yes	%82
+2295		Theme Files		CopySection	"""MT_PCinside_scr"""				no	%M
+2296		Theme Files		CopySection	"""MT_PCinside_ttf"""				no	%2048
+2297		Abadi MT Condensed Light (TrueType)		I

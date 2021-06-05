@@ -1,0 +1,285 @@
+, Monitor\EIZ030C
+%F553%=F553, Monitor\EIZ0201
+%eF560iW%=F560iW, Monitor\EIZ030D
+%F563%=F563, Monitor\EIZ0202
+%eF750i%=F750i, Monitor\EIZ030E
+%eF760iW%=F760iW, Monitor\EIZ030F
+%F764%=F764, Monitor\EIZ0203
+%eF780iW%=F780iW, Monitor\EIZ0310
+%F784%=F784, Monitor\EIZ0204
+%eT560i%=T560i, Monitor\EIZ0311
+%T562%=T562, Monitor\EIZ0313
+%T563%=T563, Monitor\EIZ0305
+%eT660i%=T660i, Monitor\EIZ0312
+%T662%=T662, Monitor\EIZ0314
+
+
+;-------------------------------------------------
+; Install sections
+
+[Colorview/15]
+DelReg=DCR
+AddReg=Colorview/15.Add, 1280
+
+[PMV-14AC/plus]
+DelReg=DCR
+AddReg=PMV-14AC/plus.Add, 1024
+
+[MX15F]
+DelReg=DCR
+AddReg=MX15F.Add, 1280
+
+[MX17F/S]
+DelReg=DCR
+AddReg=MX17F/S.Add, 1280
+
+[MX21NT]
+DelReg=DCR
+AddReg=MX21NT.Add, 1600
+
+[DX15F]
+DelReg=DCR
+AddReg=DX15F.Add, 1280, DPMS
+
+[DX17F]
+DelReg=DCR
+AddReg=DX17F.Add, 1280, DPMS
+
+[DX21F]
+DelReg=DCR
+AddReg=DX21F.Add, 1280, DPMS
+
+[LX1450]
+DelReg=DCR
+AddReg=LX1450.Add, 1024, DPMS
+
+[PMV-1531]
+DelReg=DCR
+AddReg=PMV-1531.Add, 1024
+
+[1020/LP]
+DelReg=DCR
+AddReg=1020/LP.Add, 1024
+
+[1020/SP]
+DelReg=DCR
+AddReg=1020/SP.Add, 1024
+
+[2012/LP]
+DelReg=DCR
+AddReg=2012/LP.Add, 800
+
+[2014/LP]
+DelReg=DCR
+AddReg=2014/LP.Add, 800
+
+[2014/SVGA]
+DelReg=DCR
+AddReg=2014/SVGA.Add, 1024
+
+[2019/SP]
+DelReg=DCR
+AddReg=2019/SP.Add, 1024
+
+[4015/FST]
+DelReg=DCR
+AddReg=4015/FST.Add, 1024
+
+[604/FST]
+DelReg=DCR
+AddReg=604/FST.Add, 1024
+
+[704/FST]
+DelReg=DCR
+AddReg=704/FST.Add, 1024
+
+[710MH]
+DelReg=DCR
+AddReg=710MH.Add, 1024
+
+
+; -------------- Modgraph
+
+[MG-3200]
+DelReg=DCR
+AddReg=MG-3200.Add, 800
+
+[MX-200MC]
+DelReg=DCR
+AddReg=MX-200MC.Add, 1280
+
+[MX-210EZ]
+DelReg=DCR
+AddReg=MX-210EZ.Add, 1280
+
+[MX-240EZ]
+DelReg=DCR
+AddReg=MX-240EZ.Add, 1600
+
+[MX240]
+DelReg=DCR
+AddReg=MX240.Add, 1600
+
+[MorseMon]
+DelReg=DCR
+AddReg=MorseMon.Add, 1024
+
+; -------------- NEC
+
+[NEC-2A]
+DelReg=DCR
+AddReg=NEC-2A.Add, 800
+
+[NEC-2V]
+DelReg=DCR
+AddReg=NEC-2V.Add, 1024
+
+[NEC-3D]
+DelReg=DCR
+AddReg=NEC-3D.Add, 1024
+
+[NEC-3Ds]
+DelReg=DCR
+AddReg=NEC-3Ds.Add, 1024
+
+[NEC-3FGe]
+DelReg=DCR
+AddReg=NEC-3FGe.Add, 1024
+
+[NEC-3FGx]
+DelReg=DCR
+AddReg=NEC-3FGx.Add, 1024
+
+[NEC-3V]
+DelReg=DCR
+AddReg=NEC-3V.Add, 1024, DPMS
+
+[NEC-4D]
+DelReg=DCR
+AddReg=NEC-4D.Add, 1024
+
+[NEC-4Ds]
+DelReg=DCR
+AddReg=NEC-4Ds.Add, 1024
+
+[NEC-4FG]
+DelReg=DCR
+AddReg=NEC-4FG.Add, 1280
+
+[NEC-4FGe]
+DelReg=DCR
+AddReg=NEC-4FGe.Add, 1280, DPMS
+
+[NEC-5D]
+DelReg=DCR
+AddReg=NEC-5D.Add, 1280
+
+[NEC-5FG]
+DelReg=DCR
+AddReg=NEC-5FG.Add, 1280
+
+[NEC-5FGe]
+DelReg=DCR
+AddReg=NEC-5FGe.Add, 1280, DPMS
+
+[NEC-5FGp]
+DelReg=DCR
+AddReg=NEC-5FGp.Add, 1280, DPMS
+
+[NEC-6FG]
+DelReg=DCR
+AddReg=NEC-6FG.Add, 1280
+
+[NEC-6FGp]
+DelReg=DCR
+AddReg=NEC-6FGp.Add, 1280, DPMS
+
+[NEC-Ready]
+DelReg=DCR
+AddReg=NEC-Ready.Add, 1024
+
+[NEC-XE15]
+DelReg=DCR
+AddReg=NEC-XE15.Add, 1280, DPMS
+
+[NEC-XE17]
+DelReg=DCR
+AddReg=NEC-XE17.Add, 1280, DPMS
+
+[NEC-XE21]
+DelReg=DCR
+AddReg=NEC-XE21.Add, 1280, DPMS
+
+[NEC-XP15]
+DelReg=DCR
+AddReg=NEC-XP15.Add, 1024, DPMS
+
+[NEC-XP17]
+DelReg=DCR
+AddReg=NEC-XP17.Add, 1280, DPMS
+
+[NEC-XP21]
+DelReg=DCR
+AddReg=NEC-XP21.Add, 1600, DPMS
+
+[NEC-XV14]
+DelReg=DCR
+AddReg=NEC-XV14.Add, 1024, DPMS
+
+[NEC-XV15]
+DelReg=DCR
+AddReg=NEC-XV15.Add, 1024, DPMS
+
+[NEC-XV17]
+DelReg=DCR
+AddReg=NEC-XV17.Add, 1280, DPMS
+
+; -------------- Nissei
+
+[CM1483M]
+DelReg=DCR
+AddReg=CM1483M.Add, 1024
+
+[CM1584MU]
+DelReg=DCR
+AddReg=CM1584MU.Add, 1024
+
+[CM1785MU]
+DelReg=DCR
+AddReg=CM1785MU.Add, 1280
+
+[CM2085MU]
+DelReg=DCR
+AddReg=CM2085MU.Add, 1280
+
+[CM2086A]
+DelReg=DCR
+AddReg=CM2086A.Add, 1280
+
+[CM2087MU]
+DelReg=DCR
+AddReg=CM2087MU.Add, 1280
+
+[CM2186AF]
+DelReg=DCR
+AddReg=CM2186AF.Add, 1280
+
+[CM2187MU]
+DelReg=DCR
+AddReg=CM2187MU.Add, 1600
+
+[CM2085M]
+DelReg=DCR
+AddReg=CM2085M.Add, 1280
+
+[Optiquest_1000]
+DelReg=DCR
+AddReg=Optiquest_1000.Add, 1024
+
+[Optiquest_3000]
+DelReg=DCR
+AddReg=Optiquest_3000.Add, 1024
+
+[Optiquest_4000]
+DelReg=DCR
+AddReg=Optiquest_4000.Add, 1280

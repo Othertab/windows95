@@ -1,0 +1,141 @@
+ommApps
+CopyFiles=MS_DCC_CopyFiles, MS_DCC_SYS_CopyFiles
+AddReg=MS_DCC_Reg
+UpdateInis=MS_DCC_Inis
+InstallType = 12                ;Portable, Custom
+IconIndex= 22                   ;Direct cable connection mini-icon for dialogs
+ValidateProc= RNASETUP.DLL, RnaSetupCallback
+Uninstall=MS_DCC_Uninstall
+Needs= RNA
+
+[MS_RNA_Uninstall]
+AddReg=MS_RNA_Uninstall_Reg
+DelReg=MS_RNA_Uninstall_DelReg
+UpdateInis=MS_RNA_DelInis
+
+[MS_DCC_Uninstall]
+AddReg=MS_DCC_Uninstall_Reg
+DelReg=MS_DCC_Uninstall_DelReg
+UpdateInis=MS_DCC_DelInis
+
+; Copy.Files References
+
+[MS_RNA_CopyFiles]
+
+[MS_DCC_CopyFiles]
+directcc.exe
+
+[MS_RNA_SYS_CopyFiles]
+vgateway.vxd
+splitter.vxd
+rnaapp.exe
+rnaui.dll
+rnanp.dll
+rnathunk.dll
+rasapi16.dll
+pppmac.vxd,,,32         ;suppress version conflicts
+spap.vxd,,,32           ;suppress version conflicts
+smmscrpt.dll
+smmsetup.dll
+
+[MS_RNA_ACCS_CopyFiles]
+slip.scp
+cis.scp
+pppmenu.scp
+slipmenu.scp
+
+[MS_DCC_SYS_CopyFiles]
+vserver.vxd,,,32        ;suppress version conflicts
+nwserver.vxd,,,32       ;suppress version conflicts
+vnetsup.vxd,,,32        ;suppress version conflicts
+msshrui.dll,,,32        ;suppress version conflicts
+
+; Delete.Files References
+
+[MS_RNA_DelFiles]
+rnaapp.exe
+rnaapp32.exe
+rasphone.hlp
+rasmon.exe
+rasphone.exe
+rasstart.exe
+
+[MS_RNA_SYS_DelFiles]
+rnadll32.dll
+modem.inf
+pad.inf
+switch.inf
+rasapi16.dll
+rascauth.dll
+rasconf.dll
+rasfile.dll
+rasman.dll
+rasmxs.dll
+rassauth.dll
+rasser.dll
+rassrv.dll
+rasexe.exe
+vgateway.386
+splitter.386
+
+[MS_RNA_ACCS_DelFiles]
+scripter.exe
+
+[MS_RNA_Fields]
+;
+; Remove rnadll from the drivers= line
+system.ini, boot, drivers, rnadll.dll
+system.ini, boot, networks32, rna
+win.ini,windows,load,rnaapp
+
+[MS_DCC_Inis]
+;
+;Create directcc icon in accessories group
+;
+setup.ini, progman.groups,, "group4=%Apps_Desc%"              ;creates folder
+setup.ini, group4,, """%Directcc_Desc%"", DIRECTCC.EXE,,,,,%Directcc_ShortDesc%"    ;creates link in Accessories
+
+[MS_DCC_DelInis]
+;
+;delete directcc icon in accessories group
+;
+setup.ini, progman.groups,, "group4=%Apps_Desc%"    ;creates folder
+setup.ini, group4,, """%Directcc_Desc%"""           ;deletes link in Accessories
+setup.ini, group4,, """%Directcc_ShortDesc%"""           ;deletes link in Accessories
+
+[MS_RNA_Inis]
+;
+;Create Remote Access icon in accessories group
+;
+setup.ini, progman.groups,, "group4=%Apps_Desc%"              ;creates folder
+setup.ini, group4,, """%Remote_Desc%"", EXPLORER.EXE ::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{992CFFA0-F557-101A-88EC-00DD010CCC48},RNAUI.DLL,0,,,%Remote_ShortDesc%"    ;creates link in Accessories
+;
+;delete scripter icon in accessories group
+;
+setup.ini, progman.groups,, "group4=%Apps_Desc%"    ;creates folder
+setup.ini, group4,, """%Scripter_Desc%"""           ;deletes link in Accessories
+
+[MS_RNA_DelInis]
+;
+;delete RNA icon in accessories group
+;
+setup.ini, progman.groups,, "group4=%Apps_Desc%"    ;creates folder
+setup.ini, group4,, """%Remote_Desc%"""             ;deletes link in Accessories
+setup.ini, group4,, """%Remote_ShortDesc%"""             ;deletes link in Accessories
+
+[MS_RNA_Reg]
+HKCR,CLSID\{992CFFA0-F557-101A-88EC-00DD010CCC48},,,%Remote_Desc%
+HKCR,CLSID\{992CFFA0-F557-101A-88EC-00DD010CCC48}\InProcServer32,,,"rnaui.dll"
+HKCR,CLSID\{992CFFA0-F557-101A-88EC-00DD010CCC48}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{992CFFA0-F557-101A-88EC-00DD010CCC48}\DefaultIcon,,,"%11%\rnaui.dll,0"
+HKCR,CLSID\{992CFFA0-F557-101A-88EC-00DD010CCC48}\ShellFolder,Attributes,1,04,00,00,20
+HKLM,SOFTWARE\MICROSOFT\WINDOWS\CurrentVersion\Explorer\MyComputer\NameSpace\{992CFFA0-F557-101A-88EC-00DD010CCC48},,,%Remote_Desc%
+;
+;Remote Access Installation
+;
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\RNA,Installed,,"1"
+;
+;Remote Access authentication registration
+;
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\PPP, Path,2, "rasapi32.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files

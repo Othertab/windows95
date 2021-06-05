@@ -1,0 +1,131 @@
+ szFile$+", "+szSect$+", "+szKey$+", "+szValue$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+
+    IF FCreateIniKeyValue(szFile$, szSect$, szKey$, szValue$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CreateIniKeyValue", szFile$+", "+szSect$+", "+szKey$+", "+szValue$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB RemoveIniKey (szFile$, szSect$, szKey$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidIniFile(szFile$) = 0 then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    elseif szKey$ = "" then
+        n% = 3
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "RemoveIniKey", szFile$+", "+szSect$+", "+szKey$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+
+    IF FRemoveIniKey(szFile$, szSect$, szKey$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RemoveIniKey", szFile$+", "+szSect$+", "+szKey$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CreateSysIniKeyValue (szFile$, szSect$, szKey$, szValue$, cmo%) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFile$) = 0 then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    elseif szKey$ = "" then
+        n% = 3
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "CreateSysIniKeyValue", szFile$+", "+szSect$+", "+szKey$+", "+szValue$+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+
+    IF FCreateSysIniKeyValue(szFile$, szSect$, szKey$, szValue$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CreateSysIniKeyValue", szFile$+", "+szSect$+", "+szKey$+", "+szValue$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CreateProgmanGroup (szGroup$, szPath$, cmo%) STATIC
+'$ifdef DEBUG
+    if szGroup$ = "" or len(szGroup$) > 24 then
+        BadArgErr 1, "CreateProgmanGroup", szGroup$+", "+STR$(Cmd%)+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+    IF FCreateProgManGroup(szGroup$, szPath$, cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CreateProgmanGroup", szGroup$+", "+szPath$+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB ShowProgmanGroup (szGroup$, Cmd%, cmo%) STATIC
+'$ifdef DEBUG
+    if szGroup$ = "" or len(szGroup$) > 24 then
+        BadArgErr 1, "ShowProgmanGroup", szGroup$+", "+STR$(Cmd%)+", "+STR$(cmo%)
+    end if
+'$endif ''DEBUG
+    IF FShowProgManGroup(szGroup$, STR$(Cmd%), cmo%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "ShowProgmanGroup", szGroup$+", "+STR$(Cmd%)+", "+STR$(cmo%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB StampResource (szSect$, szKey$, szDst$, wResType%, wResId%, szData$, cbData%) STATIC
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    elseif FValidFATDir(szDst$) = 0 then
+        n% = 3
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "StampResource", szSect$+", "+szKey$+", "+szDst$+", "+STR$(wResType%)+", "+STR$(wResId%)+", "+szData$+", "+STR$(cbData%)
+    end if
+'$endif ''DEBUG
+
+    IF FStampResource (szSect$, szKey$, szDst$, wResType%, wResId%, szData$, cbData%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "StampResource", szSect$+", "+szKey$+", "+szDst$+", "+STR$(wResType%)+", "+STR$(wResId%)+", "+szData$+", "+STR$(cbData%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB DumpCopyList (szFile$) STATIC
+'$ifdef DEBUG
+    if szFile$ = "" then
+        BadArgErr 1, "DumpCopyList", szFile$
+    end if
+'$endif ''DEBUG
+    IF F

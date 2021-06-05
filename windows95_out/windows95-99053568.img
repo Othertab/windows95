@@ -1,0 +1,38 @@
+erties. Specify a network adapter, and then try again. 
+ENetBEUI load failure: Too many MAC drivers bound to the driver.
+EThe NetBEUI protocol has failed to load: parameter settings exceed available memory. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: a PROTOCOL.INI keyword was not recognized. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: too many bindings are requested in the PROTOCOL.INI file. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: Protocol Manager would not accept a request. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: Protocol Manager would not supply config image. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: Protocol Manager would not accept module registration. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: the PROTOCOL.INI parameter format is incorrect. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NetBEUI protocol has failed to load: the NetBEUI module was not found in the PROTOCOL.INI file. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+EThe NWLINK protocol has failed to load. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: Protocol Manager could not be opened. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: Protocol Manager would not accept a request. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: Protocol Manager would not supply config image. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: Protocol Manager would not accept module registration. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: no MAC drivers are bound to the driver. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: too many MAC drivers are bound to the driver. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: parameter settings exceed available memory. Try restoring the default settings in Network Properties. If the problem persists, remove the protocol from Network Properties and then add it again.
+EThe NWLINK protocol has failed to load: there are too many bindings requested in the PROTOCOL.INI file. Try restoring t

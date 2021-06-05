@@ -1,0 +1,257 @@
+dd, 1600, DPMS
+
+[88F]
+DelReg=DCR
+AddReg=88F.Add, 1600, DPMS
+
+[9060S]
+DelReg=DCR
+AddReg=9060S.Add, 800
+
+[9065S]
+DelReg=DCR
+AddReg=9065S.Add, 800
+
+[9070S]
+DelReg=DCR
+AddReg=9070S.Add, 1024
+
+[9070U]
+DelReg=DCR
+AddReg=9070U.Add, 1024
+
+[9080i]
+DelReg=DCR
+AddReg=9080i.Add, 1024
+
+[9400i]
+DelReg=DCR
+AddReg=9400i.Add, 1280
+
+[9500]
+DelReg=DCR
+AddReg=9500.Add, 1280
+
+[F2-15]
+DelReg=DCR
+AddReg=F2-15.Add, 1152, DPMS
+
+[F2-17]
+DelReg=DCR
+AddReg=F2-17.Add, 1152, DPMS
+
+[F2-17EX]
+DelReg=DCR
+AddReg=F2-17EX.Add, 1280, DPMS
+
+[F2-21]
+DelReg=DCR
+AddReg=F2-21.Add, 1600, DPMS
+
+[FX2-21]
+DelReg=DCR
+AddReg=FX2-21.Add, 1600, DPMS
+
+[F340iW]
+DelReg=DCR
+AddReg=F340iW.Add, 1024, DPMS
+
+[F347]
+DelReg=DCR
+AddReg=F347.Add, 1024, DPMS
+
+[F347II]
+DelReg=DCR
+AddReg=F347II.Add, 1024, DPMS
+
+[F351]
+DelReg=DCR
+AddReg=F351.Add, 1152, DPMS
+
+[F550i]
+DelReg=DCR
+AddReg=F550i.Add, 1280, DPMS
+
+[F550iW]
+DelReg=DCR
+AddReg=F550iW.Add, 1280, DPMS
+
+[F553]
+DelReg=DCR
+AddReg=F553.Add, 1152, DPMS
+
+[F557]
+DelReg=DCR
+AddReg=F557.Add, 1024, DPMS
+
+[F560iW]
+DelReg=DCR
+AddReg=F560iW.Add, 1280, DPMS
+
+[F563]
+DelReg=DCR
+AddReg=F563.Add, 1280, DPMS
+
+[F750i]
+DelReg=DCR
+AddReg=F750i.Add, 1280
+
+[F760iW]
+DelReg=DCR
+AddReg=F760iW.Add, 1280, DPMS
+
+[F764]
+DelReg=DCR
+AddReg=F764.Add, 1600, DPMS
+
+[F780iJ]
+DelReg=DCR
+AddReg=F780iJ.Add, 1600, DPMS
+
+[F780iW]
+DelReg=DCR
+AddReg=F780iW.Add, 1600, DPMS
+
+[F784]
+DelReg=DCR
+AddReg=F784.Add, 1600, DPMS
+
+[T2-17]
+DelReg=DCR
+AddReg=T2-17.Add, 1280, DPMS
+
+[T2-17TS]
+DelReg=DCR
+AddReg=T2-17TS.Add, 1280, DPMS
+
+[T2-20]
+DelReg=DCR
+AddReg=T2-20.Add, 1280, DPMS
+
+[T560i]
+DelReg=DCR
+AddReg=T560i.Add, 1280, DPMS
+
+[T560iJ]
+DelReg=DCR
+AddReg=T560iJ.Add
+
+[T562]
+DelReg=DCR
+AddReg=T562.Add, 1280, DPMS
+
+[T563]
+DelReg=DCR
+AddReg=T563.Add, 1280, DPMS
+
+[T567]
+DelReg=DCR
+AddReg=T567.Add, 1280, DPMS
+
+[T660i]
+DelReg=DCR
+AddReg=T660i.Add, 1280
+
+[T660iJ]
+DelReg=DCR
+AddReg=T660iJ.Add, 1280, DPMS
+
+[T662]
+DelReg=DCR
+AddReg=T662.Add, 1280, DPMS
+
+
+;-------------------------------------------------
+; Common AddReg sections
+
+[DCR]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+[640]
+HKR,,MaxResolution,,"640,480"
+[800]
+HKR,,MaxResolution,,"800,600"
+[1024]
+HKR,,MaxResolution,,"1024,768"
+[1152]
+HKR,,MaxResolution,,"1152,864"
+[1280]
+HKR,,MaxResolution,,"1280,1024"
+[1600]
+HKR,,MaxResolution,,"1600,1200"
+
+[DPMS]
+HKR,,DPMS,,1
+
+;-------------------------------------------------
+; Model AddReg sections
+
+[Colorview/15.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-68.0,50.0-120.0,+,+"
+
+[PMV-14AC/plus.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.0,45.0-90.0,+,+"
+
+[MX15F.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-68.0,50.0-120.0,+,+"
+
+[MX17F/S.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-68.0,50.0-120.0,+,+"
+
+[MX21NT.Add]
+HKR,"MODES\1600,1280",Mode1,,"30.0-82.0,50.0-120.0,+,+"
+
+[DX15F.Add]
+HKR,"MODES\1280,1024",Mode1,,"30-64,50-100,+,+"
+
+[DX17F.Add]
+HKR,"MODES\1280,1024",Mode1,,"30-64,50-100,+,+"
+
+[DX21F.Add]
+HKR,"MODES\1280,1024",Mode1,,"30-68,50-120,+,+"
+
+[LX1450.Add]
+HKR,"MODES\1024,768",Mode1,,"30-50,50-100,+,+"
+
+[PMV-1531.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-38.0,45.0-90.0,+,+"
+
+[1020/LP.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.5,45.0-100.0,+,+"
+
+[1020/SP.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.5,45.0-100.0,+,+"
+
+[2012/LP.Add]
+HKR,"MODES\800,600",Mode1,,"15.0-40.0,45.0-100.0,+,+"
+
+[2014/LP.Add]
+HKR,"MODES\800,600",Mode1,,"15.0-40.0,45.0-100.0,+,+"
+
+[2014/SVGA.Add]
+HKR,"MODES\1024,768",Mode1,,"30.0-40.0,45.0-90.0,+,+"
+
+[2019/SP.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-38.0,45.0-100.0,+,+"
+
+[4015/FST.Add]
+HKR,"MODES\1024,768",Mode1,,"30.0-50.0,45.0-100.0,+,+"
+
+[604/FST.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.5,45.0-100.0,+,+"
+
+[704/FST.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.5,45.0-100.0,+,+"
+
+[710MH.Add]
+HKR,"MODES\1024,768",Mode1,,"15.0-38.0,50.0-90.0,+,+"
+
+; -------------- Modgraph
+
+[MG-3200.Add]
+HKR,"MODES\800,600",Mode1,,"15.0-35.0,47.0-80.0,+,+"
+
+[

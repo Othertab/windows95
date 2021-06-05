@@ -1,0 +1,118 @@
+nf too
+ndscli.inf
+irdalan.inf
+netdef.inf
+netauxt.inf
+netcli3.inf
+net3com.inf
+netsilc.inf
+nettdkp.inf
+netmadge.inf
+nettcc.inf
+netcable.inf
+netprot.inf
+netgen.inf
+netsock.inf
+netamd.inf
+netdec.inf
+netee16.inf
+netnice.inf
+netnovel.inf
+netoli.inf
+netppp.inf
+nethp.inf
+netsmc.inf
+netsmctr.inf
+netxir.inf
+netibm.inf
+netibmcc.inf
+netsnip.inf
+netcpq.inf
+netflex.inf
+netpci.inf
+netsnip.inf
+netcem.inf
+cemmf.inf
+mfosi.inf
+netosi.inf
+netbw.inf
+netdlc.inf
+netdlc32.inf
+winpopup.inf
+mswebsvr.inf
+
+
+[FILESYNC.inf]
+; Base has to copy main infs
+net.inf
+
+; this section is installed by the class installer to avoid conflicts
+; with 3rd party nets.
+[NET_NDIS2.add]
+CopyFiles=NET_NDIS2.add.copy
+[NET_NDIS2.add.copy]
+protman.dos
+protman.exe
+ndishlp.sys
+
+[NET_BASE.AddReg]
+; netdde winchat
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Additional item count",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Application",,"winchat"
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Item",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Password1",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Password2",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Permissions1",1,1F,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Permissions2",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CHAT$","Topic",,"chat"
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Additional item count",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Application",,"winchat"
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Item",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Password1",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Password2",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Permissions1",1,1F,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Permissions2",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\SCHAT$","Topic",,"chat"
+; netdde clipbook
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Additional item count",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Application",,"clipsrv"
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Item",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Password1",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Password2",,""
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Permissions1",1,1F,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Permissions2",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\NetDDE\DDE Shares\CLPBK$","Topic",,"system"
+
+
+[FILESYNC.AddReg]
+; RunOnce 
+HKLM, Software\Microsoft\Windows\CurrentVersion\RunOnce,"%FSSetup_Desc%",,"rundll32.exe syncui.dll,Briefcase_Create"
+
+; Briefcase Inproc server
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D},,,%Briefcase_Desc%
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\InProcServer32,,,"syncui.dll"
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\ShellFolder,Attributes,1,36,01,00,40
+
+; Briefcase shell folder binding
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\DefaultIcon,,,"%11%\syncui.dll,0"
+
+; Add New Menu entry
+HKCR,.bfc,,,Briefcase
+HKCR,.bfc\ShellNew,Command,,"%25%\rundll32.exe syncui.dll,Briefcase_Create %%1!d! %%2"
+HKCR,.bfc\ShellNew\Config,NoExtension,,""
+HKCR,Briefcase,,,%Briefcase_Desc%
+HKCR,Briefcase\shell\open\command,,,"explorer.exe %%1"
+HKCR,Briefcase\DefaultIcon,,,"%11%\syncui.dll,0"
+HKCR,Briefcase\CLSID,,,{85BBD920-42A0-1069-A2E4-08002B30309D}
+
+[FILESYNC.Install.DelReg]
+; Since BriefCase can't be uninstalled, once it is installed, we remove it as an Optional Component:
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"Briefcase"
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Briefcase
+
+[FILESYNC.MaintenanceAddReg]
+;
+;File Sync Maintenance Mode Setup
+;
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"B

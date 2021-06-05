@@ -1,0 +1,142 @@
+odi.exe,,,16
+pcsa.exe,,,16
+select.exe,,,16
+_pwmove.bat,,,16
+
+srm.exe,srm.new,,16
+
+
+
+instl50.dll,,,16
+instl51.dll,,,16
+deccore.vxd,,,16
+declicl.vxd,,,16
+
+[DEC50UPG.Copyfiles.winboot]
+
+dllndis.exe,dllndis.new,,16
+srm.exe,srm.new,,16
+
+
+
+
+pcsa.exe,,,16
+select.exe,,,16
+_pwmove.bat,,,16
+instl50.dll,,,16
+instl51.dll,,,16
+deccore.vxd,,,16
+declicl.vxd,,,16
+
+
+[DEC50NDIS.rmv]
+DelReg=DEC50NDIS.delreg.rmv
+[DEC50NDIS.delreg.rmv]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",PATHWRKS
+HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllndis.exe
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllndist.exe
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",ipxndis.exe
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET"
+
+;****************************************************************************
+; NDISBAN
+;****************************************************************************
+;
+; ETHERNET
+; 
+[NDISBAN.ndi]
+AddReg=NDISBAN.ndi.reg,BAN.ndi.reg
+DeviceID=NDISBAN
+MaxInstance=1
+
+[NDISBAN.ndi.reg]
+HKR,Ndi,DeviceID,,NDISBAN
+HKR,NDIS,LogDriverName,,NDISBAN
+HKR,NDIS\NDIS2,DriverName,,NDISBAN$
+;
+; autoexec.bat line placements
+;
+; ndis ban
+HKR,Ndi\autoexec.bat\ndisban,Line,,"ndisban"
+HKR,Ndi\autoexec.bat\ndisban,Search,,"*ban /nc*"
+HKR,Ndi\autoexec.bat\ndisban,Replace,,""
+HKR,Ndi\autoexec.bat\ndisban,Skip,,"*ndisban*"
+HKR,Ndi\autoexec.bat\ndisban,Position,1,01,00,00,00
+; redirall
+HKR,Ndi\autoexec.bat\redirall,Line,,"redirall"
+HKR,Ndi\autoexec.bat\redirall,Search,,"*ndisban*"
+HKR,Ndi\autoexec.bat\redirall,Replace,,""
+HKR,Ndi\autoexec.bat\redirall,Skip,,"*redirall*"
+HKR,Ndi\autoexec.bat\redirall,Position,1,01,00,00,00
+
+;
+; TOKEN RING
+;
+
+[NDTOKBAN.ndi]
+AddReg=NDTOKBAN.ndi.reg,BAN.ndi.reg
+DeviceID=NDTOKBAN
+MaxInstance=1
+
+[NDTOKBAN.ndi.reg]
+HKR,Ndi,DeviceID,,NDTOKBAN
+HKR,NDIS,LogDriverName,,NDTOKBAN
+HKR,NDIS\NDIS2,DriverName,,NDISBAN$
+;
+; autoexec.bat line placements
+;
+; ndis ban
+HKR,Ndi\autoexec.bat\ndisban,Line,,"ndtokban"
+HKR,Ndi\autoexec.bat\ndisban,Search,,"*ban /nc*"
+HKR,Ndi\autoexec.bat\ndisban,Replace,,""
+HKR,Ndi\autoexec.bat\ndisban,Skip,,"*ndtokban*"
+HKR,Ndi\autoexec.bat\ndisban,Position,1,01,00,00,00
+; redirall
+HKR,Ndi\autoexec.bat\redirall,Line,,"redirall"
+HKR,Ndi\autoexec.bat\redirall,Search,,"*ndtokban*"
+HKR,Ndi\autoexec.bat\redirall,Replace,,""
+HKR,Ndi\autoexec.bat\redirall,Skip,,"*redirall*"
+HKR,Ndi\autoexec.bat\redirall,Position,1,01,00,00,00
+
+;
+; COMMON BANYAN SECTIONS
+;
+
+[BAN.ndi.reg]
+HKR,Ndi,MaxInstance,,0  ;prevent multiple bindings
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,Ndi\Interfaces,DefUpper,,"vines"
+HKR,Ndi\Interfaces,DefLower,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,UpperRange,,"vines"
+HKR,Ndi\Install,,,"NDISBAN.inst"
+HKR,Ndi\Remove,,,"NDISBAN.rmv"
+;
+; autoexec.bat line placements
+;
+HKR,Ndi\autoexec.bat\Order,KeyOrder,,"netinit,ban,ndisban,redirall,netstart,arswait,login"
+; net init
+HKR,Ndi\autoexec.bat\netinit,Line,,"net initialize"
+HKR,Ndi\autoexec.bat\netinit,Search,,"*ban*"
+HKR,Ndi\autoexec.bat\netinit,Replace,,""
+HKR,Ndi\autoexec.bat\netinit,Skip,,"*net init*"
+HKR,Ndi\autoexec.bat\netinit,Position,1,00,00,00,00
+HKR,Ndi\autoexec.bat\netinit,LDID,1,1A,00,00,00     ;winboot dir (26)
+; ban
+HKR,Ndi\autoexec.bat\ban,Line,,"ban /nc"
+HKR,Ndi\autoexec.bat\ban,Search,,"*net init*"
+HKR,Ndi\autoexec.bat\ban,Replace,,"*ban*"
+HKR,Ndi\autoexec.bat\ban,Skip,,"*ban /nc*"
+HKR,Ndi\autoexec.bat\ban,Position,1,01,00,00,00
+; net start
+HKR,Ndi\autoexec.bat\netstart,Line,,"net start"
+HKR,Ndi\autoexec.bat\netstart,Search,,"*redirall*"
+HKR,Ndi\autoexec.bat\netstart,Replace,,""
+HKR,Ndi\autoexec.bat\netstart,Skip,,"*net start*"
+HKR,Ndi\autoexec.bat\netstart,Position,1,01,00,00,00
+HKR,Ndi\autoexec.bat\netstart,LDID,1,1A,00,00,00     ;winboot dir (26)
+; arswait
+HKR,Ndi\autoexec.bat\arswait,Line,,"arswait"
+HKR,Ndi\autoexec.

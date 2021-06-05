@@ -1,0 +1,91 @@
+w the steps listed on the label of the HP DeskJet Printer Driver 
+disk #1 that came with your printer.
+
+If you are upgrading from Windows 3.1 to Windows 95 and already have 
+your DeskJet installed with a Windows 95 compatible printer driver 
+(version 7.0 or greater), you do not need to do anything else.
+
+Case 2: If you do not have a Windows 95 compatible printer driver (you 
+have a Windows 3.1-only printer driver).
+
+To obtain a Windows 95 compatible printer driver for your DeskJet 
+printer, contact the HP Driver Distribution Center referenced in your 
+HP DeskJet Printer Users Manual.  Until you obtain your Windows 95 
+printer driver, follow the instructions below to enable printing under 
+Windows 95.
+
+1. Click Start, point to Settings, and then click Printers.
+2. Click the Add Printer icon, and then follow the instructions on
+   your screen. 
+3. When you are asked to select the printer manufacturer and model 
+   number, select "HP DeskJet 550C Printer" for a 660C or 850C printer; 
+   or the "HP DeskJet 540" if you have a DeskJet 600.  
+4. Click Next, and then follow the steps displayed on the screen.
+
+
+HEWLETT-PACKARD LASERJET PRINTER SUPPORT
+========================================
+
+If you have upgraded from Microsoft Windows 3.1 to Microsoft 
+Windows 95, you can disregard the following instructions; all of the 
+optimized software is installed on your computer during the Windows 95 
+installation.
+
+If you are adding a LaserJet 4 printer, a Color LaserJet, or a 
+LaserJet 5P/5MP to your Windows 95 system, you can get optimized 
+printing performance by following the steps in the relevant section 
+below. HP LaserJet printer and HP-provided printer driver issues should 
+be directed to Hewlett-Packard. Please consult Hewlett-Packard’s Driver 
+Distribution or Customer Support centers listed in the documentation 
+accompanying your printer for more information.
+
+HP LaserJet 4 Printer - PCL Support
+-----------------------------------
+Recommended software: Windows 95 printer driver & HP TrueType Screen 
+Fonts. 
+
+HP offers the LaserJet 4 printer user HP TrueType Screen fonts to match 
+your internal printer fonts. To obtain these fonts, contact your 
+Hewlett-Packard Driver Distribution center.
+
+HP LaserJet 4Si, 4L, 4P, 4 Plus, and 4V  Printers - PCL Support
+---------------------------------------------------------------
+Recommended software: Windows 95 printer driver & HP TrueType Screen 
+Fonts. 
+
+NOTE: You will need the HP TrueType screen fonts to match your internal 
+printer fonts. Locate the disks that came with your HP LaserJet printer, 
+and then follow the steps below. If you cannot find your software disks, 
+contact your Hewlett-Packard Driver Distribution Center.
+
+1. Insert Disk 1 of the HP LaserJet Printing System disk set into the
+   appropriate floppy disk drive.
+2. Click Start, and then click Run.
+3. In the Run dialog box, type "A:\Setup"
+4. Click "Custom" installation, and then click the appropriate HP 
+   LaserJet printer. 
+5. Click HP TrueType Screen fonts. Deselect the Printer Driver, 
+   Status Window, and the Travel Guide. Click OK, and then follow the 
+   steps displayed on the screen.
+
+HP LaserJet 5P Printer - PCL Support
+------------------------------------
+Recommended software: Windows 95 printer driver & HP TrueType Screen 
+Fonts. 
+
+NOTE: HP plans to update the LaserJet 5P software for enhanced 
+Windows 95 support. Contact your HP Driver Distribution for information, 
+or contact your authorized HP dealer.
+
+NOTE: You will need the HP TrueType screen fonts to match your internal 
+printer fonts. Locate the disks that came with your HP LaserJet printer, 
+and then follow the steps below. If you cannot find your software disks, 
+contact your Hewlett-Packard Driver Distribution center.
+
+1. Insert Disk 1 of the HP 5P LaserJet Printing System disk set into
+   the appropriate floppy disk drive.
+2. Click Start, and then click Run.
+3. Type "A:\Setup."
+4. Select "Typical" installation, and then follow the steps displayed
+   on screen.
+

@@ -1,0 +1,89 @@
+81FDF22E                ; Intel 2400e V.42bis Modem
+%Modem10% = Modem10,  INTEL_Modem10, UNIMODEMAF312C16 ; Intel Faxmodem 96/96i
+%Modem9%  = Modem9,   INTEL_Modem9, UNIMODEMAF312C16  ; Intel Faxmodem 96/96e
+%Modem7%  = Modem7,   INTEL_Modem7, UNIMODEM5DC8F5BA  ; Intel Faxmodem 144/144e v1.70
+%Modem7%  = Modem7,   INTEL_Modem7, UNIMODEM3DBAACC2  ; Intel Faxmodem 144/144e v1.43, v2.20
+%Modem6%  = Modem6,   UNIMODEM52C15FC7                ; 9600EX
+%Modem5%  = Modem5,   UNIMODEM0589FB57                ; 14.4EX
+%Modem5%  = Modem5,   INTEL_Modem5, UNIMODEM6E4ABD3B  ; 14.4EX
+%Modem5%  = Modem19,  INTEL_Modem5, UNIMODEM857A2E1B  ; 14.4EX / 400e clone
+%Modem4%  = Modem4,   INTEL_Modem4, UNIMODEM2D08133E  ; SatisFAXtion Modem/300
+%Modem3%  = Modem3,   UNIMODEM03326EC6                ; SatisFAXtion Classic
+%Modem2%  = Modem2,   INTEL_Modem2, UNIMODEMEB77762B  ; SatisFAXtion Modem/200
+%Modem2%  = Modem2,   INTEL_Modem2, UNIMODEM9729BF96  ; SatisFAXtion Modem/200
+%Modem1%  = Modem1,   INTEL_Modem1, UNIMODEM1308F3EC  ; SatisFAXtion Modem/400
+
+[Puredata]
+%Modem25% = Modem19,  INTEL_Modem25, UNIMODEM857A2E1B ; SatisFAXtion Modem/400e
+%Modem25% = Modem19,  INTEL_Modem25, UNIMODEM6E4ABD3B ; SatisFAXtion Modem/400e
+%Modem25% = Modem19,  INTEL_Modem25, UNIMODEM1308F3EC ; SatisFAXtion Modem/400e
+%Modem26% = Modem19,  UNIMODEM857A2E1B                ; Intel and Puredata SatisFAXtion Modem/400e combo
+%Modem27% = Modem2,   INTEL_Modem27, UNIMODEMEB77762B ; SatisFAXtion Modem/200
+%Modem27% = Modem2,   INTEL_Modem27, UNIMODEM9729BF96 ; SatisFAXtion Modem/200
+%Modem28% = Modem2,   UNIMODEMEB77762B                ; Intel and Puredata SatisFAXtion Modem/200 combo
+%Modem28% = Modem2,   UNIMODEM9729BF96                ; Intel and Puredata SatisFAXtion Modem/200 combo
+%Modem29% = Modem1,   INTEL_Modem29, UNIMODEM1308F3EC ; SatisFAXtion Modem/400
+
+; Installation sections
+
+[Modem20]        ; Intel 300 and Viva 14.4 combo
+AddReg=All, MfgAddReg, Modem20.AddReg, EXTERNAL
+
+[Modem19]       ; SatisFAXtion Modem/400e
+AddReg=All, MfgAddReg, Modem19.AddReg, EXTERNAL
+
+[Modem18]       ; Intel Faxmodem 144/144i v2.28
+AddReg=All, MfgAddReg, Modem7.AddReg, INTERNAL
+
+[Modem14]       ; Intel Faxmodem 24/96i
+AddReg=All, MfgAddReg, Modem14.AddReg, INTERNAL
+
+[Modem13]       ; Intel Faxmodem 24v/96i
+AddReg=All, MfgAddReg, Modem13.AddReg, INTERNAL
+
+[Modem12]       ; Intel Faxmodem 24v/96e
+AddReg=All, MfgAddReg, Modem12.AddReg, EXTERNAL
+
+[Modem11]       ; Intel 2400e V.42bis Modem
+AddReg=All, MfgAddReg, Modem11.AddReg, EXTERNAL
+
+[Modem10]       ; Intel Faxmodem 96/96i
+AddReg=All, MfgAddReg, Modem9.AddReg, INTERNAL
+
+[Modem9]        ; Intel Faxmodem 96/96e
+AddReg=All, MfgAddReg, Modem9.AddReg, EXTERNAL
+
+[Modem7]        ; Intel Faxmodem 144/144e v1.43, v1.70
+AddReg=All, MfgAddReg, Modem7.AddReg, EXTERNAL
+
+[Modem6]        ; 9600EX
+AddReg=All, MfgAddReg, Modem6.AddReg, EXTERNAL
+
+[Modem5]        ; 14.4EX
+AddReg=All, MfgAddReg, Modem5.AddReg, EXTERNAL
+
+[Modem4]        ; SatisFAXtion Modem/300
+AddReg=All, MfgAddReg, Modem4.AddReg, INTERNAL
+
+[Modem3]        ; SatisFAXtion Classic
+AddReg=All, MfgAddReg, Modem3.AddReg, INTERNAL
+
+[Modem2]        ; SatisFAXtion Modem/200
+AddReg=All, MfgAddReg, Modem2.AddReg, INTERNAL
+
+[Modem1]        ; SatisFAXtion Modem/400
+AddReg=All, MfgAddReg, Modem1.AddReg, INTERNAL
+
+; AddReg sections
+
+[Modem20.AddReg]        ; Intel 300 and Viva 14.4 combo
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem19.AddReg]        ; SatisFAXtion Modem/400e
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem14.AddReg]        ; Intel Faxmodem 24/96i
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 50,03,00,00, 60,09,00,00, 60,09,00,00
+
+[Modem13.AddReg]        ; Intel Faxmodem 24v/96i
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,4b,00,00, 

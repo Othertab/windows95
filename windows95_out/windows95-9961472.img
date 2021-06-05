@@ -1,0 +1,130 @@
+ig=8@350-36F%FFF8(3FF::)
+IRQConfig=3,4,5,7,9,12
+MemConfig=8000@80000-F7FFF%FFFF8000
+ConfigPriority=HARDRECONFIG
+
+
+;****************************************************************************
+; *PNP8119  UB pcNIU
+;****************************************************************************
+[*PNP8119.ndi]
+AddReg=*PNP8119.ndi.reg,UBNEI.ndi.reg,UBNIUPC.ndi.reg,Common.Params,Common.Resources
+LogConfig=*PNP8119.LogConfig
+
+[*PNP8119.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8119"
+
+[*PNP8119.LogConfig]
+IOConfig=8@360-36F%FFF8(3FF::)
+IRQConfig=3,4,5,9
+MemConfig=8000@80000-FFFFF%FFFF0000
+ConfigPriority=HARDRECONFIG
+
+
+;****************************************************************************
+; *PNP811d  UB NIUpc/3270
+;****************************************************************************
+[*PNP811d.ndi]
+AddReg=*PNP811d.ndi.reg,UBNEI.ndi.reg,UBNEIPC.ndi.reg,Common.Params,Common.Resources
+LogConfig=*PNP811d.LogConfig
+
+[*PNP811d.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP811d"
+
+[*PNP811d.LogConfig]
+IOConfig=8@350-36F%FFF8(3FF::)
+IRQConfig=3,4,5,9
+MemConfig=8000@98000-F7FFF%FFFF8000
+ConfigPriority=HARDRECONFIG
+
+
+
+;****************************************************************************
+; *pnp811c  UB PC
+;****************************************************************************
+[*pnp811c.ndi]
+AddReg=*pnp811c.ndi.reg,UBNEI.ndi.reg,UBNEIPC.ndi.reg,Common.Params,Common.Resources
+LogConfig=*PNP811C.LogConfig
+
+[*pnp811c.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp811c"
+
+[*PNP811C.LogConfig]
+IOConfig=8@350-36F%FFF8(3FF::)
+IRQConfig=3,4,5,9
+MemConfig=8000@88000-F7FFF%FFFF8000
+ConfigPriority=HARDRECONFIG
+
+
+;****************************************************************************
+; *pnp8120  UB EOTP
+;****************************************************************************
+[*pnp8120.ndi]
+AddReg=*pnp8120.ndi.reg,UBNEI.ndi.reg,UBNEIPC_EOTP.ndi.reg,Common.Params,Common.Resources
+LogConfig=*PNP8120.LogConfig
+
+[*pnp8120.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8120"
+
+[*PNP8120.LogConfig]
+IOConfig=8@350-36F%FFF8(3FF::)
+IRQConfig=3,4,5,7,9,12
+MemConfig=8000@A0000-E7FFF%FFFF8000
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+; MCA_7012  UB PS EOTP
+;****************************************************************************
+[MCA_7012.ndi]
+AddReg=MCA_7012.ndi.reg,UBNEI.ndi.reg,UBNEIPS.ndi.reg,Common.Params,Slot
+
+[MCA_7012.ndi.reg]
+HKR,Ndi,DeviceID,,"MCA_7012"
+
+
+;****************************************************************************
+; UBNEI Drivers
+;****************************************************************************
+[UBNEI.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,ubnei.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"UBNEI"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,00
+HKR,NDIS\NDIS2,DriverName,,"UBNEI$"
+HKR,NDIS\NDIS2,FileName,,"ubnei.dos"
+HKR,NDIS\ODI,DriverName,,"ubodi"
+HKR,NDIS\ODI,FileName,,"ubodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3,ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3,ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"UBNEI.ndis3"
+HKR,Ndi\Install,ndis2,,"UBNEI.ndis2"
+;HKR,Ndi\Install,odi,,"UBNEI.odi"
+
+[UBNIUGEN.ndi.reg]
+; Parameters
+;AdapterType
+HKR,,AdapterType,,"NIUpc"
+HKR,Ndi\params\AdapterType,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\AdapterType,default,,"NIUpc"
+HKR,Ndi\params\AdapterType,type,,enum
+HKR,Ndi\params\AdapterType\enum,"NIUpc",,"NIUpc"
+HKR,Ndi\params\AdapterType\enum,"NIUpc/EOTP",,"NIUpc/EOTP"
+HKR,Ndi\params\AdapterType\enum,"NIUps",,"NIUps"
+HKR,Ndi\params\AdapterType\enum,"PCNIU",,"PCNIU"
+HKR,Ndi\params\AdapterType\enum,"PCNIUex",,"PCNIUex"
+HKR,NDI\params\AdapterType,flag,1,30,00,00,00
+
+[UBPCNIUex.ndi.reg]
+;AdapterType
+HKR,,AdapterType,,"PCNIUex"
+HKR,Ndi\params\AdapterType,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\AdapterType,default,,"PCNIUex"
+HKR,Ndi\params\AdapterType,type,,enum
+H

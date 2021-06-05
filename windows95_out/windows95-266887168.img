@@ -1,0 +1,90 @@
+ram
+Ctrl-Esc           Disconnects the systems in two player mode
++ / - keys         Speed up or Slow down the game speed
+Esc                Cancel any command just issued in any menu
+Right click        Cancel any command just issued in any menu
+
+Shift+Click on a unit             Allows grouping of up to four units
+Ctrl+Drag Mouse over units        Allows grouping of up to four units
+
+
+---------------------------------------------------------------------
+- 4.  UNIT MODIFICATIONS
+---------------------------------------------------------------------
+Both Catapults and Summoned Creatures operate in manners dissimilar
+from other units in the game:
+
+The catapult will attack enemy units automatically ONLY if there 
+are no friendly units that will be effected by splash damage from the 
+missile.  If you select the Attack command and specify a target, the 
+catapult will fire at the selected target regardless of friendly unit 
+proximity.
+
+Summoned Creatures have a Magic Point (MP) bar as well as a
+Hit Point (HP) bar. The MP bar will degrade over time, and when it is 
+drained, the summoned creature will begin taking damage, as the powers 
+that hold it here are no longer in force.
+
+
+---------------------------------------------------------------------
+- 5.  ATTACK VS. MOVE
+---------------------------------------------------------------------
+When a Unit is instructed to Move, it will head to the selected location and 
+ignore anything that crosses it path, including units that attack it. This 
+allows for uninterrupted movement, as well as enforced retreats.
+
+When a Unit is instructed to Attack, you may choose either an area to attack, 
+or a specific target.
+
+When you choose an area to Attack, the unit will move there, but if he is 
+attacked in transit, the unit will stop and respond to the attack.  When the 
+unit arrives at the selected location, it will look for immediate targets 
+within its range to attack.
+
+When you choose a specific target to Attack, your unit will move to engage 
+the selected target, ignoring all other enemies or threats.
+
+
+---------------------------------------------------------------------
+- 6.  NETWORK PLAY
+---------------------------------------------------------------------
+MESSAGES ON THE NETWORK
+Messages can be sent to an opposing player in a Two-Player game by simply 
+pressing the Enter key during gameplay. A MSG: prompt will appear at the
+bottom of the screen.  Type in your message, and then press Enter to send it.
+
+
+TWO PLAYER WARCRAFT
+Your CD-ROM enables you to play Warcraft with a friend who does NOT have a 
+copy of the game.  To play Warcraft with a friend over a modem or network,
+perform a PARTIAL or FULL INSTALL on one system and use the CD-ROM with any
+installation setting on the other system.  This will allow both systems to
+play against each other, though at least ONE system MUST have the CD.
+
+
+SELECTING UNITS IN TWO-PLAYER CUSTOM MODE
+In a Two-Player Custom game, players can either have the default setting
+of two Peons/Peasants or they can elect to create custom armies through 
+the Select Armies dialog.  Not only can you effect what units you are 
+choosing for your side, but you may select or deselect units for the 
+enemy side by using the mouse to click the arrow keys in the Unit Selection 
+area.  If you wish to negate the ability to create specific units, they 
+may be turned OFF in the same manner, making them unavailable for play.
+
+
+---------------------------------------------------------------------
+- 7.  MODEM PLAY
+---------------------------------------------------------------------
+For best performance you will want to disable compression and error control 
+on your modem.  Here are some init strings for popular modems that we have 
+found to work well.
+
+HAYES ACCURA 144B, ZOOM 14400, PRACTICAL PERIPHERALS:
+        AT &K0 M1 S46=0 &D2 &Q6
+
+US ROBOTICS SPORTSTER:
+        AT &K0 M1 &D2
+
+If your system does not run smoothly during MODEM or DIRECT LINK
+play, these are some suggestions which may help:
+

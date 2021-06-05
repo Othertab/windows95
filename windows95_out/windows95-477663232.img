@@ -1,0 +1,59 @@
+orums.msn.com/armedforces,,,"A global online military community."
+
+[PhiloRelig]
+PhiloRelig1="Philosophy", http://forums.msn.com/philosophy,,,"Pursuing fundamental ideas & philosophical issues."
+PhiloRelig2="Religion", http://forums.msn.com/religion,,,"All the faiths of the world meet here"
+
+
+[ForSports]
+ForSports1="Astronomy && Space", http://forums.msn.com/astronomy,,,"Your launching pad to the universe!"
+ForSports2="Aviation", http://forums.msn.com/aviation,,,"For pilots and other aviation enthusiasts."
+ForSports3="Gardening", http://forums.msn.com/gardening,,,"Make your garden fragrant, flowering, & fruitful!"
+ForSports4="MotoCentral Motorcycling", http://forums.msn.com/motocentral,,,"Motorcycle riding, racing, and more!"
+
+[ForTravel]
+ForTravel1="Friends of Europe", http://forums.msn.com/friendsofeurope,,,"Learn about the people and cultures of Europe!"
+ForTravel2="Israel", http://forums.msn.com/israel,,,"Visit the unique country of Israel!"
+ForTravel3="Theme Parks!", http://expedia.msn.com/daily/forums/Theme/,,,"Disney, roller coasters, and much, much more!"
+ForTravel4="MotoCentral Motorcycling", http://forums.msn.com/motocentral,,,"Motorcycle riding, racing, and more!"
+
+[Specials]
+sev="Special Events", http://specials.msn.com/,,,"Our sites are so cool you'll need a sweater."
+u2="U2 PopMart Online", http://u2popmart.msn.com/,,,"Official site of U2's PopMart tour"
+ire="E-String", http://estring.msn.com/,,,"Hey pal! It's guitar lessons, not underwear."
+
+[Find]
+URLKey = find.msn.com
+URL = http://find.msn.com/srchmain.htm
+Find = "Search by Word or Phrase", http://find.msn.com/srchmain.htm?tbn=2,,,"Type in a word and find what you're looking for."
+Explore = "Browse by Subject", http://find.msn.com/srchmain.htm?tbn=1,,,"Walk through our list of all the different places, events, and stuff on the Web."
+Calendar = "View MSN Calendar", http://find.msn.com/srchmain.htm?tbn=3,,,"Find out what is happening and when."
+blank = ""
+Lycos = "Search Using Lycos", http://www-uk.lycos.com
+InfoSeek = "Search Using InfoSeek", http://guide-p.infoseek.com/Titles?qt=&col=WW&sv=UK,,,"Easy to use interface to locate the right site."
+Excite = "Search Using Excite", http://www.uk.excite.com,,,"The place to start your search on the Web."
+UKPLus= "Search Using UK Plus", http://ukplus.co.uk
+
+[Help]
+URLKey = memberservices.msn.com/metro
+URL = http://memberservices.msn.com/metro/default.asp
+start = "Member Services Home Page", http://memberservices.msn.com/metro/default.asp,,,"Get help. Change your account. Find out what's on MSN."
+Newmem = "Getting Started on MSN", http://memberservices.msn.com/metro/default.asp?command=gettingstarted,,,"If you're new to MSN, this is the best place to start."
+AB = "Check or Change Your Account", http://accounts.msn.com/default.asp,,,"Change your account status. Change your password. Review your billing statement."
+Feedback= "Send Us Your Feedback", http://memberservices.msn.com/metro/default.asp?command=feedback,,,"Tell us what you like and don't like. Make suggestions. Share your ideas."
+blank = ""
+Help = "Help && Support", http://memberservices.msn.com/metro/default.asp?command=help,,,"Get answers to your questions and help with problems."
+blank = ""
+Promo = "Hot Offers", http://hotoffers.msn.com/,,,"MSN helps you save money!"
+MS = "Microsoft on the Web", [MSFT]
+CSmem = "Help for CompuServe Members", http://welcome.msn.com/csmembers/ # do we want this
+About = "About MSN Program Viewer", <about>,,,"Check the version of your MSN software."
+
+[MSFT]
+msh = "Microsoft Home Page", http://www.microsoft.com/,,,"The Microsoft Corporate Home Page with information about all Microsoft products."
+free = "Free Stuff", http://www.microsoft.com/ie/download/,,,"Tools and utilities that enhance Microsoft Internet Explorer."
+Prod = "Internet Explorer Product News", http://www.microsoft.com/ie/,,,"News about Microsoft's Internet browser."
+Ols = "Internet Explorer Online Support", http://www.microsoft.com/iesupport/,,,"Help with Microsoft Internet Explorer."
+
+[Channel1] 
+Show1 = 

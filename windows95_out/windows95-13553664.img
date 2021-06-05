@@ -1,0 +1,126 @@
+ms\DMAChannel,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMAChannel,type,,int
+HKR,Ndi\params\DMAChannel,default,,1
+HKR,NDI\params\DMAChannel,min,,1
+HKR,NDI\params\DMAChannel,max,,3
+HKR,NDI\params\DMAChannel,step,,1
+HKR,NDI\params\DMAChannel,flag,1,10,00,00,00
+HKR,NDI\params\DMAChannel,optional,,1
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,12
+HKR,NDI\params\MaxTransmits,min,,8
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+; DataTransfer
+HKR,NDI\params\DataTransfer,ParamDesc,,"Data Transfer Mode"
+HKR,NDI\params\DataTransfer,flag,1,10,00,00,00
+HKR,NDI\params\DataTransfer,default,,pio_word
+HKR,NDI\params\DataTransfer,type,,enum
+HKR,NDI\params\DataTransfer\enum,block_dma,,block_dma
+HKR,NDI\params\DataTransfer\enum,demand_dma,,demand_dma
+HKR,NDI\params\DataTransfer\enum,single_dma,,single_dma
+HKR,NDI\params\DataTransfer\enum,pio_word,,pio_word
+HKR,NDI\params\DataTransfer\enum,pio_byte,,pio_byte
+; XmitBufs
+HKR,NDI\params\XmitBufs,ParamDesc,,"Transmit Buffers"
+HKR,NDI\params\XmitBufs,flag,1,10,00,00,00
+HKR,NDI\params\XmitBufs,type,,int
+HKR,Ndi\params\XmitBufs,default,,2
+HKR,NDI\params\XmitBufs,min,,1
+HKR,NDI\params\XmitBufs,max,,2
+HKR,NDI\params\XmitBufs,step,,1
+HKR,NDI\params\Transceiver,ParamDesc,,"Transceiver Location"
+HKR,NDI\params\Transceiver,flag,1,30,00,00,00
+HKR,NDI\params\Transceiver,default,,onboard
+HKR,NDI\params\Transceiver,type,,enum
+HKR,NDI\params\Transceiver\enum,external,,external
+HKR,NDI\params\Transceiver\enum,onboard,,onboard
+
+; Install NDIS3
+[*PNP80F3.ndis3]
+CopyFiles=*PNP80F3.ndis3.CopyFiles
+[*PNP80F3.ndis3.CopyFiles]
+elnkii.vxd
+
+; Install NDIS2
+[*PNP80F3.ndis2]
+CopyFiles=*PNP80F3.ndis2.CopyFiles
+[*PNP80F3.ndis2.CopyFiles]
+elnkii.dos
+
+; Install ODI
+[3C503.odi]
+CopyFiles=3C503.odi.CopyFiles
+[3C503.odi.CopyFiles]
+3C503.com
+
+;****************************************************************************
+; 3Com elnk3 base section
+;****************************************************************************
+[elnk3.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,elnk3.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"ELNK3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"ELNK3$"
+HKR,NDIS\NDIS2,FileName,,"elnk3.dos"
+HKR,NDIS\ODI,DriverName,,"3C5X9,3c509"
+HKR,NDIS\ODI,FileName,,"3c5X9.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"elnk3.ndis3"
+HKR,Ndi\Install,ndis2,,"elnk3.ndis2"
+;HKR,Ndi\Install,odi,,"3c5X9.odi"
+; Fix ISAPNP problem
+HKLM,System\CurrentControlSet\Services\VxD\ISAPNP,RDPOverRide,3,74,02
+
+[elnk3.params]
+; Resources
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,flag,1,30,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\MaxTransmits,default,,6
+HKR,NDI\params\MaxTransmits,min,,2
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+HKR,NDI\params\MaxTransmits,optional,,1
+
+; Install NDIS3
+[ELNK3.ndis3]
+CopyFiles=elnk3.ndis3.CopyFiles
+[elnk3.ndis3.CopyFiles]
+elnk3.vxd
+
+; Install NDIS2
+[ELNK3.ndis2]
+CopyFiles=elnk3.ndis2.CopyFiles
+[elnk3.ndis2.CopyFiles]
+elnk3.dos
+
+; Install ODI
+[3C5X9.odi]
+CopyFiles=3C5X9.odi.CopyFiles
+[3C5X9.odi.CopyFiles]
+3C5X9.com
+
+;****************************************************************************
+; 3Com elnk3 3C589 PCMCIA base section
+;****************************************************************************
+[elnk3c589.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,Device

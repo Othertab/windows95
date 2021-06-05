@@ -1,0 +1,64 @@
+nn_Tally_MT_150/24
+"Mannesmann Tally MT 150/9"       = MANTAL9.DRV,Mannesmann_Tally_MT_150/9
+"Mannesmann Tally MT 151/24"      = MANTAL24.DRV,Mannesmann_Tally_MT_151/24
+"Mannesmann Tally MT 151/9"       = MANTAL9.DRV,Mannesmann_Tally_MT_151/9
+"Mannesmann Tally MT 230/24"      = MANTAL24.DRV,Mannesmann_Tally_MT_230/24
+"Mannesmann Tally MT 230/18"      = MANTAL9.DRV,Mannesmann_Tally_MT_230/18
+"Mannesmann Tally MT 230/9"       = MANTAL9.DRV,Mannesmann_Tally_MT_230/9
+"Mannesmann Tally MT 290"         = MANTAL9.DRV,Mannesmann_Tally_MT_290
+"Mannesmann Tally MT 330"         = MANTAL24.DRV,Mannesmann_Tally_MT_330
+"Mannesmann Tally MT 340"         = MANTAL9.DRV,Mannesmann_Tally_MT_340
+"Mannesmann Tally MT 350"         = MANTAL24.DRV,Mannesmann_Tally_MT_350
+"Mannesmann Tally MT 360"         = MANTAL24.DRV,Mannesmann_Tally_MT_360
+"Mannesmann Tally MT 730/735"     = HPPCL.DRV,Mannesmann_Tally_MT_730/735
+"Mannesmann Tally MT 904 Plus"    = HPPCL5MS.DRV,Mannesmann_Tally_MT_904_Plus
+"Mannesmann Tally MT 908"         = HPPCL5MS.DRV,Mannesmann_Tally_MT_908
+"Mannesmann Tally MT Lite"        = MTLITE.DRV,Mannesmann_Tally_MT_Lite
+"Mannesmann Tally T7010"          = JP350.DRV,Mannesmann_Tally_T7010
+"Mannesmann Tally T7018"          = JP350.DRV,Mannesmann_Tally_T7018
+"Mannesmann Tally T7040 (Mono)"   = JP350.DRV,Mannesmann_Tally_T7040_(Mono)
+"Mannesmann Tally T7040 (Color)"  = JP350.DRV,Mannesmann_Tally_T7040_(Color)
+"Mannesmann Tally T9005"          = HPPCL.DRV,Mannesmann_Tally_T9005
+"Mannesmann Tally T9017"          = HPPCL5MS.DRV,Mannesmann_Tally_T9017
+
+[Microtek]
+"Microtek TrueLaser"              = MT_TI101.SPD,Microtek_TrueLaser
+
+[Minolta]
+"Minolta SP 3000"                 = HPPCL5MS.DRV,Minolta_SP_3000
+"Minolta SP 3500"                 = HPPCL5MS.DRV,Minolta_SP_3500
+
+[NEC]
+"NEC Colormate PS"                = NCOL_519.SPD,NEC_Colormate_PS
+"NEC Colormate PS/40"             = NCCPS401.SPD,NEC_Colormate_PS/40
+"NEC Colormate PS/80"             = NCCPS801.SPD,NEC_Colormate_PS/80
+"NEC Jetmate 400"                 = JP350.DRV,NEC_Jetmate_400
+"NEC Jetmate 800"                 = JP350.DRV,NEC_Jetmate_800
+"NEC Pinwriter CP6"               = NEC24PIN.DRV,NEC_Pinwriter_CP6
+"NEC Pinwriter CP7"               = NEC24PIN.DRV,NEC_Pinwriter_CP7
+"NEC Pinwriter P2plus"            = NEC24PIN.DRV,NEC_Pinwriter_P2plus
+"NEC Pinwriter P5XL"              = NEC24PIN.DRV,NEC_Pinwriter_P5XL
+"NEC Pinwriter P6"                = NEC24PIN.DRV,NEC_Pinwriter_P6
+"NEC Pinwriter P6plus"            = NEC24PIN.DRV,NEC_Pinwriter_P6plus
+"NEC Pinwriter P7"                = NEC24PIN.DRV,NEC_Pinwriter_P7
+"NEC Pinwriter P7plus"            = NEC24PIN.DRV,NEC_Pinwriter_P7plus
+"NEC Pinwriter P9XL"              = NEC24PIN.DRV,NEC_Pinwriter_P9XL
+"NEC Pinwriter P20"               = NEC24PIN.DRV,NEC_Pinwriter_P20
+"NEC Pinwriter P30"               = NEC24PIN.DRV,NEC_Pinwriter_P30
+"NEC Pinwriter P60"               = NEC24PIN.DRV,NEC_Pinwriter_P60
+"NEC Pinwriter P70"               = NEC24PIN.DRV,NEC_Pinwriter_P70
+"NEC Pinwriter P90"               = NEC24PIN.DRV,NEC_Pinwriter_P90
+"NEC Pinwriter P2200"             = NEC24PIN.DRV,NEC_Pinwriter_P2200
+"NEC Pinwriter P3200"             = NEC24PIN.DRV,NEC_Pinwriter_P3200
+"NEC Pinwriter P3300"             = NEC24PIN.DRV,NEC_Pinwriter_P3300
+"NEC Pinwriter P5200"             = NEC24PIN.DRV,NEC_Pinwriter_P5200
+"NEC Pinwriter P5300"             = NEC24PIN.DRV,NEC_Pinwriter_P5300
+"NEC Pinwriter P6200"             = NEC24PIN.DRV,NEC_Pinwriter_P6200
+"NEC Pinwriter P6300"             = NEC24PIN.DRV,NEC_Pinwriter_P6300
+"NEC Pinwriter P9300"             = NEC24PIN.DRV,NEC_Pinwriter_P9300
+"NEC Silentwriter LC 860 Plus"    = HPPCL.DRV,NEC_Silentwriter_LC_860_Plus
+"NEC Silentwriter LC 890"         = N890_470.SPD,NEC_Silentwriter_LC_890
+"NEC Silentwriter LC 890XL"       = N890X505.SPD,NEC_Silentwriter_LC_890XL
+"NEC Silentwriter S102"           = HPPCL5MS.DRV,NEC_Silentwriter_S102
+"NEC Silentwriter2 Model 90"      = N2090522.SPD,NEC_Silentwriter2_Model_90
+"NEC Silentwriter2 290"           = N2290520.SPD

@@ -1,0 +1,99 @@
+lled and want to remove it, 
+   restart your computer and then complete the following steps. 
+   (It is recommended that you print this file before restarting 
+   your computer.)
+6. When you see the Boot Manager menu, choose to restart your 
+   computer in MS-DOS mode, and then run FDisk.
+7. Make the MS-DOS partition (C) your active partition.
+8. Quit Fdisk, and then restart your computer.
+
+To reinstall Boot Manager after you install Windows 95:
+1. From the Windows 95 Start menu, click Run ,and then type 
+   FDISK.
+2. Choose Set Active Partition.
+3. Enter the number of the Boot Manager Partition. This partition 
+   is the 1MB Non-MS-DOS partition usually placed at the top or 
+   bottom.
+4. Quit FDISK, and then restart your computer as instructed. You 
+   can now start OS/2 at any time and change labels of partitions 
+   in Boot Manager through the OS/2 FDISK program.
+
+NOTE: OS/2 cannot access data stored in FAT32 partitions.
+
+[Q: How do I make copies of my original disks to install from?]
+
+The DMF disk format is not compatible with the DISKCOPY or COPY 
+commands and increases the amount of data stored on a standard 
+1.44/3.5" disk. There is no way to make a direct copy of these 
+disks.
+
+
+[Q: Can I make floppy disk images from the CD?]
+
+The CD-ROM contains cabinet files (*.cab) files that are 2 MB 
+each and cannot be copied onto floppy disks. 
+
+
+[Q: Setup stops responding while it is gathering information. 
+    How can I bypass the problem?]
+
+Occasionally, Setup stops while detecting a device on the computer. 
+To work around this:
+
+1. Turn the computer off for 10 seconds, and then turn it back on.
+2. Rerun Setup, and then choose Safe Recovery to bypass the problem 
+   area.
+3. Setup continues, bypassing the detection problem it encountered 
+   on the previous attempt.
+4. If this happens again, repeat steps 1 through 3 until Windows 95 
+   setup process is compete. 
+
+NOTE: If you have already run Safe Recovery several times, another 
+option is to manually specify the hardware on your computer to 
+minimize the chance of Setup stopping, since Setup will detect 
+only the hardware you specify.
+
+
+[Q: Should I set up a separate partition to install Windows 95?]
+
+As with any software package, it is always a good idea to have 
+a backup before installing it. Windows 95 has been tested on 
+thousands of computers on many system configurations with a 
+very high success rate, so we are confident that you will have 
+few, if any, problems installing Windows 95.
+
+You can enable an uninstall feature during Setup. Uninstall copies 
+your previous MS-DOS and Windows 3.x versions and keeps a log, so 
+that Windows 95 can be removed and the previous files returned to 
+where they were before Windows 95 was installed.
+
+Windows 95 does not require its own partition; however, it can 
+be installed if you want to dual boot between your current 
+Windows 3.x installation and Windows 95.
+
+NOTES:
+
+* Windows 95 version 4.00.950B does not support dual booting 
+  to a previous MS-DOS/Windows 3.x installation. To check the 
+  Windows 95 version number, right-click the My Computer icon 
+  on your desktop, click Properties, and then click the General 
+  tab.
+
+* If you received Windows 95 preinstalled on your computer, the
+  uninstall feature is not available.
+
+[Q: Should I install into my existing Windows directory or a 
+    different directory?]
+
+Preserving your existing installation of Windows and upgrading 
+on top of it is highly recommended as Setup is using your existing 
+configuration files (Config.sys, Autoexec.bat, System.ini, Win.ini, 
+Protocol.ini) for more accurate detection and installation. The 
+advantage to installing in your existing Windows directory is that 
+the previous settings and applications are used in the new 
+installation. 
+
+The advantage to installing Windows 95 into a different directory 
+is that it preserves your previous DOS/Windows configuration, 
+allowing you to dual boot between versions. The disadvantage is 
+that all Windows applica

@@ -1,0 +1,96 @@
+he country from which you are dialing.	
+Area/City Code			Your area or city code.	
+Exchange Code(US only)		Your local exchange code. This is the first 
+				  three digits of your local phone number.				 
+Language Id			The language of the Windows software currently 
+				  installed on your computer.	
+Operating Platform		The operating system installed on your computer 
+				  (for example, Windows 95, Windows 3.1, 
+				  Windows NT, Macintosh)	
+Operating Platform Version	The version of your operating system.	
+Processor Arch			The processor architecture of your computer if 
+				  it is running Windows NT (for example, x86, 
+				  Alpha, MIPS, or PowerPC).
+Product Code 			The software product you are using to connect 
+				  to the Internet Referral Service.	
+Promotional Code		The promotional offer (if any) in which you are 
+				  participating.	
+Manufacturer Code		The manufacturer of your computer, if the 
+				  manufacturer includes any special offers.
+Signup Version			The version of the Internet Connection wizard  
+				  your computer is running.
+
+
+INSTALLING PC CARD (PCMCIA) MODEMS
+==================================
+
+If you are using a PC card (PCMCIA) modem for your Dial-up Networking
+connection to the Internet and have not yet installed the modem,
+you may have to enable Windows 95 PC card socket support before 
+running the Internet Setup wizard.  
+
+To enable PCMCIA socket support:
+
+1. Click the Start button, point to Settings, and then click 
+   Control Panel.
+
+2. Double-click the PC Card (PCMCIA) icon to start the PC Card 
+   Wizard, and then follow the instructions on your screen.
+
+   NOTE: If you can't find the PC Card icon, you may need to install 
+         the PC card (PCMCIA) drivers. To do this, double-click the 
+         Add New Hardware icon, click No, click PCMCIA Support from 
+         the list of hardware items, and then follow the instructions 
+         on your screen.
+
+
+USING A LOCAL AREA NETWORK PROXY OR FIREWALL
+============================================
+
+If you want to access the Internet by using your local area network 
+(LAN) through a proxy or firewall (typically used to protect your LAN 
+from being accessed by others on the Internet), follow these 
+steps:
+
+1. Install the TCP/IP protocol on your computer by carrying out the 
+   following steps. This is the protocol your computer will use to 
+   connect to the Internet.
+
+   1. In Control Panel, double-click the Network icon.
+   2. Click Add, click Protocol, and then click Add.
+   3. In the Manufacturers area, click Microsoft.
+   4. In the Network Protocols area, click TCP/IP, and then click OK.
+   5. In the list of components, click your network adapter, and then 
+      click Properties.
+   6. Click the Bindings tab, and then select the check box next to 
+      TCP/IP.
+
+   NOTE: Currently, the Internet Connection Wizard does not 
+         automatically install the TCP/IP protocol for LAN setups.
+
+2. Run the Internet Connection Wizard.
+
+   To run the wizard, click the Start menu, and then click Help. 
+   In the Index, double-click "Internet," and then select "Quick 
+   and easy way to set up an Internet connection."
+
+3. Choose the Manual setup option, and then follow the instructions 
+   on your screen.
+
+4. When you are prompted to specify "How to Connect," click Connect 
+   Using My Local Area Network.
+
+5. When you are prompted to do so, make sure that you select the 
+   Use Proxy Server check box.
+
+6. Type the http server address and the port number for the computer 
+   you want to use as the proxy server in the Proxy Server box. The 
+   following is an example of a proxy server address and port number:
+
+      http://myproxy.mycompany.com:80
+
+   In the Bypass Proxy On box, type the names of the computers, 
+   domains, and ports on the Internet that, when accessed, will 
+   not go through the proxy server. Separate each item you type 
+   with a comma. If you want to bypass the proxy when accessing 
+   all local computers (computers on your LAN), type "<local

@@ -1,0 +1,51 @@
+
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"MajorErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\OperationalState,"WarningErrorCount",1,00
+
+;  Component ID group
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\ComponentID,"Verify",1,02
+
+;  Create lists of links under system component to other components.
+;
+HKLM,DesktopManagement\Data\2,",FloppyDiskControllers",,"deskmgmt.dll,DM_Query_Floppy_Disk_Controllers"
+HKLM,DesktopManagement\Data\2,",HardDiskControllers",,"deskmgmt.dll,DM_Query_Hard_Disk_Controllers"
+HKLM,DesktopManagement\Data\2,",SCSIControllers",,"deskmgmt.dll,DM_Query_SCSI_Controllers"
+HKLM,DesktopManagement\Data\2,",Disks",,"deskmgmt.dll,DM_Query_Physical_Disk"
+HKLM,DesktopManagement\Data\2,",Keyboards",,"deskmgmt.dll,DM_Query_Keyboards"
+HKLM,DesktopManagement\Data\2,",Mice",,"deskmgmt.dll,DM_Query_Mice"
+HKLM,DesktopManagement\Data\2,",NetworkAdapters",,"deskmgmt.dll,DM_Query_Netcards"
+HKLM,DesktopManagement\Data\2,",NetworkClients",,"deskmgmt.dll,DM_Query_Network_Clients"
+HKLM,DesktopManagement\Data\2,",NetworkProtocols",,"deskmgmt.dll,DM_Query_Network_Protocols"
+HKLM,DesktopManagement\Data\2,",NetworkServices",,"deskmgmt.dll,DM_Query_Network_Services"
+HKLM,DesktopManagement\Data\2,",Power",,"deskmgmt.dll,DM_Query_Power_Info"
+HKLM,DesktopManagement\Data\2,",ParallelPorts",,"deskmgmt.dll,DM_Query_Parallel_Ports"
+; HKLM,DesktopManagement\Data\2,",PhysicalMemory",,"deskmgmt.dll,DM_Query_Memory_Info"
+HKLM,DesktopManagement\Data\2,",SerialPorts",,"deskmgmt.dll,DM_Query_Serial_Ports"
+HKLM,DesktopManagement\Data\2,",SystemResourcesDescription",,"deskmgmt.dll,DM_Query_System_Resource_Desc_Info"
+HKLM,DesktopManagement\Data\2,",VideoControllers",,"deskmgmt.dll,DM_Query_Video_Controllers"
+HKLM,DesktopManagement\Data\2,",Modems",,"deskmgmt.dll,DM_Query_Modems"
+
+;  Instrumentation of System component - goes directly under DM\Data\2.
+;  
+HKLM,DesktopManagement\Data\2,",Accessibility",,"deskmgmt.dll,DM_Query_Accessibility_Info"
+HKLM,DesktopManagement\Data\2\SystemBIOS,",SystemBIOS",,"deskmgmt.dll,DM_Query_BIOS_Info"
+HKLM,DesktopManagement\Data\2\Processor,",ProcessorType",,"deskmgmt.dll,DM_Query_CPU_Info"
+HKLM,DesktopManagement\Data\2\Processor,",ProcessorFamily",,"deskmgmt.dll,DM_Query_CPU_Info"
+HKLM,DesktopManagement\Data\2\Processor,",ProcessorModel",,"deskmgmt.dll,DM_Query_CPU_Info"
+HKLM,DesktopManagement\Data\2\Processor,",ProcessorStepping",,"deskmgmt.dll,DM_Query_CPU_Info"
+HKLM,DesktopManagement\Data\2\Processor,",ProcessorFeature",,"deskmgmt.dll,DM_Query_CPU_Info"
+HKLM,DesktopManagement\Data\2\Processor,",ProcessorRole",,"deskmgmt.dll,DM_Query_CPU_Info"
+
+HKLM,DesktopManagement\Data\2\LogicalDrives,",LogicalDriveName",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",LogicalDriveVolumeLabel",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",LogicalDriveVolumeSerialNumber",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",LogicalDriveVolumeFlags",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",LogicalDriveFileSystem",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",NumberOfLogicalSectorsPerCluster",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",LogicalSectorSize",,"deskmgmt.dll,DM_Query_Logical_Disk_Info"
+HKLM,DesktopManagement\Data\2\LogicalDrives,",NumberOfLogic

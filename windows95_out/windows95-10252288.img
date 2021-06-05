@@ -1,0 +1,115 @@
+i, group8,, """%Popup_DESC%"""
+setup.ini, group8,, """%NetWatch_DESC%"""
+setup.ini, group8,, """%LogOnOFF_DESC%"""
+setup.ini, group8,, """%Chat_DESC%"""
+setup.ini, group8,, """%RNA_DESC%"""
+setup.ini, group8,, """%WinMeter_DESC%"""
+; Always delete English versions of WfW links (do not localize)
+setup.ini, progman.groups,, "group8_USA=Network"
+setup.ini, group8_USA,, """Network Setup"""
+setup.ini, group8_USA,, """Message Popup Utility"""
+setup.ini, group8_USA,, """Net Watcher"""
+setup.ini, group8_USA,, """Log On/Off"""
+setup.ini, group8_USA,, """Chat"""
+setup.ini, group8_USA,, """Remote Access"""
+setup.ini, group8_USA,, """WinMeter"""
+;Add ClipBook Viewer to Accessories Group:
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, group4,, """%ClipBook_DESC%"",clipbrd.exe"
+
+[win3.inis]
+;Add Clipboard Viewer to Accessories Group:
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, group4,, """%Clipbd_DESC%"",clipbrd.exe"
+
+[win3.addreg]
+;Mark Clipboard Viewer as installed:
+HKLM,%KEY_OPTIONAL%\ClipBrd,Installed,,"1"
+
+[win3.copy]
+;Copy updated clipbrd.exe to user's windows dir when upgrading win 3.x (Not wfw):
+clipbrd.exe
+
+[win3.copy.hlp]
+clipbrd.cnt
+clipbrd.hlp
+
+[win3.del]
+clipbrd.hlp
+
+
+[win311.copy]
+;Copy down ClipBook Viewer
+clipbrd.exe,clipbook.exe,clipexe.001
+clipsrv.exe
+
+
+[win311.copy.hlp]
+clipbrd.cnt,clipbook.cnt,clipcnt.001
+clipbrd.hlp,clipbook.hlp,cliphlp.001
+
+[win311.del]
+clipbrd.hlp
+
+[win311.copy.sys]
+vpmtd.386
+
+[ren.cleanup.files]
+;Backup reg.dat:
+reg.---,reg.dat
+
+[WinNT.inis]
+;Updates Description string if user is running Dual-Boot:
+; (review -- Determine if we should localized "Operating Systems")
+%30%boot.ini,"Operating Systems","%30%=""MS-DOS""","%30%=""%MSWin95_DESC%""",1
+
+[English.LinkCleanup.Inis]
+setup.ini,progman.groups,,"group0_USA="
+setup.ini,progman.groups,,"group1_USA=StartUp"
+setup.ini,progman.groups,,"group3_USA=Main"
+setup.ini,progman.groups,,"group4_USA=Accessories"
+setup.ini,progman.groups,,"group6_USA=Accessories\Games"
+setup.ini,progman.groups,,"group11_USA=Accessories\System Tools"
+setup.ini,progman.groups,,"group12_USA=Accessories\Multimedia"
+setup.ini,progman.groups,,"groupFax_USA=Accessories\Fax"
+setup.ini,progman.groups,,"desktop_USA=""..\..\desktop"""
+setup.ini,progman.only,,"PMGroup3_USA=Main"
+setup.ini,group0_USA,,"%SendNewMessage_WIN95%"
+setup.ini,group0_USA,,"%SendNewMessageShort_WIN95%"
+setup.ini,group0_USA,,"%OpenMailbox_WIN95%"
+setup.ini,group0_USA,,"%WinExplorer_WIN95%"
+setup.ini,group0_USA,,"%WinExplorerShort_WIN95%"
+setup.ini,group0_USA,,"%MSDOSPrmpt_WIN95%"
+setup.ini,group0_USA,,"%MSDOSPrmptShort_WIN95%"
+setup.ini,group0_USA,,"%MSNDesc_WIN95%"
+setup.ini,group0_USA,,"%MSNDescShort_WIN95%"
+setup.ini,group1_USA,,"%ProgMan_WIN95%"
+setup.ini,group4_USA,,"%WORDPAD_WIN95%"
+setup.ini,group4_USA,,"%Notepad_WIN95%"
+setup.ini,group4_USA,,"%CharMap_WIN95%"
+setup.ini,group4_USA,,"%CharMapShort_WIN95%"
+setup.ini,group4_USA,,"%Dialer_WIN95%"
+setup.ini,group4_USA,,"%DialerShort_WIN95%"
+setup.ini,group4_USA,,"%Calc_WIN95%"
+setup.ini,group4_USA,,"%CalcShort_WIN95%"
+setup.ini,group4_USA,,"%ClipShort_WIN95%"
+setup.ini,group4_USA,,"%Paint_WIN95%"
+setup.ini,group4_USA,,"%HypTrm_WIN95%"
+setup.ini,group4_USA,,"%HypTrmShort_WIN95%"
+setup.ini,group4_USA,,"%Signup_Link_WIN95%"
+setup.ini,group4_USA,,"%OLR_Link_WIN95%"
+setup.ini,group4_USA,,"%Directcc_WIN95%"
+setup.ini,group4_USA,,"%DirectccShort_WIN95%"
+setup.ini,group4_USA,,"%Remote_WIN95%"
+setup.ini,group4_USA,,"%RemoteShort_WIN95%"
+setup.ini,groupFax_USA,,"%FAXCOVER_Link_WIN95%"
+setup.ini,groupFax_USA,,"%FAXCOVER_LinkShort_WIN95%"
+setup.ini,groupFax_USA,,"%CallaFaxService_WIN95%"
+setup.ini,groupFax_USA,,"%CallaFaxServiceShort_WIN95%"
+setup.ini,groupFax_USA,,"%SendNewFax_WIN95%"
+setup.ini,groupFax_USA,,"%SendNewFaxShort_WIN95%"
+setup.ini,groupFax_USA,,"%FaxView_WIN95%"
+setup.ini,group6_USA,,"%Minesweeper_WIN95%"
+setup.ini,group6_USA,,"%MinesweeperShort_WIN95%"
+setup.ini,group6_USA,,"%Hearts_WIN95%"
+setup.ini,group6_USA,,"%FreeCe

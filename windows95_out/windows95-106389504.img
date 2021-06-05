@@ -1,0 +1,102 @@
+using your shared program while you do not 
+  have control of the cursor, press ESC. 
+  
+  To stop someone from using your shared program while you do 
+  have control of the cursor, click the Work Alone button.
+  
+  It is not recommended that you leave your computer unattended 
+  while sharing an application and collaborating.
+
+- Some software installation programs will not function properly 
+  while Microsoft NetMeeting is running.
+
+- You must have a 32-bit TCP/IP stack and Windows Sockets interface 
+  to use Microsoft NetMeeting with TCP/IP. Microsoft NetMeeting has 
+  been tested with the 32-bit TCP/IP and Windows sockets built into 
+  Windows 95.
+
+- If you want to call someone by using a modem, and you must dial 
+  a 9 to get an outside line, make sure you type a "-" in front of 
+  the 9 at the beginning of the phone number. 
+  
+  For example, you might specify the following number:
+
+	-9,7034501
+
+- Application Sharing, Whiteboard, and Chat might not work properly 
+  between computers with different language settings and keyboard 
+  layouts.
+
+- Microsoft NetMeeting supports using Windows 95 system policies to 
+  set default configurations in a corporate environment.  
+
+  Microsoft NetMeeting system policies are documented, and a 
+  system policy file is included in the Internet Explorer 
+  Administration Kit.
+
+- NetMeeting might hang when it starts up if there are damaged 
+  fonts in your fonts folder.  
+
+- NetMeeting does not function properly over SLIRP connections or 
+  other simulated SLIP/PPP connections.
+
+
+PLACING A CALL
+==============
+
+You can place Microsoft NetMeeting calls to multiple users. Any 
+person in a meeting can place Microsoft NetMeeting calls to 
+other people. In addition, other people can join a Microsoft 
+NetMeeting call in progress by calling one of the participants.
+
+When you run Microsoft NetMeeting, you are automatically logged 
+on to a User Location Server. This server maintains a list of the 
+people currently running Microsoft NetMeeting and their IP addresses.
+
+ 
+You can use this service to locate people to meet with by 
+clicking Call, then clicking Directory; or, if the person you want
+to call is logged on to the same server as you, you can call the 
+person by typing their e-mail address into the Place A Call box in 
+the NetMeeting window.  You can also use the Place A Call box in the
+NetMeeting window to type either the computer name or modem phone 
+number of the person you want to call.
+
+In the Directory window, the Refresh button refreshes the list of
+people logged on to the User Location Server.  The Stop button 
+stops opening the list of people logged on to the User Location 
+Server.
+
+Warnings and Known Bugs
+-----------------------
+- Audio calls can be made only over TCP/IP and can include only 
+  two people.
+
+- If you cannot connect to someone by using their computer name, 
+  try using their IP address.
+
+- IPX meetings can be started if both people do the following:
+
+  - Have Microsoft IPX/SPX-Compatible Protocol installed.
+
+  - Call using the Advanced Calling dialog box, choosing the IPX 
+    protocol, and entering into the Address box the full 8:12 
+    net number and Ethernet address of the intended recipient of 
+    the call--for example, 00002702:112233445566.
+
+- NetMeeting does not work over a direct cable connection between 
+  computers.
+
+- If you click someone's name in a User Location Service (ULS) 
+  directory web page and get an error message saying that the file 
+  type is unrecognized, you need to configure your browser to associate 
+  the ULS directory file with Microsoft NetMeeting.  
+
+  For instructions on how to do this, refer to your browser's 
+  documentation. You will need the following information:
+  MIME file type: "text/iuls"
+  Command line: "rundll32.exe msconf.dll,NewMediaPhone %l"
+
+- Some ISDN devices are configured to automatically connect to
+  the network. This might cause the ISDN device to try to connect
+  to the network while NetMeeting is running.  To 

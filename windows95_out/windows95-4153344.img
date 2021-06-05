@@ -1,0 +1,40 @@
+		
+580				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Start Page"",""http://www.home.msn.com"""
+581				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Cache_Update_Frequency"",""Once_Per_Session"""
+590		Styles		Group	591					
+591				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Styles"",""Default_Style_Sheet"",""SerifMedium"""					
+600		Settings		Group	601 602 603 604					
+601				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Settings"",""Anchor Color"",""0,0,255"""					
+602				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Settings"",""Anchor Color Visited"",""128,0,128"""					
+603				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Settings"",""Background Color"",""192,192,192"""					
+604				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Settings"",""Text Color"",""0,0,0"""					
+610		TypedURLs		Group	611					
+611				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\TypedURLs"",""url1"",""http://www.home.msn.com"""					
+660										
+661		System Info		Group	670 690 700 720 740					
+670		Main		Group	671 672 673 674 675 678 679 680 681 682 683 684					
+671				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Main"",""Enable_Disk_Cache"",""yes"""					
+672				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Main"",""History_Directory"",""%502\history"""					
+673				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Main,History_Num_Places,300,4"""					
+674				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Main"",""Cache_Directory"",""%502\cache"""					
+675				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Main,Cache_Percent_of_Disk,10,4"""					
+678				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Main"",""Delete_Temp_Files_On_Exit"",""yes"""					
+679				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Main,History_Expire_Days, 4294967295,4"""					
+680				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Main,Anchor_Visitation_Horizon,1,4"""					
+681				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Main"",""Use_Async_DNS"",""yes"""					
+682				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Main,Placeholder_Width,26,4"""					
+683				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Main,Placeholder_Height,26,4"""					
+684				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Main"",""Default_Page_URL"",""http://www.home.msn.com"""					
+690		Document Caching		Group	691					
+691				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Document Caching,Number,4,4"""					
+700		Image Caching		Group	701					
+701				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Image Caching,Number,4,4"""					
+720		PageSetup		Group	721 722 723 724					
+721				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\PageSetup"",""margin_left"",""0.750000"""					
+722				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\PageSetup"",""margin_top"",""0.750000"""					
+723				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\PageSetup"",""margin_right"",""0.750000"""					
+724				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\PageSetup"",""margin_bottom"",""0.750000"""					
+740		SecurityProtocols		Group	741					
+741				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\SecurityProtocols"",""Basic"",""Basic_Load,secbasic.dll"""					
+750										
+751		Fonts		Group	760 

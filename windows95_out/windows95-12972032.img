@@ -1,0 +1,158 @@
+Trio64V+
+%S3765.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8811&REV_44           ; S3 Trio64V+
+%S3765.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8811&REV_52           ; S3 Trio64V+
+%S3765.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8811&REV_53           ; S3 Trio64V+
+%S3765.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8811&REV_54           ; S3 Trio64V+
+%PCI\VEN_5333&DEV_883D.DeviceDesc%=S3V,PCI\VEN_5333&DEV_883D   ; S3 ViRGE/VX PCI"
+%PCI\VEN_5333&DEV_5631.DeviceDesc%=S3V,PCI\VEN_5333&DEV_5631   ; S3 ViRGE PCI
+;%PCI\VEN_5333&DEV_8812.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8812  ; S3 Aurora64V+
+;%PCI\VEN_5333&DEV_8814.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8814  ; S3 Trio64UV+
+;%PCI\VEN_5333&DEV_8815.DeviceDesc%=S3MM,PCI\VEN_5333&DEV_8815  ; S3 Aurora128
+
+[Mfg.Spider]
+%Spi32VLB%=Cirrus,, *PNP0905
+%Spi32Pls%=Cirrus,, *PNP0905
+%Spi64%=Cirrus,, *PNP0905
+%Tarantula64%=S3,, *PNP0913
+
+[Mfg.STB]
+%ErgoMCX%=TsengW32,, *PNP0912
+%Horizon%=Cirrus,, *PNP0905
+%HorizonPlus%=CirrusMemMap,, *PNP0914
+%Lightspeed%=TsengW32,, *PNP0912
+%MVP-2X%=TsengW32,, *PNP0912
+%MVP-4X%=TsengW32,, *PNP0912
+%Nitro%=CirrusMemMap,, *PNP0914
+%Pegasus%=S3,, *PNP0913
+%PGraphPro%=S3,, *PNP0913
+%PGraphVL24%=S3,, *PNP0913
+
+[Mfg.Trident]
+%*PNP0903.DeviceDesc%=Trident, *PNP0903
+%*PNP0903.DeviceDesc%=Trident,,PCI\VEN_1023&DEV_9660
+%PCI\VEN_1023&DEV_9420.DeviceDesc%=Trident, PCI\VEN_1023&DEV_9420
+
+[Mfg.Tseng]
+%*PNP0906.DeviceDesc%=ET4000, *PNP0906, *PNP0912, *PNP091A
+%*PNP0912.DeviceDesc%=TsengW32, *PNP0912
+%PCI\VEN_100C&DEV_3202.DeviceDesc%=TSENGW32, PCI\VEN_100C&DEV_3202
+%PCI\VEN_100C&DEV_3206.DeviceDesc%=TSENGW32, PCI\VEN_100C&DEV_3206
+%PCI\VEN_100C&DEV_3207.DeviceDesc%=TSENGW32, PCI\VEN_100C&DEV_3207
+
+[Mfg.WD]
+%*PNP0907.DeviceDesc%=WD, *PNP0907
+%*PNP0907.DeviceDesc%=WD, *PNP0908
+%WD512%=WD512,, *PNP0907, *PNP0908
+
+[Mfg.Weitek]
+%PCI\VEN_100E&DEV_9001.DeviceDesc%=UNSUPPORTED,NullId1,PCI\VEN_100E&DEV_9001
+%PCI\VEN_100E&DEV_9100.DeviceDesc%=UNSUPPORTED,NullId2,PCI\VEN_100E&DEV_9100
+
+[Mfg.Video7]
+%*PNP0901.DeviceDesc%=Video7, *PNP0901  ; Video Seven
+
+[Mfg.VideoLogic]
+%928Movie%=928Movie,, *PNP0913
+
+
+; Install Sections
+; ---------------------------------------------------------
+
+; -------------- Unsupported
+
+[UNSUPPORTED]
+HKR,,DevLoader,,*configmg
+
+[UNSUPPORTED.PosDup]
+*PNP0900
+
+; -------------- Obsolete utility removal sections
+
+[Diamond.Ini]
+control.ini, MMCPL,"TurboWin=*TURBOWIN.DLL",,1
+
+[Diamond.IniFields]
+win.ini, windows, load, *dcshkey.exe,,1
+
+[Orchid.RenFiles]
+orchid.cp0,  orchid.cpl
+orchidf.cp0, orchidf.cpl
+
+[STB.IniFields]
+win.ini, windows, load, *stbvisn.exe,,1
+
+; -------------- Standard PCI Graphics Adapter
+
+[PCIVID]
+DelReg=Prev.DelReg
+AddReg=PCIVID.AddReg
+
+[PCIVID.AddReg]
+HKR,,DevLoader,,*vdd
+
+; -------------- Standard Graphics Adapter (VGA)
+
+[VGA]
+CopyFiles=VGA.Copy
+DelReg=Prev.DelReg
+AddReg=VGA.AddReg
+LogConfig=VGA.LogConfig 
+
+[VGA.Copy]
+vga.drv
+
+[Prev.DelReg]
+HKR,,Ver
+HKR,,DevLoader
+HKR,,EnumPropPages
+HKR,INFO
+HKR,DEFAULT
+HKR,MODES
+HKR,CURRENT
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Display\shellex\PropertySheetHandlers\DriverPages"
+
+[VGA.AddReg]
+HKR,,Ver,,4.0
+HKR,,DevLoader,,*vdd
+HKR,DEFAULT,Mode,,"4,640,480"
+HKR,DEFAULT,drv,,vga.drv
+HKR,DEFAULT,vdd,,*vdd
+HKR,"MODES\1\640,480",drv,,framebuf.drv
+HKR,"MODES\1\640,480",vdd,,"*vdd,*vflatd"
+HKR,"MODES\4\640,480"
+
+[VGA.LogConfig]
+ConfigPriority=HARDWIRED
+IOConfig=3B0-3BB
+IOConfig=3C0-3DF
+MemConfig=A0000-AFFFF
+MemConfig=B8000-BFFFF
+MemConfig=C0000-C7FFF,D0000-D7FFF,E0000-E5FFF,E0000-E7FFF
+
+[VGA.PosDup]
+*PNP0900
+
+; -------------- Super VGA
+[SVGA]
+CopyFiles=SVGA.Copy
+DelReg=Prev.DelReg
+AddReg=SVGA.AddReg
+LogConfig=VGA.LogConfig
+
+[SVGA.Copy]
+framebuf.drv
+supervga.drv
+framebuf.dll
+
+[SVGA.AddReg]
+HKR,,Ver,,4.0
+HKR,,DevLoader,,*vdd
+HKR,DEFAULT,Mode,,"8,640,480"
+HKR,DEFAULT,drv,,framebuf.drv
+HKR,DEFAULT,vdd,,"*vdd,*vflatd"
+HKR,"MODES\4\640,480",drv,,vga.drv
+HKR,"MODES\4\640,480",vdd,,*vdd
+HKR,"MODES\4\800,600",drv,,supervga.drv
+HKR,"MODES\4\800,600",vdd,,*vdd
+HKR,"MODES\8\640,480"
+HKR,"MO

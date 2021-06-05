@@ -1,0 +1,143 @@
+within Edit, and
+is separate from the Windows Clipboard.
+
+You can also use the older Shift+Delete combination to cut text.
+@@!113!@
+Edit Copy
+
+Copies the selected region to the Edit clipboard.
+
+You can also use the older Ctrl+Ins combination to copy text.
+@@!114!@
+Edit Paste
+
+Pastes the clipboard contents (if any) at the cursor position.
+
+You can also use the older Shift+Ins combination to paste text.
+You can paste the same text more than once.
+@@!115!@
+Edit Clear
+
+Deletes current selection without copying it to the clipboard.
+@@!121!@
+Search
+
+Searches for and highlights specified text in a loaded file.
+@@!122!@
+Repeat Last Find
+
+Finds the next occurrence of the text you were searching for.
+Starts searching from where the previous occurrence was found.
+@@!123!@
+Replace
+
+Finds text and replaces it with new text.
+@@!131!@
+Split Window
+
+Opens a second edit window.  You can also open a second window
+by dragging down the title bar.
+
+You can use two windows to edit the same file, or different files.
+If the same document is being edited in both windows, then any
+editing changes made in one window also appear in the other
+window.
+@@!132!@
+Size Window
+
+Resizes the edit windows, if two windows are open.
+
+Use the Up Arrow and Down Arrow keys to resize the windows.
+Press Enter to accept the new window size, or Esc to cancel.
+
+You can also use the mouse to resize the windows, by dragging
+the title bar of the bottom window with the mouse.
+@@!133!@
+Close Window
+
+Closes the current edit window, if two windows are open.
+
+Use the mouse or the F6 key to move the cursor to the window
+you want to close.  Then click this menu item to close it.
+
+You can also use the mouse to close a window.  By dragging the
+bottom title bar off the top of the screen, you can close the top
+window, and by dragging it off the bottom of the screen, you can
+close the bottom window.
+@@!134!@
+View File
+
+Selects a loaded file to edit.
+
+Click the name of the file you want to switch to.
+
+You can also use the Alt+1...Alt+9 shortcut keys to select a file,
+or use the F8 key to move to the next loaded file.
+@@!141!@
+Settings
+
+Changes the Edit settings.
+@@!142!@
+Colors
+
+Changes the Edit screen colors.
+@@!152!@
+Edit Commands
+
+Lists the Edit keyboard commands.
+@@!153!@
+About Edit
+
+Displays information about Edit.
+@@!200!@
+File Access Errors
+
+Edit is unable to create or access the specified file, which
+might be due to the following reasons:
+
+ You may be trying to create or write to a file on a drive that
+  is read-only, such as a CD-ROM or a read-only network drive.
+ You may be trying to overwrite a file that is read-only.
+ You may be trying to access a file that is locked by another
+  user or program.
+ You may be trying to read or write to a directory name.
+@@!201!@
+Empty Drive
+
+Make sure that the disk drive has a disk in it, and that the
+drive door is closed.
+@@!202!@
+Disk Errors
+
+MS-DOS is unable to read or write to this drive.
+
+If this is a CD-ROM drive, make sure that it has a CD-ROM in it.
+
+If this is a hard drive or floppy drive, there may be problems
+with your drive.  It is recommended that you exit immediately and
+correct the problems.  They might be caused by the following:
+
+     A bad sector.
+     An incorrectly formatted or partitioned drive.
+     Hardware problems with your drive or controller.
+
+A disk repair program (such as ScanDisk) may be helpful in fixing
+the problem.  You may also want to back up your drive.
+@@!203!@
+Printer Errors
+
+Edit was unable to print to your printer, which might be
+due to the following reasons:
+
+   The device doesn't have a printer attached to it.
+   The printer is turned off, or is off-line.
+   The printer is out of paper.
+   The printer cable is loose or disconnected.
+@@!204!@
+Invalid File or Path
+
+Edit was unable to access this file or folder, which might be
+due to the following reasons:
+
+   The path name is too long or contains invalid characters.
+   The path name refers to a fol

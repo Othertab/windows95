@@ -1,0 +1,128 @@
+HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemBIOS\\BIOSVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\4]
+"Name"="BIOS ROM Size"
+"Description"="The physical size of this BIOS ROM device in kilobytes."
+"Column"="4"
+"Access"="Read-Only"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\SystemBIOS\\SystemBIOS\\BIOSROMSize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\5]
+"Name"="BIOS Starting Address"
+"Description"="The starting physical address for the memory which the BIOS occupies."
+"Column"="5"
+"Access"="Read-Only"
+"Type"="Integer64"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\SystemBIOS\\SystemBIOS\\BIOSStartingAddress"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\6]
+"Name"="BIOS Ending Address"
+"Description"="The ending physical address for the memory which the BIOS occupies."
+"Column"="6"
+"Access"="Read-Only"
+"Type"="Integer64"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\SystemBIOS\\SystemBIOS\\BIOSEndingAddress"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\7]
+"Name"="BIOS Loader Version"
+"Description"="The BIOS flash loader version number or string."
+"Column"="7"
+"Access"="Read-Only"
+"Type"="String(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemBIOS\\BIOSLoaderVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\8]
+"Name"="BIOS Release Date"
+"Description"="The BIOS release date."
+"Column"="8"
+"Access"="Read-Only"
+"Type"="Date"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemBIOS\\BIOSDate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\9]
+"Name"="Primary BIOS"
+"Description"="If true, this is the primary System BIOS."
+"Column"="9"
+"Access"="Read-Only"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\Data\\2\\SystemBIOS\\SystemBIOS\\PrimaryBIOS"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\4\9\Enum]
+"0"="False"
+"1"="True"
+
+
+;=================================
+;  System BIOS Characteristics
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\5]
+"Name"="System BIOS Characteristics"
+"Class"="DMTF|BIOS Characteristic|002"
+"Description"="This group defines the characteristics of the System BIOS."
+"Key"="1,2"
+"^INDEX"=hex:03,00,00,00
+"^ROW"="^ROWNUM|2|3|4"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\5\1]
+"Name"="BIOS Characteristic Index"
+"Description"="This is an index into the BIOS Characteristics table."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\5\2]
+"Name"="BIOS Number"
+"Description"="The BIOS number, which correlates to the BIOS Index attribute in the System BIOS group."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\5\3]
+"Name"="BIOS Characteristic"
+"Description"="The different features supported by this version of the BIOS."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemBIOSCharacteristics\\BIOSCharacteristics"
+"!0"="B;IN(0,2)(1,1)(2,4)(3,5)(4,6)(5,7)(6,8)(7,10)"
+;  Instrumentation returns:
+;  Unknown		0
+;  Other		1
+;  ISA		2
+;  MCA		3
+;  EISA		4
+;  PCI		5
+;  PCMCIA		6
+;  APM		7
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\5\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Unsupported"
+"4"="ISA Support"
+"5"="MCA Support"
+"6"="EISA Support"
+"7"="PCI Support"
+"8"="PCMCIA Support"
+"9"="PnP Support"
+"10"="APM Support"
+"11"="Upgradeable BIOS"
+"12"="BIOS Shadowing allowed"
+"13"="VL VESA Support"
+"14"="ESCD Support"
+"160"="PC-98"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\5\4]
+"Name"="BIOS Characteristic Description"
+"Description"="An expanded description of this BIOS Characteristic."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(80)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemBIOSCharacteristics\\BIOSCharacteristics"
+"!0"="B;DS(00,\"Unknown\")(01,\"Other\")(02,\"ISA Support\")(03,\"MCA Support\")(04,\"EISA Support\")(05,\"

@@ -1,0 +1,49 @@
+
+2421		FontSmoothing RegEntry		AddRegData	"""HKEY_CURRENT_USER"",""Control Panel\Desktop"",""FontSmoothing"",""1"""					
+2422		FontSmoothing WIN.INI Entry		CreateIniLine	"""WIN.INI"",""TrueType"",""FontSmoothing"",""1"""					
+2424										
+2425		De-select font smoothing		CustomAction	"""plus.dll"",""DeselectObject"",""F:79:72,2419"""					
+2439										
+2440		*** Visual Tab ***		Group	2441 2442 2443 2444					
+2441		PlusTab		CopySection	"""VisualTab"""				no	%M
+2442		PlusTab RegEntry		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{41E300E0-78B6-11ce-849B-444553540000}\InProcServer32"","""",""%s\plustab.dll"""					%M
+2443		PlusTab RegEntry		AddRegData	"""HKEY_CLASSES_ROOT"",""CLSID\{41E300E0-78B6-11ce-849B-444553540000}\InProcServer32"",""ThreadingModel"",""Apartment"""					
+2444		PlusTab RegEntry		AddRegData	"""HKEY_LOCAL_MACHINE"",""SOFTWARE\Microsoft\Windows\CurrentVersion\Controls Folder\Display\shellex\PropertySheetHandlers\PlusPack CPL Extension"","""",""{41E300E0-78B6-11ce-849B-444553540000}"""					
+2449										
+2450		*** TT DOS-BOX ***		Group	2451 2452 2453 2454 2455					
+2451		WinFont Path		CustomAction	"""plus.dll"",""LocalizedPath"",""Fonts"""					
+2452		Lucida TTF DOS-BOX		CopyFile	"""TT_DosBox"",""luc"""				no	%2451
+2453		Lucida Console Regular (TrueType)		InstallTTFFile	"""TT_DosBox"",""luc"",""Lucida Console Regular (TrueType)"""				no	%2451
+2454		Lucida TTF RegEntry		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\MS-DOS Emulation"",""Font"",""Lucida Console"",""SZ"""					
+2455		Lucida TTF SYSTEM.INI		AddIniLine	"""SYSTEM.INI"",""NonWindowsApp"",""TTInitialSizes"",""4 5 6 7 8 9 10 11 12 13 14 15 16 18 20 22"""					
+2459										
+2460		*** Animated Cursors ***		Group	2461					
+2461		Animated Cursors		CopySection	"""ANI_CUR"""				no	%W\CURSORS<%W\Cursors>
+2499										
+2500	yes	~~~ Common Plus! Features ~~~		Group	2501 2510 2530 2535 2545 2560					
+2501		~~~ Common Help Files ~~~		Group	2502 2503					
+2502		Help Files		CopySection	"""HelpFiles"""				no	%W\HELP<%W\Help>
+2503		Reindex Help File		CustomAction	"""plus.dll"",""WizExec"",""WINHLP32.EXE -G WINDOWS.HLP"""					%W
+2509										
+2510		*** Maintenance Setup ***		Group	2511 2512 2513 2514 2515 2516 2517 2518 2519 2520 2521 2522 2523 2525 2528					
+2511		Target plus.dll		CopyFile	"""Target"",""pdl"""				yes	%1
+2512		Maint Setup Files		CopySection	"""SetupFiles"""				yes	%1\SETUP<%1\Setup>
+2513		Setup Table File		WriteTableFile	"""setup.stf"""				yes	%1\SETUP<%1\Setup>
+2514		GenInstall RegEntry		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\Setup"",""SourcePath"",""%s\"""				yes	%S
+2515		DeInstall RegEntry		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Uninstall\Plus!"",""DisplayName"",""Microsoft® Plus! for Windows® 95"""					
+2516		DeInstall RegEntry		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Uninstall\Plus!"",""UninstallString"",""%s\SETUP.EXE"""				yes	%1\SETUP<%1\Setup>
+2517		Application RegEntry		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\Setup"",""DestPath"",""%2511\%F2511"""					
+2518		DSKAPI16.DLL		CopyFile	"""ExtCompression"",""d16"""				no	%M
+2519		DSKAPI32.DLL		CopyFile	"""ExtCompression"",""d32"""				no	%M
+2520		PLUSLAYT.INF		CopyFile	"""SetupFiles"",""inf"""				no	%W\INF<%W\Inf>
+2521		PlusVersion		CustomAction	"""plus.dll"",""SetVerInReg"""					
+2522		Stamp the Pid info		StampCDInfo	"""2511"", ""106"", ""196"""
+2523		PlusVersionOverride		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion"",""Plus! VersionNumber"",""Microsoft Plus! for Windows 95"""					
+2524										
+2525		Disable/enable AutoRun		CustomAction	"""plus.dll"",""AutorunController"","""""					%W
+2526										
+2528		RemoveZeroAPI		CustomAction	"""plus.dll"",""RemoveZeroAPI"""					
+2529										
+2530		*** Win95 Enabled ***		Group	2531 2532 2533 2534					
+2531		Enable Win95 DLL		CopyFile	"""Enhanced"",""cll"""				no	%M
+2532		New Enable Win95 RegEntry		AddRegData	"""HKEY_L

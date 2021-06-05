@@ -1,0 +1,111 @@
+  1,, "at#cls=8<cr>"
+HKR, OpenHandset,               2,, "at#vls=1<cr>"
+HKR, VoiceAnswer,               1,, "at#cls=8<cr>"
+HKR, VoiceAnswer,               2,, "at#vls=0<cr>"
+HKR, VoiceAnswer,               3,, "at#vbt=1<cr>"
+HKR, VoiceAnswer,               4,, "at#vsr=7200<cr>"
+HKR, VoiceAnswer,               5,, "at#vbs=4<cr>"
+HKR, VoiceAnswer,               6,, "ats30=60<cr>"
+HKR, VoiceAnswer,               7,, "ata<cr>"
+HKR, VoiceDialNumberSetup,               1,, "at#cls=8<cr>"
+HKR, VoiceDialNumberSetup,               2,, "at#vls=0<cr>"
+HKR, VoiceDialNumberSetup,               3,, "at#vrn=0<cr>"
+HKR, VoiceDialNumberSetup,               4,, "at#vbt=1<cr>"
+HKR, VoiceDialNumberSetup,               5,, "at#vsr=7200<cr>"
+HKR, VoiceDialNumberSetup,               6,, "at#vbs=4<cr>"
+HKR, VoiceDialNumberSetup,               7,, "ats30=60<cr>"
+
+; VoiceView 
+
+[VoiceView_remove]
+UpdateInis  = VView.Rem.Inis
+
+[VV_Sys]
+fte.dll
+vvexe32.exe
+wsvv.vxd
+
+[VV_Sock_Sys]
+wsock32.dll
+wsock.vxd
+vtdi.386
+
+[VV_App]
+filexfer.exe
+
+[VV_Help]
+filexfer.hlp
+filexfer.cnt
+
+[VView.Inis]
+setup.ini, progman.groups,, "group4="%APPS_DESC%""         ;creates folder
+setup.ini, group4,, """%FileXfer_DESC%"", filexfer.exe"    ;creates link
+setup.ini, progman.groups,, "SendTo=""..\..\%SendTo_DESC%"""    ;creates folder
+setup.ini, SendTo,,"""%SendToPhone_DESC%"", filexfer.exe"           ; create Link to EXE
+;setup.ini, progman.groups,, "group1=""%StartUp_DESC%"""          ;creates folder
+;setup.ini, group1,, """%StartXfer_DESC%"", filexfer.exe /a"      ;creates link
+
+[VView.Rem.Inis]
+setup.ini, progman.groups,, "group4=""%APPS_DESC%"""   ;creates folder
+setup.ini, group4,, """%FileXfer_DESC%"""              ;deletes link
+setup.ini, progman.groups,, "SendTo=""..\..\%SendTo_DESC%"""     ;creates folder
+setup.ini, SendTo,,"""%SendToPhone_DESC%"""                         ;deletes link
+setup.ini, progman.groups,, "group1=""%StartUp_DESC%"""   ;creates folder
+setup.ini, group1,, """%StartXfer_DESC%"""                ;deletes link
+
+[VoiceView_Socket]
+HKLM, System\CurrentControlSet\Services\VxD\Winsock, "VoiceView Winsock Provider",, "wsvv.vxd"
+
+[VoiceView_Modem]
+HKR,, RunOnce,,"grpconv /o"
+HKR,, VoiceView, 1, 01
+HKR, MonitorVoiceViewOn,   1,, "AT+FCLASS=80<cr>"
+HKR, MonitorVoiceViewOn,   2,, "None"
+HKR, MonitorVoiceViewOff,  1,, "AT+FCLASS=0<cr>"
+HKR, MonitorVoiceViewOff,  2,, "None"
+
+HKR, Responses, "<cr><lf>-SSV<cr><lf>",          1, 09, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-SMD<cr><lf>",          1, 0a, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-SFA<cr><lf>",          1, 0b, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-SRA<cr><lf>",          1, 0c, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-SRQ<cr><lf>",          1, 0d, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-SRC:<cr><lf>",         1, 0e, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-STO<cr><lf>",          1, 0f, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>-SVM<cr><lf>",          1, 10, 00, 00,00,00,00, 00,00,00,00
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*vcomm
+HKR,,ConfigDialog,,modemui.dll
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages"
+HKR,,PortSubClass,1,02
+HKR, Init, 1,, "AT<cr>"
+HKR, Responses, "<cr><lf>OK<cr><lf>", 1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>ERROR<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[INTERNAL]
+HKR,, DeviceType, 1, 02
+
+[PCMCIA]
+HKR,,PortDriver,,Serial.vxd
+HKR,,Contention,,*vcd
+HKR,, DeviceType, 1, 03
+
+[MfgAddReg]
+HKR,, InactivityScale, 1, 01,00,00,00
+HKR, Init, 2,, "AT &F E0 V1 W1<cr>"
+HKR, Monitor, 1,, "ATS0=0<cr>"
+HKR, Monitor, 2,, "None"
+HKR, Hangup, 1,, "ATH<cr>"
+HKR, Answer, 1,, "ATA<cr>"
+HKR,, Reset,, "ATZ<cr>"
+HKR, Settings, Prefix,, "AT"
+HKR, Settings, Terminator,, "<cr>"
+HKR, Settings, DialPrefix,, "D"
+HKR, Settings, DialSuffix,, ";"
+HKR, Settings, SpeakerVolume_Low,, "L1"
+HKR, Settings, SpeakerVolume_Med,, "L2"
+H

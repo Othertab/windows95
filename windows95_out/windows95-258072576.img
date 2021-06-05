@@ -1,0 +1,44 @@
+nced Mode by choosing Help in your Program Manager, then going to About Program Manager...
+
+If About Program Manager says you are in Standard Mode, exit Windows, then restart with the command WIN/3 <Enter> instead of WIN. This will force Windows to start in Enhanced Mode.
+If you cannot run Windows in Enhanced Mode, please verify that your system meets or exceeds the minimum system requirements printed on the system requirements label on the box your copy of SimTower for Windows came in.
+Windows for Workgroups 3.11
+If you're using Windows for Workgroups 3.11, the only possible mode is Enhanced, so the About... box won't mention mode, just free memory. This is normal and cool.
+
+Using Virtual Memory
+Disk Compression Users
+If you’re using disk compression software such as DoubleSpace, DriveSpace, Stacker, SuperStor or things like that, these instructions ARE NOT for you. Most of these programs will come with their own utilities to use virtual memory. Refer to the documentation that came with your compression program for more information).
+Non Disk Compression Users
+If you don't have enough memory to run SimTower for Windows, first close all other programs that are running to free up the necessary memory.
+
+If this doesn't correct the problem, there’s still hope. To prepare yourself, you might refer to the Windows manual section called MEMORY. There are several different options explained in the manual, from editing your startup configuration files to using Virtual Memory. We can help you out a little here (and we’re somewhat less daunting than the Windows manual).
+
+Virtual Memory uses your system's hard disk drive to temporarily store information that would normally be kept in the system RAM memory. It’s a little slower than RAM, but you have the potential to increase your available memory quite significantly.
+
+You run Virtual Memory by following these steps:
+
+1. Find your Control Panel icon. It’s usually within the Main program group.
+
+2. Double-click on the Control Panel icon to open it.
+
+3. Double-click on the Enhanced icon (the icon looks like a computer chip -- if it is not there, you are not running Windows in Enhanced Mode. See the instructions on starting Windows in Enhanced Mode.)
+4. Click on the Virtual Memory... button to open the Virtual Memory window.
+5. Click on the Change button. You’ll get a window which has some important information. The most important information is the Recommended Maximum Size for Virtual Memory on your computer. This number will vary from machine to machine. If your computer is not already set to this number, you’re in luck. Type that number in the New Size box.
+6. Check out your Windows manual for more information concerning virtual memory.
+
+Finally, if you are using Sound Effects in SimTower for Windows, you will need as much free conventional memory as possible. Conventional memory is memory below 640k. Please see your DOS manual for instructions on freeing conventional memory. If you have DOS 6 or higher, just run the MemMaker program. Type MEMMAKER <Enter> at your DOS prompt.
+
+Gameplay Issues
+
+Elevators
+
+Q:  “My elevators never seem to be working right.  Everyone is stressed out and moving out of my tower.  Why aren’t they taking the elevator?  I just don’t understand this whole elevator thing."
+A:  Get ready for a long winded, but informative, response.
+
+If you prefer to develop your own strategy for success in SimTower you can skip over this.
+
+Elevator control is one of the most important issues in SimTower. Elevators are the highways and byways that let your SimTenants move from floor to floor. Your tenants don’t like stairs much (even the tenants who work out). Take time to read the Elevators section on the SimTower.
+
+What, you got more questions? Alrighty then, read on...
+
+The primary key to successful transportation in SimTower is to section off your tower every 30 levels. You’ll need the Express elevator (and three stars) to do this most efficiently, but you can fudge a little by having one (or two) “Standard” elevators skip floors 2-

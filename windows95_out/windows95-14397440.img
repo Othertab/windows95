@@ -1,0 +1,106 @@
+e4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,30,00,00,00
+
+;****************************************************************************
+; Madge Networks PCMCIA Ringnode Driver
+;****************************************************************************
+[Madgep.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,mdgmport.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"MDGMPORT"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"smartnd$"
+HKR,NDIS\NDIS2,FileName,,"smartnd.dos"
+HKR,NDIS\ODI,DriverName,,"madgeodi"
+HKR,NDIS\ODI,FileName,,"madgeodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"madge.ndis3"
+; Note that we are running on Windows95
+HKR,,PlatformType,,"200"
+; RxTxSlots
+HKR,NDI\params\RxTxSlots,ParamDesc,,"Receive/Transmit Slots"
+HKR,Ndi\params\RxTxSlots,default,,2
+HKR,NDI\params\RxTxSlots,type,,enum
+HKR,NDI\params\RxTxSlots\enum,0,,"Rx=02 Tx=02"
+HKR,NDI\params\RxTxSlots\enum,1,,"Rx=03 Tx=03"
+HKR,NDI\params\RxTxSlots\enum,2,,"Rx=04 Tx=04"
+HKR,NDI\params\RxTxSlots\enum,3,,"Rx=06 Tx=06"
+HKR,NDI\params\RxTxSlots\enum,4,,"Rx=08 Tx=08"
+HKR,NDI\params\RxTxSlots\enum,5,,"Rx=10 Tx=10"
+HKR,NDI\params\RxTxSlots,flag,1,20,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"LAA"
+HKR,NDI\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,12
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,NDI\params\NetworkAddress,optional,,1
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+; MAXFRAMESIZE
+HKR,NDI\params\MAXFRAMESIZE,ParamDesc,,"Maximum Frame Size"
+HKR,Ndi\params\MAXFRAMESIZE,default,,4096
+HKR,NDI\params\MAXFRAMESIZE,type,,int
+HKR,NDI\params\MAXFRAMESIZE,min,,1000
+HKR,NDI\params\MAXFRAMESIZE,max,,17839
+HKR,NDI\params\MAXFRAMESIZE,flag,1,20,00,00,00
+; NoMmio (ndis3)
+HKR,NDI\params\NoMmio,ParamDesc,,"Disable MMIO Transfers"
+HKR,NDI\params\NoMmio,default,,1
+HKR,NDI\params\NoMmio,type,,enum
+HKR,NDI\params\NoMmio\enum,0,,"No"
+HKR,NDI\params\NoMmio\enum,1,,"Yes"
+HKR,NDI\params\NoMmio,flag,1,20,00,00,00
+; PromiscuousModeX (ndis3)
+HKR,NDI\params\PromiscuousModeX,ParamDesc,,"Gather network stats"
+HKR,NDI\params\PromiscuousModeX,default,,0
+HKR,NDI\params\PromiscuousModeX,type,,enum
+HKR,NDI\params\PromiscuousModeX\enum,0,,"No"
+HKR,NDI\params\PromiscuousModeX\enum,1,,"Yes"
+HKR,NDI\params\PromiscuousModeX,flag,1,20,00,00,00
+
+;****************************************************************************
+; Madge Networks Smart Ringnode Driver
+;****************************************************************************
+[Madge.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,mdgmport.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"MDGMPORT"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"smartnd$"
+HKR,NDIS\NDIS2,FileName,,"smartnd.dos"
+HKR,NDIS\ODI,DriverName,,"madgeodi"
+HKR,NDIS\ODI,FileName,,"madgeodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3,ndis2"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3,ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"madge.ndis3"
+HKR,Ndi\Install,ndis2,,"madge.ndis2"
+;HKR,Ndi\Install,odi,,"madge.odi"
+; Note that we are running on Windows95
+HKR,,PlatformType,,"200"
+; RxTxSlots
+HKR,NDI\params\RxTxSlots,ParamDesc,,"Receive/Transmit Slots"
+HKR,Ndi\params\RxTxSlots,default,,2
+HKR,NDI\params\RxTxSlots,type,,enum
+HKR,NDI\params\RxTxSlots\enum,0,,"Rx=02 Tx=02"
+HKR,NDI\params\RxTxSlots\enum,1,,"Rx=03 Tx=03"
+HKR,NDI\params\RxTxSlots\enum,2,,"Rx=04 Tx=04"
+HKR,NDI\params\RxTxSlots\enum,3,,"Rx=06 Tx=06"
+HKR,NDI\params\RxTxSlots\enum,4,,"Rx=08 Tx=08"
+HKR,NDI\params\RxT

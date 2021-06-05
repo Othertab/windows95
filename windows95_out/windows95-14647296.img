@@ -1,0 +1,131 @@
+fc.LogConfig
+
+[*pnp80ff.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp80ff"
+
+;****************************************************************************
+; *pnp80fd Thomas-Conrad TC6142
+;****************************************************************************
+[*pnp80fd.ndi]
+AddReg=*pnp80fd.ndi.reg,tcarc.ndi.reg
+; use TC6042 logconfig
+LogConfig=*pnp80fc.LogConfig
+
+[*pnp80fd.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp80fd"
+
+;****************************************************************************
+; *pnp80fc Thomas-Conrad TC6042
+;****************************************************************************
+[*pnp80fc.ndi]
+AddReg=*pnp80fc.ndi.reg,tcarc.ndi.reg
+LogConfig=*pnp80fc.LogConfig
+
+[*pnp80fc.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp80fc"
+
+[*pnp80fc.LogConfig]
+ConfigPriority=HARDRECONFIG
+IRQConfig=3,4,5,7,9
+MemConfig=4000@C0000-DFFFF%FFFFC000
+
+
+;****************************************************************************
+; *pnp8326 ARCNET/TCNS
+;****************************************************************************
+[*pnp8326.ndi]
+AddReg=*pnp8326.ndi.reg,tcarc.ndi.reg
+LogConfig=*pnp8326.LogConfig
+
+[*pnp8326.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8326"
+
+[*pnp8326.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=260-26F(3FF::),290-29F(3FF::),2E0-2EF(3FF::),2F0-2FF(3FF::),300-30F(3FF::),350-35F(3FF::),380-38F(3FF::),3E0-3EF(3FF::)
+IRQConfig=3,4,5,6,7,9,10,11,12,14,15
+MemConfig=4000@C0000-DFFFF%FFFFC000
+
+[tcarc.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,tcarc.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"TCARC"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"TCCARC$"
+HKR,NDIS\NDIS2,FileName,,"TCCARC.dos"
+HKR,NDIS\ODI,DriverName,,"TCCARC"
+HKR,NDIS\ODI,FileName,,"TCCARC.com"
+; Interfaces
+;HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"arcnet"
+;HKR,Ndi\Interfaces,UpperRange,,"ndis3,ndis2,odi"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"arcnet,ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"TCCARC.ndis3"
+HKR,Ndi\Install,ndis2,,"TCCARC.ndis2"
+;HKR,Ndi\Install,odi,,"TCCARC.odi"
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOBase,1,02,00,00,00
+HKR,,MemoryBase,1,01,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,flag,1,70,00,00,00
+HKR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBase,flag,1,20,00,00,00
+HKR,Ndi\params\MemoryBase,resc,1,01,00,00,00
+HKR,Ndi\params\MemoryBase,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\MemoryBase,flag,1,30,00,00,00
+HKR,NDI\params\MemoryBase,paragraph,,1
+; PacketSize
+HKR,NDI\params\PacketSize,ParamDesc,,"Packet Size"
+HKR,NDI\params\PacketSize,flag,1,30,00,00,00 
+HKR,NDI\params\PacketSize,type,,int
+HKR,Ndi\params\PacketSize,default,,1024
+HKR,NDI\params\PacketSize,min,,256
+HKR,NDI\params\PacketSize,max,,4096
+HKR,NDI\params\PacketSize,step,,128
+HKR,NDI\params\PacketSize,optional,,1
+
+; Install NDIS3
+[TCCARC.ndis3]
+CopyFiles=TCCARC.ndis3.CopyFiles
+[TCCARC.ndis3.CopyFiles]
+tcarc.sys
+; Install NDIS2
+[TCCARC.ndis2]
+CopyFiles=TCCARC.ndis2.CopyFiles
+[TCCARC.ndis2.CopyFiles]
+TCCARC.dos
+
+; Install ODI
+[TCCARC.odi]
+CopyFiles=TCCARC.odi.CopyFiles
+[TCCARC.odi.CopyFiles]
+TCCARC.com
+
+
+;****************************************************************************
+;    *PNP8104   Thomas-Conrad TC4035
+;****************************************************************************
+
+[*pnp8104.ndi]
+AddReg=*pnp8104.ndi.reg,TCCTOK.ndi.reg
+LogConfig=*pnp8104.LogConfig
+
+[*PNP8104.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8104"
+
+[*pnp8104.LogConfig]
+IOConfig=1A20-1A2F(3FF::),2A20-2A2F(3FF::),3A20-3A2F(3FF::),3A40-3A4F(3FF::),3A60-3A6F(3FF::),3A80-3A8F(3FF::),3AA0-3AAF(3FF::),3AE0-3AEF(3FF::)
+IRQConfig=3,4,5,6,7,9,10,11,12,15
+DMAConfig=0,1,5,6,7
+ConfigPriority=HARDRECONFIG
+
+;**********************************************

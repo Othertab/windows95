@@ -1,0 +1,96 @@
+. 
+  Click the Read tab, and then select the Auto Expand Conversation 
+  Threads check box.
+
+- Some mail programs incorrectly send messages with tags indicating
+  that they use Western European languages when the messages actually 
+  use non-Western European characters. As a result, these messages 
+  might appear garbled in Internet Mail and News. To work around this 
+  problem, click the View menu, point to Language, and then choose the 
+  appropriate language. If you want to reply to or forward such a 
+  message, first open the message by clicking File and then clicking 
+  Open. Change the language of the message by clicking the View menu, 
+  pointing to Language, and then selecting the correct language. Then 
+  reply to or forward the message.
+
+- Internet News requires that your news server support the XOVER 
+  command. If your news server does not support the XOVER command, 
+  you will get an error message indicating that XOVER is required in 
+  order to retrieve messages in a newsgroup. Support for news servers 
+  that don't use the XOVER command will be added in a future release 
+  of Internet News.
+
+- If you have multiple contacts with identical names (such as "Joe 
+  User") in your Address Book, you might have a problem sending 
+  a message to the correct recipient. If you type the entire name 
+  "Joe User" in the TO: or CC: line, the program searches for and 
+  sends the message to the first matching contact. To work around 
+  this problem, you can type in a partial name, such as "Joe," and 
+  the program will display a list of all matching contacts. Or you 
+  can assign each contact a unique name, such as "Joe B. User" or 
+  "Joe User (Acme Tools)."
+
+- If a group contains the same contact multiple times, sending mail 
+  to the group will fail.
+
+
+TROUBLESHOOTING
+===============
+
+- If you run into a problem, try the troubleshooters in online Help. 
+  To start the troubleshooters, carry out the following steps:
+
+  1. In Internet Mail or News, click the Help menu.
+  2. Look up "Troubleshooting" in the Help Index.
+ 
+- Check your connection to your Internet service provider.
+
+- If you are unable to send or receive mail, check the following:
+
+  - The TCP/IP protocol is installed on your computer.
+  - All cables are properly connected to your computer, modem, 
+    or LAN.
+  - You have a PPP or SLIP account with your Internet Provider.
+  - Your Internet Provider or LAN server supports POP3 and SMTP.
+  - Your modem communication parameters (baud rate and type of 
+    protocol) are set correctly.
+
+- Make sure that you use an account name and password for a news 
+  server only if it requires them. If you use an account name and 
+  password and they are not required, you will not be able to connect 
+  to the news server.
+
+- To access the Microsoft peer product support newsgroups, carry 
+  out the following steps:
+
+  1. Click the News menu, and then click Options.
+  2. Click the Server tab, and then click Add.
+  3. Type msnews.microsoft.com as the name of the server. 
+
+     If that name isn't found by your Internet Service Provider, you 
+     can enter 131.107.3.27 instead.
+
+  You do not need to enter an account name or password.
+
+- If your mail server times out while you are sending mail, you might 
+  get an error message indicating that a recipient is unknown. If this 
+  happens, you should increase the timeout for your server. To do this, 
+  carry out the following steps:
+
+  1. Click the Mail menu, and then click Options.
+  2. Click the Server tab, and then click Advanced Settings.
+  3. Drag the slider to increase the timeout for your server.
+
+
+TIPS AND TRICKS
+===============
+
+- To rename a folder, create a new folder with the name you want, 
+  move the messages you want into the new folder, and then delete 
+  the old folder.
+
+- You can change the sound that notifies you that you have received 
+  new mail. To do this, open Control Panel, and then double-click 
+  the Sounds icon.
+
+- You can move the toolbar by right-clicking on i

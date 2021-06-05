@@ -1,0 +1,152 @@
+racting exe
+HKLM,%KEY_RUNONCE%,Solstice,,"setupslt.exe /Q /R:N /N:G"
+
+; WARNING: Do not change this Key or Value without talking to Program Mgmt first.
+HKLM,%KEY_RUNONCE%,Wrapper,,"runonce.exe"
+
+; Run once wrapper entry to fill caches with control panel info:
+HKLM, %KEY_RUNONCE%\Setup,"%CplInit_Desc%",,"RUNDLL32.EXE SHELL32.DLL,Control_FillCache_RunDLL"
+
+; Run Once Wrapper entry to run Group converter:
+HKLM,%KEY_RUNONCE%\Setup,"%Grpconv_Desc%",,"%25%\grpconv.exe -s"
+
+; Run Once Wrapper entry to run winhelp initialization:
+HKLM,%KEY_RUNONCE%\Setup,"%HelpInit_Desc%",,"%25%\winhlp32.exe -g windows.hlp"
+
+; Run once wrapper entry to copy entries from apps.inf to the registry
+HKLM, %KEY_RUNONCE%\Setup,"%ConfigMSDOS_Desc%",,"RUNDLL.EXE PIFMGR.DLL,InitPIFRegEntries"
+
+; Run once wrapper entry to run time zone control panel:
+HKLM, %KEY_RUNONCE%\Setup,"%SetTimeZone_Desc%",,"RUNDLL32.EXE SHELL32.DLL,Control_RunDLL TIMEDATE.CPL,,/f"
+
+; Run once entry for DMFirstTimeSetup
+HKLM,%KEY_RUNONCE%,ClassSetup,,"rundll.exe sysdm.cpl,DMFirstTimeSetup"
+
+
+
+
+
+
+; Set Wallpaper that comes up during runonce (this gets replaced by user's orig. wallpaper after runonce is done)
+HKCU,"Control Panel\Desktop","Wallpaper",,"%25%\setup.bmp"
+HKCU,"Control Panel\Desktop","TileWallpaper",,0
+HKLM,%KEY_RENAME%\Win,,,%25%
+HKLM,%KEY_RENAME%\Win,setup.bmp,,"%SETUP_BMP%.bmp"
+
+; Fill in the list of VMM32 combined files
+HKLM,%KEY_VMM32FILES%,vshare.vxd,1,
+HKLM,%KEY_VMM32FILES%,vwin32.vxd,1,
+HKLM,%KEY_VMM32FILES%,vfbackup.vxd,1,
+HKLM,%KEY_VMM32FILES%,vcomm.vxd,1,
+HKLM,%KEY_VMM32FILES%,combuff.vxd,1,
+HKLM,%KEY_VMM32FILES%,vcd.vxd,1,
+HKLM,%KEY_VMM32FILES%,vpd.vxd,1,
+HKLM,%KEY_VMM32FILES%,spooler.vxd,1,
+HKLM,%KEY_VMM32FILES%,vfat.vxd,1,
+HKLM,%KEY_VMM32FILES%,vcache.vxd,1,
+HKLM,%KEY_VMM32FILES%,vcond.vxd,1,
+HKLM,%KEY_VMM32FILES%,vcdfsd.vxd,1,
+HKLM,%KEY_VMM32FILES%,int13.vxd,1,
+HKLM,%KEY_VMM32FILES%,vxdldr.vxd,1,
+HKLM,%KEY_VMM32FILES%,vdef.vxd,1,
+HKLM,%KEY_VMM32FILES%,dynapage.vxd,1,
+HKLM,%KEY_VMM32FILES%,configmg.vxd,1,
+
+
+
+HKLM,%KEY_VMM32FILES%,ebios.vxd,1,
+HKLM,%KEY_VMM32FILES%,vmd.vxd,1,
+HKLM,%KEY_VMM32FILES%,dosnet.vxd,1,
+HKLM,%KEY_VMM32FILES%,vpicd.vxd,1,
+HKLM,%KEY_VMM32FILES%,vtd.vxd,1,
+HKLM,%KEY_VMM32FILES%,reboot.vxd,1,
+HKLM,%KEY_VMM32FILES%,vdmad.vxd,1,
+HKLM,%KEY_VMM32FILES%,vsd.vxd,1,
+HKLM,%KEY_VMM32FILES%,v86mmgr.vxd,1,
+HKLM,%KEY_VMM32FILES%,pageswap.vxd,1,
+HKLM,%KEY_VMM32FILES%,dosmgr.vxd,1,
+HKLM,%KEY_VMM32FILES%,vmpoll.vxd,1,
+HKLM,%KEY_VMM32FILES%,shell.vxd,1,
+HKLM,%KEY_VMM32FILES%,parity.vxd,1,
+HKLM,%KEY_VMM32FILES%,biosxlat.vxd,1,
+HKLM,%KEY_VMM32FILES%,vmcpd.vxd,1,
+HKLM,%KEY_VMM32FILES%,vtdapi.vxd,1,
+HKLM,%KEY_VMM32FILES%,perf.vxd,1,
+
+; Add precopied files to the installed files list, since they are
+; pre-installed files
+HKLM,%KEY_INSTALLED%,ncrc710.mpd,1,
+HKLM,%KEY_INSTALLED%,ncrc810.mpd,1,
+HKLM,%KEY_INSTALLED%,amsint.mpd,1,
+HKLM,%KEY_INSTALLED%,aic78xx.mpd,1,
+HKLM,%KEY_INSTALLED%,pci.vxd,1,
+HKLM,%KEY_INSTALLED%,pcimp.pci,1,
+HKLM,%KEY_INSTALLED%,isapnp.vxd,1,
+HKLM,%KEY_INSTALLED%,eisa.vxd,1,
+
+
+
+
+
+
+
+
+
+
+
+[winbase.del.reg]
+HKCU,"Control Panel\Desktop","WallpaperOriginX"
+HKCU,"Control Panel\Desktop","WallpaperOriginY"
+
+
+
+
+
+[boot.files]
+command.new, command.com,,1
+sulogo.sys,,,1
+winboot.new, winboot.sys,,1
+
+[sys.files]
+advapi32.dll,,,40       ;suppress version conflicts 8+32
+comdlg32.dll,,,40       ;suppress version conflicts 8+32
+comm.drv
+commctrl.dll, kommctrl.dll, kommctrl.dll
+crtdll.dll,,,8
+dibeng.dll
+eisa.vxd,,,1
+gdi.exe,,,1
+gdi32.dll,,,9
+glu32.dll,,,8
+iosclass.dll
+isapnp.vxd,,,1
+conagent.exe
+imm32.dll
+isapnp.vxd,,,1
+kernel32.dll,,,9
+krnl386.exe,,,1
+lpt.vxd,,,1
+lptenum.vxd,,,1
+lz32.dll,,,8
+lzexpand.dll
+mf3216.dll
+mfc30.dll
+mkcompat.exe
+msgsrv32.exe,,,8
+msshrui.dll,,,32        ;suppress version conflicts
+msvcrt20.dll
+msvcrt40.dll
+ntdll.dll
+olecli32.dll,,,8
+olesvr32.dll,,,8
+opengl32.dll,,,8
+pci.vxd,,,1
+pcimp.pci,,,1
+pkpd.dll
+pkpd32.dll
+redirect.mod
+serial.vxd,,,1
+serenum.vxd,,,1
+setup4.dll,,,1
+mmsound.drv
+sysclas

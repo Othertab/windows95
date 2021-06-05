@@ -1,0 +1,101 @@
+MODEMDFCEA50D                                                ; RediCARD Data 14.4 Fax 9600
+%DataRace2% = Rockwell14, PCMCIA\DATA_RACE-V.22BIS/FAX_145-01-14-05D3                     ; RediCARD Data 2400 Fax 9600
+%DataRace2% = Rockwell14, PCMCIA\DATA_RACE-V.22BIS/FAX_145-01-14-FA24                     ; RediCARD Data 2400 Fax 9600
+%DataRace2% = Rockwell14, UNIMODEMF3F6EED2                                                ; RediCARD Data 2400 Fax 9600
+%DataRace2% = Rockwell14, UNIMODEM5606C4CF                                                ; RediCARD Data 2400 Fax 9600
+%DataRace3% = Rockwell13, ROCK2_DataRace3, PCMCIA\DATA_RACE-V.32BIS/FAX_145-01-24-1C8D    ; RediCARD Data 14.4 Fax 14.4
+%DataRace3% = Rockwell13, UNIMODEME02A4FA6                                                ; RediCARD Data 14.4 Fax 14.4
+%DataRace4% = Rockwell13, PCMCIA\DATA_RACE-V.32BIS/FAX_145-01-24-1C8D                     ; RediCARD Data 14.4 Fax 14.4, Redicard Data 14.4 Fax 9600
+
+[Mitsubishi]
+%Mitsubishi2% = Rockwell15, PCMCIA\MITSUBISHI_ELECTRIC-MELFAX_CARD_-EC-AD3A  ; Mitsubishi Melfax 14.4 PCMCIA
+%Mitsubishi2% = Rockwell15, UNIMODEM9E9600C5                                 ; Mitsubishi Melfax 14.4 PCMCIA
+
+[Diamond]
+%Diamond1% = Rockwell16, UNIMODEM554FF2DF                 ; TeleCommander 2500
+%Diamond2% = Rockwell17, ROCK2_Diamond2, UNIMODEMEAF8FBCB ; TeleCommander 3500
+%Diamond3% = Rockwell17, UNIMODEMEAF8FBCB                 ; TeleCommander 3500, Digitan
+
+[GDC]
+%GDC1% = Rockwell18, ROCK2_GDC1, UNIMODEM2BB278BD    ; General DataComm V.F 28.8
+%GDC2% = Rockwell18, ROCK2_GDC2, UNIMODEM2BB278BD    ; General DataComm FastPro
+%GDC3% = Rockwell18, UNIMODEM2BB278BD                ; General DataComm FastPro, V.F 28.8
+
+[ETECH]
+%Etech1% = Rockwell19, UNIMODEM2BB97F96
+%Etech2% = Rockwell20, UNIMODEM2705201F
+%Etech3% = Rockwell21, UNIMODEM3CB1DADD
+%Etech4% = Rockwell22, ROCK2_Etech4, PCMCIA\CIRRUS_LOGIC-FAX_MODEM-F874
+%Etech4% = Rockwell22, ROCK2_Etech4, UNIMODEM858E1599
+%Etech5% = Rockwell23, UNIMODEM3E0C166B
+
+[Cirrus]
+%Cirrus1% = Rockwell24, UNIMODEMCE52F04A ; Cirrus Data Fax Voice MDK1414UN
+
+
+[Rockwell1] ; Calcom 1442EX
+AddReg=All, MfgAddReg, Rockwell1.AddReg, EXTERNAL
+
+[Rockwell2] ; Calcom 2842EX
+AddReg=All, MfgAddReg, Rockwell2.AddReg, EXTERNAL
+
+[Rockwell3] ; Calcom 2842EX
+AddReg=All, MfgAddReg, Rockwell2.AddReg, INTERNAL  
+
+[Rockwell4] ; Calcom 1442F
+AddReg=All, MfgAddReg, Rockwell1.AddReg, INTERNAL
+
+[Rockwell5] ; Calcom 1442VF
+AddReg=All, MfgAddReg, Rockwell5.AddReg, INTERNAL
+
+[Rockwell6] ; Calcom 9624i
+AddReg=All, MfgAddReg, Rockwell6.AddReg, INTERNAL
+
+[Rockwell7] ; Calcom 9624VF
+AddReg=All, MfgAddReg, Rockwell7.AddReg, INTERNAL
+
+[Rockwell8] ; 24-96 PCMCIA
+AddReg=All, MfgAddReg, Rockwell8.AddReg, PCMCIA
+
+[Rockwell9] ; 28.8 GVC/Acer
+AddReg=All, MfgAddReg, Rockwell9.AddReg, INTERNAL
+
+[Rockwell10] ; 14.4 GVC/Acer
+AddReg=All, MfgAddReg, Rockwell10.AddReg, INTERNAL
+
+[Rockwell11] ; Victory 14.4 
+AddReg=All, MfgAddReg, Rockwell11.AddReg, EXTERNAL
+
+[Rockwell12] ; Sierra Wireless
+AddReg=All, MfgAddReg, Rockwell12.AddReg, EXTERNAL
+
+[Rockwell13] ; Data Race 14.4 Data 9600 FAX
+AddReg=All, MfgAddReg, Rockwell13.AddReg, PCMCIA
+
+[Rockwell14] ; Data Race 2400 Data 9600 FAX
+AddReg=All, MfgAddReg, Rockwell14.AddReg, PCMCIA
+
+[Rockwell15] ; Mitsubishi Melfax 14.4 PCMCIA
+AddReg=All, MfgAddReg, Rockwell15.AddReg, PCMCIA
+
+[Rockwell16] ; TeleCommander 2500
+AddReg=All, MfgAddReg, VoiceView_Modem, VoiceView_Socket, Rock_Voice, Rockwell16.AddReg, INTERNAL
+CopyFiles   = VV_Sys, VV_Sock_Sys, VV_App, VV_Help
+UpdateInis  = VView.Inis
+Uninstall   = VoiceView_remove
+
+[Rockwell17] ; TeleCommander 3500
+AddReg=All, MfgAddReg, Rockwell17.AddReg, INTERNAL
+
+[Rockwell18] ; General DataComm V.F 28.8
+AddReg=All, MfgAddReg, Rockwell18.AddReg, EXTERNAL
+
+[Rockwell19] ; E-Tech Bullet 100E
+AddReg=All, MfgAddReg, Rockwell19.AddReg, EXTERNAL
+
+[Rockwell20] ; E-Tech PC288MX
+AddReg=All, MfgAddReg, Rockwell20.AddReg, INTERNAL
+
+[Rockwell21] ; E-Tech PC1414UX
+AddReg=All, MfgAddReg, Rockwell21.AddReg, INTERNAL
+

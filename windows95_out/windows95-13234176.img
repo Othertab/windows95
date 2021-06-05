@@ -1,0 +1,70 @@
+n LBP-4i"                    = HPPCL5MS.DRV,Canon_LBP-4i
+"Canon LBP-4sx"                   = HPPCL5MS.DRV,Canon_LBP-4sx
+"Canon LBP-4U"                    = CANONLBP.DRV,Canon_LBP-4U
+"Canon LBP-4 Lite"                = CANONLBP.DRV,Canon_LBP-4_Lite
+"Canon LBP-430"                   = HPPCL5MS.DRV,Canon_LBP-430
+"Canon LBP-860"                   = HPPCL5MS.DRV,Canon_LBP-860
+"Canon LBP-8 II"                  = CANONLBP.DRV,Canon_LBP-8_II
+"Canon LBP-8 IIR"                 = CANONLBP.DRV,Canon_LBP-8_IIR
+"Canon LBP-8 IIT"                 = CANONLBP.DRV,Canon_LBP-8_IIT
+"Canon LBP-8 III"                 = CANONLBP.DRV,Canon_LBP-8_III
+"Canon LBP-8 III Plus"            = CANONLBP.DRV,Canon_LBP-8_III_Plus
+"Canon LBP-8 IIIR"                = CANONLBP.DRV,Canon_LBP-8_IIIR
+"Canon LBP-8 IIIT"                = CANONLBP.DRV,Canon_LBP-8_IIIT
+"Canon LBP-8 IV"                  = CANONLBP.DRV,Canon_LBP-8_IV
+"Canon LBP-8sx"                   = HPPCL5MS.DRV,Canon_LBP-8sx
+
+[Citizen]
+"Citizen 120D"                    = CIT9US.DRV,Citizen_120D
+"Citizen 120D+"                   = CIT9US.DRV,Citizen_120D+
+"Citizen 124D"                    = CIT24US.DRV,Citizen_124D
+"Citizen 180D"                    = CIT9US.DRV,Citizen_180D
+"Citizen 200GX"                   = CIT9US.DRV,Citizen_200GX
+"Citizen 200GX/15"                = CIT9US.DRV,Citizen_200GX/15
+"Citizen 224"                     = CIT24US.DRV,Citizen_224
+"Citizen ABC ESC/P 2"             = ESCP2MS.DRV,Citizen_ABC_ESC/P_2
+"Citizen GSX-130"                 = CIT24US.DRV,Citizen_GSX-130
+"Citizen GSX-140"                 = CIT24US.DRV,Citizen_GSX-140
+"Citizen GSX-140+"                = CIT24US.DRV,Citizen_GSX-140+
+"Citizen GSX-145"                 = CIT24US.DRV,Citizen_GSX-145
+"Citizen GSX-190"                 = CIT9US.DRV,Citizen_GSX-190
+"Citizen GSX-220 ESC/P 2"         = ESCP2MS.DRV,Citizen_GSX-220_ESC/P_2
+"Citizen GSX-230"                 = CIT24US.DRV,Citizen_GSX-230
+"Citizen GSX-240 ESC/P 2"         = ESCP2MS.DRV,Citizen_GSX-240_ESC/P_2
+"Citizen GSX-245 ESC/P 2"         = ESCP2MS.DRV,Citizen_GSX-245_ESC/P_2
+"Citizen HSP-500"                 = CIT9US.DRV,Citizen_HSP-500
+"Citizen HSP-550"                 = CIT9US.DRV,Citizen_HSP-550
+"Citizen Notebook Printer II"     = CIT24US.DRV,Citizen_Notebook_Printer_II
+"Citizen PN48"                    = CIT24US.DRV,Citizen_PN48
+"Citizen Prodot 24"               = CIT24US.DRV,Citizen_Prodot_24
+"Citizen Prodot 9"                = CIT9US.DRV,Citizen_Prodot_9
+"Citizen Prodot 9x"               = CIT9US.DRV,Citizen_Prodot_9x
+"Citizen PROjet"                  = JP350.DRV,Citizen_PROjet
+"Citizen ProJet II"               = JP350.DRV,Citizen_ProJet_II
+"Citizen ProLaser 6000"           = HPPCL5MS.DRV,Citizen_ProLaser_6000
+"Citizen Swift 200"               = CIT24US.DRV,Citizen_Swift_200
+"Citizen Swift 24"                = CIT24US.DRV,Citizen_Swift_24
+"Citizen Swift 24e"               = CIT24US.DRV,Citizen_Swift_24e
+"Citizen Swift 24x"               = CIT24US.DRV,Citizen_Swift_24x
+"Citizen Swift 240 ESC/P 2"       = ESCP2MS.DRV,Citizen_Swift_240_ESC/P_2
+"Citizen Swift 240x ESC/P 2"      = ESCP2MS.DRV,Citizen_Swift_240x_ESC/P_2
+"Citizen Swift 9"                 = CIT9US.DRV,Citizen_Swift_9
+"Citizen Swift 9x"                = CIT9US.DRV,Citizen_Swift_9x
+"Citizen Swift 90"                = CIT9US.DRV,Citizen_Swift_90
+
+[Compaq]
+"Compaq PageMarq 15"              = HPPCL5MS.DRV,Compaq_PageMarq_15
+"Compaq PageMarq 15 PostScript"   = CPPMQ151.SPD,Compaq_PageMarq_15_PostScript
+"Compaq PageMarq 20"              = HPPCL5MS.DRV,Compaq_PageMarq_20
+"Compaq PageMarq 20 PostScript"   = CPPMQ201.SPD,Compaq_PageMarq_20_PostScript
+
+[Dataproducts]
+"Dataproducts LZR-2665"           = DATAP462.SPD,Dataproducts_LZR-2665
+
+[Diconix]
+"Diconix 150 Plus"                = DICONIX.DRV,Diconix_150_Plus
+
+[Digital]
+"Digital Colormate PS"            = DCCOLOR1.SPD,Digital_Colormate_PS
+"Digital DECcolorwriter 1000  17" = DCLF02_1.SPD,Digital_DECcolorwriter_1000__17
+"Digital DECcolorwriter 1000  39" = DCLF02F1.SPD,Digital_DECcolorwriter_1

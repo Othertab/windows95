@@ -1,0 +1,123 @@
+*******************************************************************
+[*HWP1940.ndi]
+AddReg=*HWP1940.ndi.reg,HPFEND.ndi.reg,J2577A.ndi.reg
+
+[*HWP1940.ndi.reg]
+HKR,Ndi,DeviceID,,"*HWP1940"
+
+;****************************************************************************
+; *HWP1950 HP J2573A 10/100VG ISA LAN Adapter
+;****************************************************************************
+[*HWP1950.ndi]
+AddReg=*HWP1950.ndi.reg,HPFEND.ndi.reg,J2573A.ndi.reg
+LogConfig=*HWP1950.LogConfig
+
+[*HWP1950.ndi.reg]
+HKR,Ndi,DeviceID,,"*HWP1950"
+
+[*HWP1950.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=40@100-3FF%FFC0
+IRQConfig=3,4,5,7,9,10,11,12,15
+
+;****************************************************************************
+; MCA_63CA  hp mca
+;****************************************************************************
+[MCA_63CA.ndi]
+AddReg=MCA_63CA.ndi.reg,hpmca.ndi.reg,hp.gen.params
+
+[MCA_63CA.ndi.reg]
+HKR,Ndi,DeviceID,,"MCA_63CA"
+
+;****************************************************************************
+; OLC1201 Olicom Tokenring Server EISA 16/4
+;****************************************************************************
+[*OLC1201.ndi]
+AddReg=*OLC1201.ndi.reg,Oli32.ndi.reg
+
+[*OLC1201.ndi.reg]
+HKR,Ndi,DeviceID,,"*OLC1201"
+
+;****************************************************************************
+; INT1201 Intel 32bit TokenExpress EISA 16/4
+;****************************************************************************
+[*INT1201.ndi]
+AddReg=*INT1201.ndi.reg,Oli32.ndi.reg
+
+[*INT1201.ndi.reg]
+HKR,Ndi,DeviceID,,"*INT1201"
+
+;****************************************************************************
+; SMC 3000 Series
+;****************************************************************************
+[*pnp8227.ndi]
+AddReg=*pnp8227.DevID,SMC3000.ndi.reg,MC_Channel
+LogConfig=SMC3000.LogConfig
+[*pnp8227.DevID]
+HKR,Ndi,DeviceID,,"*pnp8227"
+
+[SMC3000.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=20@200-3FF%FFE0(3FF::)
+IRQConfig=3,4,5,7,9,10
+
+;****************************************************************************
+; *PNP8214 Xircom Pocket Ethernet I
+;****************************************************************************
+[*PNP8214.ndi]
+AddReg=*PNP8214.ndi.reg,Xircom1.ndi.reg
+
+[*PNP8214.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8214"
+
+;****************************************************************************
+; *PNP8213 Xircom Pocket Ethernet II
+;****************************************************************************
+[*PNP8213.ndi]
+AddReg=*PNP8213.ndi.reg,Xircom2.ndi.reg
+
+[*PNP8213.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8213"
+
+;****************************************************************************
+; mca_0102 Proteon ProNET -4/16 (P1892)
+;****************************************************************************
+[mca_0102.ndi]
+AddReg=mca_0102.ndi.reg,pronet.reg
+
+[mca_0102.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_0102"
+
+;****************************************************************************
+; *pnp81f0 Proteon ISA Token Ring (1347)
+;****************************************************************************
+[*pnp81f0.ndi]
+AddReg=*pnp81f0.ndi.reg,pro4at.reg,pro4at.isa.resc
+; use 1346 logconfig
+LogConfig=*pnp81ef.LogConfig
+
+[*pnp81f0.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp81f0"
+
+;****************************************************************************
+; *pnp81ef Proteon ISA Token Ring (1346)
+;****************************************************************************
+[*pnp81ef.ndi]
+AddReg=*pnp81ef.ndi.reg,pro4at.reg,pro4at.isa.resc
+LogConfig=*pnp81ef.LogConfig
+
+[*pnp81ef.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp81ef"
+
+[*pnp81ef.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=10@100-FFFF%FFF0(ffff::)
+IRQConfig=3,4,5,6,7,9,10,11,12
+DMAConfig=5,6,7
+
+;****************************************************************************
+; mca_0101 Proteon ISA Token Ring (1340)
+;****************************************************************************
+[mca_0101.ndi]
+AddReg=mca_0101.ndi.reg,pro4.reg,pro4.mca.resc
+LogConfig=mca_0101.LogConfig

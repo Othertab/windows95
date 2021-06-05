@@ -1,0 +1,99 @@
+ng Windows.
+$Not enough extended memory available to run Windows.
+
+Quit one or more applications to increase available memory
+or restart your computer.
+$Unable to allocate extended memory to run Windows.
+
+Quit one or more applications to increase available memory
+or restart your computer.
+$Cannot start Windows because VMM32.VXD was not found or is damaged.
+
+You need to run the Setup program again to install VMM32.VXD.
+$Not enough available file handles to open VMM32.VXD.
+
+Try increasing the "files=" line in your CONFIG.SYS file.
+$Access was denied when opening the VMM32.VXD file.
+
+If the VMM32.VXD file is on a remote disk, you may not have proper access
+permissions to use it.  Contact your network administrator.
+
+If the file is on a local disk, the disk may be damaged.
+Run the CHKDSK program in your Windows directory.
+
+You may need to install Windows again.$A sharing violation occurred when opening VMM32.VXD.
+
+Quit the program that is using VMM32.VXD, make sure network files have
+appropriate attributes, or restart your system.
+$Registry File was not found. Registry services may be
+inoperative for this session.
+$Registry File was replaced with backup copy. Changes
+made in last session may be missing.
+$XMS cache problem. Registry services may be 
+inoperative this session.
+$WARNING:
+The 80386 processor in this computer may not reliably execute 32-bit
+multiplication. Windows may occasionally fail on this computer.
+
+You may want to replace your 80386 processor.
+Press any key to continue...$Cannot find SYSTEM.INI.
+
+You need to run Windows Setup again to install the file.
+$Insufficient file handles to open SYSTEM.INI.
+
+Try increasing the "files=" line in your CONFIG.SYS.
+$Access was denied when trying to open SYSTEM.INI.
+
+If the SYSTEM.INI is on a remote disk, you may not have proper access
+permissions to use it.  Contact your network administrator.
+
+If the file is on a local disk, the disk may be damaged.
+Run the CHKDSK program in your Windows directory.
+
+You may need to install Windows again.
+$A sharing violation occurred when trying to open SYSTEM.INI.
+
+Quit the program that is using SYSTEM.INI, make sure no one else is using
+the file from the network, make sure that the file has the proper
+attributes, or restart your computer.
+$SYSTEM.INI is missing the "[386enh]" section.
+
+Run Windows Setup again to install a complete SYSTEM.INI file.
+$Cannot find a device file that may be needed to run Windows or a
+Windows application.
+
+The windows registry or SYSTEM.INI file refers to this device file, but
+the device file no longer exists.
+
+If you deleted this file on purpose, try uninstalling the associated
+application using its uninstall or setup program.
+
+If you still want to use the application associated with this device file,
+try reinstalling that application to replace the missing file.
+
+$Not enough file handles were available to open a device file that may be
+needed to run Windows.
+
+Try increasing the "files=" line in your CONFIG.SYS file.
+$Access was denied when opening a device file that may be needed to run Windows.
+
+If the device file is on a remote disk, you may not have proper access
+permissions to use it.  Contact your network administrator.
+
+If the file is on a local disk, the disk may be damaged.
+Run the CHKDSK program on the disk containing the device file.
+
+You may need to install the device file again, or remove it from SYSTEM.INI.
+$A sharing violation occurred when opening a device file that may be needed
+to run Windows.
+
+Quit the program that is using the file, make sure no one else is using
+the file from the network, make sure that the file has the proper
+attributes, or restart your computer.
+$A device has been specified more than once in the SYSTEM.INI file, or
+a device specified in SYSTEM.INI conflicts with a device which is being
+loaded by an MS-DOS device driver or application or a device loaded
+from the registry file. Remove the duplicate entry from the SYSTEM.INI file,
+and then restart Windows.
+
+Duplicated device

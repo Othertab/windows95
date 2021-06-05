@@ -1,0 +1,95 @@
+ll_WIN95%"
+setup.ini,group6_USA,,"%Sol_WIN95%"
+setup.ini,group6_USA,,"%SolShort_WIN95%"
+setup.ini,group12_USA,,"%CDPlayer_WIN95%"
+setup.ini,group12_USA,,"%CDPlayerShort_WIN95%"
+setup.ini,group12_USA,,"%SoundRec_WIN95%"
+setup.ini,group12_USA,,"%SoundRecShort_WIN95%"
+setup.ini,group12_USA,,"%SndVolLink_WIN95%"
+setup.ini,group12_USA,,"%SndVolLinkShort_WIN95%"
+setup.ini,group12_USA,,"%MPlayerLink_WIN95%"
+setup.ini,group12_USA,,"%MPlayerLinkShort_WIN95%"
+setup.ini,group11_USA,,"%SysMon_WIN95%"
+setup.ini,group11_USA,,"%SysMonShort_WIN95%"
+setup.ini,group11_USA,,"%Net_Watcher_WIN95%"
+setup.ini,group11_USA,,"%Net_Watcher_Short_WIN95%"
+setup.ini,group11_USA,,"%ResMeter_WIN95%"
+setup.ini,group11_USA,,"%ResMeterShort_WIN95%"
+setup.ini,group11_USA,,"%Backup_WIN95%"
+setup.ini,group11_USA,,"%DrvSpace_WIN95%"
+setup.ini,group11_USA,,"%DrvSpaceShort_WIN95%"
+setup.ini,group11_USA,,"%Defrag_WIN95%"
+setup.ini,group11_USA,,"%DefragShort_WIN95%"
+setup.ini,group11_USA,,"%Fixdrive_WIN95%"
+setup.ini,group11_USA,,"%MMFMig_WIN95%"
+setup.ini,group11_USA,,"%WinBug_WIN95%"
+setup.ini,group11_USA,,"%Fixdrive_WIN95%"
+setup.ini,desktop_USA,,"%Exchange_WIN95%"
+setup.ini,PMGroup3_USA,,"%Printers_WIN95%"
+setup.ini,PMGroup3_USA,,"%CPanel_WIN95%"
+setup.ini,PMGroup3_USA,,"%WinExplorer_WIN95%"
+setup.ini,PMGroup3_USA,,"%MSDOSPrmpt_WIN95%"
+setup.ini,PMGroup3_USA,,"%Fileman_WIN95%"
+setup.ini,group3_USA,,"%Printers_WIN95%"
+setup.ini,group3_USA,,"%WinExplorer_WIN95%"
+
+[old.build.inis]
+system.ini,386Enh,"Win31FileSystem=",  ; delete this line, use registry setting only
+system.ini,386Enh,"device=apix.386",   ; delete this line from old builds
+win.ini,fonts,"Marlett (TrueType)=MARLETT.TTF" ; review--not needed for final product 
+
+;Remove links from previous chicago builds:
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, group3,, "Control_Panels"
+setup.ini, group3,, "ClipBook_Viewer"
+setup.ini, group3,, "MS-DOS_Prompt"
+setup.ini, group4,, "Object_Packager"
+setup.ini, group4,, "Character_Map"
+setup.ini, group4,, "Sound_Recorder"
+setup.ini, group4,, "Net_Watcher"
+setup.ini, group4,, "WinBug_(problem_reporting_tool)"
+setup.ini, group4,, "WritePad"
+setup.ini, group1,, "Dr._Watson"
+setup.ini, group1,, "Chicago_Beta_Warning"
+setup.ini, group1,, "Chicago Beta Warning"
+setup.ini, group1,, "Chicago Pre-Release Warning"
+setup.ini, group4,, """Online Connections"""
+setup.ini, group4,, """%FontMgr_DESC%"""
+setup.ini, group11,, """%AdmCfg_Desc%"""
+setup.ini, group11,, """Disk Optimizer (Defragmenter)"""
+setup.ini, group11,, """ScanDisk (Disk Repair Tool)"""
+setup.ini, group11,, """DriveSpace (Disk Compression Tool)"""
+setup.ini, group11,, """Disk Defragmenter (Optimizer)"""
+setup.ini, group11,, """Mail 3.x Message File Converter"""
+setup.ini, group11,, """ScanDisk (Disk Checking and Repair Tool)"""
+setup.ini, group11,, """WinBug (problem reporting tool)"""
+setup.ini, group4,, """%CreateBrief_Desc%"""
+
+; Remove link on desktop to the "Chicago" Release Notes:
+setup.ini, progman.groups,, "desktop=..\..\Desktop"
+setup.ini, desktop,,"""%OldRelNotes_DESC%"""
+
+; Remove links to M7 opt. components in case user doesn't install them in M8:
+; Review: leave in for M8, review for RTM
+setup.ini, progman.groups,, "group4=%APPS_DESC%"
+setup.ini, group4,, """%Dialer_Desc%"""
+setup.ini, group4,, """%Paint_Desc%"""
+setup.ini, group4,, """%WORDPAD_LINK%"""
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"
+setup.ini, group11,, """%Backup_Desc%"""
+setup.ini, group11,, """%DrvSpace_Desc%"""
+setup.ini, group11,, """%Defrag_Desc%"""
+
+[old.build.ini.fields]
+;Remove Scout and Tracker from the load= line in win.ini
+win.ini,windows,load,scout
+win.ini,windows,load,tracker
+
+[Win95.AddReg]
+; Run Once Wrapper entry to run Group converter w/ -T switch for Win95 upgrades only:
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce\Setup,"%Grpconv_Desc%",,"%25%\grpconv.exe -t"
+
+[old.build.DelReg]
+HKLM,SOFTWARE\MICROSOFT\WINDOWS\CurrentVersion\Explorer\MyComputer\NameSpace\ControlPanel
+HKCR,WritePad.Document
+HK

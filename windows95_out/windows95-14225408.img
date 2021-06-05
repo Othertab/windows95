@@ -1,0 +1,121 @@
+e,,int
+; flag SLOT as NDIS2 and NDIS3  and not required for EISA
+HKR,NDI\params\Slot,flag,1,30,00,00,00
+HKR,Ndi\params\Slot,optional,,1
+
+; MapRegisters
+HKR,Ndi\params\MapRegisters,ParamDesc,,"Map Registers"
+HKR,Ndi\params\MapRegisters,default,,32
+HKR,Ndi\params\MapRegisters,min,,5
+HKR,Ndi\params\MapRegisters,max,,64
+HKR,Ndi\params\MapRegisters,step,,1
+HKR,Ndi\params\MapRegisters,base,,10
+HKR,Ndi\params\MapRegisters,type,,int
+
+;****************************************************************************
+; Epro base
+;****************************************************************************
+[Epro.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,epro.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"EPRO"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"EPRO$"
+HKR,NDIS\NDIS2,FileName,,"epro.dos"
+HKR,NDIS\ODI,DriverName,,"eproodi"
+HKR,NDIS\ODI,FileName,,"eproodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"EPRO.ndis3"
+HKR,Ndi\Install,ndis2,,"EPRO.ndis2"
+;HKR,Ndi\Install,odi,,"EPRO.odi"
+; Resources
+HKR,,INTERRUPT,1,04,00,00,00
+HKR,,IOADDRESS,1,02,00,00,00
+HKR,NDI\params\INTERRUPT,resc,1,04,00,00,00
+HKR,Ndi\params\INTERRUPT,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTERRUPT,flag,1,30,00,00,00
+HKR,Ndi\params\ioaddress,resc,1,02,00,00,00
+HKR,Ndi\params\ioaddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\ioaddress,flag,1,30,00,00,00
+; Transceiver Type
+HKR,Ndi\params\TRANSCEIVER,ParamDesc,,"Transceiver Type"
+HKR,NDI\params\TRANSCEIVER,flag,1,20,00,00,00
+HKR,Ndi\params\TRANSCEIVER,default,,"0"
+HKR,Ndi\params\TRANSCEIVER,type,,enum
+HKR,Ndi\params\TRANSCEIVER\enum,"0",,"Auto-Connector"
+HKR,Ndi\params\TRANSCEIVER\enum,"1",,"Thick Net (AUI/DIX)"
+HKR,Ndi\params\TRANSCEIVER\enum,"2",,"Thin Net (BNC/COAX)"
+HKR,Ndi\params\TRANSCEIVER\enum,"3",,"Twisted-Pair (TPE)"
+
+; Install NDIS3
+[epro.ndis3]
+CopyFiles=epro.ndis3.CopyFiles
+[epro.ndis3.CopyFiles]
+epro.vxd
+
+; Install NDIS2
+[epro.ndis2]
+CopyFiles=epro.ndis2.CopyFiles
+[epro.ndis2.CopyFiles]
+epro.dos
+
+; Install ODI
+[epro.odi]
+CopyFiles=epro.odi.CopyFiles
+[epro.odi.CopyFiles]
+eproodi.com
+
+;****************************************************************************
+; EXP16 Drivers
+;****************************************************************************
+[EXP16a.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,ee16.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"EE16"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"EXP16$"
+HKR,NDIS\NDIS2,FileName,,"exp16.dos"
+HKR,NDIS\ODI,DriverName,,"EXP16ODI"
+HKR,NDIS\ODI,FileName,,"exp16odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"exp16a.ndis3"
+HKR,Ndi\Install,ndis2,,"exp16.ndis2"
+;HKR,Ndi\Install,odi,,"exp16.odi"
+; Resources
+HKR,,Irq,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\irq,resc,1,04,00,00,00
+HKR,Ndi\params\irq,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\irq,flag,1,30,00,00,00
+HKR,Ndi\params\ioaddress,resc,1,02,00,00,00
+HKR,Ndi\params\ioaddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\ioaddress,flag,1,30,00,00,00
+; I/O Channel Ready
+HKR,Ndi\params\iochrdy,ParamDesc,,"I/O Channel Ready (16 and 32 bit)"
+HKR,Ndi\params\iochrdy,default,,"Late"
+HKR,Ndi\params\iochrdy,type,,enum
+HKR,Ndi\params\iochrdy\enum,Late,,"Late"
+HKR,Ndi\params\iochrdy\enum,Never,,"Never"
+HKR,NDI\params\iochrdy,flag,1,30,00,00,00
+
+; Transceiver Type
+HKR,Ndi\params\transceiver,ParamDesc,,"Transceiver Type"
+HKR,Ndi\params\transceiver,default,,"Tw

@@ -1,0 +1,114 @@
+files.win.shared]
+control.exe
+grpconv.exe
+welcome.exe
+moricons.dll
+packager.exe
+progman.exe
+regedit.exe
+rundll.exe
+taskman.exe
+winfile.exe
+Explorer.exe,,,4         ;flags 32 to suppress ver conflicts
+rundll32.exe
+
+[shell.files.hlp]
+packager.cnt
+packager.hlp
+regedit.hlp
+regedit.cnt
+
+[shell.files.sys]
+shell.dll, shell.new,,12  ;flags 32 and 8 (32-suppress ver conflict, 8-force rename)
+;shell.dll, shell.new,,12 ;flags 4 and 8 (4-ignore ver conflict, overwrite newer files (REVIEW, revert to above line when PLUS! is fixed) , 8-force rename)
+shell32.dll,,,12          ;flags 32 and 8 (32-suppress ver conflict, 8-force rename)
+comctl32.dll,,,12         ;flags 32 to suppress ver conflicts
+linkinfo.dll
+docprop.dll,,,32          ;flags 32 to suppress ver conflicts
+shscrap.dll,,,32          ;flags 32 to suppress ver conflicts
+diskcopy.dll
+systray.exe
+
+[shell.files.cur]
+; animated cursors
+appstart.ani
+hourglas.ani
+
+[shell.files.templates]
+winword.doc
+
+[shlold.reg]
+HKLM,%KEY_CURRENT%\Run,BatteryMeter
+HKLM,%KEY_CURRENT%\RunServices,SystemTray
+HKLM,%KEY_CURRENT%\CdfsUiAssumptions
+HKLM,"%KEY_CURRENT%\CdfsUi Assumptions"
+HKCR,Folder\shellex\PropertySheetHandlers\FileSystem,,,"{21B22460-3AEA-1069-A2DC-08002B30309D}"
+HKCR,*\shellex\PropertySheetHandlers\FileSystem,,,"{21B22460-3AEA-1069-A2DC-08002B30309D}"
+HKCR,Folder\shellex\ContextMenuHandlers\FileSystem,,,"{21B22460-3AEA-1069-A2DC-08002B30309D}"
+HKCR,*\shellex\ContextMenuHandlers\FileSystem,,,"{21B22460-3AEA-1069-A2DC-08002B30309D}"
+HKCR,Network\shellex\ContextMenuHandlers\FileSystem,,,"{21B22460-3AEA-1069-A2DC-08002B30309D}"
+HKCR,Folder\shell\find
+HKCR,.drive,,,"SystemFolder"
+HKCR,.sysDirectory,,,"SystemFolder"
+HKCR,SystemFolder,,,"System Folder"
+HKCR,*\shell\openas
+HKCR,*\shell
+HKCR,Folder\Attributes
+HKCR,Directory\Attributes
+HKCR,Bookmark\Attributes
+HKCR,Bookmark
+HKCR,cplfile\shell\open\command
+HKCR,cplfile\shell\open
+HKCR,cplfile\shell
+HKCR,cplfile
+HKCR,Drive\Attributes
+HKCR,lnkfile\Attributes
+HKCR,lnkfile\shell\open
+HKCR,piffile\Attributes
+HKCR,dllfile\Attributes
+HKCR,sysfile\Attributes
+HKCR,vxdfile\Attributes
+HKCR,drvfile\Attributes
+HKCR,ShellScrap,IsShortcut
+HKCR,Directory\shell
+HKCR,Directory\shell\open
+HKCR,Directory\shell\explore
+HKCR,Drive\shell
+HKCR,Drive\shell\open
+HKCR,Drive\shell\explore
+HKCR,Microsoft_Network
+HKCR,Netware
+HKCR,CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell,,,""
+HKCR,CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\open
+HKCR,CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\explore
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shell\open
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shell\explore
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\shell,,,""
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\shell\open
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}\shell\explore
+HKCR,CLSID\{BD84B380-8CA2-1069-AB1D-08000948F534}\shell,,,
+HKCR,CLSID\{BD84B380-8CA2-1069-AB1D-08000948F534}\shell\open
+HKCR,CLSID\{BD84B380-8CA2-1069-AB1D-08000948F534}\shell\explore
+HKCR,CLSID\{00020D23-0000-0000-C000-000000000046}\Shell,,,""
+HKCR,CLSID\{00020D23-0000-0000-C000-000000000046}\Shell\Open
+HKCR,CLSID\{00020D23-0000-0000-C000-000000000046}\Shell\Open
+HKCR,CLSID\{00020D23-0000-0000-C000-000000000046}\Shell\Explore
+HKCR,CLSID\{00020D23-0000-0000-C000-000000000046}\Shell\Explore
+HKCR,CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shellex\PropertySheetHandlers\RecycleBin
+HKCR,CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shellex\PropertySheetHandlers\Wastebasket
+HKCR,CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shellex\ContextMenuHandlers\RecycleBin
+HKCR,CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shellex\ContextMenuHandlers\Wastebasket
+HKCR,.rtf\ShellNew,Data,0,"{\rtf1}"
+HKCR,.rtf\ShellNew,NullFile
+HKCU,%KEY_TIPS%,Show
+
+[shell.renames.reg]
+; Set the Hidden attribute on the Inf Folder:
+; R=1; H=2; S=4; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Win,,,%25%
+HKLM,%KEY_RENAME%\Win,INF,,"INF,2"
+
+[shell.reg]
+HKLM,%KEY_CURRENT%\RunOnce,InitShell,,"1"
+
+;Run Once entry 

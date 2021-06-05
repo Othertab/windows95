@@ -1,0 +1,128 @@
+pnp828c
+
+;****************************************************************************
+;*pnp8277	;Exos 105
+;****************************************************************************
+
+[*pnp8277.ndi]
+AddReg=*pnp8277.ndi.reg,AM2100.ndi.reg,AMDOLD.ndi.reg
+LogConfig=*pnp8277.LogConfig
+
+[*PNP8277.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8277"
+
+[*PNP8277.LogConfig]
+IOConfig=20@300-37F%FFF0(3FF::)
+IRQConfig=3,4,5,9,10,11,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+;*pnp80d7	;Novell/Anthem NE1500T
+;****************************************************************************
+
+[*pnp80d7.ndi]
+AddReg=*pnp80d7.ndi.reg,AM1500.ndi.reg,AMDOLD.ndi.reg
+LogConfig=*pnp80d7.LogConfig
+
+[*PNP80d7.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP80d7"
+
+[*PNP80d7.LogConfig]
+IOConfig=20@300-37F%FFF0(3FF::)
+IRQConfig=3,4,5,9,10,11,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+;*828d       ;AMD PCnet VL
+;****************************************************************************
+[*pnp828d.ndi]
+AddReg=*pnp828d.ndi.reg,PCnet.ndi.reg, AMD.ndi.reg, PCNET2.ndi.reg
+LogConfig=*pnp828d.LogConfig
+
+[*pnp828d.ndi.PosDup]
+*PNP8231
+
+[*pnp828d.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP828d"
+HKR,Ndi,MatchAndMoveID,,"*pnp8231,PCI\VEN_1022&DEV_2000"
+
+[*pnp828d.LogConfig]
+IOConfig=20@200-3FF%FFE0(3FF::)
+IRQConfig=0,3,4,5,9,10,11,12,15
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+;*pnp80d8	;Novell/Anthem NE2100
+;****************************************************************************
+
+[*pnp80d8.ndi]
+AddReg=*pnp80d8.ndi.reg,AM2100.ndi.reg,AMDOLD.ndi.reg
+LogConfig=*pnp80d8.LogConfig
+
+[*PNP80d8.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP80d8"
+
+[*PNP80d8.LogConfig]
+IOConfig=20@300-37F%FFF0(3FF::)
+IRQConfig=3,4,5,9,10,11,15
+DMAConfig=3,5,6,7
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+; AMD Drivers
+;****************************************************************************
+[PCNET2.ndi.reg]
+HKR,NDI\params\BUS_TO_SCAN,flag,1,30,00,00,00
+HKR,NDI\params\BUSTIMER,flag,1,30,00,00,00
+HKR,NDI\params\FDUP,flag,1,30,00,00,00
+HKR,NDI\params\LED0,flag,1,30,00,00,00
+HKR,NDI\params\LED1,flag,1,30,00,00,00
+HKR,NDI\params\LED2,flag,1,30,00,00,00
+HKR,NDI\params\LED3,flag,1,30,00,00,00
+HKR,NDI\params\TP,flag,1,30,00,00,00
+
+[AMDOLD.ndi.reg]
+
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,,DMAChannel,1,03,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,Ndi\params\interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,30,00,00,00
+HKR,Ndi\params\ioaddress,resc,1,02,00,00,00
+HKR,Ndi\params\ioaddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\ioaddress,flag,1,30,00,00,00
+HKR,NDI\params\DMAChannel,resc,1,03,00,00,00
+HKR,NDI\params\DMAChannel,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMAChannel,flag,1,30,00,00,00
+
+[AMD.ndi.reg]
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,,DMAChannel,1,03,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,Ndi\params\interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interrupt,flag,1,30,00,00,00
+HKR,Ndi\params\ioaddress,resc,1,02,00,00,00
+HKR,Ndi\params\ioaddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\ioaddress,flag,1,30,00,00,00
+HKR,NDI\params\DMAChannel,resc,1,03,00,00,00
+HKR,NDI\params\DMAChannel,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMAChannel,flag,1,30,00,00,00
+
+; BUS_TO_SCAN
+HKR,Ndi\params\BUS_TO_SCAN,ParamDesc,,"Bus Type"
+HKR,Ndi\params\BUS_TO_SCAN,default,,ALL
+HKR,Ndi\params\BUS_TO_SCAN,type,,enum
+HKR,Ndi\params\BUS_TO_SCAN\enum,ALL,,"ALL"
+HKR,Ndi\params\BUS_TO_SCAN\enum,PCI,,"PCI"
+HKR,Ndi\params\BUS_TO_SCAN\enum,PNP,,"PNP"
+HKR,Ndi\params\BUS_TO_SCAN\enum,ISA,,"ISA"
+HKR,Ndi\params\BUS_TO_SCAN\enum,VESA,,"VESA"
+
+;BUSTIMER
+HKR,Ndi\params\BUSTIMER,ParamDesc,,"Bus Timer(Micro Seconds)"
+HKR,Ndi\params\BUS

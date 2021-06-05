@@ -1,0 +1,322 @@
+OTAL=1728
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=192
+   H_BP=224
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=2
+   V_SYNC=4
+   V_BP=36
+
+[1280*1024*32@60Hz.MIRO]
+   Hz=59.990
+   kHz=63.950
+   MHz=110.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1728
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=192
+   H_BP=224
+
+   V_TOTAL=1066
+   V_DISP=1024
+   V_FP=2
+   V_SYNC=4
+   V_BP=36
+
+[1280*1024*8@66Hz.MIRO]
+   Hz=66.040
+   kHz=70.000
+   MHz=117.600
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1680
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*15@66Hz.MIRO]
+   Hz=66.040
+   kHz=70.000
+   MHz=117.600
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1680
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*16@66Hz.MIRO]
+   Hz=66.040
+   kHz=70.000
+   MHz=117.600
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1680
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*24@66Hz.MIRO]
+   Hz=66.040
+   kHz=70.000
+   MHz=117.600
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1677
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*32@66Hz.MIRO]
+   Hz=66.040
+   kHz=70.000
+   MHz=117.600
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1680
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*8@70Hz.MIRO]
+   Hz=69.840
+   kHz=74.030
+   MHz=122.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1648
+   H_DISP=1280
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*15@70Hz.MIRO]
+   Hz=69.840
+   kHz=74.030
+   MHz=122.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1648
+   H_DISP=1280
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*16@70Hz.MIRO]
+   Hz=69.840
+   kHz=74.030
+   MHz=122.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1648
+   H_DISP=1280
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*24@70Hz.MIRO]
+   Hz=69.840
+   kHz=74.030
+   MHz=122.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1656
+   H_DISP=1280
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*32@70Hz.MIRO]
+   Hz=69.840
+   kHz=74.030
+   MHz=122.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1648
+   H_DISP=1280
+   H_FP=16
+   H_SYNC=128
+   H_BP=224
+
+   V_TOTAL=1060
+   V_DISP=1024
+   V_FP=3
+   V_SYNC=3
+   V_BP=30
+
+[1280*1024*8@72Hz.MIRO]
+   Hz=72.040
+   kHz=76.650
+   MHz=130.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1696
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=224
+
+   V_TOTAL=1064
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1280*1024*15@72Hz.MIRO]
+   Hz=72.040
+   kHz=76.650
+   MHz=130.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1696
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=224
+
+   V_TOTAL=1064
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1280*1024*16@72Hz.MIRO]
+   Hz=72.040
+   kHz=76.650
+   MHz=130.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1696
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=224
+
+   V_TOTAL=1064
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1280*1024*24@72Hz.MIRO]
+   Hz=72.040
+   kHz=76.650
+   MHz=130.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1696
+   H_DISP=1280
+   H_FP=32
+   H_SYNC=160
+   H_BP=224
+
+   V_TOTAL=1064
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1280*1024*32@72Hz.MIRO]
+   Hz=72.040
+   kHz=76.650
+   MHz=130.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1696
+   H_DIS

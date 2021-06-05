@@ -1,0 +1,128 @@
+3"="Level"
+"4"="Edge"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\4]
+"Name"="IRQ Shareable"
+"Description"="If true, this IRQ is shareable."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\IRQ\\IRQShareable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\4\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\13\5]
+"Name"="IRQ Description"
+"Description"="The name of the logical device that is currently using this IRQ."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\IRQ\\IRQOwner"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14]
+"Name"="DMA"
+"Class"="DMTF|DMA|001"
+"Description"="This group defines various attributes for the various DMA channels in this system."
+"Key"="1"
+"^Index"=hex:01
+"^ROW"="1|2|3|4"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14\1]
+"Name"="DMA Number"
+"Description"="The current DMA channel number."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\DMA\\DMANumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14\2]
+"Name"="DMA Channel Availability"
+"Description"="If true, this DMA channel is available."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\DMA\\DMAAvailability"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14\2\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14\3]
+"Name"="DMA Burst Mode"
+"Description"="If true, this DMA channel supports burst mode."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+;  Look for a column (1, 2, etc) w/ :0, but get a default thru "Value"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\DMA\\DMABurstMode"
+":Value"="HKLM\\DesktopManagement\\DATA\\2\\DMA\\DMABurstMode\\Default"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14\3\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\14\4]
+"Name"="DMA Description"
+"Description"="The name of the logical device that is currently using this DMA channel."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(80)"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\DMA\\DMAOwner"
+
+
+;====================================
+;  Memory Mapped I/O Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\15]
+"Name"="Memory Mapped I/O"
+"Class"="DMTF|Memory Mapped I/O|001"
+"Description"="This group defines various attributes for memory mapped I/O on this system."
+"Key"="1"
+"^Index"=hex:01,00,00,00
+"^ROW"="1|2|3"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\15\1]
+"Name"="Memory Mapped I/O Starting Address"
+"Description"="The starting address of a contiguous System memory mapped I/O region."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer64"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\MemoryMappedI/O\\MemoryMappedI/OStartingAddress"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\15\2]
+"Name"="Memory Mapped I/O Ending Address"
+"Description"="The ending address of a contiguous System memory mapped I/O region."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer64"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\MemoryMappedI/O\\MemoryMappedI/OEndingAddress"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\15\3]
+"Name"="Memory Mapped I/O Description"
+"Description"="The name of the logical device currently using this Memory Mapped I/O."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\MemoryMappedI/O\\MemoryMappedI/OOwner"
+
+
+;====================================
+;  System Enclosure Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16]
+"Name"="System Enclosure"
+"Class"="DMTF|System Enclosure|002"
+"Description"="This group defines the attributes for the system enclosure."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\1]

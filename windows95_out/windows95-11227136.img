@@ -1,0 +1,70 @@
+nstall.  
+;------------------------------------------------------------------------- 
+[Optional Components]
+DeskMgmt_Install
+
+;-------------------------------------------------------------------------
+;                       Install Section - Actual WMI infrastructure:
+;-------------------------------------------------------------------------
+[DeskMgmt_Install]
+OptionDesc = %DeskMgmt_DESC%    ; Component name 
+Tip = %DeskMgmt_TIP%            ; Description of component
+Parent = AccessTop              ; If component has a parent, identify.  
+CopyFiles = Copy_deskMgmt.inf, Copy_deskMgmt.instrum, Copy_newDiskMgmt.vxd, Copy_DMIMgmt.files, Copy_DMIMgmt.reg
+DelFiles = Del_diskMgmt.vxd
+DelReg = DeskMgmt.clean.reg     ; Start clean
+AddReg = DeskMgmt.install.reg   ; Registry info.
+InstallType = 0                 ; Installation type. 0-Compact,1-Typical,
+				; 2-Portable,3-Custom 
+IconIndex = 17
+Uninstall = DeskMgmt_Remove     ; Uninstall option if applicable.
+
+;-------------------------------------------------------------
+;         Delete-from-Reg Section - make a clean start
+;-------------------------------------------------------------
+[DeskMgmt.clean.reg]
+HKLM,%DMData%
+HKLM,%DMMIF%
+
+;-------------------------------------------------------------
+;         Add-to-Reg Section
+;-------------------------------------------------------------
+[DeskMgmt.install.reg]
+HKLM,%KEY_OPTIONAL%,"DeskMgmt",,"DeskMgmt" ;create new folder
+HKLM,%KEY_OPTIONAL%\DeskMgmt,INF,,"DeskMgmt.inf"    ;INF info.
+;  Section=Install Section in INF
+HKLM,%KEY_OPTIONAL%\DeskMgmt,Section,,"DeskMgmt_Install"        
+HKLM,%KEY_OPTIONAL%\DeskMgmt,Installed,,"1"             ;Set Installed to "Yes"
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Here is all the registry stuff (under HKLM\DesktopManagement\Install)
+; These entries get copied into the right places (under the Data branch) when DMCONFIG is run.
+; Some of this goes directly under DATA\2, since we know that's where the 
+; system component is.
+;
+
+;  This is the component counter.  Start at 3 to leave room for
+;  DMI Service Layer and PC System components.
+HKLM,DesktopManagement\Install,"NextComponentID",1,03,00,00,00
+
+;  This tells DMConfig that the DATA branch is partly installed.
+;  DMConfig will set the value to 2 when installation is complete.
+HKLM,DesktopManagement\Install\Schemas,"DATA",1,01
+
+;  Default instrumentation - applies to all components (resources, ;Device, etc)
+;
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID,";Device",,"%%Device"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID,";Driver",,"%%Driver"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\Resources,",ResourceBase",,"deskmgmt.dll,DM_Query_Device_Resource_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\Resources,",ResourceSize",,"deskmgmt.dll,DM_Query_Device_Resource_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\Resources,",ResourceType",,"deskmgmt.dll,DM_Query_Device_Resource_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\IRQ,",IRQNumber",,"deskmgmt.dll,DM_Query_Device_IRQ_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\I/O,",I/OStartingAddress",,"deskmgmt.dll,DM_Query_Device_IO_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\I/O,",I/OEndingAddress",,"deskmgmt.dll,DM_Query_Device_IO_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\DMA,",DMANumber",,"deskmgmt.dll,DM_Query_Device_DMA_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\MemoryMappedI/O,",MemoryMappedI/OStartingAddress",,"deskmgmt.dll,DM_Query_Device_Memory_Mapped_IO_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Default\%%ComponentID\MemoryMappedI/O,",MemoryMappedI/OEndingAddress",,"deskmgmt.dll,DM_Query_Device_Memory_Mapped_IO_Info"
+
+;  Instrumentation and links for various device classes
+;
+HKLM,DesktopManagement\Install\Defaults\Data\DiskDrive\%%ComponentID,",PhysicalDisk",,"deskmgmt.dll,DM_Quer

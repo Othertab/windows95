@@ -1,0 +1,120 @@
+SUP1200               ; 288 model, true V.34
+%Modem5% = Modem5, UNIMODEM202E83DC                 ; 288 model, true V.34
+%Modem5% = Modem5, UNIMODEM08F26FEA
+%Modem4% = Modem4, UNIMODEMF0782722
+%Modem3% = Modem3, SUPRA_Modem3, UNIMODEMC6330559
+%Modem3% = Modem3, SUPRA_Modem3, UNIMODEM3A86BAE5
+%Modem3% = Modem3, UNIMODEMC030DACB
+%Modem3% = Modem3, UNIMODEM354A33D6
+%Modem2% = Modem2, SUPRA_Modem2, UNIMODEM11C61667   ; rank 1 for modems 2 and 8
+%Modem2% = Modem2, UNIMODEM2989264D                 ; rank 0, 144LC model
+%Modem1% = Modem1, UNIMODEMB1F47A08
+%Modem1% = Modem1, UNIMODEMC4A73980
+%Modem1% = Modem1, SUPRA_Modem1, UNIMODEMC6330559
+%Modem1% = Modem1, SUPRA_Modem1, UNIMODEM3A86BAE5
+%Modem1% = Modem1, UNIMODEM6114F274
+%Modem1% = Modem1, UNIMODEMCD92E03A
+%Modem1PNP% = Modem13, SERENUM\SUP0980 
+%Modem1% = Modem13,UNIMODEM3637B3CC
+
+; Installation sections
+
+[Modem15]
+AddReg=All, Modem15.AddReg, INTERNAL
+
+[Modem14]
+AddReg=All, Modem14.AddReg, EXTERNAL
+
+[Modem13]
+AddReg=All, Modem13.AddReg, EXTERNAL
+
+[Modem12]
+AddReg=All, Modem12.AddReg, INTERNAL
+
+[Modem10]
+AddReg=All, Modem10.AddReg, INTERNAL
+
+[Modem8]
+AddReg=All, Modem8.AddReg, EXTERNAL
+
+[Modem6]
+AddReg=All, Modem5.AddReg, INTERNAL
+
+[Modem5]
+AddReg=All, Modem5.AddReg, EXTERNAL
+
+[Modem4]
+AddReg=All, Modem4.AddReg, EXTERNAL
+
+[Modem3]
+AddReg=All, Modem2.AddReg, INTERNAL
+
+[Modem2]
+AddReg=All, Modem2.AddReg, EXTERNAL
+
+[Modem1]
+AddReg=All, Modem1.AddReg, EXTERNAL
+
+; AddReg sections
+
+[Modem15.AddReg]  
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"   
+
+[Modem14.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, Compression_On,, "%%C3"
+
+[Modem13.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"
+
+[Modem12.AddReg] ; 144i Plus
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"   
+
+[Modem10.AddReg] ; 144i and 144i Plus
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f0,03,00,00, 00,c2,01,00, 40,38,00,00
+
+[Modem8.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"   
+
+[Modem5.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, Compression_On,, "%%C3"
+
+[Modem4.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,96,00,00, 80,25,00,00
+
+[Modem2.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, ErrorControl_On,, "&Q5" ; excluding \N3 works around a problem that prevents some 144LC's from connecting at 14.4
+                                       ; workaround uses default which happens to be \N3
+HKR, Settings, Compression_On,, "%%C3"  
+
+[Modem1.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,e1,00,00, 40,38,00,00
+
+; Strings
+
+[Strings]
+Mfg = "Supra Corporation"
+
+; Model strings
+
+Modem15="SupraExpress 144i PNP"
+Modem14PNP="SupraExpress 288 Plug & Play"
+Modem14="SupraExpress 288"
+Modem12="SupraExpress 144i Plus"
+Modem11="SupraExpress 144i"
+Modem10="SupraExpress 144i or 144i Plus"
+Modem9 ="Supra 144 Plus or 144LC"
+Modem8PNP ="SupraExpress 144 Plus Plug & Play"
+Modem8 ="SupraExpress 144 Plus"
+Modem7 ="SupraFAXModem V.32bis or 144i"
+Modem6 ="SupraFAXModem 288i"
+Modem5PNP ="SupraFAXModem 288 Plug & Play"
+Modem5 ="SupraFAXModem 288"
+Modem4 ="SupraFAXModem V.32"
+Modem3 ="SupraFAXModem 144i"

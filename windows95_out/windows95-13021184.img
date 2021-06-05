@@ -1,0 +1,91 @@
+em\CurrentControlSet\Control\MediaResources
+HKLM,System\CurrentControlSet\Control\NetworkProvider
+HKLM,System\CurrentControlSet\Control\Nls
+HKLM,System\CurrentControlSet\Control\PerfStats
+HKLM,System\CurrentControlSet\Control\SessionManager
+;Removed because such a pain to reset time zone all the time...
+;HKLM,System\CurrentControlSet\Control\TimeZoneInformation
+HKLM,System\CurrentControlSet\Control\Update
+HKLM,System\CurrentControlSet\Services
+
+[TmpCleanup]
+DelReg = Cleanup.DelReg
+
+[Cleanup.DelReg]
+; These were done as a temporary action for bld 156 when we changed devloader
+; and registry stuff.
+;HKLM,Enum
+; BEGIN Network related stuff. 
+; Has to be done because of the above HKLM,Enum deletion
+;HKLM,System\CurrentControlSet\Services\vxd\vnetsup
+;HKLM,System\CurrentControlSet\Services\vxd\wsock
+;HKLM,System\CurrentControlSet\Services\vxd\ndis
+;HKLM,System\CurrentControlSet\Services\vxd\vnetbios
+;HKLM,System\CurrentControlSet\Services\vxd\vubxd
+;HKLM,System\CurrentControlSet\Services\vxd\vredir
+;HKLM,System\CurrentControlSet\Services\vxd\nwredir
+;HKLM,System\CurrentControlSet\Services\vxd\lantasti
+;HKLM,System\CurrentControlSet\Services\vxd\vvinesd
+;HKLM,System\CurrentControlSet\Services\vxd\bwdosnet
+;HKLM,System\CurrentControlSet\Services\vxd\bwredir
+;HKLM,System\CurrentControlSet\Services\vxd\decnet
+;HKLM,System\CurrentControlSet\Services\vxd\decnb
+;HKLM,System\CurrentControlSet\Services\vxd\dosnet
+;HKLM,System\CurrentControlSet\Services\vxd\vnetware
+;HKLM,System\CurrentControlSet\Services\vxd\vipx
+;HKLM,System\CurrentControlSet\Services\vxd\pcnfs
+;HKLM,System\CurrentControlSet\Services\vxd\vserver
+;HKLM,System\CurrentControlSet\Services\vxd\nwserver
+;HKLM,System\CurrentControlSet\Services\vxd\filesec
+;HKLM,System\CurrentControlSet\Services\vxd\nscl
+;HKLM,System\CurrentControlSet\Services\vxd\nwsp
+;HKLM,System\CurrentControlSet\Services\vxd\netbeui
+;HKLM,System\CurrentControlSet\Services\vxd\nwlink
+;HKLM,System\CurrentControlSet\Services\vxd\nwnblink
+;HKLM,System\CurrentControlSet\Services\vxd\decpw
+;HKLM,System\CurrentControlSet\Services\nwnp32
+;HKLM,System\CurrentControlSet\Services\msnp32
+;HKLM,System\CurrentControlSet\Services\lantnet
+;HKLM,System\CurrentControlSet\Services\vines
+;HKLM,System\CurrentControlSet\Services\bwnet
+;HKLM,System\CurrentControlSet\Services\pcsa
+;HKLM,System\CurrentControlSet\Services\lanman
+;HKLM,System\CurrentControlSet\Services\lansrv
+;HKLM,System\CurrentControlSet\Services\msnet
+;HKLM,System\CurrentControlSet\Services\pcnfs
+;HKLM,System\CurrentControlSet\Services\wtnet
+;HKLM,System\CurrentControlSet\Services\ncpserver
+;HKLM,System\CurrentControlSet\Services\snmp
+;HKLM,System\CurrentControlSet\Services\pathwrks
+;HKLM,System\CurrentControlSet\Control\NetworkProvider
+;HKLM,"System\CurrentControlSet\Control\Print\Providers\MS Network Print Provider"
+;HKLM,"System\CurrentControlSet\Control\Print\Providers\NetWare Print Provider"
+;HKLM,Software\Microsoft\Rpc\ClientProtocols,ncacn_nb_ipx,
+;HKLM,Software\Microsoft\Rpc\ClientProtocols,ncacn_spx,
+;HKLM,Software\Microsoft\Rpc\ServerProtocols,ncacn_spx,
+;HKLM,Software\Microsoft\Rpc\ClientProtocols,ncacn_nb_ipx,
+;HKLM,Software\Microsoft\Rpc\ClientProtocols,ncacn_np,
+;HKLM,Software\Microsoft\RFC1156Agent\CurrentVersion
+;HKLM,Security\Provider,Platform_type
+;HKLM,Security\Provider,Container
+;HKLM,Security\Provider,Address_Server
+;HKLM,Security\Provider,Address_Book
+;HKLM,Security\Provider,Pass_Through
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllndis.exe
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllndist.exe
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",ipxndis.exe
+; END Network related stuff. 
+;HKLM,SYSTEM\CurrentControlSet\Services\Class
+
+;SBSIntlCfgSys, SBSIntlAutoMode and SBSIntlAutoKeyb are hardcoded in Code
+; Dont change these names
+[SBSIntlCfgSys]
+CopyFiles = SBSCfgSysCopy
+UpdateCfgSys=SBSDummy
+
+[SBSCfgSysCopy]
+Country.sys
+Display.sys
+
+[SBSIntlAutoMode]
+CopyFiles = SBSAutoM

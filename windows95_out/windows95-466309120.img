@@ -1,0 +1,47 @@
+test Science and Technology news from MSNBC."
+Show9 = "Life", http://www.msnbc.com/news/lif_front.asp,,,"MSNBC lifestyle and entertainment news."
+Show10 = "Slate", http://slate.msn.com/,,,"Politics, culture, and insight edited by Michael Kinsley."
+Show11 = "LinkStation 1", http://linkstation.msn.com/linkstation/1/,,,"Other news links on the Web."
+
+[Channel2]
+Show1 = "U2 PopMart Online", http://u2popmart.msn.com/,,,"The exclusive online destination for U2's PopMart tour."
+Show2 = "Hard Rock Live", http://hardrocklive.msn.com/hardrocklive/,,,"Meet the artists behind the music of Hard Rock Live."
+Show3 = "STAR TREK: CONTINUUM", http://startrek.msn.com/stohtml/introcontinuum.html,,,"The official online source to the Star Trek Universe."
+Show4 = "Entertainment Tonight", http://et.msn.com/et2/default.asp,,,"The hottest in Hollywood and online entertainment."
+Show5 = "Spike's World", http://spike.msn.com/,,,"Your site for computer and console gaming information."
+Show6 = "NetWits", http://netwits.msn.com/netwits/,,,"MSN's around-the-clock online gameshow."
+Show7 = "Internet Gaming Zone", http://www.zone.com/,,,"The online site for multiplayer gaming. Play it on the Zone."
+Show8 = "Nelson's World", http://nelsonsworld.msn.com/nelsonsworld/,,,"Join great guests in a live chat party weeknights."
+Show9 = "Scrawl", http://linkstation.msn.com/linkstation/2/,,,"The exciting interactive word drawing game!"
+Show10 = "LinkStation 2", http://scrawl.msn.com/scrawl/default.htm,,,"The place for entertainment, games, and fun online."
+blank = ""
+Directory = "Channel 2 Directory",http://onstage.msn.com/directory.asp?ch=2,,,"More links for Channel 2."
+
+
+[Channel3]
+Show1 = "Project: Watchfire", http://watchfire.msn.com/watchfire/,,,"Talk to the experts and uncover the facts behind the UFO debate."
+Show2 = "Rifff", http://rifff.msn.com/rifff/,,,"Where music and imagination meet on the Net."
+Show3 = "Mungo Park", http://mungopark.msn.com/,,,"The ultimate online adventure magazine."
+Show4 = "Mama Planet", http://mamaplanet.msn.com/mamaplanet/,,,"Save the planet as an MSN inter-activist!"
+Show5 = "Retrospect 360", http://retro360.msn.com/retro360/,,,"A look at 20th century history."
+Show6 = "Slate", http://www.slate.com/,,,"Politics, culture, and insights edited by Michael Kinsley."
+Show7 = "Jean-Michel Cousteau Dive",http://mungopark.msn.com/park/msn/msnchat.asp,,,"View footage from this historic undersea video chat."
+Show8 = "Science Fair Forum", http://forums.msn.com/amazingscience/,,,"Join Dr. Bud's science adventures!"
+Show9 = "Link Station 3", http://linkstation.msn.com/linkstation/3/,,,"The Web's best science, history, nature, culture, art, and music links."
+blank = ""
+Directory = "Channel 3 Directory",http://onstage.msn.com/directory.asp?ch=3,,,"More links for Channel 3."
+
+[Channel4]
+Show1 = "Forever Cool", http://forevercool.msn.com/forevercool/,,,"What's next for baby boomers? Take your pulse."
+Show2 = "Great Stuff", http://greatstuff.msn.com/greatstuff/,,,"Help create the next Great American..."
+Show3 = "UnderWire", http://underwire.msn.com/underwire/,,,"Women talk. Sex, culture, fitness.
+Show4 = "@WaterCooler", http://watercooler.msn.com/watercooler/,,,"Shameless networking. Career resources. Drama."
+Show5 = "Money Insider", http://moneyinsider.msn.com,,,"Make more money. Tools and practical advice."
+Show6 = "Car Talk", http://cartalk.msn.com,,,"America's funniest mechanics on sex and cars."
+Show7 = "MotorSite", http://motorsite.msn.com/motorsite/,,,"A community for car enthusiasts everywhere."
+Show8 = "OnParenting",http://onparenting.msn.com/,,,"Practical advice on family health and well-being."
+Show9 = "Disney's Family.com",http://disneyblast.msn.com/disney/family/family.asp,,,"A customizable, national and local parenting resource."
+Show10 = "V-Style", http://v-style.msn.com/v-style,,,"Style and substance, home, garden and life."
+Show11 = "LinkStation 4", http://linkstation.msn.com/linkstation/4/,,,"Great links for improving your life."
+blank = ""
+Directory = "Channel 4 Directory",http://ons

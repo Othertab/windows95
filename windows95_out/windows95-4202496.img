@@ -1,0 +1,49 @@
+n	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Internet Settings,AccessType,1,4"""					
+1615		AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\INETWIZ.EXE"","""",""%1601\%F1601"""					
+1616		Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\INETWIZ.EXE"",""Path"",""%1601;"""					
+1617		CleanOldFiles		RemoveSection	"""I_Wiz_clean"""				no	%1601
+1618										
+1620	no	Internet Wizard		CustomAction	"""plus.dll"",""WizExec"",""INETWIZ.EXE /NOREBOOT"""				yes	%1601
+1621		Remove Internet		CustomAction	"""plus.dll"",""RemoveWizExec"",""INETWIZ.EXE /uninstall"""				yes	%1601
+1649										
+1650		*** Internet Mail ***		Group	1651 1652 1653 1654 1655 1656 1658					
+1651		Mail Files		CopySection	"""I_Mail_exe"""				no	%M
+1652		Mail Help		CopySection	"""I_Mail_help"""				no	%W\HELP<%W\Help>
+1653				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Exchange\Client\Extensions"",""Internet Mail"",""4.0;minet32.dll;2;;;IMAIL"""					
+1654				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\InternetMail"",""INF"",""INETMAIL.INF"""					
+1655				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\InternetMail"",""Installed"",""1"""					
+1656				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\InternetMail"",""Section"",""InternetMail"""					
+1658		INETMAIL.INF		CopyFile	"""I_Mail_inf"",""jsw"""				no	%W\INF<%W\Inf>
+1659										
+1660		*** MSN 1.05 ***		Group	1661 1662 1663 1664 1665					
+1661		MOS105.INF		CopyFile	"""I_MSN"",""msn"""				no	%W\INF<%W\Inf>
+1662				RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"",""MSNetwork105"""					
+1663				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105"",""INF"",""MOS105.INF"""					
+1664				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105"",""Installed"",""0"""					
+1665				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105"",""Section"",""MicrosoftNetwork105"""					
+1666										
+1669										
+1670		Version Control		Group	1671
+1671				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer"",""IVer"",""100"""					
+1899										
+1900		*** RNA Server ***		Group	1901 1902 1905					
+1901				CopyFile	"""RNAServer"",""rna"""				no	%M
+1902				CustomAction	"""plus.dll"",""RNAApplet"","""""					
+1904										
+1905				CustomAction	"""plus.dll"",""Win95Applet"","""""					
+1906										
+1949										
+1950		*** PINBALL ***		Group	1951 1953 1955 1956 1965 1966 1968 1969 1970					
+1951		3D PinBall		CopyFile	"""Pinball_exe"",""pxe"""				yes	%36
+1953		PinBall Help		CopySection	"""Pinball_hlp"""				no	%W\Help
+1955		PinBall files		CopySection	"""Pinball_wav"""				yes	%36\SOUNDS<%36\Sounds>
+1956		PinBall files		CopySection	"""Pinball_misc"""				yes	%36
+1965		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+1966		SpaceCadetTableShortCut		InstallShortcut	"""%1951\%F1951"",""Space Cadet Table"",""%1951"",""%1951\%F1951"",""0"","""""				no	%1965\ACCESS~1\GAMES<%1965\Accessories\Games>
+1968		PinBall AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\PINBALL.EXE"","""",""%1951\%F1951"""					
+1969		PinBall Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\PINBALL.EXE"",""Path"",""%1955;"""					
+1970		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""2200000"""				yes	%1950
+1999										
+2000		~~~ Desktop Theme ~~~		Group	2001 2002 2003 2004 2005 2006 2007 2009 2015 2020 2030 2040 2048					
+2001		Theme Selector Engine		CopyFile	"""MT_Engine"",""mte"""				yes	%34
+2002		Theme S

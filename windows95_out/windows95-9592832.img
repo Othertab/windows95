@@ -1,0 +1,86 @@
+sing WINS for Name Resolution = RK12_NIC_26_
+3 Using DNS for Name Resolution = RK12_NIC_27_
+4 Microsoft TCP/IP Registry Parameters
+4 Introduction = RK12_NIC_29_
+4 TCP/IP Registry Entries in the MSTCP Subkey = RK12_NIC_30_
+4 TCP/IP Registry Entries in the MSTCP\ServiceProvider Subkey = RK12_NIC_31_
+4 TCP/IP Registry Entries in the NetTrans Subkey = RK12_NIC_32_
+2 Microsoft NetBEUI Protocol = RK12_NIC_33_
+2 Using WinPopup to Broadcast a Pop-Up Message = RK12_NIC_34_
+2 Troubleshooting Protocol Problems = RK12_NIC_35_
+1 System Management
+1 Introduction = rkp4_0_
+2 Introduction to System Management
+2 Introduction = RK13_SYS_1_
+2 System Management with Windows 95 = RK13_SYS_2_
+2 Sources for Windows 95 System Management Tools = RK13_SYS_3_
+2 Security
+2 Introduction = RK14_SEC_1_
+2 Windows 95 Security: The Basics = RK14_SEC_2_
+2 Windows 95 Security: The Issues = RK14_SEC_3_
+2 Windows 95 Network Security Overview = RK14_SEC_4_
+2 Setting Up Security for Shared Resources = RK14_SEC_5_
+2 Using Share-Level Security = RK14_SEC_6_
+3 Using User-Level Security
+3 Introduction = RK14_SEC_8_
+3 Specifying Directory Access Rights in User-Level Security = RK14_SEC_9_
+3 Managing User Lists = RK14_SEC_10_
+3 Security for Windows 95 in NetWare Bindery Environments = RK14_SEC_11_
+2 Using the Windows 95 Password Cache = RK14_SEC_12_
+2 Using Password List Editor = RK14_SEC_13_
+2 Using the Windows 95 Logon Password = RK14_SEC_14_
+2 Using Windows 95 with NetWare Passwords = RK14_SEC_15_
+2 Using System Policies to Enforce Password Security = RK14_SEC_16_
+2 Guidelines for Setting Password Policy = RK14_SEC_17_
+2 User Profiles and System Policies
+2 Introduction = RK15_POL_1_
+2 User Profiles and System Policies: The Basics = RK15_POL_2_
+2 User Profiles and System Policies: The Issues = RK15_POL_3_
+2 User Profiles Overview = RK15_POL_4_
+3 Enabling User Profiles
+3 Introduction = RK15_POL_6_
+3 Setting Up User Profiles on a Windows NT Network = RK15_POL_7_
+3 Setting Up User Profiles on a NetWare Network = RK15_POL_8_
+3 Disabling Standard Roving Profiles = RK15_POL_9_
+3 Maintaining Roving User Profiles on Other Networks = RK15_POL_10_
+3 Defining Mandatory User Profiles = RK15_POL_11_
+3 System Policies Overview
+3 Introduction = RK15_POL_13_
+3 Overview of System Policies for Users = RK15_POL_14_
+3 Overview of System Policies for Computers = RK15_POL_15_
+3 System Policy Editor
+3 Introduction = RK15_POL_17_
+3 Installing System Policy Editor = RK15_POL_18_
+3 Using System Policy Editor = RK15_POL_19_
+3 Preparing to Use System Policies on the Network
+3 Introduction = RK15_POL_21_
+3 Setting Up for Automatic Downloading of System Policies = RK15_POL_22_
+3 Setting Up for Manual Downloading of System Policies = RK15_POL_23_
+3 Creating System Policies
+3 Introduction = RK15_POL_25_
+3 Creating Policies for Individual Users or Computers = RK15_POL_26_
+3 Creating Policies for Groups = RK15_POL_27_
+3 Managing Custom Folders for Use with System Policies = RK15_POL_28_
+3 System Policy Examples
+3 Introduction = RK15_POL_30_
+3 Recommended Standard Desktop Configuration = RK15_POL_31_
+3 Recommended Maximum Control Desktop Configuration = RK15_POL_32_
+3 System Policy Settings Summary
+3 Introduction = RK15_POL_34_
+4 Restricting Access to User-Specific Settings
+4 Introduction = RK15_POL_36_
+4 Restricting Access to Control Panels = RK15_POL_37_
+4 Defining User Policies for Desktop Settings = RK15_POL_38_
+4 Restricting Access to Network Settings = RK15_POL_39_
+4 Restricting Access to Shell Settings = RK15_POL_40_
+4 Restricting Access to System Settings = RK15_POL_41_
+4 Restricting Access to Computer-Specific Settings
+4 Introduction = RK15_POL_43_
+4 Restricting Access to Computer-Specific Network Settings = RK15_POL_44_
+4 Restricting Access to Computer-Specific System Settings = RK15_POL_45_
+2 System Policy Templates = RK15_POL_46_
+2 Troubleshooting with System Policy Editor = RK15_POL_47_
+2 Remote Administration
+2 Introduction = RK16_REM_1_
+2 Remote Administration: The Basics = RK16_REM_2_
+2 Remote Admin

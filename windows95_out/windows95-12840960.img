@@ -1,0 +1,87 @@
+      = MSMAIL, MAPI, InternetExplorer
+;Parent          = MOSTop
+;InstallDefault  = 0
+InstallType     = 0
+Priority        = 5   ; not implemented
+IconIndex       = 29  ; MSN
+CopyFiles       = Marvel_Copy_Files, Marvel_Help, Marvel_WinSys_Files
+AddReg          = MOS_Reg, Install.AddReg
+UpdateInis      = Convert_Start_Menu
+Uninstall       = MaintMode.Uninstall
+
+; ********************************************************************
+; [DesktopSetupXxx]
+;
+; These sections are needed to support serial setup of MSN and
+; Exchange from MSNEXCH.EXE.  The Needs line in [DesktopSetupIcon]
+; names the sections which have to be run; the Include line names the
+; INF files in which these sections appear.
+; [DesktopSetupExtras] is the section which is run at the end, for
+; this special case only.
+; ********************************************************************
+
+[DesktopSetupIcon]
+Include         = MOS.INF, MSMAIL.INF
+Needs           = MSMAIL, MAPI, MicrosoftNetwork, DesktopSetupExtras
+
+[DesktopSetupIconMsnOnly]
+Include         = MOS.INF
+Needs           = MicrosoftNetwork, DesktopSetupExtras
+
+[DesktopSetupExtras]
+AddReg          = DSE_AddReg
+
+[DSE_AddReg]
+;HKLM,"SOFTWARE\Microsoft\Exchange\Client\Options","SilentRunning",,"1"
+;HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,Wrapper,,"runonce.exe"
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\RunOnce\Setup","The Microsoft Network",,"%24%\%PROGRAMF%\%THEMICRO%\SIGNUP.EXE"
+
+; ********************************************************************
+; [Destination Dirs]
+;
+; MSN uses the following directories (assuming default install into
+; C:\Windows):
+;    C:\Program Files\The Microsoft Network    bulk of MSN files
+;    C:\Windows\System                         online registration
+;    C:\Windows\Help                           MSN help
+;    C:\Windows\Desktop                        desktop icon (M8)
+;    C:\Windows\Inf                            maint mode INF copy
+;    C:\Windows\MSN                            delete old installs
+;    c:\Program Files\Online Services          (desktop icon -> msninst.exe)
+; ********************************************************************
+
+[DestinationDirs]
+; Directories for install w/MSN optional component
+Marvel_Copy_Files   = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%  ; LDID_APPS\Progra~1\TheMic~1
+Marvel_Help         = 18                             ; LDID_HELP
+Marvel_WinSys_Files = 11                             ; LDID_SYS
+MaintMode.CopyFiles = 17                             ; LDID_INF
+
+; Directories for base Windows install
+BaseWin_RegWiz_Files = 11                            ; LDID_SYS
+BaseWin_MSN_Files   = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%  ; LDID_APPS\Progra~1\TheMic~1
+BaseWin_WinSys_Files = 11                            ; LDID_SYS
+BaseWin_WinHelp_Files = 18                           ; LDID_HELP
+BaseWin_OLS_Files     = 24,%OEM_PROGRAMF%\%OnlineShort%\%MSN%
+MSN251_CopyFiles      = 25,"Options\CABS\OLS\MSN"
+
+
+; Directories for minimal 1.0 files to be "forced" in (explicit uninstall case)
+Uninstall.v1_RegWiz  = 11                            ; LDID_SYS
+Uninstall.v1_PFMSN   = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%
+Uninstall.v1_WinSys  = 11                            ; LDID_SYS
+Uninstall.v1_WinHelp = 18                           ; LDID_HELP
+
+; Directories from which obsolete files should be removed
+Old_WinHelp_Files   = 18                             ; LDID_HELP
+Old_WinMSN_Files    = 25,MSN                         ; LDID_SHARED\MSN
+Old_WinSys_Files    = 11                             ; LDID_SYS
+Old_PFMSN_Files     = 24,%OEM_PROGRAMF%\%OEM_THEMICRO%  ; LDID_APPS\Progra~1\TheMic~1
+Old_Desktop_Files   = 25,%OEM_Shared_Desktop%        ; LDID_SHARED\Desktop
+; ********************************************************************
+; Maintenance mode sections
+;
+; The following two sections are needed to support installing MSN
+; using the Windows Setup CPL after Win95 is already on the user's
+; machine.  The [MaintMode.Uninstall] section is needed to support
+; uninstalling MSN usin

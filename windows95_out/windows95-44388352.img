@@ -1,0 +1,96 @@
+%ComponentID\22\3]
+"Name"="Video BIOS Characteristic"
+"Description"="The attributes and extensions supported by this version of the Video BIOS."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\VideoBIOSCharacteristic"
+"!0"="B;IN(0,2)(1,1)(2,3)(3,4)(4,5)(5,6)(6,7)(7,8)(8,9)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\22\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Unsupported"
+"4"="Standard Video BIOS"
+"5"="VESA BIOS Extensions Supported"
+"6"="VESA Power Management Supported"
+"7"="VESA Display Data Channel Supported"
+"8"="Video BIOS Shadowing allowed"
+"9"="Video BIOS Upgradeable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\22\4]
+"Name"="Video BIOS Characteristic Description"
+"Description"="Expanded description of this VIDEO BIOS characteristic."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(80)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\VideoBIOSCharacteristic"
+"!0"="B;DS(1,\"Other\")(0,\"Unknown\")(2,\"Unsupported\")(3,\"Standard Video BIOS\")(4,\"VESA BIOS Extensions Supported\")(5,\"VESA Power Management Supported\")(6,\"VESA Display Data Channel Supported\")(7,\"Video BIOS Shadowing allowed\")(8,\"Video BIOS Upgradeable\")"
+
+;==========================
+;  Component ID Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1]
+"Name"="ComponentID Group"
+"Class"="DMTF|ComponentID|001"
+"Description"="This group defines attributes common to all components. This group is required."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\1]
+"Name"="Manufacturer"
+"Description"="Manufacturer of this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\2]
+"Name"="Product"
+"Description"="Product name for this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Product"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\3]
+"Name"="Version"
+"Description"="Version of this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Version"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\4]
+"Name"="Serial Number"
+"Description"="Serial number for this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\SerialNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\5]
+"Name"="Installation"
+"Description"="The time and date when this component was installed."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Installation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\6]
+"Name"="Verify"
+"Description"="A code that provides a level of verification that the component is still installed and working."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Verify"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\1\6\Enum]
+"0"="An error occurred; check status code."
+"1"="This component does not exist."
+"2"="Verification is not supported."
+"3"="Reserved."
+"4"="This component exists, but the functionality is untested."
+"5"="This component exists, but the functionality is unknown."
+"6"="This component exists, and is not functioning correctly."
+"7"="This 

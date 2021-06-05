@@ -1,0 +1,87 @@
+und is  
+  to start the backup operation and then open a full-screen MS-DOS box 
+  until the operation has finished.
+- Windows 95 Help, Windows Explorer, and disk tools have links to the 
+  Windows 95 Backup program. If you did not install Backup, and you 
+  have the MS-DOS 5 Backup.exe file in your path, these links will 
+  automatically start the MS-DOS Backup program.
+
+Briefcase, Known Problem
+------------------------
+If you have Briefcase installed and then you enable user profiles (for 
+multiple users on the same computer), Briefcase does not copy to each
+profile correctly. To work around this problem, carry out the following 
+procedure:
+1. After you enable user profiles, delete the My Briefcase icon from the 
+   desktop.
+2. Use your right mouse button to click the desktop, click New, and then 
+   click Briefcase.
+
+HyperTerminal, Known Problems and General Information
+-----------------------------------------------------
+- If a session is open, HyperTerminal does not recognize when a 
+  PCMCIA modem is inserted.
+- When receiving a file, HyperTerminal does not know if the disk 
+  is full.
+- To use the CTRL keys for Cut, Copy, and Paste in HyperTerminal, you 
+  need to use Windows keys instead of Terminal keys. To change this
+  setting, in HyperTerminal, click the Settings tab.
+- In File Transfer, HyperTerminal does not send files with attributes
+  marked as System or Hidden.
+- If a Windows 3.1 TAPI service provider is already installed on your
+  system when you upgrade to Windows 95, you will experience problems
+  with HyperTerminal. To work around these problems, you can use the 
+  Telephony icon in Control Panel to  remove and then reinstall the 
+  TAPI service provider, or you can run the utility Tapiutil.exe. You 
+  can download Tapiutil.exe from CompuServe, ftp.microsoft.com, or 
+  www.microsoft.com.
+
+ScanDisk, Known Problems
+------------------------
+- If you have created or named files or folders while using different
+  code pages, ScanDisk may report errors about these files or the 
+  folders they reside in. If you are affected by this, open ScanDisk's 
+  Advanced dialog box and make sure Check Files For Invalid File Names 
+  is not checked. Note that turning off this option may inhibit 
+  ScanDisk's ability to detect or repair seriously damaged folders.
+
+WordPad, Known Problem
+----------------------
+- File/Print Preview may not show the page layout accurately, but 
+  the line breaks are shown accurately.
+
+
+LARGE DISK SUPPORT (FAT32)
+==========================
+
+Introduction
+------------
+The File Allocation Table (FAT) file system has been the primary 
+disk format used by MS-DOS-based and Windows-based personal computers 
+since 1981. FAT is a fast and broadly supported disk format, but until 
+now, it has been unable to support single drives over 2 gigabytes (GB). 
+A gigabyte is equal to 1,024 megabytes, or approximately 1.07 billion 
+bytes. 
+
+This product includes support for an enhanced version of the FAT 
+file system, FAT32, that supports drives up to 2 terabytes 
+(approximately 2,000 GB). It also allocates space on the drive in 
+smaller units (called clusters) than earlier versions of FAT, 
+resulting in more efficient use of space on the drive.
+
+This section addresses some of the known issues with FAT32, and 
+answers some of the questions you might have.
+
+Compatibility
+-------------
+FAT32 is designed to be fully compatible with existing computers and 
+programs designed to run on earlier versions of MS-DOS and Windows. 
+However, many existing disk utilities (programs that perform low-level 
+maintenance tasks on disks, such as disk compression or repair tools 
+and defragmenters) will need to be updated in order to work with FAT32 
+drives. The disk tools contained with Windows, including ScanDisk, 
+Backup, and Disk Defragmenter, fully support FAT32 drives. FAT32 
+drives cannot be compressed by using DriveSpace, however.
+
+In addition, operating systems other than this version of Windows are 
+unable to access information stored 

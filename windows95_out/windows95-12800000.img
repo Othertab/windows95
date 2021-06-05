@@ -1,0 +1,173 @@
+0,-,-"
+HKR,,ICMProfile,1,9
+
+[SM17GL.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-65,50-100,-,-"
+HKR,,ICMProfile,1,9
+
+[SM17GLs.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-82,50-120,+,+"
+HKR,,ICMProfile,1,9
+
+[SM20GLs.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-82,50-120,+,+"
+HKR,,ICMProfile,1,8
+
+; -------------- Siemens
+[SN-MCM1402.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30-64,50-100,+,+"
+
+[SN-MCM1503.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30-64,50-100,+,+"
+
+[SN-MCM1702.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-82,50-150,+,+"
+
+[SN-MCM2102.AddReg]
+HKR,"MODES\1600,1200",Mode1,,"30-82,50-160,-,-"
+
+; -------------- Unisys
+[Unisys_31-38.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31-38.0,60-87,+,+"
+HKR,,ICMProfile,1,9
+
+[Unisys_30-62.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30-62.0,50-100,+,+"
+HKR,,ICMProfile,1,9
+
+[Unisys_30-82.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-82,50-120,+,+"
+HKR,,ICMProfile,1,9
+
+[Unisys_31-32.AddReg]
+HKR,"MODES\640,480",Mode1,,"31-32,60-70,+,+"
+HKR,,ICMProfile,1,9
+
+
+; Common AddReg/DelReg sections
+;-------------------------------------------------
+[DEL_CURRENT_REG]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+[640]
+HKR,,MaxResolution,,"640,480"
+[800]
+HKR,,MaxResolution,,"800,600"
+[1024]
+HKR,,MaxResolution,,"1024,768"
+[1280]
+HKR,,MaxResolution,,"1280,1024"
+[1600]
+HKR,,MaxResolution,,"1600,1200"
+
+[DPMS]
+HKR,,DPMS,,1
+
+[ICM2]
+HKR,,ICMProfile,1,2
+
+
+; User visible strings
+;-------------------------------------------------
+[Strings]
+MS="Microsoft"
+
+ECS="ELITEGROUP Computer Systems"
+M1401="ECS VERTOS 1401"
+M1501="ECS VERTOS 1501"
+M1502="ECS VERTOS 1502"
+M1503="ECS VERTOS 1503"
+M1700="ECS VERTOS 1700"
+M1701="ECS VERTOS 1701"
+M1702="ECS VERTOS 1702"
+M2101="ECS VERTOS 2101"
+M2102="ECS VERTOS 2102"
+
+Epson="Epson"
+Ep-CG1439I="Epson CG1439I"
+Ep-CG1428I="Epson CG1428I"
+Ep-CG1428N="Epson CG1428N"
+Ep-CG1528N="Epson CG1528N"
+Ep-CG1728N="Epson CG1728N"
+
+IBM="IBM PC Company"
+IBM6324="IBM 6324"
+IBM6325="IBM 6325"
+IBM9525-0X1="IBM 9525-0X1"
+IBM9524="IBM 9524"
+IBM9525="IBM 9525"
+IBM9527="IBM 9527"
+IBM9521="IBM 9521"
+IBM6327="IBM 6327"
+IBM6312="IBM 6312"
+IBM6314="IBM 6314"
+IBM6319="IBM 6319"
+IBM6317="IBM 6317"
+IBM8504="IBM 8504"
+IBM6321="IBM 6321"
+IBM6322="IBM 6322"
+IBM8511="IBM 8511"
+IBM8512="IBM 8512"
+IBM8513="IBM 8513"
+IBM8514="IBM 8514"
+IBM8515="IBM 8515"
+IBM8517="IBM 8517"
+IBM8518="IBM 8518"
+IBM9504="IBM 9504"
+IBM9515="IBM 9515"
+IBM9517="IBM 9517"
+IBM9518="IBM 9518"
+IBM6315="IBM 6315"
+IBM2112="IBM 2112"
+IBM2113="IBM 2113"
+IBM2114="IBM 2114"
+IBM2115="IBM 2115"
+IBM2117="IBM 2117"
+IBM2238="IBM 2238"
+IBM2248="IBM 2248"
+IBM2264="IBM 2264"
+IBM2215="IBM 2215"
+
+FJICL="Fujitsu ICL"
+ICL="ICL"
+ICL-SE14M="ICL SE14M"
+ICL14M="ICL 14M"
+ICL-EPVE15M="ICL ErgoPRO VE15M"
+ICL14C="ICL 14C"
+ICL14V="ICL 14V"
+ICL15V="ICL 15V"
+ICL17V="ICL 17V"
+ICL-VE15C="ICL VE15C"
+ICL-VE17C="ICL VE17C"
+ICL-EP14C="ICL ErgoPRO 14C"
+ICL-EPVE15C="ICL ErgoPRO VE15C"
+ICL-EP15C="ICL ErgoPRO 15C"
+ICL-EP17C="ICL ErgoPRO 17C"
+ICL-EP140v="Fujitsu ICL ErgoPro 140v"
+ICL-EP141v="Fujitsu ICL ErgoPro 141v"
+ICL-EP142v="Fujitsu ICL ErgoPro 142v"
+ICL-EP141p="Fujitsu ICL ErgoPro 141p"
+ICL-EP151v="Fujitsu ICL ErgoPro 151v"
+ICL-EP152v="Fujitsu ICL ErgoPro 152v"
+ICL-EP151p="Fujitsu ICL ErgoPro 151p"
+ICL-EP151pAB="Fujitsu ICL ErgoPro 151p AutoBrite"
+ICL-EP171v="Fujitsu ICL ErgoPro 171v"
+ICL-EP171p="Fujitsu ICL ErgoPro 171p"
+ICL-EP211v="Fujitsu ICL ErgoPro 211v"
+
+Mitsubishi="Mitsubishi Electronics"
+FW-6405  ="Mitsubishi Diamond Pro 14 (FW6405)"
+SD-4100  ="Mitsubishi Diamond Pro VGA (SD41xx)"
+SD-4300  ="Mitsubishi Diamond Pro SVGA (SD43xx)"
+SD-4500  ="Mitsubishi Diamond Pro 14 Plus (SD45xx)"
+SD-5500  ="Mitsubishi Diamond Scan 15FS (SD55xx)"
+SD-5600  ="Mitsubishi Diamond Pro 15FS (SD56xxC)"
+SD-5700  ="Mitsubishi Diamond Pro 15H (SD57xxC)"
+FFY-7705 ="Mitsubishi Diamond Scan 17FS (FFY7705)"
+TFS-6705 ="Mitsubishi Diamond Pro 17 (TFS6705)"
+TFG-8705 ="Mitsubishi Diamond Pro 17TX (TFG8705)"
+HL-6955  ="Mitsubishi Diamond Scan 20 (HL6945/55)"
+H

@@ -1,0 +1,132 @@
+g
+
+[*PNP81D8.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP81D8"
+;
+; 16/4 PC hardware type.
+;
+HKR,,AdapterType,,"100"
+
+; Force16 (ndis3&ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+
+[MDGALL.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F(3FF::),1A20-1A2F(3FF::),2A20-2A2F(3FF::),3A20-3A2F(3FF::),4A20-4A2F(3FF::),6A20-6A2F(3FF::),4E20-4E2F(3FF::),6E20-6E2F(3FF::)
+IRQConfig=3,5,7,10,11,12,15,9
+DMAConfig=0,1,3,5,6
+
+;****************************************************************************
+; MDGAT Madge Networks Smart 16/4 AT Ringnode
+;****************************************************************************
+[MDGAT.ndi]
+AddReg=MDGAT.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+LogConfig=MDGAT.LogConfig
+
+[MDGAT.ndi.reg]
+HKR,Ndi,DeviceID,,"MDGAT"
+;
+; 16/4 AT hardware type.
+;
+HKR,,AdapterType,,"100"
+
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+
+[MDGAT.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F(3FF::),1A20-1A2F(3FF::),2A20-2A2F(3FF::),3A20-3A2F(3FF::)
+IRQConfig=3,5,7,10,11,12,15,9
+DMAConfig=0,1,3,5,6
+
+;****************************************************************************
+; MDGISAC Madge Networks Smart 16/4 ISA Client Ringnode
+;****************************************************************************
+[MDGISAC.ndi]
+AddReg=MDGISAC.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+LogConfig=MDGISAC.LogConfig
+
+[MDGISAC.ndi.reg]
+HKR,Ndi,DeviceID,,"MDGISAC"
+;
+; 16/4 ISA Client hardware type.
+;
+HKR,,AdapterType,,"100"
+
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+
+[MDGISAC.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F(3FF::),1A20-1A2F(3FF::),2A20-2A2F(3FF::),3A20-3A2F(3FF::)
+IRQConfig=3,5,7,10,11,12,15,9
+DMAConfig=0
+
+;****************************************************************************
+; MDGATP Madge Networks Smart 16/4 AT/P Ringnode
+;****************************************************************************
+[MDGATP.ndi]
+AddReg=MDGATP.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+LogConfig=MDGATP.LogConfig
+
+[MDGATP.ndi.reg]
+HKR,Ndi,DeviceID,,"MDGATP"
+;
+; 16/4 AT/P hardware type.
+;
+HKR,,AdapterType,,"100"
+
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+; Force4 (ndis3)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,20,00,00,00
+
+[MDGATP.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F(3FF::),1A20-1A2F(3FF::),2A20-2A2F(3FF::),3A20-3A2F(3FF::)
+IRQConfig=3,5,7,10,11,12,15,9
+DMAConfig=0,3,5,6
+
+;****************************************************************************
+; MDGISACP Madge Networks Smart 16/4 ISA Client Plus Ringnode
+;****************************************************************************
+[MDGISACP.ndi]
+AddReg=MDGISACP.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+LogConfig=MDGISACP.LogConfig
+
+[MDGISACP.ndi.reg]
+HKR,Ndi,DeviceID,,"MDGISACP"
+;
+; 16/4 ISA Client Plus hardware type.
+;
+HKR,,AdapterType,,"100

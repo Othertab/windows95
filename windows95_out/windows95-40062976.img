@@ -1,0 +1,91 @@
+ the Squatdvr.sys and Sqdriver.sys device drivers 
+are incompatible with this version of Windows and will hang when 
+your computer starts if your primary (boot) disk uses FAT32. You 
+must remove the associated DEVICE= line from your Config.sys file 
+in order to start your computer from a FAT32 drive. Updated versions 
+of these drivers that are compatible with FAT32 are available from 
+SyQuest, and from the Microsoft Windows Driver Library contained on 
+the Windows CD-ROM disk and available for download from various 
+on-line services.
+
+Questions and Answers
+---------------------
+
+How do I tell if a drive is a FAT32 drive?
+------------------------------------------
+In My Computer, right-click the icon that represents your hard 
+disk, and then click Properties. The kind of drive you are using 
+is indicated after the word Type at the top of the screen.
+
+How do I enable FAT32?
+----------------------
+If you obtained this version of Windows with a new computer system, 
+it may already be using the FAT32 disk format. If not, or if you 
+add a new hard disk to your computer and you want to use the FAT32 
+file system, you enable it by running the FDISK program. FDISK is 
+a program used to create or delete one or more partitions on a hard 
+disk. A partition is a section of a hard disk that appears to be a 
+single disk drive. Most hard disks must be partitioned with FDISK 
+before they can be used with Windows. If your computer has a disk 
+drive larger than 512 megabytes (MB), when you run FDISK it will 
+prompt you whether to enable large disk support. If you answer yes, 
+then any partition you create that is over 512 MB will use the FAT32 
+file system. If you answer no, then you will be unable to create disk 
+partitions larger than 2GB. After creating a partition with FDISK, 
+you must restart your computer and then format the drive before you 
+can store data on it.
+
+IMPORTANT NOTE: FDISK is an extremely powerful program. If you delete 
+a disk partition by using FDISK, all the data in that partition will 
+be permanently destroyed. If you are unfamiliar with FDISK, you may 
+want to consult a qualified computer technician before using it.
+
+Is FAT32 faster than earlier versions of FAT?
+---------------------------------------------
+In general, no. In most cases, your computer will perform about 
+the same if your hard disk is formatted by using FAT32 as it did 
+previously. In some cases, however, performance may be worse than 
+with the original version of FAT.
+
+Note that FAT32 drives may be significantly slower when your 
+computer is running is MS-DOS mode or when you are running Windows 
+in Safe Mode. If you use MS-DOS mode with FAT32 drives, you may find 
+that performance is improved significantly by loading the Smart Drive 
+disk-caching program.
+
+What size clusters are used on FAT32 drives?
+--------------------------------------------
+The following cluster sizes are typically used on FAT32 drives:
+
+        Drive size        Cluster size
+        -----------       ------------
+       <260 MB            512 bytes
+        260 MB -  8 GB      4 kilobytes (KB)
+          6 MB - 16 GB      8 KB
+         16 MB - 32 GB     16 KB
+        >32 GB             32 KB
+
+Can I use disk compression on FAT32 drives?
+-------------------------------------------
+No. DriveSpace 3 does not support compressing FAT32 drives.
+
+
+DISK TOOLS
+==========
+
+- If you create a Briefcase and then compress a drive that contains
+  files to which it refers, the Briefcase's association to the files
+  will be lost. The files will still exist, but you will need to
+  reassociate them with the Briefcase.
+- If you use INTERLNK, do not use ScanDisk, DriveSpace, or the Disk 
+  Defragmenter to operate on a drive on a remote computer.
+- AT&T Mail versions 2.5 and earlier will install a TSR that prevents 
+  disk utilities from being able to repair disks. If you are running 
+  one of these earlier versions, contact AT&T for information about 
+  their latest release.
+
+
+DISKS AND CDs
+=============
+
+- The

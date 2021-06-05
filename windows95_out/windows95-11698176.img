@@ -1,0 +1,124 @@
+yFiles, ImageOcxs, Register_ImageVue.Copy, SampleFiles, TwainCopyFiles
+Delfiles       = ImageVue.Win.Del, OldFiles, FaxView_Help
+AddReg         = ImageVueReg, ImageVue.install.reg, mfcdllsx.register
+DelReg         = TwainDelReg
+OptionDesc     = %IMAGEVUEOPT_DESC%
+Tip            = %IMAGEVUEOPT_TIP%
+Parent          = AccessTop     ; included as an Accessory Option
+UpdateInis     = ImageVueInis
+InstallType    = 10             ;Typical, Custom.
+IconIndex      = 38             ;Windows Logo mini-icon for dialogs. using screen saver icon for now
+Uninstall      = ImageVue_remove
+
+[ImageVue_remove]
+; note that if you install any shared MFC DLL's, you should NOT delete them when
+; uninstalling ImageVue
+DelFiles       = ImageVueCopyFiles, ImageVueCopyFiles_HELP, SharedCopyFiles, ImageOcxs, SampleFiles
+UpdateInis     = ImageVueInis.remove
+DelReg         = ImageVueDelReg
+AddReg         = ImageVue.remove.reg
+
+;List of files to copy to the \program files\accessories directory goes here:
+[ImageVueCopyFiles]
+wangimg.exe
+
+[OldFiles]
+w16cmpex.dll
+w32cmpex.dll
+oicor400.dll
+
+[Twain.Inf.Del]         ; get rid of old Twain INF file, no longer used
+wltwain.inf
+
+[SampleFiles]
+imgsampl.vbp
+imgsamp.frm
+gotodlg.frm
+
+[ImageVueCopyFiles_HELP]
+wangocx.hlp
+wangocx.cnt
+wangocxd.hlp
+wangocxd.cnt
+wangimg.hlp
+wangimg.cnt
+wangshl.hlp
+wangshl.cnt
+
+;list of files to copy to the \windows\system directory goes here:
+[mfcdllsx.files]
+mfc40.dll,,,32       ;Suppress version conflicts
+mfco40.dll,,,32       ;Suppress version conflicts
+msvcrt40.dll
+olepro32.dll,,,32       ;Suppress version conflicts
+awcodc32.dll    ;aw files required to for awd / fax support
+awdcxc32.dll
+awdenc32.dll
+awkrnl32.dll
+awresx32.dll
+awview32.dll
+xfilexr.dll
+
+
+[SharedCopyFiles]
+wangcmn.dll,,,4
+wangshl.dll,,,4                             ; Shell extension
+jpeg1x32.dll,,,4 
+jpeg2x32.dll,,,4 
+oigfs400.dll,,,4 
+oiadm400.dll,,,4 
+oidis400.dll,,,4 
+oifil400.dll,,,4 
+oicom400.dll,,,4 
+oiprt400.dll,,,4 
+oiui400.dll,,,4 
+oissq400.dll,,,4 
+oitwa400.dll,,,4 
+oislb400.dll,,,4
+
+[ImageOcxs]
+imgadmin.ocx,,,4                            ; Admin ocx
+imgedit.ocx,,,4                             ; Edit and Annotation ocx
+imgthumb.ocx,,,4                            ; Thumb ocx
+imgscan.ocx,,,4                             ; Scan ocx
+
+[TwainCopyFiles]        ; copy files for Twain scan support but never delete!
+twain.dll
+twain_32.dll
+twunk_16.exe
+twunk_32.exe
+
+[ImageVue.Win.Del]
+wangimg.exe
+faxview.exe                             ; get rid of the old faxviewer also
+
+[FaxView_Help]
+Faxview.cnt                             
+Faxview.hlp
+
+[ImageVueInis]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"                ;creates Accessories folder (if not already there
+setup.ini, group4,, """%IMAGEVUE_LINK%"", WANGIMG.EXE,,,wangimg,,%Wang_ShortDesc%"   ;creates link in Accessories folder
+setup.ini, group4,, """%OLDIMAGEVUE_LINK%"""             ;deletes old link
+
+[ImageVueInis.remove]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"     ;creates Accessories folder (if not already there
+setup.ini, group4,, """%IMAGEVUE_LINK%"""             ;deletes link
+
+
+
+[mfcdllsx.register]
+;Register shared DLLs:
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfc40.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfco40.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\msvcrt.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\msvcrt40.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\olepro32.dll,1,01,00,00,00
+
+
+[ImageVue.install.reg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"ImageVue",,"ImageVue"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\ImageVue,INF,,"imagevue.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\ImageVue,Section,,"ImageVue"
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\Opt

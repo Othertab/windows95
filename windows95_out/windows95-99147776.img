@@ -1,0 +1,206 @@
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SFor more information about a specific Microsoft NET 
+command, type the command name followed by /? 
+(for example, NET VIEW /?).
+
+NET CONFIG   Displays your current workgroup settings.
+NET DIAG     Runs the Microsoft Network Diagnostics program to
+             display diagnostic information about your network.
+NET HELP     Provides information about commands and
+             error messages.
+NET INIT     Loads protocol and network-adapter drivers without
+             binding them to Protocol Manager.  
+NET LOGOFF   Breaks the connection between your computer and
+             the shared resources to which it is connected.
+NET LOGON    Identifies you as a member of a workgroup.
+NET PASSWORD Changes your logon password.
+NET PRINT    Displays information about print queues
+             and controls print jobs.
+NET START    Starts services.
+NET STOP     Stops services.
+NET TIME     Displays the time on or synchronizes your computer's 
+             clock with the clock on a Microsoft Windows for 
+             Workgroups, Windows NT, Windows 95, or NetWare time server.
+NET USE      Connects to or disconnects from a shared
+             resource or displays information about
+             connections.
+NET VER      Displays the type and version number of the 
+             workgroup redirector you are using. 
+NET VIEW     Displays a list of computers that share
+             resources or a list of shared resources
+             on a specific computer.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SFor more information about a specific NET
+command, type the command name followed by /?
+(for example, NET VIEW /?).
+
+NET CONFIG   Displays information about your workgroup
+             settings.
+NET DIAG     Runs the Microsoft Network Diagnostics program to 
+             display diagnostic information about your network.
+NET HELP     Provides information about commands and
+             error messages.
+NET INIT     Loads protocol and network-adapter drivers without
+             binding them to Protocol Manager. 
+NET LOGOFF   Breaks the connection between your computer and
+             the shared resources to which it is connected.
+NET LOGON    Identifies you as a member of a workgroup.
+NET PASSWORD Changes your logon password.
+NET PRINT    Displays information about print queues
+             and controls print jobs.
+NET START    Starts services.
+NET STOP     Stops services.
+NET TIME     Displays the time on or synchronizes your computer's 
+             clock with the clock on a Microsoft Windows for 
+             Workgroups, Windows NT, Windows 95, or NetWare  time server.
+NET USE      Connects to or disconnects from a shared
+             resource or displays information about
+             connections.
+NET VER      Displays the type and version number of the
+             workgroup redirector you are using.
+NET VIEW     Displays a list of computers that share
+             resources or a list of shared resources
+             on a specific computer.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SStarts services.
+
+Services cannot be started from a command prompt within Windows.
+
+NET START [BASIC | NWREDIR | WORKSTATION | NETBIND | 
+           NETBEUI | NWLINK] [/LIST] [/YES] [/VERBOSE]
+
+  BASIC       Starts the basic redirector.
+  NWREDIR     Starts the Microsoft Novell(R) compatible 
+	      redirector.
+  WORKSTATION Starts the default redirector.
+  NETBIND     Binds protocols and network-adapter drivers.
+  NETBEUI     Starts the NetBIOS interface.
+  NWLINK      Starts the IPX/SPX-compatible interface.
+  /LIST       Displays a list of the services that are 
+              running.
+  /YES        Carries out the NET START command without
+              first prompting you to provide informat

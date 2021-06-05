@@ -1,0 +1,140 @@
+.IsClipboardDataAvailable = True Then
+    oleImgEdit1.ClipboardPaste
+    Selection = False
+End If
+
+End Sub
+
+Private Sub mnuPrevious_Click()
+'Save current page if modified, then store the current
+'page number and display the previous page
+Dim page As Long 'Page number place holder
+
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox(ImageChanged, vbYesNo) = vbYes Then
+        mnuSave_Click
+    End If
+End If
+LastPage = oleImgEdit1.page
+page = oleImgEdit1.page
+If page = 1 Then
+    MsgBox "First Page"
+    Exit Sub
+End If
+page = page - 1
+oleImgEdit1.page = page
+oleImgEdit1.Display
+
+'Update the selected page thumbnail
+oleImgThumbnail1.DeselectAllThumbs
+oleImgThumbnail1.ThumbSelected(oleImgEdit1.page) = True
+
+End Sub
+
+Private Sub mnuPrint_Click()
+'Open ImgAdmin's Print dialog and call ImgEdit's
+'Print function with the user selected options.
+Dim format As Integer
+Dim Annotations As Boolean
+
+On Error Resume Next 'handle errors ourselves in case of cancel
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox("The Image must be saved first if changes are to be printed.  Do you want to save the image?", vbYesNo) = vbYes Then
+        mnuSave_Click
+    End If
+End If
+oleImgAdmin1.Flags = 0 'clear Flags so print dialog box will display
+oleImgAdmin1.ShowPrintDialog frmSample.hWnd
+If oleImgAdmin1.StatusCode = 0 Then 'OK button selected
+    format = oleImgAdmin1.PrintOutputFormat
+    Annotations = oleImgAdmin1.PrintAnnotations
+        X = oleImgEdit1.PrintImage(oleImgAdmin1.PrintStartPage, oleImgAdmin1.PrintEndPage, format, Annotations)
+Else
+    If Err = ErrCancel Then '32755 = Cancel pressed
+        Exit Sub
+    Else
+        MsgBox Err.Description + " Code = " + Hex(oleImgAdmin1.StatusCode), 16
+    End If
+End If
+If oleImgEdit1.StatusCode <> 0 Then
+    MsgBox Err.Description + " Code = " + Hex(oleImgEdit1.StatusCode), 16
+End If
+
+End Sub
+
+Private Sub mnuPrintPage_Click()
+'Print the current page.
+
+On Error Resume Next 'handle errors ourselves
+X = oleImgEdit1.PrintImage(oleImgEdit1.page, oleImgEdit1.page)
+If oleImgEdit1.StatusCode <> 0 Then
+    MsgBox Err.Description + " Code = " + Hex(oleImgEdit1.StatusCode), 16
+End If
+
+End Sub
+
+
+Private Sub mnuRescan_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+
+Private Sub mnuRight_Click()
+'Rotate image 90 degrees to the right
+oleImgEdit1.RotateRight
+
+End Sub
+
+Private Sub mnuSave_Click()
+'Save the current document
+On Error Resume Next 'handle errors ourselves
+If oleImgEdit1.Image = "" Then
+    mnuSaveAs_Click
+Else
+    oleImgEdit1.Save (False)
+    If oleImgEdit1.StatusCode <> 0 Then
+        MsgBox Err.Description + " Code = " + Hex(oleImgEdit1.StatusCode), 16
+    End If
+End If
+
+End Sub
+
+Private Sub mnuSaveAs_Click()
+'Open ImgAdmin's SaveAs dialog
+Dim FileType As Integer
+
+On Error Resume Next 'handle errors ourselves
+
+'we can write tiff, bmp, and awd files, so set the admin file filter
+'to show only these types.
+oleImgAdmin1.Filter = "TIFF files (*.tif)|*.tif|BMP files (*.bmp)|*.bmp|AWD files(*.awd)|*.awd|"
+oleImgAdmin1.ShowFileDialog 1, frmSample.hWnd
+If Err = ErrCancel Then '32755 = Cancel pressed
+    Exit Sub
+End If
+
+If oleImgAdmin1.Image = oleImgEdit1.Image Then 'Save as current name
+    oleImgEdit1.Save False
+Else 'Save as newly selected name and change image name to selected name
+    'determine from the filter index which file type was selected
+    If oleImgAdmin1.FilterIndex = 1 Then
+        FileType = TiffImage
+    ElseIf oleImgAdmin1.FilterIndex = 2 Then
+        FileType = BmpImage
+    Else
+        FileType = AwdImage
+    End If
+    oleImgEdit1.SaveAs oleImgAdmin1.Image, FileType
+    oleImgEdit1.Image = oleImgAdmin1.Image
+    oleImgAdmin1.Image = oleImgEdit1.Image 'this forces a refresh of the properties in the Admin control
+    
+End If
+oleImgAdmin1.FilterIndex = 0
+oleImgAdmin1.Filter = ""
+If oleImgEdit1.StatusCode <> 0 Then
+    MsgBox Err.Description + " Code = " + Hex(oleImgEdit1.StatusCode), 16
+    Exit Sub
+End If
+

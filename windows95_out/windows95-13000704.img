@@ -1,0 +1,115 @@
+480"
+HKR,"MODES\32\800,600"
+HKR,"MODES\32\1024,768"
+HKR,"MODES\32\1152,864"
+HKR,"MODES\32\1280,1024"
+HKR,"MODES\32\1600,1200"
+
+[Imagine128.PosDup]
+*PNP0905, *PNP0914
+
+; User visible strings
+; ---------------------------------------------------------
+[Strings]
+ClassName="Display adapters"
+Display.SetupClassName="Display"
+MS="Microsoft"
+
+.DeviceDesc=""
+NullId1.DeviceDesc=""
+NullId2.DeviceDesc=""
+NullId3.DeviceDesc=""
+NullId4.DeviceDesc=""
+
+SuperVGA.DriverDesc="Super VGA"
+UNSUPPORTED.DriverDesc="(Windows 3.1 driver in use)"
+
+Std="(Standard display types)"
+Actix="Actix Systems"
+ARK="ARK Logic"
+ATI="ATI Technologies"
+Avance="Avance Logic"
+Boca="Boca Research"
+Cardinal="Cardinal Technologies"
+Cirrus="Cirrus Logic"
+Chips="Chips & Technologies"
+Compaq="Compaq"
+Diamond="Diamond Multimedia Systems"
+DEC="Digital Equipment Corp."
+DFI="DFI"
+ELSA="ELSA"
+Genoa="Genoa Systems"
+IBM="IBM"
+IIT="IIT"
+Herc="Hercules Computer Technology"
+Matrox="Matrox Graphics"
+Number9="Number Nine Visual Technology"
+Oak="Oak Technology"
+Orchid="Orchid Technology"
+Paradise="Paradise"
+S3="S3"
+Spider="Spider Graphics"
+STB="STB Systems"
+Trident="Trident Microsystems"
+Tseng="Tseng Labs"
+WD="Western Digital"
+Weitek="Weitek"
+Video7="Video Seven"
+VidLog="Video Logic"
+
+*PNP0900.DeviceDesc="Standard Display Adapter (VGA)"
+*PNP0901.DeviceDesc="Video Seven VRAM/VRAM II/1024i"
+*PNP0903.DeviceDesc="Trident Super VGA"
+*PNP0904.DeviceDesc="Cirrus Logic"
+*PNP0905.DeviceDesc="Cirrus Logic"
+*PNP0906.DeviceDesc="Tseng Labs ET4000"
+*PNP0907.DeviceDesc="Western Digital"
+*PNP0908.DeviceDesc="Western Digital"
+*PNP0909.DeviceDesc="S3 911/924"
+*PNP090A.DeviceDesc="ATI Graphics Ultra Pro (mach32)"
+*PNP090B.DeviceDesc="ATI Graphics Ultra (mach8)"
+*PNP090C.DeviceDesc="IBM XGA"
+*PNP090D.DeviceDesc="ATI VGA Wonder"
+*PNP090F.DeviceDesc="Oak Technology Super VGA"
+*PNP0910.DeviceDesc="Compaq QVision"
+*PNP0911.DeviceDesc="IBM XGA/2"
+*PNP0912.DeviceDesc="Tseng Labs ET4000/W32"
+*PNP0913.DeviceDesc="S3"
+*PNP0914.DeviceDesc="Cirrus Logic 5429/30/34/36"
+*PNP0915.DeviceDesc="Compaq Advanced VGA (AVGA)"
+*PNP0916.DeviceDesc="ATI Graphics Pro Turbo (mach64)"
+*PNP0917.DeviceDesc="VGA" ; Really means, nothing detected at all!
+*PNP0918.DeviceDesc="Matrox MGA Ultima/Impression"
+*PNP0919.DeviceDesc="Compaq QVision 2000/2000+ (MGA)"
+*PNP091A.DeviceDesc="Tseng Labs ET4000"
+*PNP0930.DeviceDesc="Chips & Tech. Super VGA"
+*PNP0931.DeviceDesc="Chips & Tech. Accelerator"
+*PNP0940.DeviceDesc="NCR (77C22E)"
+*PNP0941.DeviceDesc="NCR (77C32BLT)"
+
+*ATI4402.DeviceDesc="ATI Graphics Ultra Pro EISA (mach32)" 
+
+*CPQ3001.DeviceDesc="Compaq EISA Advanced VGA (AVGA)"
+*CPQ3011.DeviceDesc="Compaq QVision 1024/E"
+*CPQ3111.DeviceDesc="Compaq QVision 1024/E"
+*CPQ3112.DeviceDesc="Compaq QVision 1280/E"
+*CPQ3122.DeviceDesc="Compaq QVision 1280/I"
+*CPQA0DF.DeviceDesc="Compaq Notebook Display (WD)"
+
+PCI\CC_0300.DeviceDesc="Standard PCI Graphics Adapter (VGA)"
+PCI\CC_0301.DeviceDesc="Standard PCI Graphics Adapter (XGA)"
+PCI\CC_0380.DeviceDesc="Standard PCI Graphics Adapter"
+PCI\VEN_0E11&DEV_3032.DeviceDesc="Compaq QVision PCI"
+PCI\VEN_0E11&DEV_3033.DeviceDesc="Compaq QVision PCI"
+PCI\VEN_0E11&DEV_3034.DeviceDesc="Compaq QVision PCI"
+PCI\VEN_1002&DEV_4158.DeviceDesc="ATI Graphics Ultra Pro PCI (mach32)"
+PCI\VEN_1002&DEV_4758.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 GX)" ; GX
+PCI\VEN_1002&DEV_4358.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 CX)" ; CX
+PCI\VEN_1002&DEV_4354.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 CT)" ; CT
+PCI\VEN_1002&DEV_4554.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 ET)" ; ET
+PCI\VEN_1002&DEV_4C54.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 LT)" ; LT
+PCI\VEN_1002&DEV_5654.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 VT)" ; VT
+PCI\VEN_1002&DEV_4754.DeviceDesc="ATI Graphics Pro Turbo PCI (mach64 RAGE/GT)" ; GT
+PCI\VEN_1005&DEV_2301.DeviceDesc="Avance Logic 2301 PCI"
+PCI\VEN_100C&DEV_3202.DeviceDesc="Tseng Labs ET4000/W32 PCI"
+PCI\VEN_100C&DEV_3206.DeviceDesc="Tseng Labs ET4000/W32 PC

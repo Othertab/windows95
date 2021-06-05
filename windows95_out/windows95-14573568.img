@@ -1,0 +1,125 @@
+7E, \       ; IRQD_Req_Mask;    // Mask of possible IRQs {3,4,5,6,7,9,10,11,12,13,14}
+00,00, \       ; IRQD_Reserved;
+20,00,00,00, \ ; flags, 0x20 = Level mode interrupts
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \ ; Total length of REQUEST_CONFIG_PKT Descriptor
+7C,89,00,00, \ ; (ResType_Ignored_Bit + PCCARD_DEVICE_ID) = 0x897C
+00,00, \       ; Socket; (FILLED IN RUNTIME)
+02,00, \       ; Attributes; i/o client
+32, \          ; Vcc = 5.0v =50t
+32, \          ; Vpp1  set to 12.0v for FLASH access
+32, \          ; Vpp2  must be same as Vpp1
+02, \          ; IntType;
+F8,03,00,00, \ ; ConfigBase = 3f8
+00, \          ; Status reg;
+00, \          ; Pin reg;
+00, \          ; Copy reg;
+01, \          ; ConfigIndex reg = 1; set to 3 for FLASH access
+03, \          ; regs defined: {cfg idx, sts}
+;
+; TERMINATOR
+;
+00,00,00,00
+
+;  NDIS 3 driver
+[spex.ndis3]
+CopyFiles=spex.ndis3.CopyFiles
+
+[spex.ndis3.CopyFiles]
+spendis.vxd
+
+;****************************************************************************
+;    *SlSetp3   Silicom Pocket Ethernet Adapter
+;****************************************************************************
+
+[*SlSetp3.ndi]
+AddReg=*SlSetp3.ndi.reg,setp3.ndi.reg
+
+[*SlSetp3.ndi.reg]
+HKR,Ndi,DeviceID,,"*SlSetp3"
+;Parallel port Type Parameter
+HKR,Ndi\params\PP_Mode,ParamDesc,,%SL_SETP_PARAMETER_PP_MODE%
+HKR,NDI\params\PP_Mode,flag,1,20,00,00,00
+HKR,Ndi\params\PP_Mode,optional,,0
+HKR,Ndi\params\PP_Mode,default,,1
+HKR,Ndi\params\PP_Mode,type,,enum
+HKR,Ndi\params\PP_Mode\enum,1,,"AUTO"
+HKR,Ndi\params\PP_Mode\enum,0,,"EPP"
+HKR,Ndi\params\PP_Mode\enum,4,,"Unidirectional"
+HKR,Ndi\params\PP_Mode\enum,5,,"Fast Unidirectional"
+;Disable link Parameter
+HKR,Ndi\params\Disable_Link,ParamDesc,,%SL_SETP_PARAM_DISABLELINK%
+HKR,NDI\params\Disable_Link,flag,1,20,00,00,00
+HKR,Ndi\params\Disable_Link,optional,,0
+HKR,Ndi\params\Disable_Link,default,,16
+HKR,Ndi\params\Disable_Link,type,,enum
+HKR,Ndi\params\Disable_Link\enum,0,,%PARAM_YES%
+HKR,Ndi\params\Disable_Link\enum,16,,%PARAM_NO%
+;Miniblock Parameter
+HKR,Ndi\params\Mini_Block,ParamDesc,,%SL_SETP_PARAM_MINIBLOCK%
+HKR,NDI\params\Mini_Block,flag,1,20,00,00,00
+HKR,Ndi\params\Mini_Block,optional,,0
+HKR,Ndi\params\Mini_Block,default,,0
+HKR,Ndi\params\Mini_Block,type,,enum
+HKR,Ndi\params\Mini_Block\enum,2,,%PARAM_YES%
+HKR,Ndi\params\Mini_Block\enum,0,,%PARAM_NO%
+;LPT Parameter
+HKR,Ndi\params\LPT,ParamDesc,,%SL_SETP_PARAM_LPT%
+HKR,NDI\params\LPT,flag,1,20,00,00,00
+HKR,Ndi\params\LPT,optional,,0
+HKR,Ndi\params\LPT,default,,0
+HKR,Ndi\params\LPT,type,,enum
+HKR,Ndi\params\LPT\enum,0,,"AUTO"
+HKR,Ndi\params\LPT\enum,1,,"LPT1"
+HKR,Ndi\params\LPT\enum,2,,"LPT2"
+HKR,Ndi\params\LPT\enum,3,,"LPT3"
+
+;****************************************************************************
+; setp3 Drivers
+;****************************************************************************
+; Base section for setp3 users
+[setp3.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,setp3.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"SETP3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"EPNDIS$"
+HKR,NDIS\NDIS2,FileName,,"epndis.dos"
+HKR,NDIS\ODI,DriverName,,"ETPODI"
+HKR,NDIS\ODI,FileName,,"etpodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"setp3.ndis3"
+HKR,Ndi\Install,ndis2,,"setp3.ndis2"
+;HKR,Ndi\Install,odi,,"setp3.odi"
+
+; Install NDIS3
+[setp3.ndis3]
+CopyFiles=setp3.ndis3.CopyFiles
+[setp3.ndis3.CopyFiles]
+setp3.vxd
+
+; Install NDIS2
+[setp3.ndis2]
+CopyFiles=setp3.ndis2.CopyFiles
+[setp3.ndis2.CopyFiles]
+epndis.dos
+
+; Install ODI
+[setp3.odi]
+CopyFiles=setp3.odi.CopyFiles
+[setp3.odi.CopyFiles]
+etpodi.com
+
+;****************************************************************************
+; Source and Destination Di

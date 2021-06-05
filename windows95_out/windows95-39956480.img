@@ -1,0 +1,116 @@
+and 3, you would type /L:2;3.
+
+    Typically, MS-DOS loads a driver into a UMB in the specified region
+    only if that region contains a UMB larger than the driver's load size
+    (usually equal to the size of the executable program file). If the
+    driver requires more memory while running than it does when loaded, you
+    can use the minsize parameter to ensure that the driver will not be
+    loaded into a UMB that is too small for it. If you specify a value for
+    minsize, MS-DOS loads the driver into that region only if it contains a
+    UMB that is larger than both the driver's load size and the minsize
+    value.
+
+/S
+    Shrinks the UMB to its minimum size while the driver is loading. Using
+    this switch makes the most efficient use of memory. This switch is
+    generally used only by the MemMaker program, which can analyze a device
+    driver's memory use to determine whether the /S switch can safely be
+    used when loading that driver. This switch can be used only in
+    conjunction with the /L switch and affects only UMBs for which a 
+    minimum size was specified.
+
+
+DOS
+====
+
+Specifies that MS-DOS should maintain a link to the upper memory area, load
+part of itself into the high memory area (HMA), or both. You can use this
+command only in your Config.sys file.
+
+Syntax
+
+    DOS=HIGH|LOW[,UMB|,NOUMB][,AUTO|,NOAUTO]
+
+    DOS=[HIGH,|LOW,]UMB|NOUMB[,AUTO|,NOAUTO]
+  
+    DOS=[HIGH,|LOW,][UMB,|NOUMB,]AUTO|NOAUTO
+
+Parameters
+
+UMB|NOUMB
+    Specifies whether MS-DOS should manage upper memory blocks (UMBs)
+    created by a UMB provider such as Emm386.exe. The UMB parameter
+    specifies that MS-DOS should manage UMBs, if they exist. The NOUMB
+    parameter specifies that MS-DOS should not manage UMBs. The default
+    setting is NOUMB.
+
+HIGH|LOW
+    Specifies whether MS-DOS should attempt to load a part of itself into
+    the HMA (HIGH) or keep all of MS-DOS in conventional memory (LOW). The
+    default setting is LOW.
+
+AUTO|NOAUTO
+    Specifies whether MS-DOS should automatically load Himem.sys, Ifshlp.sys,
+    Dblbuff.sys, and Setver.exe device drivers if they are not explicitly
+    loaded in your Config.sys file. The default setting, AUTO, automatically
+    loads these device drivers. The AUTO setting also automatically uses
+    the BUFFERSHIGH, FILESHIGH, FCBSHIGH, LASTDRIVEHIGH, and STACKSHIGH
+    commands, whether the -HIGH form of the command was used or not. If
+    you specify the NOAUTO parameter, you must explicitly load these device
+    drivers and explicitly use the -HIGH form of the above commands in order
+    to take advantage of them.
+
+
+DRIVPARM
+========
+
+Defines parameters for devices such as disk and tape drives when you start
+MS-DOS. You can use this command only in your Config.sys file.
+
+The DRIVPARM command modifies the parameters of an existing physical drive.
+It does not create a new logical drive. The settings specified in the
+DRIVPARM command override the driver definitions for any previous block
+device.
+
+Syntax
+
+    DRIVPARM=/D:number [/C] [/F:factor] [/H:heads] [/I] [/N] [/S:sectors]
+    [/T:tracks]
+
+Switches
+
+/D:number
+    Specifies the physical drive number. Values for number must be in the
+    range 0 through 255 (for example, drive number 0 = drive A, 1 = drive B,
+    2 = drive C, and so on).
+
+/C
+    Specifies that the drive can detect whether the drive door is closed.
+
+/F:factor
+    Specifies the drive type. The following table shows the valid values for
+    factor and a brief description of each. The default value is 2.
+
+    0        160K/180K or 320K/360K
+
+    1        1.2 megabyte (MB)
+
+    2        720K (3.5-inch disk)
+
+    5        Hard disk
+
+    6        Tape
+
+    7        1.44 MB (3.5-inch disk)
+
+    8        Read/write optical disk
+
+    9        2.88 MB (3.5-inch disk)
+
+/H:heads
+    Specifies the maximum number of heads. Values for heads must be in the
+    range 1 through 99. The default value depends on the value you specify
+    for /F:factor.
+
+/I
+    Specifies a

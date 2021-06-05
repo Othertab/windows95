@@ -1,0 +1,110 @@
+************************************************************
+
+[21x4.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,dc21x4.sys
+; NDIS Info
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS,LogDriverName,,"DC21X4"
+HKR,NDIS\NDIS2,DriverName,,"DC21X4$"
+HKR,NDIS\NDIS2,FileName,,"dc21x4.dos"
+HKR,NDIS\ODI,DriverName,,"DC21X4"
+HKR,NDIS\ODI,FileName,,"dc21x4.com"
+
+; Interfaces
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+; Install sections
+HKR,Ndi\Install,ndis3,,"dc21x4.ndis3"
+HKR,Ndi\Install,ndis2,,"dc21x4.ndis2"
+;HKR,Ndi\Install,odi,,"dc21x4.odi" 
+
+;params
+HKR,,MediaType,,1
+
+;****************************************************************************
+; PCI common parameters
+;****************************************************************************
+
+[p21x4.ndi.reg]
+;params
+HKR,,AdapterType,,5
+HKR,,BusType,,5
+;BurstLength
+HKR,Ndi\params\BurstLength,ParamDesc,,"Burst Length"
+HKR,Ndi\params\BurstLength,default,,10
+HKR,Ndi\params\BurstLength,type,,enum
+HKR,Ndi\params\BurstLength\enum,1,,"1 DWORD"
+HKR,Ndi\params\BurstLength\enum,2,,"2 DWORDS"
+HKR,Ndi\params\BurstLength\enum,4,,"4 DWORDS"
+HKR,Ndi\params\BurstLength\enum,8,,"8 DWORDS"
+HKR,Ndi\params\BurstLength\enum,10,,"16 DWORDS"
+HKR,Ndi\params\BurstLength\enum,20,,"32 DWORDS"
+HKR,NDI\params\BurstLength,flag,1,20,00,00,00
+;Receive buffers
+HKR,Ndi\params\ReceiveBuffers,ParamDesc,,"Receive Buffers"
+HKR,Ndi\params\ReceiveBuffers,default,,10
+HKR,Ndi\params\ReceiveBuffers,type,,enum
+HKR,Ndi\params\ReceiveBuffers\enum,8,," 8"
+HKR,Ndi\params\ReceiveBuffers\enum,10,,"16"
+HKR,Ndi\params\ReceiveBuffers\enum,20,,"32"
+HKR,Ndi\params\ReceiveBuffers\enum,30,,"48"
+HKR,Ndi\params\ReceiveBuffers\enum,40,,"64"
+HKR,NDI\params\ReceiveBuffers,flag,1,20,00,00,00
+
+;****************************************************************************
+; EISA common parameters
+;****************************************************************************
+
+[e21x4.ndi.reg]
+;params
+HKR,,AdapterType,,2
+HKR,,BusType,,2
+
+;****************************************************************************
+; Device specific parameters
+;****************************************************************************
+
+[dc21040.ndi.reg]
+;ConnectionType
+HKR,Ndi\params\ConnectionType,ParamDesc,,"Connection Type-32 bit driver"
+HKR,Ndi\params\ConnectionType,default,,0
+HKR,Ndi\params\ConnectionType,type,,enum
+HKR,Ndi\params\ConnectionType\enum,0,,"AutoDetect"
+HKR,Ndi\params\ConnectionType\enum,2,,"Twisted_Pair"
+HKR,Ndi\params\ConnectionType\enum,3,,"TP Full_Duplex"
+HKR,Ndi\params\ConnectionType\enum,4,,"TP No_Link_Test"
+HKR,Ndi\params\ConnectionType\enum,1,,"BNC (10Base2)"
+HKR,Ndi\params\ConnectionType\enum,5,,"AUI (10Base5)"
+HKR,NDI\params\ConnectionType,flag,1,20,00,00,00
+
+;SIA Mode
+;--------------
+HKR,Ndi\params\SIA_Mode,ParamDesc,,"Connection Type-16 bit driver"
+HKR,Ndi\params\SIA_Mode,default,,AUTODETECT
+HKR,Ndi\params\SIA_Mode,type,,enum
+HKR,Ndi\params\SIA_Mode\enum,AUTODETECT,,"Auto Detection"
+HKR,Ndi\params\SIA_Mode\enum,TP,,"Twisted Pair"
+HKR,Ndi\params\SIA_Mode\enum,TP_FULL_DUPLEX,,"TP Full Duplex"
+HKR,Ndi\params\SIA_Mode\enum,BNC,,"BNC (Thinnet)"
+HKR,Ndi\params\SIA_Mode\enum,AUI,,"AUI (Thicknet)"
+HKR,NDI\params\SIA_Mode,flag,1,10,00,00,00
+
+[dc21041.ndi.reg]
+;ConnectionType
+HKR,Ndi\params\ConnectionType,ParamDesc,,"Connection Type-32 bit driver"
+HKR,Ndi\params\ConnectionType,default,,0
+HKR,Ndi\params\ConnectionType,type,,enum
+HKR,Ndi\params\ConnectionType\enum,0,,"AutoSense"
+HKR,Ndi\params\ConnectionType\enum,6,,"AutoSense NWay"
+HKR,Ndi\params\ConnectionType\enum,2,,"Twisted_Pair"
+HKR,Ndi\params\ConnectionType\enum,7,,"TP NWay"
+HKR,Ndi\params\ConnectionType\enum,3,,"TP Full_Duplex"
+HKR,Ndi\params\ConnectionType\enum,4,,"TP No_Link_Test"
+HKR,Ndi\params\ConnectionType\enum,1,,"BNC (10Base2)"
+HKR,Ndi\params\ConnectionType\enum,5,,"AUI (10Base5)"
+H

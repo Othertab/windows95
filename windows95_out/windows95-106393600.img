@@ -1,0 +1,107 @@
+stop this from
+  happening, disable Auto-Dial on the ISDN device.
+
+- It is not recommended that you change the name of your User
+  Location Server while the Directory window is open.
+
+- If the User Location Server is temporarily unavailable, there
+  might be a brief period of time after the server returns when 
+  your name is not listed in the directory.
+
+- SpeedDial connections created with beta1 or beta2 might not 
+  work properly with the 1.0 release version of NetMeeting.
+
+- If you do not see your name in the list of names on the User 
+  Location Service you might not be logged on, or you might be 
+  logged on to a different User Location Service.  To change the User 
+  Location Service you log into, click the Tools menu, click Options,
+  and then change your User Location Service Name.  
+
+  To log on to the User Location Server, click the Call menu, and 
+  then click Log On to User Location Service.
+
+- If you want to place a call to a person using PictureTel
+  LiveShare version 3.x or earlier, carry out the following steps:
+
+  1.  Click the Tools menu, click Options click the Protocols tab. 
+
+  2.  Select the checkbox for the LiveShare protocol you want to use.
+
+  3.  Select the corresponding NetMeeting protocol if available.  
+
+  For example, to place a modem call to someone using LiveShare, 
+  you would need to select both the Modem and Modem for LiveShare 
+  Networks check boxes.
+
+  TIP: To show LiveShare protocols, make sure the following check 
+  box is selected: "Use additional protocols for compatibility with 
+  PictureTel LiveShare 3.x and earlier."
+
+- If you have an active network connection using a network card 
+  and a second active connection using a modem or a second network
+  card, you might not be able to connect to the User Location Service.
+
+- When you are in a meeting, you cannot connect to people already 
+  in another meeting.
+
+- You cannot connect with Data and Audio to someone who is already
+  in a meeting.
+
+RECEIVING A CALL
+================
+
+You are ready to receive an incoming call if you are currently
+running Microsoft NetMeeting and have not selected Do Not Disturb
+on the Call menu.
+
+Warnings and Known Bugs
+-----------------------
+
+- If you are using Microsoft NetMeeting on a local area network, 
+  you might not be able to receive calls while your Dial-Up 
+  Networking logon screen is open.
+
+- If you receive a call while the directory dialog is opened, 
+  you can accept the call by using spacebar.
+
+
+SHARING AN APPLICATION
+======================
+ 
+Any person in a meeting can share an application with the other 
+participants. When you share an application, other people can 
+see the application.  When you Collaborate, other people can 
+see and use the application.
+
+Warnings and Known Bugs
+-----------------------
+
+- Sharing one Windows Explorer window shares all of them. If you 
+  run a program while Windows Explorer is shared, the program
+  will also be shared. 
+  
+  Examples of Explorer windows include Internet Mail and News, 
+  Control Panels, and Briefcase.
+
+- When you share an application and collaborate, remote users 
+  can use the File Open and File Save dialog boxes in your 
+  application to access or delete files on your computer or 
+  network. 
+
+  To stop someone from using your shared program while you do 
+  not have control of the cursor, press ESC. 
+  
+  To stop someone from using your shared program while you do 
+  have control of the cursor, click the Work Alone button.
+  
+  It is not recommended that you leave your computer unattended 
+  while sharing an application and collaborating.
+
+- You cannot drag an object onto a shared application or drag 
+  an object from a shared application to the desktop.
+
+- When you share control of an application, others will be 
+  able to use features in that application to control hardware 
+  devices (for example, to print a file) However, this does not 
+  automatically share applications that report status for these 
+  devices (for example, t

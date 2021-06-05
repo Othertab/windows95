@@ -1,0 +1,141 @@
+LIB, rcQuery=0
+	IO=388-38b
+Checking for: AuraVision VxP500 Compatible Video Capture Adapter
+QueryIOMem: Caller=DETECTVXP500, rcQuery=0
+	IO=500-501
+QueryIOMem: Caller=DETECTVXP500, rcQuery=1
+	IO=600-601
+QueryIOMem: Caller=DETECTVXP500, rcQuery=0
+	IO=700-701
+Checking for: Mitsumi CD-ROM Drive
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=100-103
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=104-107
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=108-10b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=10c-10f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=110-113
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=114-117
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=118-11b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=11c-11f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=120-123
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=124-127
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=128-12b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=12c-12f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=130-133
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=134-137
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=138-13b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=13c-13f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=140-143
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=144-147
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=148-14b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=14c-14f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=150-153
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=154-157
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=158-15b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=15c-15f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=160-163
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=164-167
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=168-16b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=16c-16f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=170-173
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=174-177
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=178-17b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=17c-17f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=180-183
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=184-187
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=188-18b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=18c-18f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=190-193
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=194-197
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=198-19b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=19c-19f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1a0-1a3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1a4-1a7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1a8-1ab
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1ac-1af
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1b0-1b3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1b4-1b7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1b8-1bb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1bc-1bf
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1c0-1c3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1c4-1c7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1c8-1cb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1cc-1cf
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1d0-1d3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1d4-1d7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1d8-1db
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1dc-1df
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1e0-1e3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1e4-1e7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1e8-1eb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=1f0-1f3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=1f4-1f7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1f8-1fb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=1fc-1ff
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=200-203
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=204-207
+QueryIOMem: Caller=DETEC

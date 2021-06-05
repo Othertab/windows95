@@ -1,0 +1,97 @@
+with your fax message on the cover page, you must use
+the Send Fax wizard. To open the Send Fax wizard, click the Compose
+menu in Microsoft Exchange, and then click the New Fax menu. Or, click 
+the Start button, point to Programs, point to Accessories, and then
+click the Fax folder. If you are faxing only a short note,
+performance is better when you put the note on the cover page.
+
+To include a message on the cover page, the cover page must contain
+the note field. If the note field is not present, the message
+appears on the second page of the fax.
+
+The network fax server component of Microsoft Fax has only been tested
+and known to work with Microsoft File and Printer Sharing for 
+Microsoft Networks or Microsoft File and Printer Sharing for NetWare
+Networks.
+
+If you change a setting in Microsoft Fax while Microsoft Exchange is  
+running, the change will probably not take effect until you log off
+and exit from Microsoft Exchange, and then restart it.
+
+If you send a fax to a Windows for Workgroups 3.11 At Work Fax user,
+and the message includes multiple recipients on the Cc: list, the
+only addresses that will be visible on the fax user's message are
+the fax addresses. However, all messages will be sent correctly.
+
+The File Send command in some programs may not work properly. This 
+includes Microsoft Works version 3.0, Lotus 1-2-3, Aldus Pagemaker, 
+and others. If you cannot reliably send a fax by using the File Send 
+command, either attach the file to a fax or use the File Print 
+command from within the program.
+
+When you use the fax configuration properties sheet to browse to a
+cover page, a link (.lnk) to this cover page is created in your
+Windows directory. If you already have a cover page (.cpe) in your
+Windows directory with the same name, this name will appear in the
+cover pages list twice, but you can select only one of them. It is
+recommended that you delete one of the files by using Windows Explorer.
+
+If you send an editable fax to a Windows for Workgroups 3.11 At Work
+Fax user, the fax recipient may not see any names on the Cc or Bcc line
+if the message was sent to duplicate or non-Fax addresses. However, the
+message will be delivered to all recipients.
+
+If you are using the Microsoft NetFax service for faxing, and you use 
+the Microsoft Fax "Request a Fax" program to retrieve a fax, the 
+returned information wil be sent to the NetFax server. It will then 
+have to be forwarded to you manually by the system administrator. 
+
+
+PEN SERVICES
+============
+
+Microsoft Corp. distributes Pen Services for Windows 95 through the
+Original Equipment Manufacturer (OEM) channel. As such, the Windows
+95 product does not include Pen Services for Windows 95.
+
+Contact your pen hardware OEM for your Pen Services for Windows 95 
+upgrade.
+
+
+MS-DOS MODE
+===========
+
+The MS-DOS Share program (Share.exe) is not included in this version 
+of Windows. Share support is provided to all programs running under 
+Windows, but programs that require share support cannot be run in 
+MS-DOS mode using this version of Windows.
+
+
+MS-DOS MEMORY MANAGEMENT
+========================
+
+To maximize the amount of memory available to MS-DOS programs, add 
+the following line to your Config.sys file:
+
+	buffers=13
+
+On most computers, this will free up approximately 16K of conventional 
+or upper memory for use by MS-DOS programs or device drivers. Note, 
+however, that this command reduces the number of MS-DOS buffers, so it 
+might adversely affect disk performance when your computer is running 
+in MS-DOS mode.
+
+
+MS-DOS CODE PAGE
+================
+
+Depending on the country selected, Windows 95 automatically uses 
+MS-DOS code page 437 or 850. If you need to use a different code 
+page, such as 861 or 865, use the Changecp.exe utility program. 
+This program is included in the Windows 95 Resource Kit and the 
+CD-ROM version of Windows 95. It is also available from the 
+Microsoft Download Service or from your local Microsoft subsidiary.
+
+
+ONTRACK SYSTEMS DISK MANAGER
+=============

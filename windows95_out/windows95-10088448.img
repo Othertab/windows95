@@ -1,0 +1,102 @@
+lSet\Services\VxD\NWLink\Ndi\params\cachesize,ParamDesc,,%NWLINK_PARAM_CACHESIZE%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize,type,,enum
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize,default,,0
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize\enum,0,,%PARAM_OFF%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize\enum,16,,%PARAM_16%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize\enum,32,,%PARAM_32%
+HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize\enum,64,,%PARAM_64%
+; Context help
+HKR,Ndi,HelpText,,%NWLINK_HELP%
+
+[NWLINK.Install]
+AddReg=NWLINK.AddReg
+CopyFiles=NWLINK.CopyFiles,WSOCK.sys.copyfiles,WSOCK.win.copyfiles
+;Delfiles=WSOCK.del.sys,WSOCK.del.win32s
+
+[NWLINK.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,nwlink.vxd
+
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\Winsock","IPX/SPX Winsock Provider",,"wsipx.vxd"
+HKLM,"Software\Microsoft\Rpc\ClientProtocols",ncacn_spx,,rpcltc6.dll
+HKLM,"Software\Microsoft\Rpc\ServerProtocols",ncacn_spx,,rpclts6.dll
+;Backup the file to prevent overwrites
+HKLM,"SYSTEM\CurrentControlSet\Control\SessionManager\CheckVerDLLs",WINSOCK.DLL,,0
+
+[NWLINK.CopyFiles]
+nwlink.vxd
+wsipx.vxd
+rpcltc6.dll
+rpclts6.dll
+
+[NWLINK.Remove]
+DelReg=NWLINK.Rmv.DelReg
+[NWLINK.Rmv.DelReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\Winsock","IPX/SPX Winsock Provider",
+; RPC
+HKLM,"Software\Microsoft\Rpc\ClientProtocols",ncacn_spx,
+HKLM,"Software\Microsoft\Rpc\ServerProtocols",ncacn_spx,
+
+
+;****************************************************************************
+; TCP/IP
+;****************************************************************************
+[MSTCP.ndi]
+AddReg=MSTCP.ndi.reg
+DeviceID=MSTCP
+MaxInstance=4
+
+[MSTCP.ndi.reg]
+HKR,Ndi,DeviceID,,MSTCP
+HKR,Ndi,MaxInstance,,8
+HKR,Ndi,NdiInstaller,,"mstcp.dll,TcpNdiProc"
+; NDIS info
+HKR,NDIS,LogDriverName,,"MSTCP"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"netbios,tdi,winsock"
+HKR,Ndi\Interfaces,DefLower,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,UpperRange,,"netbios,tdi,winsock"
+HKR,Ndi\Interfaces,LowerRange,,"ndis2,ndis3,odi"
+; Install-Remove Sections
+HKR,Ndi\Install,,,"MSTCP.Install"
+HKR,Ndi\Remove,,,"MSTCP.Remove"
+; Context help
+HKR,Ndi,HelpText,,%MSTCP_HELP%
+; Need for advanced page
+HKR,Ndi\Params\None,ParamDesc,,%PARAM_NONE%
+HKR,Ndi\Params\None,default,,""
+HKR,Ndi\Params\None,type,,keyonly
+
+HKR,Ndi\RenameBase,file1,,"%25%\winsock"
+HKR,Ndi\RenameBase,file2,,"%11%\winsock"
+HKR,Ndi\RenameBase,file3,,"%11%\win32s\winsock"
+
+;Default for lmhost
+HKLM,System\CurrentControlSet\Services\VxD\MSTCP,LMHostFile,,"%10%\lmhosts"
+
+[MSTCP.Install]
+AddReg=MSTCP.AddReg
+DelReg=MSTCP.Ins.DelReg
+CopyFiles=MSTCP.CopyFiles.sys,MSTCP.CopyFiles.win,WSOCK.sys.copyfiles,WSOCK.win.copyfiles
+UpdateAutoBat=MSTCP.UpdateAutoBat
+UpdateCfgSys=MSTCP.UpdateCfgSys
+;Delfiles=WSOCK.del.sys,WSOCK.del.win32s
+
+[MSTCP.AddReg]
+HKR,,DevLoader,,*ndis
+
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\Winsock","Ancillary Function Driver for Winsock",,"afvxd.vxd"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\AFVXD","MSTCP Helper for Winsock",,"wshtcp.vxd"
+HKLM,"System\CurrentControlSet\Services\VxD\MSTCP\Parameters\Winsock",MaxSockAddrLength,1,10,0,0,0
+HKLM,"System\CurrentControlSet\Services\VxD\MSTCP\Parameters\Winsock",MinSockAddrLength,1,10,0,0,0
+
+HKLM,"Software\Microsoft\Rpc\ClientProtocols",ncacn_ip_tcp,,rpcltc3.dll
+HKLM,"Software\Microsoft\Rpc\ServerProtocols",ncacn_ip_tcp,,rpclts3.dll
+; winsock registry info
+HKLM,"System\CurrentControlSet\Control\ServiceProvider\Order\ExcludedProviders"
+HKLM,"System\CurrentControlSet\Control\ServiceProvider\Order\ProviderOrder",MSTCP,,""
+HKLM,"System\CurrentControlSet\Services\VxD\MSTCP\ServiceProvider",LocalPriority,1,f3,01,00,00
+HKLM,"System\CurrentControlSet\Services\VxD\MSTCP\ServiceProvider",HostsPriority,1,f4,01,00,00
+HKLM,"System\CurrentControlSet\Services\VxD\MSTCP\ServiceProvider"

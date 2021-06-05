@@ -1,0 +1,105 @@
+ **
+
+[GreekSubs]
+win.ini,FontSubstitutes,,"Arial Greek,161=Arial,161",
+win.ini,FontSubstitutes,,"Courier New Greek,161=Courier New,161",
+win.ini,FontSubstitutes,,"Times New Roman Greek,161=Times New Roman,161",
+
+[CyrillicSubs]
+win.ini,FontSubstitutes,,"Arial Cyr,204=Arial,204"
+win.ini,FontSubstitutes,,"Courier New Cyr,204=Courier New,204"
+win.ini,FontSubstitutes,,"Times New Roman Cyr,204=Times New Roman,204"
+
+[CESubs]
+win.ini,FontSubstitutes,,"Arial CE,238=Arial,238"
+win.ini,FontSubstitutes,,"Courier New CE,238=Courier New,238"
+win.ini,FontSubstitutes,,"Times New Roman CE,238=Times New Roman,238"
+
+[TurkishSubs]
+win.ini,FontSubstitutes,,"Arial Tur,162=Arial,162"
+win.ini,FontSubstitutes,,"Courier New Tur,162=Courier New,162"
+win.ini,FontSubstitutes,,"Times New Roman Tur,162=Times New Roman,162"
+
+[BalticSubs]
+win.ini,FontSubstitutes,,"Arial Baltic,186=Arial,186"
+win.ini,FontSubstitutes,,"Courier New Baltic,186=Courier New,186"
+win.ini,FontSubstitutes,,"Times New Roman Baltic,186=Times New Roman,186"
+
+;** Add Registry Entries ***
+
+[GreekInstalled]
+HKLM,%KEY_Optional%,"Greek",,"Greek"
+HKLM,%KEY_Optional%\Greek,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Greek,Section,,"Greek"
+HKLM,%KEY_Optional%\Greek,Installed,,"1"
+
+HKLM,%KEY_Optional%,"Cyrillic",,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Cyrillic,Section,,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"0"
+
+HKLM, %KEY_Nls%\Locale,00000408,,%00000408%     ;Greek
+HKLM,"%KEY_KLayout%\00000408","layout file",,kbdgk.kbd
+HKLM,"%KEY_KLayout%\00000408","layout text",,%KBD_GK%
+HKLM,"%KEY_KLayout%\00010408","layout file",,kbdgk220.kbd
+HKLM,"%KEY_KLayout%\00010408","layout text",,%KBD_GK220%
+HKLM,"%KEY_KLayout%\00010408","layout id",,0016
+HKLM,"%KEY_KLayout%\00020408","layout file",,kbdgl220.kbd
+HKLM,"%KEY_KLayout%\00020408","layout text",,%KBD_GL220%
+HKLM,"%KEY_KLayout%\00020408","layout id",,0017
+HKLM,"%KEY_KLayout%\00030408","layout file",,kbdgk319.kbd
+HKLM,"%KEY_KLayout%\00030408","layout text",,%KBD_GK319%
+HKLM,"%KEY_KLayout%\00030408","layout id",,0018
+HKLM,"%KEY_KLayout%\00040408","layout file",,kbdgl319.kbd
+HKLM,"%KEY_KLayout%\00040408","layout text",,%KBD_GL319%
+HKLM,"%KEY_KLayout%\00040408","layout id",,0011
+HKLM,"%KEY_KLayout%\00050408","layout file",,kbdgkl.kbd
+HKLM,"%KEY_KLayout%\00050408","layout text",,%KBD_GKL%
+HKLM,"%KEY_KLayout%\00050408","layout id",,0019
+HKLM, %KEY_Nls%\Codepage,1253,,cp_1253.nls
+
+[CyrillicInstalled]
+HKLM,%KEY_Optional%,"Greek",,"Greek"
+HKLM,%KEY_Optional%\Greek,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Greek,Section,,"Greek"
+HKLM,%KEY_Optional%\Greek,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Cyrillic",,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Cyrillic,Section,,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,Installed,,"1"
+
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"0"
+
+HKLM, %KEY_Nls%\Locale,00000423,,%00000423%     ;Belarusian
+HKLM,"%KEY_KLayout%\00000423","layout file",,kbdblr.kbd
+HKLM,"%KEY_KLayout%\00000423","layout text",,%KBD_BLR%
+HKLM, %KEY_Nls%\

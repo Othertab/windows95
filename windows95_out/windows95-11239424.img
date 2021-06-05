@@ -1,0 +1,49 @@
+\ParallelPort\%%ComponentID\OperationalState,"MajorErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\OperationalState,"WarningErrorCount",1,00
+
+;  Component ID group
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID\ComponentID,"Verify",1,02
+
+;  FRU (Field Replacable Unit)
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"Description",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"Model",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"PartNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"FRUSerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"RevisionLevel",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"WarrantyStartDate",1,
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"WarrantyDuration",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\FRU,"SupportPhoneNumber",,"Unknown"
+
+;  Operational State info
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"OperationalStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"UsageState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"AvailabilityStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"AdministrativeState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"FatalErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"MajorErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\OperationalState,"WarningErrorCount",1,00
+
+;  Component ID group
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID\ComponentID,"Verify",1,02
+
+;  FRU (Field Replacable Unit)
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"Description",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"Model",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"PartNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"FRUSerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"RevisionLevel",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"WarrantyStartDate",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\FRU,"WarrantyDuration",1,00
+HKLM,DesktopManagement\In

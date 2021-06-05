@@ -1,0 +1,85 @@
+.com from your \Dos directory to your \Windows directory.
+
+Zenith NoteFLEX 486DX and PCMCIA hard drives
+--------------------------------------------
+If you are using a PCMCIA hard drive with this computer, you must 
+enable 32-bit PCMCIA support in order to access the drive.
+
+To enable 32-bit PCMCIA support:
+1. In Control Panel, double-click the PC Card (PCMCIA) icon.
+2. Follow the instructions on your screen.
+
+If you see properties for your PCMCIA socket instead of the wizard, 
+Windows 32-bit support for PC cards is already turned on. If you do not 
+see the PC Card (PCMCIA) icon in Control Panel, double-click the 
+Add New Hardware icon in Control Panel to install your PCMCIA socket.
+
+Megahertz Em1144T and 16-bit Modem
+----------------------------------
+If you experience problems setting up the modem side of this card 
+in a real-mode PCMCIA environment, try explicitly setting the COMIRQ 
+and COMBASE parameters in the Megahertz section of your Protocol.ini 
+file. There is a known problem where this card enabler ignores the 
+default values set for these parameters.
+
+Digital Venturis (any model)
+----------------------------
+If PNPISA and/or PCI cards are not automatically recognized, or if 
+Windows generates Blue Screen errors when reconfiguring your COM ports, 
+contact Digital for a new BIOS.
+
+Printing from Device Manager
+----------------------------
+If you choose to print "all devices and system summary" from Device
+Manager, the device detection code MAY cause problems for MS-DOS-
+based programs. The symptom of this problem is that after you print,
+your computer reports that it is out of memory when you try to run 
+an MS-DOS-based program. When this problem occurs, you may need to 
+restart Windows to correct the problem. 
+
+Mozart Sound Card/Canon Innova 550 CD Driver Problem
+----------------------------------------------------
+You may experience problems when you start up Windows 95. To receive
+a new driver that works with Windows 95, contact the Canon Help Desk.
+
+Users of TrueFFS Flash File System for PCMCIA Cards 
+---------------------------------------------------
+The MS-DOS or Windows 3.1 versions of the TrueFFS driver will not work 
+with the Windows 95 PCMCIA driver. To work with FTL formatted Linear 
+Flash PCMCIA cards when the Windows 95 PCMCIA driver is enabled, you 
+must install a new Windows 95 device driver provided by M-Systems. To 
+do this, carry out the following procedure:
+
+1. In Control Panel, double-click the Add New Hardware icon. 
+2. Click Next, and then click the option not to have Windows search 
+   for your new hardware.
+3. Click Hard Disk Controllers, and then click Next.  
+4. From the list, click M-Systems. 
+5. Click the specific Flash Card, and then click Next. Then follow 
+   the instructions on your screen.
+ 
+NOTE: If M-Systems is not shown in the list, click Have Disk, and then
+insert the M-Systems Windows 95 installation disk and follow the 
+instructions on your screen.
+
+Micronics Motherboards with a Flash BIOS
+-----------------------------------------
+Before installing Windows, users of Micronics motherboards with a Flash 
+BIOS need to be sure the BIOS read/write jumper is set to the read-only
+position. If you try to install Windows 95 with this jumper in the 
+read\write position, it may cause BIOS corruption. For more information,
+contact your computer manufacturer.
+
+Toshiba Computers: T610 T400 series, T2100 series, T2400 series, 
+T4700 series, T4800 series, and the T4900CT and T3600
+----------------------------------------------------------------
+If you use any of these Toshiba computers, Toshiba strongly recommends 
+upgrading your computer's BIOS to version 5.0. The upgraded BIOS 
+provides additional functionality for the Windows 95 operating system. 
+For more information, in the United States contact Toshiba at 
+(800) 999-4273. Outside the U.S., contact your local Toshiba dealer.
+
+Toshiba T2150 models
+---------------------
+If your system stops responding during suspend or resume operations, 
+comment out th

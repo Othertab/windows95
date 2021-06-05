@@ -1,0 +1,77 @@
+.DLL, P_ValidateOC
+Uninstall               = MSMAIL.Remove
+
+[MSMAIL.Remove]
+DelFiles                = MAPICopyProgramFiles, MAPICopyFilesWin, MAPICopyFilesSys, MAPICopyFilesHelp, MAPIDelFilesEforms
+AddReg                  = MAPIAddReg.Remove
+DelReg                  = MSMailDelReg.Remove
+UpdateInis              = MAPIUpdateIni.Remove, MSMailUpdateIni.Remove
+Reboot=1
+
+[MSFS]
+OptionDesc              = %MSFS_Desc%
+Tip                     = %MSFS_Tip%
+Needs                   = MSMAIL
+Parent                  = EMAIL
+CopyFiles               = MSFSCopyFilesSys
+AddReg                  = MSFSAddReg
+InstallType             = 0
+IconIndex               = 24
+Uninstall               = MSFS.Remove
+
+[MSFS.Remove]
+DelFiles                = MSFSCopyFilesSys
+AddReg                  = MSFSAddReg.Remove
+DelReg                  = MSFSDelReg
+
+[BaseUpdateIni]
+; remove mlcfg32 to the control panel
+control.ini,MMCPL,"mlcfg="
+
+; remove old mmf mig tool from systools folder
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"        ; creates systools folder
+setup.ini, group11,, """%MMFMig_Desc%"""                     ; deletes link
+
+; remove 'Inbox.lnk' from desktop
+setup.ini, progman.groups,, "desktop=""..\..\%desktop_DESC%"""    ;creates folder
+setup.ini, desktop,,"""%WinMsg_Desc%"""
+
+; remove english non-localized 'Inbox.lnk' from desktop
+setup.ini, progman.groups,, "desktop=""..\..\%desktop_DESC%"""    ;creates folder
+setup.ini, desktop,,Inbox
+
+;Deletes Old Links in the Programs Folder (Not in a sub-folder)
+setup.ini, progman.groups,, "group0="            ;creates "null" folder
+setup.ini, group0,, """%SendNewMessage%"""
+setup.ini, group0,, """%OpenMailbox%"""
+
+[BaseAddReg]
+; Add the inbox wizard reg entries
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00020D76-0000-0000-C000-000000000046}",,,"%WinMsg_Desc%"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00020D76-0000-0000-C000-000000000046}","Removal Message",,"%WizRemoveMsg%"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}",,,"%WinMsg_Desc%"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\DefaultIcon",,,"%24%\%PROGRAMF%\%WINMSG%\mlset32.exe"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\Shell\Open\Command",,,"%24%\%PROGRAMF%\%WINMSG%\mlset32.exe"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\Shell\Explore\Command",,,"%24%\%PROGRAMF%\%WINMSG%\mlset32.exe"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\InProcServer32",,,"%24%\%PROGRAMF%\%WINMSG%\mlshext.dll"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\InProcServer32",ThreadingModel,,"Apartment"
+;HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\shellex\ContextMenuHandlers\{00020D76-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\shellex\PropertySheetHandlers\{00020D76-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}\ShellFolder",Attributes,1,72,00,00,00
+
+; Create the long filenames for C:\Program Files\Microsoft Exchange
+;   Note that when you rename a long name, VFAT changes the short name from
+;   foobar~1 to foobar~2.  To avoid this, we introduce hacks in the form of
+;   intermediate renames
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,,,%24%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,%PROGRAMF%,,!!!$!$!$.$!$
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFilesRoot,!!!$!$!$.$!$,,"%Program_Files%,1"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,,,%24%\%PROGRAMF%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,%WINMSG%,,!!!$!$!$.JWP
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\AppFiles,!!!$!$!$.JWP,,"%MlviewROOT_Desc%,1"
+
+; Put msmail3.x into the bad apps list because Exchange disables it
+;HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\CheckBadApps\MSMAIL.EXE,MSMAIL.HLP,,1025
+;HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\CheckBadApps\MSMAIL.EXE,FlagsMSMAIL.HLP,,"L"
+
+;Remove the ol

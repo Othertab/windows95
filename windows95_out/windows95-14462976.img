@@ -1,0 +1,120 @@
+*********************************************************************
+[pcmcia.ndi]
+AddReg=pcmcia.ndi.reg,OCPCMCIA.ndi.reg
+
+[pcmcia.ndi.reg]
+HKR,Ndi,DeviceID,,"PCMCIA\OLICOM-TR16/4-167B"
+HKR,,PCMCIAType,,1
+HKR,NDI,CardType,,"PCMCIA"
+
+;****************************************************************************
+; PCMCIA\OLICOM-TR_16/4_II-805B ; Olicom PCMCIA 2
+;****************************************************************************
+[pcmcia1.ndi]
+AddReg=pcmcia1.ndi.reg,OCPCMCIA.ndi.reg
+
+[pcmcia1.ndi.reg]
+HKR,Ndi,DeviceID,,"PCMCIA\OLICOM-TR_16/4_II-805B"
+HKR,,PCMCIAType,,2
+HKR,NDI,CardType,,"PCMCIA"
+
+;****************************************************************************
+; PCI Revision 1 Olicom 16/4 Token-Ring Adapter
+;****************************************************************************
+[PCIREV01.ndi]
+AddReg=PCIREV01.ndi.reg,OCPCI.ndi.reg
+
+[PCIREV01.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_108D&DEV_0001&REV_01"
+
+;****************************************************************************
+; PCI Revision 2 Olicom 16/4 Token-Ring Adapter
+;****************************************************************************
+[PCIREV02.ndi]
+AddReg=PCIREV02.ndi.reg,OCPCI.ndi.reg
+
+[PCIREV02.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_108D&DEV_0001&REV_02"
+
+
+;****************************************************************************
+; mca_0a86 Olicom MC 16/4 Token-Ring 
+;****************************************************************************
+[mca_0a86.ndi]
+AddReg=mca_0a86.ndi.reg,Oli164.ndi.reg
+
+[mca_0a86.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_0a86"
+
+;****************************************************************************
+; mca_0a84 Olicom MC 16/4 Token-Ring 
+;****************************************************************************
+[mca_0a84.ndi]
+AddReg=mca_0a84.ndi.reg,Oli164.ndi.reg
+
+[mca_0a84.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_0a84"
+
+;****************************************************************************
+; mca_0a83 Olicom MC 16/4 Token-Ring 
+;****************************************************************************
+[mca_0a83.ndi]
+AddReg=mca_0a83.ndi.reg,Oli164.ndi.reg
+
+[mca_0a83.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_0a83"
+
+;****************************************************************************
+; INT0902 Intel TokenExpress EISA 16/4
+;****************************************************************************
+[*INT0902.ndi]
+AddReg=*INT0902.ndi.reg,Oli164.ndi.reg
+
+[*INT0902.ndi.reg]
+HKR,Ndi,DeviceID,,"*INT0902"
+
+;****************************************************************************
+; *pnp812f Intel TokenExpress 16/4
+;****************************************************************************
+[*pnp812f.ndi]
+AddReg=*pnp812f.ndi.reg,Oli164.ndi.reg
+
+[*pnp812f.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp812f"
+
+
+;****************************************************************************
+; *pnp8130 Intel TokenExpress MCA 16/4
+;****************************************************************************
+[*pnp8130.ndi]
+AddReg=*pnp8130.ndi.reg,Oli164.ndi.reg
+
+[*pnp8130.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8130"
+
+;****************************************************************************
+; *pnp81e4 Pure Data PDI9025-32 (Token Ring)
+;****************************************************************************
+[*pnp81e4.ndi]
+AddReg=*pnp81e4.ndi.reg,Oli164.ndi.reg
+
+[*pnp81e4.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp81e4"
+
+;****************************************************************************
+; mca_0c83 Pure Data PDuC9025 (Token Ring)
+;****************************************************************************
+[mca_0c83.ndi]
+AddReg=mca_0c83.ndi.reg,Oli164.ndi.reg,Slot
+
+[mca_0c83.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_0c83"
+
+;****************************************************************************
+; OLI164 Drivers
+;****************************************************************************
+[OLI164.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,OCTK16.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumProp

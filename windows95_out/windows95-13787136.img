@@ -1,0 +1,67 @@
+=NWREDIR.AddReg, NWNP32.AddReg, SAPNSP.AddReg, winpopup.addreg
+UpdateInis=NWNP32.Inis, NWREDIR.CleanInis
+UpdateIniFields=NWNP32.Rmv.Fields
+CopyFiles=NWREDIR.Files,NWNP32.Files,SECURITY.Files,NET.Files,winpopup.files,winpopup.help
+DelFiles=winpopup.del.files
+
+[NWREDIR.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,NWREDIR.VXD
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",StaticVxD,,nwredir.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",NetClean,1,1
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NSCL",StaticVxD,,nscl.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NSCL",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NSCL",NetClean,1,1
+
+[NWNP32.AddReg]
+; net provider
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",NWNP32,,
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",Name,,"NetWare"
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",ProviderPath,,"nwnp32.dll"
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",Description,,"Microsoft Provider for Netware"
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",NetID,1,00,00,03,00
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",CallOrder,1,00,00,00,20
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",ValidPrinters,1,07,00,00,00
+; print provider
+HKLM,"System\CurrentControlSet\Control\Print\Providers\Microsoft Print Provider for NetWare",Name,,"nwpp32.dll"
+
+HKCR,Netware\shellex\ContextMenuHandlers\NWAdminMenus,,,"{9C358B60-02A2-101B-9A16-00AA0033819A}"
+HKCR,CLSID\{9C358B60-02A2-101B-9A16-00AA0033819A},,,"Netware objects"
+HKCR,CLSID\{9C358B60-02A2-101B-9A16-00AA0033819A}\InProcServer32,,,"nwpp32.dll"
+HKCR,CLSID\{9C358B60-02A2-101B-9A16-00AA0033819A}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,Printers\shellex\PropertySheetHandlers\CaptureConfig,,,"{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}"
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3},,,"Capture Settings"
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}\InProcServer32,,,"nwpp32.dll"
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}\InProcServer32,ThreadingModel,,"Apartment"
+
+; context menus
+HKCR,Netware\shellex\ContextMenuHandlers\NetWareMenus,,,"{4E046421-F7BC-101A-8A87-00AA000C4F5D}"
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D},,,"Netware Objects"
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}\InProcServer32,,,"nwnp32.dll"
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+; Hood context menu verbs
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shellex\ContextMenuHandlers\NetWareMenus,,,"{D824F840-ABCB-101B-9B38-00AA000C4F5D}"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D},,,"Netware hood verbs"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}\InProcServer32,,,"nwnp32.dll"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,Folder\shellex\ContextMenuHandlers\NetwareUNCMenu,,,"{B91C21C0-0050-101B-8A87-00AA000C4F5D}"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D},,,"Netware UNC Folder Menu"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}\InProcServer32,,,"mpr.dll"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+; property sheets
+HKCR,Netware\shellex\PropertySheetHandlers\NetwarePage,,,"{AB2662E1-083B-101B-B4C7-00AA000C4F5D}"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D},,,"Netware Pages"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}\InProcServer32,,,"nwnp32.dll"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+[SAPNSP.AddReg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR\ServiceProvider",Class,1,08,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR\ServiceProvider",ProviderPath,,sapnsp.dll
+HKLM,"SYSTEM\CurrentControlSet\Control\ServiceProvider\Order\ProviderOrder",NWREDIR,,""
+HKLM,"SYSTEM\CurrentControlSet\Control\ServiceProvider\Order\ExcludedProviders"
+HK

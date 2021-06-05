@@ -1,0 +1,49 @@
+03, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/V.34/V42b<cr><lf>", 1, 02, 03, c0,12,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 4800/ARQ/V.34/V42b/SREJ<cr><lf>", 1, 02, 03, c0,12,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 5000<cr><lf>", 1, 02, 00, 88,13,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 5000/ARQ/V.34/MNP4<cr><lf>", 1, 02, 02, 88,13,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 5000/ARQ/V.34/V42 <cr><lf>", 1, 02, 02, 88,13,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 5000/ARQ/V.34/V42 /SREJ<cr><lf>", 1, 02, 02, 88,13,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 5000/ARQ/V.34/MNP5<cr><lf>", 1, 02, 03, 88,13,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 5000/ARQ/V.34/V42b<cr><lf>", 1, 02, 03, 88,13,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 5000/ARQ/V.34/V42b/SREJ<cr><lf>", 1, 02, 03, 88,13,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 7200<cr><lf>", 1, 02, 00, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V.34/MNP4<cr><lf>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V.34/V42 <cr><lf>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V.34/V42 /SREJ<cr><lf>", 1, 02, 02, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V.34/MNP5<cr><lf>", 1, 02, 03, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V.34/V42b<cr><lf>", 1, 02, 03, 20,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7200/ARQ/V.34/V42b/SREJ<cr><lf>", 1, 02, 03, 20,1c,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 7400<cr><lf>", 1, 02, 00, e8,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7400/ARQ/V.34/MNP4<cr><lf>", 1, 02, 02, e8,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7400/ARQ/V.34/V42 <cr><lf>", 1, 02, 02, e8,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7400/ARQ/V.34/V42 /SREJ<cr><lf>", 1, 02, 02, e8,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7400/ARQ/V.34/MNP5<cr><lf>", 1, 02, 03, e8,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7400/ARQ/V.34/V42b<cr><lf>", 1, 02, 03, e8,1c,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 7400/ARQ/V.34/V42b/SREJ<cr><lf>", 1, 02, 03, e8,1c,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 9600<cr><lf>", 1, 02, 00, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600/ARQ/V.34/MNP4<cr><lf>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600/ARQ/V.34/V42 <cr><lf>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600/ARQ/V.34/V42 /SREJ<cr><lf>", 1, 02, 02, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600/ARQ/V.34/MNP5<cr><lf>", 1, 02, 03, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600/ARQ/V.34/V42b<cr><lf>", 1, 02, 03, 80,25,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9600/ARQ/V.34/V42b/SREJ<cr><lf>", 1, 02, 03, 80,25,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 9800<cr><lf>", 1, 02, 00, 48,26,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9800/ARQ/V.34/MNP4<cr><lf>", 1, 02, 02, 48,26,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9800/ARQ/V.34/V42 <cr><lf>", 1, 02, 02, 48,26,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9800/ARQ/V.34/V42 /SREJ<cr><lf>", 1, 02, 02, 48,26,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9800/ARQ/V.34/MNP5<cr><lf>", 1, 02, 03, 48,26,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9800/ARQ/V.34/V42b<cr><lf>", 1, 02, 03, 48,26,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 9800/ARQ/V.34/V42b/SREJ<cr><lf>", 1, 02, 03, 48,26,00,00, 00,00,00,00
+
+HKR, Responses, "<cr><lf>CONNECT 12000<cr><lf>", 1, 02, 00, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 12000/ARQ/V.34/MNP4<cr><lf>", 1, 02, 02, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 12000/ARQ/V.34/V42 <cr><lf>", 1, 02, 02, e0,2e,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT 12000/ARQ/V.34/V42 /SREJ<cr><lf>", 1, 02, 02, e0,2e,00,00, 00,00,00,00
+HKR, Responses,

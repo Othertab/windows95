@@ -1,0 +1,32 @@
+ecified file does not exist in the current directory or path. Make sure you are specifying the filename and path correctly, and then try again.
+EThe specified path does not exist on that drive. Make sure you are specifying the path correctly, and then try again. If the path includes a network resource that is temporarily unavailable, try again later.
+EThe maximum number of files are open. Close one or more files or programs, and then try again.
+EYou do not currently have access to this file. The file may be marked read-only, or it may be part of a shared resource such as a folder, a named pipe, a queue, or a semaphore. You can use the ATTRIB command to change the read-only attribute, or try again later when the file may be available.
+?
+?
+EThere is not enough memory available. Quit all running programs, restart your computer, and then try again. You may also need to quit any terminate-and-stay-resident programs (TSRs) that start when you restart your computer.
+?
+?
+?
+?
+?
+?
+EThe specified drive letter or device is invalid. If you specified a drive letter, check the LASTDRIVE command in your CONFIG.SYS file to make sure that drive letter is included. For more information, type NET HELP 15 at the command prompt.
+EThe specified directory cannot be removed. Either it has been typed incorrectly, it contains files or other folders, or it is the current directory in this command prompt or another command prompt that is in process. For more information, type NET HELP 16 at the command prompt.
+EThe file cannot be moved or renamed to a different disk drive. Retry the command, specifying the same drive for both the original and changed filenames, or try copying the file.
+?
+EThe disk is write protected. Remove the write protection, or use a different disk, and then try again.
+EWindows cannot find the device specified. Make sure you are using a correct device name, and then try again.
+EThe drive is not ready. You need to either insert a disk in the drive, close the drive door, or wait until the drive is available.
+IThe device does not recognize the command. Make sure you are specifying a valid command for this device, and then try again.
+EMS-DOS cannot read or write the data correctly. If the error occurred on a hard disk, retry the command. If the error persists, the hard disk may have to be reformatted. If the error occurred on a floppy disk, insert a formatted disk or the backup disk, and then try again.
+?
+EThe drive cannot locate a specific area or track on the disk. Make sure the disk is properly inserted in the drive and that it is in a format compatible with MS-DOS. If the error persists, run ScanDisk to check the disk for damage.
+EThe specified disk cannot be accessed. Make sure that the disk is in a format compatible with MS-DOS. If the problem persists, make sure your CONFIG.SYS file contains the file system driver.
+EThe drive cannot find the sector requested. Make sure the disk is properly inserted in the drive and that it is in a format compatible with MS-DOS. If the error persists, run ScanDisk to check the disk for damage.
+EThe requested print job was not completed. Make sure that the printer is installed and connected properly, that it is turned on, and that there is paper in it. For more information, type NET HELP 28 at the command prompt.
+EMS-DOS detected an error while writing to this device. Make sure the device is installed and connected properly, turned on, and not in use by another process. The device may need to be in the proper receive mode. If the device is a disk, make sure it is formatted properly.
+EMS-DOS detected an error while reading from this device. Make sure the device is installed and connected properly, turned on, and not in use by another process. The device may need to be in the proper send mode. If the device is a disk, make sure it is formatted properly.
+EA device attached to the system is not functioning. For more information, type NET HELP 31 at the command prompt.
+EThe specified file is in use by another process. Try again later.
+EOne process has locked a portion 

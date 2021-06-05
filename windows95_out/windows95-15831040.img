@@ -1,0 +1,107 @@
+,"%25%\rundll32.exe shscrap.dll,OpenScrap_RunDLL %%1"
+HKCR,ShellScrap\shellex\DataHandler,,,"{56117100-C0CD-101B-81E2-00AA004AE837}"
+HKCR,ShellScrap\DefaultIcon,,,"%11%\shscrap.dll,-100"
+HKLM,%KEY_CURRENT%\ShellScrap\PriorityCacheFormats,"#3",,""
+
+HKCR,Drive,,,%DRIVE%
+HKCR,Drive\DefaultIcon,,,"%11%\shell32.dll,8"
+HKCR,Drive,EditFlags,1,D2,01,00,00
+HKCR,Drive\shell\find
+HKCR,Drive\shell\find\command,,,%25%\Explorer.exe
+HKCR,Drive\shell\find\ddeexec,,,"[FindFolder(""%%l"", %%I)]"
+HKCR,Drive\shell\find\ddeexec\application,,,Folders
+HKCR,Drive\shell\find\ddeexec\topic,,,AppProperties
+
+HKCR,AudioCD,,,%AUDIOCD%
+HKCR,AudioCD\DefaultIcon,,,"%11%\shell32.dll,40"
+HKCR,AudioCD,EditFlags,1,02,00,00,00
+
+;don't give a description for this psudeo type
+HKCR,*\shellex\PropertySheetHandlers\{3EA48300-8CF6-101B-84FB-666CCB9BCD32}
+
+;don't give a description for this psudeo type
+HKCR,Unknown\shell\openas\command,,,"%25%\rundll32.exe shell32.dll,OpenAs_RunDLL %%1"
+HKCR,Unknown,AlwaysShowExt
+
+HKCR,.lnk,,,lnkfile
+HKCR,.lnk\ShellNew,Command,,"%25%\rundll32.exe AppWiz.Cpl,NewLinkHere %%1"
+HKCR,lnkfile,,,%DESC_LNK%
+HKCR,lnkfile,EditFlags,1,01,00,00,00
+HKCR,lnkfile,IsShortcut
+HKCR,lnkfile,NeverShowExt
+HKCR,lnkfile\CLSID,,,{00021401-0000-0000-C000-000000000046}
+HKCR,lnkfile\shellex\IconHandler,,,"{00021401-0000-0000-C000-000000000046}"
+HKCR,lnkfile\shellex\DropHandler,,,"{00021401-0000-0000-C000-000000000046}"
+HKCR,lnkfile\shellex\ContextMenuHandlers\{00021401-0000-0000-C000-000000000046}
+
+HKCR,.fnd,,,fndfile
+HKCR,fndfile,,,%DESC_FND%
+HKCR,fndfile\DefaultIcon,,,"%11%\shell32.dll,42"
+HKCR,fndfile\shell
+HKCR,fndfile\shell\open\command,,,%25%\Explorer.exe
+HKCR,fndfile\shell\open\ddeexec,,,"[OpenFindFile(""%%1"", %%I)]"
+HKCR,fndfile\shell\open\ddeexec\application,,,Folders
+HKCR,fndfile\shell\open\ddeexec\topic,,,AppProperties
+
+HKCR,.reg,,,regfile
+HKCR,regfile,,,%DESC_REG%
+HKCR,regfile\DefaultIcon,,,"%25%\regedit.exe,1"
+HKCR,regfile\shell
+HKCR,regfile\shell\open\command,,,"regedit.exe %%1"
+HKCR,regfile\shell\open,,,%V_MERGE%
+HKCR,regfile\shell\print
+HKCR,regfile\shell\print\command,,,"%25%\NOTEPAD.EXE /p %%1"
+HKCR,regfile\shell\edit,,,%V_EDIT%
+HKCR,regfile\shell\edit\command,,,"%25%\NOTEPAD.EXE %%1"
+
+HKCR,.hlp,,,hlpfile
+HKCR,hlpfile,,,%DESC_HLP%
+HKCR,hlpfile\shell\open\command,,,"%25%\winhlp32.exe %%1"
+HKCR,hlpfile\DefaultIcon,,,"%25%\winhlp32.exe,1"
+
+HKCR,.scr,,,scrfile
+HKCR,scrfile,,,%DESC_SCR%
+HKCR,scrfile\shell
+HKCR,scrfile\shell\open,,,%V_TEST%
+HKCR,scrfile\shell\open\command,,,"""%%1"" /S"
+HKCR,scrfile\shell\config,,,%V_CONFIGURE%
+HKCR,scrfile\shell\config\command,,,"""%%1"""
+HKCR,scrfile\shell\install,,,%V_INSTALL%
+HKCR,scrfile\shell\install\command,,,"%25%\rundll32.exe desk.cpl,InstallScreenSaver %%l"
+
+HKCR,.com,,,comfile
+HKCR,comfile,,,%DESC_COM%
+HKCR,comfile,EditFlags,1,D8,07,00,00
+HKCR,comfile\shell
+HKCR,comfile\shell\open
+HKCR,comfile\shell\open,EditFlags,1,00,00,00,00
+HKCR,comfile\shell\open\command,,,"""%%1"" %%*"
+HKCR,comfile\shellex\PropertySheetHandlers\{86F19A00-42A0-1069-A2E9-08002B30309D}
+HKCR,comfile\DefaultIcon,,,"%11%\shell32.dll,2"
+
+HKCR,.exe,,,exefile
+HKCR,exefile,,,%DESC_APP%
+HKCR,exefile,EditFlags,1,D8,07,00,00
+HKCR,exefile\shell
+HKCR,exefile\shell\open
+HKCR,exefile\shell\open,EditFlags,1,00,00,00,00
+HKCR,exefile\shell\open\command,,,"""%%1"" %%*"
+HKCR,exefile\shellex\PropertySheetHandlers\{86F19A00-42A0-1069-A2E9-08002B30309D}
+HKCR,exefile\DefaultIcon,,,%%1
+
+HKCR,.bat,,,batfile
+HKCR,batfile,,,%DESC_BAT%
+HKCR,batfile,EditFlags,1,D0,04,00,00
+HKCR,batfile\shell
+HKCR,batfile\shell\open
+HKCR,batfile\shell\open,EditFlags,1,00,00,00,00
+HKCR,batfile\shell\open\command,,,"""%%1"" %%*"
+HKCR,batfile\shell\print
+HKCR,batfile\shell\print\command,,,"%25%\NOTEPAD.EXE /p %%1"
+HKCR,batfile\shell\edit,,,%V_EDIT%
+HKCR,batfile\shell\edit\command,,,"%25%\NOTEPAD.EXE %%1"
+HKCR,batfile\shellex\PropertySheetHandlers\{86F19A00-42A0-1069-A2E9-08002B30309D}
+HKCR,batfile\DefaultIcon,,,"%11%\shell32.dll,-153"
+
+HKCR,.pif,,,piffile
+HKCR,piffile,,,%DESC_

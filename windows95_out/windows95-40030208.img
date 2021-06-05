@@ -1,0 +1,94 @@
+conflict exists, the conflicting devices are listed. 
+   - Verify that the Resource Settings match the actual hardware 
+     settings of the controller. Refer to the SCSI or IDE controller 
+     documentation.
+8. If multiple devices are connected to a SCSI or IDE controller, 
+   and any of the SCSI or IDE devices are not supported by Windows 95 
+   with a protected mode driver, then access to all devices connected 
+   to the controller will be provided via manufacturer-supplied MS-DOS 
+   drivers only. Contact the device manufacturer for information on 
+   protected-mode Windows 95 drivers.
+
+
+==========
+Networking
+==========
+[Q: How do I set up my Windows 95 computer for a TCP/IP network?]
+
+First, find out from your system administrator if your network is 
+using a DHCP server to allocate IP addresses automatically, or if 
+you have been assigned a specific IP address. Once you have this 
+information, follow these steps:
+1. In Control Panel, double-click the Network icon.
+2. On the Configuration tab, click Add, and then double-click 
+   Protocol.
+3. Click Microsoft, and then click TCP/IP.
+ 
+After it is installed, click TCP/IP on the Configuration tab of 
+Network properties, and then click Properties. Configure your 
+protocol per instructions from your system administrator.
+
+
+[Q: How do I set up Netware support?]
+
+There are three ways to access a Novell network with Windows 95. 
+If you are using Novell Netware 3.x, or if you have bindery 
+services enabled with 4.x, you can use the Microsoft Client for 
+Netware. This is installed from the Network properties by clicking 
+Add, clicking Client, clicking Microsoft, and then clicking 
+Microsoft Client for Netware. 
+
+If you need to load real-mode TSRs from your login script, you 
+must use the real-mode shell NETX or VLM, available from Novell. 
+If you are using NDS services with 4.x, you must install the VLM 
+client. 
+
+If you are using NETX, you need to install the Novell Workstation 
+Shell 3.x from Network properties. Click Add, click Client, and 
+then click the Novell properties dialog box. If you are using the 
+VLM client, install the Novell Workstation Shell 4.x client. 
+
+NOTE: You must have the proper version of the Windows support 
+files from Novell to use either Workstation Shell option.
+
+
+[Q: I am running a non-Microsoft network, and I can't connect to 
+    my network resources, why?]
+
+If it is a real-mode network, the network client must be loaded 
+from Autoexec.bat and/or Config.sys before Windows 95 loads. If 
+it is a network that Windows 95 does not recognize, then all drive 
+mappings and resource connections may need to be done before 
+starting Windows 95. Resource mappings done in an MS-DOS prompt 
+may only be accessible while that MS-DOS prompt is running. If it 
+is a supported network, make sure the client support is installed 
+in Network Properties.
+
+[Q: Why do the applications from my Novell server give an 
+    "Incorrect MS-DOS version" message?] 
+
+There are two possible reasons. Novell Netware login scripts can 
+use a Netware login script variable, OSVersion, to track which 
+versions of MS-DOS the clients are running and to map a drive to 
+a directory on the Novell server that contains a copy of that 
+version of MS-DOS. Your network administrator needs to ensure 
+that the same has been done for Windows 95, which will report 
+MS-DOS version 7.1. You should also check the SETVER table, and 
+see what version is being reported for the particular programs. 
+You may need to modify the table to have the correct version 
+reported to the system.
+
+
+[Q:How do I set up Windows 95 with Lantastic 6.0?]
+
+To configure Windows 95 to support an Artisoft LANtastic network,
+contact the vendor and request a Windows 95 LANtastic *.inf.
+
+NOTE: You cannot use Network Neighborhood to view LANtastic 
+resources. You must use the LANtastic utilities in the LANtastic 
+program group.
+
+
+[Q: How do I install a PPP dial-up network connection?]
+
+You will need a modem installed and configured correctly. 

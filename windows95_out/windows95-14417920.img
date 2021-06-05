@@ -1,0 +1,110 @@
+fault,,0x300
+HKR,NDI\params\LAN_ID_ROM,type,,enum
+HKR,NDI\params\LAN_ID_ROM\enum,0x180,,0x180
+HKR,NDI\params\LAN_ID_ROM\enum,0x300,,0x300
+; DMA_CHANNEL0
+HKR,NDI\params\DMA_CHANNEL0,ParamDesc,,"DMA Channel for Receive"
+HKR,NDI\params\DMA_CHANNEL0,flag,1,10,00,00,00
+HKR,NDI\params\DMA_CHANNEL0,default,,3
+HKR,NDI\params\DMA_CHANNEL0,type,,enum
+HKR,NDI\params\DMA_CHANNEL0\enum,1,,1
+HKR,NDI\params\DMA_CHANNEL0\enum,3,,3
+; DMA_CHANNEL1
+HKR,NDI\params\DMA_CHANNEL1,ParamDesc,,"DMA Channel for Transmit"
+HKR,NDI\params\DMA_CHANNEL1,flag,1,10,00,00,00
+HKR,NDI\params\DMA_CHANNEL1,default,,1
+HKR,NDI\params\DMA_CHANNEL1,type,,enum
+HKR,NDI\params\DMA_CHANNEL1\enum,1,,1
+HKR,NDI\params\DMA_CHANNEL1\enum,3,,3
+; NUM_GENREQ
+HKR,NDI\params\NUM_GENREQ,ParamDesc,,"Number of General Requests"
+HKR,NDI\params\NUM_GENREQ,flag,1,10,00,00,00
+HKR,NDI\params\NUM_GENREQ,type,,int
+HKR,Ndi\params\NUM_GENREQ,default,,10
+HKR,NDI\params\NUM_GENREQ,min,,10
+HKR,NDI\params\NUM_GENREQ,max,,500
+HKR,NDI\params\NUM_GENREQ,step,,1
+; NUM_RCVS
+HKR,NDI\params\NUM_RCVS,ParamDesc,,"Number of Receives"
+HKR,NDI\params\NUM_RCVS,flag,1,10,00,00,00
+HKR,NDI\params\NUM_RCVS,type,,int
+HKR,Ndi\params\NUM_RCVS,default,,5
+HKR,NDI\params\NUM_RCVS,min,,3
+HKR,NDI\params\NUM_RCVS,max,,20
+HKR,NDI\params\NUM_RCVS,step,,1
+; NUM_XMT_BUFS
+HKR,NDI\params\NUM_XMT_BUFS,ParamDesc,,"Number of Transmit Buffers"
+HKR,NDI\params\NUM_XMT_BUFS,flag,1,10,00,00,00
+HKR,NDI\params\NUM_XMT_BUFS,type,,int
+HKR,Ndi\params\NUM_XMT_BUFS,default,,3
+HKR,NDI\params\NUM_XMT_BUFS,min,,2
+HKR,NDI\params\NUM_XMT_BUFS,max,,8
+HKR,NDI\params\NUM_XMT_BUFS,step,,1
+; RCV_BUF_SIZE
+HKR,NDI\params\RCV_BUF_SIZE,ParamDesc,,"Size of Receive Buffer"
+HKR,NDI\params\RCV_BUF_SIZE,flag,1,10,00,00,00
+HKR,NDI\params\RCV_BUF_SIZE,type,,int
+HKR,Ndi\params\RCV_BUF_SIZE,default,,4500
+HKR,NDI\params\RCV_BUF_SIZE,min,,1600
+HKR,NDI\params\RCV_BUF_SIZE,max,,10000
+HKR,NDI\params\RCV_BUF_SIZE,step,,1
+; EXTERNAL_ROM
+HKR,NDI\params\EXTERNAL_ROM,ParamDesc,,"Location of External ROM"
+HKR,NDI\params\EXTERNAL_ROM,flag,1,10,00,00,00
+HKR,NDI\params\EXTERNAL_ROM,default,,0xD0000
+HKR,NDI\params\EXTERNAL_ROM,type,,enum
+HKR,NDI\params\EXTERNAL_ROM\enum,0xD0000,,0xD0000
+HKR,NDI\params\EXTERNAL_ROM\enum,0xD8000,,0xD8000
+; NODE_ADDRESS
+HKR,NDI\params\NODE_ADDRESS,ParamDesc,,"Product ID"
+HKR,NDI\params\NODE_ADDRESS,type,,edit
+HKR,NDI\params\NODE_ADDRESS,LimitText,,12
+HKR,NDI\params\NODE_ADDRESS,UpperCase,,1
+HKR,Ndi\params\NODE_ADDRESS,default,,"000000000000"
+HKR,NDI\params\NODE_ADDRESS,flag,1,10,00,00,00
+
+
+; Install NDIS2
+[slan.ndis2]
+CopyFiles=slan.ndis2.CopyFiles
+[slan.ndis2.CopyFiles]
+slan.dos
+
+;
+; other general sections
+;
+[token.param.all]
+; MAX_REQUESTS
+HKR,NDI\params\MAX_REQUESTS,ParamDesc,,"Maximum Requests"
+HKR,NDI\params\MAX_REQUESTS,flag,1,10,00,00,00
+HKR,NDI\params\MAX_REQUESTS,type,,int
+HKR,Ndi\params\MAX_REQUESTS,default,,6
+HKR,NDI\params\MAX_REQUESTS,min,,2
+HKR,NDI\params\MAX_REQUESTS,max,,10
+HKR,NDI\params\MAX_REQUESTS,step,,1
+HKR,NDI\params\MAX_REQUESTS,optional,,1
+; MAX_TRANSMITS
+HKR,NDI\params\MAX_TRANSMITS,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MAX_TRANSMITS,flag,1,10,00,00,00
+HKR,NDI\params\MAX_TRANSMITS,type,,int
+HKR,Ndi\params\MAX_TRANSMITS,default,,6
+HKR,NDI\params\MAX_TRANSMITS,min,,2
+HKR,NDI\params\MAX_TRANSMITS,max,,50
+HKR,NDI\params\MAX_TRANSMITS,step,,1
+HKR,NDI\params\MAX_TRANSMITS,optional,,1
+; MAX_RECEIVES
+HKR,NDI\params\MAX_RECEIVES,ParamDesc,,"Maximum Receives"
+HKR,NDI\params\MAX_RECEIVES,flag,1,10,00,00,00
+HKR,NDI\params\MAX_RECEIVES,type,,int
+HKR,Ndi\params\MAX_RECEIVES,default,,3
+HKR,NDI\params\MAX_RECEIVES,min,,2
+HKR,NDI\params\MAX_RECEIVES,max,,50
+HKR,NDI\params\MAX_RECEIVES,step,,1
+HKR,NDI\params\MAX_RECEIVES,optional,,1
+; Product_Id
+HKR,NDI\params\PRODUCT_ID,ParamDesc,,"Product ID"
+HKR,NDI\params\PRODUCT_ID,type,,edit
+HKR,NDI\params\PRODUCT_ID,LimitText,,36
+HKR,NDI\params\PRODUCT_ID,UpperCase,,1
+HKR,Ndi\params\PRODUCT_ID,default,,"0910F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0F0"
+HKR,NDI\params\PRODUCT_ID,flag,1,10,00,00,

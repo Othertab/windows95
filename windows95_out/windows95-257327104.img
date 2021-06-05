@@ -1,0 +1,149 @@
+piErr saeFail, "AddToBillboardList", szDll$+", "+STR$(idDlg%)+", "+szProc$+", "+STR$(lTicks&)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB AddBlankToBillboardList (lTicks&) STATIC
+'$ifdef DEBUG
+    if lTicks& <= 0 then
+        BadArgErr 1, "AddBlankToBillboardList", STR$(lTicks&)
+    end if
+'$endif ''DEBUG
+    IF FAddToBillboardList(NULL, 0, NULL, lTicks&) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "AddBlankToBillboardList", STR$(lTicks&)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB ClearBillboardList STATIC
+    IF FClearBillboardList = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "ClearBillboardList", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB OpenLogFile (szFile$, fAppend%) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFile$) = 0 then
+        BadArgErr 1, "OpenLogFile", szFile$+", "+STR$(fAppend%)
+    end if
+'$endif ''DEBUG
+    IF FOpenLogFile(szFile$, fAppend%) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "OpenLogFile", szFile$+", "+STR$(fAppend%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB CloseLogFile STATIC
+    IF FCloseLogFile() = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "CloseLogFile", ""
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB WriteToLogFile (szStr$) STATIC
+    IF FWriteToLogFile(szStr$, 1) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "WriteToLogFile", szStr$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+''' -1 in either parameter will mean 'center in frame client area'
+'*************************************************************************
+SUB SetCopyGaugePosition (x%, y%) STATIC
+    ProSetPos x%, y%
+END SUB
+
+
+'*************************************************************************
+FUNCTION FindFileUsingFileOpen (szFile$) STATIC AS STRING
+    szBuf$ = STRING$(512, 32)
+
+    wRet% = WFindFileUsingFileOpen(szFile$, szBuf$, len(szBuf$))
+    IF wRet% = 0 THEN
+        FindFileUsingFileOpen = szBuf$
+    ELSEIF wRet% = 1 THEN
+        FindFileUsingFileOpen = ""
+    ELSE
+'$ifdef DEBUG
+        StfApiErr saeFail, "FindFileUsingFileOpen", szFile$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsDirWritable (szDir$) STATIC AS INTEGER
+    IsDirWritable = FIsDirWritable(szDir$)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsFileWritable (szFile$) STATIC AS INTEGER
+'$ifdef DEBUG
+    if FValidFATDir(szFile$) = 0 then
+        BadArgErr 1, "IsFileWritable", szFile$
+    end if
+'$endif ''DEBUG
+    IsFileWritable = FIsFileWritable(szFile$)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetNthFieldFromIniString (szLine$, iField%) STATIC AS STRING
+    IF iField% < 1 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetNthFieldFromIniString", szLine$+", "+STR$(iField%)
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+    szStart$ = szLine$
+    IF iField% <> 1 THEN
+        FOR i% = 2 TO iField% STEP 1
+            iNew% = INSTR(szStart$, ",")
+            IF iNew% = 0 THEN
+                GetNthFieldFromIniString = ""
+                GOTO _GNFFIS_END
+            END IF
+            szStart$ = MID$(szStart$, (iNew% + 1))
+        NEXT
+    END IF
+
+    iNew% = INSTR(szStart$, ",")
+    IF iNew% <> 0 THEN
+        szStart$ = MID$(szStart$, 1, (iNew% - 1))
+    END IF
+
+    GetNthFieldFromIniString = LTRIM$(RTRIM$(szStart$))
+
+_GNFFIS_END:
+
+END FUNCTION
+
+
+'********************************

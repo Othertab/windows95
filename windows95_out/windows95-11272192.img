@@ -1,0 +1,71 @@
+ment\Data\2\SystemCache\WritePolicy\Enum,"0",,"Other"
+HKLM,DesktopManagement\Data\2\SystemCache\WritePolicy\Enum,"1",,"Unknown"
+HKLM,DesktopManagement\Data\2\SystemCache\WritePolicy\Enum,"2",,"Write Back"
+HKLM,DesktopManagement\Data\2\SystemCache\WritePolicy\Enum,"3",,"Write Through"
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection,"1",1,
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection\Enum,"0",,"Other"
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection\Enum,"1",,"Unknown"
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection\Enum,"2",,"None"
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection\Enum,"3",,"Parity"
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection\Enum,"4",,"Single Bit ECC"
+HKLM,DesktopManagement\Data\2\SystemCache\ErrorCorrection\Enum,"5",,"MultiBit ECC"
+HKLM,DesktopManagement\Data\2\SystemCache\FRUGroupIndex,"1",1,
+HKLM,DesktopManagement\Data\2\SystemCache\OperationalGroupIndex,"1",1,
+
+; HKLM,DesktopManagement\DATA\2\DMA,"DMABurstMode",1,
+HKLM,DesktopManagement\DATA\2\DMA\DMABurstMode,"Default",1,00
+
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"EnclosureOrChassisType",1,02
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"AssetTag",,"Unknown"
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"ChassisLockPresent",1,
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"BootupState",1,02
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"PowerState",1,02
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"ThermalState",1,02
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"FRUGroupIndex",1,
+HKLM,DesktopManagement\DATA\2\SystemEnclosure,"OperationalGroupIndex",1,
+
+; HKLM,DesktopManagement\DATA\2\PowerSupply,"^Index",1,02
+; HKLM,DesktopManagement\DATA\2\PowerSupply,"^ROW",,"^ROWNUM|FRUGroupIndex|OperationalGroupIndex"
+HKLM,DesktopManagement\DATA\2\PowerSupply\FRUGroupIndex,"1",1,
+HKLM,DesktopManagement\DATA\2\PowerSupply\OperationalGroupIndex,"1",1,
+
+;  Cooling Device table
+; HKLM,DesktopManagement\DATA\2\CoolingDevice,"^Index",1,02
+; HKLM,DesktopManagement\DATA\2\CoolingDevice,"^ROW",,"^ROWNUM|FRUGroupIndex|OperationalGroupIndex"
+HKLM,DesktopManagement\DATA\2\CoolingDevice\FRUGroupIndex,"1",1,
+HKLM,DesktopManagement\DATA\2\CoolingDevice\OperationalGroupIndex,"1",1,
+
+;  System Slots table
+; HKLM,DesktopManagement\DATA\2\SystemSlots,"^Index",1,02
+; HKLM,DesktopManagement\DATA\2\SystemSlots,"^ROW",,"^ROWNUM|SlotType|SlotWidth|CurrentUsage|SlotDescription"
+HKLM,DesktopManagement\DATA\2\SystemSlots\SlotType,"1",1,
+HKLM,DesktopManagement\DATA\2\SystemSlots\SlotWidth,"1",1,02
+HKLM,DesktopManagement\DATA\2\SystemSlots\CurrentUsage,"1",1,02
+HKLM,DesktopManagement\DATA\2\SystemSlots\SlotDescription,"1",,""
+
+;  Partition group
+HKLM,DesktopManagement\DATA\2\Partition,"Encrypted",1,00
+HKLM,DesktopManagement\DATA\2\Partition,"Compressed",1,
+HKLM,DesktopManagement\DATA\2\Partition,"NumberOfDisksOccupied",1,01
+
+;  Disk Controller group
+HKLM,DesktopManagement\Data\2\DiskController\FRUGroupIndex,"1",1,
+HKLM,DesktopManagement\Data\2\DiskController\OperationalGroupIndex,"1",1,
+
+;  FRU group
+; HKLM,DesktopManagement\DATA\2\FRU,"^Index",1,02,00,00,00
+; HKLM,DesktopManagement\DATA\2\FRU,"^ROW",,"^ROWNUM|Manufacturer|Model|PartNumber|FRUSerialNumber|RevisionLevel|WarrantyStartDate|WarrantyDuration|SupportPhoneNumber"
+HKLM,DesktopManagement\DATA\2\FRU\DeviceGroupIndex,"1",1,00
+HKLM,DesktopManagement\DATA\2\FRU\Description,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\Manufacturer,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\Model,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\PartNumber,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\FRUSerialNumber,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\RevisionLevel,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\WarrantyStartDate,"1",,"Unknown"
+HKLM,DesktopManagement\DATA\2\FRU\WarrantyDuration,"1",1,00
+HKLM,DesktopManagement\DATA\2\FRU\SupportPhoneNumber,"1",,"Unknown"
+
+;  Operational State Group
+; HKLM,DesktopManagement\DATA\2\OperationalState,"^Index",1,02,00,00,00
+; HKLM,DesktopManag

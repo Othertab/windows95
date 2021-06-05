@@ -1,0 +1,139 @@
+"%KEY_KLayout%\00020408","layout text",,%KBD_GL220%
+HKLM,"%KEY_KLayout%\00020408","layout id",,0017
+HKLM,"%KEY_KLayout%\00030408","layout file",,kbdgk319.kbd
+HKLM,"%KEY_KLayout%\00030408","layout text",,%KBD_GK319%
+HKLM,"%KEY_KLayout%\00030408","layout id",,0018
+HKLM,"%KEY_KLayout%\00040408","layout file",,kbdgl319.kbd
+HKLM,"%KEY_KLayout%\00040408","layout text",,%KBD_GL319%
+HKLM,"%KEY_KLayout%\00040408","layout id",,0011
+HKLM,"%KEY_KLayout%\00050408","layout file",,kbdgkl.kbd
+HKLM,"%KEY_KLayout%\00050408","layout text",,%KBD_GKL%
+HKLM,"%KEY_KLayout%\00050408","layout id",,0019
+HKLM, %KEY_Nls%\Codepage,1253,,cp_1253.nls
+
+[TurkishInstalled]
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"1"
+HKLM, %KEY_Nls%\Locale,0000041F,,%0000041F%     
+HKLM,"%KEY_KLayout%\0000041F","layout file",,kbdtuq.kbd
+HKLM,"%KEY_KLayout%\0000041F","layout text",,%KBD_TUQ%
+HKLM,"%KEY_KLayout%\0001041F","layout file",,kbdtuf.kbd
+HKLM,"%KEY_KLayout%\0001041F","layout text",,%KBD_TUF%
+HKLM,"%KEY_KLayout%\0001041F","layout id",,0014
+HKLM, %KEY_Nls%\Codepage,1254,,cp_1254.nls
+
+;*************************************
+;*** Removing Multilingual Support ***
+;*************************************
+[Baltic_Remove]
+UpdateInis=BalticSubsRemove
+DelFiles=BalticNLSFiles.Del, BalticKbds.Del
+AddReg=BalticOff
+DelReg=BalticDelete
+Reboot=1
+
+[CE_Remove]
+UpdateInis=CESubsRemove
+DelFiles=CENLSFiles.Del, CEKbds.Del
+AddReg=CEOff
+DelReg=CEDelete
+Reboot=1
+
+[Cyrillic_Remove]
+UpdateInis=CyrillicSubsRemove
+DelFiles=CyrillicNLSFiles.Del, CyrillicKbds.Del
+AddReg=CyrillicOff
+DelReg=CyrillicDelete
+Reboot=1
+
+[Greek_Remove]
+UpdateInis=GreekSubsRemove
+DelFiles=GreekNLSFiles.Del, GreekKbds.Del
+AddReg=GreekOff
+DelReg=GreekDelete
+Reboot=1
+
+[Turkish_Remove]
+UpdateInis=TurkishSubsRemove
+DelFiles=TurkishNLSFiles.Del, TurkishKbds.Del
+AddReg=TurkishOff
+DelReg=TurkishDelete
+Reboot=1
+
+;*** Remove Files ***
+[BalticNLSFiles.Del]
+cp_1257.nls,,,8
+
+[BalticKbds.Del]
+kbdes.kbd,,,8      ;Estonian
+kbdlt.kbd,,,8      ;Lithuanian
+kbdlv.kbd,,,8      ;Latvian
+kbdlv1.kbd,,,8     ;Latvian (Latin)
+
+[CENLSFiles.Del]
+cp_1250.nls,,,8
+
+[CEKbds.Del]
+kbdal.kbd,,,8      ;Albanian
+kbdcr.kbd,,,8      ;Croatian
+kbdcz.kbd,,,8      ;Czech
+kbdcz1.kbd,,,8     ;Czech 101
+kbdhu.kbd,,,8      ;Hungarian
+kbdhu1.kbd,,,8     ;Hungarian 101
+kbdpl.kbd,,,8      ;Polish
+kbdpl1.kbd,,,8     ;Polish Programmers
+kbdro.kbd,,,8      ;Romanian
+kbdsl.kbd,,,8      ;Slovak
+kbdsl1.kbd,,,8     ;Slovak 101
+kbdsv.kbd,,,8      ;Slovenian
+
+[CyrillicNLSFiles.Del]
+cp_1251.nls,,,8
+
+[CyrillicKbds.Del]
+kbdblr.kbd,,,8     ;Belarusian
+kbdbul.kbd,,,8     ;Bulgarian (Latin)
+kbdbll.kbd,,,8     ;Bulgarian (Cyrillic)
+kbdru.kbd,,,8      ;Russian
+kbdru1.kbd,,,8     ;Russian (Typewriter)
+kbdur.kbd,,,8      ;Ukrainian
+kbdycc.kbd,,,8     ;Serbian (Cyrillic)
+kbdycl.kbd,,,8     ;Serbian (Latin)
+
+[GreekNLSFiles.Del]
+cp_1253.nls,,,8
+
+[GreekKbds.Del]
+kbdgk.kbd,,,8      ;Greek
+kbdgkl.kbd,,,8     ;Greek Latin
+kbdgk220.kbd,,,8   ;Greek 220
+kbdgk319.kbd,,,8   ;Greek 319
+kbdgl220.kbd,,,8   ;Greek Latin 220
+kbdgl319.kbd,,,8   ;Greek Latin 319
+
+[TurkishNLSFiles.Del]
+cp_1254.nls,,,8
+
+[TurkishKbds.Del]
+kbdtuf.kbd,,,8     ;Turkish (F type)
+kbdtuq.kbd,,,8     ;Turkish (Q type)
+
+;*** Remove Font Substitutions ***
+[GreekSubsRemove]
+win.ini,FontSubstitutes,"Arial Greek,161=Arial,161",
+win.ini,FontSubstitutes,"Courier New Greek,161=Courier New,161",
+win.ini,FontSubstitutes,"Times New Roman Greek,161=Times New Roman,161",
+
+[CyrillicSubsRemove]
+win.ini,FontSubstitutes,"Arial Cyr,204=Arial,204",
+win.ini,FontSubstitutes,"Courier New Cyr,204=Courier New,204",
+win.ini,FontSubstitutes,"Times New Roman Cyr,204=Times New Roman,204",
+
+[CESubsRemove]
+win.ini,FontSubstitutes,"Arial CE,238=Arial,238",
+win.ini,FontSubstitutes,"Courier New CE,238=Courier New,238",
+win.ini,FontSubstitutes,"Times New Roman CE,238=Times New Roman,238",
+
+[Turkish

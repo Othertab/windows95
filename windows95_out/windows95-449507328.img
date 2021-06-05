@@ -1,0 +1,112 @@
+                              5
+
+[NumberOfDmas]                                  1
+[Dma]                                                   -1
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               1
+[AddressJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Sound Blaster Regular]
+[CardId]                                                102
+[CardGroup]                                             1
+
+[RmMidiDriverName]                              [sbfm.adv]
+[RmDigitalDriverName]           [sbdig.adv]
+[PmMidiDriverName]                              [a32sbfm.dll]
+[PmDigitalDriverName]           [a32sbdg.dll]
+
+
+[MidiDriverChunkNumber]                 7
+[DigitalDriverChunkNumber]              6
+
+[NumberOfMidiAddresses]                 6
+[MidiAddress]                                   0x220
+[MidiAltAddress]                                0x210
+[MidiAltAddress]                                0x230
+[MidiAltAddress]                                0x240
+[MidiAltAddress]                                0x250
+[MidiAltAddress]                                0x260
+
+[NumberOfDigitalAddresses]              6
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x210
+[DigitalAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+[DigitalAltAddress]                             0x250
+[DigitalAltAddress]                             0x260
+
+[NumberOfIrqs]                                  4
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                3
+[AltIrq]                                                5
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               7
+[MidiAltIrq]                                    2
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    5
+
+[NumberOfDmas]                                  1
+[Dma]                                                   1
+
+; As the SB reg has only 1 set of jumpers the more specific Digital and Midi
+; jumper args are not used...
+
+
+[Flags]                                                 1 ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               2
+[AddressJumper]
+[IrqJumper]
+
+
+
+[EndRecord]
+
+
+// -------------------------------------------------------------------------
+
+
+
+[StartRecord]
+
+[CardName]                                              [Sound Blaster Pro I]
+[CardId]                                                103
+[CardGroup]                                             1
+
+[RmMidiDriverName]                              [sbp1fm.adv]
+[RmDigitalDriverName]           [sbpdig.adv]
+[PmMidiDriverName]                              [a32sp1fm.dll]
+[PmDigitalDriverName]           [a32sbpdg.dll]
+
+[MidiDriverChunkNumber]                 9
+[DigitalDriverChunkNumber]              8
+
+[NumberOfMidiAddresses]                 6
+[MidiAddress]                                   0x220
+[MidiAltAddress]                                0x210
+[MidiAltAddress]                                0x230
+[MidiAltAddress]                                0x240
+[MidiAltAddress]                                0x250
+[MidiAltAddress]                                0x260
+
+[NumberOfDigitalAddresses]              6
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x210
+[DigitalAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+[DigitalAltAddress]                             0x250
+[DigitalAltAddress]                             0x260
+
+[NumberOfIrqs]                   

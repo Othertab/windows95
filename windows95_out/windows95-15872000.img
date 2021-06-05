@@ -1,0 +1,138 @@
+me2%",,"%25%%C0%2.cur,%25%%C1%2.cur,%25%%C2%2.cur,%25%%C3%2.cur,%25%%C4%2.cur,%25%%C5%2.cur,%25%%C6%2.cur,%25%%C7%2.cur,%25%%C8%2.cur,%25%%C9%2.cur,%25%%CA%2.cur,%25%%CB%2.cur,%25%%CC%2.cur,%25%%CD%2.cur"
+;HKCU,"Control Panel\Cursors\Schemes","%Scheme3%",,"%25%%C0%3.cur,%25%%C1%3.cur,%25%%C2%3.cur,%25%%C3%3.cur,%25%%C4%3.cur,%25%%C5%3.cur,%25%%C6%3.cur,%25%%C7%3.cur,%25%%C8%3.cur,%25%%C9%3.cur,%25%%CA%3.cur,%25%%CB%3.cur,%25%%CC%3.cur,%25%%CD%3.cur"
+;HKCU,"Control Panel\Cursors\Schemes","%Scheme4%",,"%25%%C0%4.cur,%25%%C1%4.cur,%25%%C2%4.cur,%25%%C3%4.cur,%25%%C4%4.cur,%25%%C5%4.cur,%25%%C6%4.cur,%25%%C7%4.cur,%25%%C8%4.cur,%25%%C9%4.cur,%25%%CA%4.cur,%25%%CB%4.cur,%25%%CC%4.cur,%25%%CD%4.cur"
+;HKCU,"Control Panel\Cursors\Schemes","%Scheme5%",,"%25%%C0%5.cur,%25%%C1%5.cur,%25%%C2%5.cur,%25%%C3%5.cur,%25%%C4%5.cur,%25%%C5%5.cur,%25%%C6%5.cur,%25%%C7%5.cur,%25%%C8%5.cur,%25%%C9%5.cur,%25%%CA%5.cur,%25%%CB%5.cur,%25%%CC%5.cur,%25%%CD%5.cur"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeM%",,"%25%%C0%M.cur,%25%%C1%M.cur,%25%%C2%M.cur,%25%%C3%M.cur,%25%%C4%M.cur,%25%%C5%M.cur,%25%%C6%M.cur,%25%%C7%M.cur,%25%%C8%M.cur,%25%%C9%M.cur,%25%%CA%M.cur,%25%%CB%M.cur,%25%%CC%M.cur,%25%%CD%M.cur"
+HKCU,"Control Panel\Cursors\Schemes","%SchemeL%",,"%25%%C0%L.cur,%25%%C1%L.cur,%25%%C2%L.cur,%25%%C3%L.cur,%25%%C4%L.cur,%25%%C5%L.cur,%25%%C6%L.cur,%25%%C7%L.cur,%25%%C8%L.cur,%25%%C9%L.cur,%25%%CA%L.cur,%25%%CB%L.cur,%25%%CC%L.cur,%25%%CD%L.cur"
+
+[cursors.DelReg]
+HKCU,"Control Panel\Cursors\Schemes","%OldScheme1%"          ; REVIEW - moved to frosting
+HKCU,"Control Panel\Cursors\Schemes","%OldScheme2%"          ; REVIEW - moved to frosting
+HKCU,"Control Panel\Cursors\Schemes","%OldScheme3%"          ; REVIEW - moved to frosting
+HKCU,"Control Panel\Cursors\Schemes","%OldScheme4%"          ; REVIEW - moved to frosting
+HKCU,"Control Panel\Cursors\Schemes","%OldScheme5%"          ; REVIEW - moved to frosting
+HKCU,"Control Panel\Cursors\Schemes","%OldSchemeS%"       ; REVIEW- changed name
+HKCU,"Control Panel\Cursors\Schemes","%OldSchemeM%"       ; REVIEW- changed name
+HKCU,"Control Panel\Cursors\Schemes","%OldSchemeL%"       ; REVIEW- changed name
+
+[cursors.CopyFiles]
+arrow_1.cur
+;arrow_2.cur
+;arrow_3.cur
+;arrow_4.cur
+;arrow_5.cur
+arrow_l.cur
+arrow_m.cur
+beam_1.cur
+;beam_2.cur
+;beam_3.cur
+;beam_4.cur
+;beam_5.cur
+beam_l.cur
+beam_m.cur
+busy_1.cur
+;busy_2.cur
+;busy_3.cur
+;busy_4.cur
+;busy_5.cur
+busy_l.cur
+busy_m.cur
+cross_1.cur
+;cross_2.cur
+;cross_3.cur
+;cross_4.cur
+;cross_5.cur
+cross_l.cur
+cross_m.cur
+help_1.cur
+;help_2.cur
+;help_3.cur
+;help_4.cur
+;help_5.cur
+help_l.cur
+help_m.cur
+move_1.cur
+;move_2.cur
+;move_3.cur
+;move_4.cur
+;move_5.cur
+move_l.cur
+move_m.cur
+no_1.cur
+;no_2.cur
+;no_3.cur
+;no_4.cur
+;no_5.cur
+no_l.cur
+no_m.cur
+pen_1.cur
+;pen_2.cur
+;pen_3.cur
+;pen_4.cur
+;pen_5.cur
+pen_l.cur
+pen_m.cur
+size1_1.cur
+;size1_2.cur
+;size1_3.cur
+;size1_4.cur
+;size1_5.cur
+size1_l.cur
+size1_m.cur
+size2_1.cur
+;size2_2.cur
+;size2_3.cur
+;size2_4.cur
+;size2_5.cur
+size2_l.cur
+size2_m.cur
+size3_1.cur
+;size3_2.cur
+;size3_3.cur
+;size3_4.cur
+;size3_5.cur
+size3_l.cur
+size3_m.cur
+size4_1.cur
+;size4_2.cur
+;size4_3.cur
+;size4_4.cur
+;size4_5.cur
+size4_l.cur
+size4_m.cur
+up_1.cur
+;up_2.cur
+;up_3.cur
+;up_4.cur
+;up_5.cur
+up_l.cur
+up_m.cur
+wait_1.cur
+;wait_2.cur
+;wait_3.cur
+;wait_4.cur
+;wait_5.cur
+wait_l.cur
+wait_m.cur
+
+
+
+[Strings]
+; Used to keep the line length above to a minimum - no need to localize
+C0              = "\cursors\arrow_"
+C1              = "\cursors\help_"
+C2              = "\cursors\wait_"
+C3              = "\cursors\busy_"
+C4              = "\cursors\cross_"
+C5              = "\cursors\beam_"
+C6              = "\cursors\pen_"
+C7              = "\cursors\no_"
+C8              = "\cursors\size4_"
+C9              = "\cursors\size3_"
+CA              = "\cursors\size2_"
+CB              = "\cursors\size1_"
+CC              = "\cursors\move_"
+CD              = "\cursors\up_"
+
+; Localizable strings
+Scheme1                 = "3D Pointers"

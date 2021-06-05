@@ -1,0 +1,120 @@
+F::),250-25F(3FF::),260-26F(3FF::),270-27F(3FF::),300-30F(3FF::),310-31F(3FF::),320-32F(3FF::),330-33F(3FF::),340-34F(3FF::),350-35F(3FF::),360-36F(3FF::),370-37F(3FF::)
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+; *fullmac  optional driver for Intel Etherexpress 16 or 16TP
+;****************************************************************************
+
+[*fullmac.ndi]
+AddReg=*fullmac.ndi.reg,EXP16a.ndi.reg
+LogConfig=*pnp812d.LogConfig
+
+[*fullmac.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP812D"
+
+;****************************************************************************
+; *PNP812D  Intel Etherexpress 16 or 16TP
+;****************************************************************************
+
+[*PNP812D.ndi]
+AddReg=*pnp812d.ndi.reg,EXP16.ndi.reg
+LogConfig=*pnp812d.LogConfig
+
+[*PNP812D.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP812D"
+
+[*PNP812D.LogConfig]
+IRQConfig=3,4,5,9,10,11
+IOConfig=200-20F(3FF::),210-21F(3FF::),220-22F(3FF::),230-23F(3FF::),240-24F(3FF::),250-25F(3FF::),260-26F(3FF::),270-27F(3FF::),300-30F(3FF::),310-31F(3FF::),320-32F(3FF::),330-33F(3FF::),340-34F(3FF::),350-35F(3FF::),360-36F(3FF::),370-37F(3FF::)
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+; Intel EtherExpress PRO 100
+;****************************************************************************
+[PCIe100.ndi]
+AddReg=PCIe100.ndi.reg,e100.ndi.reg
+DeviceID="PCI\VEN_8086&DEV_1227"
+[PCIe100.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_8086&DEV_1227"
+HKR,Ndi\Install,,,"PCIe100.install"
+; flag as NDIS2 and NDIS3, but not required
+HKR,NDI\params\BusType,flag,1,20,00,00,00
+HKR,NDI\params\BusTypeLocal,flag,1,30,00,00,00
+
+; flag as NDIS2 but not required
+HKR,NDI\params\BusArch,flag,1,10,00,00,00
+
+; flag as NDIS3, but not required
+HKR,NDI\params\MapRegisters,flag,1,20,00,00,00
+
+; flag as NDIS3, but not required
+HKR,NDI\params\Eid,flag,1,20,00,00,00
+
+; BusType=PCI
+HKR,Ndi\params\BusType,ParamDesc,,"System Bus Type"
+HKR,Ndi\params\BusType,default,,5
+HKR,Ndi\params\BusType,type,,int
+
+HKR,Ndi\params\BusTypeLocal,ParamDesc,,"Adapter Bus Type"
+HKR,Ndi\params\BusTypeLocal,default,,5
+HKR,Ndi\params\BusTypeLocal,type,,int
+
+HKR,Ndi\params\BusArch,ParamDesc,,"NDIS2 Bus Type"
+HKR,Ndi\params\BusArch,default,,1
+HKR,Ndi\params\BusArch,type,,int
+
+; MapRegisters
+HKR,Ndi\params\MapRegisters,ParamDesc,,"Map Registers"
+HKR,Ndi\params\MapRegisters,default,,32
+HKR,Ndi\params\MapRegisters,min,,5
+HKR,Ndi\params\MapRegisters,max,,64
+HKR,Ndi\params\MapRegisters,step,,1
+HKR,Ndi\params\MapRegisters,base,,10
+HKR,Ndi\params\MapRegisters,type,,int
+
+HKR,Ndi\params\Eid,ParamDesc,,"Ethernet ID"
+HKR,Ndi\params\Eid,default,,0
+HKR,Ndi\params\Eid,base,,10
+HKR,Ndi\params\Eid,type,,dword
+
+;****************************************************************************
+; EISAe100 -  Intel EtherExpress PRO 100 EISA
+;****************************************************************************
+[*EISAe100.ndi]
+AddReg=*EISAe100.ndi.reg,e100.ndi.reg
+DeviceID="*INT1060"
+
+[*EISAe100.ndi.reg]
+HKR,Ndi,DeviceID,,"*INT1060"
+
+; flag as NDIS2 and NDIS3, but not required
+HKR,NDI\params\BusType,flag,1,20,00,00,00
+HKR,NDI\params\BusTypeLocal,flag,1,30,00,00,00
+
+; flag as NDIS2 but not required
+HKR,NDI\params\BusArch,flag,1,10,00,00,00
+
+; flag as NDIS3, but not required
+HKR,NDI\params\MapRegisters,flag,1,20,00,00,00
+
+; BusType=EISA
+HKR,Ndi\params\BusType,ParamDesc,,"System Bus Type"
+HKR,Ndi\params\BusType,default,,2
+HKR,Ndi\params\BusType,type,,int
+
+HKR,Ndi\params\BusTypeLocal,ParamDesc,,"Adapter Bus Type"
+HKR,Ndi\params\BusTypeLocal,default,,2
+HKR,Ndi\params\BusTypeLocal,type,,int
+
+HKR,Ndi\params\BusArch,ParamDesc,,"NDIS2 Bus Type"
+HKR,Ndi\params\BusArch,default,,2
+HKR,Ndi\params\BusArch,type,,int
+
+; Slot
+HKR,Ndi\params\Slot,ParamDesc,,"Slot Number"
+HKR,Ndi\params\Slot,default,,0
+HKR,Ndi\params\Slot,min,,1
+HKR,Ndi\params\Slot,max,,64
+HKR,Ndi\params\Slot,step,,1
+HKR,Ndi\params\Slot,base,,10
+HKR,Ndi\params\Slot,typ

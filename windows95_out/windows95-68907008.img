@@ -1,0 +1,109 @@
+                     ; Microcom DeskPorte FAST Parallel
+%Modem5%   = Modem5,   UNIMODEMF2287246                                                     ; Microcom DeskPorte FAST
+%Modem5%   = Modem5,   UNIMODEMD3036EEC                                                     ; Microcom DeskPorte FAST
+%Modem5PNP% = Modem5,  SERENUM\MNP0336                                                      ; Microcom DeskPorte FAST
+%Modem4%   = Modem4,   MICROCOM_Modem4, UNIMODEMC9720A17                                    ; Microcom DeskPorte ES 14.4
+%Modem3P%  = Modem3P,  MICROCOM_Modem3P                                                     ; Microcom TravelPorte FAST parallel
+%Modem3%   = Modem3,   UNIMODEMC93A08AB                                                     ; Microcom TravelPorte FAST
+%Modem2P%  = Modem2P,  "PCMCIA\MICROCOM__INC.-TRAVELCARD_FAST_28.8_DATA/FAX_MODEM-2288"     ; V.34 travel card fast parallel
+%Modem2%   = Modem2,   MICROCOM_Modem2, "PCMCIA\MICROCOM__INC.-TRAVELCARD_FAST_28.8_DATA/FAX_MODEM-2288"     ; V.34 travel card fast serial
+%Modem2%   = Modem2,   UNIMODEM352C2F38                                                     ; V.34 travel card fast serial
+%Modem2P%  = Modem2P,  "PCMCIA\MICROCOM__INC.-TRAVELCARD_FAST_28.8K_DATA/FAX_MODEM-E5FD"    ; TravelCard FAST serial
+%Modem2%   = Modem2,   MICROCOM_Modem2, "PCMCIA\MICROCOM__INC.-TRAVELCARD_FAST_28.8K_DATA/FAX_MODEM-E5FD"    ; TravelCard FAST Parallel
+%Modem1%   = Modem1,   MICROCOM_Modem1                                                      ; Microcom DeskPorte FAST ES 28.8
+
+[TDK]
+%TDK1P% = Modem2P, PCMCIA\TDK-DF2814_DATA/FAX_MODEM-AC80
+%TDK1%  = Modem2,  MICROCOM_TDK1, PCMCIA\TDK-DF2814_DATA/FAX_MODEM-AC80
+%TDK2P% = Modem2P, PCMCIA\TDK-DF2814_DATA/FAX_MODEM-AD71
+%TDK2P% = Modem2P, PCMCIA\TDK-DF2814_DATA/FAX_MODEM-9C19
+%TDK2%  = Modem2,  MICROCOM_TDK2, PCMCIA\TDK-DF2814_DATA/FAX_MODEM-AD71
+%TDK2%  = Modem2,  MICROCOM_TDK2, PCMCIA\TDK-DF2814_DATA/FAX_MODEM-9C19
+
+; Installation sections
+
+[Modem11P]
+CopyFiles=@ppm.vxd
+AddReg=All, Microcom, TravelCard.AddReg, Modem11P.AddReg
+
+[Modem11]
+AddReg=All, Microcom, Modem11.AddReg
+
+[Modem10P]
+CopyFiles=@ppm.vxd
+AddReg=All, Microcom, Modem10P.AddReg
+
+[Modem10]
+AddReg=All, Microcom, Modem10.AddReg
+
+[Modem9]
+AddReg=All, Microcom, Modem9.AddReg
+
+[Modem8]
+AddReg=All, Microcom, Modem8.AddReg
+
+[Modem7]
+AddReg=All, Microcom, Modem7.AddReg
+
+[Modem6P]
+CopyFiles=@ppm.vxd
+AddReg=All, Microcom, Modem6P.AddReg
+
+[Modem6]
+AddReg=All, Microcom, Modem6.AddReg
+
+[Modem5P]
+CopyFiles=@ppm.vxd
+AddReg=All, Microcom, Modem5P.AddReg
+
+[Modem5]
+AddReg=All, Microcom, Modem5.AddReg
+
+[Modem4]
+AddReg=All, Microcom, ES, Modem4.AddReg
+
+[Modem3P]
+CopyFiles=@ppm.vxd
+AddReg=All, Microcom, Modem3P.AddReg
+
+[Modem3]
+AddReg=All, Microcom, Modem3.AddReg
+
+[Modem2P]
+CopyFiles=@ppm.vxd
+AddReg=All, Microcom, TravelCard.AddReg, Modem2P.AddReg
+
+[Modem2]
+AddReg=All, Microcom, Modem2.AddReg
+
+[Modem1]
+AddReg=All, Microcom, ES, Modem1.AddReg
+
+; AddReg sections
+
+[Modem11P.AddReg]
+HKR,, DeviceType, 1, 03      ; PCMCIA
+HKR,,PortDriver,,ppm.vxd
+HKR,,Contention,,*vcd
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 7f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Responses, "<lf>",1, 01, 00, 00,00,00,00, 00,00,00,00
+
+[Modem11.AddReg]
+HKR,, DeviceType, 1, 03      ; PCMCIA
+HKR,,PortDriver,,serial.vxd
+HKR,,Contention,,*vcd
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 7f,03,00,00, 00,c2,01,00, 80,70,00,00
+
+[Modem10P.AddReg]
+HKR,, DeviceType, 1, 05      ; External LPT
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 7f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, Override,,ppm.vxd
+HKR, Responses, "<lf>",1, 01, 00, 00,00,00,00, 00,00,00,00
+
+[Modem10.AddReg]
+HKR,, DeviceType, 1, 01      ; External
+HKR,, Properties, 1, c0,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 7f,03,00,00, 00,c2,01,00, 80,70,00,00
+
+[Modem9.AddReg]
+HKR,, DeviceType, 1, 01      ; External
+HKR,, Propertie

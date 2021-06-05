@@ -1,0 +1,41 @@
+Authentication*		Group	1531 1532 1533 1534 1535 1536 1537 1538 1539 1540 1541 1542 1543 2570 					
+1531				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP"",""Path"",""smmscrpt.dll"""
+1532				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP"",""Desc"",""SLIP: Unix Connection"""
+1533				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP,Usage,1,4"""					
+1534				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP,Options,4,4"""					
+1535				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP,Protocols,4,4"""					
+1536				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP"",""Path"",""smmscrpt.dll"""
+1537				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP"",""Desc"",""CSLIP: Unix Connection with IP Header Compression"""
+1538				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP,Usage,1,4"""					
+1539				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP,Options,4,4"""					
+1540				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP,Protocols,4,4"""					
+1541				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\PPP"",""Path"",""smmscrpt.dll"""
+1542				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\RAS"",""Path"",""smmscrpt.dll"""
+1543				AddRegData	"""HKEY_LOCAL_MACHINE"",""SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\NWC"",""Path"",""smmscrpt.dll"""
+1549
+1550		*RunOnce*		Group	1551 1552					
+1551				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\RunOnce"",""SLIP_Setup"",""rundll32.exe smmsetup.dll,SMM_Setup /a PPPMAC SLIP"""
+1552				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\RunOnce"",""CSLIP_Setup"",""rundll32.exe smmsetup.dll,SMM_Setup /a PPPMAC CSLIP"""
+1559
+1560		*Scr File Class*		Group	1561 1562 1563 1564 1565					
+1561				AddRegData	"""HKEY_CLASSES_ROOT"","".scp"","""",""scpfile"""
+1562				AddRegData	"""HKEY_CLASSES_ROOT"",""scpfile"","""",""Dial-Up Networking Script"""
+1563				AddRegData	"""HKEY_CLASSES_ROOT"",""scpfile\DefaultIcon"","""",""%M\SHELL32.DLL,-152"""
+1564				AddRegData	"""HKEY_CLASSES_ROOT"",""scpfile\shell\open\command"","""",""%W\NOTEPAD.EXE %%1"""
+1565				AddRegData	"""HKEY_CLASSES_ROOT"",""scpfile\shell\print\command"","""",""%W\NOTEPAD.EXE /p %%1"""
+1566
+1580		*Install Base RNA*		Group	1581 1582					
+1581				CustomAction	"""plus.dll"",""RNAApplet"","""""					
+1582				CustomAction	"""plus.dll"",""Win95Applet"","""""					
+1583					
+1590		Restore RNA Registry		CustomAction	"""plus.dll"",""UninstallRNAScripting"","""""					
+1599										
+1600		*** Wizard ***		Group	1601 1603 1604 1605 1606 1607 1608 1609 1615 1616 1617 1620 1621					
+1601		INETWIZ.EXE		CopyFile	"""I_Wiz_exe"",""wxe"""				yes	%33
+1603		Wizard Files		CopySection	"""I_Wiz_misc"""				no	%M
+1604		INETCPL.CPL		CopyFile	"""I_Wiz_exe"",""wpl"""				no	%M
+1605		DIALMON.EXE		CopyFile	"""I_Wiz_exe"",""dmo"""				no	%M
+1606		InterWiz.hlp		CopyFile	"""I_Wiz_exe"",""whp"""				no	%W\HELP<%W\Help>
+1607		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+1608		ShortCut		InstallShortcut	"""%1601\%F1601"",""Internet Setup Wizard"",""%1601"""				no	%1607\ACCESS~1\INTERN~1<%1607\Accessories\Internet Tools>
+1609				CustomActio

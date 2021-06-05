@@ -1,0 +1,248 @@
+
+WFWKeys="ms$toklnk"
+LanManKeys="tlnk"
+
+[*pnp8231]	;AMD AM2100/AM1500t and compatibles
+NCDID=561
+DeviceIDs=*pnp8231
+Flags=ISA
+IO1=32,%0
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$am2100"
+LanManKeys="am2100"
+ODIKeys="ne2100","at15odi"
+IEEEIDs=0x00001a,0x0000f4
+
+[*pnp8231.1]	;AMD AM2100/AM1500t and compatibles
+NCDID=561
+DeviceIDs=*pnp8231
+Flags=ISA
+IO1=32,%0
+IRQ1=1,%0
+DMA1=1,%0
+ODIKeys="am2100","pcntnw","bocanw"
+
+[*pnp8141]	;Amplicard AC 210/XT
+NCDID=321
+DeviceIDs=*pnp8141
+Flags=ISA,NoDetect
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$am210xt"
+ODIKeys="ne1000"
+IEEEIDs=0xffffffff
+
+[*pnp8142]	;Amplicard AC 210/AT
+NCDID=322
+DeviceIDs=*pnp8142
+Flags=ISA,NoDetect
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$am210at"
+ODIKeys="ne2000"
+IEEEIDs=0xffffffff
+
+[*pnp8324]	;ARCNET Compatible
+NCDID=804
+DeviceIDs=*pnp8324
+Flags=ISA,NoDetect
+IO1=16,%1
+Mem1=0x4000,%0
+IRQ1=1,%0
+WFWKeys="ms$arcclone"
+LanManKeys="smc_arc"
+ODIKeys="smcarcws"
+NovellIDs=0x0073
+
+[*pnp8137]	;Artisoft AE-1
+NCDID=311
+DeviceIDs=*pnp8137
+Flags=ISA
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ae1"
+ODIKeys="ne1000"
+IEEEIDs=0x00006e
+
+[*pnp8138]	;Artisoft AE-2 or AE-3
+NCDID=312
+DeviceIDs=*pnp8138
+Flags=ISA
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ae2"
+ODIKeys="ne2000"
+IEEEIDs=0x00006e
+
+[*pnp8079]	;Artisoft AE-2 (MCA) or AE-3 (MCA)
+NCDID=121
+DeviceIDs=*pnp8079,mca_67b0
+Flags=MCA,NoDetect
+IO1=32
+WFWKeys="ms$ae2mca"
+ODIKeys="ne2000"
+IEEEIDs=0xffffffff
+
+[*pnp8139]	;Artisoft AE-3
+NCDID=313
+DeviceIDs=*pnp8139
+Flags=ISA,NoDetect
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ae3"
+ODIKeys="ne2000"
+IEEEIDs=0x00006e
+
+[*pnp81ff]	;Cabletron E2000 Series DNI
+NCDID=511
+DeviceIDs=*pnp81ff
+Flags=ISA
+IO1=32,%0
+IRQ1=1,%0
+WFWKeys="ms$cbl20"
+LanManKeys="E20"
+ODIKeys="e20odi"
+IPXNames="E20"
+NovellIDs=0x04e3
+
+[*pnp8200]	;Cabletron E2100 Series DNI
+NCDID=512
+DeviceIDs=*pnp8200
+Flags=ISA
+IO1=32,%0
+Mem1=0x4000,%4
+IRQ1=1,%0
+WFWKeys="ms$cbl21","cbl21"
+LanManKeys="E21"
+ODIKeys="e21odi"
+IPXNames="E21"
+NovellIDs=0x04e3
+
+[*pnp8105]	;DCA 10-Net
+NCDID=261
+DeviceIDs=*pnp8105
+Flags=ISA,NoDetect
+IO1=16,%0
+Mem1=0x4000,%7
+IRQ1=1,%0
+WFWKeys="ms$dca10"
+LanManKeys="mac586"
+
+[*pnp8106]	;DCA 10-Net Fiber
+NCDID=262
+DeviceIDs=*pnp8106
+Flags=ISA,NoDetect
+IO1=16,%0
+Mem1=0x4000,%7
+IRQ1=1,%0
+WFWKeys="ms$dca10fo"
+
+[*pnp8078]	;DCA 10-Net (MCA)
+NCDID=120
+DeviceIDs=*pnp8078
+Flags=MCA,NoDetect
+WFWKeys="ms$dca10mc"
+
+[*pnp8107]	;DCA 10-Net (TP)
+NCDID=263
+DeviceIDs=*pnp8107
+Flags=ISA,NoDetect
+IO1=16,%0
+Mem1=0x4000,%7
+IRQ1=1,%0
+WFWKeys="ms$dca10tp"
+
+[*pnp8321]	;DEC Ethernet (All types but EtherWorks 3)
+NCDID=801
+DeviceIDs=*pnp8321
+Flags=ISA,NoDetect
+IO1=16,%0
+Mem1=0x8000,%8
+IRQ1=1,%0
+WFWKeys="ms$decgen"
+LanManKeys="depca"
+ODIKeys="depca"
+NovellIDs=0x0411
+IEEEIDs=0x08002b
+
+[*pnp80e7]	;DEC DEPCA
+NCDID=231
+DeviceIDs=*pnp80e7
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$depca"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80ee]	;DEC EE101 (Built-in)
+NCDID=238
+DeviceIDs=*pnp80ee
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ee101"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80e8]	;DEC (DE100) EtherWorks LC
+NCDID=232
+DeviceIDs=*pnp80e8
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ewlc"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80ea]	;DEC (DE101) EtherWorks LC/TP
+NCDID=234
+DeviceIDs=*pnp80ea
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ewlctp"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80ed]	;DEC (DE102) EtherWorks LC/TP_BNC
+NCDID=237
+DeviceIDs=*pnp80ed
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ewlctpb"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp8071]	;DEC DEPCA (MCA)
+NCDID=113
+DeviceIDs=*pnp8071
+Flags=MCA,NoDetect
+IO1=16,%0
+WFWKeys="ms$ewmc"
+ODIKeys="depca"
+
+[*pnp8072]	;DEC DEPCA (MCA) TP/AUI
+NCDID=114
+DeviceIDs=*pnp8072
+Flags=MCA,NoDetect
+IO1=16,%0
+WFWKeys="ms$ewmctp"
+ODIKeys="depca"
+
+[*pnp8073]	;DEC DEPCA (MCA) TP/BNC
+NCDID=115
+DeviceIDs=*pnp8073
+Flags=MCA,NoDetect
+IO1=16,%0
+WFWKeys="ms$ewmctpb"
+ODIKeys="depca"
+
+[*pnp80e

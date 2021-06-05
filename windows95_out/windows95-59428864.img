@@ -1,0 +1,103 @@
+io Plug-in allows content creators to 
+    seamlessly integrate RealAudio directly into their Web page 
+    layouts. 
+
+  * Firewall Proxy Support - RealAudio supports the RealAudio
+    Proxy allowing safe access to RealAudio content through firewalls.
+    See our Firewall information page at
+
+       http://www.realaudio.com/firewall.html
+
+    for more details.
+
+  * TCP-only Audio Delivery - RealAudio supports receiving audio
+    via TCP-only.  If your site blocks UDP delivery, please select
+    the TCP-only option from the Network Preferences, available under
+    the option menu.  Do not use TCP-only mode when you are using a 
+    dial-up connection.
+
+
+-------------------------------------------------------------------
+
+Reporting Feedback
+
+We are very interested in your experiences with our products. 
+Please use the multipurpose reporting form located at
+
+http://www.realaudio.com/problem.html 
+
+to report problems, if you have comments, or to offer suggestions. 
+
+-------------------------------------------------------------------
+
+Sound Quality
+If you are experiencing poor sound quality there are several simple 
+steps you can take to determine the cause.  First, use the Connection 
+Statistics box to determine if there is packet loss.  Packet loss 
+during transmission over the Internet is the main cause of poor 
+sound quality.
+
+If packet loss does not seem to be causing poor sound quality, you can
+try adjusting the way the RealAudio Player delivers sound to your 
+computer's sound card. Choose Preferences from the View menu and then
+select the Advanced tab.  You will see check boxes for "Use 8-bit Only" 
+and "Use 11 kHz only":
+
+Use 8-bit Only
+------------------
+Use this option only if there is evidence of compatibility problems 
+with your soundcard.  The Player normally delivers 16-bit audio to the
+sound card.  If the sound card only supports 8-bit audio, the Player 
+delivers 8-bit audio.  If your sound card fails to inform the RealAudio 
+Player that it only supports 8-bit audio, you may hear only random or 
+garbled sound when playing clips.  Check this option to override the 
+16-bit default and play 8-bit sound.
+
+Use 11 kHz Only
+---------------------
+Use this option only if there is evidence of compatibility problems 
+with your sound card.  The Player normally delivers 8 kHz audio to the
+sound card.  If your sound card does not support the 8 kHz sampling 
+rate, the audio may sound high-pitched or too fast.  Check this 
+option to instruct the Player to convert audio to 11 kHz before 
+delivering it to the sound card. This option increases CPU usage 
+slightly.
+
+If you continue to receive poor quality audio, please see our 
+FAQ entry on audio quality at:  
+
+http://www.realaudio.com/help.html
+
+Select FAQ and from there choose the "Audio Quality" entry.
+
+Please note that to receive RealAudio 28.8 you should have at least
+a 19.2 Kbps connection to your Internet Service Provider.  In a
+19.2 Kbps connection you may hear slight gaps in the audio.
+
+Dial-up users should be sure to keep the network connection preference
+as UDP (the default).  In TCP mode, no audio packets are lost,
+but their arrival may be late enough to cause gapping in the audio.
+TCP mode is useful when you are directly connected (via a
+local area network) to the internet.
+
+---------------------------------------------------------------------
+
+Known Problems
+
+   * Starting or quitting large applications while playing
+     RealAudio can cause some brief disruption of the playback.
+
+   * Playback on some 486/25 SX computers does not work properly.
+
+   * The user interface during playback of 28.8 content on slower
+     systems may have slow response time.  Performance of other
+     applications may suffer during playback.  To improve system 
+     performance select the General tab from the View|Preferences menu
+     and adjust the Best Audio Quality/Lowest CPU Usage slider.
+
+   
+---------------------------------------------------------------------
+
+Browser Upgrade
+
+Afte

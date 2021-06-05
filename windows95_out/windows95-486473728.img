@@ -1,0 +1,103 @@
+ Windows Sound System mode is  if  you 
+have  a  DOS application that reuquires Windows Sound System 
+(highly unlikely).
+
+So keep the mode set to Sound Blaster and all your  favorite 
+games and such will run fine.
+
+Which brings us to the next topic...
+
+==============================================================
+How to setup your DOS games and programs for sound.
+==============================================================
+
+1.  Make  sure  your  current  mode is set to 'Sound Blaster 
+Pro'. 
+
+2. Setup DOOM, Descent, Heretic, or whatever to use a 'Sound 
+Blaster Pro or compatible' device.
+
+==============================================================
+How to test your settings and SE14SRS / SE34SRS:
+==============================================================
+
+There  is a button in SNDINIT titled 'Sound Test'. Use all 3 
+tests. Don't worry if the FM Synthesis is a bit softer  than 
+the  other  tests. For 8 Bit you should hear a 'tada' sound. 
+The 16 Bit test plays a little tune, and  the  FM  Synthesis 
+test plays 3 notes.
+
+==============================================================
+How to change volume levels:
+==============================================================
+
+There  is  a  button in SNDINIT called Volume. While you can 
+use this to adjust volumes, *most*  applications  and  games 
+have built-in volume settings.
+
+You can access this screen directly by  typing  VOLUME  from 
+the C:\SOUNDEXP directory.
+
+==============================================================
+What is MIDI and MPU401?
+==============================================================
+
+MIDI stands for Musical Instrument Digital Interface. MPU401 
+is   a  standard  interface  for  musical  devices  such  as 
+keyboards.
+
+Hint: To improve the music produced by the  SE14SRS/SE34SRS, 
+look into attaching a device known as a WaveTable adapter to 
+the  SE14SRS/SE34SRS.  This small device plugs into the pins 
+on top of the SE14SRS/SE34SRS, near the middle. A  WaveTable 
+adapter contains actual samples of musical sounds.
+
+==============================================================
+How to setup a CD-ROM:
+==============================================================
+
+The SE14SRS/SE34SRS supports IDE type CD-ROM Drives.
+
+If you have a CD-ROM and its already installed, then all you 
+have to do is attach the audio cable to the SE14SRS/SE34SRS. 
+The audio cable is a small thin wire coming from your CD-ROM 
+(not the wide-flat ribbon cable).
+
+If  you wish to use the SE14SRS/SE34SRS as the adapter card, 
+attach the flat ribbon cable from the CD-ROM  drive  to  the 
+CD-ROM  interface connector on the SE1440. The stripe on one 
+side of the cable (usually red) signifies pin 1 which  needs 
+to  match  up  with  pin  1 on the SE14SRS/SE34SRS, which is 
+designated by a white stripe or band approximately one-eight 
+of an inch.
+
+Now use SNDINIT to tell the adapter to 'turn on' the  CD-ROM 
+interface.  SNDINIT  will  guide you through all the details 
+and install drivers into your  config.sys  and  autoexec.bat 
+(startup) files.
+
+If  you wish to use drivers that came with your CD-ROM, make 
+sure you leave the following line intact in your config.sys:
+
+    Device=C:\soundexp\cdsetup.sys /T:I /P:170 /I:X /D:X
+
+==============================================================
+How to select an input device?
+==============================================================
+
+The 'input' for recording sound, etc. is software selectable 
+between the 'mic' and the 'line in' jack.
+
+==============================================================
+Whats the *quickest* way to check the current settings?
+==============================================================
+Type SNDINIT /b
+
+==============================================================
+What is happening to COM Port Settings for modems?
+or
+Why can't I just select a COM port for the modem?
+==============================================================
+
+For the most part, Plug and Play no longer really cares about
+your COM

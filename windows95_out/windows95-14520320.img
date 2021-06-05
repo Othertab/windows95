@@ -1,0 +1,118 @@
+KR,NDI\params\ConnectionType,flag,1,20,00,00,00
+
+;SIA Mode
+;--------------
+HKR,Ndi\params\SIA_Mode,ParamDesc,,"Connection Type-16 bit driver"
+HKR,Ndi\params\SIA_Mode,default,,AUTODETECT
+HKR,Ndi\params\SIA_Mode,type,,enum
+HKR,Ndi\params\SIA_Mode\enum,AUTODETECT,,"Auto Detection"
+HKR,Ndi\params\SIA_Mode\enum,TP,,"Twisted Pair"
+HKR,Ndi\params\SIA_Mode\enum,TP_FULL_DUPLEX,,"TP Full Duplex"
+HKR,Ndi\params\SIA_Mode\enum,BNC,,"BNC (Thinnet)"
+HKR,Ndi\params\SIA_Mode\enum,AUI,,"AUI (Thicknet)"
+HKR,NDI\params\SIA_Mode,flag,1,10,00,00,00
+
+[dc21140.ndi.reg]
+;ConnectionType
+HKR,Ndi\params\ConnectionType,ParamDesc,,"Connection Type-32 bit driver"
+HKR,Ndi\params\ConnectionType,default,,0
+HKR,Ndi\params\ConnectionType,type,,enum
+HKR,Ndi\params\ConnectionType\enum,0,,"AutoSense"
+HKR,Ndi\params\ConnectionType\enum,8,,"100Mbps"
+HKR,Ndi\params\ConnectionType\enum,9,,"100Mbps Full_Duplex"
+HKR,Ndi\params\ConnectionType\enum,2,,"10Mbps"
+HKR,Ndi\params\ConnectionType\enum,3,,"10Mbps Full_Duplex"
+HKR,NDI\params\ConnectionType,flag,1,20,00,00,00
+
+;SIA Mode
+;--------------
+HKR,Ndi\params\SIA_Mode,ParamDesc,,"Connection Type-16 bit driver"
+HKR,Ndi\params\SIA_Mode,default,,TP
+HKR,Ndi\params\SIA_Mode,type,,enum
+HKR,Ndi\params\SIA_Mode\enum,TP,,"Twisted Pair"
+HKR,Ndi\params\SIA_Mode\enum,TP_FULL_DUPLEX,,"TP Full Duplex"
+HKR,NDI\params\SIA_Mode,flag,1,10,00,00,00
+
+;DataRate
+;---------
+HKR,Ndi\params\Data_Rate,ParamDesc,,"Data Rate-16 bit driver"
+HKR,Ndi\params\Data_Rate,default,,MB10
+HKR,Ndi\params\Data_Rate,type,,enum
+HKR,Ndi\params\Data_Rate\enum,MB10,,"10 Mbs"
+HKR,Ndi\params\Data_Rate\enum,MB100,,"100 Mbs"
+HKR,NDI\params\Data_Rate,flag,1,10,00,00,00
+
+
+;Board with TP media only 
+[tp.ndi.reg]
+;ConnectionType
+HKR,Ndi\params\ConnectionType,ParamDesc,,"Connection Type"
+HKR,Ndi\params\ConnectionType,default,,2
+HKR,Ndi\params\ConnectionType,type,,enum
+HKR,Ndi\params\ConnectionType\enum,2,,"Twisted_Pair"
+HKR,Ndi\params\ConnectionType\enum,3,,"TP Full_Duplex"
+HKR,Ndi\params\ConnectionType\enum,4,,"TP No_Link_Test"
+HKR,NDI\params\ConnectionType,flag,1,20,00,00,00
+
+
+;****************************************************************************
+; Drivers
+;****************************************************************************
+
+; Install NDIS3
+[dc21x4.ndis3]
+CopyFiles=dc21x4.ndis3.CopyFiles
+
+[dc21x4.ndis3.CopyFiles]
+dc21x4.sys
+
+; Install NDIS2
+[dc21x4.ndis2]
+CopyFiles=dc21x4.ndis2.CopyFiles
+
+[dc21x4.ndis2.CopyFiles]
+dc21x4.dos
+
+; Install ODI
+[dc21x4.odi]
+CopyFiles=dc21x4.odi.CopyFiles
+
+[dc21x4.odi.CopyFiles]
+dc21x4.com
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir               =11 ; LDID_SYS
+dc21x4.ndis3.CopyFiles       =11
+dc21x4.ndis2.CopyFiles       =26 ; LDID_WINBOOT
+dc21x4.odi.CopyFiles         =26
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_DEC="Digital Equipment"
+V_SMC="SMC"
+V_ZNYX="Znyx"
+V_COGENT="Cogent"
+V_LINKSYS="Linksys"
+V_TC="Thomas-Conrad"
+
+; PNP Devices
+21040.DeviceDesc=  "PCI Ethernet DECchip 21040 Based Adapter"
+21041.DeviceDesc=  "PCI Ethernet DECchip 21041 Based Adapter"
+21140.DeviceDesc=  "PCI Fast Ethernet DECchip 21140 Based Adapter"
+DE434.DeviceDesc=  "DEC DE434 EtherWORKS Turbo PCI TP Adapter"
+DE435.DeviceDesc=  "DEC DE435 EtherWORKS Turbo PCI Adapter"
+;DE436.DeviceDesc=  "DEC DE436 EtherWORKS Turbo PCI Quad Adapter"
+DE425.DeviceDesc=  "DEC DE425 EtherWORKS Turbo EISA Adapter"
+DE500.DeviceDesc=  "DEC DE500 Fast EtherWORKS PCI 10/100 Adapter"
+SMC8432.DeviceDesc="SMC EtherPower (8432) PCI Ethernet Adapter"
+SMC8434.DeviceDesc="SMC EtherPower2 (8434) PCI Adapter"
+SMC9332.DeviceDesc="SMC EtherPower 10/100 (9332) PCI Ethernet Adapter"
+ZNYX.DeviceDesc=   "Zynx ZX312/314 E

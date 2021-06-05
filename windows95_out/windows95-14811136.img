@@ -1,0 +1,48 @@
+nt,NoBold,8,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifSmall_Address_font",2,"IEPropFont,NoBold,10,Italic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifSmall_BlockQuote_font",2,"IEPropFont,NoBold,10,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_Normal_font",2,"IEPropFont,NoBold,14,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_H1_font",2,"IEPropFont,Bold,28,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_H2_font",2,"IEPropFont,Bold,20,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_H3_font",2,"IEPropFont,Bold,16,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_H4_font",2,"IEPropFont,Bold,14,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_H5_font",2,"IEPropFont,Bold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_H6_font",2,"IEPropFont,Bold,10,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_Listing_font",2,"IEFixedFont,NoBold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_XMP_font",2,"IEFixedFont,NoBold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_PlainText_font",2,"IEFixedFont,NoBold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_Pre_font",2,"IEFixedFont,NoBold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_Address_font",2,"IEPropFont,NoBold,14,Italic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLarge_BlockQuote_font",2,"IEPropFont,NoBold,14,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_Normal_font",2,"IEPropFont,NoBold,16,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_H1_font",2,"IEPropFont,Bold,32,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_H2_font",2,"IEPropFont,Bold,24,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_H3_font",2,"IEPropFont,Bold,18,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_H4_font",2,"IEPropFont,Bold,16,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_H5_font",2,"IEPropFont,Bold,14,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_H6_font",2,"IEPropFont,Bold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_Listing_font",2,"IEFixedFont,NoBold,13,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_XMP_font",2,"IEFixedFont,NoBold,13,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_PlainText_font",2,"IEFixedFont,NoBold,13,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_Pre_font",2,"IEFixedFont,NoBold,13,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_Address_font",2,"IEPropFont,NoBold,16,Italic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifLargest_BlockQuote_font",2,"IEPropFont,NoBold,16,NoItalic,NoUnderline"
+
+
+
+
+;	MIME and FILE Mappings
+HKCR,"exefile","EditFlags",1,D8,07,00,00
+
+;	HTML Files (*.htm, *.html)
+HKCR,".htm",,2,"htmlfile"
+HKCR,".htm","Content Type",0,"text/html"
+HKCR,".html",,2,"htmlfile"
+HKCR,".html","Content Type",0,"text/html"
+HKCR,"htmlfile",,0,"%IDHTML%"
+HKCR,"htmlfile\BrowseInPlace",,,"0"
+HKCR,"htmlfile\DefaultIcon",,2,"%24%\%PROGRAM_FULL%\%Microsoft_Internet%\iexplore.exe,1"
+HKCR,"htmlfile\shell\open\command",,2,"""%24%\%OEM_PROGRAMF%\%OEM_MICROS%\iexplore.exe"" -nohome"
+HKCR,"htmlfile\shell\open\ddeexec",,2,"""file:%%1"",,-1,,,,,"
+HKCR,"htmlfile\shell\open\ddeexec\Application",,2,"IExplore"
+HKCR,"htmlfile\shell

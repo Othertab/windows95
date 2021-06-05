@@ -1,0 +1,125 @@
+
+%Modem1% = Modem1, UNIMODEMDE2F6BC4						; MicroLink 288ooTL
+		  
+
+; Installation sections
+
+[Modem24]	; MicroLink ISDN TD
+AddReg=All, MfgAddReg, Modem24.AddReg, External
+
+[Modem23]	; MicroLink ISDN TL PRO
+AddReg=All, MfgAddReg, Modem23.AddReg, External
+
+[Modem22]	; MicroLink ISDN TL
+AddReg=All, MfgAddReg, Modem22.AddReg, External
+
+[Modem20]	; ELISA 144V
+AddReg=All, MfgAddReg, Modem20.AddReg, External
+
+[Modem19]	; ELISA 144
+AddReg=All, MfgAddReg, Modem19.AddReg, External
+
+[Modem18]	; ZIFF 144
+AddReg=All, MfgAddReg, Modem18.AddReg, External
+
+[Modem17]	; MicroLink 14.4MC
+AddReg=All, MfgAddReg, Modem17.AddReg, PCMCIA
+
+[Modem16]	; MicroLink 28.8TQV
+AddReg=All, MfgAddReg, Modem16.AddReg, External
+
+[Modem15]	; MicroLink 28.8TQ
+AddReg=All, MfgAddReg, Modem15.AddReg, External
+
+[Modem14]	; MicroLink 14.4TQV
+AddReg=All, MfgAddReg, Modem14.AddReg, External
+
+[Modem13]	; MicroLink 14.4TQ
+AddReg=All, MfgAddReg, Modem13.AddReg, External
+
+[Modem12]	; MicroLink 2460MC
+AddReg=All, MfgAddReg, Modem12.AddReg, PCMCIA
+
+[Modem11]	; MicroLink 2460PC
+AddReg=All, MfgAddReg, Modem11.AddReg, Internal
+
+[Modem10]	; MicroLink 2460TL
+AddReg=All, MfgAddReg, Modem10.AddReg, External
+
+[Modem9]	; MicroLink 2440TR
+AddReg=All, MfgAddReg, Modem9.AddReg, External
+
+[Modem8]	; MicroLink 2440T
+AddReg=All, MfgAddReg, Modem8.AddReg, External
+
+[Modem6]	; MicroLink 14.4PC
+AddReg=All, MfgAddReg, Modem6.AddReg, Internal
+
+[Modem5]	; MicroLink 14.4TM
+AddReg=All, MfgAddReg, Modem5.AddReg, External
+
+[Modem3]	; MicroLink 24oooTL
+AddReg=All, MfgAddReg, Modem3.AddReg, External
+
+[Modem2]	; MicroLink 14.4TL
+AddReg=All, MfgAddReg, Modem2.AddReg, External
+
+[Modem1]	; MicroLink 288ooTL
+AddReg=All, MfgAddReg, Modem1.AddReg, External
+
+
+; AddReg sections
+
+[Modem24.AddReg]	; MicroLink ISDN TD
+HKR,, Properties, 1, 00,01,00,00, 00,00,00,00, ff,00,00,00, 07,00,00,00, 00,00,00,00, 37,03,00,00, 00,c2,01,00, 00,fa,00,00
+HKR,, FClass, 1, 01,00,00,00
+HKR, Init,      2,, "AT &F \N6 -M0 Q0 V1 \V1<cr>"
+HKR, Settings, CallSetupFailTimer,, " "
+HKR, Settings, InactivityTimeout,, " "
+HKR, Settings, Compression_On,, "%%C3"
+HKR, Settings, Compression_Off,, "%%C0"
+
+[Modem23.AddReg]	; MicroLink ISDN TL PRO
+HKR,, Properties, 1, 00,00,00,00, 00,00,00,00, 00,00,00,00, 07,00,00,00, 01,00,00,00, b0,00,00,00, 00,c2,01,00, 00,fa,00,00
+HKR,, FClass, 1, 01,00,00,00
+HKR, Init,      2,, "AT &F \N6 <cr>"
+HKR, Settings, CallSetupFailTimer,, " "
+HKR, Settings, InactivityTimeout,, " "
+HKR, Settings, Compression_On,, "%%C3"
+HKR, Settings, Compression_Off,, "%%C0"
+
+[Modem22.AddReg]	; MicroLink ISDN TL
+HKR,, Properties, 1, 00,01,00,00, 00,00,00,00, ff,00,00,00, 07,00,00,00, 00,00,00,00, 37,03,00,00, 40,5e,02,00, 00,fa,00,00
+HKR,, FClass, 1, 01,00,00,00
+HKR, Init,      2,, "AT &F \N6 -M0 Q0 V1 \V1<cr>"
+HKR, Settings, CallSetupFailTimer,, " "
+HKR, Settings, InactivityTimeout,, " "
+HKR, Settings, Compression_On,, ""
+HKR, Settings, Compression_Off,, ""
+
+[Modem20.AddReg]	; ELISA 144V
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F S95=44 <cr>"
+HKR,, FClass, 1, 09,00,00,00
+HKR, Settings, FlowControl_Off,, "&K0"
+HKR, Settings, FlowControl_Hard,, "&K3"
+HKR, Settings, FlowControl_Soft,, "&K4"
+
+[Modem19.AddReg]	; ELISA 144
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F S95=44 <cr>"
+HKR,, FClass, 1, 09,00,00,00
+HKR, Settings, FlowControl_Off,, "&K0"
+HKR, Settings, FlowControl_Hard,, "&K3"
+HKR, Settings, FlowControl_Soft,, "&K4"
+
+[Modem18.AddReg]	; ZIFF 144
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0d,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F S95=44 <cr>"
+HKR,, FClass, 1, 09,00,00,00
+HKR, Settings, FlowControl_Off,, "&K0"
+HKR, Settings, FlowControl_Hard,, "&K3"
+HKR, Settings, FlowControl_Soft,, "&K4"
+
+[Modem17.AddReg]	; MicroLink 14.4MC
+HKR,, Pr

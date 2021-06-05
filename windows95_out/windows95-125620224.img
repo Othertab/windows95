@@ -1,0 +1,128 @@
+R  Read-only files
+½               H  Hidden files               A  Files ready for archiving
+               S  System files               -  Prefix meaning not
+  /O          List by files in sorted order.
+›  sortorder    N  By name (alphabetic)       S  By size (smallest first)
+               E  By extension (alphabetic)  D  By date & time (earliest first)
+Î               G  Group directories first    -  Prefix to reverse order
+               A  By Last Access Date (earliest first)
+  /S          Displays files in specified directory and all subdirectories.
+ƒ  /B          Uses bare format (no heading information or summary).
+  /L          Uses lowercase.
+  /V          Verbose mode.
+
+’Switches may be preset in the DIRCMD environment variable.  Override
+preset switches by prefixing any switch with - (hyphen)--for example, /-W.
+>Quits the COMMAND.COM program (command interpreter).
+
+EXIT
+=Creates a directory.
+
+MKDIR [drive:]path
+MD [drive:]path
+]Displays or sets a search path for executable files.
+
+PATH [[drive:]path[;...]]
+PATH ;
+
+lType PATH ; to clear all search-path settings and direct Windows to search
+only in the current directory.
+;Type PATH without parameters to display the current path.
+8Changes the Windows command prompt.
+
+PROMPT [text]
+
+|  text    Specifies a new command prompt.
+
+Prompt can be made up of normal characters and the following special codes:
+
+/  $Q   = (equal sign)
+  $$   $ (dollar sign)
+*  $T   Current time
+  $D   Current date
+>  $P   Current drive and path
+  $V   Windows version number
+4  $N   Current drive
+  $G   > (greater-than sign)
+,  $L   < (less-than sign)
+  $B   | (pipe)
+y  $H   Backspace (erases previous character)
+  $E   Escape code (ASCII code 27)
+  $_   Carriage return and linefeed
+
+LType PROMPT without parameters to reset the prompt to the default setting.
+GRemoves (deletes) a directory.
+
+RMDIR [drive:]path
+RD [drive:]path
+2Renames a file/directory or files/directories.
+
+ŸRENAME [drive:][path][directoryname1 | filename1] [directoryname2 | filename2]
+REN [drive:][path][directoryname1 | filename1] [directoryname2 | filename2]
+
+HNote that you cannot specify a new drive or path for your destination.
+XDisplays, sets, or removes Windows environment variables.
+
+SET [variable=[string]]
+
+  variable  Specifies the environment-variable name.
+  string    Specifies a series of characters to assign to the variable.
+
+KType SET without parameters to display the current environment variables.
+4Displays or sets the system time.
+
+TIME [time]
+
+ƒType TIME with no parameters to display the current time setting and a prompt
+for a new one.  Press ENTER to keep the same time.
+GDisplays the contents of text files.
+
+TYPE [drive:][path]filename
+
+&Displays the Windows version.
+
+VER
+²Tells Windows whether to verify that your files are written correctly to a
+disk.
+
+VERIFY [ON | OFF]
+
+Type VERIFY without a parameter to display the current VERIFY setting.
+RDisplays the disk volume label and serial number, if they exist.
+
+VOL [drive:]
+[Calls one batch program from another.
+
+CALL [drive:][path]filename [batch-parameters]
+
+r  batch-parameters   Specifies any command-line information required by the
+                     batch program.
+LRecords comments (remarks) in a batch file or CONFIG.SYS.
+
+REM [comment]
+jSuspends processing of a batch program and displays the message:
+Press any key to continue....
+
+PAUSE
+MDisplays messages, or turns command-echoing on or off.
+
+  ECHO [ON | OFF]
+W  ECHO [message]
+
+Type ECHO without parameters to display the current echo setting.
+SLocks a drive, enabling direct disk access for an application.
+
+  LOCK [drive:]
+XUnlocks a drive, disabling direct disk access for an application.
+
+  UNLOCK [drive:]
+HDirects Windows to a labelled line in a batch program.
+
+GOTO label
+
+Š  label   Specifies a text string used in the batch program as a label.
+
+You type a label on a line by itself, beginning with a colon.
+JChanges the position of replaceable parameters in a batch file.
+
+SHIF

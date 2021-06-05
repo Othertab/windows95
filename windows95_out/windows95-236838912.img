@@ -1,0 +1,60 @@
+pen_root@frontpg.HLP>(w95sec)
+3 Adding Pages and Files To a Web
+4 To add a web to a web=WEB_add_to_web@frontpg.HLP>(w95sec)
+4 To add pages to a web=WEB_adding_pages@frontpg.HLP>(w95sec)
+4 To copy a page to a web=WEB_copy_pages_to_web@frontpg.HLP>(w95sec)
+4 To import a file to a web=WEB_importing_files@frontpg.HLP>(w95sec)
+3 Copying Webs
+4 To copy the current web to a different server=WEB_copy_to_different_server@frontpg.HLP>(w95sec)
+4 To copy the current web to a different web=WEB_copy_to_different_web@frontpg.HLP>(w95sec)
+4 To copy the root web=WEB_copy_root@frontpg.HLP>(w95sec)
+4 To make a copy of the current web=WEB_copy_current_web@frontpg.HLP>(w95sec)
+3 Administering Webs
+4 To authorize a web administrator=WEB_administrator_authorizing@frontpg.HLP>(w95sec)
+4 To authorize a web author=WEB_author_authorizing@frontpg.HLP>(w95sec)
+4 To change an administrator's password=WEB_change_password@frontpg.HLP>(w95sec)
+4 To change an author's password=WEB_change_password@frontpg.HLP>(w95sec)
+4 To register a user of a restricted-access web=WEB_user_restricting@frontpg.HLP>(w95sec)
+4 To remove a user from a restricted-access web=WEB_user_removing@frontpg.HLP>(w95sec)
+4 To remove a web administrator's IP address mask=WEB_administrator_remove_IP_address_mask@frontpg.HLP>(w95sec)
+4 To remove a web administrator=WEB_administrator_removing@frontpg.HLP>(w95sec)
+4 To remove a web author's IP address mask=WEB_author_remove_IP_address_mask@frontpg.HLP>(w95sec)
+4 To remove a web author=WEB_author_removing@frontpg.HLP>(w95sec)
+4 To remove a web user's IP address mask=WEB_user_remove_IP_address_mask@frontpg.HLP>(w95sec)
+4 To restrict the IP addresses of web administrators=WEB_administrator_restrict_IP_address@frontpg.HLP>(w95sec)
+4 To restrict the IP addresses of web authors=WEB_author_restrict_IP_address@frontpg.HLP>(w95sec)
+4 To restrict the IP addresses of web users=WEB_user_restrict_IP_address@frontpg.HLP>(w95sec)
+3 Using Configuration Variables
+4 To add a configuration variable=WEB_configuration_variable_add@frontpg.HLP>(w95sec)
+4 To delete a configuration variable=WEB_configuration_variable_delete@frontpg.HLP>(w95sec)
+4 To modify a configuration variable=WEB_configuration_variable_modify@frontpg.HLP>(w95sec)
+3 Other Web Procedures
+4 To change a web's title=WEB_title_change@frontpg.HLP>(w95sec)
+4 To create a new directory in a web=WEB_create_directory@frontpg.HLP>(w95sec)
+4 To display documents in hidden directories=WEB_display_documents_in_hidden@frontpg.HLP>(w95sec)
+4 To export a page or file from a web=WEB_exporting_from@frontpg.HLP>(w95sec)
+4 To rename a web=WEB_rename@frontpg.HLP>(w95sec)
+4 To specify a proxy server for a web=WEB_specify_proxy_server@frontpg.HLP>(w95sec)
+4 To specify a server within a firewall=WEB_specify_server_within_firewall@frontpg.HLP>(w95sec)
+2 Using Pages
+3 About Pages=Overview_Pages
+3 Creating Pages
+4 To create a new page=PAGE_creating@frontpg.HLP>(w95sec)
+3 Opening Pages
+4 To open a page from a file=PAGE_open_from_file@frontpg.HLP>(w95sec)
+4 To open a page from the FrontPage Editor=PAGE_opening_from_editor@frontpg.HLP>(w95sec)
+4 To open a page from the FrontPage Explorer=PAGE_opening_from_explorer@frontpg.HLP>(w95sec)
+4 To open a page from the World Wide Web=PAGE_open_from_world_wide_web@frontpg.HLP>(w95sec)
+3 Closing Pages
+4 To close a page=PAGE_closing@frontpg.HLP>(w95sec)
+3 Saving Pages
+4 To export a page=PAGE_exporting@frontpg.HLP>(w95sec)
+4 To save a page as a template=PAGE_saving_as_templates@frontpg.HLP>(w95sec)
+4 To save a page to a file=PAGE_saving_to_file@frontpg.HLP>(w95sec)
+4 To save a page to the current web=PAGE_saving_to_web@frontpg.HLP>(w95sec)
+3 Editing Pages
+4 To add a configuration variable to a page=PAGE_adding_configuration_variables@frontpg.HLP>(w95sec)
+4 To add extended attributes to a page=PAGE_extended_attributes@frontpg.HLP>(w95sec)
+4 To add HTML to a page=PAGE_adding_HTML@frontpg.HLP>(w95sec)
+4 To annotate a page=PAGE_annotating_pages@frontpg.HLP>(w95sec)
+4 To include a page in another page=PAGE_include_page_in_page@frontp

@@ -1,0 +1,169 @@
+tel 430MX Motherboard Sample",1,\
+24,50,49,52, 00,01, 80,00, FF, FF, 00,00,00,00, 00,00,      \
+00,00,00,00, 00,00,00,00,  00,00,00,00,  00,00,00,00,       \
+00, 70, 60, F8,DE, 61, F8,DE, 60, F8,DE, 61, F8,DE, 05, 00, \
+00, 78, 61, F8,DE, 60, F8,DE, 61, F8,DE, 60, F8,DE, 63, 00, \
+00, 88, 61, F8,DE, 60, F8,DE, 61, F8,DE, 60, F8,DE, 06, 00, \
+00, 90, 60, F8,DE, 61, F8,DE, 60, F8,DE, 61, F8,DE, 03, 00, \
+00, 98, 61, F8,DE, 60, F8,DE, 61, F8,DE, 60, F8,DE, 61, 00, \
+00, A0, 60, B8,8E, 62, B8,8E, 61, B8,8E, 63, B8,8E, 01, 00
+
+[PCI_Dev_Properties_AddReg]
+HKR,,EnumPropPages,,"sysclass.dll,PCIEnumPropPages"
+
+[PCI_SIO_DRV]
+AddReg=ISA_DRV_AddReg,PCI_SIO_Dev_Properties_AddReg
+
+[PCI_SIO_DRV.NoResDup]
+*PNP0A00
+
+[PCI_SIO_Dev_Properties_AddReg]
+HKR,,EnumPropPages,,"sysclass.dll,GATEnumPropPages"
+
+[DUMMY_DRV_AddReg]
+HKR,,DevLoader,,*CONFIGMG
+
+[VDMA_DRV_AddReg]
+HKR,,DevLoader,,*VDMAD
+HKR,,PrivateProblem,,DMAProblemHandler
+
+[PNPBIOS_DRV_AddReg]
+HKR,,DevLoader,,*bios
+HKLM, System\CurrentControlSet\Services\VxD\BIOS,StaticVxD,,"*BIOS"
+HKLM, System\CurrentControlSet\Services\VxD\BIOS,Start,1,00
+
+[BIOS_Dev_Properties_AddReg]
+HKR,,EnumPropPages,,"sysclass.dll,BIOSEnumPropPages"
+
+[EISA_DRV_AddReg]
+HKR,,DevLoader,,eisa.vxd
+
+[ISA_DRV_AddReg]
+HKR,,DevLoader,,isapnp.vxd
+
+[System_Dev_Properties_AddReg]
+HKR,,EnumPropPages,,"sysclass.dll,EnumPropPages"
+
+[System_Removable_AddReg]
+HKR,,DevLoader,,*CONFIGMG
+HKR,,CMDrivFlags,1,02
+
+;--------------------------------------------------------------
+[Machine]
+ClassDesc=%Machine_Class_Desc%
+ListOptions=MSMachineList
+DefaultOption=MS_CHICAGO
+IconIndex=0                     ;Machine mini-icon for dialogs
+DefaultDLL=SETUPX.DLL, P_SetDefaultOption
+
+[BaseWinOptions]
+system_driver   ;always install & copy system.drv
+APM_Base                ;always clean-out APM, will (re)install if detected/verified 
+
+[system_driver]
+UpdateInis = system_driver_inis
+CopyFiles  = system_driver_files
+
+[system_driver_inis]
+; Install "system.drv=system.drv" unless "system.drv=atmsys.drv" exists.
+system.ini, boot, "system.drv=atmsys.drv", "~SetupTemp~=*",3
+system.ini, boot,, "system.drv=system.drv"
+system.ini, boot, "~SetupTemp~=*", "system.drv=system.drv",3
+
+[system_driver_files]
+system.drv,,,1
+
+[APM_Base]
+UpdateInis=APM_Cleanup, No_APM_Inis
+UpdateIniFields=No_APM_Fields
+
+[APM_Cleanup]
+system.ini,power.drv,"OptionsDLL=apmext.dll",,1
+
+[No_APM_Fields]
+system.ini,boot,drivers,power.drv
+
+[No_APM_Inis]
+system.ini,386Enh,"device=vpowerd.386"
+system.ini,386Enh,"device=*vpowerd"
+
+[MSMachineList]
+MS_CHICAGO
+MS_AST_386_486
+MS_EVEREX_386_25
+MS_IBM_PS2_L40SX
+MS_NCR_386SX
+MS_NEC_PM_SX+
+MS_TOSHIBA_5200
+MS_ZENITH_386     = %DetZenithPC%
+
+[MS_CHICAGO]
+OptionDesc = %MS_CHICAGO%
+UpdateInis = MS_CHICAGO_Inis
+
+[MS_AST_386_486]
+OptionDesc = %MS_AST_386_486%
+UpdateInis = MS_AST_386_486_Inis
+
+[MS_EVEREX_386_25]
+OptionDesc = %MS_EVEREX_386_25%
+UpdateInis = MS_EVEREX_386_25_Inis
+
+[MS_IBM_PS2_L40SX]
+OptionDesc = %MS_IBM_PS2_L40SX%
+UpdateInis = MS_IBM_PS2_L40SX_Inis
+
+[MS_NCR_386SX]
+OptionDesc = %MS_NCR_386SX%
+UpdateInis = MS_NCR_386SX_Inis
+
+[MS_NEC_PM_SX+]
+OptionDesc = %MS_NEC_PM_SX+%
+UpdateInis = MS_NEC_PM_SX+_Inis
+
+[MS_TOSHIBA_5200]
+OptionDesc = %MS_TOSHIBA_5200%
+UpdateInis = MS_TOSHIBA_5200_Inis
+
+[MS_ZENITH_386]
+OptionDesc = %MS_ZENITH_386%
+UpdateInis = MS_ZENITH_386_Inis
+
+[MS_CHICAGO_Inis]
+system.ini,boot.description,,"system.drv=%MS_CHICAGO%"
+
+[PNPBIOS_Copyfiles]
+bios.vxd
+
+[PNPBIOS_PRESARIO_Copyfiles]
+CPQAE05.EXE
+
+[PNPBIOS_PROLINEA_Copyfiles]
+CPQAE06.EXE
+
+[PNPBIOS_DelFiles]
+bios.386
+
+[PNPBIOS_Inis]
+wininit.ini, CombineVxDs,,"%22%\bios.vxd=%11%\vmm32.vxd"
+
+[PNPBIOS_Reg]
+HKLM,System\CurrentControlSet\Control\VMM32Files,bios.vxd,1,
+
+[PRESARIO_Update_AutoBat]
+CmdAdd=CPQAE05.EXE
+
+[PROLINEA_Update_AutoBat]
+CmdAdd=CPQAE06.EXE
+
+[BadPnpBios]
+AMIPnpBios1
+AMIPnpBios2
+AMIPnpBios3
+ToshibaT2100PnpBios
+ToshibaT2150PnpBios
+ToshibaT2400PnpBios
+ToshibaT2450PnpBios
+ToshibaT3600PnpBios
+ToshibaT4850PnpBios
+ToshibaT4

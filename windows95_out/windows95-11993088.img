@@ -1,0 +1,164 @@
+s=Config044
+AddReg=SysLocale_0809, RegCP850, EBD044
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0C09]
+OptionDesc=%00000C09%
+CopyFiles=CodePage437
+DelFiles=CodePage437_Del
+UpdateInis=CodePage437_Ini
+UpdateCfSys=Config061
+AddReg=SysLocale_0C09, RegCP437
+DelReg=DelEBD
+
+[L1009]
+OptionDesc=%00001009%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config004
+AddReg=SysLocale_1009, RegCP850, EBD004
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L1409]
+OptionDesc=%00001409%
+CopyFiles=CodePage437
+DelFiles=CodePage437_Del
+UpdateInis=CodePage437_Ini
+AddReg=SysLocale_1409, RegCP437
+DelReg=DelEBD
+
+[L1809]
+OptionDesc=%00001809%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config353
+AddReg=SysLocale_1809, RegCP850, EBD353
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L040B]
+OptionDesc=%0000040B%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config358
+AddReg=SysLocale_040B, RegCP850, EBD358
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L040C]
+OptionDesc=%0000040C%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config033
+AddReg=SysLocale_040C, RegCP850, EBD033
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L080C]
+OptionDesc=%0000080C%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config032
+AddReg=SysLocale_080C, RegCP850, EBD032
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0C0C]
+OptionDesc=%00000C0C%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config002
+AddReg=SysLocale_0C0C, RegCP850, EBD002
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L100C]
+OptionDesc=%0000100C%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config041
+AddReg=SysLocale_100C, RegCP850, EBD041
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L040F]
+OptionDesc=%0000040F%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config354
+AddReg=SysLocale_040F, RegCP850, EBD354
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0410]
+OptionDesc=%00000410%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config039
+AddReg=SysLocale_0410, RegCP850, EBD039
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0810]
+OptionDesc=%00000810%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config041
+AddReg=SysLocale_0810, RegCP850, EBD041
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0407]
+OptionDesc=%00000407%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config049
+AddReg=SysLocale_0407, RegCP850, EBD049
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0807]
+OptionDesc=%00000807%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config041
+AddReg=SysLocale_0807, RegCP850, EBD041
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0C07]
+OptionDesc=%00000C07%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config043
+AddReg=SysLocale_0C07, RegCP850, EBD043
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0436]
+OptionDesc=%00000436%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config027
+AddReg=SysLocale_0436, RegCP850, EBD027
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L1C09]
+OptionDesc=%00001C09%
+CopyFiles=CodePage437
+DelFiles=

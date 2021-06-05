@@ -1,0 +1,104 @@
+AL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\5]
+"Name"="Installation"
+"Description"="The time and date when this component was installed."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Date"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Installation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\6]
+"Name"="Verify"
+"Description"="A code that provides a level of verification that the component is still installed and working."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Verify"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\6\Enum]
+"0"="An error occurred; check status code."
+"1"="This component does not exist."
+"2"="Verification is not supported."
+"3"="Reserved."
+"4"="This component exists, but the functionality is untested."
+"5"="This component exists, but the functionality is unknown."
+"6"="This component exists, and is not functioning correctly."
+"7"="This component exists, and is functioning correctly."
+
+
+;==========================
+;  FRU Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30]
+"Name"="Field Replaceable Unit"
+"Class"="DMTF|FRU|001"
+"Description"="A Field Replaceable Unit (FRU), is defined as a hardware component which is designed to be separately removable for replacement or repair."
+"Key"="1"
+"^Index"=hex:03,00,00,00
+"^ROW"="1|2|3|4|5|6|7|8|9|10|11"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\1]
+"Name"="FRU Index"
+"Description"="The index into the Field Replaceable Unit table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\2]
+"Name"="Device Group Index"
+"Description"="The group ID of the group referencing this Field Replaceable Unit instance."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:1c,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\3]
+"Name"="Description"
+"Description"="A clear description of this Field Replaceable Unit."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(255)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\Description"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\4]
+"Name"="Manufacturer"
+"Description"="The name of the company manufacturing or providing this Field Replaceable Unit."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(80)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\5]
+"Name"="Model"
+"Description"="The manufacturer's model number for this Field Replaceable Unit."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\Model"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\6]
+"Name"="Part Number"
+"Description"="A part number by which a replacement part can be ordered for this Field Replaceable Unit."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\PartNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\7]
+"Name"="FRU Serial Number"
+"Description"="The manufacturer's serial number for this Field Replaceable Unit."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\FRUSerialNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\30\8]
+"Name"="Revision Level"
+"Descriptio

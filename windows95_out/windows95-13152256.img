@@ -1,0 +1,221 @@
+ADME%"", ""%24%\%ProgramFiles_SFN%\%NETMTGDIR_SFN%\netmeet.txt"""
+
+
+system.ini, drivers32,,"msacm.lhacm=lhacm.acm"
+
+[NetMtg.Remove.Inis]
+; Remove the Microsoft NetMeeting entries from the Start.Programs folder
+setup.ini, progman.groups,,"groupmnm=%PGMGRP_NETMTG%"
+setup.ini, groupmnm,, """%PGMITEM_NETMTG%"""
+; setup.ini, groupmnm,, """%PGMITEM_README%"""
+
+system.ini, drivers32,"msacm.lhacm=lhacm.acm"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Strings]
+; ************************************************************************
+; IMPORTANT - Be sure to place any localizable strings below the
+; "LOCALIZATION BORDER" comment.
+; ************************************************************************
+
+KEY_CONFERENCING = "SOFTWARE\Microsoft\Conferencing"
+KEY_TRANSPORTS   = "SOFTWARE\Microsoft\Conferencing\Transports"
+KEY_GUID         = "SOFTWARE\Microsoft\Conferencing\Applications"
+KEY_MCAT         = "SOFTWARE\Microsoft\Conferencing\MCAT"
+KEY_DCG          = "SOFTWARE\Microsoft\Conferencing\DCG"
+KEY_OPTIONAL     = "SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+
+
+; ************************************************************************
+; LOCALIZATION BORDER
+;
+; No strings above this line should be localized.
+; All strings below this line should be localized.
+; ************************************************************************
+
+; Directory names - note that that short versions must match the truncated
+; 8 char names for the long versions.
+ProgramFiles     = "Program Files"
+ProgramFiles_SFN     = "Progra~1"   ; first 6 chars of ProgramFiles, + "~1"
+ProgramFiles_SFN_OEM = "Progra~1"   ; first 6 chars of ProgramFiles, + "~1" - in OEM codepage (not Ansi)
+
+OLDNETMTGDIR       = "Meeting"
+OLDNETMTGDIR_OEM   = "Meeting"
+
+NETMTGDIR          = "NetMeeting"
+NETMTGDIR_SFN      = "NetMee~1"
+NETMTGDIR_SFN_OEM  = "NetMee~1"
+
+PRODUCT_NAME     = "Microsoft NetMeeting"
+
+MSIPTYPE         = "User Location Service"
+MSWBTYPE         = "Microsoft NetMeeting Whiteboard Document"
+
+; This string is not necessarily localizable, but may be customizable.
+; It can also be set via System Policies.
+DEFAULT_ULS_SERVER = "uls.microsoft.com"
+
+DISK1            = "Microsoft NetMeeting Files"
+
+; Program folder and item names
+PGMGRP_NETMTG    = ""
+PGMITEM_NETMTG   = "Microsoft NetMeeting"
+PGMITEM_README   = "Microsoft NetMeeting Release Notes"
+
+; Sound event names
+ReceiveCall      = "Receive Call"
+ReceiveJoin      = "Receive Request to Join"
+PersonJoins      = "Person Joins"
+PersonLeaves     = "Person Leaves"
+
+; Name of a conference link
+ConfLnk          = "Speed Dial"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NETMTG_OPTION_TIP = "Enables you to call people on the Internet or a LAN.  While in a call you can talk to someone, share applications, draw in a shared whiteboard, and send files and messages."
+
+
+
+
+
+
+; Display names and descriptions for transports
+PROTNAME_PSTN           = "Modem"
+PROTNAME_TCPIP          = "Network (TCP/IP)"
+PROTNAME_IPX            = "Network (IPX)"
+PROTNAME_NETBIOS        = "Network (NETBIOS)"
+PROTNAME_R11_PSTN       = "Modem for LiveShare Networks"
+PROTNAME_R11_NETBIOS    = "Network (NETBIOS) for LiveShare Networks"
+PROTNAME_R11_IPX        = "Network (IPX) for LiveShare Networks"
+
+PROTDESC_PSTN           = "Enables you to call another person using your modem."
+PROTDESC_TCPIP          = "Enables you to place calls on the Internet. Also can be used to place calls on a Local Area Network (LAN)."
+PROTDESC_IPX            = "Can be used to place calls on a Local Area Network (LAN)."
+PROTDESC_NETBIOS        = "Can be used to place calls on a Local Area Network (LAN)."
+PROTDESC_R11_PSTN       = "Enables you to call users of PictureTel LiveShare 3.X and earlier with your modem. Can only be used for conferences with one other person."
+PROTDESC_R11_NETBIOS    = "Enab

@@ -1,0 +1,121 @@
+
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AvailabilityStatus"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\31\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Running"
+"4"="Warning"
+"5"="In Test"
+"6"="Not Applicable"
+"7"="Power Off"
+"8"="Off Line"
+"9"="Off Duty"
+"10"="Degraded"
+"11"="Not Installed"
+"12"="Install Error"
+"13"="Power Save"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\31\6]
+"Name"="Administrative State"
+"Description"="The administrative state of the device instance."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AdministrativeState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\31\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Locked"
+"4"="Unlocked"
+"5"="Not Applicable"
+"6"="Shutting Down"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\31\7]
+"Name"="Fatal Error Count"
+"Description"="The accumulated fatal error count for this device instance."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\FatalErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\31\8]
+"Name"="Major Error Count"
+"Description"="The accumulated major error count for this device instance."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\MajorErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\31\9]
+"Name"="Warning Error Count"
+"Description"="The accumulated warning error count for this device instance."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\WarningErrorCount"
+
+
+
+;=============================
+;  Disk controller Component
+;=============================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskController\%ComponentID]
+"Name"="Disk Controller"
+"Description"="This component implements a set of groups relating to the Disk Controller."
+
+;=============================
+;  Disk controller group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskController\%ComponentID\26]
+"Name"="Disk Controller"
+"Class"="DMTF|Disk Controller|001"
+"Description"="This group defines the disk controller in this system."
+"Key"="1"
+"^Index"=hex:01,00,00,00
+"^ROW"="1|2|3"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskController\%ComponentID\26\1]
+"Name"="Disk Controller Index"
+"Description"="Index value used by the system to identify the disk controller."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskController\%ComponentID\26\2]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskController\%ComponentID\26\3]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+;==========================
+;  Component ID Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskController\%ComponentID\1]
+"Name"="ComponentID Group"
+"Class"="DMTF|ComponentID|001"
+"Description"="This group defines attributes common to all components. This group is required."
+

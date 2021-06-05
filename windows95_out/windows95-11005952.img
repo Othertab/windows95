@@ -1,0 +1,115 @@
+ys= dxxspace.dummy
+UpdateInis  = dxxspace.links
+DelReg      = dxxspace.install.reg   ;we delreg the optional component entry since it can't be uninstlled
+InstallType = 12                     ;Portable, Custom.
+IconIndex   = 33                     ;Disks mini-icon for dialogs
+Needs       = DiskTools              ;Install DiskTools if this is selected
+AddReg      = dxxspace.addreg        ; Rename program files, cmpagent link/app path
+
+[DiskTools]
+OptionDesc  = %DiskTools_DESC%
+Tip         = %DiskTools_TIP%
+Parent      = DiskToolTop
+CopyFiles   = DiskTools.win
+UpdateInis  = DiskTools.links
+DelReg      = DiskTools.install.reg    ;we delreg the optional component entry since it can't be uninstlled
+InstallType = 14                       ;Typical, Portable, Custom.
+IconIndex   = 31                        ;Hard Disks mini-icon for dialogs
+
+
+[Dialer]
+OptionDesc  = %DialerOpt_DESC%
+Tip         = %Dialer_TIP%
+Parent      = CommApps     ;Communications
+CopyFiles   = Dialer.Shared.Copy, Dialer.HLP.Copy
+UpdateInis  = Dialer.Inis
+AddReg      = Dialer.install.reg
+InstallType = 14                       ;Typical, Portable, Custom.
+IconIndex   = 47              ;Phone mini-icon for dialogs
+Uninstall   = Dialer_remove
+
+[Dialer_remove]
+DelFiles    = Dialer.Shared.Copy, Dialer.HLP.Copy
+AddReg      = Dialer.remove.reg
+UpdateInis  = Dialer.links.remove
+
+
+[msbackup]
+OptionDesc  = %MSBUOPT_DESC%
+Tip         = %MSBUOPT_TIP%
+Parent      = DiskToolTop
+CopyFiles   = backup.files, backup.vxd, backup.hlp
+DelFiles    = backup.del.files
+UpdateInis  = backup.links
+AddReg      = backup.install.reg, backup.addreg
+DelReg      = backup.delreg
+InstallType = 0              ;Manual only
+IconIndex       = 42                     ;Windows mini-icon for dialogs
+Uninstall   = msbackup_remove
+
+[msbackup_remove]
+DelFiles    = backup.files, backup.vxd, backup.hlp
+UpdateInis  = backup.links.remove
+AddReg      = backup.remove.reg
+DelReg      = backup.addreg
+
+
+[sysmeter]
+OptionDesc  = %SYSMETEROpt_DESC%
+Tip         = %SYSMETER_TIP%
+Parent      = AccessTop
+CopyFiles   = Sysmeter.Win.Copy, Sysmeter.Sys.Copy
+UpdateInis  = Sysmeter.Inis
+AddReg      = Sysmeter.install.reg
+InstallType = 0               ;Manual only
+IconIndex   = 48              ;Machine mini-icon for dialogs
+Uninstall   = Sysmeter_remove
+
+[Sysmeter_remove]
+DelFiles    = Sysmeter.Win.Copy, Sysmeter.Sys.Copy
+AddReg      = Sysmeter.remove.reg
+UpdateInis  = Sysmeter.Rem.Inis
+
+
+[bitmaps]
+OptionDesc  = %BITMAPS_DESC%
+Tip         = %BITMAPS_TIP%
+Parent      = AccessTop
+CopyFiles   = winbmps.files
+AddReg      = winbmps.addreg
+InstallType = 0               ;Manual only
+IconIndex       = 43               ;Windows mini-icon for dialogs
+Uninstall   = bitmaps_remove
+
+[bitmaps_remove]
+DelFiles    = winbmps.files
+AddReg      = winbmps.Remove.reg, winbmps.delfiles.reg
+
+
+[SSOpenGL]
+OptionDesc  = %SSOpenGLOpt_DESC%
+Tip         = %SSOpenGL_TIP%
+Parent      = screensavers
+CopyFiles   = ss3dfo.copy, ssmaze.copy, sspipes.copy, sstext3d.copy, ssflwbox.copy
+DelFiles    = ss3dfo.del, ssmaze.del, sspipes.del, sstext3d.del, ssflwbox.del
+AddReg      = ss3dfo.install.reg, ssmaze.install.reg, sspipes.install.reg, sstext3d.install.reg, ssflwbox.install.reg
+InstallType = 10               ;Typical, Custom
+IconIndex       = 38          ;Monitor mini-icon for dialogs
+Uninstall   = SSOpenGL_remove
+
+[SSOpenGL_remove]
+AddReg      = ss3dfo.remove.reg, ssmaze.remove.reg, sspipes.remove.reg, sstext3d.remove.reg, ssflwbox.remove.reg
+
+
+[scrnsave]
+OptionDesc  = %scrnsaveOpt_DESC%
+Tip         = %scrnsave_TIP%
+Parent      = screensavers
+CopyFiles   = scrnsave.copy, Sstars.copy, Ssmyst.copy, Bezier.copy, ssmarque.copy
+DelFiles    = scrnsave.del, Sstars.del, Ssmyst.del, Bezier.del, ssmarque.del
+AddReg      = scrnsave.install.reg, Sstars.install.reg, Ssmyst.install.reg, Bezier.install.reg, ssmarque.install.reg
+InstallType = 0               ;Manual Only
+IconIndex       = 38          ;Monitor mini-icon for dialogs
+Uninstall   = scrnsave_remove
+
+[scrn

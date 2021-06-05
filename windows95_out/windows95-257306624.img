@@ -1,0 +1,159 @@
+then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "GetSectionKeyDate", szSect$+", "+szKey$
+    end if
+'$endif ''DEBUG
+
+    szBuf$ = string$(128, 32)
+    Length% = CbGetInfSectionKeyField(szSect$, szKey$, 5, szBuf$, 128)
+    IF Length% >= 128 THEN
+        res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+        ERROR STFERR
+    END IF
+
+    IF Length% = -1 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetSectionKeyDate", szSect$+", "+szKey$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+
+    GetSectionKeyDate = szBuf$
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetSectionKeyFilename (szSect$, szKey$) STATIC AS STRING
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "GetSectionKeyFilename", szSect$+", "+szKey$
+    end if
+'$endif ''DEBUG
+
+    szBuf$ = string$(128, 32)
+    Length% = CbGetInfSectionKeyField(szSect$, szKey$, 1, szBuf$, 128)
+    IF Length% >= 128 THEN
+        res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+        ERROR STFERR
+    END IF
+
+    IF Length% = -1 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetSectionKeyFilename", szSect$+", "+szKey$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+
+    GetSectionKeyFilename = szBuf$
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetSectionKeySize (szSect$, szKey$) STATIC AS LONG
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "GetSectionKeySize", szSect$+", "+szKey$
+    end if
+'$endif ''DEBUG
+
+    szBuf$ = string$(128, 32)
+    Length% = CbGetInfSectionKeyField(szSect$, szKey$, 15, szBuf$, 128)
+    IF Length% >= 128 THEN
+        res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+        ERROR STFERR
+    END IF
+
+    IF Length% = -1 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetSectionKeySize", szSect$+", "+szKey$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+
+    GetSectionKeySize = VAL(szBuf$)
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetSectionKeyVersion (szSect$, szKey$) STATIC AS STRING
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "GetSectionKeyVersion", szSect$+", "+szKey$
+    end if
+'$endif ''DEBUG
+
+    szBuf$ = string$(128, 32)
+    Length% = CbGetInfSectionKeyField(szSect$, szKey$, 19, szBuf$, 128)
+    IF Length% >= 128 THEN
+        res% = DoMsgBox("Buffer Overflow", "MS-Setup Error", MB_ICONHAND+MB_OK)
+        ERROR STFERR
+    END IF
+
+    IF Length% = -1 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetSectionKeyVersion", szSect$+", "+szKey$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+
+    GetSectionKeyVersion = szBuf$
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+SUB MakeListFromSectionDate (szSym$, szSect$) STATIC
+'$ifdef DEBUG
+    if szSym$ = "" then
+        n% = 1
+    elseif FValidInfSect(szSect$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "MakeListFromSectionDate", szSym$+", "+szSect$
+    end if
+'$endif ''DEBUG
+
+    IF FMakeListInfSectionField(szSym$, szSect$, 5) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "MakeListFromSectionDate", szSym$+", "+szSect$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB MakeLi

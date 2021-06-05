@@ -1,0 +1,98 @@
+,8
+HKR,NDI\params\RecvBufSize,flag,1,10,00,00,00
+; XmitBufSize
+HKR,NDI\params\XmitBufSize,ParamDesc,,"Transmit Buffer Size"
+HKR,NDI\params\XmitBufSize,type,,int
+HKR,Ndi\params\XmitBufSize,default,,1024
+HKR,NDI\params\XmitBufSize,min,,256
+HKR,NDI\params\XmitBufSize,max,,17952
+HKR,NDI\params\XmitBufSize,step,,8
+HKR,NDI\params\XmitBufSize,flag,1,10,00,00,00
+
+; token ring params for 1,2,and a
+[tlnk3.12a.Params]
+; RecvBufSize
+HKR,NDI\params\RecvBufSize,ParamDesc,,"Receive Buffer Size"
+HKR,NDI\params\RecvBufSize,type,,int
+HKR,Ndi\params\RecvBufSize,default,,1024
+HKR,NDI\params\RecvBufSize,min,,256
+HKR,NDI\params\RecvBufSize,max,,2040
+HKR,NDI\params\RecvBufSize,step,,8
+HKR,NDI\params\RecvBufSize,flag,1,10,00,00,00
+; XmitBufSize
+HKR,NDI\params\XmitBufSize,ParamDesc,,"Transmit Buffer Size"
+HKR,NDI\params\XmitBufSize,type,,int
+HKR,Ndi\params\XmitBufSize,default,,2040
+HKR,NDI\params\XmitBufSize,min,,256
+HKR,NDI\params\XmitBufSize,max,,2040
+HKR,NDI\params\XmitBufSize,step,,8
+HKR,NDI\params\XmitBufSize,flag,1,10,00,00,00
+
+[netaddress]
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir              =11 ; LDID_SYS
+*PNP80F3.ndis3.CopyFiles    =11
+*PNP80F3.ndis2.CopyFiles    =26 ; LDID_WINBOOT
+3C503.odi.CopyFiles         =26 ; LDID_WINBOOT
+elnk16.ndis3.CopyFiles      =11 ; LDID_SYS
+elnk16.ndis2.CopyFiles      =26 ; LDID_WINBOOT
+3C507.odi.CopyFiles         =26 ; LDID_WINBOOT
+elnkmc.ndis3.CopyFiles      =11 ; LDID_SYS
+elnkmc.ndis2.CopyFiles      =26 ; LDID_WINBOOT
+3C523.odi.CopyFiles         =26 ; LDID_WINBOOT
+*PNP80F7.ndis3.CopyFiles    =11
+elnk3.ndis2.CopyFiles       =26 ; LDID_WINBOOT
+elnk3c589.ndis3.CopyFiles   =11
+elnk3c589.ndis2.CopyFiles   =26 ; LDID_WINBOOT
+3c5X9.odi.CopyFiles         =26 ; LDID_WINBOOT
+*PNP80F4.ndis2.CopyFiles    =26 ; LDID_WINBOOT
+tlnk3.ndis2.CopyFiles       =26 ; LDID_WINBOOT
+tlnk3.ndis3.CopyFiles       =11
+tlnk3.odi.CopyFiles         =26 ; LDID_WINBOOT
+EL59x.ndis3.CopyFiles       =11 ; LDID_SYS
+EL59x.ndis2.CopyFiles       =26 ; LDID_WINBOOT
+EL59x.odi.CopyFiles         =26 ; LDID_WINBOOT
+
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_3COM="3Com"
+V_FARALLON="Farallon"
+
+; PNP Devices
+
+*pnp80f3.DeviceDesc=  "3Com EtherLink II or IITP (8 or 16-bit) (3C503)"
+*pnp80f6.DeviceDesc=  "3Com EtherLink 16 (3C507)"
+mca_6042.DeviceDesc=  "3Com EtherLink/MC (3C523)"
+mca_627C.DeviceDesc=  "3Com EtherLink III MC (3C529) Coax/AUI"
+mca_627D.DeviceDesc=  "3Com EtherLink III MC (3C529) Twisted-Pair/AUI"
+*pnp80f7.DeviceDesc=  "3Com EtherLink III ISA (3C509/3C509b) in ISA mode"
+pnpTCM5090.DeviceDesc="3Com EtherLink III ISA (3C509b-TP) in PnP mode "
+pnpTCM5091.DeviceDesc="3Com EtherLink III ISA (3C509b) in PnP mode"
+pnpTCM5094.DeviceDesc="3Com EtherLink III ISA (3C509b-Combo) in PnP mode"
+pnpTCM5095.DeviceDesc="3Com EtherLink III ISA (3C509b-TPO) in PnP mode"
+*TCM5090.DeviceDesc=  "3Com EtherLink III ISA (3C509-TP) in EISA mode"
+*TCM5091.DeviceDesc=  "3Com EtherLink III ISA (3C509) in EISA mode"
+*TCM5094.DeviceDesc=  "3Com EtherLink III ISA (3C509-Combo) in EISA mode"
+*TCM5095.DeviceDesc=  "3Com EtherLink III ISA (3C509-TPO) in EISA mode"
+*TCM5092.DeviceDesc=  "3Com EtherLink III EISA (3C579-TP)"
+*TCM5093.DeviceDesc=  "3Com EtherLink III EISA (3C579)"
+3C589.DeviceDesc=     "3Com Etherlink III PCMCIA (3C589/3C589B)"
+*pnp80f4.DeviceDesc=  "3Com TokenLink III ISA (3

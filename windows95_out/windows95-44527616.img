@@ -1,0 +1,117 @@
+ther FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Column"="2"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\PowerSupply\\FRUGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\17\3]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Column"="3"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\PowerSupply\\OperationalGroupIndex"
+
+
+;=======================================
+;  Cooling Device group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\18]
+"Name"="Cooling Device"
+"Class"="DMTF|Cooling Device|001"
+"Description"="This group defines various attributes for cooling devices in this system."
+"Key"="2"
+; ";Table"="HKLM\\DesktopManagement\\DATA\\2\\CoolingDevice"
+"^Index"=hex:02
+"^ROW"="^ROWNUM|2|3"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\18\1]
+"Name"="Cooling Device Index"
+"Description"="An index into the cooling device table."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Column"="^ROWNUM"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\18\2]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Column"="2"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\CoolingDevice\\FRUGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\18\3]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Column"="3"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\CoolingDevice\\OperationalGroupIndex"
+
+
+;==========================================
+;  System Slots group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19]
+"Name"="System Slots"
+"Class"="DMTF|System Slot|002"
+"Description"="This group defines the attributes for the different system expansion slots supported in this system."
+"Key"="1"
+; ";Table"="HKLM\\DesktopManagement\\DATA\\2\\SystemSlots"
+"^Index"=hex:02
+"^ROW"="^ROWNUM|2|3|4|5"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19\1]
+"Name"="Slot Index"
+"Description"="An index into the system slot table.  This is the hardware ID number for each expansion slot, whether it is occupied or not (starting with 1)."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19\2]
+"Name"="Slot Type"
+"Description"="The bus type supported in this slot.  This is a bit field with the following definitions: Bit 0 (2^0), if set, means it is a long-length card; if 0, a short-length card; Bit 1 (2^1) indicates ISA; Bit 2 (2^2) EISA; Bit 3 (2^3) MCA; Bit 4 (2^4) PCI; Bit 5 (2^5) VL; Bit 6 (2^6) PCMCIA; Bit 7 (2^7) NuBus; Bit 8 (2^8) PC-98/C20; Bit 9 (2^9) PC-98/C24; Bit 10 (2^10) PC-98/E"
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer64"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\SystemSlots\\SlotType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19\3]
+"Name"="Slot Width"
+"Description"="The maximum bus width of cards accepted in this slot."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\SystemSlots\\SlotWidth"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="8 bit card"
+"4"="16 bit card"
+"5"="32 bit card"
+"6"="64 bit card"
+"7"="128 bit card"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19\4]
+"Name"="Current Usage"
+"Description"="Is this slot is currently in use?"
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\SystemSlots\\CurrentUsage"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\19\4\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Available"
+"4"="In Use"

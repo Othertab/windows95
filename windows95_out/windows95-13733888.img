@@ -1,0 +1,125 @@
+HKR,NDI\params\InterruptNumber,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\InterruptNumber,flag,1,20,00,00,00
+HKR,NDI\params\IObaseAddress,resc,1,02,00,00,00
+HKR,NDI\params\IObaseAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IObaseAddress,flag,1,20,00,00,00
+HKR,Ndi\params\MemoryMappedBaseAddress,resc,1,01,00,00,00
+HKR,Ndi\params\MemoryMappedBaseAddress,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\MemoryMappedBaseAddress,flag,1,20,00,00,00
+; Transceiver
+HKR,NDI\params\Transceiver,ParamDesc,,"Transceiver"
+HKR,NDI\params\Transceiver,flag,1,20,00,00,00
+HKR,NDI\params\Transceiver,default,,0
+HKR,NDI\params\Transceiver,type,,enum
+HKR,NDI\params\Transceiver\enum,0,,"Twisted-Pair"
+HKR,NDI\params\Transceiver\enum,1,,"Coax"
+; NDIS2
+HKR,NDI\params\INTERRUPT,resc,1,04,00,00,00
+HKR,NDI\params\INTERRUPT,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTERRUPT,flag,1,10,00,00,00
+HKR,NDI\params\IOADDRESS,resc,1,02,00,00,00
+HKR,NDI\params\IOADDRESS,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOADDRESS,flag,1,10,00,00,00
+HKR,Ndi\params\SHAREDRAM,resc,1,01,00,00,00
+HKR,Ndi\params\SHAREDRAM,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\SHAREDRAM,flag,1,10,00,00,00
+HKR,NDI\params\SHAREDRAM,paragraph,,1
+; params
+; MEDIA
+HKR,NDI\params\MEDIA,ParamDesc,,"Primary or Secondary Media"
+HKR,NDI\params\MEDIA,flag,1,30,00,00,00
+HKR,NDI\params\MEDIA,default,,"PRI"
+HKR,NDI\params\MEDIA,type,,enum
+HKR,NDI\params\MEDIA\enum,"PRI",,"PRI"
+HKR,NDI\params\MEDIA\enum,"SEC",,"SEC"
+
+; Install NDIS3
+[E21ND.ndis3]
+CopyFiles=E21ND.ndis3.CopyFiles
+[E21ND.ndis3.CopyFiles]
+e21n3.sys
+
+; Install NDIS2
+[E21ND.ndis2]
+CopyFiles=E21ND.ndis2.CopyFiles
+[E21ND.ndis2.CopyFiles]
+E21ND.dos
+
+; Install ODI
+[E21ND.odi]
+CopyFiles=E21ND.odi.CopyFiles
+[E21ND.odi.CopyFiles]
+e21odi.com
+
+
+;****************************************************************************
+; E2000 Series DNI base section
+;****************************************************************************
+[e2000.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,E20N3.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"E20N3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"E20ND$"
+HKR,NDIS\NDIS2,FileName,,"E20ND.dos"
+HKR,NDIS\ODI,DriverName,,"e20odi"
+HKR,NDIS\ODI,FileName,,"e20odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"E20ND.ndis3"
+HKR,Ndi\Install,ndis2,,"E20ND.ndis2"
+;HKR,Ndi\Install,odi,,"E20ND.odi"
+; resources
+HKR,,InterruptNumber,1,04,00,00,00
+HKR,,IObaseAddress,1,02,00,00,00
+HKR,NDI\params\InterruptNumber,resc,1,04,00,00,00
+HKR,NDI\params\InterruptNumber,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\InterruptNumber,flag,1,20,00,00,00
+HKR,NDI\params\IObaseAddress,resc,1,02,00,00,00
+HKR,NDI\params\IObaseAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IObaseAddress,flag,1,20,00,00,00
+;NDIS2
+HKR,NDI\params\INTERRUPT,resc,1,04,00,00,00
+HKR,NDI\params\INTERRUPT,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTERRUPT,flag,1,10,00,00,00
+HKR,NDI\params\IOADDRESS,resc,1,02,00,00,00
+HKR,NDI\params\IOADDRESS,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOADDRESS,flag,1,10,00,00,00
+
+; Install NDIS3
+[E20ND.ndis3]
+CopyFiles=E20ND.ndis3.CopyFiles
+[E20ND.ndis3.CopyFiles]
+e20n3.sys
+
+; Install NDIS2
+[E20ND.ndis2]
+CopyFiles=E20ND.ndis2.CopyFiles
+[E20ND.ndis2.CopyFiles]
+E20ND.dos
+
+; Install ODI
+[E20ND.odi]
+CopyFiles=E20ND.odi.CopyFiles
+[E20ND.odi.CopyFiles]
+e20odi.com
+
+[Slot]
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,20,00,00,00
+
+;*********************************************

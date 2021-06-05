@@ -1,0 +1,156 @@
+
+
+
+
+
+HKLM,"%KEY_DCG%\Application Loader Table","WHITEBOARD-1.0",,"%24%\%ProgramFiles%\%NETMTGDIR%\WB32.EXE"
+HKLM,"%KEY_DCG%\Application Loader Table","WHITEBOARD",,"%24%\%ProgramFiles%\%NETMTGDIR%\WB32.EXE"
+HKLM,"%KEY_DCG%\Application Loader Table","FTRANSFER-1.0",,"%24%\%ProgramFiles%\%NETMTGDIR%\msconfft.exe"
+HKLM,"%KEY_DCG%\Application Loader Table","FTRANSFER",,"%24%\%ProgramFiles%\%NETMTGDIR%\msconfft.exe"
+HKLM,"%KEY_DCG%\Application Loader Table","CLIP-1.0",,"%24%\%ProgramFiles%\%NETMTGDIR%\MNMCLP.EXE"
+HKLM,"%KEY_DCG%\Application Loader Table","CLIP",,"%24%\%ProgramFiles%\%NETMTGDIR%\MNMCLP.EXE"
+HKLM,"%KEY_DCG%\Application Loader Table","MESSAGE-1.0",,"%24%\%ProgramFiles%\%NETMTGDIR%\CB32.EXE"
+HKLM,"%KEY_DCG%\Application Loader Table","MESSAGE",,"%24%\%ProgramFiles%\%NETMTGDIR%\CB32.EXE"
+HKLM,"%KEY_DCG%\FileTransfer",,"ReceiveDirectory=%24%\%ProgramFiles%\%NETMTGDIR%\FT"
+
+HKLM,"%KEY_DCG%\Application Loader Table","OMCONTROL-1.0",,""
+HKLM,"%KEY_DCG%\Performance Tuning","Send 4 bits per pel",1,00,00,00,00
+HKLM,"%KEY_DCG%\ObMan","Compression",,"Y"
+HKLM,"%KEY_DCG%\Network","QueryThroughput Buffer",1,00,08,00,00
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat1",,"Link"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat2",,"OwnerLink"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat3",,"ObjectLink"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat4",,"Ole Private Data"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat5",,"Link Source"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat6",,"Link Source Descriptor"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat7",,"Embed Source"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat8",,"DataObject"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat9",,"Object Descriptor"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat10",,"Shell IDList Array"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat11",,"Shell Object Offsets"
+HKLM,"%KEY_DCG%\Clipboard","IgnoreFormat12",,"FileName"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[NetMtg.CleanBeta1.Reg]
+; Delete old keys during installation
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MSMeeting
+HKLM,"%KEY_DCG%\Async TDD"
+HKLM,"%KEY_DCG%\NetBIOS TDD","Address"
+HKLM,"%KEY_DCG%\PropertyOverride"
+HKLM,"%KEY_DCG%\PropertyDefault"
+HKLM,"%KEY_DCG%\PropertyIndex","PropertyOverride"
+HKLM,"%KEY_DCG%\PropertyIndex","PropertyDefault"
+HKLM,"%KEY_DCG%\Version"
+
+
+
+
+HKLM,"%KEY_DCG%\Multi-TDD"
+HKLM,"%KEY_DCG%\Clipboard"
+HKCR,ConferenceLink\shellex\PropertySheetHandlers\ConferenceShortcutProperties
+
+HKLM,"%KEY_DCG%\trace"
+
+HKLM,%KEY_OPTIONAL%,"MSConf"
+HKLM,%KEY_OPTIONAL%\MSConf
+
+
+
+
+
+HKCU,"%KEY_CONFERENCING%\Audio Control"
+HKCU,"%KEY_CONFERENCING%\MRU"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Run,"Microsoft NetMeeting"
+HKLM,%KEY_CONFERENCING%,"Run Always"
+HKCU,AppEvents\Schemes\Apps\Cb32
+HKCU,"Software\Microsoft\User Location Service\Client","Email Name"
+
+
+
+
+
+[NetMtg.Remove.Reg]
+HKLM,%KEY_CONFERENCING%
+HKCU,%KEY_CONFERENCING%
+HKCU,"SOFTWARE\Microsoft\Internet Audio"
+HKCU,"SOFTWARE\Microsoft\User Location Service"
+HKCU,"AppEvents\Schemes\Apps\Internet Audio"
+HKCR,"Internet Audio"
+HKCR,".uls"
+HKCR,"MIME\Database\Content Type\text/iuls"
+HKCR,"ulsfile"
+HKCU,"Software\Netscape\Netscape Navigator\Viewers","text/iuls"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\NetMeeting
+HKCR,"Whiteboard"
+HKCR,".WHT"
+HKCR,"Chat"
+HKCR,CLSID\{30E7F2A0-EC4C-11ce-8865-00805F742EF6}
+HKCR,.cnf
+HKCR,ConferenceLink
+HKCU,AppEvents\Schemes\Apps\Conf
+HKLM,SOFTWARE\Intel\RRCM
+HKLM,Software\Microsoft\Windows\CurrentVersion\Run,"Microsoft NetMeeting"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CONF.EXE"
+HKLM,"SOFTWARE\Microsoft\Active Setup\Installed Components\{44BBA842-CC51-11CF-AAFA-00AA00B6015C}"
+
+
+
+
+
+
+
+
+
+[NetMtg.Install.Inis]
+; Add the Microsoft NetMeeting entries to the Start.Programs folder
+setup.ini, progman.groups,,"groupmnm="%PGMGRP_NETMTG%""
+
+
+
+
+setup.ini, groupmnm,, """%PGMITEM_NETMTG%"", ""%24%\%ProgramFiles_SFN%\%NETMTGDIR_SFN%\conf.exe"""
+; setup.ini, groupmnm,, """%PGMITEM_RE

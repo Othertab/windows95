@@ -1,0 +1,299 @@
+
+[PB8510SV]
+DelReg=DCR
+AddReg=PB8510SV.Add, 1024
+
+[PB8528SVG]
+DelReg=DCR
+AddReg=PB8528SVG.Add, 1024
+
+[PB1511SL]
+DelReg=DCR
+AddReg=PB1511SL.Add, 1024, DPMS
+
+
+; -------------- Panasonic
+
+[C1381]
+DelReg=DCR
+AddReg=C1381.Add, 1024
+
+[C1391]
+DelReg=DCR
+AddReg=C1391.Add, 1024
+
+[C1395]
+DelReg=DCR
+AddReg=C1395.Add, 1024
+
+[C1795]
+DelReg=DCR
+AddReg=C1795.Add, 1280
+
+[C1991]
+DelReg=DCR
+AddReg=C1991.Add, 1280
+
+[TX-1703MAA]
+DelReg=DCR
+AddReg=TX-1703MAA.Add, 1280
+
+[TX-2013MAA]
+DelReg=DCR
+AddReg=TX-2013MAA.Add, 1280
+
+[TX-2103MAA]
+DelReg=DCR
+AddReg=TX-2103MAA.Add, 1280
+
+[TX-D2151W]
+DelReg=DCR
+AddReg=TX-D2151W.Add, 1600, DPMS
+
+[TX-D2151NM]
+DelReg=DCR
+AddReg=TX-D2151NM.Add, 1600, DPMS
+
+; -------------- PC Brand
+
+[Super_VGA]
+DelReg=DCR
+AddReg=Super_VGA.Add, 1024
+
+; -------------- Philips
+
+[6CM321]
+DelReg=DCR
+AddReg=6CM321.Add, 800
+
+[7BM749]
+DelReg=DCR
+AddReg=7BM749.Add, 640
+
+[7CM321]
+DelReg=DCR
+AddReg=7CM321.Add, 1024
+
+[7CM329]
+DelReg=DCR
+AddReg=7CM329.Add, 1024
+
+[9CM062]
+DelReg=DCR
+AddReg=9CM062.Add, 640
+
+[9CM082]
+DelReg=DCR
+AddReg=9CM082.Add, 640
+
+[CM9039]
+DelReg=DCR
+AddReg=CM9039.Add, 640
+
+[CM9079]
+DelReg=DCR
+AddReg=CM9079.Add, 1024
+
+[CM9085]
+DelReg=DCR
+AddReg=CM9085.Add, 640
+
+[CM9089]
+DelReg=DCR
+AddReg=CM9089.Add, 1024
+
+[CM9214]
+DelReg=DCR
+AddReg=CM9214.Add, 1024
+
+[CM9217]
+DelReg=DCR
+AddReg=CM9217.Add, 1280
+
+[20CM64]
+DelReg=DCR
+AddReg=20CM64.Add, 1280
+
+[PH_CM0700_21B]
+DelReg=DCR
+AddReg= PH_CM0700_21B.Add
+
+[PH_CM0700_20T]
+DelReg=DCR
+AddReg= PH_CM0700_20T.Add
+                                  
+[PH_CM0500]
+DelReg=DCR
+AddReg=PH_CM0500.Add
+
+[PH_CM5600]
+DelReg=DCR
+AddReg=PH_CM5600.Add              
+
+[PH_17ACM38]
+DelReg=DCR
+AddReg=PH_17ACM38.Add              
+
+[PH_17BCM28]
+DelReg=DCR
+AddReg=PH_17BCM28.Add
+
+[PH_17TCM26]
+DelReg=DCR
+AddReg=PH_17TCM26.Add
+                                    
+[PH_CM0200_14B]
+DelReg=DCR
+AddReg=PH_CM0200_14B.Add
+                                    
+[PH_CM0200_15C]
+DelReg=DCR
+AddReg=PH_CM0200_15C.Add
+                                   
+[PH_CM0800_14A]
+DelReg=DCR
+AddReg=PH_CM0800_14A.Add
+                
+[PH_CM0800_14B]
+DelReg=DCR
+AddReg=PH_CM0800_14B.Add
+                
+[PH_CM1800]
+DelReg=DCR
+AddReg=PH_CM1800.Add
+                
+[PH_CM1200]
+DelReg=DCR
+AddReg= PH_CM1200.Add
+
+; -------------- Premier
+
+[PM14V-S-1]
+DelReg=DCR
+AddReg=PM14V-S-1.Add, 1024
+
+[MAX-15]
+DelReg=DCR
+AddReg=MAX-15.Add, 1024
+
+[Ultra-1200]
+DelReg=DCR
+AddReg=Ultra-1200.Add, 1024
+
+[Ultra-1400]
+DelReg=DCR
+AddReg=Ultra-1400.Add, 1024
+
+[Ultra-1600]
+DelReg=DCR
+AddReg=Ultra-1600.Add, 1024
+
+[Ultra-2000]
+DelReg=DCR
+AddReg=Ultra-2000.Add, 1280
+
+[MultiView]
+DelReg=DCR
+AddReg=MultiView.Add, 1024
+
+[MultiView_II]
+DelReg=DCR
+AddReg=MultiView_II.Add, 1024
+
+[QM835]
+DelReg=DCR
+AddReg=QM835.Add, 1024
+
+[PCD19]
+DelReg=DCR
+AddReg=PCD19.Add, 1280
+
+[PCD20]
+DelReg=DCR
+AddReg=PCD20.Add, 1280
+
+[PCP]
+DelReg=DCR
+AddReg=PCP.Add, 1024
+
+[SRC-1401]
+DelReg=DCR
+AddReg=SRC-1401.Add, 1024
+
+[SRC-1402]
+DelReg=DCR
+AddReg=SRC-1402.Add, 1024
+
+[RE-1420]
+DelReg=DCR
+AddReg=RE-1420.Add, 1024
+
+[RE-1520]
+DelReg=DCR
+AddReg=RE-1520.Add, 1024
+
+[RE-1528]
+DelReg=DCR
+AddReg=RE-1528.Add, 1024
+
+[RE-5155]
+DelReg=DCR
+AddReg=RE-5155.Add, 800
+
+[RM-1541]
+DelReg=DCR
+AddReg=RM-1541.Add, 1280
+
+[KDM-1466]
+DelReg=DCR
+AddReg=KDM-1466.Add, 1024
+
+[KDM-1566]
+DelReg=DCR
+AddReg=KDM-1566.Add, 1280
+
+[KDM-1766]
+DelReg=DCR
+AddReg=KDM-1766.Add, 1280
+
+[KDM-2055]
+DelReg=DCR
+AddReg=KDM-2055.Add, 1024
+
+[KDM-2066]
+DelReg=DCR
+AddReg=KDM-2066.Add, 1280
+
+[CM-1440]
+DelReg=DCR
+AddReg=CM-1440.Add, 1024
+
+[CM-1450]
+DelReg=DCR
+AddReg=CM-1450.Add, 1024
+
+[CM-2050]
+DelReg=DCR
+AddReg=CM-2050.Add, 1024
+
+; -------------- SONY
+
+[CPD-1302]
+DelReg=DCR
+AddReg=CPD-1302.Add, 1024
+
+[CPD-1304]
+DelReg=DCR
+AddReg=CPD-1304.Add, 1024
+
+[CPD-1304S]
+DelReg=DCR
+AddReg=CPD-1304S.Add, 1024
+
+[CPD-1430]
+DelReg=DCR
+AddReg=CPD-1430.Add, 1024
+
+[CPD-1604S]
+DelReg=DCR
+AddReg=CP

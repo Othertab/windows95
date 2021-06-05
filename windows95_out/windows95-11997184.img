@@ -1,0 +1,165 @@
+CodePage437_Del
+UpdateInis=CodePage437_Ini
+AddReg=SysLocale_1C09, RegCP437
+DelReg=DelEBD
+
+[L140C]
+OptionDesc=%0000140C%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config033
+AddReg=SysLocale_140C, RegCP850, EBD033
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L1007]
+OptionDesc=%00001007%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config049
+AddReg=SysLocale_1007, RegCP850,CodePage, EBD049
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L1407]
+OptionDesc=%00001407%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config049
+AddReg=SysLocale_1407, RegCP850, EBD049
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0421]
+OptionDesc=%00000421%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config785
+AddReg=SysLocale_0421, RegCP850, EBD785
+DelReg=DelEBD_Locale, DelRegCP850
+
+;***********************
+;**** South America ****
+;***********************
+
+
+[L100A]
+OptionDesc=%0000100A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_100A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L140A]
+OptionDesc=%0000140A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_140A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L180A]
+OptionDesc=%0000180A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_180A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L1C0A]
+OptionDesc=%00001C0A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_1C0A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L200A]
+OptionDesc=%0000200A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config058
+AddReg=SysLocale_200A, RegCP850, EBD058
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L240A]
+OptionDesc=%0000240A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config057
+AddReg=SysLocale_240A, RegCP850, EBD057
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L280A]
+OptionDesc=%0000280A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_280A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L300A]
+OptionDesc=%0000300A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config593
+AddReg=SysLocale_300A, RegCP850, EBD593
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L340A]
+OptionDesc=%0000340A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config056
+AddReg=SysLocale_340A, RegCP850, EBD056
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L3C0A]
+OptionDesc=%00003C0A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_3C0A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L2C0A]
+OptionDesc=%00002C0A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config054
+AddReg=SysLocale_2C0A, RegCP850, EBD054
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L380A]
+OptionDesc=%0000380A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config003
+AddReg=SysLocale_380A, RegCP850, EBD003
+DelReg=DelEBD_Locale, DelRegCP850
+
+
+[L2009]
+OptionDesc=%00002009%
+CopyFiles=CodePage437
+DelFiles=CodePage437_Del
+UpdateInis=CodePage437_Ini
+AddReg=SysLocale_2009, RegCP437
+DelReg=DelEBD
+
+[L2409]
+OptionDesc=%

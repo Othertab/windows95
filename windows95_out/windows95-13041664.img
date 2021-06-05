@@ -1,0 +1,150 @@
+c%=DUAL_GOOD_IDE, ,PCI\VEN_8086&DEV_1230
+%PCI\VEN_8086&DEV_7010.DeviceDesc%=DUAL_GOOD_IDE, ,PCI\VEN_8086&DEV_7010
+
+[Integral_HDC]
+%Integral.DeviceDesc%=GOOD_IDE, PCMCIA\INTEGRAL_PERIPHERALS-ATA_CARD-456B
+
+[MAXTOR_HDC]
+%PCMCIA\MAXTOR-MXL105-E950.DeviceDesc%=MAXTOR_drv, PCMCIA\MAXTOR-MXL105-E950
+%PCMCIA\MAXTOR-MXL105-352F.DeviceDesc%=GOOD_IDE, PCMCIA\MAXTOR-MXL105-352F
+%PCMCIA\MAXTOR-MXL131.DeviceDesc%=GOOD_IDE, PCMCIA\MAXTOR-MXL131-351E
+%PCMCIA\MAXTOR-MXL131.DeviceDesc%=GOOD_IDE, PCMCIA\MAXTOR-MXL131-84AD
+%PCMCIA\MAXTOR-MXL131.DeviceDesc%=GOOD_IDE, PCMCIA\MAXTOR-MXL131-BA9C
+%PCMCIA\MAXTOR-MXL171.DeviceDesc%=GOOD_IDE, PCMCIA\MAXTOR-MXL171-764B
+%PCMCIA\MAXTOR-MXL262.DeviceDesc%=GOOD_IDE, PCMCIA\MAXTOR-MXL262-13BA
+
+[MINISTOR_HDC]
+%PCMCIA\MINISTOR-MP130P-FEED.DeviceDesc%=GOOD_IDE, PCMCIA\MINISTOR-MP130P-FEED
+%Ministor170.DeviceDesc%=GOOD_IDE, PCMCIA\MINISTOR-MP170P-CF02
+
+[NATSEMI_HDC]
+%PCI\VEN_100B&DEV_D001.DeviceDesc%=DUAL_BAD_IDE, PCI\VEN_100B&DEV_D001
+
+[OPTI_HDC]
+%PCI\VEN_1045&DEV_C621.DeviceDesc%=DUAL_BAD_IDE, PCI\VEN_1045&DEV_C621
+
+[PCTECH_HDC]
+%PCI\VEN_1042&DEV_1000.DeviceDesc%=UNKNOWN_PCI_IDE, PCI\VEN_1042&DEV_1000
+
+[SD_HDC]
+%PCMCIA\SunDisk-SDP.DeviceDesc%=SUNDISK_drv, PCMCIA\SunDisk-SDP-1E2E
+%PCMCIA\SunDisk-SDP.DeviceDesc%=SUNDISK_drv, PCMCIA\SunDisk-SDP-1DD2
+%PCMCIA\SunDisk-SDP.DeviceDesc%=SUNDISK_drv, PCMCIA\SunDisk-SDP5-ADFD
+%PCMCIA\SunDisk-SDP.DeviceDesc%=SUNDISK_drv, PCMCIA\SunDisk-SDP-6DC7
+%PCMCIA\SunDisk-SDP.DeviceDesc%=SUNDISK_drvl5, PCMCIA\SunDisk-SDPL5-F150
+
+[SIS_HDC]
+%PCI\VEN_1039&DEV_5513.DeviceDesc%=DUAL_GOOD_IDE, PCI\VEN_1039&DEV_5513
+%PCI\VEN_1039&DEV_0597.DeviceDesc%=DUAL_GOOD_IDE, PCI\VEN_1039&DEV_0597
+
+[SYMPHONY_HDC]
+%PCI\VEN_10AD&DEV_0001.DeviceDesc%=BAD_IDE, PCI\VEN_10AD&DEV_0001
+
+[VIATECH_HDC]
+%PCI\VEN_1106&DEV_0561.DeviceDesc%=DUAL_BAD_IDE, PCI\VEN_1106&DEV_0561
+
+[ZENITH_HDC]
+%MF\EISA_ZDS2000_DEV0.DeviceDesc%=GOOD_IDE, MF\EISA_ZDS2000_DEV0
+
+[*pnp0601.det]          ;Plus Hardcard II
+LogConfig=hclc1,hclc2
+AddReg = HDC_HW_REG
+
+[HardCardII]
+LogConfig=hclc1,hclc2
+AddReg = HARDCARD_AddReg
+
+[hclc1]
+ConfigPriority=HARDWIRED
+IRQConfig=10,11,12
+MEMConfig=C800-C80F,CC00-CC0F,D000-D00F,D400-D40F
+IOConfig=170-177(3FF::)
+IOConfig=376-377(3FF::)
+
+[hclc2]
+ConfigPriority=HARDWIRED
+IRQConfig=10,11,12
+MEMConfig=CA00-CA0F,CE00-CE0F,D200-D20F,D600-D60F
+IOConfig=320-327(3FF::)
+IOConfig=32E-32F(3FF::)
+
+[*pnp0602.det]
+LogConfig=hclc1,hclc2
+AddReg = HDC_HW_REG
+
+[HardCardIIXL]
+LogConfig=hclc1,hclc2
+AddReg = HARDCARD_AddReg
+
+[*pnp0600.det]          ;ESDI Controller
+LogConfig=esdilc1,esdilc2
+AddReg = HDC_HW_REG
+
+[esdilc1]
+ConfigPriority=HARDWIRED
+IOConfig=1f0-1f7(3ff::)
+IOConfig=3f6-3f6(3ff::)
+IRQConfig=14
+
+[esdilc2]
+ConfigPriority=HARDWIRED
+IOConfig=170-177(3ff::)
+IOConfig=376-376(3ff::)
+IRQConfig=15
+
+[esdilcgen1]
+ConfigPriority=HARDWIRED
+IOConfig=10@0-ffff%fff0(ffff::)
+IRQConfig=3,4,5,7,9,10,11,12,14,15
+
+[esdilcgen2]
+ConfigPriority=HARDWIRED
+IOConfig=8@0-ffff%fff8(ffff::)
+IRQConfig=3,4,5,7,9,10,11,12,14,15
+
+[esdilcgen3]
+ConfigPriority=HARDWIRED
+IOConfig=8@0-ffff%fff8(ffff::)
+IOConfig=8@0-ffff%fff8(ffff::)
+IRQConfig=3,4,5,7,9,10,11,12,14,15
+
+[esdilcgen4]
+ConfigPriority=HARDWIRED
+IOConfig=8@0-ffff%fff8(ffff::)
+IOConfig=4@0-ffff%fffc(ffff::)
+IRQConfig=3,4,5,7,9,10,11,12,14,15
+
+[esdilcgen5]
+ConfigPriority=HARDWIRED
+IOConfig=8@0-ffff%fff8(ffff::)
+IOConfig=2@0-ffff%fffe(ffff::)
+IRQConfig=3,4,5,7,9,10,11,12,14,15
+
+[esdilcgen6]
+ConfigPriority=HARDWIRED
+IOConfig=8@0-ffff%fff8(ffff::)
+IOConfig=1@0-ffff%ffff(ffff::)
+IRQConfig=3,4,5,7,9,10,11,12,14,15
+
+[BAD_IDE]
+LogConfig=esdilc1,esdilc2,esdilcgen1,esdilcgen2,esdilcgen3,esdilcgen4,esdilcgen5,esdilcgen6
+AddReg = ESDI_AddReg
+
+[BAD_IDE.PosDup]
+*PNP0600
+
+[GOOD_IDE]
+LogConfig=esdilc1,esdilc2,esdilcgen1,esdilcgen2,esdilcgen3,esdilcgen4,esdilcgen5,esdilcgen6
+AddReg = ESDI_AddReg
+
+[GOOD_IDE.HW]
+AddReg = ESDI_FIFO_OK_AddReg
+
+[GOOD_IDE.PosDup]
+*PNP0600
+
+[UNKNOWN_PCI_IDE]
+AddReg=PCIMF.Reg,IDEProp.Reg
+
+[UNKNOWN_PCI_IDE.HW]
+AddReg=UNKNOWN_PCI_IDE.Reg

@@ -1,0 +1,226 @@
+onfig=10@200-3FF%FFF0(3ff::)
+IRQConfig=3,4,5,7,10,11,14
+
+[*DBK0000.LC2]
+ConfigPriority=NORMAL
+IOConfig=20@200-3FF%FFE0(3ff::)
+
+[*DBK0000.LC3]
+ConfigPriority=NORMAL
+IOConfig=10@200-3FF%FFF0(3ff::)
+
+[DBK0402]
+CopyFiles=CSCopyFiles,@dbkvssd.vxd
+AddReg=CSReg,DatabookReg,DBK0402.Reg
+LogConfig=*DBK0000.LC0,*DBK0000.LC1,*DBK0000.LC2,*DBK0000.LC3
+
+[DBK0402.HW]
+AddReg=SSReg
+
+[DBK0402.Reg]
+HKR,Override,0000,1,00,04,00,00,00,00,00,00,20,00,00,00,02,00,00,00,01,00,0c,00,00,00,00,00,00,00,00,00,f0,ff,10,00,00,01,ff,ff,00,00,00,00,10,00,00,00,04,00,00,00,00,00,00,00,fc,cc,00,00,00,00,00,00
+
+[DBK1402]			;DB86184
+CopyFiles=CSCopyFiles,@dbkvssd.vxd
+AddReg=CSReg,DatabookReg
+LogConfig=*DBK0000.LC0,*DBK0000.LC1,*DBK0000.LC2,*DBK0000.LC3
+
+[DBK1402.HW]
+AddReg=SSReg
+
+[DatabookReg]
+HKR,,Driver,,"DbkVssD.vxd"
+HKR,,Properties,,"MSPCIC.dll, PCICProperties"
+
+;
+;   PCIC or compatible controller
+;
+[PCIC]
+CopyFiles=CSCopyfiles, @socketsv.vxd
+AddReg=CSReg, PCICReg
+LogConfig=*PNP0E00.LC0,*PNP0E00.LC1,*PNP0E00.LC2,*PNP0E00.LC3,*PNP0E00.LC4,*PNP0E00.LC5
+
+[PCIC.HW]
+AddReg=SSReg
+
+[PCIC.PosDup]
+*PNP0E00
+
+[PCICReg]
+HKR,,Driver,,"SocketSv.vxd"
+HKR,,Properties,,"MSPCIC.dll, PCICProperties"
+
+[*PNP0E00.Det]
+AddReg=ForceCopy
+LogConfig=*PNP0E00.LC0,*PNP0E00.LC1,*PNP0E00.LC2,*PNP0E00.LC3,*PNP0E00.LC4,*PNP0E00.LC5
+
+[*PNP0E00.LC0]
+ConfigPriority=DESIRED
+IOConfig=3e0-3e1(3ff::)
+IRQConfig=3,4,5,7,9,10,11,14
+
+[*PNP0E00.LC1]
+ConfigPriority=NORMAL
+IOConfig=3e0-3e1(3ff::)
+
+[*PNP0E00.LC2]
+ConfigPriority=DESIRED
+IOConfig=3e0-3e1(3ff::)
+IOConfig=3e2-3e3(3ff::)
+IRQConfig=3,4,5,7,9,10,11,14
+
+[*PNP0E00.LC3]
+ConfigPriority=NORMAL
+IOConfig=3e0-3e1(3ff::)
+IOConfig=3e2-3e3(3ff::)
+
+[*PNP0E00.LC4]
+ConfigPriority=HARDRECONFIG
+IOConfig=2@100-3FF%FFFE(3ff::)
+IRQConfig=3,4,5,7,9,10,11,14
+
+[*PNP0E00.LC5]
+ConfigPriority=HARDRECONFIG
+IOConfig=2@100-3FF%FFFE(3ff::)
+
+;
+;   VLSI ELC controller
+;
+[VLELC]
+CopyFiles=CSCopyfiles, @socketsv.vxd
+AddReg=CSReg, PCICReg, VLSIReg
+LogConfig=*PNP0E02.LC0,*PNP0E02.LC1,*PNP0E02.LC2,*PNP0E02.LC3
+
+[VLELC.HW]
+AddReg=SSReg
+
+[VLELC.PosDup]
+*PNP0E02
+
+[VLSIReg]
+HKR,,PCICIRQMap,3,00,00,00,03,04,05,0F,07,00,09,0A,0B,0C,00,0E,00
+;HKR,,PCICOptions,3,B8,5E,00,00
+
+[*PNP0E02.Det]
+AddReg=ForceCopy
+LogConfig=*PNP0E02.LC0,*PNP0E02.LC1,*PNP0E02.LC2,*PNP0E02.LC3
+
+[*PNP0E02.LC0]
+ConfigPriority=DESIRED
+IOConfig=3e0-3e1(3ff:8000:)
+IRQConfig=3,4,5,7,9,10,11,14
+
+[*PNP0E02.LC1]
+ConfigPriority=DESIRED
+IOConfig=3e0-3e1(3ff:8000:)
+IOConfig=3e4-3e5(3ff:8000:)
+IRQConfig=3,4,5,7,9,10,11,14
+
+[*PNP0E02.LC2]
+ConfigPriority=NORMAL
+IOConfig=3e0-3e1(3ff:8000:)
+
+[*PNP0E02.LC3]
+ConfigPriority=NORMAL
+IOConfig=3e0-3e1(3ff:8000:)
+IOConfig=3e4-3e5(3ff:8000:)
+
+;
+; Card bus
+;
+[CARDBUS]
+CopyFiles=CSCopyfiles, @cbss.vxd
+AddReg=CSReg, CARDBUSReg
+
+[TOPIC]
+CopyFiles=CSCopyfiles, @cbss.vxd
+AddReg=CSReg, CARDBUSReg, TOPICReg
+
+[CARDBUS.HW]
+AddReg=SSReg
+
+[TICARDBUS.HW]
+AddReg=SSReg
+
+[TOPIC.HW]
+AddReg=SSReg
+
+[CARDBUSReg]
+HKR,,Driver,,"cbss.vxd"
+
+[CARDBUS.PosDup]
+*PNP0E00
+
+[TOPIC.PosDup]
+*PNP0E00
+
+[TOPICReg]
+HKR,,CBSSIRQMap,3,00,00,00,03,04,05,00,07,00,09,0A,0B,0C,00,0E,0F
+
+;
+;   Card services information
+;
+[CSCopyfiles]
+PCCard.vxd
+csmapper.sys
+carddrv.exe
+SRAMMTD.VXD
+FLS1MTD.VXD
+FLS2MTD.VXD
+
+[CSReg]
+HKR,,DevLoader,,"PCCARD.vxd"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Run,SystemTray,,"SysTray.Exe"
+
+;
+;   Socket Services information
+;
+[SSReg]
+HKR,,ConfigFlags,3,01,00,00,00
+
+;
+;   Information about where the files are
+;
+[DestinationDirs]
+DefaultDestDir=11               ; LDID_SYS
+
+
+[ForceCopy]
+HKR,,NoSetupUI,,1
+
+;
+;   Config.Sys drivers to remove
+;
+[ConfigSysDrivers]
+;
+; Databook
+;
+CARDSOCK.SYS
+CTALKCS.EXE
+CARDTALK.SYS
+ARIMATN.SYS
+CARDTALK.EXE
+
+;
+; system soft
+;
+SS365SL.EXE
+SS365SLB.EXE
+CS.EXE
+SSDBOOK.EXE
+SSCIRRUS.EXE
+SSVLSI.EXE
+CIC.EXE
+MS-FLASH.SYS
+RALLOC.EXE
+SCARD29.EXE
+SRAMDRV.EXE
+S_IDE.EXE
+CARDID.EXE
+ATAINIT.EXE
+ATADRV.EXE
+CSALLOC.EXE
+CARDINFO.EXE
+SS365LP.EXE
+SSVADEM.EXE
+SSIBM720.EXE

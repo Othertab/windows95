@@ -1,0 +1,92 @@
+ commands
+that start programs or device drivers that use extended memory; for
+example, the HIMEM.SYS command line must come before the EMM386.EXE command
+line.
+
+Syntax
+
+    DEVICE=[drive:][path]HIMEM.SYS [/A20CONTROL:ON|OFF] [/CPUCLOCK:ON|OFF]
+    [/EISA] [/HMAMIN=m] [/INT15=xxxx] [/MACHINE:xxxx] [/NOABOVE16] [/NOEISA]
+    [/NUMHANDLES=n] [/SHADOWRAM:ON|OFF] [/TESTMEM:ON|OFF] [/VERBOSE] [/X]
+
+In most cases, you won't need to specify command-line options. The default
+values for HIMEM.SYS are designed to work with most hardware.
+
+Parameter
+
+[drive:][path]
+    Specifies the location of the HIMEM.SYS file. HIMEM.SYS should always be
+    located on the same drive that contains your MS-DOS files. If the
+    HIMEM.SYS file is in the root directory of your startup drive, you don't
+    need to include a path. However, you must always include the complete
+    filename (HIMEM.SYS).
+
+Switches
+
+/A20CONTROL:ON|OFF
+    Specifies whether HIMEM is to take control of the A20 line even if A20
+    was on when HIMEM was loaded. The A20 handler gives your computer access
+    to the HMA. If you specify /A20CONTROL:OFF, HIMEM takes control of the
+    A20 line only if A20 was off when HIMEM was loaded. The default setting
+    is /A20CONTROL:ON.
+
+/CPUCLOCK:ON|OFF
+    Specifies whether HIMEM is to affect the clock speed of your computer.
+    If your computer's clock speed changes when you install HIMEM,
+    specifying /CPUCLOCK:ON may correct the problem; however, enabling this
+    option slows down HIMEM. The default setting is /CPUCLOCK:OFF.
+
+/EISA
+    Specifies that HIMEM should allocate all available extended memory. This
+    switch is necessary only on an EISA (Extended Industry Standard
+    Architecture) computer with more than 16 MB of memory; on other
+    computers, HIMEM automatically allocates all available extended memory.
+
+/HMAMIN=m
+    Specifies how many kilobytes of memory a program must require for
+    HIMEM to give that program use of the HMA. Only one program can
+    use the HMA at a time; HIMEM allocates the HMA to the first program
+    that meets the memory-use requirements set by this option. You can
+    specify a value from 0 to 63.
+
+    Set /HMAMIN to the amount of memory required by the program that
+    uses the most HMA memory.
+
+    The /HMAMIN option is not required; the default value is zero. Omitting
+    this option (or setting it to zero) specifies that HIMEM allocate the
+    HMA to the first program that requests it, regardless of how much of
+    the HMA the program is going to use.
+
+    The /HMAMIN option has no effect when Windows is running in 386 Enhanced
+    mode.
+
+
+/INT15=xxxx
+    Allocates the amount of extended memory (in kilobytes) to be reserved
+    for the Interrupt 15h interface. Some older programs use the
+    Interrupt 15h interface to allocate extended memory rather than using
+    the XMS (eXtended-Memory Specification) method provided by HIMEM. If you
+    use these programs, you can ensure enough memory is available to
+    them by setting xxxx to 64 KB larger than the amount required by the
+    program.
+
+    You can specify a value from 64 to 65535; however, you cannot specify
+    more memory than your system has available. If you specify a value less
+    than 64, the value becomes 0. The default value is 0.
+
+/MACHINE:xxxx
+    Specifies what type of computer you are using. Usually, HIMEM can detect
+    your computer type successfully; however, there are a few computers that
+    HIMEM cannot detect. On such systems, HIMEM uses the default system type
+    (IBM AT or compatible). You might need to include the /MACHINE option if
+    your computer is a type that HIMEM cannot detect and if HIMEM does not
+    work properly on your system by using the default system type.
+
+    Currently, systems that require this option include Acer 1100, Wyse, and
+    IBM 7552.
+
+    The value for xxxx can be any of the codes or their equivalent numbers
+    listed in the following table.
+
+Code         Number  Computer type
+---------------

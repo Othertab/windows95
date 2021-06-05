@@ -1,0 +1,110 @@
+ufsize,min,,256
+HKR,Ndi\params\recbufsize,max,,5000
+HKR,Ndi\params\recbufsize,step,,1
+HKR,NDI\params\recbufsize,flag,1,10,00,00,00
+;Recbufcount
+HKR,Ndi\params\recbufcount,ParamDesc,,"Receive Buffers"
+HKR,Ndi\params\recbufcount,type,,int
+HKR,Ndi\params\recbufcount,default,,6
+HKR,Ndi\params\recbufcount,min,,4
+HKR,Ndi\params\recbufcount,max,,10
+HKR,Ndi\params\recbufcount,step,,1
+HKR,NDI\params\recbufcount,flag,1,30,00,00,00
+;Earlyrelease
+HKR,Ndi\params\earlyrelease,ParamDesc,,"Early Release"
+HKR,Ndi\params\earlyrelease,default,,yes
+HKR,Ndi\params\earlyrelease,type,,enum
+HKR,Ndi\params\earlyrelease\enum,Yes,,"Yes"
+HKR,Ndi\params\earlyrelease\enum,No,,"No" 
+HKR,NDI\params\earlyrelease,flag,1,30,00,00,00
+;FrameStatus
+HKR,Ndi\params\FrameStatus,ParamDesc,,"Frame Status"
+HKR,Ndi\params\FrameStatus,default,,yes
+HKR,Ndi\params\FrameStatus,type,,enum
+HKR,Ndi\params\FrameStatus\enum,Yes,,"Yes"
+HKR,Ndi\params\FrameStatus\enum,No,,"No" 
+HKR,NDI\params\FrameStatus,flag,1,30,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+
+;****************************************************************************
+; OCPCMCIA Drivers
+;****************************************************************************
+[OCPCMCIA.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,OCTK16.SYS
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+HKR,,Windows95,,yes
+; NDIS Info
+HKR,NDIS,LogDriverName,,"OCTK16"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"  
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ocpcmcia.ndis3"
+
+;Parameters
+;RingSpeed
+HKR,Ndi\params\ringspeed,ParamDesc,,"Ring Speed"
+HKR,Ndi\params\ringspeed,default,,16
+HKR,Ndi\params\ringspeed,type,,enum
+HKR,Ndi\params\ringspeed\enum,4,, "4 MBS"
+HKR,Ndi\params\ringspeed\enum,16,, "16 MBS"
+HKR,NDI\params\ringspeed,flag,1,28,00,00,00
+;Maxtransmits
+HKR,Ndi\params\maxtransmits,ParamDesc,,"Maximum Transmits"
+HKR,Ndi\params\maxtransmits,type,,int
+HKR,Ndi\params\maxtransmits,default,,6
+HKR,Ndi\params\maxtransmits,min,,2
+HKR,Ndi\params\maxtransmits,max,,6
+HKR,Ndi\params\maxtransmits,step,,1 
+HKR,NDI\params\maxtransmits,flag,1,10,00,00,00
+;Maxrequests
+HKR,Ndi\params\maxrequests,ParamDesc,,"Maximum General Requests"
+HKR,Ndi\params\maxrequests,type,,int
+HKR,Ndi\params\maxrequests,default,,6
+HKR,Ndi\params\maxrequests,min,,1
+HKR,Ndi\params\maxrequests,max,,10
+HKR,Ndi\params\maxrequests,step,,1    
+HKR,NDI\params\maxrequests,flag,1,10,00,00,00
+;Recbufsize
+HKR,Ndi\params\recbufsize,ParamDesc,,"Receive Buffer Size"
+HKR,Ndi\params\recbufsize,type,,int
+HKR,Ndi\params\recbufsize,default,,512
+HKR,Ndi\params\recbufsize,min,,256
+HKR,Ndi\params\recbufsize,max,,5000
+HKR,Ndi\params\recbufsize,step,,1
+HKR,NDI\params\recbufsize,flag,1,10,00,00,00
+;Recbufcount
+HKR,Ndi\params\recbufcount,ParamDesc,,"Receive Buffers"
+HKR,Ndi\params\recbufcount,type,,int
+HKR,Ndi\params\recbufcount,default,,8
+HKR,Ndi\params\recbufcount,min,,5
+HKR,Ndi\params\recbufcount,max,,10
+HKR,Ndi\params\recbufcount,step,,1
+HKR,NDI\params\recbufcount,flag,1,30,00,00,00
+;Earlyrelease
+HKR,Ndi\params\earlyrelease,ParamDesc,,"Early Release"
+HKR,Ndi\params\earlyrelease,default,,yes
+HKR,Ndi\params\earlyrelease,type,,enum
+HKR,Ndi\params\earlyrelease\enum,Yes,,"Yes"
+HKR,Ndi\params\earlyrelease\enum,No,,"No" 
+HKR,NDI\params\earlyrelease,flag,1,30,00,00,00
+;FrameStatus
+HKR,Ndi\params\FrameStatus,ParamDesc,,"Frame Status"
+HKR,Ndi\params\FrameStatus,default,,yes
+HKR,Ndi\params\FrameStatus,type,,enum
+HKR,Ndi\params\FrameStatus\enum,Yes,,"Yes"
+HKR,Ndi\params\FrameStatus\enum,No

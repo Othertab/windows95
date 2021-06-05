@@ -1,0 +1,99 @@
+ID\\RemovableDrive"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\6\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\7]
+"Name"="Removable Media"
+"Description"="If true, the media in this drive is removable."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+;  ":Value" links to a static value of False we know is there.  ":1" links to a PnP value that
+;  tends to be there for floppy and CD drives (and which is 1 when present).
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\RemovableMedia"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Device\\Removable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\7\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\8]
+"Name"="Device ID"
+"Description"="The SCSI address of this device."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Device\\SCSITargetID"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\9]
+"Name"="Logical Unit Number"
+"Description"="The logical unit number of this SCSI device."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Device\\SCSILUN"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\10]
+"Name"="Number of Physical Cylinders"
+"Description"="The number of reported physical cylinders on this device."
+"Column"="10"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalDisk\\NumberOfPhysicalCylinders"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\11]
+"Name"="Number of Physical Sectors per Track"
+"Description"="The number of reported physical sectors per track for this device."
+"Column"="11"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalDisk\\NumberOfPhysicalSectorsPerTrack"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\12]
+"Name"="Number of Physical Heads"
+"Description"="The number of reported physical heads for this device."
+"Column"="12"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalDisk\\NumberOfPhysicalHeads"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\13]
+"Name"="Physical Cylinder for Write Precompensation"
+"Description"="Specifies the physical cylinder used for write precompensation on this device."
+"Column"="13"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalCylinderForWritePrecompensation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\14]
+"Name"="Physical Cylinder for Landing Zone"
+"Description"="The physical landing zone cylinder of this device."
+"Column"="14"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalCylinderForLandingZone"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\15]
+"Name"="Sector Size"
+"Description"="The size in bytes of the physical disk sector as reported by the disk."
+"Column"="15"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalDisk\\PhysicalSectorSize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\23\16]
+"Name"="Total Physical Size"
+"Description"="The total size in kilobytes (1024 bytes) of this device."
+"Column"="16"
+"

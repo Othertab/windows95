@@ -1,0 +1,81 @@
+iles to copy to the \windows\system directory goes here:
+[mfcdllsx.files]
+mfc30.dll
+mfcans32.dll,,,32       ;32 flag suppresses ver conflict dlg
+mfco30.dll
+mfcd30.dll
+mfcn30.dll        ; new one added with mfc 3.01 version
+mfcuia32.dll
+
+[mfcdllsx.register]
+;Register shared DLLs:
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfc30.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfcans32.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfco30.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfcd30.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfcn30.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfcuia32.dll,1,01,00,00,00
+
+[WordPad.Win.Del]
+writwin.wpc     ; 16 bit write converter
+msword6.wpc     ; 16 bit winword 6 converter
+mfcoleui.dll    ; 16 bit mfc file
+mswd6_32.wpc    ; review - no longer in Windows dir
+wordpad.exe     ; review - no longer in Windows dir
+write32.wpc     ; review - no longer in Windows dir
+
+[Write.copy]
+;copy stub program that launches wordpad.exe to the Windows Dir (for compat. reasons):
+write.exe
+
+[WordPadInis]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"                ;creates Accessories folder (if not already there
+setup.ini, group4,, """%WORDPAD_LINK%"", ""%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE"""   ;creates link in Accessories folder
+
+[WordPadInis.remove]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"     ;creates Accessories folder (if not already there
+setup.ini, group4,, """%WORDPAD_LINK%"""             ;deletes link
+
+[WordPad.install.reg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\wordpad,Installed,,"1"
+
+[WordPad.remove.reg]
+; sets status for Maint Mode Setup to 'not installed'
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\wordpad,Installed,,"0"
+
+[WordPadReg]
+; Next line is in shell.inx to avoid overwriting key when making null file entry
+;HKCR,.doc,,2,Wordpad.Document.1
+
+HKCR,Wordpad.Document.1,,,%WORDPAD_DOC%
+HKCR,Wordpad.Document.1\Insertable,,,""
+HKCR,Wordpad.Document.1\Protocol,,,
+HKCR,Wordpad.Document.1\Protocol\StdFileEditing,,,
+HKCR,Wordpad.Document.1\Protocol\StdFileEditing\Server,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE"
+HKCR,Wordpad.Document.1\Protocol\StdFileEditing\Verb,,,
+HKCR,Wordpad.Document.1\Protocol\StdFileEditing\Verb\0,,,"%EDIT%"
+HKCR,Wordpad.Document.1\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE,1"
+HKCR,Wordpad.Document.1\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE ""%%1"""
+HKCR,Wordpad.Document.1\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE /p ""%%1"""
+HKCR,Wordpad.Document.1\shell\printto\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE /pt ""%%1"" ""%%2"" ""%%3"" ""%%4"" "
+HKCR,Wordpad.Document.1\CLSID,,,{73FDDC80-AEA9-101A-98A7-00AA00374959}
+
+HKCR,rtffile,,,%RTF_DOC%
+HKCR,rtffile\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE,1"
+HKCR,rtffile\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE ""%%1"""
+HKCR,rtffile\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE /p ""%%1"""
+HKCR,rtffile\shell\printto\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE /pt ""%%1"" ""%%2"" ""%%3"" ""%%4"" "
+HKCR,rtffile\CLSID,,,{73FDDC80-AEA9-101A-98A7-00AA00374959}
+
+HKCR,CLSID\{73FDDC80-AEA9-101A-98A7-00AA00374959}\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE,0"
+
+; update 3.x write stuff to use wordpad as server
+HKCR,.wri,,,wrifile
+HKCR,wrifile,,,%WRITE_DOC%
+HKCR,wrifile\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE,2"
+HKCR,wrifile\CLSID,,,{73FDDC80-AEA9-101A-98A7-00AA00374959}
+HKCR,wrifile\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE ""%%1"""
+HKCR,wrifile\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE /p ""%%1"""
+HKCR,wrifile\shell\printto\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\WORDPAD.EXE /pt ""%%1"" ""%%2"" ""%%3"" ""%%4"" "
+
+HKCR,CLSID\{73FDD

@@ -1,0 +1,111 @@
+StartRecord]
+[CardName]                                              [Generic GM]
+[CardId]                                                136
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [mt32mpu.adv]
+[RmDigitalDriverName]           []
+[PmMidiDriverName]                              [a32mt32.dll]
+[PmDigitalDriverName]           []
+
+[MidiDriverChunkNumber]                 2
+[DigitalDriverChunkNumber]              2
+
+[NumberOfMidiAddresses]                 5
+[MidiAddress]                                   0x330
+[MidiAltAddress]                                0x300
+[MidiAltAddress]                                0x332
+[MidiAltAddress]                                0x334
+[MidiAltAddress]                                0x336
+
+[NumberOfDigitalAddresses]              0
+
+[NumberOfIrqs]                                  6
+[Irq]                           2
+[AltIrq]                        3
+[AltIrq]                        4
+[AltIrq]                        5
+[AltIrq]                        6
+[AltIrq]                        7
+
+[NumberOfMidiIrqs]                              6
+[MidiIrq]                       2
+[MidiAltIrq]                    3
+[MidiAltIrq]                    4
+[MidiAltIrq]                    5
+[MidiAltIrq]                    6
+[MidiAltIrq]                    7
+
+
+[NumberOfDmas]                                  1
+[Dma]                                                   -1
+
+[Flags]                                                 1       ; number of flags to follow
+[DspNotEnabled]
+
+[Jumpers]                                               2
+[AddressJumper]
+[IrqJumper]
+
+[EndRecord]
+
+
+[EndOfGroup]
+
+
+
+
+[DigitalGroup]
+
+[NumberOfRecords]                       15
+
+; -------------------------------------------------------------------------
+; Data records
+; -------------------------------------------------------------------------
+
+[StartRecord]
+[CardName]                                              [Adlib Gold]
+[CardId]                                                116
+[CardGroup]                                             1
+
+[RmMidiDriverName]                              [adlibg.adv]
+[RmDigitalDriverName]           [algdig.adv]
+[PmMidiDriverName]                              [a32algfm.dll]
+[PmDigitalDriverName]           [a32algdg.dll]
+
+[MidiDriverChunkNumber]                 12
+[DigitalDriverChunkNumber]              13
+
+[NumberOfMidiAddresses]                 9
+[MidiAddress]                                   0x388
+[MidiAltAddress]                                0x390
+[MidiAltAddress]                                0x398
+[MidiAltAddress]                                0x3a0
+[MidiAltAddress]                                0x3a8
+[MidiAltAddress]                                0x3b0
+[MidiAltAddress]                                0x3b8
+[MidiAltAddress]                                0x3c0
+[MidiAltAddress]                                0x3c8
+
+[NumberOfDigitalAddresses]              9
+[DigitalAddress]                                0x388
+[DigitalAltAddress]                             0x390
+[DigitalAltAddress]                             0x398
+[DigitalAltAddress]                             0x3a0
+[DigitalAltAddress]                             0x3a8
+[DigitalAltAddress]                             0x3b0
+[DigitalAltAddress]                             0x3b8
+[DigitalAltAddress]                             0x3c0
+[DigitalAltAddress]                             0x3c8
+
+[NumberOfIrqs]                                  4
+[Irq]                                                   7
+[AltIrq]                                                3
+[AltIrq]                                                4
+[AltIrq]                                                5
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               7
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    4
+[MidiAltIrq]      

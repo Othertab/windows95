@@ -1,0 +1,50 @@
+andwriting Italic (TrueType)		InstallTTFFile	"""MT_Sixties_ttf"",""sx1"",""Lucida Handwriting Italic (TrueType)"""				no	%2048
+2088		Lucida Sans Italic (TrueType)		InstallTTFFile	"""MT_Sixties_ttf"",""sx2"",""Lucida Sans Italic (TrueType)"""				no	%2048
+2089		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""350000"""				yes	%2082
+2090		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""100000"""				yes	%2085
+2095				DependAsk	2025 ? 2097 : 2096					
+2096				DependAsk	2026 ? 2098					
+2097		Theme Files		CopySection	"""MT_Sixties_wav16"""				yes	%88
+2098		Theme Files		CopySection	"""MT_Sixties_wav8"""				yes	%88
+2100		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\The 60's USA"",""KindOfLens"",""Spiral"""					
+2101		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\The 60's USA"",""SpiralSize"",""400"",""REG_DWORD"""					
+2102		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\The 60's USA"",""SpiralSpeed"",""4"",""REG_DWORD"""					
+2109										
+2110		SCIENCE THEME (8-Bit)		Group	2111 2112 2113 2115 2116 2117 2118 2119 2125 2130 2131 2132 2133					
+2111		Theme Files		CopySection	"""MT_Science_thm"""				yes	%87
+2112		Theme Files		CopySection	"""MT_Science_bmp"""				yes	%87
+2113		Theme Files		CopySection	"""MT_Science_cur"""				yes	%87
+2115		Theme Files		CopySection	"""MT_Science_scr"""				no	%M
+2116		Theme Files		CopySection	"""MT_Science_ttf"""				no	%2048
+2117		Lucida Sans Unicode (TrueType)		InstallTTFFile	"""MT_Science_ttf"",""sc1"",""Lucida Sans Unicode (TrueType)"""				no	%2048
+2118		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""400000"""				yes	%2112
+2119		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""100000"""				yes	%2115
+2125				DependAsk	2025 ? 2127 : 2126					
+2126				DependAsk	2026 ? 2128					
+2127		Theme Files		CopySection	"""MT_Science_wav16"""				yes	%87
+2128		Theme Files		CopySection	"""MT_Science_wav8"""				yes	%87
+2130		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\Science"",""KindOfLens"",""Dent"""					
+2131		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\Science"",""DentSize"",""300"",""REG_DWORD"""					
+2132		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\Science"",""DentSpeed"",""3"",""REG_DWORD"""					
+2133		Lens.scr Settings		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\Screen Savers\Science"",""DentParameter"",""0.75"""					
+2139										
+2140		DANGEROUS THEME (8-Bit)		Group	2141 2142 2143 2145 2147 2148 2155					
+2141		Theme Files		CopySection	"""MT_Dangerous_thm"""				yes	%81
+2142		Theme Files		CopySection	"""MT_Dangerous_bmp"""				yes	%81
+2143		Theme Files		CopySection	"""MT_Dangerous_cur"""				yes	%81
+2145		Theme Files		CopySection	"""MT_Dangerous_scr"""				no	%M
+2146		Theme Files		CopySection	"""MT_Dangerous_ttf"""				no	%2048
+2147		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""350000"""				yes	%2142
+2148		Uncomp bmp		CustomAction	"""plus.dll"",""UnCompressComp"",""300000"""				yes	%2145
+2155				DependAsk	2025 ? 2157 : 2156					
+2156				DependAsk	2026 ? 2158					
+2157		Theme Files		CopySection	"""MT_Dangerous_wav16"""				yes	%81
+2158		Theme Files		CopySection	"""MT_Dangerous_wav8"""				yes	%81
+2169										
+2170		DAVICINI THEME (8-Bit)		Group	2171 2172 2173 2175 2176 2177 2178 2179 2185					
+2171		Theme Files		CopySection	"""MT_Davinci_thm"""				yes	%83
+2172		Theme Files		CopySection	"""MT_Davinci_bmp"""				yes	%83
+2173		Theme Files		CopySection	"""MT_Davinci_cur"""				yes	%83
+2175		Theme Files		CopySection	"""MT_Davinci_scr"""				no	%M
+2176		Theme Files		CopySection	"""MT_Davinci_ttf"""				no	%2048
+2177		Book Antiqua (TrueType)		InstallTTFFile	"""MT_Davinci_ttf"",""dv1

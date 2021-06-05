@@ -1,0 +1,136 @@
+PCI Support\")(06,\"PCMCIA Support\")(7,\"APM Support\")"
+;  Based on MIF enum:  "!0"="B;DS(01,\"Other\")(02,\"Unknown\")(03,\"Unsupported\")(04,\"ISA Support\")(05,\"MCA Support\")(06,\"EISA Support\")(07,\"PCI Support\")(08,\"PCMCIA Support\")(09,\"PnP Support\")(10,\"APM Support\")(11,\"Upgradeable BIOS\")(12,\"BIOS Shadowing allowed\")(13,\"VL VESA Support\")(14,\"ESCD Support\")(160,\"PC-98\")"
+
+
+;==================================
+;  Processor Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6]
+"Name"="Processor"
+"Class"="DMTF|Processor|002"
+"Description"="This group defines the attributes for each and every processor installed in this system."
+"Key"="1"
+"^Index"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8|9"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\1]
+"Name"="Processor Index"
+"Description"="An index into the processor table."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\2]
+"Name"="Processor Type"
+"Description"="The type of processor currently in the system."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\Data\\2\\Processor\\ProcessorType"
+"!0"="B;IN(1,3)(2,4)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\2\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Central Processor"
+"4"="Math Processor"
+"5"="DSP Processor"
+"6"="Video Processor"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\3]
+"Name"="Processor Family"
+"Description"="The family of processors to which this processor belongs."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\Data\\2\\Processor\\ProcessorFamily"
+"!0"="B;IN(0,2)(1,3)(2,1)(3,1)(4,4)(5,5)(6,6)(7,11)(8,11)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="8086"
+"4"="80286"
+"5"="80386"
+"6"="80486"
+"7"="8087"
+"8"="80287"
+"9"="80387"
+"10"="80487"
+"11"="Pentium Family"
+"18"="M1 Family"
+"25"="K5 Family"
+"32"="Power PC Family"
+"33"="Power PC 601"
+"34"="Power PC 603"
+"35"="Power PC 603+"
+"36"="Power PC 604"
+"48"="Alpha Family"
+"64"="MIPS Family"
+"80"="SPARC Family"
+"96"="68040 family"
+"97"="68xxx Family"
+"98"="68000"
+"99"="68010"
+"100"="68020"
+"101"="68030"
+"112"="Hobbit Family"
+"128"="Weitek"
+"144"="PA-RISC Family"
+"160"="V30 Family"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\4]
+"Name"="Processor Version Information"
+"Description"="The version number or string for this processor."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(80)"
+":0"="HKLM\\DesktopManagement\\Data\\2\\Processor\\ProcessorVersionInformation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\5]
+"Name"="Maximum Speed"
+"Description"="The maximum speed (in MHz) of this processor."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKLM\\DesktopManagement\\Data\\2\\Processor\\MaximumSpeed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\6]
+"Name"="Current Speed"
+"Description"="The current speed (in MHz) of this processor."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKLM\\DesktopManagement\\Data\\2\\Processor\\CurrentSpeed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\7]
+"Name"="Processor Upgrade"
+"Description"="The method by which this processor can be upgraded, if upgrades are supported."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\Data\\2\\Processor\\ProcessorUpgrade"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\7\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Daughter Board"
+"4"="ZIF Socket"
+"5"="Replacement/Piggy Back"
+"6"="None"
+"7="LIF Socket"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\6\8]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="In

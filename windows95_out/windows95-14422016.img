@@ -1,0 +1,114 @@
+00
+HKR,Ndi\params\PRODUCT_ID,optional,,1
+
+
+[token16isa.param]
+; AdapterType
+HKR,,TYPE,,"TRISA16"
+HKR,Ndi\params\TYPE,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\TYPE,default,,"TRISA16"
+HKR,Ndi\params\TYPE,type,,enum
+HKR,Ndi\params\TYPE\enum,"TRISA16",,"TRISA16"
+HKR,NDI\params\TYPE,flag,1,10,00,00,00
+; BUS_MODE
+HKR,,BUS_MODE,,"DIO"
+HKR,Ndi\params\BUS_MODE,ParamDesc,,"Bus Mode"
+HKR,Ndi\params\BUS_MODE,default,,"DIO"
+HKR,Ndi\params\BUS_MODE,type,,enum
+HKR,Ndi\params\BUS_MODE\enum,"DIO",,"DIO"
+HKR,NDI\params\BUS_MODE,flag,1,10,00,00,00
+; RING_SPEED
+HKR,NDI\params\RING_SPEED,ParamDesc,,"Token Ring Speed (0=Use Card Settings)"
+HKR,NDI\params\RING_SPEED,flag,1,10,00,00,00
+HKR,NDI\params\RING_SPEED,default,,16
+HKR,NDI\params\RING_SPEED,type,,enum
+HKR,NDI\params\RING_SPEED\enum,0,,0
+HKR,NDI\params\RING_SPEED\enum,4,,4
+HKR,NDI\params\RING_SPEED\enum,16,,16
+HKR,Ndi\params\RING_SPEED,optional,,1
+; MAX_FRAME_SIZE
+HKR,NDI\params\MAX_FRAME_SIZE,ParamDesc,,"Maximum Frame Size"
+HKR,NDI\params\MAX_FRAME_SIZE,flag,1,10,00,00,00
+HKR,NDI\params\MAX_FRAME_SIZE,type,,int
+HKR,Ndi\params\MAX_FRAME_SIZE,default,,2034
+HKR,NDI\params\MAX_FRAME_SIZE,min,,64
+HKR,NDI\params\MAX_FRAME_SIZE,max,,17800
+HKR,NDI\params\MAX_FRAME_SIZE,step,,1
+; RCV_BUF_SIZE
+HKR,NDI\params\RCV_BUF_SIZE,ParamDesc,,"Receive Buffer Size"
+HKR,NDI\params\RCV_BUF_SIZE,flag,1,10,00,00,00
+HKR,NDI\params\RCV_BUF_SIZE,type,,int
+HKR,Ndi\params\RCV_BUF_SIZE,default,,2048
+HKR,NDI\params\RCV_BUF_SIZE,min,,256
+HKR,NDI\params\RCV_BUF_SIZE,max,,17800
+HKR,NDI\params\RCV_BUF_SIZE,step,,1
+HKR,Ndi\params\RCV_BUF_SIZE,optional,,1
+
+[token16isa.resc]
+HKR,,Interrupt,1,04,00,00,00
+HKR,,PORT_ADDRESS,1,02,00,00,00
+HKR,,DMA_LEVEL,1,03,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,50,00,00,00
+HKR,NDI\params\PORT_ADDRESS,resc,1,02,00,00,00
+HKR,NDI\params\PORT_ADDRESS,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\PORT_ADDRESS,flag,1,10,00,00,00
+HKR,NDI\params\DMA_LEVEL,resc,1,03,00,00,00
+HKR,NDI\params\DMA_LEVEL,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMA_LEVEL,flag,1,10,00,00,00
+
+
+[token4isa.param]
+; AdapterType
+HKR,,TYPE,,"TRISA4"
+HKR,Ndi\params\TYPE,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\TYPE,default,,"TRISA4"
+HKR,Ndi\params\TYPE,type,,enum
+HKR,Ndi\params\TYPE\enum,"TRISA4",,"TRISA4"
+HKR,NDI\params\TYPE,flag,1,10,00,00,00
+; RCV_BUF_SIZE
+HKR,NDI\params\RCV_BUF_SIZE,ParamDesc,,"Receive Buffer Size"
+HKR,NDI\params\RCV_BUF_SIZE,flag,1,10,00,00,00
+HKR,NDI\params\RCV_BUF_SIZE,type,,int
+HKR,Ndi\params\RCV_BUF_SIZE,default,,2048
+HKR,NDI\params\RCV_BUF_SIZE,min,,256
+HKR,NDI\params\RCV_BUF_SIZE,max,,4472
+HKR,NDI\params\RCV_BUF_SIZE,step,,1
+HKR,Ndi\params\RCV_BUF_SIZE,optional,,1
+; MAX_FRAME_SIZE
+HKR,NDI\params\MAX_FRAME_SIZE,ParamDesc,,"Maximum Frame Size"
+HKR,NDI\params\MAX_FRAME_SIZE,flag,1,10,00,00,00
+HKR,NDI\params\MAX_FRAME_SIZE,type,,int
+HKR,Ndi\params\MAX_FRAME_SIZE,default,,2034
+HKR,NDI\params\MAX_FRAME_SIZE,min,,64
+HKR,NDI\params\MAX_FRAME_SIZE,max,,4472
+HKR,NDI\params\MAX_FRAME_SIZE,step,,1
+
+
+[token4isa.resc]
+HKR,,Interrupt,1,04,00,00,00
+HKR,,PORT_ADDRESS,1,02,00,00,00
+HKR,,SHARED_RAM,1,01,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,50,00,00,00
+HKR,NDI\params\PORT_ADDRESS,resc,1,02,00,00,00
+HKR,NDI\params\PORT_ADDRESS,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\PORT_ADDRESS,flag,1,10,00,00,00
+HKR,NDI\params\SHARED_RAM,resc,1,01,00,00,00
+HKR,NDI\params\SHARED_RAM,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\SHARED_RAM,paragraph,,1
+
+[tokenmca.param]
+; AdapterType
+HKR,,TYPE,,"TRMC16"
+HKR,Ndi\params\TYPE,ParamDesc,,"Adapter Type"
+HKR,Ndi\params\TYPE,default,,"TRMC16"
+HKR,Ndi\params\TYPE,type,,enum
+HKR,Ndi\params\TYPE\enum,"TRMC16",,"TRMC16"
+HKR,NDI\params\TYPE,flag,1,10,00,00,00
+; MAX_FRAME_SIZE
+HKR,NDI\params\MAX_FRAME_SIZE,ParamDesc,,"Maximum Frame Size"
+HKR,NDI\params\MAX_FRAME_SIZE,flag,1,10,00,00,00
+HKR,N

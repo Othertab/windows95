@@ -1,0 +1,88 @@
+Workgroups 
+directory to Windows 95, then you do not need to re-install your 
+programs. If you install Windows 95 to a new directory, then you must 
+re-install all of your Windows-based programs. Copying files from your 
+Windows 3.1 directory to Windows 95 is not sufficient.
+
+MS-DOS-Based Programs
+---------------------
+Your existing MS-DOS-based programs should run from Windows 95. If you 
+experience problems with an MS-DOS-based program, you can set it up to 
+run in an MS-DOS environment.
+
+To run an MS-DOS-based program in an MS-DOS environment (MS-DOS mode):
+1. Create a shortcut to the MS-DOS-based program.
+2. Right click the shortcut icon, and then select Properties.
+3. Click the Program tab, and then click Advanced.
+4. Make sure that the MS-DOS Mode box is checked.
+
+When you run a program in MS-DOS mode, it will force Windows 95 to 
+shut down and will load the program in an MS-DOS environment. Note 
+that you will not have access to devices that require protected-mode 
+drivers. 
+
+If you find an MS-DOS-based program slowing down or stopping when it is 
+in the background:
+1. Right click the MS-DOS Prompt icon on the taskbar, and then click
+   Properties.
+2. Click the Misc tab.
+3. Drag the Idle Sensitivity slider toward Low.  
+4. In the Background area, make sure that Suspend Always is not 
+   checked.  
+
+Anti-Virus Software
+-------------------
+Existing Anti-Virus software should be able to detect, but not always 
+clean, viruses while running on Windows 95. This depends on where the 
+virus was found and how the program chose to clean it. Also, virus 
+shields may not be able to see all file activity, and therefore 
+could miss some virus activity. It is recommended that you update 
+your anti-virus software to a version that was designed to run with 
+Windows 95.
+
+To contact McAfee for information about their new anti-virus software: 
+McAfee BBS:(408) 988-4004, McAfee direct line: (408) 988-3832.
+
+To contact Symantec Corporation for information about their anti-virus 
+software: (800) 441-7234 or (503) 334-6054. 
+
+Disk Repair and Optimization Utilities
+--------------------------------------
+To make it possible to store long filenames on a FAT volume, it was 
+necessary to change the file system for Windows 95. Those changes will 
+prevent most existing disk repair and optimization programs from
+functioning correctly. Depending on how they function, Windows may 
+block them from executing in order to protect the data on your disk. 
+This is necessary in a multi-tasking environment to prevent disk 
+corruption caused by multiple utilities running simultaneously. It is 
+strongly recommended that you upgrade to disk repair software that was 
+designed for Windows 95. For more information, contact your software 
+vendor.
+
+Disk-Compression Utilities
+--------------------------
+Windows 95 works with most major disk-compression products. However, 
+since many of these products come with optimization utilities, it is 
+recommended that you upgrade to the version designed for Windows 95. 
+For more information, contact your software vendor.
+
+Windows 3.1 Shell Enhancements
+------------------------------
+Most Windows 3.1 shell replacements will still run on Windows 95, but 
+with many limitations because of the taskbar, 32-bit components, and 
+the new Windows 95 shell. If you want to continue running one of these 
+programs, you should upgrade to a version that was designed to run 
+with Windows 95.
+
+Major Windows 3.1 shell enhancements this may affect: Norton Desktop, 
+PC Tools Desktop, Tabworks, Dashboard, and Direct Access Desktop 1.0.
+
+Using UNC Network Names with Existing Software
+----------------------------------------------
+There are three ways to assign a network resource in Windows 95.
+
+1. Assign a network resource by using its UNC name. UNC names are 
+   in the format \\server\share. Windows 95 defaults to this method.
+2. Assign a local name to the network resource; for example, assign 
+   one of your LPT ports to a network printer.
+2. Assign a drive lett

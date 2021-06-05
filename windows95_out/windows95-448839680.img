@@ -1,0 +1,67 @@
+e from the frontier:
+
+-  on  the  front  line:   your castles, watchtowers and guard huts located
+right  on  the frontier with the enemy are indicated by a thick black cross
+on their flag.
+
+-  on  second  line:   The  castles,  etc...   located behind the front are
+indicated by a normal black cross on their flag.
+
+-  on  third  line:  The castles, etc...  located far from the frontier are
+not treatened directly.  Their flag bears a black stroke.
+
+-  in  the  hinterland:   The enemy is not visible, and the castles flag is
+white.
+
+In  each  case,  you will have to decide how many knights will be placed in
+these  buildings  (castles,  watchtowers  and  guard  huts).   The  optimal
+occupation  rate  will  be  indicated  next to the 4 images.  The buildings
+located  on  the  front  line  should  be full, the ones on the second line
+should  be  well  occupied, the ones on the third line moderately full, and
+the  Castles in the hinterland should be rather empty.  Your buildings will
+thus be better protected, and you will avoid a situation where most of your
+knights  are  located  in  the hinterlands, while there is only one in your
+castle  located  on  the front line.  The second word indicates the maximum
+acceptable drop of the occupation rate of the building should you decide to
+use  knights to attack the enemy:  "good" for the front liner "average" for
+behind  the  front,  "weak"  for  the  third  line  and  "minimum"  for the
+hinterland.
+
+Here  are  some  examples:   if  you  read "Full/good", this means that all
+buildings  must  be  occupied  to  the  maximum.  If your troops attack the
+enemy,  you will only send out a few knights, keeping enough of them inside
+to  maintain  a  "good"  occupation  rate.  If you choose "full/ Full", the
+knights  will occupy the buildings equally, and none of them will leave for
+this  attack.   Your front line will thus be protected to the maximum.  But
+in this case, the knights remaining in remote buildings will need more time
+to  get  to  the  front  line,  as  the  road  to  travel  is longer.  With
+"full/minimum", settings, all knights will leave the building to attack the
+enemy, except one.  Of course, this means that your building will be poorly
+guarded.   You  can  use  such  settings  for  the buildings located in the
+hinterland if you have many knights available.  This will allow you to have
+more  knights  available  in the event of an attack.  But don't forget that
+your knights will be better trained if, they, stay inside the building...
+
+Do  not  use settings that could be too straining.  If you dont have enough
+knights,  your  guard  huts, etc...  will be too empty sooner or later.  To
+change  these  settings,  click  on  the  + and - signs.  The upper setting
+(ideal  number  of  knights) logically cannot be smaller than the following
+one  (number  of remaining knights), Change the second setting.  It is very
+imporiant  to  IMMEDIATELY  change  these  paranmeters.   If you change the
+occupation rate setting from "full" to "minimum." in the castles located on
+the  front line, all your knights will leave, except one.  Think first, and
+click  later.  When your knights leave the castle to attack the enemy, they
+will  immediately be replaced by new knights coming from the warehouses, as
+long as there are knights waiting for a job there.
+
+The  second  knight menu will allow you to change several other parameters.
+Click  on  the lower central icon.  The "knights rate" will be displayed in
+the  upper  left corner of the screen.  The default rate is 30% and you can
+modify  it  as you like.  This rate shows the number of settlers that could
+become  knights,  provided that you have enough swords and shields.  If you
+choose  a  medium  setting  (bar in the middle), half of your settlers will
+become  knights.   If you set the bar to the left, you will not receive any
+knights.
+
+The  lower  icons  allow you to directly recruit unemployed workers to form
+new  knights.  The number of settlers available for recruiting is displayed

@@ -1,0 +1,86 @@
+Ndi\params\Max Users",min,,1
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Users",max,,40
+
+; Number NDIS Packet Descriptors Parameter (global)
+HKR,"Ndi\params\NDIS Pkt Descriptors",location,,"System\CurrentControlSet\Services\Vxd\DLC"
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\NDIS Pkt Descriptors",ParamDesc,,%DLC_NUM_PKT_DESCS%
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\NDIS Pkt Descriptors",default,,128
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\NDIS Pkt Descriptors",type,,int
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\NDIS Pkt Descriptors",min,,24
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\NDIS Pkt Descriptors",max,,128
+
+; Trace Mask Parameter (global)
+HKR,"Ndi\params\Trace Mask",location,,"System\CurrentControlSet\Services\Vxd\DLC"
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Trace Mask",ParamDesc,,%DLC_TRC_MASK%
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Trace Mask",default,,000F
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Trace Mask",type,,word
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Trace Mask",min,,0000
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Trace Mask",max,,FFFF
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Trace Mask",base,,16
+
+; Support CCB1 Parameter (global)
+HKR,"Ndi\params\Support CCB1",location,,"System\CurrentControlSet\Services\Vxd\DLC"
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Support CCB1",ParamDesc,,%DLC_SUPPORT_CCB1%
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Support CCB1",default,,1
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Support CCB1",type,,int
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Support CCB1",min,,0
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Support CCB1",max,,1
+
+;****************************************************************************
+; Instance-specific parameters
+;****************************************************************************
+; CCB Adapter Number (instance-specific)
+;HKR,,"CCB adapter num",,255
+HKR,"Ndi\params\CCB adapter num",ParamDesc,,%CCBAdapterNum%
+HKR,"Ndi\params\CCB adapter num",default,,00
+HKR,"Ndi\params\CCB adapter num",type,,dword
+HKR,"Ndi\params\CCB adapter num",min,,00
+HKR,"Ndi\params\CCB adapter num",max,,15
+HKR,"Ndi\params\CCB adapter num",base,,16
+HKR,"NDI\params\CCB adapter num",optional,,0
+
+;HKR,Ndi\params\Network_Id,flag,1,20,00,00,00
+;HKR,Ndi\params\Network_Id,default,,0
+;HKR,Ndi\params\Network_Id,ParamDesc,,%NWLINK_PARAM_NETWORK_ID%
+;HKR,Ndi\params\Network_Id,type,,dword
+;HKR,Ndi\params\Network_Id,base,,16
+
+; Max SAPs (instance-specific)
+;HKR,,"Max SAPs",,5
+HKR,"Ndi\params\Max SAPs",ParamDesc,,%MaxSaps%
+HKR,"Ndi\params\Max SAPs",default,,5
+HKR,"Ndi\params\Max SAPs",type,,int
+HKR,"Ndi\params\Max SAPs",min,,2
+HKR,"Ndi\params\Max SAPs",max,,10
+HKR,"NDI\params\Max SAPs",optional,,1
+
+; Max LINKs (instance-specific)
+;HKR,,"Max LINKs",,20
+HKR,"Ndi\params\Max LINKs",ParamDesc,,%MaxLinks%
+HKR,"Ndi\params\Max LINKs",default,,20
+HKR,"Ndi\params\Max LINKs",type,,int
+HKR,"Ndi\params\Max LINKs",min,,2
+HKR,"Ndi\params\Max LINKs",max,,255
+HKR,"NDI\params\Max LINKs",optional,,1
+
+; Timer T1 (1) (instance-specific)
+HKR,"Ndi\params\Timer T1 (1)",ParamDesc,,%TimerT1One%
+HKR,"Ndi\params\Timer T1 (1)",default,,15
+HKR,"Ndi\params\Timer T1 (1)",type,,int
+HKR,"Ndi\params\Timer T1 (1)",min,,1
+HKR,"Ndi\params\Timer T1 (1)",max,,60
+HKR,"NDI\params\Timer T1 (1)",optional,,1
+
+; Timer T2 (1) (instance-specific)
+;HKR,,"Timer T2 (1)",,3
+HKR,"Ndi\params\Timer T2 (1)",ParamDesc,,%TimerT2One%
+HKR,"Ndi\params\Timer T2 (1)",default,,3
+HKR,"Ndi\params\Timer T2 (1)",type,,int
+HKR,"Ndi\params\Timer T2 (1)",min,,1
+HKR,"Ndi\params\Timer T2 (1)",max,,15
+HKR,"NDI\params\Timer T2 (1)",optional,,1
+
+; Timer Ti (1) (instance-specific)
+;HKR,,"Timer Ti (1)",,255
+HKR,"Ndi\params\Timer Ti (1)",ParamDesc,,%TimerTiOne%
+HKR,"Ndi\params\Timer Ti (1)"

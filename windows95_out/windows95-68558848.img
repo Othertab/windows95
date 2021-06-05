@@ -1,0 +1,47 @@
+ 1200 bps with V.22 and MNP2-4
+HKR, Responses, "13<cr>", 1, 02, 00, 2C, 01, 00, 00, 00,00,00,00 ; CONNECT V.21 - Connection at 300 bps with V.21
+HKR, Responses, "15<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00 ; ABORTED - A call in progress has been aborted
+HKR, Responses, "17<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00 ; V.42 DISCONNECTED
+HKR, Responses, "21<cr>", 1, 02, 02, 00, 00, 00, 00, 00,00,00,00 ; CONNECT/REL
+HKR, Responses, "22<cr>", 1, 02, 02, B0, 04, 00, 00, 00,00,00,00 ; CONNECT 1200/REL - Connection at 1200 bps with MNP2-4
+HKR, Responses, "23<cr>", 1, 02, 02, 60, 09, 00, 00, 00,00,00,00 ; CONNECT 2400/REL - Connection at 2400 bps with MNP2-4
+HKR, Responses, "24<cr>", 1, 02, 00, C0, 12, 00, 00, 00,00,00,00 ; CONNECT 4800 - Connection at 4800 bps
+HKR, Responses, "25<cr>", 1, 02, 00, C0, 12, 00, 00, 00,00,00,00 ; CONNECT 4800 - Connection at 4800 bps with MNP2-4
+HKR, Responses, "26<cr>", 1, 02, 00, B0, 04, 00, 00, 00,00,00,00 ; CONNECT V.23 - Connection at 1200/75 bps
+HKR, Responses, "27<cr>", 1, 02, 02, 80, 25, 00, 00, 00,00,00,00 ; CONNECT 9600/REL - Connection at 9600 bps with MNP2-4
+HKR, Responses, "28<cr>", 1, 02, 00, 80, 25, 00, 00, 00,00,00,00 ; CONNECT 9600 TRELLIS - Connection at 9600 bps
+HKR, Responses, "29<cr>", 1, 02, 02, 80, 25, 00, 00, 00,00,00,00 ; CONNECT 9600 TRELLIS/REL - Connection at 9600 bps with MNP2-4
+HKR, Responses, "30<cr>", 1, 01, 00, 00, 00, 00, 00, 00,00,00,00 ; COMPRESSION NOT AVAILABLE
+HKR, Responses, "31<cr>", 1, 01, 01, 00, 00, 00, 00, 00,00,00,00 ; COMPRESSION LEVEL 5
+HKR, Responses, "32<cr>", 1, 01, 01, 00, 00, 00, 00, 00,00,00,00 ; COMPRESSION V.42bis
+HKR, Responses, "34<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "35<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "36<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "37<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "38<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "39<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "40<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "41<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "42<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "43<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "44<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "45<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "46<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "47<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "50<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "51<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "52<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "53<cr>", 1, 03, 00, 00, 00, 00, 00, 00,00,00,00
+HKR, Responses, "60<cr>", 1, 02, 00, 20, 1C, 00, 00, 00,00,00,00 ; CONNECT 7200 TRELLIS - Connection at 7200 bps
+HKR, Responses, "61<cr>", 1, 02, 00, E0, 2E, 00, 00, 00,00,00,00 ; CONNECT 12000 TRELLIS - Connection at 12000 bps
+HKR, Responses, "62<cr>", 1, 02, 02, 20, 1C, 00, 00, 00,00,00,00 ; CONNECT 7200 TRELLIS/REL - Connection at 7200 bps with MNP2-4
+HKR, Responses, "63<cr>", 1, 02, 02, E0, 2E, 00, 00, 00,00,00,00 ; CONNECT 12000 TRELLIS/REL - Connection at 12000 bps with MNP2-4
+HKR, Responses, "64<cr>", 1, 02, 02, 00, 00, 00, 00, 00,00,00,00 ; CONNECT/LAPM
+HKR, Responses, "65<cr>", 1, 02, 02, B0, 04, 00, 00, 00,00,00,00 ; CONNECT 1200/LAPM
+HKR, Responses, "66<cr>", 1, 02, 02, 60, 09, 00, 00, 00,00,00,00 ; CONNECT 2400/LAPM
+HKR, Responses, "67<cr>", 1, 02, 02, B0, 04, 00, 00, 00,00,00,00 ; CONNECT V.22/LAPM 
+HKR, Responses, "68<cr>", 1, 02, 02, C0, 12, 00, 00, 00,00,00,00 ; CONNECT 4800/LAPM
+HKR, Responses, "69<cr>", 1, 02, 02, 20, 1C, 00, 00, 00,00,00,00 ; CONNECT 7200 TRELLIS/LAPM
+HKR, Responses, "70<cr>", 1, 02, 02, 80, 25, 00, 00, 00,00,00,00 ; CONNECT 9600/LAPM
+HKR, Responses, "71<cr>", 1, 02, 02, 80, 25, 00, 00, 00,00,00,00 ; CONNECT 9600 TRELLIS/LAPM
+HKR, Responses, "72<cr>", 1, 02, 02, E0, 2E, 00, 00, 00,00,00,00 ; CONNECT 1

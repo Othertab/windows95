@@ -1,0 +1,65 @@
+N.com", http://www.msn.com/custom/home.htm,,,"Customize your own page to get the information and links you want."
+
+[Realestate]
+real1 = "Real Estate", http://www.mls.ca,,,"Find the home that you want."
+
+[cars]
+carp = "CarPoint", http://carpoint.msn.com/,,,"The best source for information about buying your next car."
+
+[people]
+peop = "People Finder", http://www.infospace.com/msn/people/search1.htm,,,"Look up an address for anyone anywhere in the world."
+info2 = "Email Finder", http://www.infospace.com/msn/email/search3.htm,,,"Find an email address for a friend who's online."
+info = "Business Finder", http://www.infospace.com/msn/business/search4.htm,,,"Look up a business by name, location, or type."
+coweb = "Company Web Sites", http://www.infospace.com/msn/bizweb/search6.htm,,,"Find the Web sites for millions of companies."
+
+[Trav]
+trv = "Expedia", http://expedia.msn.com/home1.hts?,,,"Start your travel here. Book flights, cars, and hotels. Research trips and get expert tips."
+cmpin = "Camping", http://www.camp.ca,,,"Plan your camping vacation."
+
+[Intl]
+AU="Australia (AUS)", http://essentials.msn.com/International/iniSwitch.asp?from=CA&to=AU,,,"Visit MSN Australia."
+FR="France (FRA)", http://essentials.msn.com/International/iniSwitch.asp?from=CA&to=FR,,,"Visit MSN France." 
+DE="Germany (DEU)", http://essentials.msn.com/International/iniSwitch.asp?from=CA&to=DE,,,"Visit MSN Germany."
+JP="Japan (JPN)", http://essentials.msn.com/International/iniSwitch.asp?from=CA&to=JP,,,"Visit MSN Japan.  Nihon go kimasu ka?"
+UK="UK && Ireland (GBR)", http://essentials.msn.com/International/iniSwitch.asp?from=CA&to=UK,,,"Visit MSN in the United Kingdom."
+US="United States (USA)", http://essentials.msn.com/International/iniSwitch.asp?from=CA&to=US,,,"Visit MSN United States."
+
+[AnE]
+Cinem = "Cinemania", http://cinemania.msn.com/Default/Home,,,"Movie reviews and help searching for your next movie rental."
+Zone = "Internet Gaming Zone", http://www.zone.com/asp/default.asp,,,"The online site for multiplayer gaming."
+
+[Ref]
+Encarta = "Encarta", http://encarta.msn.com/EncartaHome2.asp,,,"The World's most popular reference encyclopedia online."
+Parent = "Parent Handbook",http://parent.msn.com/,,,"Great information about toddlers kids and parenting."
+Wine = "Wine Guide",http://vinsight.msn.com/reference/default.asp,,,"The online source for wine snobs or people who want to become one."
+
+[Finance]
+invest = "Investor", http://investor.msn.com/,,,"Powerful tools for managing your investments."
+
+[CnS]
+msn = "Computing on MSN", http://msncomputing.msn.com/msncomputing/default.asp,,,"Talk to the experts. Get advice. Bare your digital soul."
+
+[Communicate]
+URLKey = communicatebeta
+URL = http://communicatebeta.msn.com/
+start = "Communicate Home Page", http://communicatebeta.msn.com/goto.asp?pane=home,,,"Communication command center. Chat, e-mail, forums."
+email = "Send or Read E-mail", <e-mail>,,,"Compose, edit, and send your mail."
+fol = "Friends Online", http://friendsonline.msn.com/,,,"Are your cyberfriends online? Find out here!"
+forum = "MSN Forums Home Page", http://communicatebeta.msn.com/goto.asp?pane=forums,,,"Join your MSN forums community."
+flist = "MSN Forums", [ForumCat]
+chat  = "Chat Central", http://chatworld.msn.com/chatcentral/,,,"Chat fanatic? Casual chatter? Jump in!"
+bul = "Internet Center", http://forums.msn.com/InternetCenter/,,,"Launching pad to the Internet."
+abs = "MSN Address Book", http://members.msn.com/,,,"The latest member questions answered."
+bbs   = "Browse MSN Bulletin Boards",news://msnnews.msn.com/msn.communicate.internet.NewComer,,,"Read or post to MSN and Internet newsgroups."
+sev   = "Specials", [Specials]
+
+[ForumCat]
+ForCat1 = "Arts, Entertainment && Leisure", [ForArts]
+ForCat2 = "Business && Investing", [ForBusin]
+ForCat3 = "Education && Sciences", [ForEduSci]
+ForCat4 = "People && Communities", [ForPeople]
+ForCat5 = "Sports && Outdoor Recreation", [ForSports]
+ForCat6 = "Travel && Destinations", [ForTravel]
+
+[ForArts]
+ForArts1 = "Books && Publishing", [Boo

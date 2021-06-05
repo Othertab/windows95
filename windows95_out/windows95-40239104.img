@@ -1,0 +1,83 @@
+ (800) 242-6005 and ask for Department 95.
+
+Cheyenne ARCSOLO 3.02: Under Windows 95, ARCSOLO 3.02 cannot connect
+to the network drives mapped through the Client for NetWare Networks 
+(Nwredir.vxd)and Client for Microsoft Networks (VREDIR) when the 
+drives are already mapped. To work around this problem, add the 
+following line to the [boot] section of your System.ini file: 
+    network.drv=commctrl.dll  
+
+NOTE: Any DLL will work; this is a 16-bit dll.
+
+ClarisWorks for Windows 3.0 v1: To install correctly, you must run the 
+SETUPCW program on disk 2. The Setup program on disk 1 will not install
+the program under Windows 95. 
+
+Conner Tape Backup: Because of enhancements to the Windows 95 file 
+system, which supports long filenames, the Conner tape backup 
+program does not work with Windows 95. For information about an 
+updated version of this utility, call Conner Peripherals at Conner 
+Express, (800) 531-0968; ask for the Conner Backup Executive (CBE). 
+Or call Conner's FaxBack system at (408) 456-4903.
+
+DragonDictate for Windows: For information about the availability of 
+an upgrade that may be compatible with Windows 95, call Dragon Systems 
+at (800) 825-5897 or (617) 965-5200.
+
+Faxworks v3.0: You may experience problems if your default printer 
+name is extremely long, which could prevent the Call Center dialog box 
+from appearing. If this happens, shorten the printer name or, if you 
+are printing to a network printer, capture the printer port. For 
+instructions on how to capture a printer port, see Windows Help.
+
+FaxWorks version 3.00f.041: The Advanced AGC option (audio gain control) 
+is designed to adjust incoming call voice volume. This option does not
+work with Windows 95. Using this option creates a .tmp file in your
+Temp directory which gradually grows to fill the disk and cause a
+system lockup.
+
+Finesse: The Finesse program that was written for Windows 3.1 prevents 
+Windows 95 from correctly displaying taskbar buttons. If you use this 
+program, buttons representing your running programs will not appear 
+correctly on the taskbar. To switch between open programs, press 
+ALT+TAB. If you are in the United States, call your local Toshiba 
+product support organization for more information. Or you can call 
+(800) 999-4273. Outside the United States, call the product support 
+number that came with this program.
+
+Fonts: Only TrueType fonts can be printed with Windows version 1.0 
+printer drivers. If a version 1.0 printer driver is selected, only 
+TrueType fonts will be displayed in the font list. WinFax Pro 4.0 is 
+the only known shipping program with a Windows 1.0 printer driver. 
+
+Frye Computer Systems Statistics Display Rack for NetWare (StatRack): 
+To run this program with Windows 95:
+1. Locate a copy of the file Wfwnet.drv dated 7/24/93 or later. This 
+   file is included with Windows NT version 3.1 or later, or you can
+   contact technical support at Frye Computer Systems.
+2. Copy the Wfwnet.drv file into the Windows directory on your 
+   Windows 95 computer.
+3. Add the following line to the [boot] section of your System.ini 
+   file, located in the Windows directory:
+	network.drv = wfwnet.drv
+
+4. Create a file called Fryenet.ini consisting of the following two 
+   lines:
+	[network]
+	protocol = ipx
+
+5. Copy this file into the Windows directory on the Windows 95 
+   computer.
+
+Gold Disk Astound v2.0: If you experience problems with embedded OLE
+objects, obtain the v2.01 patch from Gold Disk.
+
+IBM Client Access/400: You will need a patch to run this program with 
+Windows 95. For more information, use the SNDPTFORD command through 
+Electronic Customer Support (ECS), and then ask for APAR II08704. Or 
+you can call 1-800-274-0015, and then:                                    
+1. Press 1 for support line, then enter your customer number.            
+2. Press 1 for new call.                                            
+3. Press 6 for PTF and ask for APAR II08704.                               
+  
+IronClad: Do not install older versions of Iron

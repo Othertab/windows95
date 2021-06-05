@@ -1,0 +1,96 @@
+M,%KEY_RENAME%\Win,pstripe.bmp,,"%PSTRIPE_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,pyramid2.bmp,,"%PYRAMID2_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,redtile.bmp,,"%REDTILE_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,rivets2.bmp,,"%RIVETS2_BMP%.bmp"
+HKLM,%KEY_RENAME%\Win,thatch2.bmp,,"%THATCH2_BMP%.bmp"
+;------------------------------------------------------------
+[msbase.cleanup.inis]
+;general cleanup.  Moved from msbase.inf due to size limits
+;Deletions go here:
+system.ini,386Enh,"device=fakeide.386",         ;remove PRE-RELEASE ONLY starting bld 70
+system.ini,386Enh,"device=*vfd"
+system.ini,386Enh,"device=*configmg",       ; Remove
+system.ini,386Enh,"device=serial.386",      ; Remove
+system.ini,386Enh,"device=lpt.386",         ; Remove
+system.ini,386Enh,"device=pagefile.386",        ; Delete old page file
+system.ini,386Enh,"timercriticalsection=",      ; Remove
+system.ini,386Enh,"device=isapnp.386",          ; Remove
+system.ini,386Enh,"device=wshell.386",         ; Remove
+system.ini,386Enh,"device=cdfs.386",           ; *** Remove from Pre-Release ONLY ***
+
+system.ini,386Enh,"device=*vwin32",
+system.ini,386Enh,"device=*vfbackup",
+system.ini,386Enh,"device=*vcomm",
+system.ini,386Enh,"device=*combuff",
+system.ini,386Enh,"device=*ifsmgr",
+system.ini,386Enh,"device=*ios",
+system.ini,386Enh,"device=*spooler",
+system.ini,386Enh,"device=*vfat",
+system.ini,386Enh,"device=*vcache",
+system.ini,386Enh,"device=*vcond",
+system.ini,386Enh,"device=*vcdfsd",
+system.ini,386Enh,"device=*vxdldr",
+system.ini,386Enh,"device=*vdef",
+system.ini,386Enh,"device=*vpicd",
+system.ini,386Enh,"device=*vtd",
+system.ini,386Enh,"device=*reboot",
+system.ini,386Enh,"device=*vdmad",
+system.ini,386Enh,"device=*vsd",
+system.ini,386Enh,"device=*v86mmgr",
+system.ini,386Enh,"device=*pageswap",
+system.ini,386Enh,"device=*dosmgr",
+system.ini,386Enh,"device=*vmpoll",
+system.ini,386Enh,"device=*shell",
+system.ini,386Enh,"device=*parity",
+system.ini,386Enh,"device=*biosxlat",
+system.ini,386Enh,"device=*vmcpd",
+system.ini,386Enh,"device=*vtdapi",
+system.ini,386Enh,"device=*perf",
+system.ini,386Enh,"device=cpqevent.386"
+
+system.ini,386Enh,"device=ibmvcd.386"   ; Old PCMCIA VCDs
+system.ini,386Enh,"device=csvcd.386"
+system.ini,386Enh,"device=pcmvcd.386"
+system.ini,386Enh,"device=ssvcd.386"
+system.ini,386Enh,"device=ssvcd311.386"
+system.ini,386Enh,"device=ss_vcd.386"
+system.ini,386Enh,"device=commvcd.386"  ; Intel PCMCIA card mgr
+system.ini,386Enh,"device=ccvcd.386"    ; Old Carbon-Copy for Win VxDs
+system.ini,386Enh,"keyboard=ccvkd.386"  ; Old Carbon-Copy for Win VxDs
+system.ini,386Enh,"device=ccvkd.386"    ; Old Carbon-Copy for Win VxDs
+
+system.ini,386Enh,"device=lex01.386"    ; Lexmark Printer fast LPT VxDs
+system.ini,386Enh,"device=vlexd.386"    ; Lexmark Printer fast LPT VxDs
+
+system.ini,386Enh,"device=turbovcd.386" ; Old TurboComm VxDs
+system.ini,386Enh,"device=turbobuf.386"
+
+system.ini,386Enh,"device=esp2.386"     ; Old Hayes ESP VxDs
+system.ini,386Enh,"device=espvcd.386"
+system.ini,386Enh,"device=espbuff.386"
+system.ini,386Enh,"device=vespd.386"
+system.ini,386Enh,"device=vesp2cd.386"
+system.ini,386Enh,"device=vesp2d.386"
+system.ini,386Enh,"device=esp2vcd.386"
+system.ini,386Enh,"device=esp2uff.386"
+system.ini,386Enh,"device=esp2buff.386"
+
+;Remove VcD replacements:
+system.ini,386Enh,"device=obserial.386" ; HP OmniBook serial driver
+system.ini,386Enh,"device=expvcd.386"   ; ExpressFax
+system.ini,386Enh,"device=r0dsimgr.386"
+system.ini,386Enh,"device=r0dsivcd.386"
+system.ini,386Enh,"device=r0dsibuf.386"
+system.ini,386Enh,"device=vhicom9.386"   ; BocaBoard 8
+system.ini,386Enh,"device=kingvcd.386"   ; KingComm
+system.ini,386Enh,"device=kingbuff.386"
+system.ini,386Enh,"device=vcdccp.386"    ; Calcomp
+system.ini,386Enh,"device=cas31vcd.386"
+system.ini,386Enh,"device=aw_vcd.386"
+
+system.ini,386Enh,"device=cs$vcd.386"   ;DEC Starion 800i
+
+system.ini,386Enh,"device=ADI2W100.386"  ;Appian FastDisk Drivers
+system.ini,386Enh,"device=ADI2W101.386"
+system.ini,386Enh,"device=ADI2W102.386"
+system.ini,386Enh,"device

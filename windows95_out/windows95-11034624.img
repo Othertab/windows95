@@ -1,0 +1,158 @@
+m dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,ssmarque.scr,,"%SSMARQUE%.scr"
+
+[ssmarque.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ssmarque.scr,,"%SSMARQUE%.scr"
+;------------------------------------------
+
+;---- OpenGL Screensaver Install Sections ------------
+; --- SS3dfo ---
+[ss3dfo.copy]
+ss3dfo.scr
+
+[ss3dfo.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ss3dfo.scr
+
+[ss3dfo.install.reg]
+HKLM,%KEY_OPTIONAL%\SSOpenGL,Installed,,"1"
+
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ss3dfo.scr,,"%SS3DFO%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,ss3dfo.scr,,"%SS3DFO%.scr"
+
+[ss3dfo.remove.reg]
+HKLM,%KEY_OPTIONAL%\SSOpenGL,Installed,,"0"
+
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ss3dfo.scr,,"%SS3DFO%.scr"
+
+; --- SSmaze ---
+[ssmaze.copy]
+ssmaze.scr
+
+[ssmaze.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ssmaze.scr
+
+[ssmaze.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ssmaze.scr,,"%SSMAZE%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,ssmaze.scr,,"%SSMAZE%.scr"
+
+[ssmaze.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ssmaze.scr,,"%SSMAZE%.scr"
+
+; --- SSpipes ---
+[sspipes.copy]
+sspipes.scr
+
+[sspipes.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+sspipes.scr
+
+[sspipes.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,sspipes.scr,,"%SSPIPES%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,sspipes.scr,,"%SSPIPES%.scr"
+
+[sspipes.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,sspipes.scr,,"%SSPIPES%.scr"
+
+; --- SStext3d ---
+[sstext3d.copy]
+sstext3d.scr
+
+[sstext3d.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+sstext3d.scr
+
+[sstext3d.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,sstext3d.scr,,"%SSTEXT3D%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,sstext3d.scr,,"%SSTEXT3D%.scr"
+
+[sstext3d.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,sstext3d.scr,,"%SSTEXT3D%.scr"
+
+; --- SSflwbox ---
+[ssflwbox.copy]
+ssflwbox.scr
+
+[ssflwbox.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ssflwbox.scr
+
+[ssflwbox.install.reg]
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ssflwbox.scr,,"%SSFLWBOX%.scr"
+
+;delete any old ones w/ LFN's that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,ssflwbox.scr,,"%SSFLWBOX%.scr"
+
+[ssflwbox.remove.reg]
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ssflwbox.scr,,"%SSFLWBOX%.scr"
+;----------------------------------------
+
+;----- Games Install Sections --------------
+[wingames.files]
+freecell.exe
+mshearts.exe
+sol.exe
+winmine.exe
+
+[wingames.del.files]
+; delete from WinDir so we can put it in System dir
+cards.dll
+
+; delete old win 3.x help files (they are now copied to HELP dir):
+freecell.hlp
+mshearts.hlp
+sol.hlp
+winmine.hlp
+
+[wingames.sys]
+cards.dll
+
+[wingames.help]
+freecell.cnt
+freecell.hlp
+mshearts.cnt
+mshearts.hlp
+sol.cnt
+sol.hlp
+winmine.cnt
+winmine.hlp
+
+[wingames.links]
+setup.ini, progman.groups, , "group6=%GAMES_DESC%"         ;creates folder
+setup.ini, group6,, """%Minesweeper_Desc%"", WINMINE.EXE,,, winmine,,%Minesweeper_ShortDesc%"  ;creates link

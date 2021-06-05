@@ -1,0 +1,28 @@
+m>
+263		SAGE.DEF (pm no CA)		CopyFile	"""SystemAgent"",""adf"""				yes	%32\SYSTEM<%32\System>
+264		SAGE.DAT (pm no CA)		CopyFile	"""SystemAgent"",""adt"""				yes	%32\SYSTEM<%32\System>
+265		SAGE.DEF (am no CA)		CopyFile	"""SystemAgent"",""cdf"""				yes	%32\SYSTEM<%32\System>
+266		SAGE.DAT (am no CA)		CopyFile	"""SystemAgent"",""cdt"""				yes	%32\SYSTEM<%32\System>
+269		Pointer to SAGE.DAT		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent"",""ConfigPath"",""%s\SAGE.DAT"""				yes	%32\SYSTEM<%32\System>
+270		*** Sage Awareness ***		Group	271 291 321 351					
+271		*ScanDisk for Windows		Group	272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287					
+272		Sage Awareness		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Scandisk for Windows,Settings,01,1"""					
+273		Sage Awareness		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows"",""Program"",""SCANDSKW.EXE"""					
+274		Sage Awareness		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows"",""Friendly Name"",""ScanDisk for Windows"""					
+275		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""Success"",""1"""					
+276		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""0"",""No errors found"""					
+277		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""1"",""Errors found and all were fixed"""					
+278		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""249"",""One or more drives could not be checked"""					
+279		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""250"",""Drive could not be checked - could not load or find DSKMAINT.DLL"""					
+280		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""251"",""Drive could not be checked - insufficient memory"""					
+281		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""252"",""Errors were found and some were not fixed"""					
+282		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""254"",""Check was canceled"""					
+283		Result Codes		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\ScanDisk for Windows\Result Codes"",""255"",""Check was stopped because of an error"""					
+284		Set0		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Scandisk for Windows\Set0,Settings,4195249,4"""					
+285		Set0		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Scandisk for Windows\Set0,DrivesToCheck, 2147483648,4"""					
+286		Set1		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Scandisk for Windows\Set1,Settings,4195233,4"""					
+287		Set1		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Scandisk for Windows\Set1,DrivesToCheck, 2147483648,4"""					
+291		*Disk Defragmenter		Group	292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313
+292		Sage Awareness		CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Plus!\System Agent\SAGE\Disk Defragmenter,Settings,01,1"""					
+293		Sage Awareness		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!\System Agent\SAGE\Disk Defragmenter"",""Program"",""DEFRAG.EXE"""					
+294		Sage Awareness		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Plus!

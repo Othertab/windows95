@@ -1,0 +1,63 @@
+network hardware.
+EThis operation cannot be performed by the specified server. Make sure that you have specified the correct computer name and command. If the problem persists, contact your network administrator.
+EAn unexpected network error has occurred. Quit all running programs, restart your computer, and then try again. If the problem persists, contact your network administrator.
+EYour computer cannot communicate with the specified remote computer because their hardware adapters are not compatible. As a test, try communicating with a different computer. If the problem persists, contact your network administrator.
+EThe printer cannot take any additional print requests at this time. Try again later.
+EThere is not enough memory available on the print server for the requested print file. Try again later.
+EYour print request was deleted by another user on the server. Contact the other user to find out why the file was deleted, or resend the print request later.
+EThe specified network resource is no longer available. The server that shared the resource might have been turned off, or the permissions might have been changed. For more information, contact your network administrator.
+EYou do not have the necessary access rights to use this network resource. Make sure you are specifying the correct name of the resource you want to use, or contact your network administrator for more information.
+EYou have specified an incorrect network resource type. Your possible choices are (1) drive letter A: through Z for a shared directory path, or (2) port name LPT1: through LPT9 for a shared printer or modem path.
+EThe specified shared directory cannot be found. Make sure you have specified the network name correctly. If the problem persists, contact your network administrator.
+EYou have reached the maximum number of names allowed on the network adapter for your computer. Either disconnect from any resources not currently in use, or reconfigure the network adapter.
+EYou have reached the maximum number of connections that can be made. Disconnect from any resources not currently in use, and then try again. To increase the maximum number of  sessions, double-click the Network icon in Control Panel, click a protocol, click Properties, and then click the Advanced tab.
+EThe server you are trying to gain access to is either paused or still being started. Try again later. If the error persists, contact your network administrator.
+EThis request is not accepted by the network. The server may have run out of resources necessary to process your request. Try the request again. If the error persists, contact your network administrator. For more information, type NET HELP 71 at the command prompt.
+EThe printer or disk device that you specified has been paused. Use the NET CONTINUE command to activate the device, and then try again.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+EThe directory or file cannot be created. Make sure you are specifying the path correctly and that there is enough space for the new file. You may also need to make sure the disk is formatted properly, or try specifying a different name for the file or directory you want to create.
+?
+EYou have reached the maximum number of requests the system can handle. Try the operation again later.
+EThe local device name is already in use. Try again, using a different device name. Your possible choices are (1) drive letter A: through Z: for a shared directory path, or (2) port name LPT1: through LPT9: for a shared printer or modem path.
+EThe specified network password is not correct. Type the correct password, or contact your network administrator for more information.
+IYou have specified a parameter that is invalid. Check ??? for a list of valid parameters, and then try ;again.
+WAn error occurred while data was being written to the disk. Data might have been lost. Ensure that the disk you want to write to has enough space available, and that you have write permission for the file, and then try again.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+

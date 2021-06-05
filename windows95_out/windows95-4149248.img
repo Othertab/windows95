@@ -1,0 +1,47 @@
+		~~~ Internet Tools ~~~		Group	501 525 535 540 550 1000 1400 1500 1600 1650 1660 1670					
+501		*** Internet Explorer ***		Group	502 504 505 506 507 508 520 521 522 2048 2356 2357 					
+502		IExplore.EXE		CopyFile	"""I_Web_exe"",""ixe"""				yes	%33
+504		IExplore Files		CopySection	"""I_Web_dll"""				yes	%33
+505		Realaudio Files		CopySection	"""I_RealAudio"""				yes	%33
+506		Realaudio Help		CopySection	"""I_RealAudio_help"""				no	%W\HELP<%W\Help>
+507		ProgsPath		CustomAction	"""plus.dll"",""LocalizedPath"",""Programs"""					
+508		ShortCut		InstallShortcut	"""%502\%F502"",""Internet Explorer"",""%502"""				no	%507\ACCESS~1\INTERN~1<%507\Accessories\Internet Tools>
+520		AppPath		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\IEXPLORE.EXE"","""",""%502\%F502"""					
+521		Path		AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Windows\CurrentVersion\App Paths\IEXPLORE.EXE"",""Path"",""%502;"""					
+522		Compression comp		CustomAction	"""plus.dll"",""UnCompressComp"",""1600000"""				yes	%33
+524										
+525		*** Desktop Icon ***		Group	526 527 528 529 530 531 532 					
+526		Inetstub.txt		RemoveFile	"""I_Web_exe"",""ioh"""				no	%W\DESKTOP<%W\desktop>
+527				RemoveRegEntry	"""HKEY_CLASSES_ROOT"","".oh!"","""""										
+528				RemoveRegEntry	"""HKEY_CLASSES_ROOT"",""The Internet"","""""										
+529				RemoveRegEntry	"""HKEY_CLASSES_ROOT"",""The Internet\DefaultIcon"","""""
+530				RemoveRegEntry	"""HKEY_CLASSES_ROOT"",""The Internet\Shell\open\command"","""""
+531				RemoveRegEntry	"""HKEY_CLASSES_ROOT"",""The Internet"",""NeverShowExt"""										
+532				RemoveRegEntry	"""HKEY_CLASSES_ROOT"",""The Internet"",""EditFlags"""										
+534										
+535		*** Internet Help ***		Group	536 537					
+536		IExplore Help		CopySection	"""I_Web_help"""				no	%W\HELP<%W\Help>
+537		Internet.txt		CopyFile	"""I_Text"",""net"""				yes	%33
+539										
+540		*** URL ***		Group	541 					
+541		URL.DLL		InstallSysFile	"""I_Web_exe"",""idl"""				no	%M
+542										
+549										
+550		*** IExplore RegEntiries ***		Group	551 661 751					
+551		User Settings		Group	560 570 590 600 610					
+560		Document View		Group	561 562 563 564 565					
+561				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Internet Explorer\Document Windows,width,2147483648,4"""					
+562				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Internet Explorer\Document Windows,height,0,4"""					
+563				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Internet Explorer\Document Windows,x,2147483648,4"""					
+564				CustomAction	"""plus.dll"",""BinReg"",""HKEY_CURRENT_USER,Software\Microsoft\Internet Explorer\Document Windows,y,0,4"""					
+565				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Document Windows"",""Maximized"",""no"""					
+570		Main		Group	571 572 573 574 575 576 577 578 579 580 581				
+571				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Show_ToolBar"",""yes"""					
+572				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Show_URLToolBar"",""yes"""					
+573				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Show_StatusBar"",""yes"""					
+574				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Show_URLinStatusBar"",""yes"""					
+575				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Show_FullURL"",""no"""					
+576				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Use_DlgBox_Colors"",""yes"""					
+577				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Display Inline Images"",""yes"""					
+578				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Anchor Underline"",""yes"""					
+579				AddRegData	"""HKEY_CURRENT_USER"",""Software\Microsoft\Internet Explorer\Main"",""Save_Session_History_On_Exit"",""no"""			

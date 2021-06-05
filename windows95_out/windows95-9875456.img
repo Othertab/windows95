@@ -1,0 +1,45 @@
+,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/html,stm,,h",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/plain,bas,,0",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/plain,c,,0",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/plain,h,,0",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/richtext,rtx,,0",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/tab-separated-values,tsv,,0",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"text/x-setext,etx,,0",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"application/x-perfmon,pmc,,5",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"application/x-perfmon,pma,,5",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"application/x-perfmon,pmr,,5",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"application/x-perfmon,pml,,5",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"application/x-perfmon,pmw,,5",,""
+HKLM,System\CurrentControlSet\Services\InetInfo\Parameters\MimeMap,"application/octet-stream,bin,,5",,""
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"MajorVersion",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"MinorVersion",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"AllowAnonymous",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"AllowGuestAccess",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"AnonymousUserName",,"anonymous"
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"DebugFlags",1,ff,ff
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"ConnectionTimeOut",1,50,03
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"EnablePortAttack",1,00
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"ExitMessage",,"Bye."
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"GreetingMessage",,"Windows 95 FTP Service."
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"LogAnonymous",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"LogFileDirectory",,"%25%"
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"LogType",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"LogFilePeriod",1,01
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"MaxConnections",1,10
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"MaxClientsMessage",,"Connection limit for this server reached. No more connections accepted at this time."
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"SecurityOn",1,00
+HKLM,System\CurrentControlSet\Services\MsFtpSvc\Parameters,"MsdosDirOutput",1,00
+HKLM,"System\CurrentControlSet\Services\MsFtpSvc\Parameters\Virtual Roots","/",,"%24%\%WebShare%\ftproot,,1"
+HKLM,System\CurrentControlSet\Control\ServiceProvider\ServiceTypes\MSFTPSVC,"TcpPort",1,15
+HKLM,System\CurrentControlSet\Control\ServiceProvider\ServiceTypes\W3Svc,"TcpPort",1,50
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"LogAnonymous",1,01
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"SecurePort",1,bb,01
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"ConnectionTimeout",1,58,02
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"Filter DLLs",,""
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"AccessDeniedMessage",,"Access to this resource has been denied."
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"MajorVersion",1,00
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"MinorVersion",1,01
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"AdminName",,"Administrator Name"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"AdminEmail",,"Admin@Corp.com"
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"AnonymousUserName",,""
+HKLM,System\CurrentControlSet\Services\W3Svc\Parameters,"Default Load File",,"Defaul

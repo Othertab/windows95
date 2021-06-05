@@ -1,0 +1,135 @@
+I\params\NetAddress,optional,,1
+; PacketSize
+HKR,NDI\params\PacketSize,ParamDesc,,"Packet Size"
+HKR,NDI\params\PacketSize,flag,1,10,00,00,00 
+HKR,NDI\params\PacketSize,type,,int
+HKR,Ndi\params\PacketSize,default,,4096
+HKR,NDI\params\PacketSize,min,,512
+HKR,NDI\params\PacketSize,max,,18000
+HKR,NDI\params\PacketSize,step,,1
+HKR,NDI\params\PacketSize,optional,,1
+
+; Install NDIS3
+[TCCTOK.ndis3]
+CopyFiles=TCCTOK.ndis3.CopyFiles
+[TCCTOK.ndis3.CopyFiles]
+tctokch.vxd
+eaglecaf.bin
+
+; Install NDIS2
+[TCCTOK.ndis2]
+CopyFiles=TCCTOK.ndis2.CopyFiles
+[TCCTOK.ndis2.CopyFiles]
+TCCTOK.dos
+eaglemac.bin
+
+; Install ODI
+[TCCTOK.odi]
+CopyFiles=TCCTOK.odi.CopyFiles
+[TCCTOK.odi.CopyFiles]
+;TCTOKSH.com ;setup will Q this file if needed
+eaglemac.bin
+
+;****************************************************************************
+; TC-MC base section
+;****************************************************************************
+[tcmc.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,tctokch.vxd
+; NDIS Info
+HKR,NDIS,LogDriverName,,"TCTOK"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"TCCTOK$"
+HKR,NDIS\NDIS2,FileName,,"TCCTOK.dos"
+HKR,NDIS\ODI,DriverName,,"TCTOKSH"
+HKR,NDIS\ODI,FileName,,"TCTOKSH.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"TCCTOK.ndis3"
+HKR,Ndi\Install,ndis2,,"TCCTOK.ndis2"
+;HKR,Ndi\Install,odi,,"TCCTOK.odi"
+
+; Parameters
+; Microchannel
+HKR,Ndi\params\Microchannel,ParamDesc,,"Microchannel"
+HKR,Ndi\params\Microchannel,default,,""
+HKR,Ndi\params\Microchannel,type,,enum
+HKR,Ndi\params\Microchannel\enum,"",,""
+HKR,NDI\params\Microchannel,flag,1,10,00,00,00
+; SlotNumber
+HKR,Ndi\params\SlotNumber,ParamDesc,,"MicroChannel Slot Number"
+HKR,Ndi\params\SlotNumber,default,,1
+HKR,Ndi\params\SlotNumber,type,,enum
+HKR,Ndi\params\SlotNumber\enum,1,,"1"
+HKR,Ndi\params\SlotNumber\enum,2,,"2"
+HKR,Ndi\params\SlotNumber\enum,3,,"3"
+HKR,Ndi\params\SlotNumber\enum,4,,"4"
+HKR,Ndi\params\SlotNumber\enum,5,,"5"
+HKR,Ndi\params\SlotNumber\enum,6,,"6"
+HKR,Ndi\params\SlotNumber\enum,7,,"7"
+HKR,Ndi\params\SlotNumber\enum,8,,"8"
+HKR,NDI\params\SlotNumber,flag,1,20,00,00,00
+HKR,Ndi\params\SlotNumber,optional,,1
+; RingSpeed
+HKR,Ndi\params\Speed,ParamDesc,,"Ring Speed"
+HKR,Ndi\params\Speed,default,,16
+HKR,Ndi\params\Speed,type,,enum
+HKR,Ndi\params\Speed\enum,4,, "4 MBS"
+HKR,Ndi\params\Speed\enum,16,, "16 MBS"
+HKR,NDI\params\Speed,flag,1,28,00,00,00
+; ProductId
+HKR,NDI\params\ProductId,ParamDesc,,"Product ID"
+HKR,NDI\params\ProductId,flag,1,10,00,00,00
+HKR,NDI\params\ProductId,type,,edit
+HKR,NDI\params\ProductId,LimitText,,36
+HKR,NDI\params\ProductId,UpperCase,,1
+HKR,Ndi\params\ProductId,default,," "
+HKR,NDI\params\ProductId,optional,,1
+; Netaddress 
+HKR,NDI\params\NetAddress,ParamDesc,,"Local Node ID"
+HKR,NDI\params\NetAddress,flag,1,10,00,00,00 
+HKR,NDI\params\NetAddress,type,,edit
+HKR,NDI\params\NetAddress,LimitText,,12
+HKR,NDI\params\NetAddress,UpperCase,,1
+HKR,Ndi\params\NetAddress,default,," "
+HKR,NDI\params\NetAddress,optional,,1
+; PacketSize
+HKR,NDI\params\PacketSize,ParamDesc,,"Packet Size"
+HKR,NDI\params\PacketSize,flag,1,10,00,00,00 
+HKR,NDI\params\PacketSize,type,,int
+HKR,Ndi\params\PacketSize,default,,4096
+HKR,NDI\params\PacketSize,min,,512
+HKR,NDI\params\PacketSize,max,,18000
+HKR,NDI\params\PacketSize,step,,1
+HKR,NDI\params\PacketSize,optional,,1
+
+; Install NDIS3
+[TCMC.ndis3]
+CopyFiles=TCMC.ndis3.CopyFiles
+[TCMC.ndis3.CopyFiles]
+tctokch.vxd
+eaglecaf.bin
+
+; Install NDIS2
+[TCMC.ndis2]
+CopyFiles=TCMC.ndis2.CopyFiles
+[TCMC.ndis2.CopyFiles]
+TCCTOK.dos
+eaglemac.bin
+
+; Install ODI
+[TCMC.odi]
+CopyFiles=TCMC.odi.CopyFiles
+[TCMC.odi.CopyFiles]
+TCCTOK.com
+eaglemac.bin
+
+;****************************************************************************
+; Destination Directories
+;*

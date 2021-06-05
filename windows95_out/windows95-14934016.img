@@ -1,0 +1,124 @@
+ummy=*", 3
+win.ini, "mci extensions", , "mpg=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "mpg=*", 3
+;
+win.ini, "mci extensions", "mpa=*", "dummy=*", 3
+win.ini, "mci extensions", , "mpa=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "mpa=*", 3
+;
+win.ini, "mci extensions", "enc=*", "dummy=*", 3
+win.ini, "mci extensions", , "enc=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "enc=*", 3
+;
+win.ini, "mci extensions", "dat=*", "dummy=*", 3
+win.ini, "mci extensions", , "dat=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "dat=*", 3
+;
+win.ini, "mci extensions", "m1v=*", "dummy=*", 3
+win.ini, "mci extensions", , "m1v=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "m1v=*", 3
+;
+win.ini, "mci extensions", "mp2=*", "dummy=*", 3
+win.ini, "mci extensions", , "mp2=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "mp2=*", 3
+;
+win.ini, "mci extensions", "mov=*", "dummy=*", 3
+win.ini, "mci extensions", , "mov=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "mov=*", 3
+;
+win.ini, "mci extensions", "qt=*", "dummy=*", 3
+win.ini, "mci extensions", , "qt=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "qt=*", 3
+;
+win.ini, "mci extensions", "avi=*", "dummy=*", 3
+win.ini, "mci extensions", , "avi=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "avi=*", 3
+;
+win.ini, "mci extensions", "au=*", "dummy=*", 3
+win.ini, "mci extensions", , "au=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "au=*", 3
+;
+win.ini, "mci extensions", "snd=*", "dummy=*", 3
+win.ini, "mci extensions", , "snd=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "snd=*", 3
+;
+win.ini, "mci extensions", "aif=*", "dummy=*", 3
+win.ini, "mci extensions", , "aif=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "aif=*", 3
+;
+win.ini, "mci extensions", "aiff=*", "dummy=*", 3
+win.ini, "mci extensions", , "aiff=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "aiff=*", 3
+;
+win.ini, "mci extensions", "aifc=*", "dummy=*", 3
+win.ini, "mci extensions", , "aifc=MPEGVideo"
+win.ini, "mci extensions", "dummy=*", "aifc=*", 3
+;
+system.ini, "mci", "MPEGVideo=*", "dummy=*", 3
+system.ini, "mci", , "MPEGVideo=mciqtz.drv"
+system.ini, "mci", "dummy=*", "MPEGVideo=*", 3
+;
+system.ini, "drivers32", , "VIDC.IV41=ir41_32.ax"
+;
+;Create Links
+;
+setup.ini, progman.groups,, "multimedia=%multimedia_DESC%"
+setup.ini, multimedia,, """%AMovie_DESC%"", ""rundll32.exe %11%\amovie.ocx,RunDll"",amovie.ocx,-2"
+setup.ini, multimedia,, """%ActMovie_DESC%"",""actmovie.exe"",actmovie.exe,-303"
+;
+[Manufacturer]
+;
+%INTELMfgName%=Intel.Devs
+;
+[Intel.Devs]
+;
+%V_VIDC.IV41%=VIDC.IV41
+;
+[VIDC.IV41]
+;
+CopyFiles=iv41.copy
+UpdateInis=iv41.inis
+MediaType=Software
+;
+[iv41.copy]
+;
+ir41_32.ax
+;
+[iv41.inis]
+;
+system.ini, "drivers32", , "VIDC.IV41=ir41_32.ax"
+;
+[iv41.inis.del]
+;
+system.ini, "drivers32", "VIDC.IV41=ir41_32.ax"
+;
+[Strings]
+;
+; NON-localized strings
+;
+V_CMD_OPEN="rundll32 amovie.ocx,RunDll %1"
+V_CMD_PLAY="rundll32 amovie.ocx,RunDll /play /close %1"
+;
+MT_VIDEO="{73647561-0000-0010-8000-00AA00389B71}"
+MT_ONE="{73646976-0000-0010-8000-00AA00389B71}"
+MT_STREAM="{e436eb83-524f-11ce-9f53-0020af0ba770}"
+MT_INDEO="{31345649-0000-0010-8000-00AA00389B71}"
+;
+CLSID_NULL="{00000000-0000-0000-0000-000000000000}"
+;
+CLSID_AVWAMI="{D3588AB0-0781-11ce-B03A-0020AF0BA770}"
+CLSID_AVIDEC="{CF49D4E0-1115-11ce-B03A-0020AF0BA770}"
+CLSID_ACMWRP="{6a08cf80-0e18-11cf-a24d-0020afd79767}"
+CLSID_MPGAUD="{4a2286e0-7bef-11ce-9bd9-0000e202599c}"
+CLSID_MPGVID="{feb50740-7bef-11ce-9bd9-0000e202599c}"
+CLSID_VIDRND="{70e102b0-5556-11ce-97c0-00aa0055595a}"
+CLSID_WAVRND="{e30629d1-27e5-11ce-875d-00608cb78066}"
+CLSID_DSREND="{79376820-07D0-11cf-A24D-0020AFD79767}"
+CLSID_COLOUR="{1643e180-90f5-11ce-97d5-00aa0055595a}"
+CLSID_MPGSPL="{336475d0-942a-11ce-a870-00aa002feab5}"
+CLSID_AVISPL="{1B544C20-FD0B-11ce-8C63-00AA0044B51E}"
+CLSID_MOVSPL="{D51BD5A0-7548-11cf-A520-0080C77EF58A}"
+CLSID_WAVSPL="{D51BD5A1-7548-11cf-A520-0080C77EF58A}"
+CLSID_ASYRDR="{e436ebb5-524f-11ce-9f53-0020af0ba770}"
+CLSID_URLRDR="{e436ebb6-524f-11ce-9f53-0020af0ba770}"
+CLSID

@@ -1,0 +1,193 @@
+PL"
+HKLM,%KEY_CFGMGR%,AskForConfigFunc,,"DMAskForConfig"
+HKLM,%KEY_CFGMGR%,AskForUndock,,"SYSDM.CPL"
+HKLM,%KEY_CFGMGR%,AskForUndockFunc,,"DMAskForUndock"
+HKLM,%KEY_CFGMGR%\SpannableBus,PCI,1,
+HKLM,%KEY_CFGMGR%\SpannableBus,ISAPNP,1,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;Sets VSHARE default values
+HKLM,%KEY_SVCSVXD%\VSHARE,StaticVxD,,"*VSHARE"
+HKLM,%KEY_SVCSVXD%\VSHARE,Start,1,00
+
+;Sets VWIN32 default values
+HKLM,%KEY_SVCSVXD%\VWIN32,StaticVxD,,"*VWIN32"
+HKLM,%KEY_SVCSVXD%\VWIN32,Start,1,00
+
+;Sets VFBACKUP default values
+HKLM,%KEY_SVCSVXD%\VFBACKUP,StaticVxD,,"*VFBACKUP"
+HKLM,%KEY_SVCSVXD%\VFBACKUP,Start,1,00
+
+;Sets VCOMM default values
+HKLM,%KEY_SVCSVXD%\VCOMM,StaticVxD,,"*VCOMM"
+HKLM,%KEY_SVCSVXD%\VCOMM,Start,1,00
+HKLM,%KEY_SVCSVXD%\VCOMM,EnablePowerManagement,3,01,00,00,00
+
+
+
+;Sets COMBUFF default values
+HKLM,%KEY_SVCSVXD%\COMBUFF,StaticVxD,,"*COMBUFF"
+HKLM,%KEY_SVCSVXD%\COMBUFF,Start,1,00
+
+;Sets IFSMGR default values
+HKLM,%KEY_SVCSVXD%\IFSMGR,StaticVxD,,"*IFSMGR"
+HKLM,%KEY_SVCSVXD%\IFSMGR,Start,1,00
+
+;Sets IOS default values
+HKLM,%KEY_SVCSVXD%\IOS,StaticVxD,,"*IOS"
+HKLM,%KEY_SVCSVXD%\IOS,Start,1,00
+
+;Sets SPOOLER default values
+HKLM,%KEY_SVCSVXD%\SPOOLER,StaticVxD,,"*SPOOLER"
+HKLM,%KEY_SVCSVXD%\SPOOLER,Start,1,00
+
+;Sets VFAT default values
+HKLM,%KEY_SVCSVXD%\VFAT,StaticVxD,,"*VFAT"
+HKLM,%KEY_SVCSVXD%\VFAT,Start,1,00
+
+;Sets VCACHE default values
+HKLM,%KEY_SVCSVXD%\VCACHE,StaticVxD,,"*VCACHE"
+HKLM,%KEY_SVCSVXD%\VCACHE,Start,1,00
+
+;Sets VCOND default values
+HKLM,%KEY_SVCSVXD%\VCOND,StaticVxD,,"*VCOND"
+HKLM,%KEY_SVCSVXD%\VCOND,Start,1,00
+
+;Sets VCDFSD default values
+HKLM,%KEY_SVCSVXD%\VCDFSD,StaticVxD,,"*VCDFSD"
+HKLM,%KEY_SVCSVXD%\VCDFSD,Start,1,00
+
+;Sets VXDLDR default values
+HKLM,%KEY_SVCSVXD%\VXDLDR,StaticVxD,,"*VXDLDR"
+HKLM,%KEY_SVCSVXD%\VXDLDR,Start,1,00
+
+;Sets VDEF default values
+HKLM,%KEY_SVCSVXD%\VDEF,StaticVxD,,"*VDEF"
+HKLM,%KEY_SVCSVXD%\VDEF,Start,1,00
+
+;Sets VPICD default values
+HKLM,%KEY_SVCSVXD%\VPICD,StaticVxD,,"*VPICD"
+HKLM,%KEY_SVCSVXD%\VPICD,Start,1,00
+
+;Sets VTD default values
+HKLM,%KEY_SVCSVXD%\VTD,StaticVxD,,"*VTD"
+HKLM,%KEY_SVCSVXD%\VTD,Start,1,00
+
+;Sets REBOOT default values
+HKLM,%KEY_SVCSVXD%\REBOOT,StaticVxD,,"*REBOOT"
+HKLM,%KEY_SVCSVXD%\REBOOT,Start,1,00
+
+;Sets VDMAD default values
+HKLM,%KEY_SVCSVXD%\VDMAD,StaticVxD,,"*VDMAD"
+HKLM,%KEY_SVCSVXD%\VDMAD,Start,1,00
+
+;Sets VSD default values
+HKLM,%KEY_SVCSVXD%\VSD,StaticVxD,,"*VSD"
+HKLM,%KEY_SVCSVXD%\VSD,Start,1,00
+
+;Sets V86MMGR default values
+HKLM,%KEY_SVCSVXD%\V86MMGR,StaticVxD,,"*V86MMGR"
+HKLM,%KEY_SVCSVXD%\V86MMGR,Start,1,00
+
+;Sets PAGESWAP default values
+HKLM,%KEY_SVCSVXD%\PAGESWAP,StaticVxD,,"*PAGESWAP"
+HKLM,%KEY_SVCSVXD%\PAGESWAP,Start,1,00
+
+;Sets DOSMGR default values
+HKLM,%KEY_SVCSVXD%\DOSMGR,StaticVxD,,"*DOSMGR"
+HKLM,%KEY_SVCSVXD%\DOSMGR,Start,1,00
+
+;Sets VMPOLL default values
+HKLM,%KEY_SVCSVXD%\VMPOLL,StaticVxD,,"*VMPOLL"
+HKLM,%KEY_SVCSVXD%\VMPOLL,Start,1,00
+
+;Sets SHELL default values
+HKLM,%KEY_SVCSVXD%\SHELL,StaticVxD,,"*SHELL"
+HKLM,%KEY_SVCSVXD%\SHELL,Start,1,00
+
+;Sets PARITY default values
+HKLM,%KEY_SVCSVXD%\PARITY,StaticVxD,,"*PARITY"
+HKLM,%KEY_SVCSVXD%\PARITY,Start,1,00
+
+;Sets BIOSXLAT default values
+HKLM,%KEY_SVCSVXD%\BIOSXLAT,StaticVxD,,"*BIOSXLAT"
+HKLM,%KEY_SVCSVXD%\BIOSXLAT,Start,1,00
+
+;Sets VMCPD default values
+HKLM,%KEY_SVCSVXD%\VMCPD,StaticVxD,,"*VMCPD"
+HKLM,%KEY_SVCSVXD%\VMCPD,Start,1,00
+
+;Sets VTDAPI default values
+HKLM,%KEY_SVCSVXD%\VTDAPI,StaticVxD,,"*VTDAPI"
+HKLM,%KEY_SVCSVXD%\VTDAPI,Start,1,00
+
+;Sets PERF default values
+HKLM,%KEY_SVCSVXD%\PERF,StaticVxD,,"*PERF"
+HKLM,%KEY_SVCSVXD%\PERF,Start,1,00
+
+;Sets IOS Drive SpinDown default values (in seconds)
+HKLM,%KEY_FILESYSTEM%\,ACDriveSpinDown,3,08,07,00,00
+HKLM,%KEY_FILESYSTEM%\,BatDriveSpinDown,3,b4,00,00,00
+HKLM,%KEY_FILESYSTEM%\,ACSpinDownPrevious,3,00,00,00,00
+HKLM,%KEY_FILESYSTEM%\,BatSpinDownPrevious,3,00,00,00,00
+
+
+; Run once entry to instal Solstice self-ext

@@ -1,0 +1,94 @@
+ill be displayed in the Windows 95 
+toolbar, even after the infrared device is removed. You can ignore it; 
+the Infrared Monitor cannot be used to establish an IR link after the 
+infrared device is removed.
+
+Notes on Running Direct Cable Connection Over an IR Link
+--------------------------------------------------------
+With Direct Cable Connection (DCC), a direct serial or parallel 
+cable connection can be established between two computers to share 
+the resources of the computer designated as the host. DCC can also 
+be used over an IR link connecting the host and a guest computer. 
+If the host is connected to a LAN, the host can also be used as a 
+gateway to the LAN for the guest. 
+
+Preparing to Use DCC:
+
+The computer that contains the folder to be shared is the host, 
+and the other computer is the guest. To share a folder on the 
+host, granting access rights to anyone using the guest computer, 
+carry out the following procedure.
+
+NOTE:
+The following procedure is just one of many that could be used 
+to share files in a folder on the host computer. For example, 
+there is user-level access control as well as share-level access 
+control. The following procedure is one of the simplest access 
+control procedures, which is all that is needed to get started 
+using DCC. To get information about all the ways files, folders, 
+and printers can be shared, use the Windows 95 Help.
+
+1. Double-click the My Computer icon.
+2. Double-click the icon for the drive that contains the folder you 
+   want to share (for example, double-click the icon for the C drive).
+3. Right-click the icon for the folder you want to share, and then 
+   click Properties.
+4. Click the Sharing tab, and then click Shared As.
+5. Enter a share name, enter a comment, and then add user access 
+   rights (Full or Read-Only).
+
+   The folder icon now changes to a folder held in a hand, 
+   indicating that this folder is now a shared resource.
+
+Making Sure DCC Is Installed on Both Computers:
+
+DCC is not installed with the typical Windows 95 installation 
+recommended for most computers. Check whether DCC is installed 
+on both of the two computers that will be using the IR link. To 
+do this, click the Start button, point to Programs, and then point 
+to Accessories. Direct Cable Connection appears on this menu if it 
+is installed.
+
+If DCC is installed on both the host computer and the guest computer, 
+then skip the next step.
+
+An Optional Step: Installing DCC:
+
+Before establishing a DCC connection, DCC must be installed on both 
+the host computer and the guest computer. Carry out the following 
+procedure on each computer that does not have DCC already installed.
+
+1. Click the Start button, point to Settings, and then click Control 
+   Panel.
+2. Double-click the Add/Remove Programs icon, and then click the 
+   Windows Setup tab.
+3. Click Communications, and then click the Details button.
+4. Make sure that the Direct Cable Connection check box is selected, 
+   and then click OK.
+
+Establishing and Using the DCC IR Link Between Host and Guest:
+
+To run DCC over an IR link, carry out the following procedure:
+
+1. Make sure the IR communications driver is properly installed and 
+   the IR devices are enabled by carrying out the procedures in 
+   "Step 1. Installing the IR Communications Driver" and "Step 2. 
+   Validating the IR Communications Driver Installation" earlier 
+   in this document.
+
+   NOTE:
+   To increase the likelihood of success with DCC over an IR link, 
+   use the Limit Connection Speed To option on the Infrared Monitor 
+   Options tab to limit the IR connection speed to 9600 bps for the 
+   first test of DCC over the IR link (and then increase the speed 
+   later).
+
+2. On the host computer, click the Start button, point to Accessories, 
+   and then click Direct Cable  Connection.
+
+3. Follow the steps in the Direct Cable Connection Wizard to set up 
+   the host computer.
+
+   When the wizard prompts you for it, select the Host option. 
+
+   When the wizard prompts you to choo

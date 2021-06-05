@@ -1,0 +1,133 @@
+ns are needed to support installing MSN
+; using the Windows Setup CPL after Win95 is already on the user's
+; machine.  The [MaintMode.Uninstall] section is needed to support
+; uninstalling MSN using the same CPL.
+; MaintMode.Uninstall leaves the version 1.0 MSN files needed to
+; support online reg. Note it *does* potentially perform a
+; downgrade, but this is the only way to guarantee this subset of
+; the MSN files will work together (in the case a later version
+; introduces a new dependency).
+; ********************************************************************
+
+[MaintMode.CopyFiles]
+MOS.INF
+
+[MaintMode.AddReg]
+; Set all components to uninstalled initially
+; Top-level
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"MOSTop",,"MOSTop"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,INF,,"MOS.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,Section,,"MOSTop"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,Installed,2,"0"
+; Sub-level
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"MSNetwork",,"MSNetwork"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,INF,,"MOS.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,Section,,"MicrosoftNetwork"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,Installed,2,"0"
+; Dummy sub-level entries added to keep INETWIZ happy. DONT make it visible to CPL!
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,INF,,"MOS.INF"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,Section,,"MicrosoftNetwork105"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,Installed,0,"1"
+; sets identification of current version
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnDisk",0,"0.0"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnSource",0,"1.3"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnWeb",2,"0.0"
+
+[MaintMode.Uninstall]
+DelFiles        = Marvel_Copy_Files, Marvel_Help, MSN_Desktop_Icon, Marvel_WinSys_Files
+CopyFiles       = Uninstall.v1_PFMSN, Uninstall.v1_WinSys, Uninstall.v1_WinHelp, Uninstall.v1_RegWiz
+UpdateInis      = Uninstall.UpdateInis
+AddReg          = Uninstall.AddReg
+DelReg          = Uninstall.DelReg, MOS_Reg
+
+[MaintMode.Uninstall.DelOnly]
+DelFiles        = Marvel_Copy_Files, Marvel_Help, MSN_Desktop_Icon, Marvel_WinSys_Files
+UpdateInis      = Uninstall.UpdateInis
+AddReg          = Uninstall.AddReg
+DelReg          = Uninstall.DelReg, MOS_Reg
+
+
+
+
+; dummy sections added to keep INETWIZ.EXE happy
+[MicrosoftNetwork105]         ;dummy section does nothing
+
+
+; ********************************************************************
+; [Old_XXX_Files]
+;
+; These sections list all the files which have been installed in 
+; previous versions of MSN, but which have been since moved
+; to a different folder or removed. Garbage collection.
+; ********************************************************************
+
+[Old_WinSys_Files]
+; C:\Windows\System
+800950.DAT
+CALLNED.NED
+CCEI.DLL
+CCPSH.DLL
+CONFAPI.DLL
+DATAEDCL.DLL
+DSNED.NED
+DZIPNT.DLL
+ENGCT.EXE
+GUIDE.EXE
+IMCLIENT.DLL
+LGINT.DLL
+MAILMSG.DLL
+MAILUTIL.DLL
+MARVEL.HLP
+MEDV13.DLL
+MMVDIB12.DLL
+MOSAF.DLL
+MOSCOMP.DLL
+MOSCP.EXE
+MOSSHELL.DLL
+MOSSTUB.DLL
+MPCCL.DLL
+MSNAPI.DLL
+MSNCALL.EXE
+MSNPROXY.DLL
+MSNSSPC.DLL
+MVCL13N.DLL
+MVTTL13C.DLL
+OLREGDLL.DLL
+PHONE.PBK
+PHTAGS.CSV
+RECEIVED.SHG
+REG.DLL
+SACLIENT.DLL
+SECURCL.DLL
+SERIALIZ.DLL
+SIGNONCL.DLL
+SIGNUP.EXE
+SRVMSG.DLL
+STATE.PBK
+TREEEDCL.DLL
+WELCOME.SHG
+
+[Old_WinMSN_Files]
+BBSNAV.NAV
+CCDIALER.EXE
+CMCLTCTR.CM
+CONFAPI.DLL
+DNR.EXE
+DSNAV.NAV
+DSNED.NED
+FINDLVCL.EXE
+FINDSTUB.DLL
+FTMCL.EXE
+GUIDENAV.NAV
+LEGALAGR.TXT
+MMVDIB12.DLL
+MOSFIND.DLL
+MOSVIEW.EXE
+MSN.MSN
+MSNFIND.EXE
+NEWTIPS.TXT
+OLREGAPP.EXE
+ONLSTMT.EXE
+PLANS.TXT
+PRODINFO.TXT
+SI

@@ -1,0 +1,186 @@
+m$$”DYÄ±¿¿¿–¨±«k¿¿¿¿¿¿D”D°D”$”D¿D?àª¤U.G?$DDDDDtMV|ŸV||ŸŸŸŸVVVVVVVVVVVŸŸÍÍÁYYYÍÍÍÍw|Z|Ñ«ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ||«|VV‘ÍÍ>YYÁÁMÍÍŸVVVVVVVVVVVVVVŸŸÄ«ÄV|«Ğ¨ÊDDD?‘šä¤¤&9ÈDD$””ÆØD”¿DDDDDDD”$âmmm$DDDtŸ±Äk¿¿$$ÆÄ±MÆF°½ÀÀÀÀÀ\ÚÚÚÚÚÚÚÚ—————————œ‘,,,,,,,,,,,,,,·vvvvÛ·!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,Ûvv!²²²²©mm$D–kMÃ¿¿¿¬MM-¿¿¿¿¿DDD°ØD”””D¿DâÈÜÎ¤¤ä.0?$¿D”tMVÄŸV«|ŸŸŸŸVVVVVVVVVVVŸŸÍÁ>YYY>ÍÍÍÍ™|ZÄ«ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ±Ä|«|VV‘ÍÍYYYÁÍÁMÍÍŸVVVVVVVVVVVVVŸŸŸÄ±ÄVÄ|ÍĞ>ÆD”?G.ä¤¤äª0ÈâD”””D°D¿¿¿¿¿D¬Mk-¿¿””°M(FF°§ÀÀÀÀÀ\ÚÚÚÚÚÚÚ——————————Ç,,,,,,,,,,,,,[·vvvv··[
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<title>Customer Support -- Bugs</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body>
+<!--VERMEER 
+   BOT=Include
+   U-Include="header.htm"
+   TAG="BODY"
+ --><h2><a name="top">BUGS</a></h2>
+<p>If you're experiencing a problem with one of our software products, please fill out and submit the 
+following <a href="#bugrepform">bug report form</a>. You may also want to check out our <a href="#knownprobs">list of known problems</a>. </p>
+<p>If what you want to tell us is really more of a suggestion or a request for enhancement, please use our 
+<a href="suggest.htm">suggestion form</a> instead.</p>
+<hr>
+<h3><a name="bugrepform">Bug Report Form</a></h3>
+<p>When you submit your bug report, it will be entered into our database for tracking purposes. It will 
+be associated with the account name under which you accessed this web. After an initial assessment 
+by our support department, the resolution of the problem will be assigned to an appropriate engineer. 
+Periodically we will post notices regarding bugs reported by our customers in the <a href="#knownprobs">Known Problems</a> 
+section of this page, and tips or workarounds on the <a href="faq.htm">FAQ</a> page.</p>
+<p>Please be as specific as possible when describing the problem.</p>
+<form action="--VERMEER-SELF--" method="POST">
+<!--VERMEER 
+   BOT=SaveResults
+   U-File="buglist.htm"
+   S-Format="HTML/DL"
+   S-Label-Fields="TRUE"
+   S-Builtin-Fields="Date Time REMOTE_NAME REMOTE_USER HTTP_USER_AGENT"
+   S-Form-Fields
+ -->
+<ol>
+<li>What version of the software are you using?<br>
+<select name="FPVersion" size=1>
+<option>Alpha release</option>
+<option>Beta release 1</option>
+<option>Beta release 2</option>
+<option selected>Release 1.0</option>
+<option>Release 1.1</option>
+<option>Release 1.2</option>
+</select><br>
+<br>
+</li>
+<li>What operating system are you using?<br>
+<select name="OSVersion" size=1>
+<option>Windows 3.1</option>
+<option>Windows NT</option>
+<option selected>Windows 95</option>
+</select> Other: <input type=text size=20 maxlength=256 name="OSVersionOther"><br>
+<br>
+</li>
+<li>Please enter a brief one-line description of the problem:<br>
+<input type=text size=55 maxlength=256 name="OneLiner"><br>
+(<em><strong>example</strong></em>: &quot;Editor doesn't respond to up-arrow under image&quot;)<br>
+<br>
+</li>
+<li>If the problem is reproducible, please list the steps required to cause it,<br>
+leaving a blank line betw

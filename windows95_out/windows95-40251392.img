@@ -1,0 +1,88 @@
+w 
+capture areas inside 32-bit programs, because 16-bit programs do not 
+see mouse movements over 32-bit programs. All other mouse capture 
+methods will still work, and this will continue to work with 16-bit 
+programs. 
+
+PCTools Versions 7 Through 9: Shortcuts will not be created during 
+installation of PCTOOLS versions 7 through 9 on Windows 95. To create 
+shortcuts after installation:
+1. Click the Start menu, and then click Run.
+2. Type Cpsdos.grp, and then press ENTER.
+
+PCTools will be added to your Programs folder. For the shortcuts to 
+work, you must add the PCTOOLS directory to the PATH.
+
+Because of changes to the Windows 95 file system, these disk utilities 
+will not work correctly with long filenames. For information about 
+purchasing disk utilities that were designed for Windows 95, contact 
+Symantec.
+
+Personal Oracle 7.1 for Windows 3.1: This program cannot be installed
+on   Windows 95  because it requires a Win32s .dll that is no longer
+used. For   information about obtaining an updated version for Windows
+95, call   Oracle Corporation at (415) 506 7000 or contact your local
+Oracle office.
+
+QuarkXPress 3.3: You may experience the following problems:
+- Out-of-memory error. Upgrading to QuarkXPress 3.32 should solve the 
+  problem. You can contact Quark directly for the fix.
+- QuarkXpress 3.3/3.31x library windows may fail to display control box
+  and menu items, rendering it impossible to resize or close library
+  files. This problem will be corrected in QuarkXpress 3.32
+- The QuarkXPress installer may stop at 99% complete when installing on 
+  some Windows 95 computers. To properly complete the installation
+  process, select the Continue button.
+
+Quickbooks 2.0: If you experience problems running Quickbooks 2.0 
+with Windows 95, add the following entry to the [Compatibility] 
+section of your Win.ini file:
+	QBW=0x08000000
+
+Quickbooks 3.0: Before you minimize Quickbooks, be sure to register 
+the product. If you have already minimized it and are experiencing 
+problems running Quickbooks 3.0, delete the Qbw.ini file in your 
+Quickbooks directory. 
+
+Quicken: If you configured Quicken to use a printer other than the 
+system default printer or to use custom fonts, you will lose these 
+settings after upgrading to Windows 95. After Windows 95 is installed, 
+you can use Quicken to restore these settings.
+
+Rumba Office 2.0: The shared folders functionality is not functional
+in Windows 95 and will cause installation problems if selected. To 
+turn off this feature, when installing Rumba:
+1. Select Custom.
+2. Select AS/400.
+3. Make sure the check box titled Shared Folders And Client API's is 
+   not checked.
+4. Continue the installation.
+
+Splice 2.0: You may encounter a General Protection Fault if you try 
+to create an optimal palette with some video files. This problem has 
+been fixed by Asymetrix in the most recent version (now called Digital 
+Video Producer). An free upgrade is available from Asymetrix for all 
+registered Splice users. For more information, contact Asymetrix 
+Technical Support at 206-637-1600.
+
+SuperPrint: Because of changes to the Windows operating system, 
+Version 2.0 of SuperPrint (which includes SuperQue) does not work 
+with Windows 95. For more information about SuperQue 95, call 
+(800) 366 7494.
+
+Talk-To Plus: For information about the availability of an upgrade 
+that may be compatible with Windows 95, call Dragon Systems at 
+(800) 825-5897 or (617) 965-5200.
+
+The 7th Guest: If you are running The 7th Guest with a Pro Audio 
+Spectrum 16 sound card, you will either need to enable and use the 
+Sound Blaster compatibility mode, or configure your Pro Audio Spectrum 
+card to IRQ 5 and DMA 3.
+
+Timeline: You may have problems running existing macros with Timeline. 
+Timeline tries to use window handles that it has already freed and may 
+cause an error. For information about program updates, contact the 
+vendor.
+
+Typestry 2.0: If you experience problems running Typestry 2.0, you
+need to obtain a patch from Pixar, Inc. Cal

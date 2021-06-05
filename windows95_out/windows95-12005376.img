@@ -1,0 +1,161 @@
+[EBD034]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=034,850,country.sys"
+
+[Config034]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=034, 850
+
+[EBD039]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=039,850,country.sys"
+
+[Config039]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=039, 850
+
+[EBD046]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=046,850,country.sys"
+
+[Config046]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=046, 850
+
+[EBD061]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=061,850,country.sys"
+
+[Config061]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=061, 437
+
+[EBD064]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=064,850,country.sys"
+
+[Config064]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=064, 850
+
+[EBD045]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=045,850,country.sys"
+
+[Config045]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=045, 850
+
+[EBD041]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=041,850,country.sys"
+
+[Config041]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=041, 850
+
+[EBD047]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=047,850,country.sys"
+
+[Config047]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=047, 850
+
+[EBD031]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=031,850,country.sys"
+
+[Config031]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=031, 850
+
+[EBD032]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=032,850,country.sys"
+
+[Config032]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=032, 850
+
+[EBD785]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=785,850,country.sys"
+
+[Config785]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=785, 850
+
+[EBD027]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=027,850,country.sys"
+
+[Config027]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=027, 850
+
+[EBD358]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=358,850,country.sys"
+
+[Config358]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=358, 850
+
+[EBD002]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=002,850,country.sys"
+
+[Config002]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=002, 850
+
+[EBD004]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=004,850,country.sys"
+
+[Config004]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=004, 850
+
+
+[EBD351]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=351,850,country.sys"
+
+[Config351]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=351, 850
+
+[EBD003]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=003,850,country.sys"
+
+[Config003]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=003, 850
+
+[EBD052]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=052,850,country.sys"
+
+[Config052]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=052, 850
+
+
+[EBD055]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=055,850,country.sys"
+
+[Config055]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=055, 850
+
+[EBD354]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=354,850,country.sys"
+
+[Config354]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=354, 850
+
+
+
+;*********************************************************************
+;** The following RegCPXXX files make registry entries that tell    **
+;** the system what OEM code page and what ANSI code page the user  **
+;** will be using                                                   **
+;*********************************************************************
+
+
+[RegCP850]
+HKLM, %KEY_Codepage%,ACP,,"1252"
+HKLM, %KEY_Codepage%,OEMCP,,"850"
+HKLM, Config\0001\Display\Settings,oemfonts.fon,,"vga850.fon"
+HKLM,%KEY_FontSize%\96\System,vga850.fon,,oemfonts.fon
+HKLM,%KEY_FontSize%\96\System,vgafix.fon,,fixedfon.fon
+HKLM,%KEY_FontSize%\96\System,vgasys.fon,,fonts.fon
+HKLM, %KEY_EBD%\EBDConfigSysLocale,2,,"device=display.sys con=(ega,,1)"
+HKLM, %KEY_EBD%\EBDAutoexecBatLocale,1,,"mode con cp prepare=((850) ega.cpi)"
+HKLM, %KEY_EBD%\EBDAutoexecBatLocale,2,,"mo

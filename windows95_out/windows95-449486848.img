@@ -1,0 +1,106 @@
+                    2
+[AltIrq]                                                3
+[AltIrq]                                                7
+[AltIrq]                                                10
+[AltIrq]                                                11
+[AltIrq]                                                12
+[AltIrq]                                                15
+
+[NumberOfMidiIrqs]                              8
+[MidiIrq]                                               5
+[MidiAltIrq]                                    2
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    7
+[MidiAltIrq]                                    10
+[MidiAltIrq]                                    11
+[MidiAltIrq]                                    12
+[MidiAltIrq]                                    15
+
+[NumberOfDmas]                                  2
+[Dma]                                                   3
+[AltDma]                                                1
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Media Vision Thunderboard]
+[CardId]                                                107
+[CardGroup]                                             1
+
+[RmMidiDriverName]                              [sbfm.adv]
+[RmDigitalDriverName]           [sbdig.adv]
+[PmMidiDriverName]                              [a32sbfm.dll]
+[PmDigitalDriverName]           [a32sbdg.dll]
+
+
+[MidiDriverChunkNumber]                 7
+[DigitalDriverChunkNumber]              6
+
+[NumberOfMidiAddresses]                 6
+[MidiAddress]                                   0x220
+[MidiAltAddress]                                0x210
+[MidiAltAddress]                                0x230
+[MidiAltAddress]                                0x240
+[MidiAltAddress]                                0x250
+[MidiAltAddress]                                0x260
+
+[NumberOfDigitalAddresses]              6
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x210
+[DigitalAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+[DigitalAltAddress]                             0x250
+[DigitalAltAddress]                             0x260
+
+[NumberOfIrqs]                                  4
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                3
+[AltIrq]                                                5
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               7
+[MidiAltIrq]                                    2
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    5
+
+
+[NumberOfDmas]                                  1
+[Dma]                                                   1
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               2
+[AddressJumper]
+[IrqJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Ensoniq SoundScape]
+[CardId]                                                129
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [mt32mpu.adv]
+[RmDigitalDriverName]           [sbdig.adv]
+[PmMidiDriverName]                              [a32mt32.dll]
+[PmDigitalDriverName]           [a32sbdg.dll]
+
+
+[MidiDriverChunkNumber]                 2
+[DigitalDriverChunkNumber]         

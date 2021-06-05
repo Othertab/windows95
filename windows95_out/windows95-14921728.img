@@ -1,0 +1,67 @@
+35BE}",,,"%PP_INDEO_CO_CTL%"
+HKCR,"CLSID\{87CA6F04-49E4-11CF-A3FE-00AA003735BE}\InprocServer32",,,"%11%\ir41_32.ax"
+HKCR,"CLSID\{87CA6F04-49E4-11CF-A3FE-00AA003735BE}\InprocServer32","ThreadingModel",,"Both"
+;
+; File type determination entries
+;
+HKCR,"Media Type\%MT_STREAM%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb84-524f-11ce-9f53-0020af0ba770}",0,,"0, 16, FFFFFFFFF100010001800001FFFFFFFF, 000001BA2100010001800001000001BB"
+HKCR,"Media Type\%MT_STREAM%\{e436eb84-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb85-524f-11ce-9f53-0020af0ba770}",0,,"0, 4, , 52494646, 8, 8, , 43445841666D7420, 36, 20, FFFFFFFF00000000FFFFFFFFFFFFFFFFFFFFFFFF, 646174610000000000FFFFFFFFFFFFFFFFFFFF00"
+HKCR,"Media Type\%MT_STREAM%\{e436eb85-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb86-524f-11ce-9f53-0020af0ba770}",0,,"0, 4, , 000001B3"
+HKCR,"Media Type\%MT_STREAM%\{e436eb86-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb87-524f-11ce-9f53-0020af0ba770}",0,,"0, 3, FFFC04, FFFC00"
+HKCR,"Media Type\%MT_STREAM%\{e436eb87-524f-11ce-9f53-0020af0ba770}",1,,"0, 3, FFFC0C, FFFC08"
+HKCR,"Media Type\%MT_STREAM%\{e436eb87-524f-11ce-9f53-0020af0ba770}",2,,"0, 3, FFFE04, FFFA00"
+HKCR,"Media Type\%MT_STREAM%\{e436eb87-524f-11ce-9f53-0020af0ba770}",3,,"0, 3, FFFE0C, FFFA08"
+HKCR,"Media Type\%MT_STREAM%\{e436eb87-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb89-524f-11ce-9f53-0020af0ba770}",0,,"4, 4, , 6d646174"
+HKCR,"Media Type\%MT_STREAM%\{e436eb89-524f-11ce-9f53-0020af0ba770}",1,,"4, 4, , 6d6f6f76"
+HKCR,"Media Type\%MT_STREAM%\{e436eb89-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb8b-524f-11ce-9f53-0020af0ba770}",0,,"0, 4, , 52494646, 8, 4, , 57415645"
+HKCR,"Media Type\%MT_STREAM%\{e436eb8b-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb8c-524f-11ce-9f53-0020af0ba770}",0,,"0, 4, , 2e736e64"
+HKCR,"Media Type\%MT_STREAM%\{e436eb8c-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb8d-524f-11ce-9f53-0020af0ba770}",0,,"0, 4, , 464f524d, 8, 4, , 41494646"
+HKCR,"Media Type\%MT_STREAM%\{e436eb8d-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+HKCR,"Media Type\%MT_STREAM%\{e436eb88-524f-11ce-9f53-0020af0ba770}",0,,"0, 4, , 52494646, 8, 4, , 41564920"
+HKCR,"Media Type\%MT_STREAM%\{e436eb88-524f-11ce-9f53-0020af0ba770}","Source Filter",,"%CLSID_ASYRDR%"
+;
+; Video Control
+;
+HKCR,"AMOVIE.ActiveMovie Control",,,"ActiveMovie Control Object"
+HKCR,"AMOVIE.ActiveMovie Control\CLSID",,,"%CLSID_AMOCX1%"
+HKCR,"AMOVIE.ActiveMovie Control\CurVer",,,"AMOVIE.ActiveMovie Control.1"
+;
+HKCR,"AMOVIE.ActiveMovie Control.1",,,"ActiveMovie Control Object"
+HKCR,"AMOVIE.ActiveMovie Control.1\CLSID",,,"%CLSID_AMOCX1%"
+; don't warn when following HREF links
+HKCR,"AMOVIE.ActiveMovie Control.1","EditFlags",1,00,00,01,00
+;
+; server
+;
+HKCR,"CLSID\%CLSID_AMOCX1%",,,"ActiveMovie Control Object"
+HKCR,"CLSID\%CLSID_AMOCX1%\InprocServer32",,,"%11%\amovie.ocx"
+HKCR,"CLSID\%CLSID_AMOCX1%\InprocServer32","ThreadingModel",,"Apartment"
+HKCR,"CLSID\%CLSID_AMOCX1%\VersionIndependentProgID",,,"AMOVIE.ActiveMovie Control"
+HKCR,"CLSID\%CLSID_AMOCX1%\Control"
+HKCR,"CLSID\%CLSID_AMOCX1%\ProgID",,,"AMOVIE.ActiveMovie Control.1"
+HKCR,"CLSID\%CLSID_AMOCX1%\TypeLib",,,"%CLSID_AMOCXT%"
+HKCR,"CLSID\%CLSID_AMOCX1%\MiscStatus",,,"0"
+HKCR,"CLSID\%CLSID_AMOCX1%\MiscStatus\1",,,"131473"
+HKCR,"CLSID\%CLSID_AMOCX1%\ToolboxBitmap32",,,"%11%\amovie.ocx,3"
+HKCR,"CLSID\%CLSID_AMOCX1%\Version",,,"1.0"
+HKCR,"CLSID\%CLSID_AMOCX1%\Implemented Categories"
+HKCR,"CLSID\%CLSID_AMOCX1%\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}"
+HKCR,"CLSID\%CLSID_AMOCX1%\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}"
+HKCR,"CLSID\%CLSID_AMOCX1%\EnablePlugin\.mo

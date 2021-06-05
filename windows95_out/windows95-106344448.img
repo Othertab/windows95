@@ -1,0 +1,88 @@
+re connections (as specified 
+  in the IrDA IrCOMM specification). For example, a pair of 
+  handheld computer platforms might communicate with each other 
+  over IR links using 3-wire cooked emulation. However, if you 
+  also expect to use one of the handhelds to communicate with a 
+  Windows 95 computer, then the handheld IR driver must implement 
+  9-wire connections. 
+
+Troubleshooting Tips for Specific Infrared Hardware
+---------------------------------------------------
+- The Adaptec AIRport 2000 infrared adapter can be powered in three 
+  ways: by the serial port, by installed AA batteries, or by an 
+  external power supply. In some cases, the serial port might not 
+  provide sufficient power for the operation of the adapter. This 
+  can cause reduced operating range and/or a failure to find another 
+  IR device which is nearby and aligned correctly. If such a problem 
+  is suspected, connect an AC adapter or add four AA batteries to the 
+  battery compartment in the infrared adapter. This will assure 
+  sufficient power. In some instances, you might need to separate 
+  the adapter by at least six inches from the other IR device.
+
+- If an ActiSys 220L IR adapter is attached to a computer and used 
+  to print to a printer that is using an Extended Systems ESI-9580 
+  printer IR adapter, or for printing to an HP DeskJet 340, you must 
+  use the Options tab in the Infrared Monitor properties to limit the 
+  connection speed to 19.2 kbps in order to print successfully. If the 
+  IR devices are allowed to automatically negotiate the connection 
+  speed without setting this limit, they will negotiate a higher 
+  connection speed and a program will be unable to print.
+
+- The TI TravelMate 5000 might communicate over an IR link only at 
+  very low speeds (9600 bps).
+
+- The Sharp PC 3050 might communicate over an IR link only at speeds 
+  between 9600 bps and 19.2 kbps.
+
+- For the HP Omnibook 4000C or an HP Omnibook 600CT, which have 
+  built-in infrared ports, you must install a special echo-canceling 
+  serial driver in addition to the components that make up the IR 
+  communications driver. The echo-canceling driver, and instructions 
+  on how to install it, are available from Hewlett-Packard. 
+
+
+INSTALLING AND USING THE IR COMMUNICATIONS DRIVER
+=================================================
+
+The following three-step process is recommended:
+
+1. Install the Windows 95 IR Communications Driver.
+2. Validate the installation by printing over the IR link, using a 
+   program to transfer data over the IR link, and/or using a local 
+   area network (LAN) over the IR link.
+3. Start using the IR link on a daily basis.
+
+After you install the driver, it can be removed at any time (for 
+more information, see "An Optional Step: Removing the IR Communications 
+Driver").
+
+Procedures for carrying out each of the recommended steps, including 
+the driver removal step, are presented in detail below.
+
+Step 1: Installing the IR Communications Driver
+-----------------------------------------------
+NOTE:
+If any version of the IR communications driver has been installed 
+on your computer before, you must remove it before carrying out 
+the following steps. To check whether an IR communications driver 
+is currently installed on your computer, open Control Panel. If 
+Control Panel displays an Infrared icon, there is a previously 
+installed version of the IR communications driver on your computer.
+
+For a procedure you can use to remove a previously installed 
+version of the driver, see "An Optional Step: Removing the 
+IR Communications Driver" later in this document.
+
+To install the IR communications driver, carry out the following 
+procedure:
+
+1. In Control Panel, double-click the Add New Hardware icon, and 
+   then click Next.
+
+2. When the Add New Hardware wizard prompts you "Do you want Windows 
+   to search for your new hardware?", click No, and then click Next.
+
+3. In the list of hardware types, click Infrared, and then click 
+   Next.
+
+4. When the Add In

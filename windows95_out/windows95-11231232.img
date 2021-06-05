@@ -1,0 +1,45 @@
+y_Physical_Disk_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\CDROM\%%ComponentID,",PhysicalDisk",,"deskmgmt.dll,DM_Query_Physical_Disk_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,",VideoBIOSCharacteristic",,"deskmgmt.dll,DM_Query_Video_BIOS_Characteristic_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,",VideoBIOS",,"deskmgmt.dll,DM_Query_Video_BIOS_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,",Video",,"deskmgmt.dll,DM_Query_Video_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID,",Keyboard",,"deskmgmt.dll,DM_Query_Keyboard_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID,":KeyboardType",,"%%Device\DeviceDesc"
+HKLM,DesktopManagement\Install\Defaults\Data\Mouse\%%ComponentID,",Mouse",,"deskmgmt.dll,DM_Query_Mouse_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID,",OIDs",,"deskmgmt.dll,DM_Query_Netcard_OID"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID,",NetworkAdapter802Port",,"deskmgmt.dll,DM_Query_Netcard_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\802AlternateAddress,",AddressType",,"deskmgmt.dll,DM_Query_Netcard_Alternate_Address_Value"
+HKLM,DesktopManagement\Install\Defaults\Data\Net\%%ComponentID\802AlternateAddress,",AlternateAddress",,"deskmgmt.dll,DM_Query_Netcard_Alternate_Address_Value"
+HKLM,DesktopManagement\Install\Defaults\Data\NetTrans\%%ComponentID,",Protocol",,"deskmgmt.dll,DM_Query_Protocol_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID,",ParallelPort",,"deskmgmt.dll,DM_Query_Parallel_Port_Info"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID,",SerialPort",,"deskmgmt.dll,DM_Query_Serial_Port_Info"
+
+;  Instrumentation over-rides for NE3200 cards
+;
+HKLM,DesktopManagement\Install\Devices\Data\EISA\*NVL0701\%%ComponentID,",NetworkAdapter802Port",,""
+HKLM,DesktopManagement\Install\Devices\Data\EISA\*NVL0701\%%ComponentID,",OIDs",,""
+HKLM,DesktopManagement\Install\Devices\Data\EISA\*NVL0702\%%ComponentID,",NetworkAdapter802Port",,""
+HKLM,DesktopManagement\Install\Devices\Data\EISA\*NVL0702\%%ComponentID,",OIDs",,""
+
+;  "Target" values for unknown items from MIF.  These should be
+;  filled in by system or device vendors to complete the MIF.
+;
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID,"ConnectorType",1,02		; "Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID,"ConnectorPinout",1,02	; "Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\ParallelPort\%%ComponentID,"DMASupport",1,
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID,"ConnectorType",1,02		; "Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID,"ConnectorPinout",1,02	; "Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID,"MaximumSpeed",1,00,C2,01,00	; 115,200
+HKLM,DesktopManagement\Install\Defaults\Data\SerialPort\%%ComponentID,"SerialPortCapabilities",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID,"KeyboardConnectorType",1,02
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"VideoMemoryType",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"ScanMode",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"VideoPhysicalLocation",1,02
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"CurrentNumberOfRows",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"CurrentNumberOfColumns",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"CurrentRefreshRate",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"VideoBIOSShadowingState",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID,"VideoBIOSDate",1,
+
+HKLM,DesktopManagement\Install\Defaults\Data\DiskDrive\%%ComponentID,"InterfaceDescription",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\DiskDrive\%%ComponentID

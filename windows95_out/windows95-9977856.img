@@ -1,0 +1,133 @@
+,token.param.all,token16isa.param,token16isa.resc
+LogConfig=*pnp816d.LogConfig
+
+[*pnp816d.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp816d"
+
+[*pnp816d.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F(3FF::),3A20-3A2F(3FF::),1000-100F(3FF::)
+IRQConfig=3,7,9,10,11,12,14,15
+DMAConfig=3,5,6,7
+
+
+;****************************************************************************
+; *pnp8169 NCR StarCard
+;****************************************************************************
+[*pnp8169.ndi]
+AddReg=*pnp8169.ndi.reg,star.reg
+LogConfig=*pnp8169.LogConfig
+
+[*pnp8169.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8169"
+
+[*pnp8169.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=380-38F(3FF::),390-39F(3FF::)
+IRQConfig=3,4,5,7,9
+
+;****************************************************************************
+; wave  base section
+;****************************************************************************
+[wave.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"DNCRWL02"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NCRWVE$"
+HKR,NDIS\NDIS2,FileName,,"DNCRWL02.dos"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"NCRWVE.ndis2"
+; params
+; ACR
+HKR,NDI\params\ACR,ParamDesc,,"Accelerated Contention Resolution"
+HKR,NDI\params\ACR,flag,1,10,00,00,00
+HKR,NDI\params\ACR,default,,6
+HKR,NDI\params\ACR,type,,enum
+HKR,NDI\params\ACR\enum,2,,2
+HKR,NDI\params\ACR\enum,6,,6
+
+
+; Install NDIS2
+[NCRWVE.ndis2]
+CopyFiles=NCRWVE.ndis2.CopyFiles
+[NCRWVE.ndis2.CopyFiles]
+dncrwl02.dos
+
+
+
+;****************************************************************************
+; token 16 base section
+;****************************************************************************
+[token.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"STRN"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"STRN$"
+HKR,NDIS\NDIS2,FileName,,"STRN.dos"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"STRN.ndis2"
+
+
+; Install NDIS2
+[STRN.ndis2]
+CopyFiles=STRN.ndis2.CopyFiles
+[STRN.ndis2.CopyFiles]
+STRN.dos
+
+
+;****************************************************************************
+; star base section
+;****************************************************************************
+[star.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"slan"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"STARLAN$"
+HKR,NDIS\NDIS2,FileName,,"slan.dos"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"slan.ndis2"
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,PORT_ADDRESS,1,02,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,10,00,00,00
+HKR,NDI\params\PORT_ADDRESS,resc,1,02,00,00,00
+HKR,NDI\params\PORT_ADDRESS,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\PORT_ADDRESS,flag,1,10,00,00,00
+; params
+; FUNC_ADDRESS
+HKR,NDI\params\FUNC_ADDRESS,ParamDesc,,"Type of NETBIOS Functional Address"
+HKR,NDI\params\FUNC_ADDRESS,flag,1,10,00,00,00
+HKR,NDI\params\FUNC_ADDRESS,default,,NEW
+HKR,NDI\params\FUNC_ADDRESS,type,,enum
+HKR,NDI\params\FUNC_ADDRESS\enum,NEW,,NEW
+HKR,NDI\params\FUNC_ADDRESS\enum,OLD,,OLD
+; LAN_ID_ROM
+HKR,NDI\params\LAN_ID_ROM,ParamDesc,,"Address in ROM of Address"
+HKR,NDI\params\LAN_ID_ROM,flag,1,10,00,00,00
+HKR,NDI\params\LAN_ID_ROM,de

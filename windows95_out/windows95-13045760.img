@@ -1,0 +1,202 @@
+HW,DontStopChild.RegHW
+
+[UNKNOWN_PCI_IDE.RegHW]
+HKR,Child0000,HardwareID,,MF\BADPRIMARY
+HKR,Child0000,ResourceMap,1,00,01,02,06
+HKR,Child0000,MFFlags,1,0C,00,00,00
+HKR,Child0001,HardwareID,,MF\BADSECONDARY
+HKR,Child0001,ResourceMap,1,03,04,05,07
+HKR,Child0001,MFFlags,1,0C,00,00,00
+
+[UNKNOWN_PCI_IDE.PosDup]
+*PNP0600
+
+[DUAL_BAD_IDE]
+AddReg=PCIMF.Reg,IDEProp.Reg
+
+[DUAL_BAD_IDE.HW]
+AddReg=DUAL_BAD_IDE.RegHW,DontStopChild.RegHW
+
+[DUAL_BAD_IDE.RegHW]
+HKR,Child0000,HardwareID,,MF\BADPRIMARY
+HKR,Child0000,ResourceMap,1,00,01,02,06
+HKR,Child0000,MFFlags,1,0C,00,00,00
+HKR,Child0001,HardwareID,,MF\BADSECONDARY
+HKR,Child0001,ResourceMap,1,03,04,05,07
+HKR,Child0001,MFFlags,1,0C,00,00,00
+HKR,,PCIDualIDE,1,01
+
+[DUAL_BAD_IDE.PosDup]
+*PNP0600
+
+[DUAL_GOOD_IDE]
+AddReg=PCIMF.Reg,IDEProp.Reg
+
+[DUAL_GOOD_IDE.HW]
+AddReg=DUAL_GOOD_IDE.RegHW
+
+[DUAL_GOOD_IDE.RegHW]
+HKR,Child0000,HardwareID,,MF\GOODPRIMARY
+HKR,Child0000,ResourceMap,1,00,01,02,06
+HKR,Child0000,MFFlags,1,0C,00,00,00
+HKR,Child0001,HardwareID,,MF\GOODSECONDARY
+HKR,Child0001,ResourceMap,1,03,04,05,07
+HKR,Child0001,MFFlags,1,0C,00,00,00
+HKR,,PCIDualIDE,1,01
+
+[DUAL_GOOD_IDE.PosDup]
+*PNP0600
+
+[IDEProp.Reg]
+HKR,,EnumPropPages,,"sysclass.dll,IDEEnumPropPages"
+
+[PCIMF.Reg]
+HKR,,DevLoader,,*CONFIGMG
+HKR,,Enumerator,,*CONFIGMG
+HKR,,CMDrivFlags,1,03,00,00,00
+
+[DontStopChild.RegHW]
+HKR,,ConfigFlags,1,80,00,00,00
+
+[MAXTOR_drv]
+AddReg = ESDI_AddReg,MAXTOROVERRIDE
+
+[MAXTOROVERRIDE]
+HKR,Override,0000,1, \
+;
+; CONFIGMG_VERSION
+;
+00,04,00,00, \
+;
+; PRIORITY
+;
+00,00,00,00, \
+;
+; I/O
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00,0C,00, \
+00,00,00,00, \
+00,00,00,00, \
+F0,FF,10,00, \
+00,00,FF,FF, \
+00,00,00,00, \
+40,00,00,00, \
+;
+; IRQ
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00,00,00, \
+FF,FF,00,00, \
+20,00,00,00, \
+;
+; REQUEST_CONFIG_PKT
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00,02,00, \
+32,00,00,02, \
+00,02,00,00, \
+00,00,00,01, \
+0F, \
+;
+; TERMINATOR
+;
+00,00,00,00
+
+[SUNDISK_drv]
+AddReg = ESDI_AddReg,SUNDISK_ScanDisk
+
+[SUNDISK_drv.HW]
+AddReg = ESDI_FIFO_OK_AddReg
+
+[SUNDISK_drvl5]
+AddReg = ESDI_AddReg, SUNDISK_ScanDisk, SDL5_OVERRIDE
+
+[SUNDISK_drvl5.HW]
+AddReg = ESDI_FIFO_OK_AddReg
+
+[SDL5_OVERRIDE]
+HKR,Override,0000,1, \
+;
+00,04,00,00, \
+00,00,00,00, \
+;
+; IO Resource Descriptor
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00,0c,00, \
+00,00,00,00, \
+00,00,00,00, \
+f0,ff,08,00, \
+00,00,ff,ff, \
+00,00,00,00, \
+40,00,00,00, \
+;
+; NO Memory Resource Descriptor
+;
+; IRQ Resource Descriptor
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00,00,00, \
+ff,ff,00,00, \
+20,00,00,00, \
+;
+;
+;REQUEST_CONFIG_PKT Descriptor
+;
+;
+;Request Config Packet for SDPL5 Mode 1
+19,00,00,00, \
+7C,89,00,00, \
+00,00,02,00, \
+32,00,00,02, \
+00,02,00,00, \
+00,00,00,41, \
+0F, \
+;
+; Terminator
+;
+00,00,00,00
+
+[HARDCARD_AddReg]
+HKR,,No_Driver,,"Uses RMode Mapper"
+
+[IBMIDE]
+ 
+[ESDI_FIFO_OK_AddReg]
+HKR,,IDENoSerialize,3,01
+
+[ESDI_AddReg]
+HKR,,DriverDesc,,"ESDI Port Driver"
+HKR,,DevLoader,,*IOS
+HKR,,PortDriver,,ESDI_506.pdr
+
+[SUNDISK_ScanDisk]
+HKR,,ScanOnlyFirstDrive,1,1
+
+[HDC_HW_REG]
+HKR,,NoSetupUI,,1
+
+[ControlFlags]
+CopyFilesOnly=PCMCIA\KINGSTON_TECHNOLOGY-DATAPAK_170-3B77
+CopyFilesOnly=PCMCIA\MAXTOR-MXL105-E950,PCMCIA\MAXTOR-MXL105-352F
+CopyFilesOnly=PCMCIA\MAXTOR-MXL131-351E,PCMCIA\MAXTOR-MXL131-84AD
+CopyFilesOnly=PCMCIA\MAXTOR-MXL131-BA9C,PCMCIA\MAXTOR-MXL262-13BA
+CopyFilesOnly=PCMCIA\MAXTOR-MXL171-764B,PCMCIA\MINISTOR-MP130P-FEED
+CopyFilesOnly=PCMCIA\SunDisk-SDP-1E2E,PCMCIA\SunDisk-SDP-1DD2
+CopyFilesOnly=PCMCIA\SunDisk-SDP5-ADFD,PCMCIA\SunDisk-SDP-6DC7
+CopyFilesOnly=PCMCIA\SunDisk-SDPL5-F150
+CopyFilesOnly=*ZDS2010,*CPQA0DA,*CPQ4300
+CopyFilesOnly=PCI\VEN_1095&DEV_0640,PCI\VEN_1095&DEV_0646,PCI\VEN_1C1C&DEV_0001
+CopyFilesOnly=PCI\VEN_8086&DEV_1222,PCI\VEN_1042&DEV_1000
+CopyFilesOnly=PCI\VEN_1097&DEV_0038
+CopyFilesOnly=PCI\CC_0101
+CopyFilesOnly=MF\EISA_ZDS2000_DEV0
+CopyFilesOnly=PCI\VEN_10AD&DEV_0001,PCI\VEN_1106&DEV_0561
+CopyFilesOnly=PCI\VEN_1045&DEV_C621
+CopyFilesOnly=PCI\VEN_10B9

@@ -1,0 +1,103 @@
+uption during 
+Windows 95 installation. For more information, in the United States
+contact Micron Technologies at (208) 465-3434. Outside the U.S., 
+contact your local hardware provider.
+
+Micron P90 and P100: BEFORE INSTALLING WINDOWS 95, users of Micron P90 
+and P100 systems need to make sure their BIOS version is N15 or later. 
+For more information, in the U.S. contact Micron Technologies at 
+(208) 465-3434. Outside the U.S., contact your local hardware provider.
+
+Undefined Dynalink Error
+------------------------
+If you receive an "undefined dynalink" error, it's likely that a program 
+you are running uses an earlier version of QuickTime that conflicts with 
+the current version. To resolve this problem, you need to delete the 
+QuickTime files from the program's directory. To do this, carry out the 
+following procedure:
+1. Restart your computer.
+2. Click the Start button, click Find, and then click Files Or Folders.
+3. In the Named box, type the following:
+   qt*.*, *.qtc
+
+4. Make sure the Look In box specifies your C drive, and then click
+   Find Now.
+5. Delete all the QuickTime files in the program's directory.
+   Be sure NOT to delete any QuickTime files in the \Windows or 
+   \Windows\System directories.
+6. Restart your computer.
+
+You can also contact Apple for information about QuickTime version 2.02, 
+or you can download it from CompuServe.
+
+System Detection Error -- BIOS Could Lead to Data Loss
+------------------------------------------------------
+If your computer displays the following message:
+
+        System Detection
+
+        Your computer uses a BIOS that could lead to data loss if you
+        run Windows 95.
+
+        Please update the BIOS before installing Windows 95. For more
+        information, contact your computer manufacturer.
+
+you can still install Windows 95 by carrying out the following procedure.
+
+NOTE: Microsoft takes no responsibility for any damange that may
+result from this operation.
+
+1. Copy the contents of the Windows 95 CD-ROM (or floppy disk 1) to
+   your hard disk.
+2. At the MS-DOS prompt, type the following:
+
+   extract precopy2.cab msdet.inf
+
+3. At the command prompt, type the following:
+
+   edit msdet.inf
+
+4. On the Search menu, click Find.
+5. In the Find What box, type the following:
+
+   [BadDSBios]
+
+6. Click Find Now.
+7. Insert a semicolon before each of the two lines following the
+   [BadDSBios] heading.
+8. Save your changes, and then run Setup again.
+
+Dell Latitude XP Portable Computers with Docking Stations
+---------------------------------------------------------
+Some early Dell portable computers can experience problems if you start 
+up while attached to a docking station and you have a PCMCIA card inserted 
+in a PCMCIA slot. Although the PCMCIA card will be seen by Windows 95, the 
+card will not function. To work around this problem, you should eject the 
+PCMCIA card and reinsert it. The computer and PCMCIA card should recover. 
+This problem is fixed in later Dell BIOS versions. For a BIOS upgrade, 
+contact Dell Computer Corporation.
+
+
+APPLETS
+=======
+
+Microsoft Plus! for Windows 95
+------------------------------
+If you install Microsoft Plus! on top of this version of Windows, it 
+will not install any DriveSpace 3 components. DriveSpace 3, including 
+Compression Agent, is included with this version of Windows.
+
+Once installed, Microsoft Plus! for Windows 95 Setup will not remove 
+the System Agent from an installation of this version of Windows. The 
+other Plus! components will be removed if they are deselected from the 
+list of components displayed during a maintenance mode installation of 
+Plus!.
+
+
+Backup, Known Problems
+----------------------
+- Backup does not work with all tape drives. If you install Backup 
+  and get a message that your tape drive has not been detected, click 
+  the Help button to see a list of supported tape drives.
+- If a backup to tape moves less than 1.5 MB per minute, you may have a 
+  conflict between the tape unit and your video card. The workaro

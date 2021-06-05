@@ -1,0 +1,61 @@
+,,,,,SHARED,8024,,8024,,,
+ 3,WI_RESTU.WA8<Windows 95 restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,6188,,6188,,,
+ 3,WI_STOP.WA8<Windows 95 critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,31318,,31318,,,
+
+[MT_Sixties_thm]
+ 3,SIXTIES.THM<The 60's USA (256 color).theme>,,,,1995-10-24,,,,,,,,,SHARED,5198,,5198,,,
+
+[MT_Sixties_bmp]
+ 3,SX_WALL.JPG<The 60's USA wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,94322,,94322,,,
+ 3,SX_WALL.PAL<The 60's USA wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,1048,,1048,,,
+ 3,SX_COMP.ICO<The 60's USA My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 3,SX_NET.ICO<The 60's USA Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 3,SX_RECYE.ICO<The 60's USA Recycle Empty.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 3,SX_RECYF.ICO<The 60's USA Recycle Full.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+
+[MT_Sixties_cur]
+ 3,SX_BUSY.ANI<The 60's USA busy.ani>,,,,1995-10-24,,,,,,,,,SHARED,7860,,7860,,,
+ 3,SX_WAIT.ANI<The 60's USA wait.ani>,,,,1995-10-24,,,,,,,,,SHARED,4762,,4762,,,
+ 3,SX_ARROW.CUR<The 60's USA arrow.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_BEAM.CUR<The 60's USA beam.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_CROSS.CUR<The 60's USA cross.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_HELP.CUR<The 60's USA help.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_MOVE.CUR<The 60's USA move.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_NESW.CUR<The 60's USA Size NESW.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_NO.CUR<The 60's USA no.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_NS.CUR<The 60's USA Size NS.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_NWSE.CUR<The 60's USA Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_PEN.CUR<The 60's USA pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_UP.CUR<The 60's USA up.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 3,SX_WE.CUR<The 60's USA Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+
+[MT_Sixties_scr]
+ 3,LENS.SCR<The 60's USA.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,101888,SYSTEM,101888,,4.40.0.310,
+
+[MT_Sixties_ttf]
+"sx1" = 3,LHANDW.TTF,,,,1995-10-24,,,,,,,,,SHARED,56560,SYSTEM,56560,,1.1.0.0,
+"sx2" = 3,LSANSI.TTF,,,,1995-10-24,,,,,,,,,SHARED,59636,SYSTEM,59636,,1.1.0.0,
+
+[MT_Sixties_wav16]
+ 3,SX_ASTRX.WAV<The 60's USA asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,24004,,24004,,,
+ 3,SX_BEEP.WAV<The 60's USA beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,10982,,10982,,,
+ 3,SX_DEFAU.WAV<The 60's USA default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,7664,,7664,,,
+ 3,SX_EMPTY.WAV<The 60's USA empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,16870,,16870,,,
+ 3,SX_ERROR.WAV<The 60's USA program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,20566,,20566,,,
+ 3,SX_EXCLA.WAV<The 60's USA exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,24666,,24666,,,
+ 3,SX_EXIT.WAV<The 60's USA exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,40670,,40670,,,
+ 3,SX_MAX.WAV<The 60's USA maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,10166,,10166,,,
+ 3,SX_MENU.WAV<The 60's USA menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4326,,4326,,,
+ 3,SX_MENUC.WAV<The 60's USA menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,4180,,4180,,,
+ 3,SX_MIN.WAV<The 60's USA minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,10164,,10164,,,
+ 3,SX_QUEST.WAV<The 60's USA question.wav>,,,,1995-10-24,,,,,,,,,SHARED,20532,,20532,,,
+ 3,SX_RESTD.WAV<The 60's USA restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,10244,,10244,,,
+ 3,SX_RESTU.WAV<The 60's USA restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,11178,,11178,,,
+ 3,SX_START.WAV<The 60's USA startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,66656,,66656,,,
+ 3,SX_STOP.WAV<The 60's USA critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,9486,,9486,,,
+
+[MT_Sixties_wav8]
+ 3,SX_ASTRX.WA8<The 60's USA asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,13170,,13170,,,
+ 3,SX_BEEP.WA8<The 60's USA beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,6682,,6682,,,
+ 3,SX_DEFAU.WA8<The 60's USA default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,5024,,5024,,,
+ 3,SX_EMPTY.WA8

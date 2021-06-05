@@ -1,0 +1,144 @@
+TATIC  AS LONG
+'$ifdef DEBUG
+    if FValidFATPath(szFile$) = 0 then
+        BadArgErr 1, "GetSizeOfFile", szFile$
+    end if
+'$endif ''DEBUG
+    GetSizeOfFile = LcbGetSizeOfFile(szFile$)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION FindTargetOnEnvVar (szFile$, szEnvVar$) STATIC  AS STRING
+'$ifdef DEBUG
+    if CchlValidFATSubPath(szFile$) = 0 then
+        n% = 1
+    elseif szEnvVar$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "FindTargetOnEnvVar", szFile$+", "+szEnvVar$
+    end if
+'$endif ''DEBUG
+
+    cb% = 512
+    szBuf$ = STRING$(cb%, 32)
+    cbRet% = CbFindTargetOnEnvVar(szFile$, szEnvVar$, szBuf$, cb%)
+    IF cbRet% >= cb% THEN
+'$ifdef DEBUG
+        StfApiErr saeOvfl, "FindTargetOnEnvVar", szFile$+", "+szEnvVar$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+    szBuf$ = RTRIM$(szBuf$)
+    IF MID$(szBuf$, 1, 1) = "\" THEN
+       szBuf$ = MID$(CURDIR$, 1, 2) + szBuf$
+    ELSEIF Len(szBuf$) > 0 AND MID$(szBuf$, 2, 1) <> ":" THEN
+       szBuf$ = MID$(CURDIR$, 1, 3) + szBuf$
+    END IF
+    FindTargetOnEnvVar = szBuf$
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION FindFileInTree (szFile$, szDir$) STATIC  AS STRING
+'$ifdef DEBUG
+    if CchlValidFATSubPath(szFile$) = 0 then
+        n% = 1
+    elseif FValidFATDir(szDir$) = 0 then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "FindFileInTree", szFile$+", "+szDir$
+    end if
+'$endif ''DEBUG
+
+    cb% = 512
+    szBuf$ = STRING$(cb%, 32)
+    cbRet% = CbFindFileInTree(szFile$, szDir$, szBuf$, cb%)
+    FindFileInTree = szBuf$
+'$ifdef DEBUG
+    IF cbRet% >= cb% THEN
+        StfApiErr saeOvfl, "FindFileInTree", szFile$+", "+szDir$
+        ERROR STFERR
+    END IF
+'$endif ''DEBUG
+    szBuf$ = ""
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetConfigSmartdrvSize STATIC  AS INTEGER
+    GetConfigSmartdrvSize = WGetConfigSmartdrvSize
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetConfigRamdriveSize STATIC  AS INTEGER
+    GetConfigRamdriveSize = WGetConfigRamdriveSize
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetConfigNumBuffers STATIC  AS INTEGER
+    GetConfigNumBuffers = WGetConfigNumBuffers
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetConfigNumFiles STATIC  AS INTEGER
+    GetConfigNumFiles = WGetConfigNumFiles
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetConfigLastDrive STATIC  AS STRING
+    chRet% = WGetConfigLastDrive
+    if chRet% = 0 then
+        GetConfigLastDrive = ""
+    else
+        GetConfigLastDrive = CHR$(chRet%)
+    end if
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsDriverInConfig (szDrv$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if szDrv$ = "" then
+        BadArgErr 1, "IsDriverInConfig", szDrv$
+    end if
+'$endif ''DEBUG
+    IsDriverInConfig = FIsDriverInConfig(szDrv$)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetProcessorType STATIC  AS INTEGER
+    GetProcessorType = 0
+    longTmp& = GetWinFlags()
+    IF longTmp& AND WF_CPU486 THEN
+        GetProcessorType = 4
+    ELSEIF longTmp& AND WF_CPU386 THEN
+        GetProcessorType = 3
+    ELSEIF longTmp& AND WF_CPU286 THEN
+        GetProcessorType = 2
+    ELSEIF longTmp& AND WF_CPU186 THEN
+        GetProcessorType = 1
+    END IF
+END FUNCTION
+
+
+'*************************************************************************
+SUB GetParallelPortsList (szSymbol$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetParallelPortsList", szSymbol$
+    end if
+'$endif ''DEBUG
+    if 

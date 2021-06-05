@@ -1,0 +1,119 @@
+esktopManagement\\DATA\\%ComponentID\\OperationalState\\AvailabilityStatus"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\31\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Running"
+"4"="Warning"
+"5"="In Test"
+"6"="Not Applicable"
+"7"="Power Off"
+"8"="Off Line"
+"9"="Off Duty"
+"10"="Degraded"
+"11"="Not Installed"
+"12"="Install Error"
+"13"="Power Save"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\31\6]
+"Name"="Administrative State"
+"Description"="The administrative state of the device instance."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AdministrativeState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\31\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Locked"
+"4"="Unlocked"
+"5"="Not Applicable"
+"6"="Shutting Down"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\31\7]
+"Name"="Fatal Error Count"
+"Description"="The accumulated fatal error count for this device instance."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\FatalErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\31\8]
+"Name"="Major Error Count"
+"Description"="The accumulated major error count for this device instance."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\MajorErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\31\9]
+"Name"="Warning Error Count"
+"Description"="The accumulated warning error count for this device instance."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\WarningErrorCount"
+
+
+
+;=======================================
+;  Serial Ports
+;=======================================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID]
+"Name"="Serial Port"
+"Description"="This component implements a set of groups relating to the Serial Port."
+
+;==========================
+;  Serial Ports Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12]
+"Name"="Serial Ports"
+"Class"="DMTF|Serial Ports|002"
+"Description"="This group defines the attributes for serial ports in this system."
+"Key"="1"
+"^Index"=hex:02
+"^ROW"="1|2|3|4|5|6|7|8"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\1]
+"Name"="Serial Port Index"
+"Description"="An index into the serial ports table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\2]
+"Name"="Serial Base I/O Address"
+"Description"="Base I/O address for this serial port."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\I/O\\I/OStartingAddress\\1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\3]
+"Name"="IRQ Used"
+"Description"="IRQ number that is being used by this serial port."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\IRQ\\IRQNumber\\1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\12\4]
+"Name"="Logical Name"
+"Description"="The logical name of this serial port under this operating environment."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(32)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Device\\PortName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPo

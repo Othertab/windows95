@@ -1,0 +1,146 @@
+ection,,"games"
+HKLM,%KEY_OPTIONAL%\Games,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"sysmeter",,"sysmeter"
+HKLM,%KEY_OPTIONAL%\sysmeter,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\sysmeter,Section,,"sysmeter"
+HKLM,%KEY_OPTIONAL%\sysmeter,Installed,,"0"
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\mycomputer\backuppath,,,%25%\BACKUP.EXE
+
+[Optional Components]
+AccessTop
+CommApps
+DiskToolTop
+MultiM
+screensavers
+dxxspace
+mspaint
+msonline
+DiskTools
+Calc
+msbackup
+Dialer
+flywinss
+bitmaps
+SSOpenGL
+scrnsave
+games
+sysmeter
+
+
+[AccessTop]
+; Top Level option
+OptionDesc  = %AccessTop_DESC%
+Tip         = %AccessTop_TIP%
+IconIndex       = 26                     ;Windows mini-icon for dialogs
+
+[CommApps]
+; Top Level option
+OptionDesc  = %CommApps_DESC%
+Tip         = %CommApps_TIP%
+IconIndex       = 7                     ;Phone mini-icon for dialogs
+
+[DiskToolTop]
+; Top Level option
+OptionDesc  = %DiskToolTop_DESC%
+Tip         = %DiskToolTop_TIP%
+IconIndex       = 9                ;Disks mini-icon for dialogs
+
+[MultiM]
+; Top Level option
+OptionDesc  = %MultiM_DESC%
+Tip         = %MultiM_TIP%
+IconIndex       = 27                ;Speaker mini-icon for dialogs
+
+
+[screensavers]
+;Second level option
+OptionDesc  = %SCREENSAVER_DESC%
+Tip         = %SCREENSAVER_TIP%
+Parent      = AccessTop
+IconIndex       = 38                     ;Monitor mini-icon for dialogs
+
+
+
+[flywinss]
+OptionDesc  = %flywinssOpt_DESC%
+Tip         = %flywinss_TIP%
+Parent      = screensavers
+CopyFiles   = flywinss.copy
+DelFiles    = flywinss.del
+AddReg      = flywinss.install.reg
+InstallType = 10               ;Typical, Custom
+IconIndex       = 38                     ;Monitor mini-icon for dialogs
+Uninstall   = flywinss_remove
+
+[flywinss_remove]
+AddReg      = flywinss.remove.reg
+
+
+[Calc]
+OptionDesc  = %CalcOpt_DESC%
+Tip         = %Calc_TIP%
+Parent      = AccessTop
+CopyFiles   = Calc.copy, Calc.hlp.copy
+DelFiles    = Calc.del
+UpdateInis  = Calc.links
+AddReg      = Calc.install.reg
+InstallType = 10              ;Typical, Custom.
+IconIndex       = 30                     ;Windows mini-icon for dialogs
+Uninstall   = Calc_remove
+
+[Calc_remove]
+DelFiles    = Calc.copy, Calc.hlp.copy
+AddReg      = Calc.remove.reg
+UpdateInis  = Calc.links.remove
+
+
+
+[mspaint]
+OptionDesc  = %MSPAINTOPT_DESC%
+Tip         = %MSPAINTOPT_TIP%
+Parent      = AccessTop
+CopyFiles   = mspaint.files.win, mspaint.files.hlp, mfcdlls.files, mspaint.pbrush
+DelFiles    = mspaint.del.files
+UpdateInis  = mspaint.links
+AddReg      = mspaint.addreg.1, mspaint.addreg.2, mspaint.install.reg, mfcdlls.register
+DelReg      = mspaint.delreg
+InstallType = 10              ;Typical, Custom.
+IconIndex       = 37                     ;Windows mini-icon for dialogs
+Uninstall   = mspaint_remove
+
+[mspaint_remove]
+DelFiles    = mspaint.files.win, mspaint.files.hlp, mspaint.pbrush
+; note that we don't DelFiles the [mfcdlls.files] section b/c it has shared MFC files in it
+UpdateInis  = mspaint.links.remove
+AddReg      = mspaint.remove.reg
+DelReg      = mspaint.addreg.1
+
+
+[msonline]
+OptionDesc  = %MSOLOPT_DESC%
+Tip         = %MSOLOPT_TIP%
+Parent      = CommApps
+CopyFiles   = online.files.user, online.files.icons, online.files.hlp
+DelFiles    = online.del.files, online.files.sys
+UpdateInis  = online.links
+AddReg      = online.install.reg, online.addreg
+DelReg      = online.delreg
+InstallType = 14              ;Typical, Portable, Custom.
+IconIndex       = 35                     ;Phone mini-icon for dialogs
+Uninstall   = msonline_remove
+
+[msonline_remove]
+DelFiles    = online.files.user, online.files.sys, online.files.hlp
+UpdateInis  = online.links.remove
+AddReg      = online.remove.reg
+DelReg      = online.addreg
+
+
+[dxxspace]
+OptionDesc  = %dxxspace_DESC%
+Tip         = %dxxspace_TIP%
+Parent      = DiskToolTop
+CopyFiles   = dxxspace.win.files, dxxspace.sys.files, dxxspace.hlp.files, dxxspace.ios.files, dxxspace.cmd.files, dxxspace.vmm32.files, dxxspace.plus.files, dxxspace.plus.system.files
+UpdateCfgS

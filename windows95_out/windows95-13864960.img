@@ -1,0 +1,124 @@
+nfigPriority=HARDRECONFIG
+IOConfig=200-20F(3FF::),300-30F(3FF::)
+IRQConfig=3,4,5,7,9
+MemConfig=8000@C0000-E7FFF%FFFF8000
+
+
+;****************************************************************************
+; *PNP80EF  DECpc 433 WS (Built-In)
+;****************************************************************************
+[*PNP80EF.ndi]
+AddReg=*PNP80EF.ndi.reg,DEPCA.ndi.reg,adaptername.DE100.reg,Gen.HWResources
+LogConfig=*PNP80EF.LogConfig
+
+[*PNP80EF.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP80EF"
+
+[*PNP80EF.LogConfig]
+ConfigPriority=HARDWIRED
+IOConfig=200-20F(3FF::)
+IRQConfig=5
+MemConfig=8000@C0000-E7FFF%FFFF8000
+
+;****************************************************************************
+; *DECEWK3 EtherWorks 3 
+; (one logical configuration per possible memory mode)
+;****************************************************************************
+[*DECEWK3.ndi]
+AddReg=*DECEWK3.ndi.reg,EWRK3.ndi.reg,Gen1.HWResources
+LogConfig=*DECEWK3.LogConfig.2,*DECEWK3.LogConfig.32,*DECEWK3.LogConfig.64
+
+[*DECEWK3.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp80f0"
+
+[*DECEWK3.LogConfig.32]
+; 32K mapped memory mode
+ConfigPriority=HARDRECONFIG
+IOConfig=20@100-3FF%FFE0(3FF::)
+IRQConfig=5,10,11,15
+MemConfig=8000@A0000-FFFFF%FFFF8000
+
+[*DECEWK3.LogConfig.2]
+; 2K mapped memory mode
+ConfigPriority=HARDRECONFIG
+IOConfig=20@100-3FF%FFE0(3FF::)
+IRQConfig=5,10,11,15
+MemConfig=800@A0000-FFFFF%FFFFF800
+
+[*DECEWK3.LogConfig.64]
+; 64K mapped memory mode
+ConfigPriority=HARDRECONFIG
+IOConfig=20@100-3FF%FFE0(3FF::)
+IRQConfig=5,10,11,15
+MemConfig=10000@A0000-FFFFF%FFFF0000
+
+;****************************************************************************
+; *PNP8321  DEC Ethernet (All Types)
+;****************************************************************************
+[*PNP8321.ndi]
+AddReg=*PNP8321.ndi.reg,DEPCA.ndi.reg,Gen.HWResources,Gen.IRQ2.HWResources
+LogConfig=*PNP8321.LogConfig
+
+[*PNP8321.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8321"
+HKR,Ndi\params\AdapterName,ParamDesc,,"Ethernet Adapter Type"
+HKR,Ndi\params\AdapterName,default,,DE200
+HKR,Ndi\params\AdapterName,type,,enum
+HKR,Ndi\params\AdapterName\enum,ParamDesc,,"Ethernet Adapter Type"
+HKR,Ndi\params\AdapterName,DEPCA,,"DEPCA"
+HKR,Ndi\params\AdapterName,DE100,,"DE100"
+HKR,Ndi\params\AdapterName,DE200,,"DE200"
+HKR,Ndi\params\AdapterName,DE210,,"DE210"
+HKR,NDI\params\AdapterName,flag,1,30,00,00,00
+
+[*PNP8321.LogConfig]
+ConfigPriority=HARDWIRED
+IOConfig=200-20F(3FF::),300-30F(3FF::)
+IRQConfig=3,4,5,7,9,10,11,15
+MemConfig=8000@C0000-E7FFF%FFFF8000
+
+;****************************************************************************
+; MCA_6DEF  DEC (DE210) EtherWorks MC
+;****************************************************************************
+[MCA_6DEF.ndi]
+AddReg=MCA_6DEF.ndi.reg,DEPCA210.ndi.reg,adaptername.DE210.reg,Slot
+LogConfig=MCA_6DEF.LogConfig
+
+[MCA_6DEF.ndi.reg]
+HKR,Ndi,DeviceID,,"MCA_6DEF"
+
+[MCA_6DEF.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=200-20F(3FF::),300-30F(3FF::),2c00-2c0f,2c10-2c1f,2c20-2c2f,2c30-2c3f
+ 
+
+;****************************************************************************
+; DEPCA Drivers
+;****************************************************************************
+
+[adaptername.DE100.reg]
+HKR,Ndi\params\AdapterName,ParamDesc,,"Adapter Name"
+HKR,Ndi\params\AdapterName,default,,"DE100"
+HKR,Ndi\params\AdapterName,type,,enum
+HKR,Ndi\params\AdapterName\enum,"DE100",,"DE100"
+HKR,NDI\params\AdapterName,flag,1,30,00,00,00
+;param flags
+HKR,NDI\params\MaxMulticast,flag,1,30,00,00,00
+
+[adaptername.DE200.reg]
+HKR,Ndi\params\AdapterName,ParamDesc,,"Adapter Name"
+HKR,Ndi\params\AdapterName,default,,"DE200"
+HKR,Ndi\params\AdapterName,type,,enum
+HKR,Ndi\params\AdapterName\enum,"DE200",,"DE200"
+HKR,NDI\params\AdapterName,flag,1,30,00,00,00
+;param flags
+HKR,NDI\params\MaxMulticast,flag,1,30,00,00,00
+
+[adaptername.DE210.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,declan.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"DECLAN"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdi

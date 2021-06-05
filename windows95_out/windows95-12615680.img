@@ -1,0 +1,214 @@
+tall, MonID_MF-5317
+%MF-5321%=MF-5321.Install, MonID_MF-5321
+%MF-5421%=MF-5421.Install, MonID_MF-5421
+%MF-5621%=MF-5621.Install, MonID_MF-5621
+%MF-8217%=MF-8217.Install, MonID_MF-8217
+%MF-8221%=MF-8221.Install, MonID_MF-8221
+%MF-8317%=MF-8317.Install, MonID_MF-8317
+%MF-8421%=MF-8421.Install, MonID_MF-8421
+%MF-8617%=MF-8617.Install, MonID_MF-8617
+%MF-8617E%=MF-8617.Install, Monitor\IVM1700
+%MF-8621%=MF-8621.Install, MonID_MF-8621
+%MT-9121%=MT-9121.Install, MonID_MF-9121
+
+[Ikegami]
+%C/CDE-165VB%=C/CDE-165VB.Install, MonID_CDE-165VB
+%C/DM-2010A%=C/DM-2010A.Install, MonID_DM-2010A
+%C/DM-2060%=C/DM-2060.Install, MonID_DM-2060
+%CT-20%=CT-20.Install, MonID_CT-20
+%CN-20%=CN-20.Install, MonID_CN-20
+
+[Image]
+%C21LMAX%=C21LMAX.Install, MonID_CS1LMAX
+%M24LMAX%=M24LMAX.Install, MonID_M24LMAX
+
+[Intra]
+%CM-1403%=CM-1403.Install, MonID_CM-1403
+
+[Iocomm]
+%CM-7126%=CM-7126.Install, MonID_CM-7126
+
+[JVC]
+%GD-H4220US%=GD-H4220US.Install, MonID_H422OUS
+
+[KFC]
+%CA-17%=CA-17.Install, MonID_CA-17
+%CH-14%=CH-14.Install, MonID_CH-14
+%CM-14%=CM-14.Install, MonID_CM-14
+
+[KLH]
+%MN275%=MN275.Install, MonID_MN275
+
+[LeadingTechnology]
+%1730S%=1730S.Install, MonID_1730S
+
+[Link]
+%CE-8%=CE-8.Install, MonID_CE-8
+%CM-3%=CM-3.Install, MonID_CM-3
+
+[LiteOn]
+%CM-2090M%=CM-2090M.Install, MonID_CM-2090M
+
+[miro]
+%C1768%= C1768, Monitor\MIR6817
+%C1782%= C1782, Monitor\MIR8217
+%C2085E%=C2085E,Monitor\MIR8520
+%C2185%= C2185, Monitor\MIR8521
+%C2193%= C2193, Monitor\MIR9321
+%C21107%=C21107,Monitor\MIR0721
+%D1568%= D1568, Monitor\MIR6815
+%D1769%= D1769, Monitor\MIR6917
+
+[Zenith]
+%ZCM1411%=ZCM1411
+%ZCM1426%=ZCM1426
+%ZCM1440%=ZCM1440
+%ZCM1450%=ZCM1450
+%ZCM1520%=ZCM1520
+%ZCM1522%=ZCM1522
+%ZCM1540%=ZCM1540
+%ZCM1550%=ZCM1550
+%ZCM1740%=ZCM1740
+%ZCM1750%=ZCM1750
+
+
+; Common AddReg/DelReg sections
+;-------------------------------------------------
+
+[DEL_CURRENT_REG]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+[640]
+HKR,,MaxResolution,,"640,480"
+[800]
+HKR,,MaxResolution,,"800,600"
+[1024]
+HKR,,MaxResolution,,"1024,768"
+[1280]
+HKR,,MaxResolution,,"1280,1024"
+[1600]
+HKR,,MaxResolution,,"1600,1200"
+
+[DPMS]
+HKR,,DPMS,,1
+
+[ICM9]
+HKR,,ICMProfile,1,9
+
+
+; Install Sections
+;-------------------------------------------------
+
+; -------------- Generic types
+
+[Unknown.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Unknown.AddReg
+
+[VESADDC.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=VESADDC.AddReg, 1600, DPMS
+
+[Laptop640.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=640, DPMS 
+
+[Laptop800.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=800, DPMS
+
+[Laptop1024.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1024, DPMS
+
+[640.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=640
+
+[800.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=800
+
+[1024.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1024
+
+[1280.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1280
+
+[1600.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1600
+
+
+; -------------- AST
+
+[AST4V]
+DelReg=DEL_CURRENT_REG
+AddReg=AST4V.AddReg, 640
+
+[AST4I]
+DelReg=DEL_CURRENT_REG
+AddReg=AST4I.AddReg, 1024
+
+[AST4N]
+DelReg=DEL_CURRENT_REG
+AddReg=AST4N.AddReg, 1024, DPMS
+
+[AST4L]
+DelReg=DEL_CURRENT_REG
+AddReg=AST4L.AddReg, 1024, DPMS
+
+[AST5L]
+DelReg=DEL_CURRENT_REG
+AddReg=AST5L.AddReg, 1280, DPMS
+
+[AST7L]
+DelReg=DEL_CURRENT_REG
+AddReg=AST7L.AddReg, 1280, DPMS
+
+[AST7H]
+DelReg=DEL_CURRENT_REG
+AddReg=AST7H.AddReg, 1280, DPMS
+
+[AST20H]
+DelReg=DEL_CURRENT_REG
+AddReg=AST20H.AddReg, 1280, DPMS
+
+[AST5V]
+DelReg=DEL_CURRENT_REG
+AddReg=AST5V.AddReg, 1024, DPMS
+
+[AST4Ls]
+DelReg=DEL_CURRENT_REG, 1024, DPMS
+AddReg=AST4Ls.AddReg
+
+
+; -------------- Aamazing
+
+[CM-8426.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-8426.AddReg, 1024
+
+[MS-8431.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MS-8431.AddReg, 1024
+
+[CX1557.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CX1557.AddReg, 1024
+
+[AML-1402.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=AML-1402.AddReg, 1024
+
+[AML-2001.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=AML-2001.AddReg, 1024
+
+[SM-5514B.Install]
+DelReg=DEL_CURRE

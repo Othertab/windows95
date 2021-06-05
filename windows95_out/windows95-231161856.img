@@ -1,0 +1,94 @@
+or a standard CGI reference.
+
+-There is a limit of 100 IP mask restrictions when using the
+FrontPage Personal Web Server.
+
+-If you use the FrontPage Explorer's File: Copy Web command
+to add the current web to another web, any files in the destination
+web with the same name as files in the current web will be replaced
+by the files in the current web.
+
+-If you re-import an image into a web so that the size of the image
+changes, you may need to open and save any page containing
+the image in the FrontPage Editor so that the image's size is
+correctly updated in the page's HTML.
+
+-To follow a link from the FrontPage Editor, use Tools: Follow Link
+or choose CTRL+Left mouse button.
+
+-The FrontPage Version 1.1 client tool (the FrontPage Editor,
+FrontPage Explorer, and FrontPage To Do List) can create
+webs using a web server that has the FrontPage Version 1.0 Server
+Extensions (such as the Version 1.0 Personal Web Server). However, 
+you cannot rename pages in webs created in this way.
+
+-To move webs from a server that does not have the FrontPage
+Server Extensions to one that does, copy or FTP the files or directories
+into the FrontPage extended server's content area. To create separate
+subwebs, open the FrontPage Explorer, create a new web on the server
+(this creates a folder in the server's content directory), move or copy
+your files into the new folder. Make sure that CGI scripts have read/write
+access to the new files and directories. These pages will be visible the
+next time you run the FrontPage Explorer. NOTE: If FrontPage Explorer
+is running when you do this, click Refresh on the View menu or click
+Recalculate Links on the Tools menu. 
+
+-If upgrading from FrontPage 1.0, before using NCSA- or CERN-style
+clickable images on the Personal Web Server, perform the following
+steps:
+--(1) Install the clickable image programs.
+  copy c:\Program Files\Microsoft FrontPage\bin\imagemap.exe c:\content\cgi-bin
+  copy c:\Program Files\Microsoft FrontPage\bin\htimage.exe c:\content\cgi-bin
+
+        If you installed FrontPage to a different directory, modify the paths.
+
+--(2) Add an alias for the clickable image programs in your srm.cnf file:
+           edit c:\fpserver\conf\srm.cnf
+       
+         Then add these two lines to the bottom:
+            WinScriptAlias /cgi-bin/imagemap/   c:/content/cgi-bin/imagemap.exe/
+            WinScriptAlias /cgi-bin/htimage/    c:/content/cgi-bin/htimage.exe/
+
+- FrontPage does not automatically enable authoring encryption for
+Netscape servers. Authoring encryption is not supported for Netscape
+web servers running on Windows NT. If you are using FrontPage with
+Netscape web servers running only on UNIX, you can re-enable
+FrontPage's encryption by adding the following  two lines at the end of
+the frontpg.ini file in your Windows directory:
+
+    [Web Extender Client]
+     Encrypt=true
+
+- Do not use the FrontPage Editor's File: Open File command to open
+pages from your content area (c:\FrontPage Webs\Content by default).
+If you open a page in this way, you lose many of the advanced features
+of FrontPage that require the FrontPage server extensions. You
+should always use the FrontPage Explorer to open the webs in your
+content area and then open web pages using the FrontPage Explorer's
+Edit: Open command or the FrontPage Editor's File: Open From
+Web command.
+
+[Troubleshooting]
+
+Several log files are created by FrontPage that might help diagnose
+problems. Also, the FrontPage TCP/IP Test utility can be used to
+test elements of your network configuration.
+
+Server Extender Log:
+c:\frontpg.log (on Windows 95)
+System Event Viewer (on Windows NT)
+
+Windows initialization files:
+c:\windows\frontpg.ini (if c:\windows is your Windows directory)
+c:\windows\fpeditor.ini
+c:\windows\fpexplor.ini
+
+Personal Web Server Logs:
+c:\FrontPage Webs\Server\http.log (or wherever you installed the product)
+c:\FrontPage Webs\Server\logs\error.log
+c:\FrontPage Webs\Server\logs\access.log
+
+FrontPage Server Administrator:
+c:\windows\fpsrvadm.ini
+
+[M

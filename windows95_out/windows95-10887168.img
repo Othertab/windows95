@@ -1,0 +1,143 @@
+TMITSUMI, rcQuery=0
+	IO=208-20b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=20c-20f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=210-213
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=214-217
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=218-21b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=21c-21f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=220-223
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=224-227
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=228-22b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=22c-22f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=230-233
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=234-237
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=238-23b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=23c-23f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=240-243
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=244-247
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=248-24b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=24c-24f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=250-253
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=254-257
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=258-25b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=25c-25f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=260-263
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=264-267
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=268-26b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=26c-26f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=270-273
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=274-277
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=278-27b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=27c-27f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=280-283
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=284-287
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=288-28b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=28c-28f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=290-293
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=294-297
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=298-29b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=29c-29f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2a0-2a3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2a4-2a7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2a8-2ab
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2ac-2af
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2b0-2b3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2b4-2b7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2b8-2bb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2bc-2bf
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2c0-2c3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2c4-2c7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2c8-2cb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2cc-2cf
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2d0-2d3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2d4-2d7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2d8-2db
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2dc-2df
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2e0-2e3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2e4-2e7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2e8-2eb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2ec-2ef
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2f0-2f3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2f4-2f7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2f8-2fb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=2fc-2ff
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=300-303
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=304-307
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=308-30b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=30c-30f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=310-313
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=314-317
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=318-31b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=31c-31f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=320-323
+Qu

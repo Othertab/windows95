@@ -1,0 +1,121 @@
+systems:
+DevDelete = delwatch.exe
+DevDelete = delpurge.exe
+DevDelete = diskmap.exe
+DevDelete = diskopt.exe
+DevDelete = dpms.exe
+DevDelete = emmxma.sys
+DevDelete = fastopen.exe
+DevDelete = hidos.sys
+;DevDelete = lock.exe
+DevDelete = login.exe
+DevDelete = memmax.exe
+DevDelete = nwcache.exe
+DevDelete = password.exe
+DevDelete = pckwik.sys
+DevDelete = rendir.exe
+DevDelete = script.exe
+DevDelete = superpck.exe
+DevDelete = taskmax.exe
+DevDelete = taskmgr.exe
+DevDelete = touch.exe
+DevDelete = vdisk.sys
+DevDelete = xdel.exe
+DevDelete = xdir.exe
+
+; Fix the path to keyboard.sys in the install=key line
+CfgFixArgs= keyb
+
+[autoexec_default]
+; CmdDelete will remove any lines that launch a filename with the .exe, .com, .bat or no extension.
+; The ",1" flag after the filename will only remark-out the, it will not delete it (i.e. it will
+; add "REM -- By Windows Setup" to the beginning of the line
+
+CmdDelete=smartdrv
+CmdDelete=dosshell
+CmdDelete=fastopen,1
+CmdDelete=append,1
+CmdDelete=share
+CmdDelete=mirror
+CmdDelete=win
+CmdDelete=setcfg    ;used in M5.
+;CmdRename=
+PreFixPath=26,25,10,13
+RemOldPath=33,32
+UnSet=comspec
+TmpDir=27,TEMP ;If TEMP and TMP environment variables are not set,
+	       ;create a TEMP dir off of LDID_MACHINE and add
+	       ;SET TMP and SET TEMP entries in autoexec.bat pointing
+	       ;to the new directory
+
+CmdDelete=redirect
+
+;PCTOOLS MS-DOS Shell:
+CmdDelete=PCSHELL
+
+;Remove DTC driver:
+CmdDelete=ascsi
+
+; Comment-out MS-DOS 6.x utilities:
+CmdDelete=undelete,1
+CmdDelete=drvspace,1
+CmdDelete=dblspace,1
+
+; Remove TSR that Carbon Copy installs:
+CmdDelete=doshost
+
+;DELL system menu:
+CmdDelete=DELLMENU,1
+
+; Remove TSR that comes installed on at&t globalyst 360 pentium
+CmdDelete=wbide
+
+;3rd party remote net TSRs:
+CmdDelete = rln
+CmdDelete = rlnAsync
+
+CmdDelete = S64DDPMS  ;Stealth 64 PCI driver
+
+; Rem out NECs DOS Audio sound card hot key mixer
+CmdDelete = csachmx1,1
+; Remove Anti-Virus Programs
+CmdDelete = vsafe        ;Central Point/MS-DOS 6
+CmdDelete = vdefend      ;PC-Tools
+CmdDelete = vwatch       ;PC-Tools
+CmdDelete = vaccine      ;Vaccine Antivirus Program
+CmdDelete = virstop      ;F-Prot Anti-Virus
+CmdDelete = navtsr       ;Norton Anti-virus
+
+;Remove lines that start any of the following disk caches:
+CmdDelete       = cache-at      ; Golden Bow Software
+CmdDelete       = cache-em      ; Golden Bow Software
+CmdDelete       = cache
+CmdDelete       = cacheclk  ;Helix MultiMedia Cloaking Ver 1.0
+CmdDelete       = fast512
+CmdDelete       = fast
+CmdDelete       = faste
+CmdDelete       = fastx
+CmdDelete       = flash         ; Flash Disk Cache Utility"hyper386.exe ;"Hyper Disk Cache Utility
+CmdDelete       = hyper286      ; Hyper Disk Cache Utility"
+CmdDelete       = hyper386      ; Shareware disk cache
+CmdDelete       = hyperdkc      ; Hyper Disk Cache Utility
+CmdDelete       = hyperdke      ; Hyper Disk Cache Utility
+CmdDelete       = hyperdkx      ; Hyper Disk Cache Utility
+CmdDelete       = ibmcache
+CmdDelete       = icache
+CmdDelete       = l             ; Lightning Disk Cache
+CmdDelete       = mcache        ; Paul Mace Utilites
+CmdDelete       = mouseclk 
+CmdDelete       = ncache        ; Norton Disk Cache Utility
+CmdDelete       = ncache2       ; Norton Disk Cache Utility
+CmdDelete       = pc-cache      ; PC Tools Disk Cache Utility
+CmdDelete       = pc-kwik       ; PC-Kwik Disk Cache Utility
+CmdDelete       = pckwin        ; Multisoft Super PC Kwik Windows driver
+CmdDelete       = pckscrn       ; Multisoft Super PC Kwik Windows driver
+CmdDelete       = pckkey        ; Multisoft Super PC Kwik Windows driver
+CmdDelete       = poweron.bat,1 ; Batch file which turns on Super PC Kwik (from v 3.1 PowerPack) (REM out line)
+CmdDelete       = qcache        ; 386 Max Disk Cache Utility
+CmdDelete       = scpcdext      ; Norton CD-ROM Cache
+CmdDelete       = sdcdext       ; Norton CD-ROM Cache
+CmdDelete       = scplus        ; SpeedCache for Disks and CD-ROM
+CmdDelete       = speedrv       ; Norton Speed Dr

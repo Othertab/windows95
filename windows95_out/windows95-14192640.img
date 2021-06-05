@@ -1,0 +1,114 @@
+\looppackets,ParamDesc,,"looppackets"
+HKR,NDI\params\looppackets,flag,1,10,00,00,00
+HKR,NDI\params\looppackets,type,,int
+HKR,Ndi\params\looppackets,default,,2
+HKR,NDI\params\looppackets,min,,1
+HKR,NDI\params\looppackets,max,,1000
+HKR,NDI\params\looppackets,step,,1
+HKR,NDI\params\looppackets,optional,,1
+; maxgroup
+HKR,NDI\params\maxgroup,ParamDesc,,"maxgroup"
+HKR,NDI\params\maxgroup,flag,1,10,00,00,00
+HKR,NDI\params\maxgroup,type,,int
+HKR,Ndi\params\maxgroup,default,,1
+HKR,NDI\params\maxgroup,min,,1
+HKR,NDI\params\maxgroup,max,,126
+HKR,NDI\params\maxgroup,step,,1
+HKR,NDI\params\maxgroup,optional,,1
+; maxin
+HKR,NDI\params\maxin,ParamDesc,,"maxin"
+HKR,NDI\params\maxin,flag,1,10,00,00,00
+HKR,NDI\params\maxin,type,,int
+HKR,Ndi\params\maxin,default,,1
+HKR,NDI\params\maxin,min,,1
+HKR,NDI\params\maxin,max,,127
+HKR,NDI\params\maxin,step,,1
+HKR,NDI\params\maxin,optional,,1
+; maxmember
+HKR,NDI\params\maxmember,ParamDesc,,"maxmember"
+HKR,NDI\params\maxmember,flag,1,10,00,00,00
+HKR,NDI\params\maxmember,type,,int
+HKR,Ndi\params\maxmember,default,,1
+HKR,NDI\params\maxmember,min,,1
+HKR,NDI\params\maxmember,max,,127
+HKR,NDI\params\maxmember,step,,1
+HKR,NDI\params\maxmember,optional,,1
+; maxout
+HKR,NDI\params\maxout,ParamDesc,,"maxout"
+HKR,NDI\params\maxout,flag,1,10,00,00,00
+HKR,NDI\params\maxout,type,,int
+HKR,Ndi\params\maxout,default,,12
+HKR,NDI\params\maxout,min,,1
+HKR,NDI\params\maxout,max,,127
+HKR,NDI\params\maxout,step,,1
+HKR,NDI\params\maxout,optional,,1
+; stacksize
+HKR,NDI\params\stacksize,ParamDesc,,"stacksize"
+HKR,NDI\params\stacksize,flag,1,10,00,00,00
+HKR,NDI\params\stacksize,type,,int
+HKR,Ndi\params\stacksize,default,,2048
+HKR,NDI\params\stacksize,min,,512
+HKR,NDI\params\stacksize,max,,4096
+HKR,NDI\params\stacksize,step,,8
+HKR,NDI\params\stacksize,optional,,1
+; t1_tick_one
+HKR,NDI\params\t1_tick_one,ParamDesc,,"t1_tick_one"
+HKR,NDI\params\t1_tick_one,flag,1,10,00,00,00
+HKR,NDI\params\t1_tick_one,type,,int
+HKR,Ndi\params\t1_tick_one,default,,5
+HKR,NDI\params\t1_tick_one,min,,1
+HKR,NDI\params\t1_tick_one,max,,255
+HKR,NDI\params\t1_tick_one,step,,1
+HKR,NDI\params\t1_tick_one,optional,,1
+; t1_tick_two
+HKR,NDI\params\t1_tick_two,ParamDesc,,"t1_tick_two"
+HKR,NDI\params\t1_tick_two,flag,1,10,00,00,00
+HKR,NDI\params\t1_tick_two,type,,int
+HKR,Ndi\params\t1_tick_two,default,,25
+HKR,NDI\params\t1_tick_two,min,,1
+HKR,NDI\params\t1_tick_two,max,,255
+HKR,NDI\params\t1_tick_two,step,,1
+HKR,NDI\params\t1_tick_two,optional,,1
+; t2_tick_one
+HKR,NDI\params\t2_tick_one,ParamDesc,,"t2_tick_one"
+HKR,NDI\params\t2_tick_one,flag,1,10,00,00,00
+HKR,NDI\params\t2_tick_one,type,,int
+HKR,Ndi\params\t2_tick_one,default,,1
+HKR,NDI\params\t2_tick_one,min,,1
+HKR,NDI\params\t2_tick_one,max,,255
+HKR,NDI\params\t2_tick_one,step,,1
+HKR,NDI\params\t2_tick_one,optional,,1
+; t2_tick_two
+HKR,NDI\params\t2_tick_two,ParamDesc,,"t2_tick_two"
+HKR,NDI\params\t2_tick_two,flag,1,10,00,00,00
+HKR,NDI\params\t2_tick_two,type,,int
+HKR,Ndi\params\t2_tick_two,default,,10
+HKR,NDI\params\t2_tick_two,min,,1
+HKR,NDI\params\t2_tick_two,max,,255
+HKR,NDI\params\t2_tick_two,step,,1
+HKR,NDI\params\t2_tick_two,optional,,1
+; timers
+HKR,NDI\params\timers,ParamDesc,,"timers"
+HKR,NDI\params\timers,flag,1,10,00,00,00
+HKR,NDI\params\timers,type,,int
+HKR,Ndi\params\timers,default,,12
+HKR,NDI\params\timers,min,,1
+HKR,NDI\params\timers,max,,255
+HKR,NDI\params\timers,step,,1
+HKR,NDI\params\timers,optional,,1
+; ti_tick_one
+HKR,NDI\params\ti_tick_one,ParamDesc,,"ti_tick_one"
+HKR,NDI\params\ti_tick_one,flag,1,10,00,00,00
+HKR,NDI\params\ti_tick_one,type,,int
+HKR,Ndi\params\ti_tick_one,default,,25
+HKR,NDI\params\ti_tick_one,min,,1
+HKR,NDI\params\ti_tick_one,max,,255
+HKR,NDI\params\ti_tick_one,step,,1
+HKR,NDI\params\ti_tick_one,optional,,1
+; ti_tick_two
+HKR,NDI\params\ti_tick_two,ParamDesc,,"ti_tick_two"
+HKR,NDI\params\ti_tick_two,flag,1,10,00,00,00
+HKR,NDI\params\ti_tick_two,type,,int
+HKR,Ndi\params\ti_tick_two,default,,125
+HKR,NDI\params\ti_tick_two,min,,1
+HKR,NDI\params\ti_tick_two,max,,25

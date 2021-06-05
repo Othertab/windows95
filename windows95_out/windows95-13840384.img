@@ -1,0 +1,127 @@
+0-1A7F(3FF::)
+IRQConfig=9,3,4,5,6,7,10,11
+DMAConfig=3,5,6,7
+
+[isa_5C1D.PioMode]
+OptionDesc="PIO Mode"
+ConfigPriority=HARDRECONFIG
+IOConfig=A00-A1F(3FF::),A20-A3F(3FF::),A40-A5F(3FF::),A60-A7F(3FF::),1A00-1A1F(3FF::),1A20-1A3F(3FF::),1A40-1A5F(3FF::),1A60-1A7F(3FF::)
+IRQConfig=9,3,4,5,6,7,10,11
+
+;****************************************************************************
+;isa_5C1C       ;IRMAtrac Convertible ISA (PHASE I)
+;****************************************************************************
+[d_isa_5C1C.ndi.reg]
+AddReg=d_isa_5C1C.Info,IRMATRAC.Info,isa_5C1C.Params,ISA.Params
+LogConfig=isa_5C1C.DmaMode,isa_5C1C.PioMode
+
+[d_isa_5C1C.Info]
+HKR,Ndi,DeviceID,,"isa_5C1C"
+HKR,Ndi,HelpText,,%d_isa_5C1C.HelpText%
+
+[isa_5C1C.Params]
+; Burst
+HKR,NDI\params\Burst,ParamDesc,,"DMA Burst Size"
+HKR,NDI\params\Burst,flag,1,30,00,00,00
+HKR,NDI\params\Burst,default,14
+HKR,NDI\params\Burst,type,,enum
+HKR,NDI\params\Burst\enum,2,," 2"
+HKR,NDI\params\Burst\enum,4,," 4"
+HKR,NDI\params\Burst\enum,6,," 6"
+HKR,NDI\params\Burst\enum,8,," 8"
+HKR,NDI\params\Burst\enum,10,,"10"
+HKR,NDI\params\Burst\enum,12,,"12"
+HKR,NDI\params\Burst\enum,14,," (default) 14"
+
+[isa_5C1C.DmaMode]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A3F(3FF::),1A20-1A3F(3FF::)
+IRQConfig=9,3,5,7
+DMAConfig=5,6
+
+[isa_5C1C.PioMode]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A3F(3FF::),1A20-1A3F(3FF::)
+IRQConfig=9,3,5,7
+
+;****************************************************************************
+;mca_5C1D       ; IRMAtrac Convertible MCA (PHASE II)
+;****************************************************************************
+[m_mca_5C1D.ndi.reg]
+AddReg=m_mca_5C1D.Info,IRMATRAC.Info,MCA.Params
+
+[d_mca_5C1D.ndi.reg]
+AddReg=d_mca_5C1D.Info,IRMATRAC.Info,MCA.Params
+
+[m_mca_5C1D.Info]
+HKR,Ndi,DeviceID,,"mca_5C1D"
+HKR,Ndi,HelpText,,%m_mca_5C1D.HelpText%
+
+[d_mca_5C1D.Info]
+HKR,Ndi,DeviceID,,"mca_5C1D"
+HKR,Ndi,HelpText,,%d_mca_5C1D.HelpText%
+
+;****************************************************************************
+;mca_5C1C       ; IRMAtrac Convertible MCA (PHASE I)
+;****************************************************************************
+[m_mca_5C1C.ndi.reg]
+AddReg=m_mca_5C1C.Info,IRMATRAC.Info,MCA.Params
+
+[d_mca_5C1C.ndi.reg]
+AddReg=d_mca_5C1C.Info,IRMATRAC.Info,MCA.Params
+
+[m_mca_5C1C.Info]
+HKR,Ndi,DeviceID,,"mca_5C1C"
+HKR,Ndi,HelpText,,%m_mca_5C1C.HelpText%
+
+[d_mca_5C1C.Info]
+HKR,Ndi,DeviceID,,"mca_5C1C"
+HKR,Ndi,HelpText,,%d_mca_5C1C.HelpText%
+
+;****************************************************************************
+;isa_4_16       ;IRMAtrac ISA 4/16
+;****************************************************************************
+[m_isa_4_16.ndi.reg]
+AddReg=m_isa_4_16.Info,IRMATRAC.Info,isa_4_16.Params,ISA.Params
+LogConfig=isa_4_16.DmaMode,isa_4_16.PioMode
+
+[d_isa_4_16.ndi.reg]
+AddReg=d_isa_4_16.Info,IRMATRAC.Info,isa_4_16.Params,ISA.Params
+LogConfig=isa_4_16.DmaMode,isa_4_16.PioMode
+
+[m_isa_4_16.Info]
+HKR,Ndi,DeviceID,,"isa_4_16"
+HKR,Ndi,HelpText,,%m_isa_4_16.HelpText%
+
+[d_isa_4_16.Info]
+HKR,Ndi,DeviceID,,"isa_4_16"
+HKR,Ndi,HelpText,,%d_isa_4_16.HelpText%
+
+[isa_4_16.Params]
+; Burst
+HKR,NDI\params\Burst,ParamDesc,,"DMA Burst Size"
+HKR,NDI\params\Burst,flag,1,30,00,00,00
+HKR,NDI\params\Burst,type,,enum
+HKR,NDI\params\Burst,default,22
+HKR,NDI\params\Burst\enum,2,," 2"
+HKR,NDI\params\Burst\enum,4,," 4"
+HKR,NDI\params\Burst\enum,6,," 6"
+HKR,NDI\params\Burst\enum,8,," 8"
+HKR,NDI\params\Burst\enum,10,,"10"
+HKR,NDI\params\Burst\enum,12,,"12"
+HKR,NDI\params\Burst\enum,14,,"14"
+HKR,NDI\params\Burst\enum,16,,"16"
+HKR,NDI\params\Burst\enum,18,,"18"
+HKR,NDI\params\Burst\enum,20,,"20"
+HKR,NDI\params\Burst\enum,22,," (default) 22"
+; TwistedPair
+HKR,NDI\params\Cabletype,ParamDesc,,"Cable Type"
+HKR,NDI\params\Cabletype,flag,1,30,00,00,00
+HKR,NDI\params\Cabletype,type,,enum
+HKR,NDI\params\Cabletype\enum,0,,"stp"
+HKR,NDI\params\Cabletype\enum,1,,"utp"
+HKR,NDI\params\Cabletype,default,,0
+
+[isa_4_16.DmaMode]
+ConfigPriority=HARDRECONFIG
+IOConfig=A00-A1F(3FF::),A20-A3F(3F

@@ -1,0 +1,167 @@
+dows 3.1 equivalent, therefore no entries after the locale value
+L100A
+L140A
+L180A
+L1C0A
+L200A
+L240A
+L280A
+L300A
+L340A
+L3C0A
+L2C0A
+L380A
+L2009
+L2409
+L0421
+
+;************************************************************************
+;**** Western Eurpoe, North America, and other code page 850 locales ****
+;************************************************************************
+
+[L0414]
+OptionDesc=%00000414%
+DelFiles=CodePage850_Del
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config047
+AddReg=SysLocale_0414, RegCP850, EBD047
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0814]
+OptionDesc=%00000814%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config047
+AddReg=SysLocale_0814, RegCP850, EBD047
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0416]
+OptionDesc=%00000416%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config055
+AddReg=SysLocale_0416, RegCP850, EBD055
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0816]
+OptionDesc=%00000816%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config351
+AddReg=SysLocale_0816, RegCP850, EBD351
+DelReg=DelEBD_Locale, DelRegCP850
+
+
+[L040A]
+OptionDesc=%0000040A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config034
+AddReg=SysLocale_040A, RegCP850, EBD034
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L080A]
+OptionDesc=%0000080A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config052
+AddReg=SysLocale_080A, RegCP850, EBD052
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0C0A]
+OptionDesc=%00000C0A%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config034
+AddReg=SysLocale_0C0A, RegCP850, EBD034
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L041D]
+OptionDesc=%0000041D%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config046
+AddReg=SysLocale_041D, RegCP850, EBD046
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L042D]
+OptionDesc=%0000042D%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config034
+AddReg=SysLocale_042D, RegCP850, EBD034
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0403]
+OptionDesc=%00000403%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config034
+AddReg=SysLocale_0403, RegCP850, EBD034
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0406]
+OptionDesc=%00000406%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config045
+AddReg=SysLocale_0406, RegCP850, EBD045
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0413]
+OptionDesc=%00000413%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config031
+AddReg=SysLocale_0413, RegCP850, EBD031
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0813]
+OptionDesc=%00000813%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSys=Config032
+AddReg=SysLocale_0813, RegCP850, EBD032
+DelReg=DelEBD_Locale, DelRegCP850
+
+[L0409]
+OptionDesc=%00000409%
+CopyFiles=CodePage437
+DelFiles=CodePage437_Del
+UpdateInis=CodePage437_Ini
+AddReg=SysLocale_0409, RegCP437
+DelReg=DelEBD
+
+[L0809]
+OptionDesc=%00000809%
+CopyFiles=CodePage850, CopyDOSIntl, CopyDat850
+DelFiles=CodePage850_Del
+UpdateInis=CodePage850_Ini
+UpdateAutoBat=Auto850
+UpdateCfgSy

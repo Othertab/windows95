@@ -1,0 +1,237 @@
+C
+[XV15PLUS]
+DelReg=DEL_CURRENT_REG
+AddReg=XV15PLUS.AddReg, 1280, DPMS
+
+[C400]
+DelReg=DEL_CURRENT_REG
+AddReg=C400.AddReg, 1024, DPMS
+
+[C500]
+DelReg=DEL_CURRENT_REG
+AddReg=C500.AddReg, 1280, DPMS
+
+[M500]
+DelReg=DEL_CURRENT_REG
+AddReg=M500.AddReg, 1280, DPMS
+
+; -------------- Nokia
+[445M]
+DelReg=DEL_CURRENT_REG
+AddReg=445M.AddReg, 1600,DPMS
+
+[445R]
+DelReg=DEL_CURRENT_REG
+AddReg=445R.AddReg, 1600, DPMS
+
+[445X]
+DelReg=DEL_CURRENT_REG
+AddReg=445X.AddReg, 1600,DPMS
+
+[447KA]
+DelReg=DEL_CURRENT_REG
+AddReg=447KA.AddReg,1280, DPMS
+
+[447KC]
+DelReg=DEL_CURRENT_REG
+AddReg=447KC.AddReg, 1280, DPMS
+
+[447M]
+DelReg=DEL_CURRENT_REG
+AddReg=447M.AddReg, 1280, DPMS
+
+[447W]
+DelReg=DEL_CURRENT_REG
+AddReg=447W.AddReg, 1280, DPMS
+
+[447X]
+DelReg=DEL_CURRENT_REG
+AddReg=447X.AddReg, 1280, DPMS
+
+[447XAV]
+DelReg=DEL_CURRENT_REG
+AddReg=447XAV.AddReg, 1280, DPMS
+
+[447K]
+DelReg=DEL_CURRENT_REG
+AddReg=447K.AddReg, 1280, DPMS
+
+[449M]
+DelReg=DEL_CURRENT_REG
+AddReg=449M.AddReg, 1024, DPMS
+
+[449X]
+DelReg=DEL_CURRENT_REG
+AddReg=449X.AddReg, 1024, DPMS
+
+[447XI]
+DelReg=DEL_CURRENT_REG
+AddReg=447XI.AddReg, 1280, DPMS 
+
+; -------------- Princeton
+[EO15]
+DelReg=DEL_CURRENT_REG
+AddReg=EO15.Add, 1280, DPMS
+
+[EO17]
+DelReg=DEL_CURRENT_REG
+AddReg=EO17.Add, 1280, DPMS
+
+
+; -------------- Samsung
+[3Ne]
+DelReg=DEL_CURRENT_REG
+AddReg=3Ne.AddReg, 1024, DPMS
+
+[4S]
+DelReg=DEL_CURRENT_REG
+AddReg=4S.AddReg, 1024, DPMS
+
+[15M]
+DelReg=DEL_CURRENT_REG
+AddReg=15M.AddReg, 1024, DPMS
+
+[15Me]
+DelReg=DEL_CURRENT_REG
+AddReg=15Me.AddReg, 1024, DPMS
+
+[J15GLsi]
+DelReg=DEL_CURRENT_REG
+AddReg=J15GLsi.AddReg, 1280, DPMS
+
+[6Ne]
+DelReg=DEL_CURRENT_REG
+AddReg=6Ne.AddReg, 1280, DPMS
+
+[J17GLi]
+DelReg=DEL_CURRENT_REG
+AddReg=J17GLi.AddReg, 1280, DPMS
+
+[J17GLsi]
+DelReg=DEL_CURRENT_REG
+AddReg=J17GLsi.AddReg, 1280, DPMS
+
+[20GLsi]
+DelReg=DEL_CURRENT_REG
+AddReg=20GLsi.AddReg, 1280, DPMS
+
+[21GLs]
+DelReg=DEL_CURRENT_REG
+AddReg=21GLs.AddReg, 1280, DPMS
+
+; -------------- Samtron
+[428PT/PTL]
+DelReg=DEL_CURRENT_REG
+AddReg=428PT/PTL.AddReg, 1024, DPMS
+
+[528MXLJ]
+DelReg=DEL_CURRENT_REG
+AddReg=528MXLJ.AddReg, 1280, DPMS
+
+[528TXL]
+DelReg=DEL_CURRENT_REG
+AddReg=528TXL.AddReg, 1024, DPMS
+
+[528UXL]
+DelReg=DEL_CURRENT_REG
+AddReg=528UXL.AddReg, 1280, DPMS
+
+[726GXL]
+DelReg=DEL_CURRENT_REG
+AddReg=726GXL.AddReg, 1280, DPMS
+
+[728FXL]
+DelReg=DEL_CURRENT_REG
+AddReg=728FXL.AddReg, 1280, DPMS
+
+[208DXL+]
+DelReg=DEL_CURRENT_REG
+AddReg=208DXL+.AddReg, 1280, DPMS
+
+[528MDL]
+DelReg=DEL_CURRENT_REG
+AddReg=528MDL.AddReg, 1024, DPMS
+
+; -------------- Tatung
+[TM651X]
+DelReg=DEL_CURRENT_REG
+AddReg=TM651X.AddReg, 1280, DPMS
+
+[TM671X]
+DelReg=DEL_CURRENT_REG
+AddReg=TM671X.AddReg, 1280, DPMS
+
+[TM442X]
+DelReg=DEL_CURRENT_REG
+AddReg=TM442X.AddReg, 1024, DPMS
+
+[TM452X]
+DelReg=DEL_CURRENT_REG
+AddReg=TM452X.AddReg, 1024, DPMS
+
+; -------------- TRL
+[TRL-DL1564]
+DelReg=DEL_CURRENT_REG
+AddReg=TRL-DL1564.AddReg, 1280, DPMS
+
+[TRL-DH1570]
+DelReg=DEL_CURRENT_REG
+AddReg=TRL-DH1570.AddReg, 1280, DPMS
+
+; -------------- ViewSonic
+[14ES]
+DelReg=DEL_CURRENT_REG
+AddReg=14ES.AddReg, 1024, DPMS
+
+[15GA]
+DelReg=DEL_CURRENT_REG
+AddReg=15GA.AddReg, 1280, DPMS
+
+[17EA]
+DelReg=DEL_CURRENT_REG
+AddReg=17EA.AddReg, 1280, DPMS
+
+[17GA]
+DelReg=DEL_CURRENT_REG
+AddReg=17GA.AddReg, 1280, DPMS
+
+[17GS]
+DelReg=DEL_CURRENT_REG
+AddReg=17GS.AddReg, 1280, DPMS
+
+[17PS]
+DelReg=DEL_CURRENT_REG
+AddReg=17PS.AddReg, 1600, DPMS
+
+[21PS]
+DelReg=DEL_CURRENT_REG 
+AddReg=21PS.AddReg, 1600, DPMS
+
+[PT810]
+DelReg=DEL_CURRENT_REG 
+AddReg=PT810.AddReg, 1600, DPMS
+
+[V775]
+DelReg=DEL_CURRENT_REG 
+AddReg=V775.AddReg, 1280, DPMS
+
+[1000S]
+DelReg=DEL_CURRENT_REG
+AddReg=1000S.AddReg, 1024, DPMS
+
+[1769DC]
+DelReg=DEL_CURRENT_REG
+AddReg=1769DC.AddReg, 1280, DPMS
+
+
+
+; AddReg sections
+;-------------------------------------------------
+
+; -------------- AOC
+[4VLR.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-50.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,9
+
+; -------------- Daewoo
+[CMC-1427X1.Add

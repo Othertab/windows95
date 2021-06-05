@@ -1,0 +1,124 @@
+=ADI2W103.386"
+system.ini,386Enh,"device=ADI2W104.386"
+
+system.ini,386Enh,"device=ATASPIXP.386" ;Windows VxD transport driver
+system.ini,386Enh,"device=ATASPI16.386" ;Windows VXD ATASPI Manager
+system.ini,386Enh,"device=FDATA32B.386" ;Windows 32-bit Disk Access driver
+system.ini,386Enh,"device=FDINT13.386"  ;Windows INT13h driver
+system.ini,386Enh,"device=FDSCSI.386"   ;Windows 32-bit Disk Access driver
+
+system.ini,386Enh,"device=aic7870.386"
+system.ini,386Enh,"device=fastscsi.386"
+system.ini,386Enh,"device=aha1540.386"
+system.ini,386Enh,"device=aha1740.386"
+system.ini,386Enh,"device=aic7770.386"
+system.ini,386Enh,"device=aic6360.386"
+
+system.ini,386Enh,"device=vpatchk.386"   ;Pentium Patch
+system.ini,386Enh,"device=WBIDE.386"     ;IDE Driver
+
+system.ini,386Enh,"device=hc_win.386"    ;Quantum Fastdisk Drivers
+system.ini,386Enh,"device=qtmint13.386"  ;Quantum Fastdisk Drivers
+
+system.ini,386Enh,"device=CPQFM19B.386"  ;Compaq VxD's
+system.ini,386Enh,"device=CPQFM19A.386"
+system.ini,386Enh,"device=CPQFMW31.386"
+system.ini,386Enh,"device=CPQFMVCD.386"
+system.ini,386Enh,"device=um8673.386"
+
+system.ini,386Enh,"device=DC2300.386" ;Promise technologies DC2000 DOS driver (32bit)
+
+system.ini,386Enh,"DEVICE=VIRWT.386"  ;Irwin Tape Drive
+
+system.ini,386Enh,"device=2015pl.386"  ;Unknown Fastdisk driver
+system.ini,386Enh,"device=2015.386"    ;Unknown Fastdisk driver
+
+system.ini,386Enh,"device=EIDE2300.386"  ; Promise FASTDISK driver for EIDE2300+
+
+;Compaq SafeStart:
+setup.ini, progman.groups,, "CpqUtils=""Compaq Utilities"""
+setup.ini, CpqUtils,, """SafeStart Manager"""     ;deletes link
+setup.ini, group1,, """SafeStart Manager"""     ;deletes link
+
+
+;Remove link on AT&T machines:
+setup.ini, progman.groups,, "ATTUTILS=""AT&T Utilities"""  ;creates folder
+setup.ini, ATTUTILS,, """AT&T Configuration Manager"""     ;deletes link
+
+system.ini,386Enh,"DEVICE=CP32SUP.386" ;PCTWin Patch
+system.ini,386Enh,"DEVICE=VFATHLP.386" ;PCTWin Patch
+
+system.ini,386Enh,"DEVICE=vcmd.386"  ;Zenith VxD
+system.ini,386Enh,"DEVICE=vcad.386"  ;Zenith VxD
+
+system.ini,386Enh,"LocalReboot=*"    ;IBM
+system.ini,386Enh,"KybdReboot=*"
+
+system.ini,386Enh,"DEVICE=ACIDEJL.386" ;ARCO JL+ adapter
+;-----------------------------------------------------
+
+[old.win.cleanup.flds]
+win.ini, windows, load,*printman.exe,,1
+win.ini, windows, run,*printman.exe,,1
+
+;Remove PrintCache program:
+win.ini, windows, load,*ltools.exe,,1
+win.ini, windows, run,*ltools.exe,,1
+
+win.ini, windows, load,*ltools,,1
+win.ini, windows, run,*ltools,,1
+
+;Remove HP Status Windows:
+win.ini, windows, load,*hpvdsm.exe,,1
+win.ini, windows, run,*hpvdsm.exe,,1
+win.ini, windows, load,*hpsw.exe,,1
+win.ini, windows, run,*hpsw.exe,,1
+
+;Remove Toshiba's startup app:
+win.ini, windows, load,*maxtime.exe,,1
+win.ini, windows, run,*maxtime.exe,,1
+win.ini, windows, load,*audcntrl.exe,,1
+win.ini, windows, run,*audcntrl.exe,,1
+
+;Remove LANDesk 2.0's DLL:
+system.ini, boot, drivers, *LOWDOS.DLL,,1
+
+;Remove AT&T entry from run= line:
+win.ini, windows, run,*regsetup.zzz,,1
+win.ini, windows, load,*regsetup.zzz,,1
+
+;Remove IBM Thinkpad docking app:
+win.ini, windows, run,*dockwin.exe,,1
+win.ini, windows, load,*dockwin.exe,,1
+;IBM Thinkpad screensaver app:
+win.ini, windows, run,*strtscr.exe,,1
+win.ini, windows, load,*strtscr.exe,,1
+
+;Compaq PnP Utils:
+win.ini, windows, run,*CPQFMCFG.EXE,,1
+win.ini, windows, load,*CPQFMCFG.EXE,,1
+
+;Media vision at your service pim:
+win.ini, windows, run,*ays.exe,,1
+win.ini, windows, load,*ays.exe,,1
+
+;Noron Anti-Virus:
+win.ini, windows, run,*NAVPOPUP.EXE,,1
+win.ini, windows, load,*NAVPOPUP.EXE,,1
+
+win.ini, windows, run,*WNTSRMAN.EXE,,1
+win.ini, windows, load,*WNTSRMAN.EXE,,1
+
+win.ini, windows, run,*NAVTSRW.EXE,,1
+win.ini, windows, load,*NAVTSRW.EXE,,1
+
+win.ini, windows, run,*NAVTSRW,,1
+win.ini, windows, load,*NAVTSRW,,1
+
+win.ini, windows, run,*alarmmgr.exe,,1
+win.ini, windows, load,*alarmmgr.exe,,1
+;-------------------------------------------
+
+
+[Strings]
+;Non-Localizable Strings

@@ -1,0 +1,194 @@
+ption=%Default_Keyboard%
+IconIndex=6
+DefaultDLL=SETUPX.DLL, P_SetDefaultOption
+
+[KeyboardList]
+KEYBOARD_00001809,ir
+KEYBOARD_0000080C,be
+KEYBOARD_00000809,uk
+KEYBOARD_00000406,dk,da
+KEYBOARD_0000040B,fi,su
+KEYBOARD_0000040C,fr
+KEYBOARD_00001009,cf,fc
+KEYBOARD_0000040A,sp
+KEYBOARD_00000C0A,sp
+KEYBOARD_0000080A,la
+KEYBOARD_00000407,gr
+KEYBOARD_00010407,gr1
+KEYBOARD_0000040F,ic,is
+KEYBOARD_00000410,it
+KEYBOARD_00010410,it1
+KEYBOARD_00000413,ne,nl
+KEYBOARD_00000414,no
+KEYBOARD_00000416,br
+KEYBOARD_00010416,br1
+KEYBOARD_0000041D,sw,sv
+KEYBOARD_0000100C,sf
+KEYBOARD_00000807,sg
+KEYBOARD_00000409,us
+KEYBOARD_00020409,dv
+KEYBOARD_00010409,usx
+KEYBOARD_00000C0C,ca
+KEYBOARD_00000816,po
+KEYBOARD_00030409,dv
+KEYBOARD_00040409,dv
+
+;** Here stars the list of keyboard specific entries
+
+[KEYBOARD_00001809]
+OptionDesc=%KBD_IR%
+AddReg = KeyReg_IR
+CopyFiles = @kbdir.kbd
+UpdateAutoBat=Keyb_Del, Keyb_UK
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_IRIni
+
+;Spanish Modern
+[KEYBOARD_0000040A]
+OptionDesc=%KBD_SP%
+AddReg = KeyReg_SP
+CopyFiles = @kbdsp.kbd
+UpdateAutoBat=Keyb_Del, Keyb_SP
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_SPIni
+
+;Mexican
+[KEYBOARD_0000080A]
+OptionDesc=%KBD_LA%
+AddReg = KeyReg_LA
+CopyFiles = @kbdla.kbd
+UpdateAutoBat=Keyb_Del, Keyb_LA
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_LAIni
+
+;Spanish Modern
+[KEYBOARD_00000C0A]
+OptionDesc=%KBD_SP2%
+AddReg = KeyReg_SP2
+CopyFiles = @kbdla.kbd
+UpdateAutoBat=Keyb_Del, Keyb_SP
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_LAIni
+
+[KEYBOARD_0000080C]
+OptionDesc=%KBD_BE%
+AddReg = KeyReg_BE
+CopyFiles = @kbdbe.kbd
+UpdateAutoBat=Keyb_Del, Keyb_BE
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_BEIni
+
+[KEYBOARD_00000809]
+OptionDesc=%KBD_UK%
+AddReg = KeyReg_UK
+CopyFiles = @kbduk.kbd
+UpdateAutoBat=Keyb_Del, Keyb_UK
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_UKIni
+
+[KEYBOARD_00000406]
+OptionDesc=%KBD_DA%
+AddReg = KeyReg_DA
+CopyFiles = @kbdda.kbd
+UpdateAutoBat=Keyb_Del, Keyb_DK
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_DAIni
+
+[KEYBOARD_0000040B]
+OptionDesc=%KBD_FI%
+AddReg = KeyReg_FI
+CopyFiles = @kbdfi.kbd
+UpdateAutoBat=Keyb_Del, Keyb_SU
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_FIIni
+
+[KEYBOARD_0000040C]
+OptionDesc=%KBD_FR%
+AddReg = KeyReg_FR
+CopyFiles = @kbdfr.kbd
+UpdateAutoBat=Keyb_Del, Keyb_FR
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_FRIni
+
+[KEYBOARD_00001009]
+OptionDesc=%KBD_FC%
+AddReg = KeyReg_FC
+CopyFiles = @kbdfc.kbd
+UpdateAutoBat=Keyb_Del, Keyb_CF
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_FCIni
+
+[KEYBOARD_00000407]
+OptionDesc=%KBD_GR%
+AddReg = KeyReg_GR
+CopyFiles = @kbdgr.kbd
+UpdateAutoBat=Keyb_Del, Keyb_GR
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_GRIni
+
+[KEYBOARD_00010407]
+OptionDesc=%KBD_GR1%
+AddReg = KeyReg_GR1
+CopyFiles = @kbdgr1.kbd
+UpdateAutoBat=Keyb_Del, Keyb_GR
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_GR1Ini
+
+[KEYBOARD_0000040F]
+OptionDesc=%KBD_IC%
+AddReg = KeyReg_IC
+CopyFiles = @kbdic.kbd
+UpdateAutoBat=Keyb_Del, Keyb_IC
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_ICIni
+
+[KEYBOARD_00000410]
+OptionDesc=%KBD_IT%
+AddReg = KeyReg_IT
+CopyFiles = @kbdit.kbd
+UpdateAutoBat=Keyb_Del, Keyb_IT
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_ITIni
+
+[KEYBOARD_00010410]
+OptionDesc=%KBD_IT1%
+AddReg = KeyReg_IT1
+CopyFiles = @kbdit1.kbd
+UpdateAutoBat=Keyb_Del, Keyb_IT1
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_IT1Ini
+
+[KEYBOARD_00000413]
+OptionDesc=%KBD_NE%
+AddReg = KeyReg_NE
+CopyFiles = @kbdne.kbd
+UpdateAutoBat=Keyb_Del, Keyb_NL
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_NEIni
+
+[KEYBOARD_00000414]
+OptionDesc=%KBD_NO%
+AddReg = KeyReg_NO
+CopyFiles = @kbdno.kbd
+UpdateAutoBat=Keyb_Del, Keyb_NO
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_NOIni
+
+[KEYBOARD_00000416]
+OptionDesc=%KBD_BRUSX%
+AddReg = KeyReg_BRUSX
+CopyFiles = @kbdusx.kbd
+UpdateAutoBat=Keyb_Del, Keyb_BR
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_BRUSXIni
+
+[KEYBOARD_00010416]
+OptionDesc=%KBD_BR%
+AddReg = KeyReg_BR
+CopyFiles = @kbdbr.kbd
+UpdateAutoBat=Keyb_Del, Keyb_BR
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_BRIni
+
+[KEYBOARD_00000816]
+OptionDesc=%KBD_PO%

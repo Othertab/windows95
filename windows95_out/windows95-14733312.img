@@ -1,0 +1,169 @@
+**************
+
+[ADDREG_NICE.ndi.reg]
+
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,CENDIS.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,CENDIS
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+
+HKR,NDI,CardType,,"PCMCIA"
+
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+HKR,Ndi,MatchAndMoveID,,"*pnp82c2"
+
+
+; Parameters
+HKR,,IoBaseAddress,1,02,00,00,00
+HKR,,InterruptNumber,1,04,00,00,00
+
+;MediaSelect
+HKR,Ndi\params\MediaSelect,ParamDesc,,"Cable Media Type"
+HKR,Ndi\params\MediaSelect,default,,0
+HKR,Ndi\params\MediaSelect,type,,enum
+HKR,Ndi\params\MediaSelect\enum,0,, "Automatic Detection"
+HKR,Ndi\params\MediaSelect\enum,1,, "Twisted Pair only"
+HKR,Ndi\params\MediaSelect\enum,2,, "Coax (Thinnet) only"
+HKR,NDI\params\MediaSelect,flag,1,20,00,00,00
+
+;****************************************************************************
+; Add these keys to the registry to all CE2PS adapters
+;****************************************************************************
+
+[ADDREG_CE2PS.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,CE2NDIS3.VXD
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,CE2NDIS3
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+
+HKR,Ndi,MatchAndMoveID,,"*pnp82c4"
+HKR,NDI,CardType,,"PCMCIA"
+
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+
+; Parameters
+HKR,,IoBaseAddress,1,02,00,00,00
+HKR,,IRQLevel,1,04,00,00,00
+
+;****************************************************************************
+; Add these keys to the registry for Xircom adapters
+;****************************************************************************
+; Install sections
+
+[10BT.ndi.reg]
+HKR,Ndi\Install,ndis3,,"nice.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-T-B00D"
+
+[10BTA.ndi.reg]
+HKR,Ndi\Install,ndis3,,"nice.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-T-5FFA"
+
+[10BTA2.ndi.reg]
+HKR,Ndi\Install,ndis3,,"nice.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-T-9C9B"
+
+[10BTB.ndi.reg]
+HKR,Ndi\Install,ndis3,,"nice.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-T-9FAB"
+
+[COMB.ndi.reg]
+HKR,Ndi\Install,ndis3,,"nice.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-C-83AE"
+
+[CE2PS.ndi.reg]
+HKR,Ndi\Install,ndis3,,"ce2ps.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-T-9F5B"
+
+[CE2PS2.ndi.reg]
+HKR,Ndi\Install,ndis3,,"ce2ps.ndis3"
+HKR,Ndi,DeviceID,,"PCMCIA\XIRCOM-CREDITCARD_10BASE-T-5331"
+
+[TOK.ndi.reg]
+HKR,Ndi,DeviceID,,"Xircom-CreditCard_Token_Ring-016F"
+
+[TOKA.ndi.reg]
+HKR,Ndi,DeviceID,,"Xircom-CreditCard_Token_Ring-0BDF"
+
+[TOKB.ndi.reg]
+HKR,Ndi,DeviceID,,"Xircom-CreditCard_Token_Ring-8227"
+
+[XircomPE3.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8215"
+
+;****************************************************************************
+; Add these keys to the registry for Xircom CE adapters
+;****************************************************************************
+
+[ADDREG_XIRCOM.ndi.reg]
+HKR,,AdapterType,,2
+HKR,,MemoryBaseAddress,1,01,00,00,00
+
+HKR,Override,0000,1, \
+;
+; CONFIGMG_VERSION
+;
+00,04,00,00, \
+;
+; PRIORITY
+;
+00,00,00,00, \
+;
+; I/O
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00,0C,00, \
+00,00,00,00, \
+00,00,00,00, \
+F0,FF,10,00, \
+00,00,FF,FF, \
+00,00,00,00, \
+64,00,00,00, \
+;
+; IRQ
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00,00,00, \
+FF,FF,00,00, \
+20,00,00,00, \
+;
+; MEM
+;
+34,00,00,00, \
+01,00,00,00, \
+01,00,14,00, \
+00,00,00,00, \
+00,00,00,00, \
+00,00,00,00, \
+00,F0,FF,FF, \
+00,10,00,00, \
+00,00,00,00, \
+FF,FF,FF,FF, \
+00,00,00,00, \
+02,00,00,00, \
+00,00,00,00, \
+;
+; REQUEST_CONFIG_PKT
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00,02,00, \
+32,32,32,02, \
+00,08,0

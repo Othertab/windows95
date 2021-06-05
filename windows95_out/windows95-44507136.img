@@ -1,0 +1,116 @@
+\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="System memory"
+"4"="Video memory"
+"5"="Flash memory"
+"6"="Non Volatile RAM"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\6]
+"Name"="Maximum Memory Capacity"
+"Description"="The maximum memory capacity, in kilobytes, on this device."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\MaximumMemoryCapacity"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\7]
+"Name"="Number of SIMM Slots"
+"Description"="The number of SIMM slots available for this type of memory on this device."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\NumberOfSIMMSlots"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\8]
+"Name"="Number of SIMM Slots Used"
+"Description"="The number of SIMM slots in use for this type of memory on this device."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\NumberOfSIMMSlotsUsed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\9]
+"Name"="Memory Speed"
+"Description"="The speed of this memory component in nanoseconds."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\MemorySpeed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\10]
+"Name"="Memory Error Correction"
+"Description"="The main error correction scheme supported by this memory component."
+"Column"="10"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\MemoryErrorCorrection"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\10\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="None"
+"4"="Parity"
+"5"="Single Bit ECC"
+"6"="MultiBit ECC"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\11]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="11"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\FRUGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\12]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="12"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\OperationalGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\8\13]
+"Name"="Maximum Memory Capacity- Fractional Part"
+"Description"="This + other added together gives the total memory Rationale (could not change attribute 6) in bytes "
+"Column"="13"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\PhysicalMemory\\MaximumMemoryCapacityFractionalPart"
+
+
+;===================================
+;  Logical Memory Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9]
+"Name"="Logical Memory"
+"Class"="DMTF|Logical Memory|001"
+"Description"="This group defines the logical memory attributes for system memory and any add-on memory installed in this system."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\1]
+"Name"="Base Memory Size"
+"Description"="The total size of the base memory in kilobytes."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\BaseMemorySize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\2]
+"Name"="Free Base Memory Size"
+"Description"="The size of free base memory in kilobytes."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\FreeBaseMemorySize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\3]
+"Name"="Extended Memory Size"
+"Desc

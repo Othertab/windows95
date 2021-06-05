@@ -1,0 +1,124 @@
+Simplemodem 144vi
+%Simple10%=Gen288I,AUS_Simple10   ; Simplemodem 288vi
+
+
+; --------------------------------------------------
+; Generic modem install sections
+
+[Gen]
+AddReg=All, GenericAddReg, GenReg, EXTERNAL
+
+[Gen3]
+AddReg=All, GenericAddReg, Gen3Reg, EXTERNAL
+
+[Gen12]
+AddReg=All, GenericAddReg, Gen12Reg, EXTERNAL
+
+[Gen24]
+AddReg=All, GenericAddReg, Gen24Reg, EXTERNAL
+
+[Gen24NFC]
+AddReg=All, GenericAddReg, Gen24NFCReg, EXTERNAL
+
+[Gen24I]
+AddReg=All, GenericAddReg, Gen24Reg, INTERNAL
+
+[Gen24P]
+AddReg=All, GenericAddReg, Gen24Reg, PCMCIA
+
+[Gen96]
+AddReg=All, GenericAddReg, Gen96Reg, EXTERNAL
+
+[Gen96I]
+AddReg=All, GenericAddReg, Gen96Reg, INTERNAL
+
+[Gen96P]
+AddReg=All, GenericAddReg, Gen96Reg, PCMCIA
+
+[Gen144]
+AddReg=All, GenericAddReg, Gen144Reg, EXTERNAL
+
+[Gen144I]
+AddReg=All, GenericAddReg, Gen144Reg, INTERNAL
+
+[Gen144P]
+AddReg=All, GenericAddReg, Gen144Reg, PCMCIA
+
+[Gen192]
+AddReg=All, GenericAddReg, Gen192Reg, EXTERNAL
+
+[Gen288]
+AddReg=All, GenericAddReg, Gen288Reg, EXTERNAL
+
+[Gen288I]
+AddReg=All, GenericAddReg, Gen288Reg, INTERNAL
+
+[Gen288P]
+AddReg=All, GenericAddReg, Gen288Reg, PCMCIA
+
+
+; --------------------------------------------------
+; Common AddReg sections
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*VCOMM
+HKR,,ConfigDialog,,modemui.dll
+HKR,,PortSubClass,1,02
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages"
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[INTERNAL]
+HKR,, DeviceType, 1, 02
+
+[PCMCIA]
+HKR,,PortDriver,,Serial.vxd
+HKR,,Contention,,*vcd
+HKR,, DeviceType, 1, 03
+
+[GenericAddReg]
+HKR, Init, 1,, "AT<cr>"
+HKR, Init, 2,, "ATE0V1<cr>"
+HKR, Monitor, 1,, "ATS0=0<cr>"
+HKR, Monitor, 2,, "None"
+HKR, Answer, 1,, "ATA<cr>"
+HKR, Hangup, 1,, "ATH<cr>"
+HKR,, Reset,, "ATZ<cr>"
+
+HKR, Settings, Prefix,, "AT"
+HKR, Settings, Terminator,, "<cr>"
+HKR, Settings, DialPrefix,, "D"
+HKR, Settings, Pulse,, "P"
+HKR, Settings, Tone,, "T"
+
+; DTE/DCE speeds will not be exact for generic modems because we will
+; treat CONNECT ### as a DCE speed when some modems will report it as DTE.
+HKR, Responses, "<cr>",        1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<lf>",        1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>OK<cr><lf>",          1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>RING<cr><lf>",        1, 08, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO CARRIER<cr><lf>",  1, 04, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>ERROR<cr><lf>",       1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO DIALTONE<cr><lf>", 1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>BUSY<cr><lf>",        1, 06, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>NO ANSWER<cr><lf>",   1, 07, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>CONNECT<cr><lf>",     1, 02, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "0<cr>",       1, 00, 00, 00,00,00,00, 00,00,00,00 ; OK
+HKR, Responses, "2<cr>",       1, 08, 00, 00,00,00,00, 00,00,00,00 ; RING
+HKR, Responses, "3<cr>",       1, 04, 00, 00,00,00,00, 00,00,00,00 ; NO CARRIER
+HKR, Responses, "4<cr>",       1, 03, 00, 00,00,00,00, 00,00,00,00 ; ERROR
+HKR, Responses, "6<cr>",       1, 05, 00, 00,00,00,00, 00,00,00,00 ; NO DIALTONE
+HKR, Responses, "7<cr>",       1, 06, 00, 00,00,00,00, 00,00,00,00 ; BUSY
+HKR, Responses, "8<cr>",       1, 07, 00, 00,00,00,00, 00,00,00,00 ; NO ANSWER
+HKR, Responses, "OK",          1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "RING",        1, 08, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "NO CARRIER",  1, 04, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "ERROR",       1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "NO DIALTONE", 1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "NO DIAL TONE",1, 05, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "BUSY",        1, 06, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "NO ANSWER",   1, 07, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "FAX",         1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "DATA",    

@@ -1,0 +1,117 @@
+pter Hardware Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7]
+"Name"="Network Adapter Hardware Group"
+"Class"="DMTF|Network Adapter Hardware|001"
+"Description"="Contains objects related to the network adapter hardware."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\1]
+"Name"="Network Topology"
+"Description"="This is the network media access method/topology supported by this adapter."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\NetworkTopology"
+"!Value"="B;IN(0,1)(1,1)(2,2)(3,3)(4,6)(5,7)(6,11)(7,1)(8,13)(9,10)(10,9)"
+
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\1\Enum]
+"1"="Other"
+"2"="10 Mbps Ethernet"
+"3"="100 Mbps Ethernet"
+"4"="100/10 Mbps Ethernet"
+"5"="100 Mbps VG AnyLAN"
+"6"="4 Mbps Token-Ring"
+"7"="16 Mbps Token-Ring"
+"8"="16/4 Mbps Token-Ring"
+"9"="2 Mbps Arcnet"
+"10"="20 Mbps Arcnet"
+"11"="FDDI"
+"12"="ATM"
+"13"="AppleTalk"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\2]
+"Name"="Transmission Capability"
+"Description"="Transmission capability of the adapter."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapterHardwareExtra\\TransmissionCapability"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\2\Enum]
+"1"="Normal"
+"2"="Full Duplex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\3]
+"Name"="Network Adapter RAM Size"
+"Description"="This is the total size of the adapter RAM in Kb."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapterHardwareExtra\\NetworkAdapterRAMSize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\4]
+"Name"="Bus Type"
+"Description"="This is the type of bus used to interface the adapter to the host."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\BusType"
+"!Value"="B;IN(0,1)(1,1)(2,2)(3,4)(4,3)(5,5)(6,7)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\4\Enum]
+"1"="Other"
+"2"="ISA"
+"3"="EISA"
+"4"="MCA"
+"5"="PCI"
+"6"="VL"
+"7"="PCMCIA"
+"8"="Parallel"
+"9"="NEC98"
+"256"="Motherboard"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\5]
+"Name"="Bus Width"
+"Description"="This is the width (in bits) of the data path used to interface the adapter to the host."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\BusWidth"
+"!Value"="B;IN(0,2)(8,3)(16,4)(32,5)(64,6)(128,7)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\7\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="8 bit card"
+"4"="16 bit card"
+"5"="32 bit card"
+"6"="64 bit card"
+"7"="128 bit card"
+
+
+;==========================================
+;
+;  BootROM groups for NIC
+;
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\10]
+"Name"="Boot ROM Configuration"
+"Class"="DMTF|Boot ROM Configuration|001"
+"Description"="This group describes the characteristics of the boot ROM."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\10\1]
+"Name"="Boot ROM Description"
+"Description"="This is the description of the software contained in the boot ROM."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\BootROM\\BootROMDescription"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\10\2]
+"Name"="Boot ROM Version"
+"Description"="This is the version number of the boot ROM software."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement

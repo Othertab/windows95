@@ -1,0 +1,86 @@
+Locale,00000402,,%00000402%     ;Bulgarian
+HKLM,"%KEY_KLayout%\00000402","layout file",,kbdbul.kbd
+HKLM,"%KEY_KLayout%\00000402","layout text",,%KBD_BUL%
+HKLM,"%KEY_KLayout%\00010402","layout file",,kbdbll.kbd
+HKLM,"%KEY_KLayout%\00010402","layout text",,%KBD_BLL%
+HKLM,"%KEY_KLayout%\00010402","layout id",,0004
+HKLM, %KEY_Nls%\Locale,00000419,,%00000419%     ;Russian
+HKLM,"%KEY_KLayout%\00000419","layout file",,kbdru.kbd
+HKLM,"%KEY_KLayout%\00000419","layout text",,%KBD_RU%
+HKLM,"%KEY_KLayout%\00010419","layout file",,kbdru1.kbd
+HKLM,"%KEY_KLayout%\00010419","layout text",,%KBD_RU1%
+HKLM,"%KEY_KLayout%\00010419","layout id",,0008
+HKLM, %KEY_Nls%\Locale,00000C1A,,%00000C1A%     ;Serbian
+HKLM,"%KEY_KLayout%\00000C1A","layout file",,kbdycc.kbd
+HKLM,"%KEY_KLayout%\00000C1A","layout text",,%KBD_YCC%
+HKLM,"%KEY_KLayout%\00010C1A","layout file",,kbdycl.kbd
+HKLM,"%KEY_KLayout%\00010C1A","layout text",,%KBD_YCL%
+HKLM,"%KEY_KLayout%\00010C1A","layout id",,0009
+HKLM, %KEY_Nls%\Locale,00000422,,%00000422%     ;Ukrainian
+HKLM,"%KEY_KLayout%\00000422","layout file",,kbdur.kbd
+HKLM,"%KEY_KLayout%\00000422","layout text",,%KBD_UR%
+HKLM, %KEY_Nls%\Codepage,1251,,cp_1251.nls
+
+[CEInstalled]
+HKLM,%KEY_Optional%,"Greek",,"Greek"
+HKLM,%KEY_Optional%\Greek,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Greek,Section,,"Greek"
+HKLM,%KEY_Optional%\Greek,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Cyrillic",,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Cyrillic,Section,,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"1"
+
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"0"
+
+HKLM, %KEY_Nls%\Locale,0000041C,,%0000041C%                ;Albania
+HKLM,"%KEY_KLayout%\0000041C","layout file",,kbdal.kbd
+HKLM,"%KEY_KLayout%\0000041C","layout text",,%KBD_AL%
+HKLM, %KEY_Nls%\Locale,0000041A,,%0000041A%                ;Croatia
+HKLM,"%KEY_KLayout%\0000041A","layout file",,kbdcr.kbd
+HKLM,"%KEY_KLayout%\0000041A","layout text",,%KBD_CR%
+HKLM, %KEY_Nls%\Locale,00000405,,%00000405%                ;Czech
+HKLM,"%KEY_KLayout%\00000405","layout file",,kbdcz.kbd
+HKLM,"%KEY_KLayout%\00000405","layout text",,%KBD_CZ%
+HKLM,"%KEY_KLayout%\00010405","layout file",,kbdcz1.kbd
+HKLM,"%KEY_KLayout%\00010405","layout text",,%KBD_CZ1%
+HKLM,"%KEY_KLayout%\00010405","layout id",,0005
+HKLM, %KEY_Nls%\Locale,0000040E,,%0000040E%                ;Hungarian
+HKLM,"%KEY_KLayout%\0000040E","layout file",,kbdhu.kbd
+HKLM,"%KEY_KLayout%\0000040E","layout text",,%KBD_HU%
+HKLM,"%KEY_KLayout%\0001040E","layout file",,kbdhu1.kbd
+HKLM,"%KEY_KLayout%\0001040E","layout text",,%KBD_HU1%
+HKLM,"%KEY_KLayout%\0001040E","layout id",,0006
+HKLM, %KEY_Nls%\Locale,00000415,,%00000415%                ;Polish
+HKLM,"%KEY_KLayout%\00000415","layout file",,kbdpl.kbd
+HKLM,"%KEY_KLayout%\00000415","layout text",,%KBD_PL%
+HKLM,"%KEY_KLayout%\00010415","layout file",,kbdpl1.kbd
+HKLM,"%KEY_KLayout%\00010415","layout text",,%KBD_PL1%
+HKLM,"%KEY_KLayout%\00010415","layout id",,0007
+HKLM, %KEY_Nls%\Locale,00000418,,%00000418%                ;Romania
+HKLM,"%KEY_KLayout%\00000418","layout file",,kbdro.kbd
+HKLM,"%KEY_KLayout%\00000418","layout text",,%KBD_RO%
+HKLM, %KEY_Nls%\Locale,0000041B,,%0000041B%                ;Slovak
+HKLM,"%KEY_KLayout%\0000041B","layout file",,kbdsl.kbd
+HKLM,"%KEY_KLayout%\0000041B","layout text",,%KBD_SL%
+HKLM, %KEY_Nls%\Locale,00000424,,%00000424%                ;Slovenian
+HKLM,"%KEY_KLayout%\00000424","layout file",,kbdsv.kbd
+HKLM,"%KEY_KLayout%\00000424","layout text",,%KBD_SV%
+HKLM, %KEY_Nls%\Codepage,1250,,cp_1250.nls
+
+[BalticInstalled]
+HKLM,%KEY_Op

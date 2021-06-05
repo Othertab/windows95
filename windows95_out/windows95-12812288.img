@@ -1,0 +1,196 @@
+nitor\NOK0098
+%447XI%=447XI, Monitor\NOK00A9
+
+[Princeton]
+%EO15%=EO15, Monitor\PGS003B
+%EO17%=EO17, Monitor\PGS003D
+
+[Samsung]
+%3Ne%=3Ne, Monitor\SAM0000
+%4S%=4S, Monitor\SAM0100
+%15M%=15M, Monitor\SAM4D52
+%15Me%=15Me, Monitor\SAM5450
+%J15GLsi%=J15GLsi, Monitor\SAM1530
+%6Ne%=6Ne, Monitor\SAM4D72
+%J17GLi%=J17GLi, Monitor\SAM4D73
+%J17GLsi%=J17GLsi, Monitor\SAM4D74
+%20GLsi%=20GLsi, Monitor\SAM4690
+%21GLs%=21GLs, Monitor\SAM4610
+
+[Samtron]
+%428PT/PTL%=428PT/PTL, Monitor\SDI1428
+%528MXLJ%=528MXLJ, Monitor\SDI1530
+%528TXL%=528TXL, Monitor\SDI1528
+%528UXL%=528UXL, Monitor\SDI1529
+%726GXL%=726GXL, Monitor\SDI4D71
+%728FXL%=728FXL, Monitor\SDI4D70
+%208DXL+%=208DXL+, Monitor\SDI4690
+%528MDL%=528MDL, Monitor\SDI5451
+
+[Tatung]
+%TM651X%=TM651X, Monitor\TAT1F65
+%TM671X%=671X, Monitor\TAT1F67
+%TM442X%=TM442X, Monitor\TAT2F44
+%TM452X%=TM452X, Monitor\TAT2F45
+
+[TRL]
+%TRL-RH1564%=TRL-DL1564, Monitor\TRL061C
+%TRL-RH1570%=TRL-DH1570, Monitor\TRL0622
+
+[ViewSonic]
+%14ES%=14ES, Monitor\VSC3141
+%15GA%=15GA, Monitor\VSC3644
+%17EA%=17EA, Monitor\VSC384A
+%17GA%=17GA, Monitor\VSC0C1F
+%17GS%=17GS, Monitor\VSC0C00
+%17PS%=17PS, Monitor\VSC0C0F
+%21PS%=21PS, Monitor\VSC1600		
+%PT810%=PT810, Monitor\VSC3351		
+%V775%=V775, Monitor\OQI3333
+%1000S%=1000S, Monitor\OQI3234
+%1769DC%=1769DC, Monitor\OQI4637
+; Install sections
+;-------------------------------------------------
+
+; -------------- AOC
+[4VLR]
+DelReg=DEL_CURRENT_REG
+AddReg=4VLR.AddReg, 1024 ,DPMS
+
+; -------------- Daewoo
+[CMC-1427X1]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1427X1.AddReg, 1024, DPMS
+
+[CMC-1507X1]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1507X1.AddReg, 1024, DPMS
+
+[CMC-1505X]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1505X.AddReg, 1024, DPMS
+
+[CMC-1423B1]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1423B1.AddReg, 1280, DPMS
+
+[CMC-1502B1]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1502B1.AddReg, 1280, DPMS
+
+[CMC-1703B]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1703B.AddReg, 1280, DPMS
+
+[CMC-1704C]
+DelReg=DEL_CURRENT_REG
+AddReg=CMC-1704C.AddReg, 1600, DPMS
+
+; -------------- Hitachi
+[CM-1711M]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-1711M.AddReg, 1280, DPMS
+
+[CM-2110M]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-2110M.AddReg, 1280, DPMS
+
+[CM-2111M]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-2111M.AddReg, 1600, DPMS
+
+[CM-2112M]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-2112M.AddReg, 1600, DPMS
+
+; -------------- Hyundai
+[HL-7864.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=HL-7864.AddReg, 1280, DPMS
+
+[HL-5864E.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=HL-5864E.AddReg, 1280, DPMS
+
+; -------------- IBM
+[IBMP50]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMP50.AddReg, 1024, DPMS
+
+[IBMP70]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMP70.AddReg, 1280, DPMS
+
+[IBMP200]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMP200.AddReg, 1600, DPMS
+
+[IBMP201]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMP201.AddReg, 1600, DPMS
+
+[IBMG41]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMG41.AddReg, 1024, DPMS
+
+[IBMG50]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMG50.AddReg, 1024, DPMS
+
+[IBMG70]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMG70.AddReg, 1280, DPMS
+
+[IBMG200]
+DelReg=DEL_CURRENT_REG
+AddReg=IBMG200.AddReg, 1280, DPMS
+
+
+; -------------- LG
+
+[StudioWorks20i]
+DelReg=DEL_CURRENT_REG
+AddReg=StudioWorks20i.AddReg, 1600, DPMS
+
+[StudioWorks78i]
+DelReg=DEL_CURRENT_REG
+AddReg=StudioWorks78i.AddReg, 1600, DPMS
+
+[1505s]
+DelReg=DEL_CURRENT_REG
+AddReg=1505s.AddReg, 1024, DPMS
+
+[StudioWorks56m]
+DelReg=DEL_CURRENT_REG
+AddReg=StudioWorks56m.AddReg, 1280, DPMS
+
+[StudioWorks44m]
+DelReg=DEL_CURRENT_REG
+AddReg=StudioWorks44m.AddReg, 1024, DPMS
+
+; -------------- MAG
+
+[DX1595]
+DelReg=DEL_CURRENT_REG
+AddReg=DX1595.AddReg, 1280, DPMS
+[DX15T]
+DelReg=DEL_CURRENT_REG
+AddReg=DX15T.AddReg, 1280, DPMS
+[DX1795]
+DelReg=DEL_CURRENT_REG
+AddReg=DX1795.AddReg, 1280, DPMS
+
+; -------------- Mitsubishi
+[FFF-8705]
+DelReg=DEL_CURRENT_REG
+AddReg=FFF-8705.AddReg, 1280, DPMS
+
+[SD-5800]
+DelReg=DEL_CURRENT_REG
+AddReg=SD-5800.AddReg, 1280, DPMS
+
+[TFM-8705]
+DelReg=DEL_CURRENT_REG
+AddReg=TFM-8705.AddReg, 1280, DPMS
+
+; -------------- NE

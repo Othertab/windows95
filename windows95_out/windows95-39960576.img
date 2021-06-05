@@ -1,0 +1,151 @@
+n electronically compatible 3.5-inch floppy disk drive.
+    (Electronically compatible drives are installed on your computer and use
+    your existing floppy disk drive controller.) Use the /I switch if your
+    computer's ROM BIOS does not support 3.5-inch floppy disk drives.
+
+/N
+    Specifies a nonremovable block device.
+
+/S:sectors
+    Specifies the number of sectors per track that the block device
+    supports. Values for sectors must be in the range 1 through 99. The
+    default value depends on the value you specify for /F:factor.
+
+/T:tracks
+    Specifies the number of tracks per side that the block device supports.
+    The default value depends on the value you specify for /F:factor.
+
+
+FCBS, FCBSHIGH
+==============
+
+Specifies the number of file control blocks (FCBs) that MS-DOS can have open
+at the same time. Use the FCBSHIGH command to load the FCBs in the upper
+memory area. You can use these commands only in your Config.sys file.
+
+A file control block is a data structure that stores information about a
+file.
+
+Syntax
+
+    FCBS=x
+    FCBSHIGH=x
+
+Parameter
+
+x
+    Specifies the number of file control blocks that MS-DOS can have open at
+    one time. Valid values for x are in the range 1 through 255. The default
+    value is 4.
+
+
+FILES/FILESHIGH
+===============
+
+Specifies the number of files that MS-DOS can access at one time. Use the 
+FILESHIGH command to load the command in the upper memory area. You can 
+use these commands only in your Config.sys file.
+
+Syntax
+
+    FILES=x
+    FILESHIGH=x
+
+Parameter
+
+x
+    Specifies the number of files that MS-DOS can access at one time. Valid
+    values for x are in the range 8 through 255. The default value is 8.
+
+
+INSTALL/INSTALLHIGH
+====================
+
+Loads a memory-resident program into memory when you start MS-DOS. Use the 
+INSTALLHIGH command to load the memory-resident program into the upper
+memory area. You can use these commands only in your Config.sys file.
+
+Memory-resident programs stay in memory as long as your computer is on. They
+can be used even when other programs are active. You can use the INSTALL
+or INSTALLHIGH command to load MS-DOS memory-resident programs--for example, 
+Fastopen, Keyb, Nlsfunc, and Share.
+
+Syntax
+
+    INSTALL=[drive:][path]filename [command-parameters]
+    INSTALLHIGH=[drive:][path]filename [command-parameters]
+
+Parameters
+
+[drive:][path]filename
+    Specifies the location and name of the memory-resident program you want
+    to run.
+
+command-parameters
+    Specifies parameters for the program you specify for filename.
+
+
+LASTDRIVE/LASTDRIVEHIGH
+=======================
+
+Specifies the maximum number of drives you can access. Use the 
+LASTDRIVEHIGH command to load the LASTDRIVE data structures in the upper 
+memory area. You can use these commands only in your Config.sys file.
+
+The value you specify represents the last valid drive that MS-DOS is to
+recognize.
+
+Syntax
+
+    LASTDRIVE=x
+    LASTDRIVEHIGH=x
+
+Parameter
+
+x
+    Specifies a drive letter in the range A through Z.
+
+
+NUMLOCK
+========
+
+Specifies whether the NUM LOCK key is set to ON or OFF when your computer
+starts. You can use this command only in your Config.sys file.
+
+Syntax
+
+    NUMLOCK=[ON|OFF]
+
+Parameters
+
+ON|OFF
+    If set to ON, turns on the NUM LOCK key when MS-DOS displays the startup
+    menu. If set to OFF, turns NUM LOCK off.
+
+
+REM
+===
+
+Enables you to include comments in a batch file or in your Config.sys file.
+The REM command is also useful for disabling commands. You can use a
+semicolon (;) instead of the REM command in your Config.sys file, but not in
+batch files.
+
+Syntax
+
+    REM [string]
+
+Parameters
+
+string
+    Specifies any string of characters -- the command you want to disable or
+    the comment you want to include.
+
+
+SET
+===
+
+Displays, sets, or removes MS-DOS environment variables.
+
+You use environment variables to control the behavior of some batch files
+and programs and to control the way MS-DOS appears and works. The

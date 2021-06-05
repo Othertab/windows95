@@ -1,0 +1,98 @@
+tion Support = RK31_ARC_34_
+2 Windows 95 Network Architecture
+2 Introduction = RK32_NAR_1_
+3 Windows 95 Network Architecture Overview
+3 Introduction = RK32_NAR_3_
+3 OSI Reference Model and Windows 95 Architecture = RK32_NAR_4_
+3 Redirectors and IFS Manager = RK32_NAR_5_
+3 Multiple Network Support
+3 Introduction = RK32_NAR_7_
+3 Win32 WinNet Interface for Applications = RK32_NAR_8_
+3 Multiple Provider Router and Service Provider Interface = RK32_NAR_9_
+4 Network Providers
+4 Introduction = RK32_NAR_11_
+4 Network Provider for NetWare Networks = RK32_NAR_12_
+4 Network Provider for Microsoft Networks = RK32_NAR_13_
+3 WinNet16 Interface = RK32_NAR_14_
+3 Multiple Network Example = RK32_NAR_15_
+3 NDIS Overview
+3 Introduction = RK32_NAR_17_
+3 Support for NDIS 2 Protocols = RK32_NAR_18_
+3 Support for NDIS Network Adapters = RK32_NAR_19_
+3 Architecture for Network Protocols
+3 Introduction = RK32_NAR_21_
+3 Architecture for IPX/SPX-Compatible Protocol = RK32_NAR_22_
+3 Architecture for NetBEUI Protocol = RK32_NAR_23_
+3 Architecture for Microsoft TCP/IP Protocol = RK32_NAR_24_
+3 Architecture for Clients, Peer Servers, and IPC
+3 Introduction = RK32_NAR_26_
+3 Client for Microsoft Networks Architecture = RK32_NAR_27_
+3 Client for NetWare Networks Architecture = RK32_NAR_28_
+3 Architecture for Peer Resource Sharing = RK32_NAR_29_
+4 IPC and Windows 95
+4 Introduction = RK32_NAR_31_
+4 Windows Sockets = RK32_NAR_32_
+4 RPC = RK32_NAR_33_
+4 NetBIOS = RK32_NAR_34_
+4 Client-Side Named Pipes = RK32_NAR_35_
+4 Mailslots = RK32_NAR_36_
+2 Windows 95 Registry
+2 Introduction = RK33_REG_1_
+2 Windows 95 Registry Overview = RK33_REG_2_
+2 Getting Started with Registry Editor = RK33_REG_3_
+2 How Windows 95 Components Use the Registry = RK33_REG_4_
+3 Registry Structure
+3 Introduction = RK33_REG_6_
+3 Registry Hierarchy = RK33_REG_7_
+3 Value Entries in the Registry Keys = RK33_REG_8_
+3 Registry Files = RK33_REG_9_
+3 Recovering Registry Data = RK33_REG_10_
+3 Saving and Restoring the Registry = RK33_REG_11_
+3 Hkey_Local_Machine
+3 Introduction = RK33_REG_13_
+3 Config Subtree in Hkey_Local_Machine = RK33_REG_14_
+3 Enum Subtree in Hkey_Local_Machine = RK33_REG_15_
+4 Software Subtree in Hkey_Local_Machine
+4 Introduction = RK33_REG_17_
+4 Classes Subkey = RK33_REG_18_
+4 Description Subkeys = RK33_REG_19_
+4 System Subtree in Hkey_Local_Machine
+4 Introduction = RK33_REG_21_
+4 Control Subkey = RK33_REG_22_
+4 Services Subkey for CurrentControlSet = RK33_REG_23_
+2 Hkey_Current_User and Hkey_Users = RK33_REG_24_
+2 Hkey_Current_Config and Hkey_Dyn_Data = RK33_REG_25_
+3 Initialization Files and the Registry
+3 Introduction = RK33_REG_27_
+3 WIN.INI Settings in the Registry = RK33_REG_28_
+3 SYSTEM.INI Settings in the Registry = RK33_REG_29_
+2 International Windows 95
+2 Introduction = RK34_INT_1_
+2 Overview of Windows 95 Local Editions = RK34_INT_2_
+2 Overview of International Language Support = RK34_INT_3_
+3 Specifying International Settings
+3 Introduction = RK34_INT_5_
+3 Changing Regional Settings in Windows 95 = RK34_INT_6_
+3 Defining International Settings in Custom Setup Scripts = RK34_INT_7_
+3 Changing the Code Page = RK34_INT_8_
+3 Using Multiple Languages in Windows 95
+3 Introduction = RK34_INT_10_
+3 Using Multilingual Fonts with Win32-Based Applications = RK34_INT_11_
+3 Using Alternate Keyboards = RK34_INT_12_
+3 Using Windows 95 Support for Local Conventions = RK34_INT_13_
+2 General Troubleshooting
+2 Introduction = RK35_TRS_1_
+3 Troubleshooting Strategy
+3 Introduction = RK35_TRS_3_
+3 Analyzing Symptoms = RK35_TRS_4_
+3 Checking for Common Issues = RK35_TRS_5_
+3 Isolating and Testing the Error Condition = RK35_TRS_6_
+3 Checking Technical Support Resources = RK35_TRS_7_
+3 Windows 95 Troubleshooting Aids for Startup
+3 Introduction = RK35_TRS_9_
+3 Using Safe Recovery with Windows 95 Setup = RK35_TRS_10_
+3 Verifying Installed Components with Windows 95 Setup = RK35_TRS_11_
+3 Using a Startup Disk = RK35_TRS_12_
+4 Using Windows 95 Startup Menu Options
+4 Introduction = RK35_TRS_14_
+4 Safe

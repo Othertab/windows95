@@ -1,0 +1,90 @@
+-click the Display icon.
+3. Click the Settings tab.
+4. In the Color palette list box, click 256 Color.
+
+MORE THAN 256 COLOR:
+MSN is designed to look even better at higher color settings.
+You will find that much of the text is more readable and the 
+images much clearer when you set your display resolution to 
+16 bit (65,536 colors) or higher.
+
+Some video cards may encounter problems when using accelerated 
+video drivers, video drivers with more than 256 colors, or high 
+resolution video drivers.
+
+If you run into display problems:
+1. Try switching to a driver supplied with Windows 95 or later.
+2. Change to a different display mode. An alternative to using a 
+   different driver is to change your video mode to a standard 
+   video mode such as 640x480 resolution with 256 colors.
+
+For details on how to change drivers or switch to a different 
+display mode, see your Windows documentation.
+
+NEC computers using the Alliance Promotion video card do not work 
+well with the MSN setup program. Please contact your computer 
+dealer for assistance.
+
+
+
+3.  Hard Disk Location of MSN Program Files
+===========================================
+MSN requires that its files be installed on your system disk (the 
+drive from which your computer boots, generally the C: drive).  
+
+If you do not have enough space on your system drive, Setup will 
+notify you.  You will need to make room on your system disk in 
+order to install MSN.   
+
+
+
+4.  Microsoft Internet Explorer Installation
+============================================
+MSN requires that you have Internet Explorer (IE) version 4.0 
+installed.  If you have not yet installed IE 4.0, please 
+install it before attempting to install MSN 2.51.
+
+WARNING: Do not install any previous version of Internet Explorer 
+over Internet Explorer 4.0. If you need to install an earlier version 
+of Internet Explorer, you must uninstall Internet Explorer 4.0 first.
+
+You should always uninstall your current version of 
+Internet Explorer 4.0 before installing a newer build.
+
+
+5.  Installation Problems
+=========================
+VERSION CONFLICTS:
+You may encounter a version conflict when running 
+the MSN setup program, or when logging in for the first time.  
+If a "Version Conflict" dialog box is displayed, always keep the newer
+version. The dialog box will usually ask, "Do you want to keep this file?"
+to which you should click "Yes."
+
+
+PROGRAMS RUNNING DURING SETUP:
+During MSN Setup, we notify you of any running programs that may interfere 
+with the MSN installation.  Before continuing, we recommend that you close those
+programs. This better ensures a successful installation.
+Some programs, such as anti-virus applications that load automatically at startup, 
+may be more difficult to close than others. If you are unable to close these programs, 
+you can continue with MSN Setup by clicking the Next button and selecting "Yes" when 
+you are given a "Do you want to continue anyway?" prompt. In most cases, MSN Setup will 
+complete successfully. However, should you run into problems, for example, your system
+stops responding for several minutes during Setup, please try the steps
+below to disable all running applications prior to installing MSN.
+
+Recommended steps to disable programs that load during startup:
+1. Restart your computer.
+2. While Windows is loading, hold down a Shift key.
+3. After booting up, but before running other programs,
+   press the Ctrl-Alt-Del keys together ONCE.  
+   If there are programs in the list other than Explorer and Systray
+   select them and click the End Task button.
+
+Programs may also load automatically in the Startup folder.  These items can be
+temporarily moved to another temporary folder or your desktop until MSN 
+completes the installation.  Once finished they can be placed back in the 
+Startup folder.  This folder is located in: Windows\StartMenu\Programs\Startup 
+and the items appear as shortcuts.  Once moved from your Startup folder, be sure 
+to restart your computer so that the changes will take 

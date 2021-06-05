@@ -1,0 +1,94 @@
+cessor, cache, graphic card, system buses,
+etc...). This is why an automatic limitation of the world's size was not 
+included in the program. But the 80386-40 systems are not adapted to 
+size 5 worlds, where 60.000 settlers can live. With a 80386 system, you 
+should be able to play size 5 worlds.
+
+4. Controlling the second player
+
+(The text in parenthesis is not yet 100% definitive_)
+
+The joystick can be fine tuned once the menu for the second player has 
+been completed. It will be furthermore possible to use a second mouse, 
+thereby giving the second player more control over the game play. 
+
+The controls menu can be accessed by activating the "right side" text in 
+the options menu (for player 2). This option can be activated both before 
+and during the game.
+
+You can choose the control mode for the second player in the upper section 
+of the controls menu. The following choices are available:
+
+-       joystick
+-       Microsoft compatible mouse (2nd mouse)
+-       Logitech compatible mouse (2nd mouse)
+
+The following information is displayed when the parameters for the 
+joystick are entered:
+
+-       speed
+-       tolerance limit
+
+The speed corresponds to the cursor's maximum speed on screen. 
+This parameter can be increased or decreased.
+
+The tolerance limit (25% by default) corresponds to the amount of movement 
+required by the joystick before the cursor on screen will move. This 
+option is extremely important as the player will often nudge the joystick 
+a little when he or she is pressing the fire button.
+
+The cursor would jump at the slightest movement of the joystick if there 
+were no tolerance limit. If the cursor won't stop moving around and you 
+are not moving the joystick (and a different calibration has no effect), 
+then increase the tolerance level of the joystick.
+
+A PC joystick must be calibrated in order to work correctly during the 
+game. The program will automatically ask the player if he or she wants to 
+calibrate the joystick (when the game is in 2 player mode). Press the "J" 
+(or Y) key to calibrate the joystick during game play. The program will 
+ask you to move the joystick in different directions while pressing the 
+fire button. If you make a mistake during the calibration, you must start 
+the calibration process over again.
+
+
+Playing with a second mouse:
+
+Playing with two mice on a PC is rather complicated as a PC was not 
+designed to handle two mice. The game, however, will be much more 
+enjoyable in 2 player mode if you use a second mouse.
+
+You will need the following material in order to play with a second mouse:
+
+- Another Microsoft compatible mouse (or Mouse Systems compatible).
+(most of the mice available today are either one or the other).
+
+The Microsoft compatible mice have two buttons (the Mouse Systems mice 
+usually have three buttons). Several other mice can be configured to 
+function in "Microsoft emulation" mode.
+
+As there are different data formats for 3 buttons mice, we suggest you 
+choose a Microsoft compatible mouse when buying an extra mouse.
+
+- An open Com port. A PC usually has 2 Com ports (this subject is dealt 
+with in more detail later on).
+- If the mouse plug does not fit into the Com port, you will have to use 
+an adapter.
+
+A PC normally has 2 Com ports: COM1 and COM2.
+Some configurations have two additional Com ports: COM3 and COM4. A Com 
+port has either a 9-pin or a 25-pin plug; the only difference between the 
+two being the number of pins. If you have a 25-pin Com port, you can use a 
+mouse that has a 25-pin plug, or you can use a mouse with a 9-pin plug and 
+an adapter. Don't mix up the type of port and the type of plug when you 
+buy a second mouse or adapter.
+
+The COM1 port is usually equipped with a 9-pin plug that can be used with 
+a "normal" mouse. The COM2 port is usually equipped with a 25-pin plug.
+
+Once the mouse has been plugged in, the program will ask you to enter two 
+new parameters in the controls menu:
+
+-       COM port
+-       IRQ number of the COM port
+
+On some P

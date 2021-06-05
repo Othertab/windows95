@@ -1,0 +1,166 @@
+App
+App4=AT&T Microsoft Internet Explorer Config Helper App
+App5=AT&T Microsoft Internet Explorer Full ins file App
+State=NEW
+
+
+[AT&T Netscape Utilities Version 1.5 Package]
+RecordType=PACKAGE_RECORD
+Type=MANDATORY
+LongDescription=AT&T utilities required for supporting Netscape 32 Bit Internet Software
+NumberOfApps=2
+App1=AT&T Netscape 3.0 32 Bit Config Dll App
+App2=AT&T Netscape 4.0 32 Bit Config Dll App
+State=NEW
+
+
+;--------------------------------------------
+; Application Service Records
+;--------------------------------------------
+
+;
+; Netscape Version 4.0 Applications
+;
+[Netscape Version 4.0 Browser App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=BROWSER
+Launch=TRUE
+Installable=Netscape 32 Bit Version 4.0
+
+[Netscape Version 4.0 Mail App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=MAIL
+Installable=Netscape 32 Bit Version 4.0
+
+[Netscape Version 4.0 News App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=NEWS
+Installable=Netscape 32 Bit Version 4.0
+
+
+;
+; Netscape Version 3.0 Applications
+;
+[Netscape Version 3.0 Browser App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=BROWSER
+Launch=TRUE
+Installable=Netscape 32 Bit Version 3.0
+
+[Netscape Version 3.0 Mail App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=MAIL
+Installable=Netscape 32 Bit Version 3.0
+
+[Netscape Version 3.0 News App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=NEWS
+Installable=Netscape 32 Bit Version 3.0
+
+
+;
+; Microsoft Applications
+;
+
+[Microsoft Internet Explorer Version 4 Browser App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=BROWSER
+Launch=TRUE
+Installable=Microsoft 32 Bit Internet Explorer Version 4
+
+[Microsoft Internet Explorer Version 3 Browser App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=BROWSER
+Launch=TRUE
+Installable=Microsoft 32 Bit Internet Explorer Version 3
+
+[Microsoft Internet News App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=NEWS
+Installable=Microsoft 32 Bit Internet News
+
+[Microsoft Internet Mail App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=MAIL
+Installable=Microsoft 32 Bit Internet Mail
+
+[Microsoft Outlook Express News App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=NEWS
+LaunchArg=/News
+Installable=Microsoft 32 Bit Outlook Express
+
+[Microsoft Outlook Express Mail App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=MAIL
+LaunchArg=/Mail
+Installable=Microsoft 32 Bit Outlook Express
+
+
+;
+; Win95 Common Apps
+;
+[Stack App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=STACK
+Installable=Win95 Stack
+
+
+[Dialer App]
+RecordType=APPLICATION_SERVICE_RECORD
+Type=DIALER
+Installable=Win95 Dialer
+
+
+;
+; AT&T Utility Apps
+;
+
+[AT&T Connection Manager App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Connection Manager
+Type=OTHER
+
+[AT&T Show Alert App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Show Alert
+Type=OTHER
+
+[AT&T Microsoft Internet Explorer 32 Bit Config Dll App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Microsoft Internet Explorer 32 Bit Config Dll
+Type=OTHER
+
+[AT&T Microsoft Internet Explorer ins file App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Microsoft Internet Explorer ins file
+Type=OTHER
+
+[AT&T Microsoft Internet Explorer Full ins file App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Microsoft Internet Explorer Full ins file
+Type=OTHER
+
+[AT&T Microsoft Outlook Express 32 Bit Config Dll App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Microsoft Outlook Express 32 Bit Config Dll
+Type=OTHER
+
+[AT&T Netscape 4.0 32 Bit Config Dll App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Netscape 4.0 32 Bit Config Dll
+Type=OTHER
+
+[AT&T Netscape 3.0 32 Bit Config Dll App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Netscape 3.0 32 Bit Config Dll
+Type=OTHER
+
+[AT&T Microsoft Internet Explorer Config Helper App]
+RecordType=APPLICATION_SERVICE_RECORD
+Installable=AT&T Microsoft Internet Explorer Config Helper
+Type=OTHER
+
+;--------------------------------------------
+; Installable Records
+;-------------------------

@@ -1,0 +1,108 @@
+es can be exchanged wirelessly 
+  between two computers that have an IR device and the version 2.0 
+  driver installed, instead of using a serial or parallel cable.
+
+- Files can also be printed wirelessly on IR-capable printers.
+
+- If the user has an IR-capable LAN access point product connected 
+  to the network, wireless IR links can be used instead of LAN 
+  cabling. For a list of LAN access point products the version 2.0 
+  IR driver has been tested with, see "Using the IR Communications 
+  Driver." 
+
+- The version 2.0 IR communications driver supports IR communications 
+  links running at speeds up to 115.2 kbps. 
+
+
+USING THE INFRARED COMMUNICATIONS DRIVER
+========================================
+
+The following sections list the hardware and software components on 
+which version 2.0 of the Infrared Communications Driver has been 
+tested.
+
+Notebook Computers
+------------------
+This product has been successfully tested on the following Windows 95 
+notebook computers that have built-in IR ports:
+
+     Gateway(R) 2000 Liberty
+     HP(R)Omnibook(TM)600CT
+     HP Omnibook 4000C
+     IBM(R) ThinkPad(R) 701C (Butterfly)
+     Sharp(R) PC 3050
+     TI(R) TravelMate(TM) 5000
+
+Some testing was also done on these Windows 95 notebook computers:
+
+     Digital(R) HiNote Ultra CT475
+     TI(R) TravelMate(TM) 5000
+
+Infrared Adapters
+-----------------
+This product has been successfully tested on Windows 95 platforms 
+with the following IR adapters connected to serial ports:
+
+     ACTiSYS ACT-200L Infrared Wireless Interface
+     ACTiSYS ACT-220L Infrared Wireless Interface
+     Adaptec(TM) AIRport APA-9320 External Infrared Adapter 
+       (also called the Adaptec AIRport 2000)
+     AMP PhasIR Serial Adapter 
+     Extended Systems JetEye PC Infrared PC Interface (ESI-9680)
+     Parallax IR Adapter LiteLink PRA9500A
+
+To obtain any of the IR adapters listed above, contact the adapter
+manufacturer. For the addresses of these manufacturers, see "IR Adapter 
+Manufacturer Names and Addresses" at the end of this document.
+
+Programs
+--------
+The following programs have been run successfully over an IR 
+communications link using the IR communications driver and the 
+hardware listed above:
+
+- Windows 95 Direct Cable Connection (DCC)
+- Various Windows communications programs, including HyperTerminal 
+  and DynaComm.
+
+Because the IR link simulates a serial communications link, some 
+communications programs might not perform as expected after they 
+connect over the IR link. For more information, see "Troubleshooting." 
+For instructions on running DCC over an IR link, see "Notes on Running 
+Direct Cable Connection Over an IR Link" later in this document.
+
+Printers
+--------
+Numerous Windows 95 programs have successfully printed over an IR 
+link to an HP Laserjet 5P or 5MP printer, which have built-in IR 
+ports. Numerous Windows 95 programs have also printed successfully 
+over an IR link to other printers with an Extended Systems JetEye 
+Infrared Printer Port ESI-9580 infrared adapter connected to the 
+printer parallel port.
+
+IrLan Access Points
+-------------------
+Local area network access over an IR link has been tested with the 
+following IrLan access point devices:
+
+- Extended Systems ESI-9910 JetEye Net Plus
+- Hewlett-Packard NetBeam IR Infrared LAN Adapter
+
+
+TROUBLESHOOTING
+===============
+
+General Tips
+------------
+- You must remove any previously installed version of the 
+  IR communications driver every time the driver is installed. 
+  For instructions on removing the IR communications driver, 
+  see "An Optional Step: Removing the IR Communications Driver."
+
+- If you change the IR adapter model that is connected to the 
+  computer, you must remove the installed IR communications driver 
+  and reinstall it, specifying the new IR adapter type. 
+
+- If you select the wrong physical COM port during installation of 
+  the IR communications driver, the IR device will be unable to 
+  discover another IR device within range. If this happens, tr

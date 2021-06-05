@@ -1,0 +1,107 @@
+nly"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalBytesTransmitted"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\8]
+"Name"="Total Packets Received"
+"Description"="This is the total number packets received."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalPacketsReceived"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\9]
+"Name"="Total Bytes Received"
+"Description"="This is the total number of bytes received."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+"Value"="9"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalBytesReceived"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\10]
+"Name"="Total Transmit Errors"
+"Description"="This is the total number of transmit errors of any type."
+"Column"="10"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalTransmitErrors"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\11]
+"Name"="Total Receive Errors"
+"Description"="This is the total number of receive errors of any type."
+"Column"="11"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalReceiveErrors"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\12]
+"Name"="Total Host Errors"
+"Description"="This is the total number of errors due to problems with the network adapter host interface(e.g. overrun / underrun errors)."
+"Column"="12"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalHostErrors"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\4\13]
+"Name"="Total Wire Errors"
+"Description"="This is the total number of either receive or transmit errors  due to problems with the network (e.g. receive CRC Errors). "
+"Column"="13"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter64"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\TotalWireErrors"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  802 Alternate Address Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\5]
+"Name"="802 Alternate Address Group"
+"Class"="DMTF|802 Alternate Address|001"
+"Description"="Contains objects related to alternate addresses for each network adapter port."
+"Key"="1"
+"^INDEX"=hex:04,00,00,00
+"^ROW"="^ROWNUM|2|3|4"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\5\1]
+"Name"="Alternate Address Index"
+"Description"="This is an arbitrary number assigned to each alternate address.  The Alternate Address Index usually starts with 1 and increments for each alternate address."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"="1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\5\2]
+"Name"="Port Index"
+"Description"="The value of the Port Index attribute for the network port that uses this alternate address, i.e. the 'port number'."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\5\3]
+"Name"="Address Type"
+"Description"="This is the type of alternate address, e.g. multicast, functional, etc."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\802AlternateAddress\\AddressType"
+"!0"="B;IN(0,1)(1,2)(2,3)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\5\3\Enum]
+"1"="Multicast"
+"2"="Functional"
+"3"="Group"
+
+[HK

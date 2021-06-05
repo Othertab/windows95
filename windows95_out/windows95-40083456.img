@@ -1,0 +1,93 @@
+s working on an updated Infrared VxD that resolves this
+     problem.
+4. Docking is not supported.
+   - IBM is expected to release fixes to their Plug and Play BIOS 
+     shortly, which will enable full Windows 95 Plug and Play and 
+     docking support. For updates to the System Program Service 
+     Diskette for your model of Thinkpad, check IBM's bulletin 
+     board. See your hardware documentation for information about
+     accessing the bulletin board.
+5. There are power management problems with the suspend and resume
+   commands.
+   - If you have a 1994 BIOS, you can usually resolve these problems
+     by upgrading to the latest Flash BIOS revision from 1995. You can
+     find it on CompuServe, THINKPAD forum, or on IBM's bulletin board.
+     See your IBM hardware documentation for information about accessing
+     the bulletin board.
+6. Mwave versions earlier than 1.2 contain numerous bugs.
+   - These bugs in earlier versions of Mwave cause serious problems when 
+     Mwave is run on Windows 95. For more information, call the IBM PC 
+     HelpCenter.  
+
+IBM Thinkpad Dock II
+--------------------
+If you use IBM Thinkpad Dock II, you must disable the BIOS for the
+Adaptec 1530P SCSI controller in the docking station before starting
+your computer while it is docked. If you do not, your computer will
+hang repeatedly. This controller works fine in protected mode even
+without the BIOS enabled, so you should not lose access to any SCSI
+devices as a result.
+
+To disable the BIOS:
+1. Restart your computer while it is docked.
+2. Press CTRL+A to start the Adaptec SCSISelect utility.
+3. Choose Configure/View Host Adapter Settings.
+4. Choose Advanced Configuration Options.
+5. Change the setting for Host Adapter BIOS to Disabled.
+
+Press ESC until you are prompted to exit the utility, at which point
+the computer will restart.
+
+An even better solution is to disable the BIOS completely, which will
+enable the adapter to run completely in Plug and Play mode. This will
+allow its resources to be allocated dynamically at Windows 95 startup.
+However, this requires changing a DIP switch inside the dock unit.
+For details about disabling the SCSI adapter BIOS, refer to your Dock II
+manual.
+
+Micron M5-PI Series
+-------------------
+Before installing Windows, users of Micron M5-PI series (P-60, P-66) 
+need to be sure the BIOS read/write jumper(W22) is set to the read-only 
+position. If you try to install Windows 95 with this jumper in the
+read\write position, it may cause BIOS corruption. For more information,
+contact Micron Technologies.
+
+Micron P90/100
+---------------
+Before installing Windows, users of Micron P90 and P100 systems must 
+make sure their BIOS version is N15 or later. For more information, 
+contact Micron Technologies.
+
+NEC Versa M and AT&T Globalyst
+------------------------------
+If you use AT&T Globalyst and NEC Versa M, you must set the BIOS
+setting for PCMCIA Power to Enabled before running the PC Card (PCMCIA)
+wizard to enable the Windows 95 PCMCIA support. The default setting is
+Disabled. 
+
+To change the PCMCIA Power setting to Enabled:
+1. Restart your computer.
+2. When the cursor changes to a rectangle, press F1.
+3. When the BIOS configuration program is ready, select Power, and
+   then change the PCMCIA Power setting to Enabled.
+4. Save these settings.
+
+Winbook XP
+----------
+There is a problem on the Winbook XP which could cause the keyboard
+not to function properly. The workaround is to disable Windows 95
+power status polling.
+
+To disable Windows 95 power status polling:
+1. In Control Panel, double-click the System icon, and then click the
+   Device Manager tab.
+2. Click the plus (+) sign next to the system class you want to change.
+3. Double click Advanced Power Management Support, and then click the
+   Settings tab.
+4. Make sure that the Disable Power Status Polling box is checked.
+5. Click OK to save your changes and exit Control Panel.
+
+HP OmniBook 600C
+----------------
+The Omnibook's PCMCIA controller is supported via special

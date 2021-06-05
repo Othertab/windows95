@@ -1,0 +1,140 @@
+ble_Link,default,,16
+HKR,Ndi\params\Disable_Link,type,,enum
+HKR,Ndi\params\Disable_Link\enum,0,,%PARAM_YES%
+HKR,Ndi\params\Disable_Link\enum,16,,%PARAM_NO%
+
+[*CPQA0E3.LogConfig]
+IRQConfig=15
+ConfigPriority=HARDRECONFIG
+
+;****************************************************************************
+; Compaq Ethernet 16E Controller
+;****************************************************************************
+[595.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,epro.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"EPRO"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"EPRO$"
+HKR,NDIS\NDIS2,FileName,,"epro.dos"
+HKR,NDIS\ODI,DriverName,,"eproodi"
+HKR,NDIS\ODI,FileName,,"eproodi.com"
+
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"595.ndis3"
+HKR,Ndi\Install,ndis2,,"595.ndis2"
+;HKR,Ndi\Install,odi,,"595.odi"
+
+
+; Resources
+HKR,,INTERRUPT,1,04,00,00,00
+HKR,,IOADDRESS,1,02,00,00,00
+HKR,NDI\params\INTERRUPT,resc,1,04,00,00,00
+HKR,Ndi\params\INTERRUPT,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTERRUPT,flag,1,30,00,00,00
+HKR,Ndi\params\ioaddress,resc,1,02,00,00,00
+HKR,Ndi\params\ioaddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\ioaddress,flag,1,30,00,00,00
+
+; Install NDIS3
+[595.ndis3]
+CopyFiles=epro.ndis3.CopyFiles
+[epro.ndis3.CopyFiles]
+epro.vxd
+
+; Install NDIS2
+[595.ndis2]
+CopyFiles=595.ndis2.CopyFiles
+[595.ndis2.CopyFiles]
+epro.dos
+
+; Install ODI
+[595.odi]
+CopyFiles=epro.odi.CopyFiles
+[epro.odi.CopyFiles]
+eproodi.com
+
+;****************************************************************************
+; setp3 Drivers
+;****************************************************************************
+; Base section for setp3 users
+[setp3.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,cpqndis3.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"CPQNDIS3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"CPQNDIS$"
+HKR,NDIS\NDIS2,FileName,,"cpqndis.dos"
+HKR,NDIS\ODI,DriverName,,"CPQODI"
+HKR,NDIS\ODI,FileName,,"cpqodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"setp3.ndis3"
+HKR,Ndi\Install,ndis2,,"setp3.ndis2"
+HKR,Ndi\Install,odi,,"setp3.odi"
+
+; Install NDIS3
+[setp3.ndis3]
+CopyFiles=setp3.ndis3.CopyFiles
+[setp3.ndis3.CopyFiles]
+cpqndis3.vxd
+
+; Install NDIS2
+[setp3.ndis2]
+CopyFiles=setp3.ndis2.CopyFiles
+[setp3.ndis2.CopyFiles]
+cpqndis.dos
+
+; Install ODI
+[setp3.odi]
+CopyFiles=setp3.odi.CopyFiles
+[setp3.odi.CopyFiles]
+cpqpodi.com
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir              =11 ; LDID_SYS
+595.ndis2.CopyFiles         =26 ; LDID_WINBOOT
+epro.odi.CopyFiles          =26
+epro.ndis3.CopyFiles        =11
+setp3.ndis3.CopyFiles      =11
+setp3.ndis2.CopyFiles      =26 ; LDID_WINBOOT
+setp3.odi.CopyFiles        =26
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_COMPAQ="Compaq"
+; PNP Devices
+*pnp8133.DeviceDesc="Compaq Ethernet 16E Controller"
+*CPQA060.DeviceDesc="Compaq Elite Ethernet Controller"
+*CPQA0E3.DeviceDesc="Compaq Contura Integrated Ethernet Controller"
+
+; Parameters
+PARAM_PS2BIDIR="PS/2 BIDIRECTIONAL"
+PARAM_EPP="EPP"
+CPQA0E3_PARAM_PORTTYPE="PORT MODE"
+PARAM_AUT

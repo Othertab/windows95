@@ -1,0 +1,113 @@
+EY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\5\4]
+"Name"="Alternate Address"
+"Description"="This is the actual alternate address value."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(12)"
+":0"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\802AlternateAddress\\AlternateAddress"
+"!0"="B;DS"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  Adapter Driver Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6]
+"Name"="Network Adapter Driver Group"
+"Class"="DMTF|Network Adapter Driver|001"
+"Description"="Contains objects related to the network adapter device drivers currently in use."
+"Key"="1"
+"^INDEX"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\1]
+"Name"="Driver Index"
+"Description"="This is an arbitrary number assigned to each device driver. Driver Index usually starts with 1 and increments for each additional device driver."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Integer"
+"Value"="1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\2]
+"Name"="Driver Software Name"
+"Description"="This is the sign-on name of the driver."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Driver\\DeviceVxDs"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\3]
+"Name"="Driver Software Version"
+"Description"="This is the revision level of the driver software."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Driver\\NDIS\\MajorNdisVersion"
+"!1"="B;DS"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\4]
+"Name"="Driver Software Description"
+"Description"="This is an expanded description of the device driver software."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Driver\\DriverDesc"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\5]
+"Name"="Driver Size"
+"Description"="This is the resident memory size of the driver in bytes."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\DriverExtra\\DriverSize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\6]
+"Name"="Driver Interface Type"
+"Description"="This is the specification or network operating system to which this LAN driver conforms, e.g. IPX, NDIS, etc."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\NetworkAdapter802Port\\DriverInterfaceType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\6\Enum]
+"1"="Other"
+"2"="IPX"
+"3"="ODI"
+"4"="NDIS"
+"5"="Packet Driver"
+"6"="LANtastic"
+"7"="UNIX"
+"8"="Appletalk"
+"9"="IBM Lan Support Program"
+"10"="LLC"
+"11"="Netbios"
+"12"="Pathworks (DLL)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\7]
+"Name"="Driver Interface Version"
+"Description"="This is the version of the driver interface specification e.g. for NDIS, this attribute could be 2.01, 3.0, etc."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Driver\\NDIS\\MajorNdisVersion"
+"!1"="B;DS"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\6\8]
+"Name"="Driver Interface Description"
+"Description"="An expanded description of the driver interface specification in use."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Driver\\Ndi\\Interfaces\\DefLower"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  Network Ada

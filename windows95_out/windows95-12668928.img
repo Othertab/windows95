@@ -1,0 +1,325 @@
+D-1604S.Add, 1024
+
+[CPD-1730]
+DelReg=DCR
+AddReg=CPD-1730.Add, 1024
+
+[GVM-1310]
+DelReg=DCR
+AddReg=GVM-1310.Add, 1024
+
+[GVM-2020]
+DelReg=DCR
+AddReg=GVM-2020.Add, 1024
+
+[GDM-1936]
+DelReg=DCR
+AddReg=GDM-1936.Add, 1280
+
+[GDM-2038]
+DelReg=DCR
+AddReg=GDM-2038.Add, 1600
+
+[GDM-17SE1]
+DelReg=DCR
+AddReg=GDM-17SE1.Add, 1280, DPMS
+
+[MS-15SF]
+DelReg=DCR
+AddReg=MS-15SF.Add, 1280, DPMS
+
+[MS-17SF]
+DelReg=DCR
+AddReg=MS-17SF.Add, 1280, DPMS
+
+[MS-20SE]
+DelReg=DCR
+AddReg=MS-20SE.Add, 1600, DPMS
+
+; -------------- Talon
+
+[Tuff/CRT]
+DelReg=DCR
+AddReg=Tuff/CRT.Add, 800
+
+; -------------- Tatung
+
+[CM-1498M]
+DelReg=DCR
+AddReg=CM-1498M.Add, 1024
+
+[CM-1498R]
+DelReg=DCR
+AddReg=CM-1498R.Add, 1024
+
+[CM-1498T]
+DelReg=DCR
+AddReg=CM-1498T.Add, 1024
+
+[CM-1700]
+DelReg=DCR
+AddReg=CM-1700.Add, 1280
+
+[CM-1495G]
+DelReg=DCR
+AddReg=CM-1495G.Add, 1024
+
+[CM-2000]
+DelReg=DCR
+AddReg=CM-2000.Add, 1280
+
+[MM-1295]
+DelReg=DCR
+AddReg=MM-1295.Add, 800
+
+[CM-14UH]
+DelReg=DCR
+AddReg=CM-14UH.Add, 1024, DPMS
+
+[CM-17MC]
+DelReg=DCR
+AddReg=CM-17MC.Add, 1280, DPMS
+
+; -------------- Taxan
+
+[MV_770+]
+DelReg=DCR
+AddReg=MV_770+.Add, 800
+
+[MV_795]
+DelReg=DCR
+AddReg=MV_795.Add, 1280
+
+[MV_875]
+DelReg=DCR
+AddReg=MV_875.Add, 1024
+
+[UV_1000]
+DelReg=DCR
+AddReg=UV_1000.Add, 1024
+
+[UV_1095]
+DelReg=DCR
+AddReg=UV_1095.Add, 1600
+
+[UV_1150]
+DelReg=DCR
+AddReg=UV_1150.Add, 1600
+
+[TE1491]
+DelReg=DCR
+AddReg=TE1491.Add, 1024
+
+[TE1591]
+DelReg=DCR
+AddReg=TE1591.Add, 1024
+
+[TE1791]
+DelReg=DCR
+AddReg=TE1791.Add, 1024
+
+[TE2191]
+DelReg=DCR
+AddReg=TE2191.Add, 1280
+
+[P17CM00]
+DelReg=DCR
+AddReg=P17CM00.Add, 1280
+
+[P17CM01]
+DelReg=DCR
+AddReg=P17CM01.Add, 1280
+
+[P21CM00]
+DelReg=DCR
+AddReg=P21CM00.Add, 1280
+
+[P21CR01]
+DelReg=DCR
+AddReg=P21CR01.Add, 1280
+
+[P17CS01]
+DelReg=DCR
+AddReg=P17CS01.Add, 1280
+
+[P17CU01]
+DelReg=DCR
+AddReg=P17CU01.Add, 1024
+
+[TTX3435AG]
+DelReg=DCR
+AddReg=TTX3435AG.Add, 800
+
+[TTX3436AG]
+DelReg=DCR
+AddReg=TTX3436AG.Add, 1024
+
+[TTX3450AG]
+DelReg=DCR
+AddReg=TTX3450AG.Add, 1024
+
+[SS_3+]
+DelReg=DCR
+AddReg=SS_3+.Add, 1024
+
+[SS_4A]
+DelReg=DCR
+AddReg=SS_4A.Add, 1024
+
+[SS_5A]
+DelReg=DCR
+AddReg=SS_5A.Add, 1024
+
+[SS_6A]
+DelReg=DCR
+AddReg=SS_6A.Add, 1280
+
+[SS_7A]
+DelReg=DCR
+AddReg=SS_7A.Add, 1280
+
+[MG-11]
+DelReg=DCR
+AddReg=MG-11.Add, 1024
+
+[TM-5156H]
+DelReg=DCR
+AddReg=TM-5156H.Add, 1024
+
+[TM-5414]
+DelReg=DCR
+AddReg=TM-5414.Add, 1024
+
+[VS_4]
+DelReg=DCR
+AddReg=VS_4.Add, 1024
+
+[VS_4E]
+DelReg=DCR
+AddReg=VS_4E.Add, 1024
+
+[VS_5]
+DelReg=DCR
+AddReg=VS_5.Add, 1024
+
+[VS_5+]
+DelReg=DCR
+AddReg=VS_5+.Add, 1024
+
+[VS_5E]
+DelReg=DCR
+AddReg=VS_5E.Add, 1024
+
+[VS_6]
+DelReg=DCR
+AddReg=VS_6.Add, 1024
+
+[VS_6E]
+DelReg=DCR
+AddReg=VS_6E.Add, 1024, DPMS
+
+[VS_7]
+DelReg=DCR
+AddReg=VS_7.Add, 1280
+
+[VS_8]
+DelReg=DCR
+AddReg=VS_8.Add, 1280
+
+[VS_15]
+DelReg=DCR
+AddReg=VS_15.Add, 1280 
+
+[VS_15E]
+DelReg=DCR
+AddReg=VS_15E.Add, 1024 
+
+[VS_15G]
+DelReg=DCR
+AddReg=VS_15G.Add, 1280, DPMS
+
+[VS_15EX]
+DelReg=DCR
+AddReg=VS_15EX.Add, 1024, DPMS 
+
+[VS_17]
+DelReg=DCR
+AddReg=VS_17.Add, 1600, DPMS 
+
+[VS_17E]
+DelReg=DCR
+AddReg=VS_17E.Add, 1280, DPMS 
+
+[VS_17G]
+DelReg=DCR
+AddReg=VS_17G.Add, 1280, DPMS 
+
+[VS_20]
+DelReg=DCR
+AddReg=VS_20.Add, 1600
+
+[VS_21]
+DelReg=DCR
+AddReg=VS_21.Add, 1600, DPMS
+
+
+; -------------- Wyse
+
+[WY-670]
+DelReg=DCR
+AddReg=WY-670.Add, 1024
+
+[WY-890N]
+DelReg=DCR
+AddReg=WY-890N.Add, 1024
+
+
+; -------------- Nanao / EIZO
+
+[33F]
+DelReg=DCR
+AddReg=33F.Add, 1152, DPMS
+
+[52F]
+DelReg=DCR
+AddReg=52F.Add, 1280, DPMS
+
+[53T]
+DelReg=DCR
+AddReg=53T.Add, 1280, DPMS
+
+[54T]
+DelReg=DCR
+AddReg=54T.Add, 1280, DPMS
+
+[55F]
+DelReg=DCR
+AddReg=55F.Add, 1024, DPMS
+
+[56T]
+DelReg=DCR
+AddReg=56T.Add, 1280, DPMS
+
+[6300]
+DelReg=DCR
+AddReg=6300.Add, 1600
+
+[6500]
+DelReg=DCR
+AddReg=6500.Add, 1600
+
+[6600]
+DelReg=DCR
+AddReg=6600.Add, 1600
+
+[68T]
+DelReg=DCR
+AddReg=68T.Add, 1280, DPMS
+
+[76F]
+DelReg=DCR
+AddReg=76F.Add, 1280, DPMS
+
+[77F]
+DelReg=DCR
+AddReg=77F.A

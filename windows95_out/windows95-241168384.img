@@ -1,0 +1,103 @@
+</h5>
+<hr>
+<h3><a name="pubcoord">Publications Coordinator</a></h3>
+<blockquote>
+<p><em><strong>Job Description</strong></em><br>
+You will be in charge of a leading-edge team creating a magazine for ...</p>
+<p><em><strong>Requirements</strong></em><br>
+The ideal candidate for this position will have ...</p>
+<p><em><strong>For more information</strong></em><br>
+To further explore this opportunity, please contact our <a href="#hr">Human Resources</a> office.</p>
+</blockquote>
+<h5><a href="#top">Back to Top</a></h5>
+<hr>
+<h3><a name="markmgr">Marketing Manager</a></h3>
+<blockquote>
+<p><em><strong>Job Description</strong></em><br>
+You will be in charge of a leading-edge team creating promotional campaigns for ...</p>
+<p><em><strong>Requirements</strong></em><br>
+The ideal candidate for this position will have ...</p>
+<p><em><strong>For more information</strong></em><br>
+To further explore this opportunity, please contact our <a href="#hr">Human Resources</a> office.</p>
+</blockquote>
+<h5><a href="#top">Back to Top</a></h5>
+<hr>
+<h3><a name="cfo">Chief Financial Officer</a></h3>
+<blockquote>
+<p><em><strong>Job Description</strong></em><br>
+You will be in charge of a leading-edge team creating accounting systems for ...</p>
+<p><em><strong>Requirements</strong></em><br>
+The ideal candidate for this position will have ...</p>
+<p><em><strong>For more information</strong></em><br>
+To further explore this opportunity, please contact our <a href="#hr">Human Resources</a> office.</p>
+</blockquote>
+<h5><a href="#top">Back to Top</a></h5>
+<hr>
+<h2><a name="hr">General Inquiries</a></h2>
+<p>To further explore any of the opportunities mentioned on this page, please send your resume and 
+salary history to the following address:</p>
+<blockquote>
+<p><strong>[CompanyName]<br>
+Human Resources Dept.<br>
+123 Web Way<br>
+Sometown USA 12345</strong></p>
+</blockquote>
+<p>All materials will be kept in strictest confidence. [CompanyName] is an equal opportunity employer.</p>
+<p><em>Use your browser's </em><em><strong>Back</strong></em><em> button to return to your previous location in this page.</em></p>
+<hr>
+<h2><a name="form">Personnel File</a></h2>
+<p>Answer a few questions about your capabilities and the kind of position you're looking for, and 
+submit it to our personnel file. We'll keep you in mind the next time something opens up.</p>
+<form action="--VERMEER-SELF--" method="POST">
+<!--VERMEER 
+   BOT=SaveResults
+   U-File="persfile.htm"
+   S-Format="HTML/BR"
+   S-Label-Fields="TRUE"
+   S-Builtin-Fields="Date"
+   S-Form-Fields
+ -->
+<ol>
+<li>What is your current title? <br>
+<input type=text size=54 maxlength=256 name="CurrentTitle"><br>
+<br>
+</li>
+<li>How long have you held this position? <br>
+<select name="CurrentTime" size=1>
+<option>Less than 1 year</option>
+<option selected>At least 1 year</option>
+<option>At least 2 years</option>
+<option>3 to 5 years</option>
+<option>More than 5 years</option>
+</select><br>
+<br>
+</li>
+<li>Briefly describe your current responsibilities:<br>
+<textarea name="Responsibilities" rows=4 cols=52></textarea><br>
+<br>
+</li>
+<li>Describe the position(s) you are looking for:<br>
+<textarea name="DesiredPosition" rows=4 cols=52></textarea><br>
+<br>
+</li>
+<li>Describe your relevant experience (other than your current position):<br>
+<textarea name="RelevantExperience" rows=4 cols=52></textarea><br>
+<br>
+</li>
+<li>If you have a minimum salary requirement, enter it here:<br>
+<input type=text size=54 maxlength=256 name="MinimumSalary"><br>
+<br>
+</li>
+<li>How long should we keep your information on file?<br>
+<select name="Expiration" size=1>
+<option>3 months</option>
+<option selected>6 months</option>
+<option>9 months</option>
+<option>1 year</option>
+<option>indefinitely</option>
+</select></li>
+</ol>
+<p>We'll need to know how to reach you if something turns up. Enter whatever contact information you 
+feel is most appropriate below:</p>
+<blockquote>
+<pre><em>            Name </em><input type=text size=35 maxlength=256 name="C

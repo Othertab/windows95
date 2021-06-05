@@ -1,0 +1,93 @@
+3. In My Computer or Windows Explorer, double-click the icon for
+   the floppy disk drive that contains the file you downloaded,
+   and then double-click the file itself. This extracts the driver.
+
+4. Using your right mouse button, click the Windows 95 desktop, and
+   then click Properties.
+
+5. Click the Settings tab, and then click Change Display Type.
+
+6. In the Adapter Type area, click Change, and then click Have Disk.
+
+7. Click Browse, and then locate the file you extracted in step 3. If 
+   you have the Windows 95 CD-ROM, locate the driver on the CD-ROM.
+
+8. Click OK in the Open dialog box and in the Install From Disk 
+   dialog box.
+
+NOTE: The drivers are available at no charge; however, standard
+connect-time fees and long-distance telephone charges, if any, 
+apply.
+
+Adapter Type
+------------
+Windows 95 Setup configures your adapter type based on the type of
+controller it uses; for example, S3, Cirrus Logic, or ATI. However,
+you may find a more exact match for your adapter make and model in
+Display properties. To change your adapter type, open Display
+properties, click the Settings tab, and then click Change Display
+Type. In the Adapter Type area, click Change. 
+
+In most cases, selecting a more precise adapter type does not change
+the driver or its behavior in any way.
+
+Monitor Type
+------------
+If Windows 95 does not contain your exact monitor type, select one
+of the standard display types instead. This will not adversely affect
+the performance or quality of Windows 95 display output.
+
+Refresh Rates
+-------------
+
+To adjust the refresh rate in Windows 95, click the Start button,
+and then point to Settings. Click Control Panel, and then double-
+click the Display icon. In the Display Properties dialog box, 
+click the Settings tab, and then click the Advanced Properties 
+button. In the Advanced Display Properties dialog box, click the 
+Adapter tab, and then select the refresh rate from the list.
+
+To adjust the refresh rate in MS-DOS mode, you must specify your
+monitor type in the adapter setup program supplied by your display
+adapter or PC manufacturer. Some utilities must be included in your
+Autoexec.bat file. On some PCs, monitor type is set in BIOS
+configuration programs. Examples of utilities from adapter
+manufacturers include:
+
+  ATI                   Install.exe
+  Cirrus Logic          Montype.exe, Clmode.exe
+  Diamond Stealth       Stlmode.exe
+  Diamond Stealth 64    S64mode.exe, go95.exe
+  Matrox                \Mga\Setup\Setup.exe
+  Tseng Labs            Vmode.exe
+  Western Digital       Vgamode.exe
+
+You may be able to obtain updated drivers that set the refresh rate
+based on the selected monitor type from adapter vendors or from the
+Windows Driver Library. 
+
+Correcting Display Problems
+---------------------------
+In general, you can correct many display-related problems by clicking
+the Graphics button on the Performance tab in System properties. Drag 
+the slider in this dialog box and experiment with different settings 
+before you revert to 640x480 16-color mode to work around a problem.  
+
+In particular, if you have problems with "see through" dialogs, or
+if graphic elements remain on your screen after you close a menu or 
+dialog box, move the slider down one notch to "Most accelerator 
+functions". This symptom can occur even on non-accelerated adapters.
+
+NOTE: Adobe Type Manager (ATM) is not compatible with the "None"
+setting in this dialog box. If Windows does not start due to this
+problem, restart Windows, and then press F8 when "Starting Windows 95"
+appears on your screen. Press 3 to start Windows in Safe Mode. Then
+change graphics acceleration to a different setting.
+
+Dynamic Color Change
+--------------------
+Most programs have no problem when you dynamically change color 
+depth; however, some programs may not display colors or other 
+elements correctly after a color change. To avoid this problem, 
+change color depth before starting the program. If you change color 
+depth while a program is running, you may nee

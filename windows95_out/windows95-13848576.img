@@ -1,0 +1,113 @@
+DI\params\OdiAlertUser,ParamDesc,,"ODI     !!! CAUTION !!!"
+HKR,NDI\params\OdiAlertUser,flag,1,00,00,00,00
+HKR,NDI\params\OdiAlertUser,type,,enum
+HKR,Ndi\params\OdiAlertUser,default,,0
+HKR,NDI\params\OdiAlertUser\enum,0,,"!! CHECK THIS MENU !!"
+HKR,NDI\params\OdiAlertUser\enum,1,,"1  Windows 95 does NOT"
+HKR,NDI\params\OdiAlertUser\enum,2,,"2  update NET.CFG with"
+HKR,NDI\params\OdiAlertUser\enum,3,,"3  these values. Note all"
+HKR,NDI\params\OdiAlertUser\enum,4,,"4  selections made here."
+HKR,NDI\params\OdiAlertUser\enum,5,,"5  Find and edit NET.CFG."
+; RecvBufCount (ODI only)
+HKR,NDI\params\OdiRecvBufCount,ParamDesc,,"ODI     Receive Buffers"
+HKR,NDI\params\OdiRecvBufCount,flag,1,00,00,00,00
+HKR,NDI\params\OdiRecvBufCount,type,,int
+HKR,Ndi\params\OdiRecvBufCount,default,,5
+HKR,NDI\params\OdiRecvBufCount,min,,2
+HKR,NDI\params\OdiRecvBufCount,max,,8
+HKR,NDI\params\OdiRecvBufCount,step,,1
+; MaxFrameLen (ODI only)
+HKR,NDI\params\OdiMaxFrameLen,ParamDesc,,"ODI     Max Frame Size"
+HKR,NDI\params\OdiMaxFrameLen,flag,1,00,00,00,00
+HKR,NDI\params\OdiMaxFrameLen,type,,int
+HKR,Ndi\params\OdiMaxFrameLen,default,,4216
+HKR,NDI\params\OdiMaxFrameLen,min,,512
+HKR,NDI\params\OdiMaxFrameLen,max,,4216
+HKR,NDI\params\OdiMaxFrameLen,step,,1
+
+;****************************************************************************
+; ISA Specific
+;****************************************************************************
+[ISA.Params]
+; params
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,,DMAChannel,1,03,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,Ndi\params\interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interrupt,flag,1,70,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"IO Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+HKR,NDI\params\DMAChannel,resc,1,03,00,00,00
+HKR,NDI\params\DMAChannel,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMAChannel,flag,1,30,00,00,00
+; DataRate
+HKR,NDI\params\DataRate,ParamDesc,,"DataRate Mbps"
+HKR,NDI\params\DataRate,flag,1,30,00,00,00
+HKR,NDI\params\DataRate,type,,enum
+HKR,NDI\params\DataRate\enum,4,,"4"
+HKR,NDI\params\DataRate\enum,16,,"16"
+HKR,Ndi\params\DataRate,default,,16
+
+;****************************************************************************
+; MCA Specific
+;****************************************************************************
+[MCA.Params]
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,20,00,00,00
+
+; Install NDIS3
+[IRMATRAC.ndis3]
+CopyFiles=IRMATRAC.ndis3.CopyFiles
+
+[IRMATRAC.ndis3.CopyFiles]
+DCAMAC.BIN
+IRMATRAC.vxd
+
+; Install NDIS2
+[IRMATRAC.ndis2]
+CopyFiles=IRMATRAC.ndis2.CopyFiles
+
+[IRMATRAC.ndis2.CopyFiles]
+IRMATR.dos
+
+; Install ODI
+[IRMATRAC.odi]
+CopyFiles=IRMATRAC.odi.CopyFiles
+
+[IRMATRAC.odi.CopyFiles]
+IRMATRAC.com
+
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir               =11 ; LDID_SYS
+IRMATRAC.ndis3.CopyFiles     =11
+IRMATRAC.ndis2.CopyFiles     =26 ; LDID_WINBOOT
+IRMATRAC.odi.CopyFiles       =26
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+; Manufacturers
+V_MICRODYNE="Microdyne"
+V_DCA="DCA"
+; Microdyne Devices
+m_isa_5C1D.DeviceDesc="Microdyne IRMAtrac Convertible, ISA mode"
+m_mca_5C1D.DeviceDesc="Microdyne IRMAtrac Convertible, MCA mode"
+m_isa_4_16.DeviceDesc="Microdyne IRMAtrac HardTop ISA 4/16"
+; Microdyne Help Text
+m_isa_5C1D.HelpText="Microdyne IRMAtrac Convertible Token Ring Adapter, ISA mode. Prod

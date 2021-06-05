@@ -1,0 +1,107 @@
+xSlots\enum,5,,"Rx=10 Tx=10"
+HKR,NDI\params\RxTxSlots,flag,1,20,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"LAA"
+HKR,NDI\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,12
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,NDI\params\NetworkAddress,optional,,1
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+; MAXFRAMESIZE
+HKR,NDI\params\MAXFRAMESIZE,ParamDesc,,"Maximum Frame Size"
+HKR,Ndi\params\MAXFRAMESIZE,default,,4096
+HKR,NDI\params\MAXFRAMESIZE,type,,int
+HKR,NDI\params\MAXFRAMESIZE,min,,1000
+HKR,NDI\params\MAXFRAMESIZE,max,,17839
+HKR,NDI\params\MAXFRAMESIZE,flag,1,30,00,00,00
+; RXBUFFERSIZE
+HKR,NDI\params\RXBUFFERSIZE,ParamDesc,,"Receive Buffer Size"
+HKR,NDI\params\RXBUFFERSIZE,flag,1,10,00,00,00
+HKR,NDI\params\RXBUFFERSIZE,type,,word
+HKR,Ndi\params\RXBUFFERSIZE,default,,1550
+HKR,NDI\params\RXBUFFERSIZE,min,,1550
+HKR,NDI\params\RXBUFFERSIZE,max,,60000
+HKR,NDI\params\RXBUFFERSIZE,step,,1
+HKR,NDI\params\RXBUFFERSIZE,optional,,1
+; TXBUFFERSIZE
+HKR,NDI\params\TXBUFFERSIZE,ParamDesc,,"Transmit Buffer Size"
+HKR,NDI\params\TXBUFFERSIZE,flag,1,10,00,00,00
+HKR,NDI\params\TXBUFFERSIZE,type,,word
+HKR,Ndi\params\TXBUFFERSIZE,default,,1550
+HKR,NDI\params\TXBUFFERSIZE,min,,1550
+HKR,NDI\params\TXBUFFERSIZE,max,,60000
+HKR,NDI\params\TXBUFFERSIZE,step,,1
+HKR,NDI\params\TXBUFFERSIZE,optional,,1
+; MAXTRANSMITS
+HKR,NDI\params\MAXTRANSMITS,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MAXTRANSMITS,flag,1,10,00,00,00
+HKR,NDI\params\MAXTRANSMITS,type,,int
+HKR,Ndi\params\MAXTRANSMITS,default,,4
+HKR,NDI\params\MAXTRANSMITS,min,,1
+HKR,NDI\params\MAXTRANSMITS,max,,100
+HKR,NDI\params\MAXTRANSMITS,step,,1
+HKR,NDI\params\MAXTRANSMITS,optional,,1
+; WATCHDOG
+HKR,NDI\params\WATCHDOG,ParamDesc,,"Watchdog Timer Active"
+HKR,NDI\params\WATCHDOG,flag,1,10,00,00,00
+HKR,NDI\params\WATCHDOG,default,,no
+HKR,NDI\params\WATCHDOG,type,,enum
+HKR,NDI\params\WATCHDOG\enum,yes,,yes
+HKR,NDI\params\WATCHDOG\enum,no,,no
+HKR,NDI\params\WATCHDOG,optional,,1
+; COPYALLDATA
+HKR,NDI\params\COPYALLDATA,ParamDesc,,"Copy Data to Card B4 Xmit"
+HKR,NDI\params\COPYALLDATA,flag,1,10,00,00,00
+HKR,NDI\params\COPYALLDATA,default,,yes
+HKR,NDI\params\COPYALLDATA,type,,enum
+HKR,NDI\params\COPYALLDATA\enum,yes,,yes
+HKR,NDI\params\COPYALLDATA\enum,no,,no
+HKR,NDI\params\COPYALLDATA,optional,,1
+; AUTOOPEN
+HKR,NDI\params\AUTOOPEN,ParamDesc,,"Open Adapter at Bind Time"
+HKR,NDI\params\AUTOOPEN,flag,1,10,00,00,00
+HKR,NDI\params\AUTOOPEN,default,,yes
+HKR,NDI\params\AUTOOPEN,type,,enum
+HKR,NDI\params\AUTOOPEN\enum,yes,,yes
+HKR,NDI\params\AUTOOPEN\enum,no,,no
+HKR,NDI\params\AUTOOPEN,optional,,1
+; OPENOPTIONS
+HKR,NDI\params\OPENOPTIONS,ParamDesc,,"Open Options Bitmask"
+HKR,NDI\params\OPENOPTIONS,flag,1,10,00,00,00
+HKR,NDI\params\OPENOPTIONS,type,,word
+HKR,Ndi\params\OPENOPTIONS,default,,0
+HKR,NDI\params\OPENOPTIONS,min,,0
+HKR,NDI\params\OPENOPTIONS,max,,FFFF
+HKR,NDI\params\OPENOPTIONS,step,,1
+HKR,NDI\params\OPENOPTIONS,optional,,1
+; NoMmio (ndis3)
+HKR,NDI\params\NoMmio,ParamDesc,,"Disable MMIO Transfers"
+HKR,NDI\params\NoMmio,default,,1
+HKR,NDI\params\NoMmio,type,,enum
+HKR,NDI\params\NoMmio\enum,0,,"No"
+HKR,NDI\params\NoMmio\enum,1,,"Yes"
+HKR,NDI\params\NoMmio,flag,1,20,00,00,00
+; PromiscuousModeX (ndis3)
+HKR,NDI\params\PromiscuousModeX,ParamDesc,,"Gather network stats"
+HKR,NDI\params\PromiscuousModeX,default,,0
+HKR,NDI\params\PromiscuousModeX,type,,enum
+HKR,NDI\params\PromiscuousModeX\enum,0,,"No"
+HKR,NDI\params\PromiscuousModeX\enum,1,,"Yes"
+HKR,NDI\params\PromiscuousModeX,flag,1,20,00,00,00
+
+[Microchannel]
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,20,00,00,00
+
+[MadgeISA.ndi.reg]
+; Resources
+HKR,,InterruptNumber,1,04,00,00,00
+HKR,,IoLo

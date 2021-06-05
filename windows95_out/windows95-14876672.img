@@ -1,0 +1,101 @@
+.
+;
+; This section contains information for printers that were supported using
+; the win 3.0 format in win.ini. The [Devices] section listed a printer
+; family, rather than a specific model, and a driver-specific section
+; identified the actual model. With the exception of "HP Plotter" and
+; "PostScript Printer", all of these drivers were designed for Windows 3.0
+;
+; The syntax is
+;
+; OldName           = <ini section>,<use port>,<ini key>,<default value>
+;
+; Where:
+;
+; OldName           == Name of printer as found in the [devices] section
+;                      of win.ini (win 3.0 or 3.1). This same section name
+;                      is also used withing this file to mape the existing
+;                      configuration to a new model name, as necessary.
+;
+; ini section       == Name of section in win.ini to look for more
+;                      information.
+;
+; use port          == 1 if the port should be used as a part of the section
+;                      name, 0 if not.
+;
+; ini key           == Name of key in the win.ini section (identified by
+;                      ini section) to determine what printer model name
+;                      to use.
+;
+; default value     == Default value to use if none is found in win.ini.
+;
+;
+; All fields are required.
+;
+
+[3.0 Format]
+; Old Name                          ini config sect           port    ini profile  default
+"Epson 9 pin"                    = "EPSON9drv",                 0,    "Printer",      "00"
+"Epson 24 pin"                   = "EPSON24drv",                0,    "Printer",      "0"
+"Epson GQ-3500"                  = "intl",                      0,    "sCountry",     "United States"
+"Fujitsu Dot Matrix"             = "Fujitsu Dot Matrix",        0,    "Printer Type", "9 Pins"
+"HP DeskJet Family"              = "DESKJET,",                  1,    "prtindex",     "0"
+"HP PaintJet Series"             = "HP PaintJet Series,",       1,    "Printer",      "1"
+"HP Plotter"                     = "HPPLOT",                    0,    "__USEPORT__",  "ColorPro"
+"IBM Proprinter 24"              = "Proprinter 24 drv",         0,    "Printer",      "0"
+"IBM Proprinters"                = "PROPRINTERdrv",             0,    "Printer",      "0"
+"NEC Pinwriter"                  = "NEC Pinwriter",             0,    "Pinwriter",    "0"
+"Okidata 24 pin"                 = "Okidata 24 pin drv",        0,    "Printer",      "0"
+"Okidata 9 Pin"                  = "Okidata 9 pin drv",         0,    "Printer",      "0"
+"Okidata 9 Pin IBM"              = "Okidata 9 pin IBM drv",     0,    "Printer",      "0"
+"PCL / HP LaserJet"              = "HPPCL,",                    1,    "prtindex",     "0"
+"PostScript Printer"             = "PostScript,",               1,    "device",       "2"
+
+; Lists of new model names
+;
+; These sections correspond to the ini sections listed above. The string
+; to the left of the '=' is the index that was found in win.ini using
+; the above table. The value to the right is the model name that will
+; be used to update the printer information.
+
+[Epson 9 pin]
+"00" = "Epson FX-80"
+"01" = "Epson FX-100"
+"02" = "Epson FX-80+"
+"03" = "Epson FX-100+"
+"04" = "Epson FX-85"
+"05" = "Epson FX-185"
+"06" = "Epson FX-86e"
+"07" = "Epson FX-850"
+"08" = "Epson JX-80"
+"09" = "Epson EX-800"
+"10" = "Epson LX-80"
+"11" = "Epson LX-86"
+"12" = "Epson LX-800"
+"13" = "Epson DFX-5000"
+"14" = "Epson APL-750"
+"15" = "Epson APL-1000"
+"16" = "Epson MX-80"
+"17" = "Epson MX-100"
+"18" = "Epson RX-80"
+"19" = "Epson RX-100"
+
+; Last printer on list is identified in Win 3.0 driver as Other
+[Epson 24 pin]
+"0" = "Epson LQ-500"
+"1" = "Epson LQ-800"
+"2" = "Epson LQ-850"
+"3" = "Epson LQ-1500"
+"4" = "Epson LQ-2500"
+"5" = "Epson SQ-2500"
+"6" = "Epson APL-750"
+"7" = "Epson LQ-500"
+
+; This model is a PCL printer in the US & Canada, but is a PostScript 
+; printer elsewhere
+[Epson GQ-3500]
+"United States"    = "HP LaserJet Plus"
+"Canada (English)" = "HP LaserJet Plus"
+"Canada (French)"  = "HP LaserJet Plus"
+
+; Win 3.0 FUJIMT

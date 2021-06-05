@@ -1,0 +1,106 @@
+ Mode = RK35_TRS_15_
+4 Safe Mode Command Prompt Only = RK35_TRS_16_
+4 Safe Mode Without Compression = RK35_TRS_17_
+4 Safe Mode with Network Support = RK35_TRS_18_
+4 Step-By-Step Confirmation = RK35_TRS_19_
+3 Using WIN.COM Switches = RK35_TRS_20_
+3 Troubleshooting Procedures
+3 Introduction = RK35_TRS_22_
+3 Checking Specific Driver Problems = RK35_TRS_23_
+3 Checking for Correct File Versions = RK35_TRS_24_
+3 Checking for Missing System Files = RK35_TRS_25_
+3 Removing Unnecessary Drivers = RK35_TRS_26_
+3 Checking Whether a Required Driver Is Missing = RK35_TRS_27_
+3 Checking Entries in Startup Files = RK35_TRS_28_
+3 Checking for Conflicts at System Startup = RK35_TRS_29_
+3 Checking Device Configuration = RK35_TRS_30_
+3 Checking for Free Disk Space = RK35_TRS_31_
+3 Isolating File System Errors = RK35_TRS_32_
+3 Checking for Disk Corruption = RK35_TRS_33_
+1 Appendixes
+1 Introduction = rkp8_0_
+2 Command-Line Commands Summary
+2 Introduction = RKA_DOS_1_
+2 Command Syntax = RKA_DOS_2_
+3 Using the Command Prompt
+3 Introduction = RKA_DOS_4_
+3 Editing Commands with Doskey and Editing Keys = RKA_DOS_5_
+3 Pausing or Canceling a Command = RKA_DOS_6_
+4 Transferring Information to or from a Command-Prompt Window
+4 Introduction = RKA_DOS_8_
+4 Copying and Pasting Information Using Edit Buttons = RKA_DOS_9_
+4 Copying and Pasting Information Using QuickEdit Mode = RKA_DOS_10_
+3 Native Windows 95 Commands
+3 Introduction = RKA_DOS_12_
+3 Network Commands  = RKA_DOS_13_
+3 Commands Used in CONFIG.SYS Files = RKA_DOS_14_
+3 Commands Used in Batch Programs = RKA_DOS_15_
+3 Commands Used to Change International Settings = RKA_DOS_16_
+3 Commands Not Included in Windows 95 = RKA_DOS_17_
+3 Command-Line Switches for Specific Commands
+3 Introduction = RKA_DOS_19_
+4 EMM386 Command-Line Switches
+4 Introduction = RKA_DOS_21_
+4 EMM386 = RKA_DOS_22_
+4 EMM386.EXE = RKA_DOS_23_
+3 Windows Explorer Command-Line Switches = RKA_DOS_24_
+3 Xcopy Command-Line Switches = RKA_DOS_25_
+3 Command-Line Switches for Disk Utilities
+3 Introduction = RKA_DOS_27_
+3 Defrag  = RKA_DOS_28_
+4 DrvSpace
+4 Introduction = RKA_DOS_30_
+4 Drvspace /Compress = RKA_DOS_31_
+4 Drvspace /Create = RKA_DOS_32_
+4 Drvspace /Delete = RKA_DOS_33_
+4 Drvspace /Format = RKA_DOS_34_
+4 Drvspace /Info = RKA_DOS_35_
+4 Drvspace /Mount = RKA_DOS_36_
+4 Drvspace /Ratio = RKA_DOS_37_
+4 Drvspace /Size = RKA_DOS_38_
+4 Drvspace /Uncompress = RKA_DOS_39_
+4 Drvspace /Unmount = RKA_DOS_40_
+3 ScanDisk = RKA_DOS_41_
+3 TCP/IP Utilities
+3 Introduction = RKA_DOS_43_
+3 Arp = RKA_DOS_44_
+3 Ftp = RKA_DOS_45_
+3 Nbtstat = RKA_DOS_46_
+3 Netstat = RKA_DOS_47_
+3 Ping = RKA_DOS_48_
+3 Route = RKA_DOS_49_
+3 Telnet = RKA_DOS_50_
+3 Tracert = RKA_DOS_51_
+2 Windows 95 System Files
+2 Introduction = RKB_FILE_1_
+2 Windows 95 Distribution Disk Storage Overview = RKB_FILE_2_
+2 Using the Extract Program to Extract Files = RKB_FILE_3_
+2 Setup Files Overview = RKB_FILE_4_
+3 Directory File Structure and File Locations
+3 Introduction = RKB_FILE_6_
+3 Location of Key System Files = RKB_FILE_7_
+3 Location of System Files on Compressed Disks = RKB_FILE_8_
+2 Windows 95 INF Files
+2 Introduction = RKC_INF_1_
+2 Windows 95 Device Information Files Overview = RKC_INF_2_
+2 General INF File Format = RKC_INF_3_
+2 [Version] Section = RKC_INF_4_
+2 [Manufacturer] Section = RKC_INF_5_
+2 [Manufacturer Name] Section = RKC_INF_6_
+3 [Install] Section
+3 Introduction = RKC_INF_8_
+3 [Logical Configuration] Sections = RKC_INF_9_
+3 [Update AutoExec] Section = RKC_INF_10_
+3 [Update Config] Section = RKC_INF_11_
+3 [Update INI] Section = RKC_INF_12_
+3 [Update IniFields] Section = RKC_INF_13_
+3 [Add Registry] Section = RKC_INF_14_
+3 [Delete Registry] Section = RKC_INF_15_
+3 [Ini to Registry] Section = RKC_INF_16_
+3 [DestinationDirs] Section = RKC_INF_17_
+3 [File-List] Section = RKC_INF_18_
+3 [SourceDisksFiles] Section = RKC_INF_19_
+3 [SourceDisksNames] Section = RKC_INF_20_
+2 [ClassInstall] Section = RKC_INF_21_
+2 [Strings] Section = RKC_INF_22_
+2 Sample INF File = RKC_INF_23_

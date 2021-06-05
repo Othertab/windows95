@@ -1,0 +1,140 @@
+30.sys]
+;Ported from the win 3.1 setup.inf.
+;these files are win 3.0 files that sould be deleted:
+_default.pif
+HELVA.FON
+HELVB.FON
+HELVC.FON
+HELVD.FON
+HELVE.FON
+HELVF.FON
+KERNEL.EXE
+midi.cpl,,,1
+netapi.dll
+pmspl.dll
+SWAPFILE.EXE
+TMSRA.FON
+TMSRB.FON
+TMSRC.FON
+TMSRD.FON
+TMSRE.FON
+TMSRF.FON
+
+[del.sys.setup]
+;Delete Win 3.x Setup files
+setup.inf
+setup.reg
+
+[old.builds.sys]
+apix.386 ;obsolete
+cdfs.386 ;obsolete
+comenum.vxd     ;replaced with serenum.vxd
+metrics.cpl,,,1 ;obsolete
+minstall.exe
+nls.dll
+pccard.cpl,,,1 ;obsolete
+pccard.dll  ;obsolete
+pcmcia.cpl,,,1 ;obsolete
+pnpui.dll
+powercfg.cpl,,,1  ;obsolete
+pwrusr.cpl,,,1
+rundll.exe
+rundll32.exe
+shell16.dll  ;obsolete
+shell2.dll   ;obsolete
+shell232.dll ;obsolete
+shellctl.dll
+windisk.cpl,,,1
+
+[old.builds.win]
+cabinet.exe	; replaced with cab32.exe
+cab32.exe	; replaced with explorer.exe
+fileman.exe     ; from previous chicago builds
+fontmgr.exe
+ICOCACHE.DAT
+runonce.exe     ; moved to system dir
+shell2.dll      ; obsolete
+shell232.dll    ; obsolete
+start.exe       ; moved to command dir.  review--can be removed for final product (keep for M8)
+writepad.exe
+ttfcache.
+chiadi.dll      ; obsolete
+chikdi.dll      ; obsolete
+ipconfig.exe    ; replaces with winipcfg.exe
+mspaint.ini
+wordpad.ini
+
+[old.builds.cmd]
+
+[oldsetup.files.sys]
+;Used during M4, M5 betas, now delete them
+setup31.inf
+vgalogo.rle
+vgalogo.lgo
+
+[oldsetup.files.win]
+;Used during M4, M5 betas, now delete them
+setup31.exe
+setup31.ver
+oldsetup.bat
+oldsetup.pif
+
+[old.win.cleanup.inis]
+;remove old VxD's:
+system.ini, 386Enh, "device=*cdpscsi"
+system.ini, 386Enh, "device=*vfd"
+system.ini, 386Enh, "device=*blockdev"
+system.ini, 386Enh, "device=*blockdev"    ;do this a 2nd time for Z-Notes that have it 2x in their .ini files
+system.ini, 386Enh, "device=*vhd"         ;from win 3.1 setup.inf
+system.ini, 386Enh, "device=*wdctrl"
+system.ini, 386Enh, "device=slide.386"    ; zenon's version of wdctrl
+system.ini, 386Enh, "device=trmint13.386" ; zenon's version of int13
+system.ini, 386Enh, "device=vdmadx.386"   ;from win 3.1 setup.inf
+system.ini, 386Enh, "device=*pagefile"    ;from win 3.1 setup.inf
+system.ini, 386Enh, "device=HPvtdapi.386" ;from win 3.1 setup.inf (original line in 3.1 was to remove ?Pvtdapi.386, but we don't support the "?" wildcard).
+system.ini, 386Enh, "device=vtda.386"     
+system.ini, 386Enh, "device=mrci32.386"
+system.ini, 386Enh, "device=dblspace.386"
+system.ini, 386Enh, "device=comlpt.386"
+system.ini, 386Enh, "device=vpicda.386"   ;from win 3.1 setup.inf
+system.ini, 386Enh, "device=vaspid.386"
+system.ini, 386Enh, "device=dva.386"      ;replaced by vflatd.vxd
+system.ini, 386Enh, "device=rmm.d32"      ;from wfw 3.11
+system.ini, 386Enh, "device=LANMAN10.386"
+
+; always remove this to cover the case of a win95 upgrade that had enable installed,
+; and on upgrade, didn't install it:
+system.ini,386Enh,"device=*enable"
+
+; Remove obsolete lines (ignored in Win95):
+system.ini, 386Enh, "filesyschange=*"
+system.ini, 386Enh, "indospolling=*"
+system.ini, 386Enh, "maxbps=*"
+
+; Remove Windows Printing System VxDs:
+system.ini, 386Enh, "device=wpsljvpd.386"
+system.ini, 386Enh, "device=wpsvtd.386"
+
+; Remove old paging settings -- Setup code will put some back if needed.
+system.ini, 386Enh, "Paging="
+system.ini, 386Enh, "PermSwapDosDrive="
+system.ini, 386Enh, "PermSwapSizeK="   
+system.ini, 386Enh, "MinPagingFileSize="
+system.ini, 386Enh, "MaxPagingFileSize="
+system.ini, 386Enh, "MinUserDiskSpace="
+
+;Remove (functionality changed in chicago:)
+system.ini, 386Enh, "VirtualHDIRQ=TRUE"
+system.ini, 386Enh, "VirtualHDIRQ=YES"
+system.ini, 386Enh, "VirtualHDIRQ=ON"
+system.ini, 386Enh, "VirtualHDIRQ=1"
+
+; Remove VxD that comes installed on at&t globalyst 360 pentium
+system.ini, 386Enh, "device=WWIDE310.386"
+
+;Remove IBM PS/1 FastDisk Drivers:
+system.ini, 386Enh, "device=wdctlibm.386"
+system.ini, 386Enh, "device=int13ibm.386"
+
+;Remove Morse IDE Blazer VL FastDisk Drivers:
+system.ini, 386Enh, "device=8k2ctrl

@@ -1,0 +1,50 @@
+forums/Theme/,,,"Disney, roller coasters, and much, much more!"
+ForTravel4="MotoCentral Motorcycling", http://forums.msn.com/motocentral,,,"Motorcycle riding, racing, and more!"
+
+[Specials]
+sev="Special Events", http://specials.msn.com/,,,"Our sites are so cool you'll need a sweater."
+u2="U2 PopMart Online", http://u2popmart.msn.com/,,,"Official site of U2's PopMart tour"
+ire="E-String", http://estring.msn.com/,,,"Hey pal! It's guitar lessons, not underwear."
+
+[Find]
+URLKey = find.msn.com
+URL = http://find.msn.com/srchmain.htm
+Find = "Search by Word or Phrase", http://find.msn.com/srchmain.htm?tbn=2,,,"Type in a word and find what you're looking for."
+Explore = "Browse by Subject", http://find.msn.com/srchmain.htm?tbn=1,,,"Walk through our list of all the different places, events, and sites on the Web."
+Calendar = "View MSN Calendar", http://find.msn.com/srchmain.htm?tbn=3,,,"Find out what is happening and when."
+blank = ""
+Alta = "Search Using AltaVista", http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q=&msav=msav,,,"Powerful search tools to find a site on the Web."
+InfoSeek = "Search Using InfoSeek", http://guide-p.infoseek.com//Titles?col=WW&sv=M5&lk=noframes&x=47&y=8&qt=,,,"Easy to use interface to locate the right site."
+Excite = "Search Using Excite", http://www.excite.com/,,,"The place to start your search on the Web."
+DejaNews = "Search Using Deja News", http://search.dejanews.com/dnquery.xp?defaultOp=AND&svcclass=dncurrent&maxhits=25&site=msn&query=,,,"Search Internet Newsgroups."
+
+[Help]
+URLKey = memberservices.msn.com/metro
+URL = http://memberservices.msn.com/metro/default.asp
+start = "Member Services Home Page", http://memberservices.msn.com/metro/default.asp,,,"Get help. Change your account. Find out what's on MSN."
+Newmem = "Getting Started on MSN", http://memberservices.msn.com/metro/default.asp?command=gettingstarted,,,"If you're new to MSN, this is the best place to start."
+AB = "Check or Change Your Account", http://accounts.msn.com/default.asp,,,"Change your account status. Change your password. Review your billing statement."
+Feedback= "Send Us Your Feedback", http://memberservices.msn.com/metro/default.asp?command=feedback,,,"Tell us what you like and don't like. Make suggestions. Share your ideas."
+blank = ""
+Help = "Help && Support", http://memberservices.msn.com/metro/default.asp?command=help,,,"Get answers to your questions and help with problems."
+blank = ""
+Promo = "Hot Offers", http://hotoffers.msn.com/,,,"MSN helps you save money!"
+MS = "Microsoft on the Web", [MSFT]
+CSmem = "Help for CompuServe Members", http://welcome.msn.com/csmembers/
+About = "About MSN", <about>,,,"Check the version of your MSN software."
+
+[MSFT]
+msh = "Microsoft Home Page", http://www.microsoft.com/,,,"The Microsoft Corporate Home Page with information about all Microsoft products."
+free = "Free Stuff", http://www.microsoft.com/ie/download/,,,"Tools and utilities that enhance Microsoft Internet Explorer."
+Prod = "Internet Explorer Product News", http://www.microsoft.com/ie/,,,"News about Microsoft's Internet browser."
+Ols = "Internet Explorer Online Support", http://www.microsoft.com/iesupport/,,,"Help with Microsoft Internet Explorer."
+
+[Channel1]
+Show1 = "MSNBC Front Page", http://www.msnbc.com/news/default.asp,,,"The MSNBC front page with today's latest news and information."
+Show2 = "World", http://www.msnbc.com/news/wld_front.asp,,,"News from around the world."
+Show3 = "Weather", http://www.msnbc.com/weather.asp,,,"Get the latest weather information from MSNBC."
+Show4 = "On Air Highlights", http://www.msnbc.com/onair/default.asp,,,"What's on the MSNBC cable channel right now."
+Show5 = "Opinion", http://www.msnbc.com/news/op_front.asp,,,"Editorials and readers' opinions on current issues."
+Show6 = "Commerce", http://www.msnbc.com/news/com_front.asp,,,"MSNBC business news."
+Show7 = "Sports", http://www.msnbc.com/news/spt_front.asp,,,"Scores updates and news for all kinds of sports."
+Show8 = "SciTech", http://www.msnbc.com/news/st_front.asp,,,"The la

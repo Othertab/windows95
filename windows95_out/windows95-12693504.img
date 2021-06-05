@@ -1,0 +1,165 @@
+80",Mode1,,"31.5,55.0-75.0,+,+"
+HKR,"MODES\1600,1200",Mode1,,"56.0-110.0,70.0-90.0,+,+"
+
+[68T.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-85.0,55.0-160.0,+,+"
+
+[76F.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-78.0,55.0-90.0,+,+"
+
+[77F.Add]
+HKR,"MODES\1600,1200",Mode1,,"24.5-90.0,55.0-160.0,+,+"
+
+[88F.Add]
+HKR,"MODES\1600,1200",Mode1,,"31.5-102.0,55.0-160.0,+,+"
+
+[9060S.Add]
+HKR,"MODES\800,600",Mode1,,"15.5-38.5,50.0-90.0,+,+"
+
+[9065S.Add]
+HKR,"MODES\800,600",Mode1,,"30.0-50.0,50.0-90.0,+,+"
+
+[9070S.Add]
+HKR,"MODES\1024,768",Mode1,,"20.0-50.0,50.0-90.0,+,+"
+
+[9070U.Add]
+HKR,"MODES\1024,768",Mode1,,"20.0-50.0,50.0-90.0,+,+"
+
+[9080i.Add]
+HKR,"MODES\1024,768",Mode1,,"30.0-64.0,55.0-90.0,+,+"
+
+[9400i.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-65.0,55.0-90.0,+,+"
+
+[9500.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-78.0,55.0-90.0,+,+"
+
+[F2-15.Add]
+HKR,"MODES\1152,864",Mode1,,"24.5-69.0,55.0-120.0,+,+"
+
+[F2-17.Add]
+HKR,"MODES\1152,864",Mode1,,"24.5-69.0,55.0-120.0,+,+"
+
+[F2-17EX.Add]
+HKR,"MODES\1280,1024",Mode1,,"24.5-86.0,55.0-160.0,+,+"
+
+[F2-21.Add]
+HKR,"MODES\1600,1200",Mode1,,"24.5-90.0,55.0-160.0,+,+"
+
+[FX2-21.Add]
+HKR,"MODES\1600,1200",Mode1,,"31.5-102.0,55.0-160.0,+,+"
+
+[F340iW.Add]
+HKR,"MODES\1024,768",Mode1,,"27.0-61.5,55.0-90.0,+,+"
+
+[F347.Add]
+HKR,"MODES\1024,768",Mode1,,"24.5-61.5,55.0-90.0,+,+"
+
+[F347II.Add]
+HKR,"MODES\1024,768",Mode1,,"24.5-61.5,55.0-90.0,+,+"
+
+[F351.Add]
+HKR,"MODES\1152,864",Mode1,,"24.5-69.0,55.0-120.0,+,+"
+
+[F550i.Add]
+HKR,"MODES\1024,768",Mode1,,"30.0-65.0,55.0-90.0,+,+"
+
+[F550iW.Add]
+HKR,"MODES\1024,768",Mode1,,"30.0-65.0,55.0-90.0,+,+"
+
+[F553.Add]
+HKR,"MODES\1152,864",Mode1,,"24.5-69.0,55.0-120.0,+,+"
+
+[F557.Add]
+HKR,"MODES\1024,768",Mode1,,"24.5-65.0,55.0-90.0,+,+"
+
+[F560iW.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,55.0-90.0,+,+"
+
+[F563.Add]
+HKR,"MODES\1280,1024",Mode1,,"24.5-86.0,55.0-160.0,+,+"
+
+[F750i.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-80.0,55.0-90.0,+,+"
+
+[F760iW.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-78.0,55.0-90.0,+,+"
+
+[F764.Add]
+HKR,"MODES\1600,1200",Mode1,,"30.0-90.0,55.0-160.0,+,+"
+
+[F780iJ.Add]
+HKR,"MODES\1600,1200",Mode1,,"45.0-100.0,55.0-120.0,+,+"
+
+[F780iW.Add]
+HKR,"MODES\1600,1200",Mode1,,"45.0-100.0,55.0-120.0,+,+"
+
+[F784.Add]
+HKR,"MODES\1600,1200",Mode1,,"31.5-102.0,55.0-160.0,+,+"
+
+[T2-17.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-85.0,55.0-160.0,+,+"
+
+[T2-17TS.Add]
+HKR,"MODES\1280,1024",Mode1,,"24.5-86.0,55.0-160.0,+,+"
+
+[T2-20.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-85.0,55.0-160.0,+,+"
+
+[T560i.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,55.0-90.0,+,+"
+
+[T560iJ.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,55.0-90.0,+,+"
+
+[T562.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,55.0-90.0,+,+"
+
+[T563.Add]
+HKR,"MODES\1280,1024",Mode1,,"24.5-86.0,55.0-160.0,+,+"
+
+[T567.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,55.0-90.0,+,+"
+
+[T660i.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-78.0,55.0-90.0,+,+"
+
+[T660iJ.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,55.0-90.0,+,+"
+
+[T662.Add]
+HKR,"MODES\1280,1024",Mode1,,"30.0-85.0,55.0-160.0,+,+"
+
+
+; User visible strings
+;-------------------------------------------------
+[Strings]
+MS="Microsoft"
+
+MagCompu="Mag Computronic (USA) Inc."
+MAGInno="MAG InnoVision, Inc."
+Microvitek="Microvitec, Inc."
+Mitsuba="Mitsuba Corp."
+Modgraph="Modgraph, Inc."
+Monitronix="Monitronix, Inc."
+Morse="Morse Technology, Inc."
+NEC="NEC Technologies, Inc."
+Nissei="Nissei Sangyo America, Ltd."
+Optiquest="Optiquest"
+PackardBell="Packard Bell"
+Panasonic="Panasonic Comm. & Systems Co."
+PCBrand="PC Brand, Inc."
+Philips="Philips Consumer Electronics Co."
+Premier="Premier Computer Innovations"
+Princeton="Princeton Graphic Systems"
+PrincetonPub="Princeton Publishing Labs"
+Qume="Qume Corp."
+Radius="Radius, Inc."
+REDMS="REDMS Group, Inc."
+Relisys="Relisys"
+Sampo="Sampo Corp. of America"
+Seiko="Seiko Instruments U.S.A., Inc."
+SONY="SONY Corporation"
+Talon="Talon Technology Corp."
+Tatung="Tatung Co. of America, Inc."
+TAXAN="TAXAN Amer

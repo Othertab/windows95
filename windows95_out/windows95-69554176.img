@@ -1,0 +1,85 @@
+a fax mvp144e
+AddReg=All, MfgAddReg, Rockwell37.AddReg, EXTERNAL
+
+[Rockwell38] ; Cardinal 28.8 V.34-VFC internal
+AddReg=All, MfgAddReg, Rockwell35.AddReg, INTERNAL
+
+[Rockwell39] ; Cardinal 14.4 Data FAX MVP144IF
+AddReg=All, MfgAddReg, Rockwell37.AddReg, INTERNAL
+
+[Rockwell40] ; Piiceon V.34 PCMCIA
+AddReg=All, MfgAddReg, Rockwell40.AddReg, PCMCIA
+
+[Rockwell41] ; Piiceon, Smart, other PCMCIA (disable inactivity timer)
+AddReg=All, MfgAddReg, Rockwell41.AddReg, PCMCIA
+
+[Rockwell42] ; Cardinal 19.2 data fax MVP192I
+AddReg=All, MfgAddReg, Rockwell42.AddReg, INTERNAL
+
+[Rockwell43] ; Winbook internal modem
+AddReg=All, MfgAddReg, Rockwell27.AddReg, INTERNAL
+
+[Rockwell44] ; Reveal 14.4 Modem Soundcard
+AddReg=All, MfgAddReg, Rockwell44.AddReg, INTERNAL
+
+; AddReg sections
+
+[Rockwell1.AddReg] ; (internal 14400)
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Rockwell2.AddReg] ; (internal 14400)
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"
+
+[Rockwell3.AddReg] ; (external 14400) - Best Data
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"
+HKR,, InactivityScale, 1, 0a,00,00,00
+
+[Rockwell4.AddReg] ; (internal 14400) - Best Data
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Settings, Compression_On,, "%%C3"
+HKR,, InactivityScale, 1, 0a,00,00,00
+
+[Rockwell5.AddReg] ; (internal 28.8) - Best Data
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, Compression_On,, "%%C3"
+HKR,, InactivityScale, 1, 0a,00,00,00
+
+[Rockwell6.AddReg] ; (internal 28.8) - Best Data and Zoom combo
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, Compression_On,, "%%C3"
+HKR,, InactivityScale, 1, 0a,00,00,00
+
+[Rockwell9.AddReg] ; (external 14400) - Best Data 1442FX (FTX, RPI model)
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f0,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, InactivityScale, 1, 0a,00,00,00
+
+[Rockwell10.AddReg] ; (internal 14400) - Best Data 1442FX (FT, RPI model)
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f0,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR,, InactivityScale, 1, 0a,00,00,00
+
+[Rockwell11.AddReg] ; (internal 2400) - Best Data 9624FQ 
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 V1 &D2 &C1 S0=0<cr>"
+HKR, Settings, DialSuffix,, ""
+
+[Rockwell12.AddReg] ; (external 2400) - Best Data 9648Fx, 2400B, 2400X and other modems
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 V1 &D2 &C1 S0=0<cr>"
+HKR, Settings, DialSuffix,, ""
+
+[Rockwell13.AddReg] ; Smart V.34 PCMCIA
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Init, 2,, "AT &F E0 V1 &D2 &C1 W2 S95=47 S0=0<cr>"
+HKR,, InactivityScale, 1, 0a,00,00,00
+HKR, Settings, ErrorControl_Cellular,, "\N3 -K1 )M1 -Q1 *H1"
+HKR, Settings, ErrorControl_Cellular_Forced,, "\N2 -K1 )M1 -Q1 *H1"
+HKR, Settings, Compression_On,, "%%C3"    
+
+[Rockwell14.AddReg] ; SMART ST1414 PCMCIA with cell
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, ff,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Init, 2,, "AT &F E0 V1 &D2 &C1 W2 S95=47 S0=0<cr>"
+HKR,, InactivityScale, 1, 0a,00,00,00
+HKR, Settings, ErrorControl_Cellular,, "\N3 -K1 )M1 -Q1 *H1"
+HKR, Settings, ErrorControl_Cellular_Forced,, "\N2 -K1 )M1 -Q1 *H1"

@@ -1,0 +1,160 @@
+.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-60,48-90,-,-"
+
+[ZCM1520.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-64,50-100,+,+"
+
+[ZCM1522.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-64,50-120,-,-"
+
+[ZCM1540.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-62,48-100,+,+"
+
+[ZCM1550.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.0-65.0,55-100,+,+"
+
+[ZCM1740.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"31.0-82,50-100,+,+"
+
+[ZCM1750.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-85,50-100,+,+"
+
+
+;-------------------------------------------------
+; User visible strings
+
+[Strings]
+MonitorClassName="Monitor"
+MS="Microsoft"
+
+Generic="(Standard monitor types)"
+DefaultMonitor="Default Monitor"
+
+Unknown.DeviceDesc = "(Unknown Monitor)"
+Monitor\DEFAULT_MONITOR.DeviceDesc = "(Unknown Monitor)"
+
+*PNP09FF.DeviceDesc = "Plug and Play Monitor"
+
+Laptop640.DeviceDesc = "Laptop Display Panel (640x480)"
+Laptop800.DeviceDesc = "Laptop Display Panel (800x600)"
+Laptop1024.DeviceDesc ="Laptop Display Panel (1024x768)"
+
+640.DeviceDesc  = "Standard VGA 640x480"
+800.DeviceDesc  = "Super VGA  800x600"
+1024.DeviceDesc = "Super VGA 1024x768"
+1280.DeviceDesc = "Super VGA 1280x1024"
+1600.DeviceDesc = "Super VGA 1600x1200"
+
+AST="AST"
+Aamazing="Aamazing Technologies, Inc."
+Actix="Actix Systems, Inc."
+Adara="Adara Technology, Inc."
+ADI="ADI Systems, Inc."
+AOC="AOC International (U.S.A.), Ltd."
+Bus="Bus Computer Systems"
+Carroll="Carroll Touch"
+Colorgraphic="Colorgraphic Communications Corp."
+Compeq="Compeq USA/Focus Technology"
+Conrac="Conrac Display Products"
+Cordata="Cordata Technologies, Inc."
+Darius="Darius Technology, Ltd."
+Everex="Everex Systems, Inc."
+Falco="Falco Data Products, Inc."
+Fora="Fora, Inc."
+Forefront="Forefront Technology Corp."
+Fujikama="Fujikama O.A. Distribution"
+Gateway="Gateway"
+GoldenDragon="Golden Dragon"
+Goldstar="GoldStar Technology, Inc."
+HCI="HCI"
+Iiyama="Idek Iiyama North America, Inc."
+Ikegami="Ikegami Electronics, Inc."
+Image="Image Systems Corp."
+Intra="Intra Electronics USA, Inc."
+Iocomm="Iocomm International Technology Corp."
+JVC="JVC Information Products Co."
+KFC="KFC Computek Components Corp."
+KLH="KLH Computers"
+LeadingTechnology="Leading Technology, Inc."
+Link="Link Computer, Inc."
+LiteOn="Lite-On, Inc."
+miro="miro Computer Products AG"
+Zenith="Zenith Data Systems"
+
+AST4V="ASTVision 4V"
+AST4I="ASTVision 4I"
+AST4N="ASTVision 4N"
+AST4L="ASTVision 4L"
+AST5L="ASTVision 5L"
+AST7L="ASTVision 7L"
+AST7H="ASTVision 7H"
+AST20H="ASTVision 20H"
+AST4Ls="AST Sabre"
+AST5V="ASTVision 5V"
+
+CM-8426="Aamazing CM-8426"
+MS-8431="Aamazing MS-8431"
+
+CX1557="Actix Systems CX1557"
+
+AML-1402="Adara Technology AML-1402"
+AML-2001="Adara Technology AML-2001"
+
+SM-5514B="ADI MicroScan 2E"
+SM-5514A="ADI MicroScan 3E"
+SM-5514E="ADI MicroScan 3E+"
+SM-5515 ="ADI MicroScan 4A"
+ADI4GP  ="ADI MicroScan 4GP"
+ADI4V   ="ADI MicroScan 4V"
+ADI5AP  ="ADI MicroScan 5AP"
+ADI5EP  ="ADI MicroScan 5EP"
+
+CM-324="AOC CM-324"
+CM-325="AOC CM-325"
+CM-326="AOC CM-326"
+
+Bus_VGA="Bus Computer Systems Bus_VGA"
+
+CT1381A="Carroll Touch CT1381A"
+
+EG2040="Colorgraphic EG2040"
+
+CT-1458="Compeq CT-1458"
+CT-1958="Compeq CT-1958"
+
+7250="Conrac 7250"
+7351="Conrac 7351"
+7214="Conrac 7214"
+7241="Conrac 7241"
+7550="Conrac 7550"
+9250="Conrac 9250"
+7126="Conrac 7126"
+7211="Conrac 7211"
+
+CMC-141M="Cordata CMC-141M"
+CMC-1500BF="Cordata CMC-1500BF"
+CMC-1500M="Cordata CMC-1500M"
+CMC-1500TF="Cordata CMC-1500TF"
+CMC-1700M="Cordata CMC-1700M"
+CMC-2100H="Cordata CMC-2100H"
+CMC-2100M="Cordata CMC-2100M"
+
+TSM-1431="Darius Technology TSM-1431"
+
+Eversync_SVGA="Everex Eversync_SVGA"
+
+FMS="Falco Data Products, Inc. FMS"
+
+MON-7C5="Fora, Inc. MON-7C5"
+
+MTS-9608S="Forefront Technology MTS-9608S"
+
+PVGA-1024A="Fujikama PVGA-1024A"
+
+14svga="Gateway 14SVGA"
+cs1024="Gateway CrystalScan 1024"
+cs1024ni="Gateway CrystalScan 1024NI"
+cs1024ni2g="Gateway CrystalScan 1024NI2G"
+cs1572dgm="Gateway CrystalScan 1572DGM"
+cs1572dg="Gateway CrystalScan 1572DG"
+cs1572fs="Gateway CrystalScan 1572FS"

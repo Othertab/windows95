@@ -1,0 +1,83 @@
+
+HKCR,"InternetExplorer.Application.1\CLSID",,0,"{%CLSID_IE_App%}"
+HKCR,"CLSID\{%CLSID_IE_App%}",,0,"Internet Explorer(Ver 1.0)"
+HKCR,"CLSID\{%CLSID_IE_App%}\LocalServer32",,0,"""%24%\%OEM_PROGRAMF%\%OEM_MICROS%\iexplore.exe"""
+HKCR,"CLSID\{%CLSID_IE_App%}\ProgID",,0,"InternetExplorer.Application.1"
+HKCR,"CLSID\{%CLSID_IE_App%}\VersionIndependentProgID",,0,"InternetExplorer.Application"
+HKCR,"CLSID\{%CLSID_IE_App%}\TypeLib",,0,"{%CLSID_IE_TypeLib%}"
+HKCR,"CLSID\{%CLSID_IE_App%}\Programmable",,0,""
+
+;	Microsoft Internet Uninstall Registry Entries
+;	We don't let the user UNINSTALL IE from OPK-2
+
+
+;	DeskTop Icon Mappings
+HKCR,"CLSID\{%CLSID_DesktopIcon%}\DefaultIcon",,0,"%24%\%OEM_PROGRAMF%\%OEM_MICROS%\iexplore.exe,0"
+HKCR,"CLSID\{%CLSID_DesktopIcon%}\InProcServer32",,0,"url.dll"
+HKCR,"CLSID\{%CLSID_DesktopIcon%}\InProcServer32","ThreadingModel",0,"Apartment"
+HKCR,"CLSID\{%CLSID_DesktopIcon%}\ShellEx\PropertySheetHandlers\{%CLSID_DesktopIcon%}",,0,""
+HKCR,"CLSID\{%CLSID_DesktopIcon%}\ShellFolder",,0,""
+HKCR,"CLSID\{%CLSID_DesktopIcon%}\ShellFolder","Attributes",1,72,00,00,00
+
+
+
+HKLM,"SOFTWARE\Microsoft\Internet Explorer","Build",0,"1158"
+;	App Paths.  3rd Party Programs should look here to find iexplore.exe
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\IEXPLORE.EXE",,0,"%24%\%OEM_PROGRAMF%\%OEM_MICROS%\iexplore.exe"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\IEXPLORE.EXE","Path",0,"%24%\%OEM_PROGRAMF%\%OEM_MICROS%;"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\INETWIZ.EXE",,0,"%24%\%PROGRAM_FULL%\%ICW_FULL%\INETWIZ.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\INETWIZ.EXE","Path",0,"%24%\%PROGRAM_FULL%\%ICW_FULL%;"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ICWCONN1.EXE",,0,"%24%\%PROGRAM_FULL%\%ICW_FULL%\ICWCONN1.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ICWCONN1.EXE","Path",0,"%24%\%PROGRAM_FULL%\%ICW_FULL%;"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ICWCONN2.EXE",,0,"%24%\%PROGRAM_FULL%\%ICW_FULL%\ICWCONN2.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ICWCONN2.EXE","Path",0,"%24%\%PROGRAM_FULL%\%ICW_FULL%;"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ISIGNUP.EXE",,0,"%24%\%PROGRAM_FULL%\%ICW_FULL%\ISIGNUP.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ISIGNUP.EXE","Path",0,"%24%\%PROGRAM_FULL%\%ICW_FULL%;"
+
+
+;	Used during remove
+HKLM,"SOFTWARE\Microsoft\Internet Explorer"
+HKCU,"SOFTWARE\Microsoft\Internet Explorer"
+
+;	News Shortcuts
+HKCU,"Software\Microsoft\Windows\CurrentVersion\Explorer\NewShortcutHandlers","{%CLSID_NewsShortcut%}",0,""
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\NewShortcutHandlers","{%CLSID_NewsShortcut%}",0,""
+
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","EnableAutodisconnect",3,01,00,00,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","DisconnectIdleTime",3,14,00,00,00
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","EnableSecurityCheck",3,01,00,00,00
+
+
+
+
+
+
+[W95.Uninstall.DelReg]
+HKLM,"SOFTWARE\Microsoft\ICW","Version",,"1.00"
+
+
+
+
+[B.Uninstall.DelReg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{FBF23B42-E3F0-101B-8488-00AA003E56F8}"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer"
+HKCU,"SOFTWARE\Microsoft\Internet Explorer"
+HKLM,"SOFTWARE\Microsoft\Plus!\Setup","SourcePath"
+
+
+
+
+
+
+
+[B.Sweeper.AddReg]
+
+;	RunOnce Commands
+;
+HKLM,%Key_Runonce%,"IE3_RegSvr_actxprxy.dll",0,"%11%\regsvr32.exe /s %11%\actxprxy.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_cachevu.dll",0,"%11%\regsvr32.exe /s %11%\cachevu.dll"
+HKLM,%Key_Runonce%,"IE3_RunDll_msnsspc.dll",0,"rundll32.exe %11%\msnsspc.dll,SspcCreateSspiReg"
+HKLM,%Key_Runonce%,"IE3_RunDll_ShDocVw.dll",0,"rundll32.exe %11%\shdocvw.dll,InstallReg_RunDLL"
+HKLM,%Key_Runonce%,"IE3_RegSvr_shdocvw.dll",0,"%11%\regsvr32.exe /s %11%\shdocvw.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_intrinsc.ocx",0,"

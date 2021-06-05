@@ -1,0 +1,72 @@
+_IIg
+"Apple LaserWriter Plus"          = APPLE380.SPD,Apple_LaserWriter_Plus
+"Apple LaserWriter Pro 600"       = APTOLLD1.SPD,Apple_LaserWriter_Pro_600
+"Apple LaserWriter Pro 630"       = APTOLLW1.SPD,Apple_LaserWriter_Pro_630
+"Apple LaserWriter Pro 810"       = APLW8101.SPD,Apple_LaserWriter_Pro_810
+"Apple LaserWriter Select 360"    = APLWSEL.SPD,Apple_LaserWriter_Select_360
+"Apple Personal LaserWriter NTR"  = APLWNTR1.SPD,Apple_Personal_LaserWriter_NTR
+
+[AST]
+"AST TurboLaser-PS"               = AST__470.SPD,AST_TurboLaser-PS
+
+[AT&T]
+"AT&T 435"                        = HPPLOT.DRV,AT&T_435
+"AT&T 470/475"                    = CITOH.DRV,AT&T_470/475
+"AT&T 473/478"                    = OKI9IBM.DRV,AT&T_473/478
+
+[Brother]
+"Brother HJ-100"                  = CANON330.DRV,Brother_HJ-100
+"Brother HJ-100i"                 = CANON330.DRV,Brother_HJ-100i
+"Brother HJ-400"                  = BRHJ770.DRV,Brother_HJ-400
+"Brother HJ-770"                  = BRHJ770.DRV,Brother_HJ-770
+"Brother HL-4"                    = HPPCL.DRV,Brother_HL-4
+"Brother HL-4V"                   = HPPCL5MS.DRV,Brother_HL-4V
+"Brother HL-4Ve"                  = HPPCL5MS.DRV,Brother_HL-4Ve
+"Brother HL-6"                    = HPPCL.DRV,Brother_HL-6
+"Brother HL-6V"                   = HPPCL5MS.DRV,Brother_HL-6V
+"Brother HL-8"                    = HPPCL.DRV,Brother_HL-8
+"Brother HL-8D"                   = HPPCL.DRV,Brother_HL-8D
+"Brother HL-8e"                   = HPPCL.DRV,Brother_HL-8e
+"Brother HL-8V"                   = HPPCL5MS.DRV,Brother_HL-8V
+"Brother HL-10h"                  = HPPCL5MS.DRV,Brother_HL-10h
+"Brother HL-10V"                  = HPPCL5MS.DRV,Brother_HL-10V
+"Brother HL-10DV"                 = HPPCL5MS.DRV,Brother_HL-10DV
+"Brother M-1309"                  = BROTHER9.DRV,Brother_M-1309
+"Brother M-1324"                  = BROTHR24.DRV,Brother_M-1324
+"Brother M-1809"                  = BROTHER9.DRV,Brother_M-1809
+"Brother M-1818"                  = BROTHER9.DRV,Brother_M-1818
+"Brother M-1824L"                 = BROTHR24.DRV,Brother_M-1824L
+"Brother M-1909"                  = BROTHER9.DRV,Brother_M-1909
+"Brother M-1918"                  = BROTHER9.DRV,Brother_M-1918
+"Brother M-1924L"                 = BROTHR24.DRV,Brother_M-1924L
+
+[Bull]
+"Bull Compuprint PageMaster 413"  = HPPCL5MS.DRV,Bull_Compuprint_PageMaster_413
+"Bull Compuprint PageMaster 815"  = HPPCL5MS.DRV,Bull_Compuprint_PageMaster_815
+"Bull Compuprint PageMaster 825"  = HPPCL5MS.DRV,Bull_Compuprint_PageMaster_825
+"Bull Compuprint PageMaster 1025" = HPPCL5MS.DRV,Bull_Compuprint_PageMaster_1025
+
+[C-Itoh]
+"C-Itoh 8510"                     = CITOH.DRV,C-Itoh_8510
+
+[Canon]
+"Canon Bubble-Jet BJ-10e"         = CANON330.DRV,Canon_Bubble-Jet_BJ-10e
+"Canon Bubble-Jet BJ-10ex"        = CANON330.DRV,Canon_Bubble-Jet_BJ-10ex
+"Canon Bubble-Jet BJ-10sx"        = CANON330.DRV,Canon_Bubble-Jet_BJ-10sx
+"Canon Bubble-Jet BJ-20"          = CANON330.DRV,Canon_Bubble-Jet_BJ-20
+"Canon Bubble-Jet BJ-100"         = CANON800.DRV,Canon_Bubble-Jet_BJ-100
+"Canon Bubble-Jet BJ-130"         = CANON330.DRV,Canon_Bubble-Jet_BJ-130
+"Canon Bubble-Jet BJ-130e"        = CANON330.DRV,Canon_Bubble-Jet_BJ-130e
+"Canon Bubble-Jet BJ-200"         = CANON800.DRV,Canon_Bubble-Jet_BJ-200
+"Canon Bubble-Jet BJ-200e"        = CANON800.DRV,Canon_Bubble-Jet_BJ-200e
+"Canon Bubble-Jet BJ-230"         = CANON800.DRV,Canon_Bubble-Jet_BJ-230
+"Canon Bubble-Jet BJ-300"         = CANON330.DRV,Canon_Bubble-Jet_BJ-300
+"Canon Bubble-Jet BJ-330"         = CANON330.DRV,Canon_Bubble-Jet_BJ-330
+"Canon Bubble-Jet BJC-70"         = CANON800.DRV,Canon_Bubble-Jet_BJC-70
+"Canon Bubble-Jet BJC-600"        = CANONBJC600,Canon_Bubble-Jet_BJC-600
+"Canon Bubble-Jet BJC-600e"       = CANONBJC600,Canon_Bubble-Jet_BJC-600e
+"Canon Bubble-Jet BJC-800"        = CANONBJC800,Canon_Bubble-Jet_BJC-800
+"Canon Bubble-Jet BJC-4000"       = CANON800.DRV,Canon_Bubble-Jet_BJC-4000
+"Canon LBP-4"                     = CANONLBP.DRV,Canon_LBP-4
+"Canon LBP-4 Plus"                = CANONLBP.DRV,Canon_LBP-4_Plus
+"Cano

@@ -1,0 +1,73 @@
+ing: for sending and receiving messages=APP_MAIL
+4 Microsoft Fax: for sending and receiving fax messages =APP_FAX
+4 HyperTerminal: for connecting to other computers=APP_TERMINAL@windows.hlp>proc4
+3 For Sound and Video
+4 CD Player: for playing compact discs=APP_CDPLAYER
+4 Media Player: for playing multimedia files=APP_MEDIAPLAYER
+4 Sound Recorder: for creating and playing sound files=APP_SOUNDRECORDER
+4 Volume Control: for adjusting sound level=APP_VOL_CTRL
+3 For Using with Two Computers
+4 Dial-Up Networking: for connecting by using a modem=APP_REMOTE
+4 Direct Cable Connection: for connecting by using a cable=APP_CABLE
+4 Briefcase: for synchronizing files=APP_BRIEFCASE
+3 For Maintaining Your Computer
+4 Backup: for backing up your files =APP_BACKUP
+4 Backup Agents: for NetWare and Windows NT servers=APP_BACKUP_AGENT@network.hlp>proc4
+4 DriveSpace: for increasing disk space=APP_DRIVESPACE
+4 Disk Defragmenter: for speeding up your hard disk=APP_DEFRAG
+4 ScanDisk: for detecting and repairing disk errors=APP_SCANDISK
+1 How To...
+2 Run Programs
+3 Starting a program =WIN_TRAY_START_PROG
+3 Switching between programs =WIN_TRAY_SWITCH_BETWEEN_APPS
+3 Installing a program from a floppy disk or CD-ROM=WIN_ADDPROG_INSTALL_PROGRAM
+3 Installing a program from a network=WIN_ADDPROG_INSTALL_NETWORK_PROGRAM
+3 Removing a program from your computer=WIN_ADDPROG_REMOVE_SOFTWARE
+3 Starting an MS-DOS window =WINDOWS_DOS_START_DOS
+3 Optimizing MS-DOS programs=WINDOWS_DOS_CONFIGURE
+3 Shutting down your computer =WIN_TRAY_SHUTDOWN
+2 Work with Files and Folders
+3 Finding a file or folder=WIN_TRAY_FIND_FILE
+3 Opening a document you've used recently=WIN_TRAY_OPEN_DOC
+3 Seeing what's on your computer =WINDOWS_FCAB_LOOK_AT_FILES
+3 Copying a file or folder =WINDOWS_FCAB_COPY_FILE
+3 Moving a file or folder=WINDOWS_FCAB_MOVE_FILES
+3 Deleting a file or folder =WINDOWS_FCAB_DELETE_FILES
+3 Retrieving deleted files or shortcuts=WINDOWS_WASTE_RETRIEVE_FILES
+3 Copying a file to a floppy disk=WIN_COPY_FILE_TO_FLOPPY
+3 Creating a folder =WINDOWS_FCAB_CREATE_FOLDER
+3 Changing the name of a file or folder =WINDOWS_FCAB_RENAME_FILE
+2 Print
+3 Setting up a printer =WINDOWS_PRINT_SETUP_PRINTER
+3 Printing a document =WINDOWS_PRINT_PRINT_DOC@common.hlp>proc4
+3 Viewing documents waiting to be printed =WINDOWS_PRINT_VIEW_PRINT_QUEUE
+3 Changing printer settings =WINDOWS_PRINT_CHANGING_SETTINGS
+3 Using a shared printer =WINDOWS_PRINT_CONNECT_NET_PRINTER@network.HLP>proc4
+3 Sharing your printer =WINDOWS_PRINT_SHARING@server.hlp>proc4
+3 Troubleshooting printing problems =PTS_WHAT_WRONG
+2 Use a Network
+3 Setting up your computer to connect to the network =WINDOWS_NETSETUP_NETWIN
+3 Finding a computer =WIN_TRAY_FIND_NETRES@network.HLP>proc4
+3 Browsing your workgroup =WINDOWS_NETWORK_BROWSEWORKGROUP@network.hlp>proc4
+3 Opening a shared folder on another computer =NET_OPEN_NET_FOLDER@NETWORK.HLP>proc4
+3 Sharing a folder or printer =WINDOWS_FCAB_SHARING_FOLDER@server.hlp>proc4
+3 Installing a program from a network=WIN_ADDPROG_INSTALL_NETWORK_PROGRAM
+3 Backing up files over a network =APP_BACKUP_AGENT@network.hlp>proc4
+3 Connecting to a network by using Dial-Up Networking=RNA_DIALUP@rnaapp.hlp>proc4
+3 Automating a Dial-Up Networking connection=CREATE_SCRIPT_MAIN@rnaapp.hlp>proc4
+3 Connecting to a network by using a cable=RNA_SETUP_DCC@rnaapp.hlp>proc4
+2 Communicate with Others
+3 Exchanging mail messages =APP_MAIL
+3 Exchanging faxes =APP_FAX
+3 Dialing from your computer by using Phone Dialer=APP_DIALER
+3 Setting up a modem =WIN_MODEM_SET_UP
+3 Setting up an Internet Connection=ICW_USINGICW@connect.hlp>proc4
+3 Connecting  to The Microsoft Network=APP_MARVEL>proc4
+2 Safeguard Your Work
+3 Backing up your files =APP_BACKUP
+3 Setting up a screen saver =WIN_DESKPR_SCRSAVERSETUP
+3 Assigning a screen-saver password =WIN_DESKPR_SCRSAVERPASSWORD
+3 Shutting down your computer =WIN_TRAY_SHUTDOWN
+3 Controlling access to a folder or printer=SECUR_CONTROL_ACCESS@server.hlp>proc4
+2 Change Windows Settings
+3 Change How Windows Looks

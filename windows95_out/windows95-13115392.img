@@ -1,0 +1,145 @@
+g%  =CpqMfg         	; Compaq
+%KensMfg% =KensMfg         	; Kensington
+%TIMfg%   =TIMfg         	; Texas Instruments
+%ToshMfg% =ToshMfg		; Toshiba
+
+[StdMfg]
+%*pnp0f0c.DeviceDesc%=StdSer,*PNP0F0C	; Std serial mouse
+%*pnp0f0d.DeviceDesc%=StdInP,*PNP0F0D 	; Std InPort mouse
+%*pnp0f0e.DeviceDesc%=StdPS2,*PNP0F0E	; Std PS/2 mouse
+%*pnp0f11.DeviceDesc%=StdBus,*PNP0F11	; Std bus mouse
+%*pnp0f13.DeviceDesc%=StdPS2,*PNP0F13	; PS/2 mouse port (hidden)
+ 
+[MSMfg]
+%*pnp0f00.DeviceDesc%=MSBus,*PNP0F00	; MS bus mouse	 
+%*pnp0f01.DeviceDesc%=MSSer,*PNP0F01	; MS serial mouse
+%*pnp0f02.DeviceDesc%=MSInP,*PNP0F02	; MS InPort mouse
+%*pnp0f03.DeviceDesc%=MSPS2,*PNP0F03	; MS PS/2 mouse
+%*pnp0f09.DeviceDesc%=MSSer,*PNP0F09	; MS serial BallPoint
+%*pnp0f0b.DeviceDesc%=MSPS2,*PNP0F0B	; MS PS/2 mouse
+%*pnp0f0f.DeviceDesc%=MSSer,*PNP0F0F	; MS serial BallPoint
+%*pnp0f1e.DeviceDesc%=MSSer,,*PNP0F1E	; MS serial EasyBall
+%SERENUM\PNP0F0A.DeviceDesc%=MSSerPnP, SERENUM\PNP0F0A
+%SERENUM\PNP0F1E.DeviceDesc%=MSSerPnP,,SERENUM\PNP0F1E
+
+[LogiMfg]
+%*pnp0f08.DeviceDesc%=LogiSer,*PNP0F08	; Logi serial mouse
+%*pnp0f12.DeviceDesc%=LogiPS2,*PNP0F12	; Logi PS/2 mouse
+%*pnp0f15.DeviceDesc%=LogiBus,*PNP0F15	; Logi bus mouse
+%SERENUM\LGI8001.DeviceDesc%=LogiSerPnP,, SERENUM\LGI8001
+%SERENUM\LGI8002.DeviceDesc%=LogiSerPnP,, SERENUM\LGI8002
+%SERENUM\LGI800D.DeviceDesc%=LogiSerPnP,, SERENUM\LGI800D
+%*pnp0f13_Logi.DeviceDesc%=LogiPS2, *PNP0F13_Logi	; Logi PnP BIOS PS/2 mouse
+
+[CpqMfg]
+%*cpqa0d8.DeviceDesc%=CpqPS2,*CPQA0D8	; Cpq PS/2 mouse
+%*pnp0f1c.DeviceDesc%=CpqPS2,*PNP0F1C 	; Cpq PS/2 trackball
+%*pnp0f1d.DeviceDesc%=CpqSer,*PNP0F1D	; Cpq serial trackball 
+
+[KensMfg]
+%SERENUM\KML0001.DeviceDesc%=KensSer, SERENUM\KML0001
+
+[TIMfg]
+%*pnp0f10.DeviceDesc%=TIBall,*PNP0F10	; TI QuickPort BallPoint
+
+[ToshMfg]
+%*tos7400.DeviceDesc%=ToshPS2,*TOS7400  ; Toshiba Integrated
+
+; Install Sections
+; ---------------------------------------------------------
+
+; -------------- (No mouse)
+[NoMouse]
+UpdateInis=NoMouse.Ini
+
+[NoMouse.Ini]
+system.ini,boot,,"mouse.drv=mouse.drv"
+system.ini,386Enh,,"mouse=*vmouse"
+system.ini,boot.description,,"mouse.drv=%NoMouse%"
+win.ini,windows,,"SkipMouseRedetect=1"
+
+; -------------- MS compatible mouse
+[StdAny]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Std.Ini
+UpdateIniFields=Std.UpdateIniFields
+
+[Std.UpdateIniFields]
+win.ini, windows, load, *gui.exe,,1		; Genius MouseMate
+win.ini, windows, load, *wbuttons.exe,,1	; Logitech MouseWare
+win.ini, windows, load, *xpoint.exe,,1		; NEC / LCS Mouse Options
+
+[Std.AddReg]
+HKR,,DevLoader,,*vmouse
+
+[Std.Copy]
+mouse.drv
+msmouse.vxd
+
+[Std.Ini]
+system.ini,boot,,"mouse.drv=mouse.drv"
+system.ini,386Enh,,"mouse=*vmouse, msmouse.vxd"
+system.ini,boot.description,,"mouse.drv=%StdMouse%"
+
+[Prev.DelReg]
+HKR,,DevLoader
+HKR,,MouseDriver
+HKR,,MouseType
+HKR,,ComInfo
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Controls Folder\Mouse\shellex\PropertySheetHandlers\DriverPages"
+
+; -------------- Standard serial mouse
+[StdSer]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, Serial.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Std.Ini
+UpdateIniFields=Std.UpdateIniFields
+
+[Serial.AddReg]
+HKR,,MouseType,,"Serial"
+HKR,,NoSetupUI,,1
+
+; -------------- InPort mouse
+[StdInP]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, InPort.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Std.Ini
+UpdateIniFields=Std.UpdateIniFields
+LogConfig=InPort.LogConfig
+
+[InPort.AddReg]
+HKR,,MouseType,,"Inport"
+HKR,,NoSetupUI,,1
+
+[InPort.LogConfig]		
+ConfigPriority=HARDRECONFIG
+IOConfig=4@230-23f%fffc(3ff::)
+IRQConfig=3,4,5,7,9
+
+; -------------- Standard PS/2 mouse
+[StdPS2]
+DelReg=Prev.DelReg
+AddReg=Std.AddReg, PS2.AddReg
+CopyFiles=Std.Copy
+UpdateInis=Std.Ini
+UpdateIniFields=Std.UpdateIniFields
+LogConfig=PS2.LogConfig
+
+[PS2.AddReg]
+HKR,,MouseType,,"PS2"
+HKR,,NoSetupUI,,1
+
+[PS2.LogConfig]
+ConfigPriority=HARDWIRED
+IRQConfig=12
+
+[StdPS2.PosDup]
+*PNP0F03,*PNP0F0B,*PNP0F0E,*PNP0F12,*PNP0F1C,*PNP0F13
+
+; -------------- Standard bus mouse
+[StdBus]
+DelR

@@ -1,0 +1,89 @@
+
+3 System Startup Files
+3 Introduction = RK06_TCH_42_
+3 IO.SYS: The Real-Mode Operating System = RK06_TCH_43_
+3 MSDOS.SYS: Special Startup Values = RK06_TCH_44_
+4 CONFIG.SYS and AUTOEXEC.BAT
+4 Introduction = RK06_TCH_46_
+4 CONFIG.SYS Processing = RK06_TCH_47_
+4 CONFIG.SYS Changes for Windows 95 = RK06_TCH_48_
+4 AUTOEXEC.BAT Processing = RK06_TCH_49_
+4 AUTOEXEC.BAT Changes for Windows 95 = RK06_TCH_50_
+4 SYSTEM.INI and WIN.INI
+4 Introduction = RK06_TCH_52_
+4 Changes to SYSTEM.INI = RK06_TCH_53_
+4 Changes to WIN.INI = RK06_TCH_54_
+3 BOOTLOG.TXT: The Startup Process Log = RK06_TCH_55_
+3 Windows 95 Setup with Other Operating Systems
+3 Introduction = RK06_TCH_57_
+3 Installing Windows 95 over Windows 3.x = RK06_TCH_58_
+3 Installing Windows 95 for Dual Booting with Windows 3.x = RK06_TCH_59_
+4 Installing Windows 95 over MS-DOS
+4 Introduction = RK06_TCH_61_
+4 Files Deleted by Windows 95 Setup = RK06_TCH_62_
+4 System Startup with MS-DOS Multiple Configurations = RK06_TCH_63_
+3 Installing Windows 95 for Dual Booting with Windows NT = RK06_TCH_64_
+3 Installing Windows 95 over DR DOS = RK06_TCH_65_
+3 Installing Windows 95 over OS/2 = RK06_TCH_66_
+3 Removing Windows 95 from a Computer
+3 Introduction = RK06_TCH_68_
+3 Removing Windows 95 with Command-Line Startup = RK06_TCH_69_
+3 Removing Windows 95 with Your Previous Operating System = RK06_TCH_70_
+3 Troubleshooting Setup and System Startup
+3 Introduction = RK06_TCH_72_
+3 Troubleshooting Specific Setup Errors = RK06_TCH_73_
+3 Troubleshooting Specific Startup Errors = RK06_TCH_74_
+3 Converting Windows 3.x Program Groups = RK06_TCH_75_
+1 Networking
+1 Introduction = rkp3_0_
+2 Introduction to Windows 95 Networking
+2 Introduction = RK07_NET_1_
+2 Windows 95 Networking: The Basics = RK07_NET_2_
+2 Windows 95 Networking: The Issues = RK07_NET_3_
+3 Network Configuration Overview
+3 Introduction = RK07_NET_5_
+3 Installing Networking Components = RK07_NET_6_
+3 Setting Computer Name and Workgroup = RK07_NET_7_
+3 Starting the Network During System Startup = RK07_NET_8_
+2 Plug and Play Networking Overview = RK07_NET_9_
+2 Basic Troubleshooting for Networking = RK07_NET_10_
+2 Windows 95 on Microsoft Networks
+2 Introduction = RK08_MS_1_
+2 Windows 95 and Microsoft Networking: The Basics = RK08_MS_2_
+3 Windows 95 and Microsoft Networking: The Issues
+3 Introduction = RK08_MS_4_
+3 Issues for Server-Based Microsoft Networks = RK08_MS_5_
+4 Issues for Peer-to-Peer Networks
+4 Introduction = RK08_MS_7_
+4 Choosing Thinnet or Twisted Pair for Cabling = RK08_MS_8_
+4 Choosing the Peer Network Components = RK08_MS_9_
+2 Installing Client for Microsoft Networks = RK08_MS_10_
+3 Configuring Client for Microsoft Networks
+3 Introduction = RK08_MS_12_
+3 Configuring the Primary Client for Network Logon = RK08_MS_13_
+3 Configuring Logon and Reconnection Options = RK08_MS_14_
+3 Running Windows 95 in a Mixed Microsoft Environment
+3 Introduction = RK08_MS_16_
+4 Running Windows 95 with Windows NT
+4 Introduction = RK08_MS_18_
+4 Running Windows 95 in a Mixed Environment with Windows NT = RK08_MS_19_
+4 Notes on Windows NT Server Benefits = RK08_MS_20_
+4 Client Access Licenses for Windows NT Server = RK08_MS_21_
+3 Running Windows 95 with LAN Manager = RK08_MS_22_
+3 Running Windows 95 with Windows for Workgroups = RK08_MS_23_
+3 Running Windows 95 with Workgroup Add-on for MS-DOS = RK08_MS_24_
+2 PROTOCOL.INI: Real-Mode Network Initialization File = RK08_MS_25_
+2 Windows 95 on NetWare Networks
+2 Introduction = RK09_NW_1_
+3 Windows 95 on NetWare Networks: The Basics
+3 Introduction = RK09_NW_3_
+3 Microsoft Client for NetWare Networks: The Benefits = RK09_NW_4_
+3 Novell-Supplied NetWare Clients: The Benefits = RK09_NW_5_
+3 Windows 95 on NetWare Networks: The Issues
+3 Introduction = RK09_NW_7_
+3 Choosing the Network Client = RK09_NW_8_
+3 Choosing Protocols on NetWare Networks = RK09_NW_9_
+4 Configuring NetWare Servers to Support Windows 95
+4 Introduction = RK09_NW_11_
+4 Installing Windows 95 Source Files on NetWare Servers = RK09_NW_12_
+4 Automating Setu

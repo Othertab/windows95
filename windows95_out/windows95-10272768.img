@@ -1,0 +1,125 @@
+yo.386"
+system.ini, 386Enh, "device=samsung.386"
+system.ini, 386Enh, "device=grid.386"
+system.ini, 386Enh, "device=ccpen.386"
+system.ini, 386Enh, "device=kurtapen.386"
+system.ini, 386Enh, "device=kpen.386"
+system.ini, 386Enh, "device=vkpend.386"
+system.ini, 386Enh, "device=vpent200.386"
+system.ini, 386Enh, "device=ibm360p.386"
+
+; delete other Windows for Pen Entries:
+system.ini,boot,"PenWinErrors="
+system.ini,drivers,"pen="
+system.ini,drivers,"penwindows="
+system.ini,drivers,"skb="
+win.ini,windows,"DoubleClickWidth="
+win.ini,windows,"DoubleClickHeight="
+system.ini,"Display Driver","DisplayOrientation="
+system.ini,"Display Driver","OrientationDrivers="
+system.ini,"Pen Driver","Com1="
+system.ini,"Pen Driver","Com2="
+
+control.ini,MMCPL,"cppen="
+control.ini,MMCPL,"cphw="
+control.ini,MMCPL,"cpcal="
+control.ini,MMCPL,"cprot="
+control.ini,MMCPL,"NumApps="
+
+;Delete ProgMan Links:
+setup.ini, progman.groups,, "PenTools=""Microsoft Pen Tools"""  ;creates folder
+setup.ini, PenTools,, """Learning Pen Basics"""                 ;deletes link 
+setup.ini, PenTools,, """Notebook"""
+setup.ini, PenTools,, """Pen Palette""" 
+setup.ini, PenTools,, """Sample Form"""
+setup.ini, PenTools,, """On-Screen Keyboard"""
+setup.ini, PenTools,, """Trainer"""
+
+[Del.PENWIN_IniFields]
+system.ini,boot,drivers,pen
+system.ini,boot,drivers,penwindows
+system.ini,boot,drivers,skb
+
+[PENWIN_OLD_WINFiles]
+; Backup Windows for Pen 1.0 files
+penwinin.10,penwin.ini
+basics.10,basics.hlp
+cppen.10,cppen.cpl
+cpcal.10,cpcal.cpl
+cprot.10,cprot.cpl
+cphw.10,cphw.cpl
+marsdll.10,mars.dll
+marshlp.10,mars.hlp
+marsmob.10,mars.mob
+penhook.10,penhook.dll
+penpalex.10,penpal.exe
+penpalhl.10,penpal.hlp
+penwindl.10,penwin.dll
+sform.10,sform.exe
+skb.10,skb.exe
+trainer.10,trainer.exe
+notebook.10,notebook.exe
+notebhlp.10,notebook.hlp
+notebini.10,notebook.ini
+gsdll.10,gsdll.dll
+textobj.10,textobj.exe
+todll.10,todll.dll
+maindict.10,maindict.dll
+userdict.10,userdict.dll
+
+[PENWIN_OLD_SYSFiles]
+; Backup Windows for Pen 1.0 files
+skbhook.10,skbhook.dll
+grecomob.10,greco.mob
+grecodll.10,greco.dll
+rotate.10,rotate.drv
+shaperec.10,shaperec.dll
+trainer.10,trainer.exe
+yesmouse.10,yesmouse.drv
+wacomdrv.10,wacom.drv
+wacom386.10,wacom.386
+pencli.10,pencli.dll
+pensvr.10,pensvr.dll
+maindict.10,maindict.dll
+userdict.10,userdict.dll
+
+[Strings]
+;Non-localizable Strings:
+KEY_OPTIONAL   = "SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+
+;Localizable Strings:
+OEM_PROGRAMF     = "Progra~1"  ; first 6 chars of Program_Files, + "~1" - in OEM codepage (not Ansi)
+OEM_ACCESSOR     = "Access~1"  ; first 6 chars of Accessories, + "~1"  - in OEM codepage (not Ansi)
+OEM_HYPERTER     = "Hypert~1"  ; first 6 chars of HyperTerminal, + "~1" - in OEM codepage (not Ansi)
+APPS_DESC        = "Accessories"
+SYSTOOLS_DESC    = "Accessories\System Tools" ;"Accessories" must match APPS_DESC
+Backup_DESC      = "Backup"
+MTDemo_DESC      = "Multithreaded Demo"
+MAIN_DESC        = "Main"
+CreateBrief_Desc = "Create a Briefcase"
+Mapisp32_Link_Desc = "MAPI Spooler"
+DRWATSON_DESC    = "Dr. Watson"
+Note32_DESC      = "Note32"
+Clock32_DESC     = "Clock32"
+Clip_DESC        = "Clipboard"
+Setup2_DESC      = "Setup"
+DOSPrompt_DESC   = "DOS Prompt"
+Tutorial_DESC    = "Tutorial"
+Defrag_DESC      = "Disk Defragmenter"
+SysMon_DESC      = "System Monitor"
+AdmCfg_DESC      = "Admin Configuration Tool"
+WinBug_DESC      = "WinBug (problem reporting tool)"
+Popup_DESC       = "Message Popup Utility"
+FontMgr_DESC     = "Font Manager"
+PRGMAN_DESC      = "Program Manager"
+OldWinPad_DESC   = "WinPad"
+Mixer_DESC       = "Mixer Controls"
+SndVol_DESC      = "Volume Control"
+CDPlayer_DESC    = "CD Player"
+OldRelNotes_DESC = "Chicago Beta Release Notes"
+Printers_DESC    = "Printers"
+OLR_Link_Desc    = "Online Registration"
+MSTools_DESC     = "Microsoft Tools"  ; Name of Program Manager Group
+Undelete_DESC    = "Undelete"
+MSWin95_DESC     = "Microsoft Windows 95" 
+PBNavigator_DESC = "Navigator" ; Packard Bell's Navigator Shell

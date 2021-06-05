@@ -1,0 +1,57 @@
+Cardinal6% = Rockwell12,  ROCK_Cardinal6, UNIMODEM24FFB24B      ; Cardinal 14.4 mvp24xf
+%Cardinal7% = Rockwell14,  PCMCIA\CARDINAL-MVP144PCMCIA-5538     ; Cardinal 14.4 PCMCIA, MVP144PCMCIA
+%Cardinal7% = Rockwell14,  ROCK_Cardinal7, UNIMODEMD3A140D7      ; Cardinal 14.4 PCMCIA, MVP144PCMCIA
+%Cardinal8% = Rockwell20,  ROCK_Cardinal8, UNIMODEM1C445CDD      ; Cardinal 28.8, V.34, internal MVP288I
+%Cardinal9% = Rockwell38,  UNIMODEM1C445CDD      ; Cardinal 28.8, V.34, internal MVP288I
+%Cardinal10% = Rockwell39, ROCK_Cardinal10, UNIMODEMAAC52F50     ; Cardinal 14.4 Data FAX MVP144IF
+%Cardinal11% = Rockwell37, UNIMODEMAAC52F50      ; Cardinal 14.4 Data FAX MVP144IF
+%Cardinal12% = Rockwell10, ROCK_Cardinal12, UNIMODEM16A162D5     ; Cardinal 14.4 Data FAX MVP144I
+%Cardinal13% = Rockwell11, ROCK_Cardinal13, UNIMODEM9F2BBC58     ; Cardinal 2400 Data FAX MB2650SR
+%Cardinal14% = Rockwell42, UNIMODEMFFB2F7FF      ; Cardinal 19.2 data fax MVP192I
+
+[Digitan]
+%Digitan2%  = Rockwell2,  ROCK_Digitan2, UNIMODEMCFA485CD      ; Shipped by Dell
+%Digitan3%  = Rockwell20, ROCK_Digitan3, UNIMODEMEAF8FBCB      ; Digitan V.34 with voice
+%Digitan4%  = Rockwell20, ROCK_Digitan4, UNIMODEM733C4E29      ; Digitan V.34
+
+[BestData]
+%BestData1%  = Rockwell3, UNIMODEM4643BBB7      ; Best Data 1442FX External 
+%BestData2%  = Rockwell4, UNIMODEM96F16EB5      ; Best Data 1442F Internal
+%BestData3%  = Rockwell5, ROCK_BestData3, UNIMODEM733C4E29      ; Best Data 2834F Internal
+%BestData4%  = Rockwell6, UNIMODEM733C4E29      ; Best Data 2834F Internal and Zoom V.34 internal combo
+%BestData5%  = Rockwell7, ROCK_BestData5, UNIMODEMA3EEEF33      ; Best Data 2834FX External 
+%BestData6%  = Rockwell8, UNIMODEMA3EEEF33      ; Best Data 2834FX External and Zoom V.34 internal combo
+%BestData7%  = Rockwell9, ROCK_BestData7, UNIMODEM798B889B      ; Best Data 1442FX External (FTX, RPI model)
+%BestData8%  = Rockwell10, ROCK_BestData8, UNIMODEM535147EF     ; Best Data 1442FX Internal (FT, RPI model)
+%BestData8%  = Rockwell10, UNIMODEM145054C5     ; Best Data 1442FX Internal (FT, RPI model)
+%BestData9%  = Rockwell11, ROCK_BestData9, UNIMODEM9F2BBC58     ; Best Data 9624FQ Internal
+%BestData10%  = Rockwell11, UNIMODEM65278A40    ; Best Data 2400B Internal
+%BestData11%  = Rockwell12, UNIMODEMDC7EB890    ; Best Data 9648FX External
+%BestData11%  = Rockwell12, ROCK_BestData11, UNIMODEM24FFB24B    ; Best Data 9648FX External
+%BestData12%  = Rockwell12, UNIMODEM24FFB24B    ; Best Data 9648FX External and viva combo
+%BestData13%  = Rockwell12, ROCK_BestData13, UNIMODEM24FFB24B    ; Best Data 2400X External
+
+[SMART]
+%SmartMod1%  = Rockwell14, UNIMODEMDE96F803                      ; Smart ST1414 PCMCIA
+%SmartMod1%  = Rockwell14, PCMCIA\INTELLIGENT-FAXMODEM-F938      ; Smart ST1414 PCMCIA
+%SmartMod2%  = Rockwell13, ROCK_SmartMod2, UNIMODEMAF48CC9F      ; Smart V.34 PCMCIA
+%SmartMod2%  = Rockwell13, PCMCIA\SMART_MODULAR_ST2814-E3BD      ; Smart V.34 PCMCIA
+
+[Apex]
+%Apex3% = Rockwell15, ROCK_Apex3, PCMCIA\RIPICAA-RC144ACL-845A      ; Apex V.34
+%Apex3% = Rockwell15, PCMCIA\AD_PC_CARD-RC288ACL-5DA6   ; Apex V.34
+%Apex3% = Rockwell15, ROCK_Apex3, UNIMODEM1058B7F8                  ; Apex V.34
+%Apex4% = Rockwell15, UNIMODEM1058B7F8                  ; Apex V.34 and Toshiba combo
+
+[ComOne]
+%ComOne6% = Rockwell13, PCMCIA\COM1_SA-MC218_CARD-415E                ; MC218 28.8 PCMCIA
+%ComOne6% = Rockwell13, UNIMODEM7A03E29F                              ; MC218 28.8 PCMCIA
+%ComOne4% = Rockwell17, ROCK_ComOne4, PCMCIA\AT&T_PARADYNE-KEEPINTOUCH_CARD-762F    ; MC216
+%ComOne2% = Rockwell16, PCMCIA\COM1_SA-MC214_CARD-5738                ; MC214A 
+%ComOne2% = Rockwell16, UNIMODEMD3A0F28F                              ; MC214A
+%ComOne1% = Rockwell14, PCMCIA\COM1_SA-MC217_CARD-15FC                ; MC217A 14.4 PCMCIA
+; ComOne tuples from untested/unavailable models
+; %ComOne13% = Rockwell-n, PCMCIA\PHILIPS-S214_CARD_-D9F4
+; %ComOne12% = Rockwell-n, PCMCIA\TOSHIBA-_SLIMFAXII-F6F4
+; %ComOne11% = Rockwell-n, PCMCIA\PHILIPS-S218_CARD_-DBDE
+; %ComOne10% = Rock

@@ -1,0 +1,99 @@
+p8128"
+
+;****************************************************************************
+; SMC EtherCard PLUS With Boot ROM Socket (WD/8003EBT)
+;****************************************************************************
+[*PNP8126.ndi]
+AddReg=STAR.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8126.DevID
+LogConfig=STAR.LogConfig
+[*PNP8126.DevID]
+HKR,Ndi,DeviceID,,"*pnp8126"
+
+;****************************************************************************
+; SMC EtherCard PLUS (WD/8003E)
+;****************************************************************************
+[*PNP8125.ndi]
+AddReg=STAR.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8125.DevID
+LogConfig=STAR.LogConfig
+[*PNP8125.DevID]
+HKR,Ndi,DeviceID,,"*pnp8125"
+
+;****************************************************************************
+; SMC StarCard PLUS With On Board Hub (WD/8003SH)
+;****************************************************************************
+[*PNP8124.ndi]
+AddReg=STAR.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8124.DevID
+LogConfig=STAR.LogConfig
+[*PNP8124.DevID]
+HKR,Ndi,DeviceID,,"*pnp8124"
+
+;****************************************************************************
+; SMC StarCard PLUS (WD/8003S)
+;****************************************************************************
+[*PNP8123.ndi]
+AddReg=STAR.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8123.DevID
+LogConfig=STAR.LogConfig
+[*PNP8123.DevID]
+HKR,Ndi,DeviceID,,"*pnp8123"
+
+;****************************************************************************
+; SMC EtherCard PLUS 10T/A (MCA) (WD 8003W/A)
+;****************************************************************************
+[mca_6fc2.ndi]
+AddReg=ELITE.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,Slot,SMC.ndi.reg,mca_6fc2.DevID
+LogConfig=ELITE.LogConfig
+[mca_6fc2.DevID]
+HKR,Ndi,DeviceID,,"mca_6fc2"
+
+;****************************************************************************
+; SMC StarCard PLUS/A (MCA) (WD 8003ST/A)
+;****************************************************************************
+[mca_6fc1.ndi]
+AddReg=ELITE.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,Slot,SMC.ndi.reg,mca_6fc1.DevID
+LogConfig=ELITE.LogConfig
+[mca_6fc1.DevID]
+HKR,Ndi,DeviceID,,"mca_6fc1"
+
+;****************************************************************************
+; SMC EtherCard PLUS/A (MCA) (WD 8003E/A or 8003ET/A)
+;****************************************************************************
+[mca_6fc0.ndi]
+AddReg=ELITE.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,Slot,SMC.ndi.reg,mca_6fc0.DevID
+LogConfig=ELITE.LogConfig
+[mca_6fc0.DevID]
+HKR,Ndi,DeviceID,,"mca_6fc0"
+
+;****************************************************************************
+; SMC EtherCard PLUS With Boot ROM Socket (WD/8003EB)
+;****************************************************************************
+[*PNP8127.ndi]
+AddReg=ELITE.ndi.reg,SMC.Gen.Resources,SMC.Gen.Params,SMC.Mulitcast.Param,SMC.ndi.reg,*PNP8127.DevID
+LogConfig=ELITE.LogConfig
+[*PNP8127.DevID]
+HKR,Ndi,DeviceID,,"*pnp8127"
+
+;****************************************************************************
+; SMC EtherElite Ultra 16
+;****************************************************************************
+[*PNP81c8.ndi]
+AddReg=ELITE.ndi.reg,SMC.Gen.Resources,SMC.ndi.reg,*PNP81c8.DevID
+LogConfig=ELITE.LogConfig
+[*PNP81c8.DevID]
+HKR,Ndi,DeviceID,,"*pnp81c8"
+[*PNP81c8.ndi.PosDup]
+*pnp81c9
+
+;****************************************************************************
+; SMC EtherElite Ultra 16 Tiger
+;****************************************************************************
+[*PNP81c9.ndi]
+AddReg=ELITE.ndi.reg,SMC.Gen.Resources,SMC.ndi.reg,*PNP81c9.DevID
+LogConfig=ELITE.LogConfig
+[*PNP81c9.DevID]
+HKR,Ndi,DeviceID,,"*pnp81c9"
+[*PNP81c9.ndi.PosDup]
+*pnp81c8
+
+;****************************************************************************
+; SMC EtherElite Ultra 16 /PnP
+;*********

@@ -1,0 +1,236 @@
+E Controller
+NCDID=307
+DeviceIDs=*pnp8133
+Flags=ISA
+IO1=16,%0
+IRQ1=1,%0
+WFWKeys="cpq_595"
+
+[*pnp828a]	;Intel 82595-Based Ethernet
+NCDID=650
+DeviceIDs=*pnp828a
+Flags=ISA
+IO1=16
+IRQ1=1
+
+[*pnp8191]	;Olicom ISA 16/4 Token-Ring Adapter
+NCDID=401
+DeviceIDs=*pnp8191
+Flags=ISA,NoDetect
+IO1=4
+IO2=16
+IRQ1=1
+DMA1=1
+WFWKeys="ms$oli164"
+LanManKeys="olitok"
+ODIKeys="octok16"
+NovellIDs=0x00e2,0x0513
+IEEEIDs=0x000083
+
+[*pnp812f]	;Intel TokenExpress 16/4
+NCDID=303
+DeviceIDs=*pnp812f
+Flags=ISA,NoDetect
+IO1=4
+IO2=16
+WFWKeys="ms$intisa","int164ws"
+LanManKeys="inteltok","intel16"
+ODIKeys="octok16"
+NovellIDs=0x0502
+IEEEIDs=0x005500
+
+[*pnp812e]	;Intel TokenExpress EISA 16/4
+NCDID=302
+DeviceIDs=*pnp812e,*INT0902
+Flags=EISA,NoDetect
+WFWKeys="ms$inteisa"
+ODIKeys="octok16"
+IEEEIDs=0xffffffff
+
+[*pnp8130]	;Intel TokenExpress MCA 16/4
+NCDID=304
+DeviceIDs=*pnp8130
+Flags=MCA,NoDetect
+WFWKeys="ms$intmc"
+ODIKeys="octok16"
+
+[*pnp8277]	;Exos 105
+NCDID=631
+DeviceIDs=*pnp8277
+Flags=ISA
+IO1=32,%0
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$exos"
+ODIKeys="ne2100"
+IEEEIDs=0x008029
+
+[*pnp815f]	;National Semiconductor NE2000Plus Infomover or compatible
+NCDID=351
+DeviceIDs=*pnp815f
+Flags=ISA,NoDetect
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ntethnd"
+LanManKeys="nsc2000"
+ODIKeys="ne2000"
+IEEEIDs=0xffffffff
+
+[*pnp8160]	;National Semiconductor AT/LANTIC EtherNODE 16-AT3
+NCDID=352
+DeviceIDs=*pnp8160
+Flags=ISA,NoDetect
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ntat3"
+ODIKeys="ne2000","atlantic"
+IEEEIDs=0x00c093
+
+[*pnp816a]	;NCR Token-Ring 4 Mbs ISA
+NCDID=362
+DeviceIDs=*pnp816a
+Flags=ISA,NoDetect
+IO1=255,%3
+Mem1=0x2000,%5
+IRQ1=1,%0
+WFWKeys="ms$ncrtr4"
+
+[*pnp816d]	;NCR Token-Ring 16/4 Mbs ISA
+NCDID=365
+DeviceIDs=*pnp816d
+Flags=ISA,NoDetect
+IO1=255,%3
+IRQ1=1,%0
+DMA1=1,%2
+WFWKeys="ms$ncrtr6"
+
+[*pnp8087]	;NCR Token-Ring 16/4 Mbs MCA
+NCDID=135
+DeviceIDs=*pnp8087,mca_0100
+Flags=MCA,NoDetect
+WFWKeys="ms$ncrtrmc"
+
+[*pnp80d5]	;NE1000 Compatible
+NCDID=213
+DeviceIDs=*pnp80d5
+Flags=ISA
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ne1clone"
+ODIKeys="ne1000"
+IEEEIDs=0xffffffff
+
+[*pnp80d3]	;Novell/Anthem NE1000
+NCDID=211
+DeviceIDs=*pnp80d3
+Flags=ISA
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ms$ne1000"
+LanManKeys="ne1000"
+ODIKeys="ne1000"
+NovellIDs=0x001a
+IEEEIDs=0x00001b
+
+[*pnp80d4]	;Novell/Anthem NE2000
+NCDID=212
+DeviceIDs=*pnp80d4
+Flags=ISA
+IO1=32,%0,%1
+IRQ1=1,%0
+WFWKeys="ms$ne2000","ms$n2k"
+LanManKeys="ne2000"
+ODIKeys="ne2000"
+NovellIDs=0x0036
+IEEEIDs=0x00001b,0x0000d8
+
+[*pnp80d9]	;NE2000 Plus
+NCDID=217
+DeviceIDs=*pnp80d9
+Flags=ISA
+IO1=32,%1
+IRQ1=1,%0
+WFWKeys="ethat2"
+
+[*pnp80d7]	;Novell/Anthem NE1500T
+NCDID=215
+DeviceIDs=*pnp80d7
+Flags=ISA
+IO1=16,%0
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$ne1500"
+ODIKeys="ne1500t"
+
+[*pnp80d8]	;Novell/Anthem NE2100
+NCDID=216
+DeviceIDs=*pnp80d8
+Flags=ISA,NoDetect
+IO1=32,%0
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$ne2100"
+ODIKeys="ne2100"
+IEEEIDs=0x00001b,0x0000d8
+
+[*pnp8067]	;Novell NE/2
+NCDID=103
+DeviceIDs=*pnp8067
+Flags=MCA,NoDetect
+WFWKeys="ms$ne2"
+ODIKeys="ne2000"
+NovellIDs=0x0035
+IEEEIDs=0xffffffff
+
+[*pnp81ed]	;Proteon ProNET-4 ISA Token Ring (1340)
+NCDID=493
+DeviceIDs=*pnp81ed
+Flags=ISA,NoDetect
+IO1=16,%1
+Mem1=0x2000,%1
+IRQ1=1,%0
+WFWKeys="ms$pro1340"
+
+[*pnp81ee]	;Proteon ProNET-4 ISA Token Ring (1342)
+NCDID=494
+DeviceIDs=*pnp81ee
+Flags=ISA,NoDetect
+IO1=16,%1
+Mem1=0x2000,%1
+IRQ1=1,%0
+WFWKeys="ms$pro1342"
+
+[*pnp81ef]	;Proteon ProNET-4 ISA Token Ring (1346)
+NCDID=495
+DeviceIDs=*pnp81ef
+Flags=ISA,NoDetect
+IO1=16,%1
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$pro1346"
+
+[*pnp81f0]	;Proteon ProNET-4 ISA Token Ring (1347)
+NCDID=496
+DeviceIDs=*pnp81f0
+Flags=ISA,NoDetect
+IO1=16,%1
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$pro1347"
+
+[*pnp8083]	;Proteon ProNET-4 MCA Token Ring (1840)
+NCDID=131
+DeviceIDs=*pnp8083,mca_0101
+Flags=MCA,NoDetect
+IO1=255,%1
+IRQ1=1,%0
+WFWKeys="ms$pro1840"
+
+[*pnp81eb]	;Proteon ProNET-4/16 ISA Token Ring (P1390)
+NCDID=491
+DeviceIDs=*pnp81eb
+Flags=ISA,NoDetect
+IO1=32,%1
+IRQ1=1,%4
+DMA1=1,%0
+WFWKey

@@ -1,0 +1,102 @@
+e installed and 
+; the registery entry that created. Awadpr32.exe is left to remove
+; the printer during the Runonce
+
+[FAXuninstall]
+DelFiles		= FAXCopyFilesWin, FAXCopyAppShared, FAXCopyFilesSys, FAXCopyFilesHelp,FAXDelAtInUninstal
+UpdateInis		= FAXInis.Remove		; Remove unneed Short Cuts
+DelReg			= FAXReg.Remove, FaxReg.Old	; Remove Unneed Registry entries
+AddReg			= AwfaxReg.NotInstalled, FAXRenameReg.Del, FAXPrintReg.Delete
+
+[AwfaxReg.NotInstalled]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\msawfax,Installed,,"0"
+
+[FAXDelAtInUninstal]
+awmodem.inf
+FaxCover.ini
+AWCPE.INI
+AWFAXVUR.INI
+faxview.exe
+
+[FAXInis]
+; Create link in SendTo folder 
+setup.ini, progman.groups,, "SendTo=""..\..\%SendTo_Desc%"""     ;creates folder
+setup.ini, SendTo,,"""%SendToFax_DESC%"",%11%\awsnto32.exe,,,,,%Sendfax%"	 ; create Link to EXE
+;
+;Program Item for the FAX group
+;
+setup.ini, progman.groups,, "groupFax=%FAXApps_DESC%"	;creates Accessories/Fax folder (if not already there
+setup.ini, groupFax,,"""%FAXCOVER_Link_Desc%"",FaxCover.exe,,,,,%FaxCover%"
+setup.ini, groupFax,,"""%CallaFaxService%"",%11%\awsnto32.exe   -p,%11%\awsnto32.exe,1,,,%FaxPoll%"
+setup.ini, groupFax,,"""%SendNewFax%"",%11%\awsnto32.exe,,,,,%Newfax%"
+
+;
+; Program Group for Item in the "Program" -- First Level Start menu
+;
+setup.ini, progman.groups,, 	"FaxLnk="			;create NULL group
+setup.ini, FaxLnk,, """%Old_SendNewFax%""",,		;Deletes link
+;
+; We have to delete these items now.... Since the name have changed but we might be reinstalling
+; over an existing installation.
+;
+setup.ini, groupFax,, 		"""%Old_FAXCOVER_Link_Desc%""",,	;Deleteslink in Accessories folder
+setup.ini, groupFax,, 		"""%Old_SendNewFax%""",,	
+setup.ini, groupFax,, 		"""%Old_CallaFaxService%""",,
+
+
+
+[FAXInis.Remove]
+setup.ini, progman.groups,, "SendTo=""..\..\%SendTo_Desc%"""    ;creates folder
+setup.ini, SendTo,,	"""%SendToFax_DESC%""",,		;Deletes Link
+
+setup.ini, progman.groups,, "groupFax=%FAXApps_DESC%"		;Create folder
+setup.ini, groupFax,, 	"""%FAXCOVER_Link_Desc%""",,		;Deleteslink in Accessories folder
+setup.ini, groupFax,, 	"""%SendNewFax%""",,			
+setup.ini, groupFax,, 	"""%CallaFaxService%""",,	
+
+; and the Short names if we are on a short name system....
+setup.ini, groupFax,, 	"""%FaxCover%""",,
+setup.ini, groupFax,, 	"""%FaxPoll%""",, 
+setup.ini, groupFax,,	"""%Newfax%""",,
+
+;Delete old item in the Programs and Accorires folder
+
+setup.ini, progman.groups,, "SendToOld=""%SendTo_Desc%"""    ;creates folder
+setup.ini, group2,, 	"""%SendToFax_DESC%""",,		;Deletes link
+
+setup.ini, progman.groups,, "group2="				;create NULL group
+setup.ini, group2,, 	"""%Old_SendNewFax%""",,		;Deletes link
+setup.ini, group2,, 	"""%FAXDesc%"""				;Deletes link to Accessories/Fax folder
+;
+; Delete link to FAX folder
+setup.ini, progman.groups,, 	"FaxLnk="			;create NULL group
+setup.ini, FaxLnk,, """%FAXDesc%"""				;Deletes link to Accessories/Fax folder
+
+
+[OLDFaxRemove.ini]
+setup.ini, progman.groups,, "SendToOld=""%SendTo_Desc%"""    ;creates folder
+setup.ini, group2,, 	"""%SendToFax_DESC%""",,		;Deletes link
+
+[WFWFaxCleanUp.ini]
+msmail.ini,"custom messages","IPM.Microsoft Fax.Encrypted=*",
+msmail.ini,"EFAX Transport","LocalFax=*",
+msmail.ini,"Custom Menus","Fax=*",
+msmail.ini,"Custom Commands","FaxOpts=*",
+msmail.ini,"Custom Commands","FaxMgr=*",
+msmail.ini,"Custom Commands","FaxAnswer2=*",
+msmail.ini,"Custom Commands","FaxSecur=*",
+msmail.ini,"Custom Commands","FaxSep1=*",
+msmail.ini,"Custom Commands","FaxCheck=*",
+msmail.ini,"Custom Commands","FaxAnswer=*",
+msmail.ini,"Custom Commands","FaxHelp=*",
+msmail.ini,"Microsoft Mail","CustomOptionsHandler=*",
+win.ini, PrinterPorts,"Microsoft At Work Fax=*",
+win.ini, devices,"Microsoft At Work Fax=*",
+
+[FAXReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\msawfax,Installed,,"1"
+HKCU,"Software\Microsoft\At Work Fax\Transport Service Provider","Presentation Data",,"1"	
+;
+; Cover page Editor Registery
+;
+HKCR,.cpe,,,FaxCover.Docum

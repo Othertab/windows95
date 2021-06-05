@@ -1,0 +1,166 @@
+          you want information about.
+
+To see a brief description of all Microsoft NET
+commands, type NET HELP without options.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SBreaks the connections between your computer and the
+shared resources to which it is connected.
+
+NET LOGOFF [/YES]
+
+  /YES        Carries out the NET LOGOFF command without
+              first prompting you to provide information or
+              confirm actions.?
+?
+?
+?
+?
+?
+?
+?
+?
+SIdentifies you as a member of a workgroup.
+
+NET LOGON [user [password | ?]] [/DOMAIN:name] [/YES] [/SAVEPW:NO]
+
+  user           Specifies the name that identifies you in
+		 your workgroup. The name you specify can 
+		 contain up to 20 characters.
+  password       The unique string of characters that
+		 authorizes you to gain access to your 
+		 password-list file. The password can 
+		 contain up to 14 characters.
+  ?              Specifies that you want to be prompted for
+		 your password.
+  /DOMAIN        Specifies that you want to log on to a 
+		 Microsoft Windows NT or LAN Manager domain.
+  name           Specifies the Windows NT or LAN Manager domain 
+		 you want to log on to.
+  /YES           Carries out the NET LOGON command without
+		 first prompting you to provide information or
+		 confirm actions. 
+  /SAVEPW:NO     Carries out the NET LOGON command without 
+		 prompting you to create a password-list file.
+
+If you would rather be prompted to type your user name and
+password instead of specifying them in the NET LOGON
+command line, type NET LOGON without options.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SChanges your logon password.
+
+NET PASSWORD [oldpassword [newpassword]]
+NET PASSWORD \\computer | /DOMAIN:name [user [oldpassword [newpassword]]]
+
+  oldpassword   Specifies your current password.
+  newpassword   Specifies your new password. It can have as
+		many as 14 characters.
+  computer      Specifies the Windows NT or LAN Manager server
+		on which you want to change your password.
+  /DOMAIN       Specifies that you want to change your
+		password on a Windows NT or LAN Manager domain.
+  name          Specifies the Windows NT or LAN Manager domain on which
+		you want to change your password.
+  user          Specifies your Windows NT or LAN Manager user name.
+
+The first syntax line above is for changing the password for your password-list file. The second syntax line above is for changing your password on a Windows NT or LAN Manager server or domain.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SDisplays information about the print queue on a shared
+printer, or controls your print jobs.
+
+NET PRINT \\computer[\printer] | port [/YES]
+NET PRINT \\computer | port [job# [/PAUSE | /RESUME |
+	  /DELETE]] [/YES]
+
+  computer   Specifies the name of the computer whose
+	     print queue you want information about.
+  printer    Specifies the name of the printer you 
+	     want information about.
+  port       Specifies the name of the parallel (LPT) port
+	     on your computer that is connected to the printer
+	     you want information about.
+  job#       Specifies the number assigned to a queued print
+	     job. You can specify the following options:
+	     /PAUSE     Pauses a print job.
+	     /RESUME    Restarts a print job that has
+			been paused.
+	     /DELETE    Cancels a print job.
+  /YES       Carries out the NET PRINT command without
+	     first prompting you to provide information or
+	     confirm actions.
+
+When you specify the name of a computer by using the NET PRINT
+command, you receive information about the print queues on
+each of the shared printers that are connected to the computer.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SConnects or disconnects your computer from a shared
+resource or displays information about your
+connections.
+
+NET USE [drive: | *] [\\computer\directory [password | ?]]
+    [/SAVEPW:NO] [/YES] [/NO] 
+NET USE [port:] [\\computer\printer [password | ?]]
+    [/SAVEPW:NO] [/YES] [/NO]
+
+NET USE drive: | \\computer\directory /D

@@ -1,0 +1,70 @@
+ce,1,06,00,00,00
+
+;
+; IDE Miniport Data
+;
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\12308086,Name,,"Intel 82371FB"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\12308086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\12308086,Instance,1,00,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\70108086,Name,,"Intel 82371SB"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\70108086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\70108086,Instance,1,00,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\C6211045,Name,,"Opti 826612A or Viper-M/N+ or Viper-MAX"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\C6211045,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\C6211045,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\D5681045,Name,,"Opti Viper-MAX or FireStar"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\D5681045,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\D5681045,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\D7211045,Name,,"Opti FireStar"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\D7211045,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\D7211045,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\55131039,Name,,"SiS 5513 IDE Controller"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\55131039,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\55131039,Instance,1,02,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\05971039,Name,,"SiS 5513 C Stepping IDE Controller"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\05971039,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IDEMiniports\05971039,Instance,1,02,00,00,00
+
+; IRQ Routing Tables
+; Each entry has the same structure as Microsoft's PCI IRQ Routing Table Spec
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQRoutingTable,"VLSI Sample",1,\
+24,50,49,52, 00,01, 40,00, FF, FF, 00,00,00,00, 00,00,      \
+00,00,00,00, 00,00,00,00,  00,00,00,00,  00,00,00,00,       \
+00, 58, 01, 28,DE, 02, 28,DE, 03, 28,DE, 04, 28,DE, 01, 00, \
+00, 60, 02, 28,DE, 03, 28,DE, 04, 28,DE, 01, 28,DE, 01, 00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQRoutingTable,"IBM Mach, VLSI Chipset",1,\
+24,50,49,52, 00,01, 40,00, FF, FF, 00,00,00,00, 00,00,      \
+00,00,00,00, 00,00,00,00,  00,00,00,00,  00,00,00,00,       \
+00, 58, 01, 28,DE, 03, 28,DE, 02, 28,DE, 01, 28,DE, 01, 00, \
+00, 60, 02, 28,DE, 01, 28,DE, 03, 28,DE, 02, 28,DE, 01, 00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQRoutingTable,"Dell 4 PCI slot",1,\
+24,50,49,52, 00,01, 60,00, FF, FF, 00,00,00,00, 00,00,      \
+00,00,00,00, 00,00,00,00,  00,00,00,00,  00,00,00,00,       \
+00, 68, 60, B8,0E, 61, B8,0E, 62, B8,0E, 63, B8,0E, 01, 00, \
+00, 70, 61, B8,0E, 62, B8,0E, 63, B8,0E, 60, B8,0E, 01, 00, \
+00, 78, 62, B8,0E, 63, B8,0E, 60, B8,0E, 61, B8,0E, 01, 00, \
+00, 80, 63, B8,0E, 60, B8,0E, 61, B8,0E, 62, B8,0E, 01, 00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQRoutingTable,"Dell 2 PCI slot",1,\
+24,50,49,52, 00,01, 40,00, FF, FF, 00,00,00,00, 00,00,      \
+00,00,00,00, 00,00,00,00,  00,00,00,00,  00,00,00,00,       \
+00, 60, 60, B8,0E, 61, 08,8E, 62, 08,8E, 63, B8,0E, 01, 00, \
+00, 68, 62, B8,0E, 63, 08,8E, 61, 08,8E, 60, B8,0E, 01, 00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQRoutingTable,"Gateway 2000 3 PCI slot",1,\
+24,50,49,52, 00,01, 50,00, FF, FF, 00,00,00,00, 00,00,      \
+00,00,00,00, 00,00,00,00,  00,00,00,00,  00,00,00,00,       \
+00, 30, 62, B8,8E, 61, B8,8E, 60, B8,8E, 63, B8,8E, 0A, 00, \
+00, 70, 61, B8,8E, 60, B8,8E, 62, B8,8E, 63, B8,8E, 0B, 00, \
+00, 60, 60, B8,8E, 62, B8,8E, 61, B8,8E, 63, B8,8E, 0C, 00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQRoutingTable,"In

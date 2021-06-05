@@ -1,0 +1,94 @@
+,"Control Panel\Desktop"
+win.ini,Desktop,IconTitleFaceName,HKCU,"Control Panel\Desktop",1
+win.ini,Desktop,IconTitleSize,HKCU,"Control Panel\Desktop",1
+win.ini,Desktop,IconTitleStyle,HKCU,"Control Panel\Desktop",1
+win.ini,Desktop,IconTitleWrap,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,Desktop,IconSpacing,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,Desktop,IconVerticalSpacing,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,Extensions,,HKCU,"Software\Microsoft\Windows\CurrentVersion\Extensions"
+win.ini,Intl,,HKCU,"Control Panel\International"
+win.ini,WindowMetrics,MinWidth,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,MinHorzGap,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,MinVertGap,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,MinArrange,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,BorderWidth,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,ScrollWidth,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,ScrollHeight,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,CaptionWidth,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,CaptionHeight,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,SmCaptionWidth,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,SmCaptionHeight,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,MenuWidth,HKCU,"Control Panel\Desktop\WindowMetrics"
+win.ini,WindowMetrics,MenuHeight,HKCU,"Control Panel\Desktop\WindowMetrics"
+;win.ini,Sounds,,HKCU,"AppEvents\Schemes\OldScheme" ; unnecessary
+
+; store away initial wallpaper (so Setup can switch it after runonce):
+; the 2 flag leaves the .ini line in tact and replaces the reg key if it already exists
+win.ini,Desktop,Wallpaper,HKLM,Software\Microsoft\Windows\CurrentVersion\Setup,2
+win.ini,Desktop,TileWallpaper,HKLM,Software\Microsoft\Windows\CurrentVersion\Setup,2
+
+[SU.Update.Inis]
+; copy over standard screen savers
+system.ini,boot,"scrnsave.exe=%25%\bezier.scr","scrnsave.exe=%11%\%BEZIER%.scr",1
+system.ini,boot,"scrnsave.exe=%25%\ssmarque.scr","scrnsave.exe=%11%\%SSMARQUE%.scr",1
+system.ini,boot,"scrnsave.exe=%25%\ssmyst.scr","scrnsave.exe=%11%\%SSMYST%.scr",1
+system.ini,boot,"scrnsave.exe=%25%\scrnsave.scr","scrnsave.exe=%11%\%SCRNSAVE%.scr",1
+system.ini,boot,"scrnsave.exe=%25%\ssflywin.scr","scrnsave.exe=%11%\%SSFLYWIN%.scr",1
+system.ini,boot,"scrnsave.exe=%25%\ssstars.scr","scrnsave.exe=%11%\%SSSTARS%.scr",1
+
+;make ghost entries in msdos.sys to get order of sections correct:
+%31%\msdos.sys,Paths, ";DelMe"
+%31%\msdos.sys,Options, ";DelMe"
+
+[BaseWinOptions]
+winbase
+winapps
+command
+setup
+basehelp
+printer
+
+[winbase]
+OptionDesc = %WINBASE%
+CopyFiles  = sys.files, ios.files, VxD.Files
+DelFiles   = VxD.Del.Files, ios.files.del
+UpdateInis = winbase.inis
+UpdateIniFields = winbase.inifields
+AddReg     = winbase.reg
+DelReg     = winbase.del.reg
+
+[winapps]
+CopyFiles = winother.files.shared, winother.files, betatools.files
+DelFiles  = betatools.delfiles
+UpdateInis = betatools.inis, winother.links
+AddReg = betatools.addreg
+
+[command]
+CopyFiles    = boot.files, cmd.files, win.devices.files, winboot.devices.files, win.devices.files.machine
+UpdateCfgSys = config_default
+UpdateAutoBat= autoexec_default
+
+[setup]
+CopyFiles  = setup.files.win,setup.files.machine,setup.files.sys,setup.files.inf
+
+[basehelp]
+CopyFiles = net.help.files, ole.help.files, base.help.files, base.help.winhelp, base.help.sys
+
+[printer]
+OptionDesc = %PRINTER%
+CopyFiles  = printer.files.sys
+UpdateInis = printer.inis
+
+
+[winbase.inis]
+;Additions go here:
+system.ini,boot,,"user.exe=user.exe"
+system.ini,boot,,"gdi.exe=gdi.exe"
+system.ini,boot,,"sound.drv=mmsound.drv"
+system.ini,boot,,"dibeng.drv=dibeng.dll"
+system.ini,386Enh,,"device=*vshare"
+system.ini,386Enh,,"device=*dynapage"
+win.ini,Pscript.Drv,,"ATMWorkaround=1"
+
+; Set COMM.DRV unless preserving a known win3.1 driver 
+system.ini,boot,"comm.drv=*vcoscomm.drv","~C

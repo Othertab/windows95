@@ -1,0 +1,159 @@
+CIA\SOCKET_COMMUNICATIONS_INC-SOCKET_IO_PCMCIA_SERIAL_PORT_ADAPTER_REVISION_A-0484"
+%Socket-12F8.DeviceDesc% = ComPort, "PCMCIA\SOCKET_COMMUNICATIONS_INC-SOCKET_IO_PCMCIA_SERIAL_PORT_ADAPTER_REVISION_B-12F8"
+%Socket-FA29.DeviceDesc% = NonPort, "PCMCIA\SOCKET_COMMUNICATIONS_INC-PAGECARD_REVISION_A-FA29"
+%Socket-AF8A.DeviceDesc% = NonPort, "PCMCIA\SOCKET_COMMUNICATIONS_INC-SOCKET_GPS_PCMCIA_GLOBAL_POSITIONING_SYSTEM_REVISION_B-AF8A"
+%Socket-66D0.DeviceDesc% = NonPort, "PCMCIA\SOCKET_COMMUNICATIONS_INC-MOBILE_GPS_REVISION_C-66D0"
+
+[DBC]
+%DBC-4E9B.DeviceDesc% = NonPort, "PCMCIA\DATA_BROADCASTING_CORP-SIGNALCARD_RECEIVER-4E9B"
+
+[Rockwell]
+%Rockwell-64B7.DeviceDesc% = NonPort, "PCMCIA\ROCKWELL-NAVCARD-64B7"
+
+[Trimble]
+%Trimble-6947.DeviceDesc% = NonPort, "PCMCIA\TRIMBLE_&_SOCKET_COMMUNICATIONS_INC-MOBILE_GPS_REVISION_B-6947"
+
+[Smart]
+%Smart-A0F6.DeviceDesc% = ComPort, "PCMCIA\SMART_SERIAL_PORT-A0F6"
+
+
+; LPT sections
+;----------------------------------------------------------
+[LptPort]
+CopyFiles=LptPort.Copy
+AddReg=LptPort.AddReg
+LogConfig=lsnn,lsan,lann,laan
+
+[EcpPort]
+CopyFiles=LptPort.Copy
+AddReg=EcpPort.AddReg
+LogConfig=lsnn,lsan,lsaa,lann,laaa
+
+[LptPort.Copy]
+lpt.vxd
+
+[LptPort.AddReg]
+HKR,,DevLoader,,*vcomm
+HKR,,Enumerator,,lptenum.vxd
+HKR,,Contention,,*vpd
+HKR,,PortDriver,,lpt.vxd
+HKR,,PortSubClass,1,00
+HKR,,ECPDevice,1,00
+
+[ECPPort.AddReg]
+HKR,,DevLoader,,*vcomm
+HKR,,Enumerator,,lptenum.vxd
+HKR,,Contention,,*vpd
+HKR,,PortDriver,,lpt.vxd
+HKR,,PortSubClass,1,00
+HKR,,ECPDevice,1,01
+
+; The following sections are LPT and ECP port logical
+; resource configurations. Section name format means:
+; Char 1 = l (LPT port)
+; Char 2 = I/O config:    s (std), a (any)
+; Char 3 = IRQ config: #,          a (any), n (none) 
+; Char 4 = DMA config:             a (any), n (none)
+
+[lsnn]
+ConfigPriority=HARDRECONFIG
+IOConfig=3bc-3be(3ff::),378-37a(3ff::),278-27a(3ff::)
+
+[lsan]
+ConfigPriority=HARDRECONFIG
+IOConfig=3bc-3be(3ff::),378-37a(3ff::),278-27a(3ff::)
+IRQConfig=3,4,5,6,7,8,9,10,11,12,13,14,15
+
+[lann]
+ConfigPriority=HARDRECONFIG
+IOConfig=8@100-3ff%fff8(3ff::)
+
+[laan]
+ConfigPriority=HARDRECONFIG
+IOConfig=8@100-3ff%fff8(3ff::)
+IRQConfig=3,4,5,6,7,8,9,10,11,12,13,14,15
+
+[lsaa]
+ConfigPriority=HARDRECONFIG
+IOConfig=3bc-3be(3ff::),378-37a(3ff::),278-27a(3ff::)
+IRQConfig=3,4,5,6,7,8,9,10,11,12,13,14,15
+DMAConfig=1,2,3,5,6,7
+
+[laaa]
+ConfigPriority=HARDRECONFIG
+IOConfig=8@100-3ff%fff8(3ff::)
+IRQConfig=3,4,5,6,7,8,9,10,11,12,13,14,15
+DMAConfig=1,2,3,5,6,7
+
+; End LPT and ECP LogConfig sections
+
+
+[*pnp0400.det]
+AddReg=Ports.AddReg
+
+[Ports.AddReg]
+HKR,,NoSetupUI,,1
+
+[*pnp0401.det]
+AddReg=Ports.AddReg
+
+[LptPort.PosDup]
+*PNP0401
+
+[EcpPort.PosDup]
+*PNP0400
+
+
+; COM sections
+;----------------------------------------------------------
+[ComPort]
+CopyFiles=ComPort.Copy
+AddReg=ComPort.AddReg
+LogConfig=c14,c1a,c23,c2a,c34,c3a,c43,c4a,caa
+
+[ComPort.Copy]
+serial.vxd
+serialui.dll
+
+[ComPort.AddReg]
+HKR,,DevLoader,,*vcomm
+HKR,,Enumerator,,serenum.vxd
+HKR,,PortDriver,,serial.vxd
+HKR,,Contention,,*vcd
+HKR,,ConfigDialog,,serialui.dll
+HKR,,DCB,3,1C,00,00,00, 80,25,00,00, 11,33,00,00, 00,00, 0a,00, 0a,00, 08, 00, 00, 11, 13, 00, 00, 00
+HKR,,PortSubClass,1,01
+HKR,,EnumPropPages,,"serialui.dll,EnumPropPages"
+
+[*pnp0500.det]
+AddReg=Ports.AddReg,DevMap.AddReg
+
+; The following sections are COM port resource configs.
+; Section name format means:
+; Char 1 = c (COM port)
+; Char 2 = I/O config: 1 (3f8), 2 (2f8), 3 (3e8), 4 (2e8), a (any)
+; Char 3 = IRQ config: #, a (any)
+
+[c14]			; COM1,IRQ4
+ConfigPriority=HARDRECONFIG
+IOConfig=3f8-3ff(3ff::)
+IRQConfig=S:4
+
+[c1a]			; COM1, any IRQ
+ConfigPriority=HARDRECONFIG
+IOConfig=3f8-3ff(3ff::)
+IRQConfig=S:3,4,5,7,9,10,11,12,14,15
+
+[c23]			; COM2, IRQ3
+ConfigPriority=HARDRECONFIG
+IOConfig=2f8-2ff(3ff::)
+IRQConfig=S:3
+
+[c2a]			; COM2, any IRQ
+ConfigPriority=HARDRECONFIG
+IOConfig=2f8-2ff(3ff::)
+IRQConfig=S:3,4,5,7,9,10,11,12,14,15
+
+[c34]			; COM3, IRQ4
+ConfigPriority=HARDRECONFIG
+IOConfig=3e

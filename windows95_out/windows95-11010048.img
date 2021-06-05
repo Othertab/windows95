@@ -1,0 +1,143 @@
+save_remove]
+AddReg      = scrnsave.remove.reg, Sstars.remove.reg, Ssmyst.remove.reg, Bezier.remove.reg, ssmarque.remove.reg
+
+
+[games]
+OptionDesc  = %GAMES_DESC0%
+Tip         = %GAMES_TIP%
+Parent      = AccessTop
+CopyFiles   = wingames.files, wingames.help, wingames.sys
+DelFiles    = wingames.del.files
+UpdateInis  = wingames.links
+AddReg      = wingames.install.reg
+InstallType = 0    ;Manual only
+IconIndex   = 34    ;Windows mini-icon for dialogs
+Uninstall   = games_remove
+
+[games_remove]
+DelFiles    = wingames.files, wingames.help
+UpdateInis  = del.wingames.links
+AddReg      = wingames.remove.reg
+
+
+;---- User Interface System Setting Install Sections ---------
+[Modules]
+UI_Choice=*
+
+[UI_Choice]
+ClassDesc=%UIClass_Desc%
+ListOptions=UIOptionList
+DefaultOption=Win95UI
+IconIndex       = 4                     ;Windows mini-icon for dialogs
+
+[UIOptionList]
+Win31UI
+Win95UI
+
+[Win31UI]
+OptionDesc  = %Win31UI_DESC0%
+UpdateInis  = Win31UI.links
+
+[Win95UI]
+OptionDesc  = %Win95UI_DESC%
+UpdateInis  = del.Win31UI.links
+
+[Win31UI.links]
+;Create StartUp Folder and modify links in it:
+setup.ini, progman.groups,, "group1=""%StartUp_DESC%"""  ;creates folder
+setup.ini, group1,, """%ProgMan_DESC%"", PROGMAN.EXE"    ;creates link
+
+[del.Win31UI.links]
+;Create StartUp Folder and Delete link:
+setup.ini, progman.groups,, "group1=""%StartUp_DESC%"""  ;creates folder
+setup.ini, group1,, """%ProgMan_DESC%"""                 ;deletes link
+;-------------------------------------------------------
+
+;---- ScreenSaver Install Sections ---------------
+;--- SSFlyWin (Flying Windows) ---
+[flywinss.copy]
+ssflywin.scr
+
+[flywinss.del]
+;delete any old ones that might be in the windows dir
+;(since we've moved location to system dir for Win95):
+ssflywin.scr
+
+[flywinss.install.reg]
+HKLM,%KEY_OPTIONAL%\flywinss,Installed,,"1"
+HKLM,%KEY_RENAME%\Sys,,,%11%
+HKLM,%KEY_RENAME%\Sys,ssflywin.scr,,"%SSFLYWIN%.scr"
+
+;clean up any screensavers w/ LFN's left over in the Win dir:
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Win,,,%25%
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Win,ssflywin.scr,,"%SSFLYWIN%.scr"
+
+[flywinss.remove.reg]
+HKLM,%KEY_OPTIONAL%\flywinss,Installed,,"0"
+HKLM,%KEY_DEL%\Sys,,,%11%
+HKLM,%KEY_DEL%\Sys,ssflywin.scr,,"%SSFLYWIN%.scr"
+;----------------------------------------------------
+
+;---- Calculator Install Sections --------
+[Calc.copy]
+calc.exe
+
+[Calc.hlp.copy]
+calc.cnt
+calc.hlp
+
+[Calc.del]
+; Delete Win 3.x help files (they are copied to HELP dir now)
+calc.hlp
+
+[Calc.links]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"         ;creates folder
+setup.ini, group4,, """%Calc_Desc%"", CALC.EXE,,, calc,,%Calc_ShortDesc%"  ;creates link
+
+[Calc.install.reg]
+HKLM,%KEY_OPTIONAL%\Calc,Installed,,"1"
+
+[Calc.links.remove]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"  ;creates folder
+setup.ini, group4,, """%Calc_Desc%"""             ;deletes link
+setup.ini, group4,, """%Calc_ShortDesc%"""             ;deletes link
+
+[Calc.remove.reg]
+HKLM,%KEY_OPTIONAL%\Calc,Installed,,"0"
+;----------------------------------------
+
+;-- MSPaint Install Sections ----------------------------------
+[mspaint.files.win]
+mspaint.exe
+mspcx32.dll
+pcximp32.flt
+
+[mspaint.pbrush]
+pbrush.exe
+
+[mspaint.del.files]
+mspaint.exe             ; review -- no longer in \windows
+pbrush.hlp              ; old paintbrush help.
+pbrush.dll
+
+[mspaint.files.hlp]
+mspaint.cnt
+mspaint.hlp
+
+[mfcdlls.files]
+mfc30.dll
+mfcans32.dll,,,32       ;32 flag suppresses ver conflict dlgs
+mfco30.dll
+mfcd30.dll
+mfcn30.dll
+mfcuia32.dll
+
+[mfcdlls.register]
+;Register shared DLLs:
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfc30.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfcans32.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfco30.dll,1,01,00,00,00
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\mfcd30.dll,1,01,00,00,00
+
+[mspaint.links]
+setup.ini, pro

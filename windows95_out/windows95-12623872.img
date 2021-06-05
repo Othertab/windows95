@@ -1,0 +1,223 @@
+elReg=DEL_CURRENT_REG
+AddReg=1490.AddReg, 1280
+
+[1510.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1510.AddReg, 1024
+
+[1620.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1620.AddReg, 1024
+
+[1710.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1710.AddReg, 1024
+
+[1725.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1725.AddReg, 1280, DPMS
+
+; -------------- HCI
+
+[Maxiscan.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=Maxiscan.AddReg, 1024
+
+; -------------- Idek Iiyama
+
+[DR-3114.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=DR-3114.AddReg, 1024
+
+[MF-5014A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5014A.AddReg, 1024
+
+[MF-5015A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5015A.AddReg, 800
+
+[MF-5017.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5017.AddReg, 1024
+
+[MF-5021.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5021.AddReg, 1024
+
+[MF-5115.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5115.AddReg, 1024
+
+[MF-5117.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5117.AddReg, 1024
+
+[MF-5121A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5121A.AddReg, 1280
+
+[MF-5214A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5214A.AddReg, 1024
+
+[MF-5215A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5215A.AddReg, 1024
+
+[MF-5217.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5217.AddReg, 1280
+
+[MF-5221.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5221.AddReg, 1280
+
+[MR-5314.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MR-5314.AddReg, 1024
+
+[MF-5315.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5315.AddReg, 1280
+
+[MF-5317.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5317.AddReg, 1280
+
+[MF-5321.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5321.AddReg, 1280
+
+[MF-5421.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5421.AddReg, 1600
+
+[MF-5621.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-5621.AddReg, 1600
+
+[MF-8217.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8217.AddReg, 1024
+
+[MF-8221.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8221.AddReg, 1600, DPMS
+
+[MF-8317.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8317.AddReg, 1280
+
+[MF-8421.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8421.AddReg, 1600, DPMS
+
+[MF-8617.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8617.AddReg, 1280, DPMS
+
+[MF-8617E.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8617E.AddReg, 1280, DPMS
+
+[MF-8621.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MF-8621.AddReg, 1600, DPMS
+
+[MT-9121.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MT-9121.AddReg, 1600, DPMS
+
+[C/CDE-165VB.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=C/CDE-165VB.AddReg, 1280
+
+[C/DM-2010A.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=C/DM-2010A.AddReg, 1280
+
+[C/DM-2060.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=C/DM-2060.AddReg, 1280
+
+[CT-20.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CT-20.AddReg, 1280
+
+[CN-20.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CN-20.AddReg, 1280
+
+[C21LMAX.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=C21LMAX.AddReg, 1600
+
+[M24LMAX.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=M24LMAX.AddReg, 1600
+
+[CM-1403.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-1403.AddReg, 1024
+
+[CM-7126.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-7126.AddReg, 800
+
+[GD-H4220US.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=GD-H4220US.AddReg, 1024
+
+[CA-17.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CA-17.AddReg, 1280
+
+[CH-14.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CH-14.AddReg, 1024
+
+[CM-14.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-14.AddReg, 1024
+
+[MN275.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=MN275.AddReg, 1024
+
+[1730S.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=1730S.AddReg, 1024
+
+[CE-8.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CE-8.AddReg, 1024
+
+[CM-3.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-3.AddReg, 800
+
+; -------------- Lite-On
+
+[CM-2090M.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CM-2090M.AddReg, 1280
+
+
+; -------------- miro
+
+[C1768]
+DelReg=DEL_CURRENT_REG
+AddReg=C1768.AddReg, 1280, DPMS, ICM9
+
+[C1782]
+DelReg=DEL_CURRENT_REG
+AddReg=C1782.AddReg, 1280, DPMS, ICM9
+
+[C2085E]
+DelReg=DEL_CURRENT_REG
+AddReg=C2085E.AddReg, 1280, DPMS, ICM9
+
+[C2185]
+DelReg=DEL_CURRENT_REG
+AddReg=C2185.AddReg, 1600, DPMS, ICM

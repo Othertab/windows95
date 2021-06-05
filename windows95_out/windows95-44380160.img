@@ -1,0 +1,114 @@
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\VideoMemoryType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="VRAM"
+"4"="DRAM"
+"5"="SRAM"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\7]
+"Name"="Video RAM Memory Size"
+"Description"="Video adapter memory size in kilobytes."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\VideoRAMMemorySizeK"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\8]
+"Name"="Scan Mode"
+"Description"="The scan mode for this video device."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\ScanMode"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\8\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Interlaced"
+"4"="Non Interlaced"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\9]
+"Name"="Video Physical Location"
+"Description"="The location of the video controller circuitry."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\VideoPhysicalLocation"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\9\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Integrated"
+"4"="Add-on Card"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\10]
+"Name"="Current Vertical Resolution"
+"Description"="The current number of vertical pixels."
+"Column"="10"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\CurrentVerticalResolution"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\11]
+"Name"="Current Horizontal Resolution"
+"Description"="The current number of horizontal pixels."
+"Column"="11"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\CurrentHorizResolution"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\12]
+"Name"="Current Number of Bits per Pixel"
+"Description"="The number of bits used to display each pixel for this video device."
+"Column"="12"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\CurrentNumberOfBitsPerPixel"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\13]
+"Name"="Current Number of Rows"
+"Description"="The number of rows in character mode for this video device."
+"Column"="13"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\CurrentNumberOfRows"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\14]
+"Name"="Current Number of Columns"
+"Description"="The number of columns in character mode for this video device."
+"Column"="14"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\CurrentNumberOfColumns"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\15]
+"Name"="Current Refresh Rate"
+"Description"="The current refresh rate in Hz for this video device."
+"Column"="15"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\CurrentRefreshRate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\16]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="16"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+;  We know there is just o

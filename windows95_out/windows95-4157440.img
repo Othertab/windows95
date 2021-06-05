@@ -1,0 +1,28 @@
+780 810 840 870 900					
+760		Styles		Group	761 762 763 764 765 766 					
+761				CustomAction	"""plus.dll"",""BinReg"",""HKEY_LOCAL_MACHINE,Software\Microsoft\Internet Explorer\Styles,Count_Style_Sheets,5,4"""					
+762				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""StyleSheet_Name_1"",""SerifSmallest"""					
+763				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""StyleSheet_Name_2"",""SerifSmall"""					
+764				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""StyleSheet_Name_3"",""SerifMedium"""					
+765				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""StyleSheet_Name_4"",""SerifLarge"""					
+766				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""StyleSheet_Name_5"",""SerifLargest"""					
+780		Styles-SerifSmallest		Group	781 782 783 784 785 786 787 788 789 790 791 792 793 794					
+781				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_Normal_font"",""Times New Roman,NoBold,9,NoItalic,NoUnderline"""					
+782				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H1_font"",""Times New Roman,Bold,16,NoItalic,NoUnderline"""					
+783				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H2_font"",""Times New Roman,Bold,12,NoItalic,NoUnderline"""					
+784				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H3_font"",""Times New Roman,Bold,10,NoItalic,NoUnderline"""					
+785				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H4_font"",""Times New Roman,Bold,9,NoItalic,NoUnderline"""					
+786				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H5_font"",""Times New Roman,Bold,8,NoItalic,NoUnderline"""					
+787				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H6_font"",""Times New Roman,Bold,7,NoItalic,NoUnderline"""					
+788				RemoveRegEntry	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_H7_font"""					
+789				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_Listing_font"",""Courier New,NoBold,8,NoItalic,NoUnderline"""					
+790				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_XMP_font"",""Courier New,NoBold,8,NoItalic,NoUnderline"""					
+791				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_PlainText_font"",""Courier New,NoBold,8,NoItalic,NoUnderline"""					
+792				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_Pre_font"",""Courier New,NoBold,8,NoItalic,NoUnderline"""					
+793				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_Address_font"",""Times New Roman,NoBold,9,Italic,NoUnderline"""					
+794				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmallest_BlockQuote_font"",""Times New Roman,NoBold,9,NoItalic,NoUnderline"""					
+810		Styles-SerifSmall		Group	811 812 813 814 815 816 817 818 819 820 821 822 823 824					
+811				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmall_Normal_font"",""Times New Roman,NoBold,10,NoItalic,NoUnderline"""					
+812				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmall_H1_font"",""Times New Roman,Bold,20,NoItalic,NoUnderline"""					
+813				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmall_H2_font"",""Times New Roman,Bold,16,NoItalic,NoUnderline"""					
+814				AddRegData	"""HKEY_LOCAL_MACHINE"",""Software\Microsoft\Internet Explorer\Styles"",""SerifSmall_H3_font"",""Times N

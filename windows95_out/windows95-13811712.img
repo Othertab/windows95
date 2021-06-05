@@ -1,0 +1,112 @@
+EM\CurrentControlSet\Services\LANMAN\NetworkProvider",Windows31DLL,1,01,00,00,00
+
+[LANMAN.delreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",LANMAN
+HKLM,"SYSTEM\CurrentControlSet\Services\LANMAN"
+
+[LANMAN.copyfiles]
+lanman.drv,,,16
+netapi30.dll,,,16
+pmspl20.dll,,,16
+
+[LANSRV.addreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",LANSRV
+HKLM,"SYSTEM\CurrentControlSet\Services\LANSRV\NetworkProvider",Name,,"LAN Server"
+HKLM,"SYSTEM\CurrentControlSet\Services\LANSRV\NetworkProvider",ProviderPath,,"lansrv.drv"
+HKLM,"SYSTEM\CurrentControlSet\Services\LANSRV\NetworkProvider",Description,,"IBM OS/2 LAN Server"
+HKLM,"SYSTEM\CurrentControlSet\Services\LANSRV\NetworkProvider",NetID,1,00,00,02,00
+HKLM,"SYSTEM\CurrentControlSet\Services\LANSRV\NetworkProvider",Windows31DLL,1,01,00,00,00
+
+[LANSRV.delreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",LANSRV
+HKLM,"SYSTEM\CurrentControlSet\Services\LANSRV"
+
+[LANSRV.copyfiles]
+lansrv.drv,,,16
+
+
+;****************************************************************************
+;   IBM PC LAN Program
+;****************************************************************************
+
+[PCLP.ndi]
+warning=1
+
+
+;****************************************************************************
+;   Microsoft MS-Net
+;****************************************************************************
+
+[MSNET.ndi]
+AddReg=MSNET.ndi.reg
+DeviceID=MSNET
+[MSNET.ndi.reg]
+HKR,Ndi,DeviceID,,MSNET
+HKR,Ndi\Interfaces,DefUpper,,"winnet31"
+HKR,Ndi\Interfaces,UpperRange,,"winnet31"
+HKR,Ndi\Interfaces,ExcludeAny,,"winnet31, winnet4, multinet31"
+HKR,Ndi\Install,winnet31,,"MSNET.inst"
+HKR,Ndi\Remove ,winnet31,,"MSNET.rmv"
+[MSNET.inst]
+AddReg=MSNET.addreg,DOSNET.addreg,WNPP32.addreg,RMNET.Addreg,PrimaryNet.AddReg
+CopyFiles=MSNET.copyfiles,WNPP32.copyfiles
+UpdatesInis=MSNET.inis
+[MSNET.rmv]
+DelReg=MSNET.delreg,DOSNET.delreg,WNPP32.delreg,RMNET.Delreg,PrimaryNet.DelReg
+
+[MSNET.addreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",MSNET,,
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNET\NetworkProvider",Name,,"MS-Net"
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNET\NetworkProvider",ProviderPath,,"msnet.drv"
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNET\NetworkProvider",Description,,"100% MS-Net Compatible"
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNET\NetworkProvider",NetID,1,00,00,01,00
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNET\NetworkProvider",Windows31DLL,1,01,00,00,00
+
+[MSNET.delreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",MSNET
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNET"
+
+[MSNET.copyfiles]
+msnet.drv
+
+[DOSNET.addreg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DOSNET",StaticVxD,,"*dosnet"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DOSNET",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DOSNET",NetClean,1,1
+
+[DOSNET.delreg]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DOSNET"
+
+[MSNET.inis]
+system.ini,386Enh,,"TimerCriticalSection=10000"
+system.ini,386Enh,,"UniqueDOSPSP=TRUE"
+system.ini,386Enh,,"PSPIncrement=5"
+
+
+;****************************************************************************
+;   Microsoft LAN Manager
+;****************************************************************************
+
+[LANMAN.ndi]
+warning=1
+
+
+;****************************************************************************
+;   Novell NetWare
+;****************************************************************************
+
+[NETWARE3.ndi]
+AddReg=NETWARE3.ndi.reg
+DeviceID=NETWARE3
+[NETWARE3.ndi.reg]
+HKR,Ndi,DeviceID,,NETWARE3
+HKR,Ndi,NdiInstaller,,"netdi.dll,ThirdPartyClientNdiProc"
+HKR,Ndi\Interfaces,DefUpper,,"winnet31"
+HKR,Ndi\Interfaces,UpperRange,,"winnet31,multinet31"
+HKR,Ndi\Interfaces,DefLower,,"nwipxodi"
+HKR,Ndi\Interfaces,LowerRange,,"nwipxodi,nwipxmono"
+HKR,Ndi\Interfaces,ExcludeAny,,"winnet31,multinet31"
+HKR,Ndi\Compatibility,ExcludeAll,,"NWREDIR"
+HKR,Ndi\Install,winnet31,,"NETWARE3.inst"
+HKR,Ndi\Remove ,winnet31,,"NETWARE3.rmv"
+HKR,Ndi\Install,multinet31,,"N

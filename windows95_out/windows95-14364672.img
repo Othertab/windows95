@@ -1,0 +1,240 @@
+Ds=0x00dd01
+
+[*pnp8065]	;UB NIUps or NIUps/EOTP
+NCDID=101
+DeviceIDs=*pnp8065,mca_7012
+Flags=MCA,NoDetect
+WFWKeys="ms$niups","ms$ubnei3"
+LanManKeys="ubneips"
+ODIKeys="ubodi"
+NovellIDs=0x003e
+IEEEIDs=0xffffffff
+
+[*pnp811e]	;UB pcNIC
+NCDID=286
+DeviceIDs=*pnp811e
+Flags=ISA
+NovellIDs=0x0040
+
+[*pnp8119]	;UB pcNIU
+NCDID=281
+DeviceIDs=*pnp8119
+Flags=ISA
+LanManKeys="ubnei"
+NovellIDs=0x0041
+
+[*pnp811f]	;UB NIUpc/Token-Ring
+NCDID=287
+DeviceIDs=*pnp811f
+Flags=ISA
+NovellIDs=0x0042
+
+[*pnp811a]	;UB pcNIU/ex 128K
+NCDID=282
+DeviceIDs=*pnp811a
+Flags=ISA
+NovellIDs=0x0070
+
+[*pnp8003]	;Compaq EISA Token Ring
+NCDID=3
+DeviceIDs=*pnp8003
+Flags=EISA,NoDetect
+LanManKeys="cpqtok"
+ODIKeys="cpqtok"
+NovellIDs=0x0072
+
+[*pnp8322]	;HP Ethernet
+NCDID=802
+DeviceIDs=*pnp8322
+Flags=ISA,NoDetect
+
+[*pnp80e3]	;SMC ARCNET PC 500
+NCDID=227
+DeviceIDs=*pnp80e3
+Flags=ISA,NoDetect
+IO1=255,%1
+LanManKeys="smc_arc"
+NovellIDs=0x01ff
+
+[*pnp80f2]	;3Com EtherLink I
+NCDID=242
+DeviceIDs=*pnp80f2
+Flags=ISA
+NovellIDs=0x0007
+
+[*pnp8114]	;Racal NI5210/8 or NI5210/16
+NCDID=276
+DeviceIDs=*pnp8114
+Flags=ISA,NoDetect
+IO1=8,%1
+Mem1=0x4000,%3
+IRQ1=1,%2
+WFWKeys="ni5210","ms$ni5210"
+LanManKeys="ni5210"
+ODIKeys="ni5210"
+NovellIDs=0x0037
+
+[*pnp80cd]	;IBM PC Net II
+NCDID=205
+DeviceIDs=*pnp80cd
+Flags=ISA,NoDetect
+LanManKeys="ibmnet"
+
+[*pnp8075]	;IBM PC Net II/A (MCA)
+NCDID=117
+DeviceIDs=*pnp8075
+Flags=MCA,NoDetect
+LanManKeys="ibmneta"
+
+[*pnp807f]	;Racal NI9210
+NCDID=127
+DeviceIDs=*pnp807f
+Flags=MCA,NoDetect
+LanManKeys="ni9210"
+
+[*pnp8173]	;Net Peripherals EISA
+NCDID=371
+DeviceIDs=*pnp8173
+Flags=EISA,NoDetect
+IRQ1=1,%0
+LanManKeys="ni9210"
+
+[*pnp81a5]	;Research Machines Ethernet
+NCDID=421
+DeviceIDs=*pnp81a5
+Flags=ISA,NoDetect
+LanManKeys="rmateth"
+
+[*pnp8169]	;NCR StarCard
+NCDID=361
+DeviceIDs=*pnp8169
+Flags=ISA,NoDetect
+IO1=255,%3
+IRQ1=1,%0
+DMA1=1,%1
+LanManKeys="slan"
+
+[*pnp81b9]	;ToshibaLAN Internal
+NCDID=441
+DeviceIDs=*pnp81b9
+Flags=ISA,NoDetect
+IO1=255,%1
+LanManKeys="tsbether"
+
+[*pnp816b]	;NCR WaveLAN AT
+NCDID=363
+DeviceIDs=*pnp816b
+Flags=ISA,NoDetect
+IO1=255,%1
+Mem1=0x10000,%0
+IRQ1=1,%0
+LanManKeys="wavelan"
+
+[*pnp8084]	;Cabletron E3000 Series (MCA)
+NCDID=132
+DeviceIDs=*pnp8084
+Flags=MCA,NoDetect
+WFWKeys="ms$cbl30"
+LanManKeys="e30"
+
+[*pnp8085]	;Cabletron E3100 Series (MCA)
+NCDID=133
+DeviceIDs=*pnp8085
+Flags=MCA,NoDetect
+WFWKeys="ms$cbl31"
+LanManKeys="e31"
+
+[*pnp8005]	;Racal ES3210 EISA
+NCDID=5
+DeviceIDs=*pnp8005,*RII0101
+Flags=EISA,NoDetect
+LanManKeys="es3210"
+
+[*pnp8081]	;Pure Data Ethernet
+NCDID=129
+DeviceIDs=*pnp8081
+Flags=MCA,NoDetect
+IO1=255,%0
+LanManKeys="pdieth"
+
+[*pnp8250]	;RCE 10Base-T 16-Bit
+NCDID=592
+DeviceIDs=*pnp8250
+Flags=ISA,NoDetect
+IO1=255,%2
+Mem1=0x8000,%2
+IRQ1=1,%1
+LanManKeys="rce_16"
+
+[*pnp824f]	;RCE 10Base-T 8-Bit
+NCDID=591
+DeviceIDs=*pnp824f
+Flags=ISA,NoDetect
+IO1=255,%2
+Mem1=0x2000,%2
+IRQ1=1,%1
+LanManKeys="rce_8"
+
+[*pnp8009]	;National Semiconductor SONIC EISA
+NCDID=9
+DeviceIDs=*pnp8009
+Flags=EISA,NoDetect
+IO1=255,%0
+IRQ1=1,%0
+LanManKeys="nseisa"
+
+[*pnp8086]	;Cabletron T3015 4/16 Mbps DNI
+NCDID=134
+DeviceIDs=*pnp8086,mca_0050
+Flags=MCA,NoDetect
+WFWKeys="ms$cblt30"
+LanManKeys="t30"
+ODIKeys="t30odi"
+IPXNames="3015"
+NovellIDs=0x049b
+
+[*pnp8201]	;Cabletron T2015 4/16 Mbps DNI
+NCDID=513
+DeviceIDs=*pnp8201
+Flags=ISA,NoDetect
+IO1=255,%0
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$cblt20"
+LanManKeys="t20"
+ODIKeys="t20odi"
+IPXNames="2015"
+NovellIDs=0x049b
+
+[*pnp8074]	;HPLan (MCA)
+NCDID=116
+DeviceIDs=*pnp8074
+Flags=MCA,NoDetect
+WFWKeys="ms$hplanb"
+ODIKeys="hpdwsm16","hpmcaodi"
+
+[*pnp8008]	;HP 27248A
+NCDID=8
+DeviceIDs=*pnp8008
+Flags=EISA,NoDetect
+ODIKeys="hp32odi"
+IPXNames="EISA"
+NovellIDs=0x0076
+
+[*pnp8101]	;Thomas-Conrad TC4045
+NCDID=257
+DeviceIDs=*pnp8101
+Flags=ISA,NoDetect
+IO1=16
+WFWKeys="ms$tcctok"
+LanManKeys="tcctok"
+ODIKeys="tctoksh"
+NovellIDs=0x00c7
+
+[*pnp80d6]	;NE2000 Compatible
+NCDID=214
+DeviceIDs=*pnp80d6
+Flags=ISA
+IO1=32,%0,%1
+IRQ1=1,%0,%2
+WFWKe

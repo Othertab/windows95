@@ -1,0 +1,109 @@
+; The following sections are for WFW upgrades
+;;
+
+[WFW.NETBEUI]
+;Sessions parameter
+ReadIni=%35%\protocol.ini,NETBEUI,SESSIONS
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NETBEUI,sessions,
+ReadIni=%35%\protocol.ini,NETBEUI,SESSIONS
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\sessions,,
+;NCBS parameter
+ReadIni=%35%\protocol.ini,NETBEUI,NCBS,,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NETBEUI,ncbs,
+ReadIni=%35%\protocol.ini,NETBEUI,NCBS,,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NETBEUI\Ndi\params\ncbs,,
+
+
+[WFW.NWLINK]
+;Frame type - don't copy use auto detection instead
+;ReadIni=%35%\protocol.ini,nwlink,FRAME,FRAME_TABLE
+;WriteReg=HKR,Ndi\params\Frame_Type,,
+;Maximum connections
+ReadIni=%35%\protocol.ini,nwlink,MAX_CONNECTIONS,,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink,maxconnect,
+ReadIni=%35%\protocol.ini,nwlink,MAX_CONNECTIONS,,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxconnect,,
+;Maximum sockets
+ReadIni=%35%\protocol.ini,nwlink,MAX_SOCKETS,,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink,maxsockets,
+ReadIni=%35%\protocol.ini,nwlink,MAX_SOCKETS,,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets,,
+;Force even packets
+ReadIni=%35%\protocol.ini,nwlink,EVEN_PACKETS,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink,forceeven,
+ReadIni=%35%\protocol.ini,nwlink,EVEN_PACKETS,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\forceeven,,
+;Source routing
+ReadIni=%35%\protocol.ini,nwlink,SOURCE_ROUTING,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink,cachesize,
+ReadIni=%35%\protocol.ini,nwlink,SOURCE_ROUTING,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\cachesize,,
+
+[WFW.MSDLC]
+; For WFW 3.1 DLCXIF was used as the section name
+; For WFW 3.11 msdlc$ was used as the section name
+; For WFW 3.11 msdlc was also used as the section name
+; Therefore we try to copy each, the one that's present will be used
+;
+; swap
+ReadIni=%35%\protocol.ini,msdlc$,swap,
+WriteReg=HKR,Ndi\params\swap,,
+ReadIni=%35%\protocol.ini,msdlc,swap,
+WriteReg=HKR,Ndi\params\swap,,
+ReadIni=%35%\protocol.ini,DLCXIF,swap,
+WriteReg=HKR,Ndi\params\swap,,
+; saps
+ReadIni=%35%\protocol.ini,msdlc$,saps,
+WriteReg=HKR,Ndi\params\saps,,
+ReadIni=%35%\protocol.ini,msdlc,saps,
+WriteReg=HKR,Ndi\params\saps,,
+ReadIni=%35%\protocol.ini,DLCXIF,saps,
+WriteReg=HKR,Ndi\params\saps,,
+; stations
+ReadIni=%35%\protocol.ini,msdlc$,stations,
+WriteReg=HKR,Ndi\params\stations,,
+ReadIni=%35%\protocol.ini,msdlc,stations,
+WriteReg=HKR,Ndi\params\stations,,
+ReadIni=%35%\protocol.ini,DLCXIF,stations,
+WriteReg=HKR,Ndi\params\stations,,
+; commands
+ReadIni=%35%\protocol.ini,msdlc$,commands,
+WriteReg=HKR,Ndi\params\commands,,
+ReadIni=%35%\protocol.ini,msdlc,commands,
+WriteReg=HKR,Ndi\params\commands,,
+ReadIni=%35%\protocol.ini,DLCXIF,commands,
+WriteReg=HKR,Ndi\params\commands,,
+; usedix
+ReadIni=%35%\protocol.ini,msdlc$,usedix,
+WriteReg=HKR,Ndi\params\usedix,,
+ReadIni=%35%\protocol.ini,msdlc,usedix,
+WriteReg=HKR,Ndi\params\usedix,,
+ReadIni=%35%\protocol.ini,DLCXIF,usedix,
+WriteReg=HKR,Ndi\params\usedix,,
+; xsaps
+ReadIni=%35%\protocol.ini,msdlc$,xsaps,
+WriteReg=HKR,Ndi\params\xsaps,,
+ReadIni=%35%\protocol.ini,msdlc,xsaps,
+WriteReg=HKR,Ndi\params\xsaps,,
+ReadIni=%35%\protocol.ini,DLCXIF,xsaps,
+WriteReg=HKR,Ndi\params\xsaps,,
+; xstations
+ReadIni=%35%\protocol.ini,msdlc$,xstations,
+WriteReg=HKR,Ndi\params\xstations,,
+ReadIni=%35%\protocol.ini,msdlc,xstations,
+WriteReg=HKR,Ndi\params\xstations,,
+ReadIni=%35%\protocol.ini,DLCXIF,xstations,
+WriteReg=HKR,Ndi\params\xstations,,
+
+
+
+[WFW.MSTCP]
+;;NBT section of system.ini
+;EnableDNS
+ReadIni=%35%\system.ini,NBT,EnableDNS,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\MSTCP,EnableDNS,
+;NameServer1
+ReadIni=%35%\system.ini,NBT,NameServer1,
+WriteReg=HKLM,System\CurrentControlSet\Services\VxD\MSTCP,NameServer1,
+;NameServer2
+; Write a null string and rep

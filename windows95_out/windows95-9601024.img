@@ -1,0 +1,95 @@
+n = RK20_DSK_5_
+4 Partitioning Drives
+4 Introduction = RK20_DSK_7_
+4 Deleting Partitions and Logical Drives = RK20_DSK_8_
+4 Creating a Primary MS-DOS Partition = RK20_DSK_9_
+3 Formatting a Hard Disk = RK20_DSK_10_
+3 Assigning Drive Letters for Removable Media = RK20_DSK_11_
+2 Disk Management Overview = RK20_DSK_12_
+2 Managing the Recycle Bin to Free Disk Space = RK20_DSK_13_
+2 Using Microsoft Backup = RK20_DSK_14_
+2 Defragmenting Disks = RK20_DSK_15_
+2 Using ScanDisk = RK20_DSK_16_
+3 Using Disk Compression with Windows 95
+3 Introduction = RK20_DSK_18_
+3 Overview of Compressed Volume Files and Host Drives = RK20_DSK_19_
+4 Using DriveSpace for Disk Compression
+4 Introduction = RK20_DSK_21_
+4 Using DriveSpace with Floppy Disks = RK20_DSK_22_
+4 Changing Free Space and the Estimated Compression Ratio of a Compressed Drive = RK20_DSK_23_
+3 Microsoft Plus! Utilities for Disk Management
+3 Introduction = RK20_DSK_25_
+4 DriveSpace 3 Compression: An Overview
+4 Introduction = RK20_DSK_27_
+4 DriveSpace and Disk Properties Enhancements = RK20_DSK_28_
+4 How Compression Works with DriveSpace 3 = RK20_DSK_29_
+4 Using Compression Agent = RK20_DSK_30_
+4 Guidelines for Fine-tuning Compression = RK20_DSK_31_
+4 Scheduling Programs with System Agent
+4 Introduction = RK20_DSK_33_
+4 How System Agent Works = RK20_DSK_34_
+4 Running Other Programs with System Agent: An Overview = RK20_DSK_35_
+2 File Systems Overview = RK20_DSK_36_
+3 Using Long Filenames
+3 Introduction = RK20_DSK_38_
+3 Long Filename Support in Windows 95 = RK20_DSK_39_
+4 Long Filenames and Network Compatibility
+4 Introduction = RK20_DSK_41_
+4 Long Filenames with Windows 95 Protected-Mode Clients = RK20_DSK_42_
+4 LAN Manager with HPFS and HPFS/386 Volumes = RK20_DSK_43_
+4 Windows NT 3.1 with HPFS or NTFS Volumes = RK20_DSK_44_
+4 Administrative Considerations for Long Filenames
+4 Introduction = RK20_DSK_46_
+4 Using the LFNBK Utility for Temporary Compatibility = RK20_DSK_47_
+4 Creating Long Filenames at the MS-DOS Prompt = RK20_DSK_48_
+4 Technical Notes on Long Filenames = RK20_DSK_49_
+3 Technical Notes on Disk Device Support
+3 Introduction = RK20_DSK_51_
+4 Supported Disk Devices
+4 Introduction = RK20_DSK_53_
+4 IDE Drives and Controllers = RK20_DSK_54_
+4 SCSI Devices and Drivers = RK20_DSK_55_
+4 High-Speed Floppy Disk Driver = RK20_DSK_56_
+4 Removable Media and Docking Devices = RK20_DSK_57_
+4 Non-SCSI Port Drivers = RK20_DSK_58_
+3 VCACHE and CDFS Supplemental Cache = RK20_DSK_59_
+2 Troubleshooting File and Disk Problems = RK20_DSK_60_
+2 Multimedia
+2 Introduction = RK21_MM_1_
+2 Multimedia: The Basics = RK21_MM_2_
+2 Multimedia: The Issues = RK21_MM_3_
+3 Multimedia Overview
+3 Introduction = RK21_MM_5_
+3 Media Control Interface = RK21_MM_6_
+4 Multimedia Files
+4 Introduction = RK21_MM_8_
+4 CD-ROM File System = RK21_MM_9_
+3 Display Control Interface = RK21_MM_10_
+3 Support for Multimedia Devices = RK21_MM_11_
+3 Recording, Editing, and Playing Audio
+3 Introduction = RK21_MM_13_
+3 Windows 95 Support for MIDI = RK21_MM_14_
+3 Recording Sound = RK21_MM_15_
+3 Controlling Audio Input Levels = RK21_MM_16_
+2 Playing and Recording Digital Video = RK21_MM_17_
+3 Buying a Multimedia Computer
+3 Introduction = RK21_MM_19_
+3 Troubleshooting Multimedia Software
+3 Introduction = RK21_MM_21_
+3 Correcting Problems with Playing .WAV Files = RK21_MM_22_
+3 Correcting Problems in Playing MIDI Files = RK21_MM_23_
+3 Correcting Problems with Playing or Hearing an Audio CD = RK21_MM_24_
+3 Correcting Problems with Hearing from Headphones = RK21_MM_25_
+2 Application Support
+2 Introduction = RK22_APP_1_
+2 Application Support: The Basics = RK22_APP_2_
+2 Application Support: The Issues = RK22_APP_3_
+3 Installing Applications
+3 Introduction = RK22_APP_5_
+3 Installing and Sharing Applications Across the Network = RK22_APP_6_
+3 Creating an APPS.INI File = RK22_APP_7_
+2 Removing Applications = RK22_APP_8_
+3 Running Applications
+3 Introduction = RK22_APP_10_
+3 Associating a File Type with an Application = RK22_APP_11_
+3 Configuring th

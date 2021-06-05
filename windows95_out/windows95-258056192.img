@@ -1,0 +1,50 @@
+instructions do not apply.
+
+If the SimTower installer reports a General Protection Fault (GPF), AND you’re running DOS 6.0 or higher, follow these steps (you earlier version of DOS users should skip to the next section):
+
+1. Reboot your computer. Either press the reset button on your computer's case OR press Ctrl+Alt+Delete on your keyboard all at the same time to reboot.
+2. Watch the boot-up process closely for the Message "Starting MS-DOS...".
+When you see this message press your "F8" key once. You'll have to be nimble, since the "Starting MS-DOS..." message only gives you 2 seconds. If you succeed, you’ll see a message that says "DOS will prompt you to confirm each line of the CONFIG.SYS and AUTOEXEC.BAT files."
+3. The order in which the lines are presented to you depends on your machine. Answer "Y" to the following lines in the CONFIG.SYS file:
+DOS=HIGH,UMB (These items may be listed on separate lines 'DOS=HIGH' and 'DOS=UMB'.)
+DEVICE=C:\DOS\HIMEM.SYS (This line may be listed as DEVICE=C:\WINDOWS\HIMEM.SYS)
+NOTE: There are NO SPACES used in these lines!
+4. Answer “N” to ANY other lines. This means ANY other lines.
+5. You’ll be deposited at the (dreaded) C:\> prompt. Don’t be scared. Just type in "CD\WINDOWS" then hit [Enter].
+6. You will now be in the Windows directory. Your prompt will read, "C:\WINDOWS>"
+7. Type "WIN" [enter] to start Windows. Windows may be a little slower than usual.
+8. Now follow the setup instructions in the SimTower Addendum & Quick Start Guide.
+9. After installation, reboot your computer and let it start up as usual.
+10. If you still receive GPFs contact Maxis Customer Support.
+
+The Next Section (for pre DOS 6 users)
+You’ll likely need to create a boot disk to prevent conflicting software from loading. This boot disk MUST be in Drive A. DOS looks in Drive A for booting instructions before it looks in Drive C. It NEVER looks in Drive B. If you only have one floppy drive, DOS always looks in that drive before it looks in Drive C.
+
+Making your boot disk
+First, read these instructions once (or perhaps twice) to familiarize yourself with the procedure and what you’ll need. 
+
+Here’s what you do to make a boot disk:
+1. Place a blank, formatted disk in the A: drive.  (If your floppy disk is not formatted, put the disk in the “A:” drive and then from the “C:\>“ prompt type in “format a:” then press <Enter>.
+2. Get to your C: prompt by typing “C:” <Enter>
+3. Type “SYS A:” <Enter> (This puts basic system files on the floppy in your A: drive.)
+4. Type in “A:\” <Enter> to switch to your “A:” drive.
+5. Make sure that you are on the “A:” drive; if you are not, BAD things may happen.
+6. Create a CONFIG.SYS file by following these instructions:
+	a. Type “copy con config.sys” <Enter>
+	b. Type “DOS=HIGH,UMB” <Enter> (no spaces)
+	c. Type “device=himem.sys” <Enter> (no spaces
+	d. Press the F6 key (you will see “^Z”), then press <Enter>.  You’ll get a message telling you that one file has been copied.
+
+Reboot your machine with this boot disk in drive A. This will let you bypass your auto-loading stuff and give control back to you. You’ll end up at the C:>prompt. Type “cd\windows” <Enter>. Now you’re at your Windows directory. Type “win” <Enter>. This loads Windows.
+
+System Conflicts
+
+Conflicts are rare but they can occur. If you’re not having problems, take no action (or, if it ain’t broke, don’t fix it).
+
+If you are having problems (or if the fine writing in this file seems interesting), read on.
+
+Many people make Windows load some programs automatically. Some of these programs are benign. Others are resource hogs. The easiest solution is the most drastic: turn off everything but the Program Manager and SimTower to free memory and system resources.
+
+If that’s a bit much, consider that most problems are caused by two types of programs. The worst offenders are screen savers. If you’re using a screen saver (even the default Windows screen saver), you should disable it to prevent conflicts when running SimTower.
+
+The second worst offenders are virus protection program

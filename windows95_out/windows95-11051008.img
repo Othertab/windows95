@@ -1,0 +1,57 @@
+D\{89292102-4755-11cf-9DC2-00AA006C2B84}\InProcServer32,,,"%11%\mailnews.dll"
+HKCR,CLSID\{89292102-4755-11cf-9DC2-00AA006C2B84}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{89292102-4755-11cf-9DC2-00AA006C2B84}\DefaultIcon,,,"%11%\mailnews.dll,-2"
+HKCR,.eml,,,"Microsoft Internet Mail Message"
+HKCR,.eml,"Content Type",,"message/rfc822"
+HKCR,"Microsoft Internet Mail Message",,,"%DT_MAILMESSAGE%"
+HKCR,"Microsoft Internet Mail Message\DefaultIcon",,,"%11%\mailnews.dll,-14"
+HKCR,"Microsoft Internet Mail Message\shell\open\command",,,"rundll32.exe %11%\mailnews.dll,EMLFileHandler %%1"
+HKCU,AppEvents\EventLabels\MailBeep,,2,"New Mail Notification"
+HKCU,AppEvents\Schemes\Apps\.Default\MailBeep\.current,,2,"chimes.wav"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDLLs,%11%\wab32.dll,1,01,00,00,00
+HKLM,"%KEY_MAILCLIENT%",,,"%KEY_ATHENA%"
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%",,,"Internet Mail"
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%\Protocols\mailto",,,"URL:MailTo Protocol"
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%\Protocols\mailto","EditFlags",1,02,00,00,00
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%\Protocols\mailto","URL Protocol",,""
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%\Protocols\mailto\DefaultIcon",,,"%11%\mailnews.dll,-2"
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%\Protocols\mailto\shell\open\command",,,"rundll32.exe %11%\mailnews.dll,Mail_RunDLL %1"
+HKCR,"mailto",,2,"URL:MailTo Protocol"
+HKCR,"mailto","EditFlags",3,02,00,00,00
+HKCR,"mailto","URL Protocol",,""
+HKCR,"mailto\DefaultIcon",,2,"%11%\mailnews.dll,-2"
+HKCR,"mailto\shell\open\command",,2,"rundll32.exe %11%\mailnews.dll,Mail_RunDLL %1"
+
+[Mail.Add.Reg.Default]
+HKCR,CLSID\{89292102-4755-11cf-9DC2-00AA006C2B84}\ShellFolder,Attributes,1,4,00,00,00
+HKCR,CLSID\{89292102-4755-11cf-9DC2-00AA006C2B84}\Shell\Open\Command,,,"EXPLORER.EXE /root,%%1"
+HKLM,%KEY_RENAME%\WinMail,,,%25%
+HKLM,%KEY_RENAME%\WinMail,mail.txt,,"Internet Mail.{89292102-4755-11cf-9DC2-00AA006C2B84}"
+HKLM,"%KEY_MAILCLIENT%\%KEY_ATHENA%\shell\open\command",,,"%25%\EXPLORER.EXE /root,%25%\Internet Mail.{89292102-4755-11cf-9DC2-00AA006C2B84}"
+
+[News.Add.Reg]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved",{89292103-4755-11cf-9DC2-00AA006C2B84},,%DT_NEWS%
+HKCR,CLSID\{89292103-4755-11cf-9DC2-00AA006C2B84},,,%DT_NEWS%
+HKCR,CLSID\{89292103-4755-11cf-9DC2-00AA006C2B84}\InProcServer32,,,"%11%\mailnews.dll"
+HKCR,CLSID\{89292103-4755-11cf-9DC2-00AA006C2B84}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{89292103-4755-11cf-9DC2-00AA006C2B84}\DefaultIcon,,,"%11%\mailnews.dll,-3"
+HKCR,.nws,,,"Microsoft Internet News Message"
+HKCR,.nws,"Content Type",,"message/rfc822"
+HKCR,"Microsoft Internet News Message",,,"%DT_NEWSMESSAGE%"
+HKCR,"Microsoft Internet News Message\DefaultIcon",,,"%11%\mailnews.dll,-20"
+HKCR,"Microsoft Internet News Message\shell\open\command",,,"rundll32.exe %11%\mailnews.dll,News_RunDLL %%1"
+HKLM,"%KEY_NEWSCLIENT%",,,"%KEY_ATHENA%"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%",,,"Internet News"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\news",,,"URL:News Protocol"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\news","EditFlags",1,02,00,00,00
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\news","URL Protocol",,""
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\news\DefaultIcon",,,"%11%\mailnews.dll,-3"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\news\shell\open\command",,,"rundll32.exe %11%\mailnews.dll,News_RunDLL %1"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\snews",,,"URL:Snews Protocol"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\snews","EditFlags",1,02,00,00,00
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\snews","URL Protocol",,""
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\snews\DefaultIcon",,,"%11%\mailnews.dll,-3"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\snews\shell\open\command",,,"rundll32.exe %11%\mailnews.dll,News_RunDLL %1"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\nntp",,,"URL:NNTP Protocol"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\nntp","EditFlags",1,02,00,00,00
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\P

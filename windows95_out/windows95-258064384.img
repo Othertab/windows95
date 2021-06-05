@@ -1,0 +1,45 @@
+ speed from your computer.
+
+There is no music in SimTower.
+
+Video, palettes and pictures
+
+The Most Important Video Information In This File
+Some video drivers shipped with Windows 3.1 do NOT work on most systems. These drivers are designed to work only with specific video cards. Chances are that you do NOT have this type of card! These are the drivers which begin with Video 7 or XGA.
+
+If you use these drivers but don’t have the cards they are designed for, you’ll get a blank screen when Windows loads. Windows is actually running just fine, but it’s kind of hard to use a graphic interface if you can't see the graphics.
+
+If you are reading this after you have already loaded one of these drivers and you no longer can load up Windows, call your video card manufacturer. In a few paragraphs you’ll find out how to change your Windows driver back to VGA. If you have any doubts about changing your display drivers around, PLEASE call your video card manufacturer.
+
+What are Video Drivers?
+Windows uses programs called Video Drivers to control how your particular graphics card displays things on the screen. Usually, the video card installed in your computer has a set of video drivers for you to use with Windows. Windows itself comes with video drivers that work on almost any video card and allow your computer to display 16 colors with a resolution of 640x480 pixels.
+
+What Does This Have to Do with SimTower?
+Many people have only the generic 16 color video drivers installed. Others have video drivers which allow more than 256 colors. What’s a poor company to do?
+
+Well, what we did is allow SimTower to run in color resolutions other than 256. Obviously, displaying 256 color artwork in only 16 colors can produce some effects which are... less  than artistic.
+
+On the other hand, some of the animation or colors in SimTower may not work properly with systems running in more than 256 colors.
+
+In both the above cases, SimTower is still playable, so if you don't have 256 color drivers or are not sure how to install them, you can still play SimTower.
+
+However, for absolutely the most bestest results, we recommend that you run SimTower in 256 colors. Your video card manufacturer or documentation should have information to help you set your card for 256 colors.
+
+The steps to change your video driver are system-specific; you may have an icon in your Control Panel or perhaps a separate group for setting and changing resolutions and the number of colors.
+
+We recommend that you check with your vendor or manufacturer for information on your display card, but here are some general hints and tips we can run through.
+
+General note on video cards 
+WinG (the graphic utility that SimTower uses) will usually warn you if your drivers are incompatible. If you do not get the warning, most likely you will not have video trouble.
+
+This does not mean that the WinG check is 100% correct so if you have video trouble consult your video card manufacturer to check the WinG compatibility of your video card.
+
+If you do not know what company makes your video card, consult the manufacturer of your computer to find out what brand of video cards they have been using on your model machine.
+
+Changing Your Video Driver
+WARNING: Follow these instructions ONLY if you and your computer are on friendly, familiar terms.
+You may need your original Windows disks (they have programs which you might need but which may not have been installed) so it’s helpful to have them handy.
+
+Next, find the Windows Setup icon and double-click it to open it. It’s usually in the Main program group. Display shows you what your system is set for. If it's just "VGA", that means 640x480 resolution with 16 colors. We’re going to change that to something a little nicer.
+
+Open the Options menu and choose Change System Settings. Click the down arrow at the right side of the Display bar to show a list of drivers that are in the options. Scroll up and down to see the available selections. Look for one that lists specifically 256 colors. (Remember, you most likely do 

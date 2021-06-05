@@ -1,0 +1,94 @@
+00,00,00
+HKLM,SOFTWARE\Intel\RRCM,"NumRTCPPostedBfr",1,01,00,00,00
+HKLM,SOFTWARE\Intel\RRCM,"RTCPrcvBfrSize",1,00,10,00,00
+
+; Entries for Node Controller
+; (default=0) HKLM,"%KEY_CONFERENCING%\Data Control","NodeControllerMode",1,00,00,00,00
+; (default=3) HKLM,"%KEY_CONFERENCING%\Data Control","NodeControllerProperty",1,03,00,00,00
+; (default=none) HKLM,"%KEY_CONFERENCING%\Data Control","SiteInformation",,"(No Site Information)"
+
+
+; Entries for transports
+
+; PSTN:
+; (default=same) HKLM,%KEY_TRANSPORTS%\PSTN,"T120Prefix",,"PSTN"
+HKLM,%KEY_TRANSPORTS%\PSTN,"TransportType",1,01,00,00,00
+HKLM,%KEY_TRANSPORTS%\PSTN,"ID",1,02,00,00,00
+HKLM,%KEY_TRANSPORTS%\PSTN,"Display Name",,"%PROTNAME_PSTN%"
+HKLM,%KEY_TRANSPORTS%\PSTN,"R11RegKey",,"Modem TDD"
+HKLM,%KEY_TRANSPORTS%\PSTN,"Disabled",1,01,00,00,00
+HKLM,%KEY_TRANSPORTS%\PSTN,"Enabled for R11",1,00,00,00,00
+; (default = T120 only) HKLM,%KEY_TRANSPORTS%\PSTN,"CallEstablishmentOrder",1,02,00,00,00
+HKLM,%KEY_TRANSPORTS%\PSTN,"IsOOBEnabled",1,01,00,00,00
+
+
+
+
+HKLM,%KEY_TRANSPORTS%\PSTN,"T120DLLName",,"%24%\%ProgramFiles%\%NETMTGDIR%\MCATPSTN.DLL"
+HKLM,%KEY_TRANSPORTS%\PSTN,"OOBDLLName",,"%24%\%ProgramFiles%\%NETMTGDIR%\MNMTAPM_.DLL"
+
+HKLM,%KEY_TRANSPORTS%\PSTN,"Description",,"%PROTDESC_PSTN%"
+HKLM,%KEY_TRANSPORTS%\PSTN,"Properties UI Module",,"confcp.dll"
+
+; TCPIP:
+HKLM,%KEY_TRANSPORTS%\TCPIP,"T120Prefix",,"TCP"
+HKLM,%KEY_TRANSPORTS%\TCPIP,"ID",1,01,00,00,00
+HKLM,%KEY_TRANSPORTS%\TCPIP,"Display Name",,"%PROTNAME_TCPIP%"
+
+
+
+HKLM,%KEY_TRANSPORTS%\TCPIP,"T120DLLName",,"%24%\%ProgramFiles%\%NETMTGDIR%\msmcstcp.DLL"
+
+HKLM,%KEY_TRANSPORTS%\TCPIP,"Description",,"%PROTDESC_TCPIP%"
+; (default = TCP/IP) HKLM,%KEY_TRANSPORTS%\TCPIP,"TransportType",1,03,00,00,00
+; (default = T120 only) HKLM,%KEY_TRANSPORTS%\TCPIP,"CallEstablishmentOrder",1,03,00,00,00
+; (default = FALSE) HKLM,%KEY_TRANSPORTS%\TCPIP,"IsOOBEnabled",1,00,00,00,00
+
+; IPX:
+; (default=same) HKLM,%KEY_TRANSPORTS%\IPX,"T120Prefix",,"IPX"
+HKLM,%KEY_TRANSPORTS%\IPX,"TransportType",1,02,00,00,00
+HKLM,%KEY_TRANSPORTS%\IPX,"Display Name",,"%PROTNAME_IPX%"
+HKLM,%KEY_TRANSPORTS%\IPX,"R11RegKey",,"IPX TDD"
+HKLM,%KEY_TRANSPORTS%\IPX,"ID",1,03,00,00,00
+
+
+
+HKLM,%KEY_TRANSPORTS%\IPX,"T120DLLName",,"%24%\%ProgramFiles%\%NETMTGDIR%\MCATIPX.DLL"
+
+HKLM,%KEY_TRANSPORTS%\IPX,"Disabled",1,01,00,00,00
+HKLM,%KEY_TRANSPORTS%\IPX,"Enabled for R11",1,00,00,00,00
+HKLM,%KEY_TRANSPORTS%\IPX,"Description",,"%PROTDESC_IPX%"
+; (default = T120 only) HKLM,%KEY_TRANSPORTS%\IPX,"CallEstablishmentOrder",1,01,00,00,00
+; (default = FALSE) HKLM,%KEY_TRANSPORTS%\IPX,"IsOOBEnabled",1,00,00,00,00
+
+; NETBIOS:
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"T120Prefix",,"NB"
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"TransportType",1,00,00,00,00
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"ID",1,06,00,00,00
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"Display Name",,"%PROTNAME_NETBIOS%"
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"CallEstablishmentOrder",1,04,00,00,00
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"Disabled",1,01,00,00,00
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"Enabled for R11",1,00,00,00,00
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"Description",,"%PROTDESC_NETBIOS%"
+HKLM,%KEY_TRANSPORTS%\NETBIOS,"R11RegKey",,"NetBIOS TDD"
+
+
+
+; (T.120 NETBIOS not loaded) HKLM,%KEY_TRANSPORTS%\NETBIOS,"T120DLLName",,"%24%\%ProgramFiles%\%NETMTGDIR%\MCATNB.DLL"
+
+; (default = FALSE) HKLM,%KEY_TRANSPORTS%\NETBIOS,"IsOOBEnabled",1,00,00,00,00
+
+; Entries migrated from DCG INI files
+HKLM,"%KEY_DCG%\Control policy","Initial Control Mode",1,02,00,00,00
+HKLM,"%KEY_DCG%\Control policy","Remote Person can take control",1,01,00,00,00
+HKLM,"%KEY_DCG%\Control policy","Remote Person can detach",1,01,00,00,00
+HKLM,"%KEY_DCG%\Call establishment","Automatic Call Answer",1,00,00,00,00
+HKLM,"%KEY_DCG%\Call establishment","Unattended Use Mode",1,00,00,00,00
+HKLM,"%KEY_DCG%\Call establishment","Local Password",,""
+HKLM,"%KEY_DCG%\Call establishment","Max Parties",1,20,00,00,00
+
+
+
+HKLM,"%KEY_DCG%\Shadow Windows","Obscured Area Bitmap",,"%24%\%ProgramFiles%\%NETMTGDIR%\obscure.bmp"
+
+HKLM,"%KEY_DCG%\PropertyIndex","MNMS

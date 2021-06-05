@@ -1,0 +1,79 @@
+__Inc.-APA-1460_SCSI_Host_Adapter-BE89
+CopyFilesOnly=PCMCIA\Trantor_Systems__Ltd.-T460_SCSI_Host_Adpater-9BC5
+; CopyFilesOnly=PCMCIA\New_Media-SCSI-E28C
+CopyFilesOnly=MF\EISA_ZDS2000_DEV2
+CopyFilesOnly=PCI\VEN_1044&DEV_A400,PCI\VEN_104B&DEV_1040
+CopyFilesOnly=*DPTA401,*DPTA402,*DPTA410,*DPTA411,*DPTA501,*DPTA502
+
+;*****************************************************************
+[DestinationDirs]
+ASPIDEV = 11                    ; delete from SYSTEM dir if exists
+DefaultDestDir = 12             ; IOSubsys directory
+
+[Strings]
+Msft="Microsoft"
+AMD="Advanced Micro Devices (AMD)"
+ALWAYS="Always Technology"
+
+FDC="Future Domain Corporation"
+FDCEISA="Future Domain TMC-7000EX EISA SCSI Host Adapter"
+FD16ISA="Future Domain TMC-1650/1660/1670/1680 SCSI Host Adapter"
+FD16ISAPNP="Future Domain TMC-1695 Plug and Play SCSI Host Adapter"
+FD16ISAPNP2="Future Domain PNP-1630/1640 Plug and Play SCSI controller"
+FD16EISA="Future Domain TMC-1790/1795 SCSI Host Adapter"
+FD16MCA="Future Domain MCS-600/700 SCSI Host Adapter"
+FD16PCMCIA="Early Future Domain PCMCIA SCSI HOST Adapter"
+FD16PCMCIANEW="Future Domain PCMCIA SCSI Host Adapter"
+;*****************************************
+;update for Adaptec AHA-2920/2905 products
+;*****************************************
+;FD16PCI="Future Domain PCI SCSI HOST Adapter"
+FD16PCI="Adaptec AHA-2920/2905 PCI SCSI Host Adapter"
+FD8SHORT="Future Domain TMC-850/M/MER/MEX SCSI Host Adapter"
+FD8LONG="Future Domain TMC-860/860M/885/885M SCSI Host Adapter"
+SCSIClassName="SCSI controllers"
+
+ULTRASTOR="UltraStor Corporation"
+ULTRA14F="UltraStor 14F/14FB/34F/34FA/34FB Driver"
+ULTRA24F="UltraStor 24F/24FA Driver"
+ULTRA124F="UltraStor 124F Driver"
+*USC0140.DeviceDesc="UltraStor 14F ISA SCSI Host Adapter"
+*USC0141.DeviceDesc="UltraStor 34F/34FA VESA SCSI Host Adapter"
+*USC0142.DeviceDesc="UltraStor 14FB ISA SCSI Host Adapter"
+*USC0143.DeviceDesc="UltraStor 34FB VESA SCSI Host Adapter"
+*USC0240.DeviceDesc="UltraStor 24F/24FA EISA SCSI Host Adapter"
+*USC1240.DeviceDesc="UltraStor 124F EISA SCSI Disk Array Controller"
+*WDC2001.DeviceDesc="Future Domain 7000EX EISA SCSI Host Adapter"
+*FDC0000.DeviceDesc="Future Domain TMC-18XX SIC-based SCSI Host Adapter"
+*FDC0950.DeviceDesc="Future Domain TMC-950 SIC-based SCSI Host Adapter"
+*FDC1695.DeviceDesc="Future Domain TMC-1695 Plug and Play SCSI Host Adapter"
+*FDC9516.DeviceDesc="Future Domain TMC-1695 Plug and Play SCSI Host Adapter"
+*FDC1600.DeviceDesc="Future Domain PNP-1630/1640 Plug and Play SCSI controller"
+PCI\VEN_1036&DEV_0000.DeviceDesc="PCI TMC-18XX SIS based SCSI Host Adapter"
+PCMCIA\IBM_CORP.-SCSI_PCMCIA_ADAPTER_CARD-899C.DeviceDesc="PCI TMC-18XX SIS based SCSI Host Adapter"
+PCMCIA\Future_Domain_Corporation-SCSI_PCMCIA_Credit_Card_Controller-1BF8.DeviceDesc="Future Domain PCMCIA SCSI Host Adapter [original model]"
+PCMCIA\Future_Domain_Corporation-SCSI_PCMCIA_Credit_Card_Controller-0E21.DeviceDesc="Future Domain PCMCIA SCSI Host Adapter [revised model]"
+ACCULOGIC="NCR/Acculogic"
+NCRSDMS="NCR SDMS (TM) Miniport Driver"
+*ACU0101.DeviceDesc="Acculogic EISApport SCSI Host Adapter"
+
+DPT="DPT Corporation"
+DPTISA="DPT 20x1 ISA SCSI Host Adapters"
+DPTEISA="DPT 2xx2 EISA SCSI Host Adapters"
+PCI\VEN_1044&DEV_A400.DeviceDesc="DPT PM2124A PCI SCSI Host Adapter"
+*DPTA401.DeviceDesc="DPT PM2012B1 EISA SCSI Host Adapters"
+*DPTA402.DeviceDesc="DPT PM2012B2 EISA SCSI Host Adapters"
+*DPTA410.DeviceDesc="DPT PM2x22A EISA SCSI Host Adapters"
+*DPTA411.DeviceDesc="DPT Spectre chipset SCSI Adapters"
+*DPTA501.DeviceDesc="DPT PM2012B1/9x EISA SCSI Host Adapters"
+*DPTA502.DeviceDesc="DPT PM2012B2/9x EISA SCSI Host Adapters"
+*NEC8201.DeviceDesc="NEC EISA SCSI Host Adapter"
+*DPTA701.DeviceDesc="DPT PM2011B1/9x ISA SCSI Host Adapters"
+
+ADP="Adaptec"
+;*************************************************
+;updated and new Adaptec host adapter descriptions
+;*************************************************
+*ADP7770.DeviceDesc="Adaptec AIC-777X EISA SCSI Host Adapter"
+*ADP7771.DeviceDesc="Adaptec AHA-274X EISA SCSI Host Adapter"
+*AD

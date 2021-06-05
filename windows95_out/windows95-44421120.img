@@ -1,0 +1,122 @@
+AL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AdministrativeState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Locked"
+"4"="Unlocked"
+"5"="Not Applicable"
+"6"="Shutting Down"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\7]
+"Name"="Fatal Error Count"
+"Description"="The accumulated fatal error count for this device instance."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\FatalErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\8]
+"Name"="Major Error Count"
+"Description"="The accumulated major error count for this device instance."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\MajorErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\DiskDrive\%ComponentID\31\9]
+"Name"="Warning Error Count"
+"Description"="The accumulated warning error count for this device instance."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\WarningErrorCount"
+
+
+;======================================================
+;      CD-ROM component - same groups as Disk Drive
+;======================================================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID]
+"Name"="CD-ROM Drive"
+"Description"="This component implements a set of groups relating to the CD-ROM Drive."
+
+;=============
+;  Disk Group
+;=============
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23]
+"Name"="Disks"
+"Class"="DMTF|Disks|001"
+"Description"="This group defines the physical attributes of disk mass storage devices in this system."
+"Key"="1,2"
+"^Index"=hex:02,00,00,00
+"^ROW"="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23\1]
+"Name"="Storage Type"
+"Description"="The type of this mass storage device."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalDisk\\DeviceType"
+"!1"="B;IN(0,3)(1,1)(2,1)(3,1)(4,6)(5,8)(6,1)(7,7)(8,1)(9,1)(10,4)(132,7)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23\1\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Hard Disk"
+"4"="Floppy Disk"
+"5"="Optical ROM"
+"6"="Optical WORM"
+"7"="Optical RW"
+"8"="Compact Disk"
+"9"="Flash Disk"
+"10"="Bernoulli"
+"11"="Optical Floppy Disk"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23\2]
+"Name"="Disk Index"
+"Description"="An index into the disk table."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23\3]
+"Name"="Storage Interface Type"
+"Description"="The interface used by this mass storage device."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\PhysicalDisk\\StorageInterfaceType"
+"!1"="B;IN(0,2)(1,4)(2,3)(3,1)(4,1)(5,1)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="SCSI"
+"4"="ESDI"
+"5"="IDE"
+"6"="CMD"
+"7"="IPI"
+"8"="ST506"
+"9"="DSSI"
+"10"="Parallel Port"
+"11"="HIPPI"
+"12"="QIC2"
+"13"="Floppy Disk Interface"
+"14"="PCMCIA"
+"15"="Enhanced ATA/IDE"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\CDROM\%ComponentID\23\4]
+"Name"="Interface Description"
+"Description"="A longer description of the mass storage interface.For example, SCSI2 fast wide."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"

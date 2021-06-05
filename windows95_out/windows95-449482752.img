@@ -1,0 +1,109 @@
+italAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+[DigitalAltAddress]                             0x250
+
+[NumberOfIrqs]                                  4
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                5
+[AltIrq]                                                10
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               7
+[MidiAltIrq]                                    2
+[MidiAltIrq]                                    5
+[MidiAltIrq]                                    10
+
+[NumberOfDmas]                                  3
+[Dma]                                                   1
+[AltDma]                                                0
+[AltDma]                                                3
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [ES488 AudioDrive]
+[CardId]                                                134
+[CardGroup]                                             1
+
+[RmMidiDriverName]                              [sbfm.adv]
+[RmDigitalDriverName]           [sbdig.adv]
+[PmMidiDriverName]                              [a32sbfm.dll]
+[PmDigitalDriverName]           [a32sbdg.dll]
+
+[MidiDriverChunkNumber]                 7
+[DigitalDriverChunkNumber]              6
+
+[NumberOfMidiAddresses]                 2
+[MidiAddress]                                   0x220
+[MidiAltAddress]                                0x240
+
+[NumberOfDigitalAddresses]              2
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x240
+
+[NumberOfIrqs]                                  3
+[Irq]                                                   7
+[AltIrq]                                                2
+[AltIrq]                                                5
+
+[NumberOfMidiIrqs]                              3
+[MidiIrq]                                               7
+[MidiAltIrq]                                    2
+[MidiAltIrq]                                    5
+
+[NumberOfDmas]                                  2
+[Dma]                                                   1
+[AltDma]                                                3
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[Flags]                                                 1 ; number of flags to follow
+[DspEnabled]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Media Vision Pas]
+[CardId]                                                106
+[CardGroup]                                             1
+
+[RmMidiDriverName]                              [pasfm.adv]
+[RmDigitalDriverName]           [pasdig.adv]
+[PmMidiDriverName]                              [a32pasfm.dll]
+[PmDigitalDriverName]           [a32pasdg.dll]
+
+
+[MidiDriverChunkNumber]                 4
+[DigitalDriverChunkNumber]              3
+
+[NumberOfMidiAddresses]                 3
+[MidiAddress]                                   0x220
+[MidiAltAddress]                                0x230
+[MidiAltAddress]                                0x240
+
+[NumberOfDigitalAddresses]              3
+[DigitalAddress]                                0x220
+[DigitalAltAddress]                             0x230
+[DigitalAltAddress]                             0x240
+
+[NumberOfIrqs]                                  8
+[Irq]                                                   5
+[AltIrq]                            

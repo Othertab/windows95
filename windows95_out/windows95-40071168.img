@@ -1,0 +1,92 @@
+hat have changed their dialing rules since 
+the original release of Windows 95.
+
+During Setup, the updated rules are automatically inserted into the 
+[CountryOverrides] section of the Telephon.ini file in the Windows 
+directory.
+
+New Dialing Rules Not Yet in Effect
+-----------------------------------
+The update includes dialing rule changes for France, Finland, and 
+Colombia. However, these new dialing procedures have not yet actually 
+gone into effect in these countries. (The Colombia change is in 
+September 1996, and France and Finland in October 1996). The changes 
+are included now in anticipation of these future changes, because by 
+the time the systems preloaded with this final product reach store 
+shelves in these countries, the changes will have gone into effect.
+
+Reverting to Current Dialing Rules
+----------------------------------
+If you will be testing this product in France, Finland, or Colombia 
+before the new dialing procedures are effective, you will need to use 
+Notepad (or another text editor) to modify your Telephon.ini file. To 
+do this, carry out the following steps:
+
+1. Make a backup copy of your Telephon.ini file (for instance, 
+   Telehon.sav). 
+2. Open the Telephon.ini file in Notepad (or another text editor).
+3. In the [CountryOverrides] section, remove the line that corresponds 
+   to the country for which you want to revert to the existing dialing 
+   procedures.
+
+   For example, to revert to the current rules for France, delete the 
+   line that starts with "Country33=".
+
+4. Restart your computer.
+
+
+
+
+MICROSOFT FAX
+=============
+
+You need a Class 1 fax modem to take advantage of advanced security
+features and to exchange editable binary files using Microsoft Fax.
+You can use Class 2 fax modems to send and receive traditional Group 3
+faxes.
+
+The first time you start a portable PC with a new hardware 
+configuration, Windows 95 may start with all printers off line. This 
+includes the fax printer. To correct this problem, do the following:
+1. Click the Start menu, and then click Settings.
+2. Click Printers, and then double-click the icon for the Microsoft
+   Fax printer.
+3. On the Printer menu, make sure that Work Offline is not checked.
+
+If you are using your computer as a Microsoft Fax NetFax server, do
+not shut down or log off of Microsoft Exchange or Windows 95 while 
+faxes are being sent or are still in the fax queue.
+
+While fax is in automatic answer mode, programs that are not TAPI-
+enabled will not be able to use the modem. This includes all 16-bit 
+communication programs. By default, Microsoft Fax is set up to let 
+a 16-bit program use the modem and will not automatically answer 
+incoming faxes. If you do not use other 16-bit communication programs 
+and you want to have Microsoft Fax automatically answer all incoming 
+calls as fax calls, do the following:
+1. Right click the fax machine icon, located on the taskbar near the 
+   clock.
+2. Click Modem Properties.
+3. Change the answer mode to Answer After 3 Rings.
+
+Individual phone systems and different modems may differ in the amount
+of time they need to answer incoming fax calls. Setting the answer mode   
+to answer after three rings may actually result in the phone's being  
+answered after two or four rings. If you experience this problem, you 
+can adjust the minimum number of rings either higher or lower to   
+compensate for these differences.
+
+CAS modems, such as the Intel Satisfaxion 200i, Satisfaxion 400i, and 
+GammaLink CAS modems, are not supported. A firmware revision is  
+available from Intel for the Satisfaxion 400i that will convert this  
+modem to be Class 1 compatible. For more information, contact Intel.
+
+Do not manually change any of the printer spool settings on the   
+properties sheet or the Microsoft Fax printer.
+
+Microsoft Fax is recommended only for computers with at least 8 MB of 
+memory.
+
+When you send a fax by using the Microsoft Exchange New Message form,
+you cannot have the fax message on the cover page. To send a
+one-page fax 

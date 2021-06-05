@@ -1,0 +1,100 @@
+es, and then double-click Standard 
+      Display Adapter (VGA). Click OK.
+   6. Restart Windows 95.
+
+If Windows 95 still stops during startup:
+
+1. Rename Config.sys and Autoexec.bat and/or
+2. Go to Control Panel, and then double-click the System icon.
+3. Click the Performance tab, and then click the File System 
+   button.
+4. Select the Troubleshooting tab.
+5. Check all of the available boxes, and then click OK in all 
+   dialog boxes and reboot.
+
+
+[Q: I was running Setup for the first time and it stopped during 
+    hardware detection. What do I do now?]
+
+If your computer stops during the hardware-detection phase of 
+Setup, turn off the power on your system, wait 10 seconds, and then 
+turn the power back on. Do not press CTRL-ALT-DEL. When your system 
+restarts, restart Windows using Safe Recovery, which will skip the 
+portion of detection that caused the problem. If your system stops 
+again, it will be in a different detection module. Perform these 
+steps as many times as necessary to allow your system to complete 
+detection.
+
+
+[Q: Setup didn't detect my network card, how do I set up my network 
+    card?]
+
+To add a network adapter: 
+From Control Panel, double click Add New Hardware, and let Windows
+try to detect the network card. If it does not, you can manually 
+select it as follows:
+	
+1. From Control Panel, double click the Network icon.
+2. Click Add, and then click Adapter. 
+3. Find your make and model from the list of manufacturers. 
+4. Change the displayed settings to match your card's 
+   configuration.
+
+   - If it is not a listed network adapter, check the disk that 
+     came with your adapter. If the driver came with Windows or 
+     Lanman (NDIS compatible) disks, then select "Have Disk" 
+     and point it to the path of the Oemsetup.inf file. 
+   - If there are only Novell ODI drivers available, install the 
+     driver in Autoexec.bat using the LSL.com and the <nic_odi>.com 
+     (provided by Novell and the NetWare card manufacturer) and 
+     then select "Existing ODI Driver" from "(detected net drivers)." 
+
+   For more information on how to install the ODI driver, consult 
+   your network card manufacturer.
+
+
+[Q: I am installing Windows 95 from CD-ROM, and the system hangs on 
+    the first boot. Why?]
+
+The most likely reason is that there may be a real-mode and 
+protected-mode conflict with the CD-ROM driver, and Setup is unable 
+to continue. Try remarking out the CD-ROM drivers in Config.sys. If 
+this doesn't solve the problem, then try these troubleshooting 
+procedures:
+
+*Can you boot into Windows in Safe mode? If not, reinstall.
+
+If you can: 
+- Create a Bootlog.txt file to see where it failed.
+- Look for the Detcrash.log file. If it is present, the problem 
+  is with
+  hardware detection.
+- Check Ios.ini and remark out the drivers that are loading in 
+  Config.sys in case there is a problem with these protect-mode 
+  drivers.
+- Check device manager for any conflicts. Don't be afraid to remove 
+  any device from here if you suspect it is the troublemaker.
+- Change the display driver to standard VGA.
+- Try the step-by-step boot. 
+- Rename Autoexec.bat and Config.sys so they don't load on the next 
+  boot.
+
+Copy System.cb to System.ini; very few drivers load here (not even 
+the mouse). If this solves the problem, check your System.ini for 
+any entries made by any third party applications; for example, Adobe 
+Type Manager.
+
+
+[Q: How do I install Microsoft Fax?]
+
+To install Microsoft Fax during Setup, when the Accessories screen 
+is displayed, make sure Microsoft Fax is checked. If you have not selected
+Windows Messaging, you will see a prompt to select it as well.
+
+To install Microsoft Fax after Setup, go to Control Panel, double-
+click the Add/Remove Programs icon, and then click the Windows Setup 
+tab. In the Accessories box, scroll to Microsoft Fax, and make sure it is 
+checked. If you have not selected Windows Messaging, you will see a prompt 
+to select it also.
+
+NOTE: Windows Messaging and Microsoft F

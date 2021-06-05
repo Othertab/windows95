@@ -1,0 +1,123 @@
+yFiles=pe2ndis.ndis2.CopyFiles
+[pe2ndis.ndis2.CopyFiles]
+pe2ndis.dos
+
+; Install ODI
+[pe2odi.odi]
+CopyFiles=pe2odi.odi.CopyFiles
+[pe2odi.odi.CopyFiles]
+pe2odi.com
+
+;****************************************************************************
+; pro4 base section
+;****************************************************************************
+[pro4.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PRO4"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"PRO4$"
+HKR,NDIS\NDIS2,FileName,,"PRO4.DOS"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis2,,"pro4.ndis2"
+
+[pro4.mca.resc]
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOBASE,1,02,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,10,00,00,00
+HKR,NDI\params\IOBASE,resc,1,02,00,00,00
+HKR,NDI\params\IOBASE,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBASE,flag,1,10,00,00,00
+
+[pro4.isa.resc]
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOBASE,1,02,00,00,00
+HKR,,MEMBASE,1,01,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,50,00,00,00
+HKR,NDI\params\IOBASE,resc,1,02,00,00,00
+HKR,NDI\params\IOBASE,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBASE,flag,1,10,00,00,00
+HKR,Ndi\params\MEMBASE,resc,1,01,00,00,00
+HKR,Ndi\params\MEMBASE,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\MEMBASE,flag,1,10,00,00,00
+HKR,NDI\params\MEMBASE,paragraph,,1
+
+; Install NDIS2
+[pro4.ndis2]
+CopyFiles=pro4.ndis2.CopyFiles
+[pro4.ndis2.CopyFiles]
+pro4.dos
+
+
+;****************************************************************************
+; pro4at base section
+;****************************************************************************
+[pro4at.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PRO4AT"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"PRO4AT$"
+HKR,NDIS\NDIS2,FileName,,"PRO4AT.DOS"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis2,,"pro4at.ndis2"
+
+[pro4at.isa.resc]
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOBASE,1,02,00,00,00
+HKR,,DMAChannel,1,03,00,00,00
+HKR,NDI\params\INTLEVEL,resc,1,04,00,00,00
+HKR,NDI\params\INTLEVEL,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTLEVEL,flag,1,10,00,00,00
+HKR,NDI\params\IOBASE,resc,1,02,00,00,00
+HKR,NDI\params\IOBASE,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBASE,flag,1,10,00,00,00
+HKR,NDI\params\DMAChannel,resc,1,03,00,00,00
+HKR,NDI\params\DMAChannel,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMAChannel,flag,1,10,00,00,00
+HKR,NDI\params\DMAChannel,optional,,1
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum number of buffers"
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,40
+HKR,NDI\params\MaxTransmits,min,,3
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+; media
+HKR,NDI\params\MEDIA,ParamDesc,,"Cable Type/16-bit driver"
+HKR,NDI\params\MEDIA,flag,1,10,00,00,00
+HKR,NDI\params\MEDIA,default,,STP
+HKR,NDI\params\MEDIA,type,,enum
+HKR,NDI\params\MEDIA\enum,"STP",,"STP"
+HKR,NDI\params\MEDIA\enum,"UTP",,"UTP"
+; expand ram
+HKR,NDI\params\EXPANDRAM,ParamDesc,,"On board Expanded RAM"
+HKR,NDI\params\EXPANDRAM,flag,1,10,00,00,00
+HKR,NDI\params\EXPANDRAM,default,,YES
+HKR,NDI\params\EXPANDRAM,type,,enum
+HKR,NDI\params\EXPANDRAM\enum,"YES",,"YES"
+HKR,NDI\params\EXPANDRAM\enum,"NO",,"NO"
+
+; Install NDIS2
+[pro4at.ndis2]
+CopyFiles=pro4at.ndis2.CopyFiles
+[pro4at.ndis2.CopyFiles]

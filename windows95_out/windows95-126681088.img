@@ -1,0 +1,173 @@
+etup WOW! from CompuServe"
+"Setup CompuServe 3.0"
+"AT&T WorldNet Signup"
+
+[group4]
+"Online Registration", "C:\WINDOWS\SYSTEM\regwiz.exe /i software\microsoft\windows\currentversion"
+"The Microsoft Network"
+"Sign Up for The Microsoft Network"
+"Notepad", NOTEPAD.EXE
+"Paint", "C:\Progra~1\Access~1\MSPAINT.EXE"
+"Paintbrush"
+"HyperTerminal", "C:\Progra~1\Access~1\Hypert~1",,,,,Hypertrm
+"Calculator", CALC.EXE,,, calc,,Calc
+"Phone Dialer", DIALER.EXE,,,,,Dialer
+"Imaging", WANGIMG.EXE,,,wangimg,,wangimg
+"Image 95"
+"WordPad", "C:\Progra~1\Access~1\WORDPAD.EXE"
+"Dial-Up Networking", EXPLORER.EXE ::{20D04FE0-3AEA-1069-A2D8-08002B30309D}\::{992CFFA0-F557-101A-88EC-00DD010CCC48},RNAUI.DLL,0,,,DialUp
+"Dial-Up Scripting Tool"
+"Direct Cable Connection", DIRECTCC.EXE,,,,,DirectCC
+"Character Map", CHARMAP.EXE,,, charmap,,Charmap
+
+[group0]
+"The Microsoft Network"
+"Send New Message"
+"Open Mailbox"
+"Explorer"
+"Windows Explorer", "Explorer.exe /n,/e,C:\", EXPLORER.EXE, 1,,,Wexplore
+"MS-DOS Prompt"
+"Dosprmpt"
+"MS-DOS Prompt", command.com, PIFMGR.DLL, 0,,C:\WINDOWS,Dosprmpt
+"Windows Messaging", "C:\Progra~1\Window~1\exchng32.exe",,,,,WinMsg
+
+[group11]
+"Mail File Converter"
+"ScanDisk", SCANDSKW.EXE
+"DriveSpace", DRVSPACE.EXE,,,,,Drvspace
+"Compression Agent", C:\Progra~1\Plus!\CMPAGENT.EXE,,,,,CmpAgent
+"Disk Defragmenter", DEFRAG.EXE,,,,,Defrag
+"Backup", "C:\Progra~1\Access~1\BACKUP.EXE"
+"Resource Meter", rsrcmtr.exe,,,,,ResMeter
+"Inbox Repair Tool", "C:\Progra~1\Window~1\scanpst.exe"
+"System Monitor", SYSMON.EXE,,, sysmon,,Sysmon
+"Net Watcher", NETWATCH.EXE,,, netwatch,,Net-Wtch
+
+[desktop]
+"Inbox"
+Inbox
+"Mail"
+"News"
+
+[IE_INTERNET]
+"Internet Explorer v3.0"
+"Internet Setup Wizard"
+
+[IE_PROGRAMS]
+"Internet Explorer", C:\Progra~1\Intern~1\IEXPLORE.EXE,,,,,IEXPLORE
+
+[IE_INET_TOOLS]
+"Internet Explorer", C:\Progra~1\Intern~1\IEXPLORE.EXE,,,,,IEXPLORE
+"Get on the Internet","C:\Progra~1\ICW-In~1\ICWCONN1.EXE"
+"Internet Setup Wizard",,,
+
+[IE_SYS_TOOLS]
+"Internet Setup Wizard"
+"Internet Explorer v3.0"
+"Internet Explorer"
+
+[multimedia]
+"ActiveMovie Control", "rundll32.exe C:\WINDOWS\SYSTEM\amovie.ocx,RunDll",amovie.ocx,-2
+"ActiveMovie File Types","actmovie.exe",actmovie.exe,-303
+
+[group1]
+"Pen Palette"
+"SafeStart Manager"
+"Setup"
+"Windows Setup"
+"Exit Windows"
+MagiCDisc
+"Navigator"
+"Net Watcher"
+"Log On/Off"
+Smuggler
+FN-ESSE
+"MaxTime"
+"Icon Hear It"
+"IHearIt"
+"Program Manager"
+
+[progman.only]
+PMGroup3=Main
+
+[PMGroup3]
+"Printers","rundll32.exe shell32.dll,SHHelpShortcuts_RunDLL PrintersFolder",shell32.dll,37
+"Control Panel",control.exe,shell32.dll,35
+"Windows Explorer", "Explorer.exe /n,/e,C:\", EXPLORER.EXE, 1
+"MS-DOS Prompt"
+"MS-DOS Prompt", command.com, PIFMGR.DLL, 0
+"File Manager", WINFILE.EXE
+
+[group3]
+"Printers"
+"Windows Explorer"
+"Control Panel"
+WinMode
+
+[groupDelDoc]
+"Readme"
+
+[groupDoc]
+"readme","C:\WINDOWS\Readme.txt"
+
+[CpqUtils]
+"SafeStart Manager"
+WinMode
+
+[ATTUTILS]
+"AT&T Configuration Manager"
+
+[MSTools]
+"Undelete"
+
+[group1_USA]
+"Windows Setup"
+"Setup"
+"Exit Windows"
+"Navigator"
+"Net Watcher"
+"Log On/Off"
+"MaxTime"
+"Icon Hear It"
+"IHearIt"
+
+[MSTools_USA]
+"Undelete"
+
+[VGAUTIL]
+Setres
+
+[MailNews1]
+"Internet Mail", "C:\WINDOWS\EXPLORER.EXE /root,C:\WINDOWS\Internet Mail.{89292102-4755-11cf-9DC2-00AA006C2B84}", C:\WINDOWS\SYSTEM\mailnews.dll, -2
+
+[group101]
+"Mail"
+"News"
+"Read Me (Mail and News)"
+
+[group102]
+"Internet Mail"
+"Internet News"
+"Read Me (Mail and News)"
+
+[MailNews2]
+"Internet News", "C:\WINDOWS\EXPLORER.EXE /root,C:\WINDOWS\Internet News.{89292103-4755-11cf-9DC2-00AA006C2B84}", C:\WINDOWS\SYSTEM\mailnews.dll, -3
+
+[group6]
+"Minesweeper", WINMINE.EXE,,, winmine,,WinMine
+"Hearts", MSHEARTS.EXE,,, hearts
+"FreeCell", FREECELL.EXE,,, freecell
+"Solitaire", SOL.EXE,,,,,Solitair
+
+[OldGames]
+FreeCell
+Hearts
+Minesweeper
+WinMine
+Solitaire
+Solitair
+
+[group12]
+"Sound Recorder", SNDREC32.EXE,,,,,Recorder
+"Volume Control", SNDVOL32.EXE,,,,,Volume
+"Media Player", MPLAYER.EXE,,,,,MPla

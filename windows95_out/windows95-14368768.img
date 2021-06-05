@@ -1,0 +1,179 @@
+ys="ms$ne2clone","dlk$de220","en165"
+LanManKeys="accne","aexndis"
+ODIKeys="ne2000","de220","nr"
+NovellIDs=0x03ff,0x01b5,0x0446
+
+[*pnp828c]	;AMD PCNET Family Ethernet Adapter (PCI&ISA)
+NCDID=652
+DeviceIDs=*pnp828c
+Flags=ISA,OptionalIO,OptionalIRQ,OptionalDMA,NoDetect
+IO1=32,%0
+IRQ1=1,%0
+DMA1=1,%0
+WFWKeys="ms$pcntn3","ms$pcntnd","pcntn3","pcntnd"
+LanManKeys="pcntnd"
+
+[*pnp8002]	;Proteon ProNET-4/16 EISA Token Ring (P1990)
+NCDID=2
+DeviceIDs=*pnp8002
+Flags=EISA,NoDetect
+WFWKeys="ms$pro19"
+LanManKeys="ndis99xr"
+ODIKeys="osh99xr"
+NovellIDs=0x0077
+
+[*pnp81d8]	;Madge Smart 16/4 Ringnode (All ISA Types)
+NCDID=472
+DeviceIDs=*pnp81d8
+Flags=ISA,OptionalDMA,NoDetect
+IO1=32,%0
+IRQ1=1,%5
+DMA1=1,%0
+WFWKeys="mdg$mdgxt","ms$mdgxt","mdg$mdgat","ms$mdgat","mdg$mdgsm16"
+LanManKeys="smartnd"
+ODIKeys="madgeodi","smart"
+
+[*pnp8007]	;Madge Smart 16/4 EISA Ringnode
+NCDID=7
+DeviceIDs=*pnp8007,*MDG0002
+Flags=EISA,NoDetect
+WFWKeys="mdg$mdgeisa","ms$mdgeisa"
+
+[*pnp807a]	;Madge Smart 16/4 MC Ringnode
+NCDID=122
+DeviceIDs=*pnp807a,mca_002d
+Flags=MCA,NoDetect
+WFWKeys="mdg$mdgmc","ms$mdgmc"
+
+[*pnp8387]	;Dial-Up Adapter
+NCDID=903
+DeviceIDs=*pnp8387
+Flags=ISA,NoReport,NoDetect
+WFWKeys="ms$pppmac","asymac"
+LanManKeys="asymac","!asy"
+
+[*pnp8388]	;MS IPX Protocol Stack
+NCDID=904
+DeviceIDs=*pnp8388
+Flags=ISA,NoReport,NoDetect
+NovellIDs=0x0437
+
+[*pnp828e]	;Allied Telesys
+NCDID=654
+DeviceIDs=*pnp828e
+Flags=ISA,OptionalIRQ,NoDetect
+IO1=32,%0
+IRQ1=1
+LanManKeys="RE2000","ATIMAC"
+ODIKeys="RE2000"
+NovellIDs=0x2352
+
+[*pnp828f]	;Fujitsu FMV-181/182
+NCDID=655
+DeviceIDs=*pnp828f
+Flags=ISA,NoDetect
+IO1=16,%0
+IRQ1=1,%0
+LanManKeys="FMV-18X"
+ODIKeys="FJN00I"
+
+[*pnp8290]	;MELCO
+NCDID=656
+DeviceIDs=*pnp8290
+Flags=ISA,NoDetect
+IO1=32,%0,%1
+IRQ1=1,%0
+LanManKeys="LGYAT"
+ODIKeys="LGYAT"
+NovellIDs=0x2393
+
+[*pnp8291]	;Soliton SB-AT01
+NCDID=657
+DeviceIDs=*pnp8291
+Flags=ISA,NoDetect
+IO1=32,%7
+IRQ1=1,%0
+LanManKeys="SBAT"
+ODIKeys="FNAT"
+NovellIDs=0x2358
+
+[*pnp8292]	;TDK LAK_AX
+NCDID=658
+DeviceIDs=*pnp8292
+Flags=ISA,NoDetect
+IO1=32,%0
+IRQ1=1,%4
+LanManKeys="ELXCD"
+ODIKeys="LANXAX"
+
+[*pnp8293]	;Toshiba ISA LAN Card
+NCDID=659
+DeviceIDs=*pnp8293
+Flags=ISA,NoDetect
+IO1=32,%0
+Mem1=0x10000,%0
+IRQ1=1,%0
+LanManKeys="TSBETH","TOIETH"
+ODIKeys="TSBODI"
+NovellIDs=0x00cd
+
+;*** IEEE Vendor ID info.
+; 
+;   How do you obtain an official IEEE globally assigned mfr's address?
+; 	Contact:
+; 		Insititute of Electrical & Electronics Engineers
+; 		IEEE Standards Dept
+; 		445 Hoes Lane Piscataway N.J. 08855-1331
+; 
+; 	or contact directly Anne O'Neill at IEEE stds dept
+; 		voice: 908-562-3809
+; 		  FAX: 908-562-1571
+; 
+; 	 An official number costs $1000.00
+; 
+;   An * in the first column indicates updates since the Nov 91 posting
+;   As of 9201 IEEE has offically assigned 865 global mfr vendor addresses.
+; 
+;   Last update: 920326
+; 
+; 	00000C	Cisco
+; 	00000F	NeXt
+; 	000010	Sytdek
+;     * 000015	Datapoint Corporation
+; 	00001B	Novell now Eagle Technology
+; 	00001D	Cabletron
+; 	000020	DIAB (Data Intdustrier AB)
+; 	000022	Visual Technology
+; 	00002A	TRW
+; 	000044	Castelle
+;     * 000046	ISC-Bunker Ramo, An Olivetti Company
+;     * 00005A	SK (Schneider & Koch in Europe and Syskonnect outside of
+; 		Euorpe)
+; 	00005D	RCE
+; 	00005E	IANA
+; 	000062	Honeywell
+; 	000065	Network General
+; 	00006B	MIPS
+;     * 00006E	Artisoft Inc
+;     * 000077	Interphase Corporation
+; 	00007A	Ardent
+; 	000081	Synoptics
+;     * 000084	ADI Systems Inc
+; 	000086	Megahertz Corporation  (Gateway Communications Inc. also
+; 		using ?????)
+; 	000089	Cayman Systems
+; 	000093	Proteon
+; 	000094	Asante
+;     * 000095	Sony/Tektronix
+; 	00009F	Ameristar Technology
+; 	0000A0	Sanyo Electronics
+; 	0000A2	Wellfleet
+; 	0000A3	NAT (Network Application Technology)
+; 	0000A4	Acorn
+;     * 0000A5	Compatible Systems Corporation
+; 	0000A6	Network General
+; 	0000A7	NCD  (Network Computing Devices)
+; 	0000A9	Network Systems
+; 	0000AA	Xerox
+; 	0000B0	RND (RAD Network Devices)
+; 	0000B3	CIMLin

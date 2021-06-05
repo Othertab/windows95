@@ -1,0 +1,133 @@
+=160-16f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=170-17f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=1800-180f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=2800-280f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=3800-380f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=4800-480f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=5800-580f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=6800-680f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=7800-780f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=8800-880f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=9800-980f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=a800-a80f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=b800-b80f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=c800-c80f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=d800-d80f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=e800-e80f
+QueryIOMem: Caller=DETECTFD18XX, rcQuery=0
+	IO=f800-f80f
+Checking for: BusLogic SCSI Host Adapter
+QueryIOMem: Caller=DETECTBUSLOGIC, rcQuery=0
+	IO=330-333
+QueryIOMem: Caller=DETECTBUSLOGIC, rcQuery=0
+	IO=334-337
+QueryIOMem: Caller=DETECTBUSLOGIC, rcQuery=0
+	IO=234-237
+QueryIOMem: Caller=DETECTBUSLOGIC, rcQuery=0
+	IO=134-137
+QueryIOMem: Caller=DETECTBUSLOGIC, rcQuery=0
+	IO=130-133
+QueryIOMem: Caller=DETECTBUSLOGIC, rcQuery=0
+	IO=230-233
+Checking for: Adaptec AHA-154x/AHA-164x SCSI Host Adapter
+QueryIOMem: Caller=DETECTAHA154X, rcQuery=0
+	IO=330-333
+QueryIOMem: Caller=DETECTAHA154X, rcQuery=0
+	IO=334-337
+QueryIOMem: Caller=DETECTAHA154X, rcQuery=0
+	IO=234-237
+QueryIOMem: Caller=DETECTAHA154X, rcQuery=0
+	IO=134-137
+QueryIOMem: Caller=DETECTAHA154X, rcQuery=0
+	IO=130-133
+QueryIOMem: Caller=DETECTAHA154X, rcQuery=0
+	IO=230-233
+Checking for: Adaptec AIC-6x60 ISA Single-Chip SCSI Host Adapter
+QueryIOMem: Caller=DETECTAIC6X60, rcQuery=0
+	IO=140-15f
+QueryIOMem: Caller=DETECTAIC6X60, rcQuery=0
+	IO=340-35f
+Checking for: DPT 20x1 ISA SCSI Host Adapter
+QueryIOMem: Caller=DETECTDPTISA, rcQuery=0
+	IO=1f0-1f8
+QueryIOMem: Caller=DETECTDPTISA, rcQuery=0
+	IO=170-178
+QueryIOMem: Caller=DETECTDPTISA, rcQuery=0
+	IO=330-338
+QueryIOMem: Caller=DETECTDPTISA, rcQuery=0
+	IO=230-238
+Checking for: Standard IDE/ESDI Hard Disk Controller
+QueryIOMem: Caller=DETECTESDI, rcQuery=0
+	IO=1f0-1f7
+QueryIOMem: Caller=DETECTESDI, rcQuery=0
+	IO=3f6-3f6
+Detected: *PNP0600\0000 = [15] Standard IDE/ESDI Hard Disk Controller
+	IO=1f0-1f7,3f6-3f6
+	IRQ=14
+QueryIOMem: Caller=DETECTESDI, rcQuery=0
+	IO=170-177
+QueryIOMem: Caller=DETECTESDI, rcQuery=0
+	IO=376-376
+Detected: *PNP0600\0001 = [16] Standard IDE/ESDI Hard Disk Controller
+	IO=170-177,376-376
+	IRQ=15
+Checking for: Adaptec AHA274x/AIC-777x EISA SCSI Host Adapter
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=c00-cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=1c00-1cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=2c00-2cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=3c00-3cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=4c00-4cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=5c00-5cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=6c00-6cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=7c00-7cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=8c00-8cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=9c00-9cff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=ac00-acff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=bc00-bcff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=cc00-ccff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=dc00-dcff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=ec00-ecff
+QueryIOMem: Caller=DETECTAIC777X, rcQuery=0
+	IO=fc00-fcff
+Checking for: Parallel Printer Port
+QueryIOMem: Caller=DETECTLPT, rcQuery=0
+	IO=3bc-3be
+Checking for: Xircom PE3 Network Adapter (VerifyKey=3bc)
+QueryIOMem: Caller=DETECTLPT, rcQuery=0
+	IO=3bc-3be
+Checking for: Trantor T3x8 SCSI Adapter (VerifyKey=3bc)
+QueryIOMem: Caller=DETECTLPT, rcQuery=0
+	IO=3bc-3be
+QueryIOMem: Caller=DETECTLPT, rcQuery=0
+	IO=378-37a
+QueryIOMem: Caller=D

@@ -1,0 +1,332 @@
+  MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1008
+   H_DISP=768
+   H_FP=35
+   H_SYNC=80
+   H_BP=125
+
+   V_TOTAL=625
+   V_DISP=576
+   V_FP=3
+   V_SYNC=3
+   V_BP=43
+
+[800*600*8@56Hz.VESA]
+   Hz=56.250
+   kHz=35.160
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=24
+   H_SYNC=72
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=2
+   V_BP=22
+
+[800*600*15@56Hz.VESA]
+   Hz=56.250
+   kHz=35.160
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=24
+   H_SYNC=72
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=2
+   V_BP=22
+
+[800*600*16@56Hz.VESA]
+   Hz=56.250
+   kHz=35.160
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=24
+   H_SYNC=72
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=2
+   V_BP=22
+
+[800*600*32@56Hz.VESA]
+   Hz=56.250
+   kHz=35.156
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=24
+   H_SYNC=66
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=2
+   V_BP=22
+
+[800*600*8@60Hz.VESA]
+   Hz=60.320
+   kHz=37.880
+   MHz=40.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=40
+   H_SYNC=128
+   H_BP=88
+
+   V_TOTAL=628
+   V_DISP=600
+   V_FP=1
+   V_SYNC=4
+   V_BP=23
+
+[800*600*15@60Hz.VESA]
+   Hz=60.320
+   kHz=37.880
+   MHz=40.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=40
+   H_SYNC=128
+   H_BP=88
+
+   V_TOTAL=628
+   V_DISP=600
+   V_FP=1
+   V_SYNC=4
+   V_BP=23
+
+[800*600*16@60Hz.VESA]
+   Hz=60.320
+   kHz=37.880
+   MHz=40.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=40
+   H_SYNC=128
+   H_BP=88
+
+   V_TOTAL=628
+   V_DISP=600
+   V_FP=1
+   V_SYNC=4
+   V_BP=23
+
+[800*600*32@60Hz.VESA]
+   Hz=60.320
+   kHz=37.880
+   MHz=40.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1056
+   H_DISP=800
+   H_FP=40
+   H_SYNC=128
+   H_BP=88
+
+   V_TOTAL=628
+   V_DISP=600
+   V_FP=1
+   V_SYNC=4
+   V_BP=23
+
+[800*600*32@60Hz.MIRO]
+   Hz=60.320
+   kHz=37.880
+   MHz=38.789
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=40
+   H_SYNC=128
+   H_BP=56
+
+   V_TOTAL=628
+   V_DISP=600
+   V_FP=1
+   V_SYNC=4
+   V_BP=23
+
+[800*600*32@69Hz.DRAM]
+   Hz=68.616
+   kHz=42.885
+   MHz=44.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1026
+   H_DISP=800
+   H_FP=12
+   H_SYNC=64
+   H_BP=150
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*8@70Hz.VESA]
+   Hz=70.140
+   kHz=43.840
+   MHz=44.890
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*15@70Hz.VESA]
+   Hz=70.140
+   kHz=43.840
+   MHz=44.890
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*16@70Hz.VESA]
+   Hz=70.140
+   kHz=43.840
+   MHz=44.890
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*32@70Hz.VESA]
+   Hz=70.313
+   kHz=43.945
+   MHz=45.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1024
+   H_DISP=800
+   H_FP=16
+   H_SYNC=80
+   H_BP=128
+
+   V_TOTAL=625
+   V_DISP=600
+   V_FP=1
+   V_SYNC=3
+   V_BP=21
+
+[800*600*8@72Hz.VESA]
+   Hz=72.190
+   kHz=48.080
+   MHz=50.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1040
+   H_DISP=800
+   H_FP=56
+   H_SYNC=120
+   H_BP=64
+
+   V_TOTAL=666
+   V_DISP=600
+   V_FP=37
+   V_SYNC=6
+   V_BP=23
+
+[800*600*15@72Hz.VESA]
+   Hz=72.190
+   kHz=48.080
+   MHz=50.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1040
+   H_DISP=800
+   H_FP=56
+   H_SYNC=120
+   H_BP=64
+
+   V_T

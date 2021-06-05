@@ -1,0 +1,332 @@
+   Hz=66.670
+   kHz=35.000
+   MHz=30.240
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=864
+   H_DISP=640
+   H_FP=64
+   H_SYNC=64
+   H_BP=96
+
+   V_TOTAL=525
+   V_DISP=480
+   V_FP=3 
+   V_SYNC=3
+   V_BP=39
+
+[640*480*32@67Hz.APPL]
+   Hz=66.670
+   kHz=35.000
+   MHz=30.240
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=864
+   H_DISP=640
+   H_FP=64
+   H_SYNC=64
+   H_BP=96
+
+   V_TOTAL=525
+   V_DISP=480
+   V_FP=3 
+   V_SYNC=3
+   V_BP=39
+
+[640*480*8@72Hz.VESA]
+   Hz=72.810
+   kHz=37.860
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=24
+   H_SYNC=40
+   H_BP=128
+
+   V_TOTAL=520
+   V_DISP=480
+   V_FP=9
+   V_SYNC=3
+   V_BP=28
+
+[640*480*15@72Hz.VESA]
+   Hz=72.810
+   kHz=37.860
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=24
+   H_SYNC=40
+   H_BP=128
+
+   V_TOTAL=520
+   V_DISP=480
+   V_FP=9
+   V_SYNC=3
+   V_BP=28
+
+[640*480*16@72Hz.VESA]
+   Hz=72.810
+   kHz=37.860
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=24
+   H_SYNC=40
+   H_BP=128
+
+   V_TOTAL=520
+   V_DISP=480
+   V_FP=9
+   V_SYNC=3
+   V_BP=28
+
+[640*480*32@72Hz.VESA]
+   Hz=72.810
+   kHz=37.860
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=24
+   H_SYNC=40
+   H_BP=128
+
+   V_TOTAL=520
+   V_DISP=480
+   V_FP=9
+   V_SYNC=3
+   V_BP=28
+
+[640*480*8@75Hz.VESA]
+   Hz=75.000
+   kHz=37.500
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=16
+   H_SYNC=64
+   H_BP=120
+
+   V_TOTAL=500
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=16
+
+[640*480*15@75Hz.VESA]
+   Hz=75.000
+   kHz=37.500
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=16
+   H_SYNC=64
+   H_BP=120
+
+   V_TOTAL=500
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=16
+
+[640*480*16@75Hz.VESA]
+   Hz=75.000
+   kHz=37.500
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=16
+   H_SYNC=64
+   H_BP=120
+
+   V_TOTAL=500
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=16
+
+[640*480*32@75Hz.VESA]
+   Hz=75.000
+   kHz=37.500
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=16
+   H_SYNC=64
+   H_BP=120
+
+   V_TOTAL=500
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=16
+
+[640*480*8@80Hz.MIRO]
+   Hz=80.040
+   kHz=40.980
+   MHz=34.750
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=512
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=28
+
+[640*480*15@80Hz.MIRO]
+   Hz=80.040
+   kHz=40.980
+   MHz=34.750
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=512
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=28
+
+[640*480*16@80Hz.MIRO]
+   Hz=80.040
+   kHz=40.980
+   MHz=34.750
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=512
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=28
+
+[640*480*32@80Hz.MIRO]
+   Hz=80.040
+   kHz=40.980
+   MHz=34.750
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=512
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=28
+
+[640*480*8@85Hz.VESA]
+   Hz=85.008
+   kHz=43.269
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=32
+   H_SYNC=48
+   H_BP=112
+
+   V_TOTAL=509
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=25
+
+[640*480*15@85Hz.VESA]
+   Hz=85.008
+   kHz=43.269
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=32
+   H_SYNC=48
+   H_BP=112
+
+   V_TOTAL=509
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=25
+
+[640*480*16@85Hz.VESA]
+   Hz=85.008
+   kHz=43.269
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=32
+   H_SYNC=48
+   H_BP=1

@@ -1,0 +1,86 @@
+IR connection by exiting 
+   HyperTerminal on both computers. When you are prompted to save 
+   the session, click Yes. This saves the direct IR connection 
+   setup information as an icon in the HyperTerminal main folder, 
+   enabling you to double-click this icon to restart one side of 
+   the HyperTerminal direct IR connection.
+
+Viewing Network Neighborhood Over an IR Link:
+
+The version 2.0 IR communications driver enables a computer with 
+an IR device either a built-in device or an adapter) to connect to 
+a local area network LAN) through an IrLan access point device acting 
+as the network adapter for the computer. An IrLan access point device 
+is hardware that supports both a LAN network interface controller 
+(NIC) and an infrared transceiver. Local area network access over 
+an IR link has been tested with the following IrLan access point 
+devices: the Extended Systems ESI-9910 JetEye Net Plus and the 
+Hewlett-Packard NetBeam IR Infrared LAN Adapter. 
+
+To test a computer's ability to use a local area network (LAN) 
+over an IR link, first install the IR communications driver on 
+the computer. Then carry out the following steps:
+
+1. Run IR Monitor.
+
+2. Turn on the IrLan access point device, such as the Extended 
+   Systems ESI-9910 JetEye Net Plus, and place the infrared 
+   receiver/transmitter of the IrLan access point device within 
+   range of the computer's infrared device.
+
+3. When the computer infrared device and the IrLan access point 
+   infrared device discover each other, the Infrared Monitor 
+   interface indicates "Infrared communication in progress."
+
+4. When the Infrared Monitor interface shows that the IR link 
+   has been established, click the Network Neighborhood icon to 
+   display the icons of the remote computers that can be accessed 
+   through the IrLan access point device. There can be a delay of 
+   some seconds before the remote computer icons are displayed. 
+
+If you have trouble accessing the LAN, see "Troubleshooting" for 
+more information.
+
+Step 3. Running Other IR-Capable Programs
+---------------------------------------------
+Most programs that can communicate over a null modem cable that 
+connects serial ports on two Windows 95 computers should also be 
+able to communicate over an IR link. The procedure for setting up 
+and using the IR link with these other communicating programs will 
+probably be similar to the procedure used in "Exchanging Data Between 
+Two Computers," which uses HyperTerminal to validate the installation 
+of the IR communications driver. The procedure for running the 
+Windows 95 Direct Cable Connection is provided in detail in "Notes 
+on Running Direct Cable Connection Over an IR Link."
+
+An Optional Step: Removing the IR Communications Driver
+-------------------------------------------------------
+The IR communications driver can be removed either by using Add/Remove 
+Programs in Control Panel or by using the Device Manager. Both methods 
+are documented in this file, but using Add/Remove Programs is the 
+preferred method.
+
+To remove the IR communications driver by using Control Panel:
+
+1. Click the Start button, point to Settings, and then click Control 
+   Panel.
+2. Double-click the Add/Remove Programs icon.
+3. Click Infrared Support for Windows 95, and then click Add/Remove.
+4. When you are prompted to do so, restart your computer.
+
+To remove the IR communications driver by using Device Manager:
+
+1. Right-click the My Computer icon, click Properties, and then click 
+   the Device Manager tab.
+2. Make sure that View Devices By Type is selected, then click the 
+   plus sign at the left of the Infrared device class label.
+3. Click the infrared device name, and then click Remove.
+4. When you are prompted to do so, click OK to confirm the device 
+   removal.
+
+After Device Manager successfully removes the infrared device 
+installation information from the computer, the Infrared device 
+class label disappears from the System Properties dialog box.
+
+NOTE:
+The Infrared Monitor icon might st

@@ -1,0 +1,107 @@
+00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, DialSuffix,, ""
+
+[Modem9.AddReg]   
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 33,03,00,00, 00,96,00,00, 80,25,00,00
+
+[Modem8.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,4b,00,00, 80,25,00,00
+HKR, Settings, ErrorControl_On,, "\N3"
+HKR, Settings, ErrorControl_Forced,, "\N2"
+HKR, Settings, DialSuffix,, ""
+
+[Modem7.AddReg]
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, 00,00,00,00, 00,00,00,00, 00,00,00,00, 30,03,00,00, 00,96,00,00, 00,96,00,00
+
+[Modem6.AddReg]
+HKR,, Properties, 1, 00,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 32,03,00,00, 00,96,00,00, 00,96,00,00
+HKR,, InactivityScale, 1, 01,00,00,00
+
+[Modem5.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, ErrorControl_Cellular,, "\N7&J2S7=90S10=60"
+HKR, Settings, ErrorControl_Cellular_Forced,, "\N6&J2S7=90S10=60"
+HKR, Settings, ErrorControl_On,, "\N7"
+HKR, Settings, ErrorControl_Forced,, "\N6"
+
+[Modem4.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, ErrorControl_Cellular,, "\N7&J2S7=90S10=60"
+HKR, Settings, ErrorControl_Cellular_Forced,, "\N6&J2S7=90S10=60"
+HKR, Settings, ErrorControl_On,, "\N7"
+HKR, Settings, ErrorControl_Forced,, "\N6"
+HKR, Settings, DialSuffix,, ""
+
+[Modem3.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, DialSuffix,, ""
+HKR, Settings, ErrorControl_On,, "\N7"
+HKR, Settings, ErrorControl_Forced,, "\N6"
+
+[Modem2.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, ErrorControl_Forced,, "\N5"
+
+[Modem1.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, ErrorControl_On,, "\N7"
+HKR, Settings, ErrorControl_Forced,, "\N6"
+HKR, Init, 2,, "AT&F&D2&C1\V1S0=0E0V1W2S90=249<cr>"
+
+[Strings]
+Mfg = "Motorola"
+
+Modem28="Motorola Lifestyle 28.8 Internal" 
+Modem27PNP="Motorola BitSURFR Plug & Play"
+Modem27="Motorola BitSURFR"                
+Modem26="Motorola V.3225 or V.3229"
+Modem25="Motorola 3220 or 3220 Plus"
+Modem24="Motorola 3220 Plus"
+Modem23="Motorola 3220"
+Modem22="Motorola Modem"
+Modem21="Motorola 3260"
+Modem20PNP="Lifestyle 28.8 V.34 Plug & Play"
+Modem20="Lifestyle 28.8 External"
+Modem19PNP="Power 28.8 V.34 Plug & Play"
+Modem19="Motorola Power 28.8 External"
+Modem18="Motorola V.34R"
+Modem17PNP="Motorola TA210 Plug & Play"
+Modem17="Motorola TA210"
+Modem16="Motorola Power 14.4 PCMCIA"
+Modem15="Motorola Lifestyle 14.4 PCMCIA"
+Modem14="Motorola 3260 FAST"
+Modem12="Motorola FasTalk 32x"
+Modem11="Motorola V.3257"
+Modem10="Motorola V.3229"
+Modem9 ="Motorola V.3227"
+Modem8 ="Motorola V.3225"
+Modem7 ="Motorola TA110 - TA120"
+Modem6 ="Motorola PCTA120"
+Modem5 ="Motorola CELLect 14.4"
+Modem4 ="Motorola CELLect 14.4 PCMCIA"
+Modem3 ="Motorola FasTalk FAX32bx"
+Modem2 ="Motorola FasTalk II"
+Modem1PNP="Motorola V.3400 Plug & Play"
+Modem1 ="Motorola V.3400"
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*vcomm
+HKR,,PortSubClass,1,02
+HKR,,ConfigDialog,,modemui.dll
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages" 
+HKR, Init, 1,, "AT<cr>"
+HKR, Responses, "<cr><lf>OK<cr><lf>", 1, 00, 00, 00,00,00,00, 00,00,00,00 
+HKR, Responses, "<cr><lf>ERROR<cr><lf>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "0<cr>", 1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "2<cr>", 1, 08, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "4<cr>", 1, 03, 00, 00,00,00,00, 00,00,00,00
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[INTERNAL]
+HKR,, DeviceType, 1, 02
+
+[PCMCIA]
+HKR,,Por

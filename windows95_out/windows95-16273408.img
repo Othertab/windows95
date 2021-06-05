@@ -1,0 +1,183 @@
+
+DMAConfig=1 , 3
+
+[ESS1481.LC1]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1 , 3
+
+[ESS1481.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IOConfig=388-389
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1 , 3
+
+[ESS6881.LC1]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[ESS6881.LC2]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[ESS1681.LC1]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IOConfig=388-38B
+IOConfig=300-301 , 310-311 , 320-321 , 330-331
+IRQConfig=5 , 7 , 9 , 10
+IRQConfig=5 , 7 , 9 , 10, 11
+DMAConfig=0 , 1 , 3
+
+[ESS1681.LC2]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[ESS1681.LC3]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IOConfig=300-301 , 310-311 , 320-321 , 330-331
+IRQConfig=5 , 7 , 9 , 10
+IRQConfig=5 , 7 , 9 , 10, 11
+DMAConfig=0 , 1 , 3
+
+[ESS1681.LC4]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[ESS1681.LC5]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 230-23F , 240-24F , 250-25F
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[*PNPB000.LC1]
+ConfigPriority=HARDRECONFIG
+IOConfig=210-21F , 220-22F , 230-23F , 240-24F , 250-25F , 260-26F
+IOConfig=388-389
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1
+
+[*PNPB000.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=210-21F , 220-22F , 230-23F , 240-24F , 250-25F , 260-26F
+IOConfig=380-38F
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1
+
+[*PNPB001.LC1]
+ConfigPriority=HARDRECONFIG
+IOConfig=210-21F , 220-22F , 230-23F , 240-24F , 250-25F , 260-26F
+IOConfig=388-389
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1
+
+[*PNPB001.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=210-21F , 220-22F , 230-23F , 240-24F , 250-25F , 260-26F
+IOConfig=380-38F
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1
+
+[*PNPB002.LC1]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[*PNPB002.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IOConfig=380-38F
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[SB16.LC1]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+DMAConfig=5 , 6 , 7
+
+[SB16.LC2]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[SB16.LC3]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+DMAConfig=5 , 6 , 7
+
+[SB16.LC4]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[SB16.LC5]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IOConfig=330-331, 300-301
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+DMAConfig=5 , 6 , 7
+
+[SB16.LC6]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IOConfig=330-331, 300-301
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[SB16.LC7]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IOConfig=330-331, 300-301
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+DMAConfig=5 , 6 , 7
+
+[SB16.LC8]
+ConfigPriority=NORMAL
+IOConfig=220-22F , 240-24F , 260-26F , 280-28F
+IOConfig=330-331, 300-301
+IOConfig=388-38B
+IRQConfig=5 , 7 , 9 , 10
+DMAConfig=0 , 1 , 3
+
+[*PNPB004.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=210-21F , 220-22F , 230-23F , 240-24F , 250-25F , 260-26F
+IOConfig=388-389
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1
+
+[PA3D.LC1]
+ConfigPriority=NORMAL
+IOConfig=201-201
+IOConfig=380-381
+IOConfig=210-21F, 220-22F, 230-23F, 240-24F, 250-25F, 260-26F
+IOConfig=388-38B
+IRQConfig=3 , 5 , 7 , 9 , 10
+DMAConfig

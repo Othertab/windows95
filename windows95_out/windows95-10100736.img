@@ -1,0 +1,117 @@
+\autoexec.bat\Order,KeyOrder,,"pwmove"
+
+HKR,Ndi\autoexec.bat\pwmove,Line,,"call %26%\_pwmove.bat %26% `pcsa`"
+HKR,Ndi\autoexec.bat\pwmove,Search,,"*startnet*"
+HKR,Ndi\autoexec.bat\pwmove,Replace,,""
+HKR,Ndi\autoexec.bat\pwmove,Skip,,"*_pwmove*"
+HKR,Ndi\autoexec.bat\pwmove,Position,1,00,00,00,00
+
+
+
+[DEC50NDIS.inst]
+UpdateInis=DEC50NDIS.Inis
+AddReg=DEC50NDIS.inst.reg
+CopyFiles=DEC50NDIS.Copyfiles.sys,DEC50NDIS.Copyfiles.winboot
+
+[DEC50NDIST.inst]
+UpdateInis=DEC50NDIS.Inis
+AddReg=DEC50NDIST.inst.reg
+CopyFiles=DEC50NDIS.Copyfiles.sys,DEC50NDIST.Copyfiles.winboot
+
+; Do Ini updates need to be done?  is Addreg section right?
+[DEC50ODI.inst]
+UpdateInis=DEC50NDIS.Inis
+AddReg=DEC50ODI.inst.reg
+CopyFiles=DEC50NDIS.Copyfiles.sys,DEC50ODI.Copyfiles.winboot
+
+[DEC50UPG.inst]
+UpdateInis=DEC50NDIS.Inis
+AddReg=DEC50NDIS.inst.reg
+CopyFiles=DEC50NDIS.Copyfiles.sys,DEC50UPG.Copyfiles.winboot
+
+[DEC50NDIS.inst.reg]
+HKR,,DevLoader,,*ndis
+;HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",PATHWRKS
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",Name,,"PATHWORKS"
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",ProviderPath,,"pathwrks.drv"
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",Description,,"DEC PATHWORKS"
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",NetID,1,00,00,00,00
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",Windows31DLL,1,01,00,00,00
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllndis.exe,,low
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",ipxndis.exe,,low
+HKR,,DeviceVxDs,,decpw.386
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",StaticVxD,,"decpw.386"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",Start,1,00
+
+[DEC50NDIST.inst.reg]
+HKR,,DevLoader,,*ndis
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllndist.exe,,low
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",ipxndis.exe,,low
+HKR,,DeviceVxDs,,decpw.386
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",StaticVxD,,"decpw.386"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",Start,1,00
+
+[DEC50ODI.inst.reg]
+HKR,,DevLoader,,*ndis
+;HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",PATHWRKS
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",Name,,"PATHWORKS"
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",ProviderPath,,"pathwrks.drv"
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",Description,,"DEC PATHWORKS"
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",NetID,1,00,00,00,00
+;HKLM,"SYSTEM\CurrentControlSet\Services\PATHWRKS\NetworkProvider",Windows31DLL,1,01,00,00,00
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",dllodi.exe,,low
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",ipxodi.exe,,low
+HKR,,DeviceVxDs,,decpw.386
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",StaticVxD,,"decpw.386"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",Start,1,00
+
+
+[DEC50NDIS.Inis]
+system.ini,386Enh,,"NetHeapSize=64"
+system.ini,386Enh,,"DNETCriticalSection=FALSE"
+system.ini,386Enh,,"PSPIncrement=5"
+system.ini,386Enh,,"UniqueDOSPSP=ON"
+system.ini,386Enh,,"TimerCriticalSection=10000"
+system.ini,386Enh,,"DNETHeapSize=16"
+system.ini,386Enh,,"NumHCBs=64"
+system.ini,Network,,"logonvalidated=no"
+system.ini,Network,,"LMAnnounce=Yes"
+[DEC50NDIS.Copyfiles.sys]
+;pathwrks.drv,,,16
+;pwconfig.dll,,,16
+decpw.386,,,16
+
+[DEC50NDIS.Copyfiles.winboot]
+
+dllndis.exe,dllndis.new,,16
+srm.exe,srm.new,,16
+
+
+
+
+pcsa.exe,,,16
+select.exe,,,16
+_pwmove.bat,,,16
+instl50.dll,,,16
+instl51.dll,,,16
+deccore.vxd,,,16
+declicl.vxd,,,16
+
+[DEC50NDIST.Copyfiles.winboot]
+
+dllndist.exe,dllndist.new,,16
+srm.exe,srm.new,,16
+
+
+
+
+pcsa.exe,,,16
+select.exe,,,16
+_pwmove.bat,,,16
+instl50.dll,,,16
+instl51.dll,,,16
+deccore.vxd,,,16
+declicl.vxd,,,16
+
+[DEC50ODI.Copyfiles.winboot]
+dll

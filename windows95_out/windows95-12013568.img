@@ -1,0 +1,135 @@
+_1007]
+HKCU, "Control Panel\International",Locale,,00001007
+HKLM, %KEY_Locale%,,,00001007
+
+[SysLocale_1407]
+HKCU, "Control Panel\International",Locale,,00001407
+HKLM, %KEY_Locale%,,,00001407
+
+[SysLocale_100A]
+HKCU, "Control Panel\International",Locale,,0000100A
+HKLM, %KEY_Locale%,,,0000100A
+
+[SysLocale_140A]
+HKCU, "Control Panel\International",Locale,,0000140A
+HKLM, %KEY_Locale%,,,0000140A
+
+[SysLocale_180A]
+HKCU, "Control Panel\International",Locale,,0000180A
+HKLM, %KEY_Locale%,,,0000180A
+
+[SysLocale_1C0A]
+HKCU, "Control Panel\International",Locale,,00001C0A
+HKLM, %KEY_Locale%,,,00001C0A
+
+[SysLocale_200A]
+HKCU, "Control Panel\International",Locale,,0000200A
+HKLM, %KEY_Locale%,,,0000200A
+
+[SysLocale_240A]
+HKCU, "Control Panel\International",Locale,,0000240A
+HKLM, %KEY_Locale%,,,0000240A
+
+[SysLocale_280A]
+HKCU, "Control Panel\International",Locale,,0000280A
+HKLM, %KEY_Locale%,,,0000280A
+
+[SysLocale_300A]
+HKCU, "Control Panel\International",Locale,,0000300A
+HKLM, %KEY_Locale%,,,0000300A
+
+[SysLocale_340A]
+HKCU, "Control Panel\International",Locale,,0000340A
+HKLM, %KEY_Locale%,,,0000340A
+
+[SysLocale_3C0A]
+HKCU, "Control Panel\International",Locale,,00003C0A
+HKLM, %KEY_Locale%,,,00003C0A
+
+[SysLocale_2C0A]
+HKCU, "Control Panel\International",Locale,,00002C0A
+HKLM, %KEY_Locale%,,,00002C0A
+
+[SysLocale_380A]
+HKCU, "Control Panel\International",Locale,,0000380A
+HKLM, %KEY_Locale%,,,0000380A
+
+[SysLocale_2009]
+HKCU, "Control Panel\International",Locale,,00002009
+HKLM, %KEY_Locale%,,,00002009
+
+[SysLocale_2409]
+HKCU, "Control Panel\International",Locale,,00002409
+HKLM, %KEY_Locale%,,,00002409
+
+
+[nls.reg]
+
+;******************************************************
+;* These registry entries will be filled in using the *
+;* user's current Win.INI [Intl] settings, or if they *
+;* do not exist, they will be filled in after setup   *
+;* has begin to run Windows                           *
+;* These entries are also compatible with NT          *
+;******************************************************
+
+
+HKLM, Software\Microsoft\Windows\CurrentVersion\RunOnce,NLSREG,,"%11%\addreg.exe"
+
+
+;Supported and Installed CodePages for the Windows Product
+HKCU,"Control Panel\desktop\ResourceLocale",,,%Resource_Locale%
+HKLM, %KEY_Codepage%,1250,,""
+HKLM, %KEY_Codepage%,1251,,""
+HKLM, %KEY_Codepage%,1252,,cp_1252.nls
+HKLM, %KEY_Codepage%,1253,,""
+HKLM, %KEY_Codepage%,1254,,""
+HKLM, %KEY_Codepage%,1255,,""
+HKLM, %KEY_Codepage%,1256,,""
+HKLM, %KEY_Codepage%,1257,,""
+HKLM, %KEY_Codepage%,1361,,""
+
+HKLM, %KEY_Codepage%,437,,cp_437.nls
+HKLM, %KEY_Codepage%,737,,""
+HKLM, %KEY_Codepage%,775,,""
+HKLM, %KEY_Codepage%,850,,cp_850.nls
+HKLM, %KEY_Codepage%,852,,""
+HKLM, %KEY_Codepage%,857,,""
+HKLM, %KEY_Codepage%,855,,""
+HKLM, %KEY_Codepage%,862,,""
+HKLM, %KEY_Codepage%,864,,""
+HKLM, %KEY_Codepage%,866,,""
+HKLM, %KEY_Codepage%,869,,""
+HKLM, %KEY_Codepage%,874,,""
+
+HKLM, %KEY_Codepage%,932,,""
+HKLM, %KEY_Codepage%,936,,""
+HKLM, %KEY_Codepage%,949,,""
+HKLM, %KEY_Codepage%,950,,""
+
+
+HKLM, system\currentcontrolset\control\Nls\AddLocales,,,
+HKLM, %KEY_Locale%,00000436,,%00000436%
+HKLM, %KEY_Locale%,0000042D,,%0000042D%
+HKLM, %KEY_Locale%,00000403,,%00000403%
+HKLM, %KEY_Locale%,00000406,,%00000406%
+HKLM, %KEY_Locale%,00000413,,%00000413%
+HKLM, %KEY_Locale%,00000813,,%00000813%
+HKLM, %KEY_Locale%,00000409,,%00000409%
+HKLM, %KEY_Locale%,00000809,,%00000809%
+HKLM, %KEY_Locale%,00000C09,,%00000C09%
+HKLM, %KEY_Locale%,00001009,,%00001009%
+HKLM, %KEY_Locale%,00001409,,%00001409%
+HKLM, %KEY_Locale%,00001809,,%00001809%
+HKLM, %KEY_Locale%,00001C09,,%00001C09%
+HKLM, %KEY_Locale%,00000425,,%00000425%
+HKLM, %KEY_Locale%,0000040B,,%0000040B%
+HKLM, %KEY_Locale%,0000040C,,%0000040C%
+HKLM, %KEY_Locale%,0000080C,,%0000080C%
+HKLM, %KEY_Locale%,00000C0C,,%00000C0C%
+HKLM, %KEY_Locale%,0000100C,,%0000100C%
+HKLM, %KEY_Locale%,0000140C,,%0000140C%
+HKLM, %KEY_Locale%,00000407,,%00000407%
+HKLM, %KEY_Locale%,00000807,,%00000807%
+HKLM, %KEY_Locale%,00000C07,,%00000C07%
+HKL

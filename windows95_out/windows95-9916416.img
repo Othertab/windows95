@@ -1,0 +1,127 @@
+***********************
+; HP MCA base section
+;****************************************************************************
+[hpmca.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,HPMCA.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"HPMCA"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"HPLAN$"
+HKR,NDIS\NDIS2,FileName,,"hplan.dos"
+HKR,NDIS\ODI,DriverName,,"hpmcaodi"
+HKR,NDIS\ODI,FileName,,"hpmcaodi.com"
+; Interfaces
+;HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+;HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"hpmca.ndis3"
+HKR,Ndi\Install,ndis2,,"hpmca.ndis2"
+
+; Install NDIS3 hpmca
+[HPMCA.ndis3]
+CopyFiles=HPMCA.ndis3.CopyFiles
+[HPMCA.ndis3.CopyFiles]
+hpmca.vxd
+
+; Install NDIS2 hplan
+[HPMCA.ndis2]
+CopyFiles=HPMCA.ndis2.CopyFiles
+[HPMCA.ndis2.CopyFiles]
+hplan.dos
+
+[hp.gen.params]
+; MaxHwTrans
+HKR,NDI\params\MaxHwTrans,ParamDesc,,"Max H/W Xmit Packets"
+HKR,NDI\params\MaxHwTrans,type,,int
+HKR,Ndi\params\MaxHwtrans,default,,8
+HKR,NDI\params\MaxHwTrans,min,,2
+HKR,NDI\params\MaxHwTrans,max,,20
+HKR,NDI\params\MaxHwTrans,step,,1
+HKR,NDI\params\MaxHwTrans,flag,1,10,00,00,00
+; MaxSwTransmits
+HKR,NDI\params\MaxSwTrans,ParamDesc,,"Max S/W Xmit Packets"
+HKR,NDI\params\MaxSwTrans,type,,int
+HKR,Ndi\params\MaxSwtrans,default,,2
+HKR,NDI\params\MaxSwTrans,min,,1
+HKR,NDI\params\MaxSwTrans,max,,20
+HKR,NDI\params\MaxSwTrans,step,,1
+HKR,NDI\params\MaxSwTrans,flag,1,10,00,00,00
+; MaxMultiCast
+HKR,NDI\params\MaxMultiCast,ParamDesc,,"Max Multicast Addresses"
+HKR,NDI\params\MaxMultiCast,type,,int
+HKR,Ndi\params\MaxMultiCast,default,,5
+HKR,NDI\params\MaxMultiCast,min,,1
+HKR,NDI\params\MaxMultiCast,max,,200
+HKR,NDI\params\MaxMultiCast,step,,1
+HKR,NDI\params\MaxMultiCast,flag,1,10,00,00,00
+;Slot Number
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,20,00,00,00
+
+;****************************************************************************
+; OLI32 Drivers
+;****************************************************************************
+[OLI32.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,OCTK32.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"OCTK32"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"OLITOK$"
+HKR,NDIS\NDIS2,FileName,,"olitok16.dos"
+HKR,NDIS\ODI,DriverName,,"OCTOK16"
+HKR,NDIS\ODI,FileName,,"octok16.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"  
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sectioins
+HKR,Ndi\Install,ndis3,,"olitok32.ndis3"
+HKR,Ndi\Install,ndis2,,"olitok32.ndis2"
+;HKR,Ndi\Install,odi,,"olitok32.odi"
+
+;Parameters
+;Adapter
+HKR,Ndi\params\adapter,ParamDesc,,"Adapter"
+HKR,Ndi\params\adapter,type,,int
+HKR,Ndi\params\adapter,default,,0
+HKR,Ndi\params\adapter,min,,0
+HKR,Ndi\params\adapter,max,,3
+HKR,Ndi\params\adapter,optional,,1
+HKR,NDI\params\adapter,flag,1,30,00,00,00
+
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+; Install NDIS3
+[OLITOK32.ndis3]
+CopyFiles=olitok32.ndis3.CopyFiles
+[olitok32.ndis3.CopyFiles]
+octk32.vxd
+
+; Install NDIS2
+[OLITO

@@ -1,0 +1,73 @@
+ms\ProcessLoginScript,location,,"Network\Logon"
+HKLM,Network\Logon\Ndi\params\ProcessLoginScript,ParamDesc,,"Process Login Script"
+;HKLM,Network\Logon\Ndi\params\ProcessLoginScript,default,,1
+HKLM,Network\Logon\Ndi\params\ProcessLoginScript,type,,int
+HKLM,Network\Logon\Ndi\params\ProcessLoginScript,min,,0
+HKLM,Network\Logon\Ndi\params\ProcessLoginScript,max,,1
+
+[NWREDIR4.Install]
+;Cannot have UpdateAutoBat because net.exe paths will get changed
+AddReg=NWREDIR4.AddReg, NWNP32.AddReg, SCRSAVE.AddReg, SYSFILES.reg
+DelReg=NWNP32.CleanReg
+UpdateInis=NWNP32.Inis, NWREDIR4.CleanInis
+UpdateIniFields=NWNP32.Rmv.Fields
+CopyFiles=NWREDIR4.Files,NWNP32.Files, NWREDIR4.Help, NW4.inf
+
+[NWREDIR4.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,NWREDIR.VXD
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",StaticVxD,,nwredir.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",NetClean,1,1
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWREDIR",Netware4Enable,1,1
+
+[NWNP32.CleanReg]
+;; Clean up Win95 NWClient PP registration
+HKCR,Netware\shellex\ContextMenuHandlers\NWAdminMenus
+HKCR,CLSID\{9C358B60-02A2-101B-9A16-00AA0033819A}
+
+[NWNP32.AddReg]
+; net provider
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",NWNP32,,
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",Name,,"NetWare"
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",ProviderPath,,"NWNP32.dll"
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",Description,,"Microsoft Provider for Netware"
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",NetID,1,00,00,03,00
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",CallOrder,1,00,00,00,20
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",ValidPrinters,1,07,00,00,00
+
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider",PreLoadNWRunTime,1,00,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider\PreloadDlls",NWNET.DLL,,""
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider\PreloadDlls",NWCALLS.DLL,,""
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider\PreloadDlls",NWNET.DLL,,""
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32\NetworkProvider\PreloadDlls",NWLOCALE.DLL,,""
+
+; print provider
+HKLM,"System\CurrentControlSet\Control\Print\Providers\Microsoft Print Provider for NetWare",Name,,"ndspp.dll"
+
+HKCR,Netware\shellex\PropertySheetHandlers\NWAdminMenus,,,"{E6EF27C0-7984-11CE-BA00-00AA001F3DC4}"
+HKCR,CLSID\{E6EF27C0-7984-11CE-BA00-00AA001F3DC4},,,"Netware objects"
+HKCR,CLSID\{E6EF27C0-7984-11CE-BA00-00AA001F3DC4}\InProcServer32,,,"ndspp.dll"
+HKCR,CLSID\{E6EF27C0-7984-11CE-BA00-00AA001F3DC4}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,Netware\shellex\ContextMenuHandlers\NWAdminMenus,,,""
+HKCR,CLSID\{9C358B60-02A2-101B-9A16-00AA0033819A}\InProcServer32,,,""
+
+HKCR,Printers\shellex\PropertySheetHandlers\CaptureConfig,,,"{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}"
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3},,,"Capture Settings"
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}\InProcServer32,,,"ndspp.dll"
+HKCR,CLSID\{971A71A0-449B-101B-A9B9-4AF3EEDDA3E3}\InProcServer32,ThreadingModel,,"Apartment"
+
+; context menus
+HKCR,Netware\shellex\ContextMenuHandlers\NetWareMenus,,,"{4E046421-F7BC-101A-8A87-00AA000C4F5D}"
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D},,,"Netware Objects"
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}\InProcServer32,,,"NWNP32.dll"
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+; Hood context menu verbs
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shellex\ContextMenuHandlers\NetWareMenus,,,"{D824F840-ABCB-101B-9B38-00AA000C4F5D}"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D},,,"Netware hood verbs"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}\InProcServer32,,,"NWNP32.dll"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,Folder

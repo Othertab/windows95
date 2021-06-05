@@ -1,0 +1,137 @@
+mMidiDriverName]                              [pcspkr.adv]
+[RmDigitalDriverName]           [ibmsnd.com]
+[PmMidiDriverName]                              [a32spkr.dll]
+[PmDigitalDriverName]           []
+
+[MidiDriverChunkNumber]                 5
+[DigitalDriverChunkNumber]              10
+
+[NumberOfMidiAddresses]                 1
+[MidiAddress]                                   -1
+
+[NumberOfDigitalAddresses]              1
+[DigitalAddress]                                -1
+
+[NumberOfIrqs]                                  1
+[Irq]                                                   -1
+
+[NumberOfMidiIrqs]                              1
+[MidiIrq]                                               -1
+
+[NumberOfDmas]                                  1
+[Dma]                                                   -1
+
+
+[Flags]                                                 1 ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               0
+
+
+[EndRecord]
+
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [No Sound]
+[CardId]                                                113
+[CardGroup]                                             0
+
+[RmMidiDriverName]                              []
+[RmDigitalDriverName]           []
+[PmMidiDriverName]                              []
+[PmDigitalDriverName]           []
+
+[MidiDriverChunkNumber]                 0
+[DigitalDriverChunkNumber]              0
+
+[NumberOfMidiAddresses]                 1
+[MidiAddress]                                   -1
+
+[NumberOfDigitalAddresses]              1
+[DigitalAddress]                                -1
+
+[NumberOfIrqs]                                  1
+[Irq]                                                   -1
+
+[NumberOfMidiIrqs]                              1
+[MidiIrq]                                               -1
+
+[NumberOfDmas]                                  1
+[Dma]                                                   -1
+
+
+[Flags]                                                 2 ; number of flags to follow
+[DspNotEnabled]
+[MidiNotEnabled]
+
+
+[Jumpers]                                               0
+
+[EndRecord]
+
+
+// -------------------------------------------------------------------------
+[EndOfGroup]
+
+
+
+
+
+
+[MusicOnlyGroup]
+
+[NumberOfRecords]                               2
+
+[StartRecord]
+[CardName]                                              [Roland SoundCanvas]
+[CardId]                                                120
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [mt32mpu.adv]
+[RmDigitalDriverName]           []
+[PmMidiDriverName]                              [a32mt32.dll]
+[PmDigitalDriverName]           []
+
+[MidiDriverChunkNumber]                 2
+[DigitalDriverChunkNumber]              2
+
+[NumberOfMidiAddresses]                 4
+[MidiAddress]                                   0x330
+[MidiAltAddress]                                0x332
+[MidiAltAddress]                                0x334
+[MidiAltAddress]                                0x336
+
+[NumberOfDigitalAddresses]              0
+
+[NumberOfIrqs]                                  6
+[Irq]                           2
+[AltIrq]                        3
+[AltIrq]                        4
+[AltIrq]                        5
+[AltIrq]                        6
+[AltIrq]                        7
+
+[NumberOfMidiIrqs]                              6
+[MidiIrq]                       2
+[MidiAltIrq]                    3
+[MidiAltIrq]                    4
+[MidiAltIrq]                    5
+[MidiAltIrq]                    6
+[MidiAltIrq]                    7
+
+[NumberOfDmas]                                  0
+
+[Flags]                                                 1       ; number of flags to follow
+[DspNotEnabled]
+
+[Jumpers]                                               2
+[AddressJumper]
+[IrqJumper]
+
+[EndRecord]
+
+
+[

@@ -1,0 +1,95 @@
+nd prompt.
+EThe specified print job does not exist. Make sure you typed the correct identification number. To see a list of current print jobs, type NET PRINT \\server at the command prompt.
+?
+?
+?
+?
+EThe server doesn't have enough memory available to add another print job. Wait a few minutes, and then send the print job again.
+?
+?
+?
+EThe spooler is not communicating with a print processor. Contact your network administrator. There may be software problems with the print processor or hardware problems with the associated printer.
+?
+?
+EThe requested change cannot be performed on the printer queue because a software error occurred. Contact Microsoft Product Support Services.
+EThe requested change cannot be performed on the print job because a software error occurred. Contact Microsoft Product Support Services.
+EThe spooler ran out of memory. To free memory for the spooler, delete one or more printer queues or print jobs, or remove one or more printers from all print queues on the server.
+EThe device driver does not exist. To install a device driver, see the Windows Help Index..
+?
+EThe print processor is not installed. Check the printer setup on the server to make sure the print queue is set up correctly.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+EThe maximum number of services has been reached. To start another service, you must first stop one. To display the list of services that are running, type NET START /L at the command prompt.
+EThe requested service has already been started.
+EThe default network services have already been started.
+EThe service has not been started. 
+EThe service name is invalid. Make sure you are specifying a valid service name, and then try again.
+?
+?
+?
+?
+?
+EThis command is invalid for this service, or the service cannot accept the command at this time. If you are trying to stop a workstation running MS-DOS, another program is preventing the workstation from stopping. For more information, type NET HELP 2191 at the command prompt.
+?
+?
+?
+?
+?
+?
+?
+?
+EA user is already logged on at this workstation. For more information, type NET HELP 2200 at the command prompt.
+EYou must log on to the network before performing this operation. To log on, type NET LOGON username [password] at the command prompt.
+EThe specified user name or group name is invalid. Type a different user name or group name, and then try again.
+EThe specified password is invalid. Type a different password.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+EThe logon server cannot be found. For more information, contact your network administrator.
+EThis workstation already has a logon domain established. To log on in a different domain, you must first log off from the current domain by typing NET LOGOFF.
+?
+?
+?
+?
+EThe user name cannot be found.
+?
+?
+?
+?
+?
+?
+?
+EA software error occurred while the Microsoft Network tried to access the user accounts database. Type the command again. If the error occurs again, use a backup copy of the user accounts database from a domain member server, and then try again. If the error persists, there may be hardware problems with your disk drive.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+EThis user account has expired. Before you can perform this action, the network administrator must reinstate the account.
+EYou do not have the necessary access rights to log on from this workstation. To change access rights, contact your network administrator about changing the logon workstation(s) listed in your account.
+EYou do not have the necessary access rights to log on at this time.  To change access rights, contact your network administrator about changing the logon hours listed in your account.
+EYour password has expired. To change your password for a domain, type NET PASSWORD /DOMAIN:name user oldpassword newpassword at the command prompt.
+ETo change your password, you must contact your network administrator.
+EYou cannot use a password that has just expired. Also, your network administrator may have configured your account so that you cannot use any of your previous passwords. Use a password that yo

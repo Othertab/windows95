@@ -1,0 +1,322 @@
+TAL=1064
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1408*1024*32@80Hz.MIRO]
+   Hz=79.950
+   kHz=85.070
+   MHz=159.250
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=16
+   H_SYNC=192
+   H_BP=256
+
+   V_TOTAL=1064
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1408*1024*8@90Hz.MIRO]
+   Hz=90.110
+   kHz=96.420
+   MHz=180.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=16
+   H_SYNC=192
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*15@90Hz.MIRO]
+   Hz=90.110
+   kHz=96.420
+   MHz=180.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=16
+   H_SYNC=192
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*16@90Hz.MIRO]
+   Hz=90.110
+   kHz=96.420
+   MHz=180.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=16
+   H_SYNC=192
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*32@90Hz.MIRO]
+   Hz=90.110
+   kHz=96.420
+   MHz=180.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=16
+   H_SYNC=192
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*8@100Hz.MIRO]
+   Hz=99.970
+   kHz=106.970
+   MHz=200.250
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=48
+   H_SYNC=160
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*15@100Hz.MIRO]
+   Hz=99.970
+   kHz=106.970
+   MHz=200.250
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=48
+   H_SYNC=160
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*16@100Hz.MIRO]
+   Hz=99.970
+   kHz=106.970
+   MHz=200.250
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=48
+   H_SYNC=160
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1408*1024*32@100Hz.MIRO]
+   Hz=99.970
+   kHz=106.970
+   MHz=200.250
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1872
+   H_DISP=1408
+   H_FP=48
+   H_SYNC=160
+   H_BP=256
+
+   V_TOTAL=1070
+   V_DISP=1024
+   V_FP=1
+   V_SYNC=6
+   V_BP=39
+
+[1600*1200*8@60Hz.VESA]
+   Hz=60.000
+   kHz=75.000
+   MHz=162.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+   V_DISP=1200
+   V_FP=1
+   V_SYNC=3
+   V_BP=46
+
+[1600*1200*15@60Hz.VESA]
+   Hz=60.000
+   kHz=75.000
+   MHz=162.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+   V_DISP=1200
+   V_FP=1
+   V_SYNC=3
+   V_BP=46
+
+[1600*1200*16@60Hz.VESA]
+   Hz=60.000
+   kHz=75.000
+   MHz=162.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+   V_DISP=1200
+   V_FP=1
+   V_SYNC=3
+   V_BP=46
+
+[1600*1200*32@60Hz.VESA]
+   Hz=60.000
+   kHz=75.000
+   MHz=162.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+   V_DISP=1200
+   V_FP=1
+   V_SYNC=3
+   V_BP=46
+
+[1600*1200*8@65Hz.VESA]
+   Hz=65.000
+   kHz=81.250
+   MHz=175.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+   V_DISP=1200
+   V_FP=1
+   V_SYNC=3
+   V_BP=46
+
+[1600*1200*15@65Hz.VESA]
+   Hz=65.000
+   kHz=81.250
+   MHz=175.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+   V_DISP=1200
+   V_FP=1
+   V_SYNC=3
+   V_BP=46
+
+[1600*1200*16@65Hz.VESA]
+   Hz=65.000
+   kHz=81.250
+   MHz=175.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=2160
+   H_DISP=1600
+   H_FP=64
+   H_SYNC=192
+   H_BP=304
+
+   V_TOTAL=1250
+  

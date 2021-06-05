@@ -1,0 +1,120 @@
+,default,,255
+HKR,"Ndi\params\Timer Ti (1)",type,,int
+HKR,"Ndi\params\Timer Ti (1)",min,,5
+HKR,"Ndi\params\Timer Ti (1)",max,,255
+HKR,"NDI\params\Timer Ti (1)",optional,,1
+
+; Timer T1 (2) (instance-specific)
+;HKR,,"Timer T1 (2)",,25
+HKR,"Ndi\params\Timer T1 (2)",ParamDesc,,%TimerT1Two%
+HKR,"Ndi\params\Timer T1 (2)",default,,25
+HKR,"Ndi\params\Timer T1 (2)",type,,int
+HKR,"Ndi\params\Timer T1 (2)",min,,1
+HKR,"Ndi\params\Timer T1 (2)",max,,60
+HKR,"NDI\params\Timer T1 (2)",optional,,1
+
+; Timer T2 (2) (instance-specific)
+;HKR,,"Timer T2 (2)",,10
+HKR,"Ndi\params\Timer T2 (2)",ParamDesc,,%TimerT2Two%
+HKR,"Ndi\params\Timer T2 (2)",default,,10
+HKR,"Ndi\params\Timer T2 (2)",type,,int
+HKR,"Ndi\params\Timer T2 (2)",min,,1
+HKR,"Ndi\params\Timer T2 (2)",max,,25
+HKR,"NDI\params\Timer T2 (2)",optional,,1
+
+; Timer Ti (2) (instance-specific)
+;HKR,,"Timer Ti (2)",,255
+HKR,"Ndi\params\Timer Ti (2)",ParamDesc,,%TimerTiTwo%
+HKR,"Ndi\params\Timer Ti (2)",default,,255
+HKR,"Ndi\params\Timer Ti (2)",type,,int
+HKR,"Ndi\params\Timer Ti (2)",min,,5
+HKR,"Ndi\params\Timer Ti (2)",max,,255
+HKR,"NDI\params\Timer Ti (2)",optional,,1
+
+; Max frame size (instance-specific)
+HKR,"Ndi\params\Max frame size",ParamDesc,,%MaxFrameSize%
+HKR,"Ndi\params\Max frame size",default,,4464
+;HKR,"NDI\params\Max frame size",flag,1,10,00,00,00
+HKR,"Ndi\params\Max frame size",type,,int
+HKR,"Ndi\params\Max frame size",min,,96
+HKR,"Ndi\params\Max frame size",max,,17960
+HKR,"NDI\params\Max frame size",optional,,1
+
+; Max group SAPs (instance-specific)
+;HKR,,"Max grp SAPs",,0
+HKR,"Ndi\params\Max grp SAPs",ParamDesc,,%MaxGrpSaps%
+HKR,"Ndi\params\Max grp SAPs",default,,0
+HKR,"Ndi\params\Max grp SAPs",type,,int
+HKR,"Ndi\params\Max grp SAPs",min,,0
+HKR,"Ndi\params\Max grp SAPs",max,,60
+HKR,"NDI\params\Max grp SAPs",optional,,1
+
+; Max group SAP members (instance-specific)
+;HKR,,"Max grp members",,0
+HKR,"Ndi\params\Max grp members",ParamDesc,,%MaxGrpMembers%
+HKR,"Ndi\params\Max grp members",default,,0
+HKR,"Ndi\params\Max grp members",type,,int
+HKR,"Ndi\params\Max grp members",min,,0
+HKR,"Ndi\params\Max grp members",max,,60
+HKR,"NDI\params\Max grp members",optional,,1
+
+;; Swap address bits (instance-specific)
+HKR,"Ndi\params\Swap addr bits",ParamDesc,,%SwapAddrBits%
+HKR,"Ndi\params\Swap addr bits",default,,1
+HKR,"Ndi\params\Swap addr bits",type,,enum
+HKR,"Ndi\params\Swap addr bits\enum","0",,"0"
+HKR,"Ndi\params\Swap addr bits\enum","1",,"1"
+HKR,"NDI\params\Swap addr bits",optional,,1
+
+; Swap address bits (instance-specific)
+;HKR,,"Ethernet DIX",,0
+HKR,"Ndi\params\Ethernet DIX",ParamDesc,,%EthernetDIX%
+HKR,"Ndi\params\Ethernet DIX",default,,0
+HKR,"Ndi\params\Ethernet DIX",type,,enum
+HKR,"Ndi\params\Ethernet DIX\enum","0",,"0"
+HKR,"Ndi\params\Ethernet DIX\enum","1",,"1"
+HKR,"NDI\params\Ethernet DIX",optional,,1
+
+
+; Context help
+HKR,Ndi,HelpText,,%DLC_HELP%
+
+;****************************************************************************
+; Install section
+;****************************************************************************
+[DLC.Install]
+AddReg=DLC.AddReg
+CopyFiles=DLC.CopySystemFiles,DLC.CopyExeFile,DLC.Help
+
+[DLC.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,dlc.vxd
+
+;****************************************************************************
+; Remove section
+;****************************************************************************
+[DLC.Remove]
+DelReg=DLC.DelReg
+
+[DLC.DelReg]
+HKLM,System\CurrentControlSet\Services\VxD\DLC
+
+
+;****************************************************************************
+; Product files to be installed (or removed)
+;****************************************************************************
+[DLC.CopySystemFiles]
+dlc.vxd,,dlc~.v1
+dlcapi.dll,,dlcapi~.d1
+trcdlc.exe,,trcdlc~.e1
+
+[DLC.CopyExeFile]
+dlchlp.exe
+
+[DLC.Help]
+dlc32.hlp
+dlc32.cnt
+
+;****************************************************************************
+; Destination Directories, source disk names, and source disk files
+;***************************************************

@@ -1,0 +1,107 @@
+B2F4B0B}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,Microsoft_Network\shellex\ContextMenuHandlers\MSNetworkMenus,,,"{F25C14C0-FBCF-101A-A58B-08002B2F4B0B}"
+HKCR,CLSID\{F25C14C0-FBCF-101A-A58B-08002B2F4B0B},,,"MS Network objects"
+HKCR,CLSID\{F25C14C0-FBCF-101A-A58B-08002B2F4B0B}\InProcServer32,,,"msnp32.dll"
+HKCR,CLSID\{F25C14C0-FBCF-101A-A58B-08002B2F4B0B}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,Microsoft_Network\shellex\PropertySheetHandlers\MSNetPage,,,"{614DD2C0-7B09-101B-9B38-00AA000C4F5D}"
+HKCR,CLSID\{614DD2C0-7B09-101B-9B38-00AA000C4F5D},,,"MSNet Pages"
+HKCR,CLSID\{614DD2C0-7B09-101B-9B38-00AA000C4F5D}\InProcServer32,,,"msnp32.dll"
+HKCR,CLSID\{614DD2C0-7B09-101B-9B38-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+;Net provider info
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",MSNP32,,
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNP32\NetworkProvider",Name,,"Microsoft Network"
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNP32\NetworkProvider",ProviderPath,,"msnp32.dll"
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNP32\NetworkProvider",Description,,"Microsoft Network"
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNP32\NetworkProvider",NetID,1,00,00,01,00
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNP32\NetworkProvider",CallOrder,1,00,00,00,40
+
+[MSNP32.Inis]
+system.ini,boot,"network.drv="
+system.ini,MSNP32,"NPProvider="
+system.ini,MSNP32,"NPName="
+system.ini,MSNP32,"NPDescription="
+system.ini,MSNP32,"NPWinnet16="
+
+[VREDIR.Files]
+vredir.vxd
+vnetsup.vxd
+;RPC
+rpcltc1.dll
+; MS Client
+pmspl.dll
+netapi.dll
+msnet32.dll
+msab32.dll
+mssp.vxd
+
+[MSNP32.Files]
+msnp32.dll
+mspp32.dll
+lmscript.exe
+lmscript.pif
+
+[NET.Files]
+net.exe
+net.msg
+neth.msg
+
+[VREDIR.Remove]
+AddReg=winpopup.rmv.addreg
+DelReg=VREDIR.Rmv.DelReg, winpopup.delreg
+UpdateInis=MSNP32.Inis, WINPOPUP.Rem.Inis
+UpdateIniFields=MSNP32.Rmv.Fields
+
+[VREDIR.Rmv.DelReg]
+HKLM,"System\CurrentControlSet\Services\VxD\VREDIR",StaticVxD
+HKLM,"SYSTEM\CurrentControlSet\Control\Print\Providers\Microsoft Networks Print Provider"
+HKCR,Microsoft_Network\shellex
+HKCR,CLSID\{F25C14C0-FBCF-101A-A58B-08002B2F4B0B}
+HKCR,CLSID\{614DD2C0-7B09-101B-9B38-00AA000C4F5D}
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",MSNP32
+HKLM,"SYSTEM\CurrentControlSet\Services\MSNP32"
+; RPC
+HKLM,"Software\Microsoft\Rpc\ClientProtocols",ncacn_np,
+
+[MSNP32.Rmv.Fields]
+system.ini,Boot,Networks32,MSNP32
+win.ini,windows,load,wdls
+
+
+;*********************************************
+;    NWREDIR section
+;*********************************************
+[NWREDIR.ndi]
+AddReg=NWREDIR.ndi.reg,NWREDIR.params
+DeviceID=NWREDIR
+
+[NWREDIR.ndi.reg]
+HKR,Ndi,DeviceID,,NWREDIR
+HKR,Ndi,NdiInstaller,,"netdi.dll,NWClientNdiProc"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"winnet4,nwredir"
+HKR,Ndi\Interfaces,UpperRange,,"winnet4,nwredir"
+HKR,Ndi\Interfaces,DefLower,,"ipxDHost"
+HKR,Ndi\Interfaces,LowerRange,,"ipxDHost"
+HKR,Ndi\Interfaces,ExcludeAny,,"winnet31"
+HKR,Ndi\Compatibility,RequireAll,,"NWLINK"
+HKR,Ndi\Compatibility,ExcludeAll,,"NETWARE,NETWARE3,NETWARE4"
+; Install-Remove Section
+HKR,Ndi\Install,,,"NWREDIR.Install"
+HKR,Ndi\Remove,,,"NWREDIR.Remove"
+; Network provider
+; should be the same as HKLM\system\ccs\nwnp32\networkprovider\name
+HKR,Ndi,NetworkProvider,,"NetWare"
+; Context help
+HKR,Ndi,HelpText,,%NWREDIR_HELP%
+
+[NWREDIR.params]
+HKR,Ndi\params\PreserveCase,location,,"System\CurrentControlSet\Services\Vxd\NWREDIR"
+HKLM,System\CurrentControlSet\Services\VxD\NWREDIR\Ndi\params\PreserveCase,ParamDesc,,%PreserveCaseDesc%
+HKLM,System\CurrentControlSet\Services\VxD\NWREDIR\Ndi\params\PreserveCase,default,,%PreserveCaseDefault%
+HKLM,System\CurrentControlSet\Services\VxD\NWREDIR\Ndi\params\PreserveCase,type,,enum
+HKLM,System\CurrentControlSet\Services\VxD\NWREDIR\Ndi\params\PreserveCase\enum,0,,%PreserveCase_0%
+HKLM,System\CurrentControlSet\Services\VxD\NWREDIR\Ndi\params\PreserveCase\enum,1,,%PreserveCase_1%
+
+[NWREDIR.Install]
+;Cannot have UpdateAutoBat because net.exe paths will get changed
+AddReg

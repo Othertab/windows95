@@ -1,0 +1,117 @@
+Desc%=*pnp80e0.ndi, *pnp80e0 ;SMC ARCNET PC130/E
+%*pnp80e2.DeviceDesc%=*pnp80e2.ndi, *pnp80e2 ;SMC ARCNET PC270/E
+%mca_6014.DeviceDesc%=mca_6014.ndi, mca_6014 ;SMC ARCNET PS110,PS210
+%*pnp80e1.DeviceDesc%=*pnp80e1.ndi, *pnp80e1 ;SMC ARCNET PC120,PC220,PC260
+%*pnp80e5.DeviceDesc%=*pnp80e5.ndi, *pnp80e5 ;SMC ARCNET PC600W,PC650W
+
+%pcmcia.DeviceDesc%=pcmcia.ndi, PCMCIA\SMC-PCM_ETHERNET_ADAPTER-67E0    ;NDIS3 SMC 
+
+
+[ARCNET]
+%*pnp8324.DeviceDesc%=*pnp8324.ndi, *pnp8324 ;ARCNET Compatible
+
+[PUREDATA]
+%*pnp81e6.DeviceDesc%=*pnp81e6.ndi, *pnp81e6 ;Pure Data PDI508+ (ArcNet)
+%*pnp81e7.DeviceDesc%=*pnp81e7.ndi, *pnp81e7 ;Pure Data PDI516+ (ArcNet)
+
+[DELL]
+%*Dell.DeviceDesc%=*Dell.ndi, *pnp8228       ;Dell Lattitude XP port replicator
+
+;****************************************************************************
+; pcmcia    SMC 8016 PCMCIA
+;****************************************************************************
+[pcmcia.ndi]
+AddReg=pcmcia.ndi.reg,SMC1.ndi.reg
+
+[pcmcia.ndi.reg]
+HKR,Ndi,DeviceID,,"SMC-PCM_ETHERNET_ADAPTER-67E0"
+
+
+;****************************************************************************
+; SMC9000 
+;****************************************************************************
+
+[*Smc9000.ndi]
+AddReg    = Smc9000.ndi.reg,Smc9000.Gen.Resources,Smc9000.Gen.Params,*Smc9000.DevID
+LogConfig = Smc9000.LogConfig
+
+[*Dell.ndi]
+AddReg    = Smc9000.ndi.reg,Smc9000.Gen.Resources,Smc9000.Gen.Params,*Dell.DevID
+LogConfig = Dell.LogConfig
+
+[*Smc9000.DevID]
+HKR,Ndi,DeviceID,,"*SMC9000"
+
+[*Dell.DevID]
+HKR,Ndi,DeviceID,,"*PNP8228"
+
+[Smc9000.LogConfig]
+ConfigPriority = HARDRECONFIG
+IOConfig       = 20@200-3FF%FFE0(3FF::)
+IRQConfig      = 9,3,10,11
+ 
+[Dell.LogConfig]
+ConfigPriority = HARDRECONFIG
+IOConfig       = 20@300-3FF%FFE0
+IRQConfig      = 10
+
+;****************************************************************************
+; ARCNET Compatible
+;****************************************************************************
+[*pnp8324.ndi]
+AddReg=*pnp8324.DevID,ARC.Gen.Resources,SMCARC.ndi.reg,MC_Channel
+LogConfig=*pnp8324.LogConfig
+[*pnp8324.DevID]
+HKR,Ndi,DeviceID,,"*pnp8324"
+
+[*pnp8324.LogConfig]
+ConfigPriority=HARDRECONFIG
+IRQConfig=3,4,5,6,7,8,9,10,11,12,13,14,15
+IOConfig=10@200-3FF%FFF0(3FF::)
+MemConfig=4000@C0000-EFFFF%FFFFC000
+
+
+;****************************************************************************
+; Pure Data PDI508+ (ArcNet)
+;****************************************************************************
+[*pnp81e6.ndi]
+AddReg=*pnp81e6.DevID,ARC.Gen.Resources,SMCARC.ndi.reg
+LogConfig=*pnp81e6.LogConfig
+[*pnp81e6.DevID]
+HKR,Ndi,DeviceID,,"*pnp81e6"
+
+[*pnp81e6.LogConfig]
+ConfigPriority=HARDRECONFIG
+IRQConfig=3,4,5,6,7,9
+IOConfig=2A0-2AF(3FF::),2E0-2EF(3FF::),2F0-2FF(3FF::),300-30F(3FF::)
+MEMConfig=A0000-A3fff,C0000-C3fff,C4000-C7fff,CC000-Cffff,D0000-D3fff,DC000-Dffff,E0000-E3fff
+
+;****************************************************************************
+; Pure Data PDI516+ (ArcNet)
+;****************************************************************************
+[*pnp81e7.ndi]
+AddReg=*pnp81e7.DevID,ARC.Gen.Resources,SMCARC.ndi.reg
+LogConfig=*pnp81e7.LogConfig
+[*pnp81e7.DevID]
+HKR,Ndi,DeviceID,,"*pnp81e7"
+
+[*pnp81e7.LogConfig]
+ConfigPriority=HARDRECONFIG
+IRQConfig=3,4,5,6,7,9,10
+IOConfig=220-22F(3FF::),240-24F(3FF::),250-25F(3FF::),2A0-2AF(3FF::),2E0-2EF(3FF::),2F0-2FF(3FF::),300-30F(3FF::)
+MEMConfig=C0000-C3fff,C4000-C7fff,CC000-Cffff,D0000-D3fff,D4000-D7fff,DC000-Dffff
+
+;****************************************************************************
+; SMC ARCNET PC600W,PC650W
+;****************************************************************************
+[*pnp80e5.ndi]
+AddReg=ARC.Gen.Resources,MC_Channel,SMCARC.ndi.reg,*pnp80e5.DevID
+LogConfig=PC600.LogConfig
+[*pnp80e5.DevID]
+HKR,Ndi,DeviceID,,"*pnp80e5"
+
+;****************************************************************************
+; SMC ARCNET PC120,PC220,PC260
+;****************************************************************************
+[*pnp80e1.ndi]
+AddReg=ARC.

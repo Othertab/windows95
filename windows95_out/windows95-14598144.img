@@ -1,0 +1,116 @@
+9F(3FF::),2E0-2EF(3FF::),2F0-2FF(3FF::),300-30F(3FF::),350-35F(3FF::),380-38F(3FF::),3E0-3EF(3FF::)
+MEMConfig=C0000-C3fff,C4000-C7fff,CC000-Cffff,D0000-D3fff,D4000-D7fff,D8000-DBfff,DC000-Dffff,E0000-E3fff
+
+
+[ARC.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=10@200-3FF%FFF0(3FF::)
+IRQConfig=3,4,5,6,7,9
+MemConfig=10000@C0000-EFFFF%FFFF0000
+
+[EBT.ndi.reg]
+HKR,NDI\params\Irq,flag,1,50,00,00,00
+HKR,NDI\params\IOBase,flag,1,10,00,00,00
+HKR,NDI\params\RamAddress,flag,1,10,00,00,00
+
+[EBT.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=200-21F,220-23F,240-25F,260-27F,280-29F,2A0-2BF,2C0-2DF,300-31F,340-35F,380-39F
+IRQConfig=3,4,5,7,9,10,11,15
+MemConfig=4000@C0000-EFFFF%FFFFC000
+
+;****************************************************************************
+; SMC base section
+;****************************************************************************
+[SMC.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,smc8000w.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"SMC8000W"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+HKR,NDIS\NDIS2,DriverName,,"SMC8000$"
+HKR,NDIS\NDIS2,FileName,,"smc8000.dos"
+HKR,NDIS\ODI,DriverName,,"smc8000"
+HKR,NDIS\ODI,FileName,,"smc8000.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"SMCMAC.ndis3"
+HKR,Ndi\Install,ndis2,,"SMCMAC.ndis2"
+;HKR,Ndi\Install,odi,,"smc8000.odi"
+
+;****************************************************************************
+; SMCARC base section
+;****************************************************************************
+[SMCARC.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"SMC_ARC"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+HKR,NDIS\NDIS2,DriverName,,"SMC_ARC$"
+HKR,NDIS\NDIS2,FileName,,"smc_arc.dos"
+HKR,NDIS\ODI,DriverName,,"smcarcws"
+HKR,NDIS\ODI,FileName,,"smcarcws.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"SMCARC.ndis2"
+;HKR,Ndi\Install,odi,,"smcarcws.odi"
+
+[SMC.Gen.Resources]
+; Resources
+HKR,,Irq,1,04,00,00,00
+HKR,,IOBase,1,02,00,00,00
+HKR,,RamAddress,1,01,00,00,00
+HKR,NDI\params\Irq,resc,1,04,00,00,00
+HKR,NDI\params\Irq,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\RamAddress,resc,1,01,00,00,00
+HKR,NDI\params\RamAddress,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\RamAddress,paragraph,,1
+
+[ARC.Gen.Resources]
+; Resources
+HKR,,interrupt,1,04,00,00,00
+HKR,,IOBase,1,02,00,00,00
+HKR,,memorybase,1,01,00,00,00
+HKR,NDI\params\interrupt,resc,1,04,00,00,00
+HKR,NDI\params\interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interrupt,flag,1,50,00,00,00
+HKR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBase,flag,1,10,00,00,00
+HKR,NDI\params\memorybase,resc,1,01,00,00,00
+HKR,NDI\params\memorybase,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\memorybase,paragraph,,1
+HKR,NDI\params\memorybase,flag,1,10,00,00,00
+
+[SMC.Gen.Params]
+; maxrequests
+;HKR,NDI\params\maxrequests,ParamDesc,,"Maximum Requests"
+;HKR,NDI\params\maxrequests,type,,int
+;HKR,Ndi\params\maxrequests,default,,8
+;HKR,NDI\params\maxrequests,min,,6
+;HKR,NDI\params\maxrequests,max,,64
+;HKR,NDI\params\maxrequests,step,,1
+;HKR,NDI\params\maxrequests,flag,1,10,00,00,00
+;HKR,NDI\params\maxrequests,optional,,1
+; maxtransmits
+;HKR,NDI\params\maxtransmits,ParamDesc,,"Maximum Transmits"
+;HKR,NDI\params\maxtransmits,type,,int
+;HKR,Ndi\params\maxtransmits,default,,12
+;HKR,NDI\params\maxtransmits,min,,6
+;H

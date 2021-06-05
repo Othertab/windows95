@@ -1,0 +1,104 @@
+          ; AT&T Comsphere 3810
+%Modem3%  = Modem3, UNIMODEM3662183F             ; AT&T Dataport 14.4/FAX Internal
+%Modem2%  = Modem2, UNIMODEM8CAF9051             ; 1994 AT&T DataPort 14.4/FAX External
+%Modem2%  = Modem2, UNIMODEM50DB2053             ; AT&T DataPort 14.4/FAX External
+%Modem2%  = Modem2, ATT_Modem2, UNIMODEM43E11D57             ; 1992 model AT&T DataPort 14.4/fax
+%Modem1%  = Modem1, ATT_Modem1, UNIMODEM43E11D57             ; 1994 model AT&T DataPort 2001 External
+
+[NEC]
+%Modem6b% = Modem6, ATT_Modem6b, PCMCIA\AT&T_PARADYNE-KEEPINTOUCH_CARD-40E9
+%Modem6b% = Modem6, ATT_Modem6b, UNIMODEMC605070E
+
+[Nokia]
+%Modem11% = Modem6, ATT_Modem11, PCMCIA\AT&T_PARADYNE-KEEPINTOUCH_CARD-762F  ; Nokia 14.4 with no cell
+
+; Installation sections
+
+[Modem18]   ; Dataport PCX
+AddReg=All, MfgAddReg, Modem18.AddReg, INTERNAL
+
+[Modem16]   ; KIT 28.8 cell PCMCIA
+AddReg=All, MfgAddReg, Modem16.AddReg, PCMCIA
+
+[Modem15]   ; KIT 28.8 PCMCIA
+AddReg=All, MfgAddReg, Modem15.AddReg, PCMCIA
+
+[Modem14]   ; AT&T Dataport 28.8 V.34
+AddReg=All, MfgAddReg, Modem14.AddReg, EXTERNAL
+
+[Modem13]   ; Comsphere 3810 Plus
+AddReg=All, MfgAddReg, Modem13.AddReg, EXTERNAL
+
+[Modem12]   ; Comsphere 3820 Plus
+AddReg=All, MfgAddReg, Modem12.AddReg, EXTERNAL
+
+[Modem9]    ; DataPort Express
+AddReg=All, MfgAddReg, Modem8.AddReg, INTERNAL
+
+[Modem8]    ; DataPort Express
+AddReg=All, MfgAddReg, Modem8.AddReg, EXTERNAL
+
+[Modem7]    ; DataPort 2001 and dataport 14.4 combo. 
+AddReg=All, MfgAddReg, Modem7.AddReg, EXTERNAL
+
+[Modem6]    ; AT&T Keep in Touch PC Card
+AddReg=All, MfgAddReg, Modem6.AddReg, PCMCIA
+
+[Modem5]    ; AT&T Keep in Touch Express PC Card
+AddReg=All, MfgAddReg, Modem5.AddReg, PCMCIA
+
+[Modem4]    ; AT&T Comsphere 3810
+AddReg=All, MfgAddReg, Modem4.AddReg, EXTERNAL
+
+[Modem3]    ; AT&T Dataport 14.4/fax
+AddReg=All, MfgAddReg, Modem2.AddReg, INTERNAL
+
+[Modem2]    ; DataPort 14.4/FAX
+AddReg=All, MfgAddReg, Modem2.AddReg, EXTERNAL
+
+[Modem1]    ; DataPort 2001
+AddReg=All, MfgAddReg, Modem1.AddReg, EXTERNAL
+
+; AddReg sections
+
+[Modem18.AddReg] ; Dataport PCX
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f0,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Init, 2,, "AT &F &D2 &C1 E0 V1 W2<cr>"
+HKR,, InactivityScale, 1, 0a,00,00,00
+HKR, Settings, FlowControl_Off,, "&K0"
+HKR, Settings, FlowControl_Hard,, "&K3"
+HKR, Settings, FlowControl_Soft,, "&K4"
+HKR, Settings, SpeedNegotiation_Off,, "N0"
+HKR, Settings, SpeedNegotiation_On,, "N1"
+HKR, Settings, InactivityTimeout,, "S30=<#>"
+HKR, Settings, DialSuffix,, ";"            
+
+[Modem16.AddReg] ; KIT 28.8 PCMCIA with cell
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 07,00,00,00, 7f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Init, 2,, "AT &F &D2 &C1 E0 V1 S90=0<cr>"
+HKR, Settings, ErrorControl_Cellular,, "&F6 \N7"
+HKR, Settings, ErrorControl_Cellular_Forced,, "&F6 \N6"
+HKR, Settings, DialSuffix,, ";"            
+
+[Modem15.AddReg] ; KIT 28.8 PCMCIA
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 07,00,00,00, 77,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, DialSuffix,, ";"            
+
+[Modem14.AddReg] ; DataPort 28.8 V.34
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 07,00,00,00, 77,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, DialSuffix,, ";"            
+
+[Modem13.AddReg] ; AT&T Comsphere 3810 Plus
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 07,00,00,00, 3f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, ErrorControl_On,, "\N5"
+HKR, Settings, ErrorControl_Forced,, "\N4"
+HKR, Settings, ErrorControl_Cellular,, "&F6 \N5"
+HKR, Settings, ErrorControl_Cellular_Forced,, "&F6 \N4"
+HKR, Settings, DialSuffix,, ";"            
+
+[Modem12.AddReg] ; AT&T Comsphere 3820 Plus
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 07,00,00,00, 37,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR, Settings, ErrorControl_On,, "\N5"
+HKR, Settings, ErrorControl_Forced,, "\N4"
+
+[Mode

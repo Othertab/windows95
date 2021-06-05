@@ -1,0 +1,129 @@
+.ndi.reg,IBMTok.ndi.reg,IBMTok.General.Params,IBMTok.Isa.Params,IBMTok.12a.Params,IBMTok.Generic.Params
+LogConfig=*PNP80CB.LogConfig
+
+[*PNP80CB.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP80CB"
+
+[*PNP80CB.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=86a0-86a7,96a0-96a7,a6a0-a6a7,b6a0-b6a7,c6a0-c6a7,d6a0-d6a7,e6a0-e6a7,f6a0-f6a7
+
+
+;****************************************************************************
+; *PNP8327 IBM Token Ring (All Types)
+;****************************************************************************
+[*PNP8327.ndi]
+AddReg=*PNP8327.ndi.reg,IBMTok.ndi.reg,IBMTok.General.Params,IBMTok.Isa.Params,IBMTok4.Params,IBMTok.Generic.Params
+LogConfig=*PNP8327.LogConfig
+
+[*PNP8327.ndi.reg]
+HKR,Ndi,DeviceID,,"*PNP8327"
+
+[*PNP8327.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A23,A24-A27
+
+
+;****************************************************************************
+; mca_e000 IBM Token Ring (MCA)
+;****************************************************************************
+[mca_e000.ndi]
+AddReg=mca_e000.ndi.reg,IBMTok.ndi.reg,IBMTok.General.Params,IBMTok.12a.Params,Slot
+
+[mca_e000.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_e000"
+
+
+;****************************************************************************
+; mca_e001 IBM Token Ring 4/16Mbs (MCA)
+;****************************************************************************
+[mca_e001.ndi]
+AddReg=mca_e001.ndi.reg,IBMTok.ndi.reg,IBMTok.General.Params,IBMTok4.Params,Slot
+
+[mca_e001.ndi.reg]
+HKR,Ndi,DeviceID,,"mca_e001"
+
+;****************************************************************************
+; IBM0001       ;IBM AUTO 16/4 TOKEN-RING
+;****************************************************************************
+
+[*IBM0001.ndi]
+AddReg=*IBM0001.ndi.reg,IBMTOK4.ndi.reg,IBMTOK4.resources
+
+[*IBM0001.ndi.reg]
+HKR,NDI,DeviceID,,"*IBM0001"
+
+
+;****************************************************************************
+; IBM TOKEN RING base section
+;****************************************************************************
+[IBMTok.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,ibmtok.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"IBMTOK"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"IBMTOK$"
+HKR,NDIS\NDIS2,FileName,,"ibmtok.dos"
+HKR,NDIS\ODI,DriverName,,"token,ntr2000"
+HKR,NDIS\ODI,FileName,,"token.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ibmtok.ndis3"
+HKR,Ndi\Install,ndis2,,"ibmtok.ndis2"
+;HKR,Ndi\Install,odi,,"ibmtok.odi"
+
+; Install ibmtok NDIS3
+[ibmtok.ndis3]
+CopyFiles=ibmtok.ndis3.CopyFiles
+[ibmtok.ndis3.CopyFiles]
+ibmtok.vxd
+
+; Install ibmtok NDIS2
+[ibmtok.ndis2]
+CopyFiles=ibmtok.ndis2.CopyFiles
+[ibmtok.ndis2.CopyFiles]
+ibmtok.dos
+
+; Install ODI
+[ibmtok.odi]
+CopyFiles=ibmtok.odi.CopyFiles
+[ibmtok.odi.CopyFiles]
+token.com
+
+
+; general ibmtok params
+[IBMTok.General.Params]
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,6
+HKR,NDI\params\MaxTransmits,min,,6
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+; Primary
+HKR,Ndi\params\Primary,ParamDesc,,"16 bit only - Primary"
+HKR,Ndi\params\Primary,default,,""
+HKR,Ndi\params\Primary,type,,keyonly
+HKR,NDI\params\Primary,flag,1,10,00,00,00
+HKR,Ndi\params\Primary,optional,,1
+HKR,Ndi\params\Primary,"",,"1"
+; Alternate
+HKR,Ndi\params\Alternate,ParamDesc,,"16 bit only - Alternate"
+HKR,Ndi\params\Alternate,default,,""
+HKR,Ndi\params\Alternate,type,,keyonly
+HKR,NDI\params\Alternate,flag,1,10,00,00,00
+HKR,Ndi\params\Alternate,optional,,1
+
+; RecvBufs
+HKR,NDI\params\RecvBufs,ParamDesc,,"Receive Buffers"
+HKR,NDI\params\RecvBufs,type,,int
+HKR,Ndi\params\RecvBufs,default,,2
+HKR,NDI\pa

@@ -1,0 +1,86 @@
+di,HelpText,,%VSERVER_HELP%
+
+[VSERVER.Install]
+AddReg=VSERVER.AddReg,SERVER.AddReg
+CopyFiles=VSERVER.Files,SERVER.Files
+
+[VSERVER.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,vserver.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\VSERVER",StaticVxD,,vserver.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\VSERVER",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\VSERVER",NetClean,1,1
+
+[VSERVER.Files]
+vserver.vxd,,,32        ;suppress version conflicts
+
+[VSERVER.Remove]
+DelReg=VSERVER.Rmv.DelReg, SERVER.DelReg
+[VSERVER.Rmv.DelReg]
+HKLM,"System\CurrentControlSet\Services\VxD\VSERVER",StaticVxD
+
+;*********************************************
+;    NWSERVER section
+;*********************************************
+[NWSERVER.ndi]
+AddReg=NWSERVER.ndi.reg
+;Unique PnP ID, entry need to be present so that setup can back track 
+;the device name from the driver 
+DeviceID=NWSERVER
+
+[NWSERVER.ndi.reg]
+HKR,Ndi,DeviceID,,NWSERVER
+; Interfaces
+HKR,Ndi\Interfaces,DefLower,,"nwredir"
+HKR,Ndi\Interfaces,LowerRange,,"nwredir"
+HKR,Ndi\Compatibility,ExcludeAll,,"VSERVER"
+HKR,Ndi\Compatibility,RequireAll,,"NWREDIR"
+; Install-Remove Section
+HKR,Ndi\Install,,,"NWSERVER.Install"
+HKR,Ndi\Remove,,,"NWSERVER.Remove"
+; Parameters
+; SAP Browsing
+HKR,Ndi\params\Use_Sap,location,,"SYSTEM\CurrentControlSet\Services\NcpServer\Parameters"
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\Use_Sap,default,,0
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\Use_Sap,ParamDesc,,%NWSERVER_PARAM_USE_SAP%
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\Use_Sap,type,,enum
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\Use_Sap\enum,1,,%NWSERVER_PARAM_USE_SAP_ENABLED%
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\Use_Sap\enum,0,,%NWSERVER_PARAM_USE_SAP_DISABLED%
+; Browse master eligibility
+HKR,Ndi\params\BrowseMaster,location,,"SYSTEM\CurrentControlSet\Services\NcpServer\Parameters"
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster,default,,1
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster,ParamDesc,,%NWSERVER_PARAM_BROWSEMASTER%
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster,type,,enum
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster\enum,3,,%NWSERVER_PARAM_BROWSEMASTER_NOT_MASTER%
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster\enum,2,,%NWSERVER_PARAM_BROWSEMASTER_PREF%
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster\enum,1,,%NWSERVER_PARAM_BROWSEMASTER_ENABLED%
+HKLM,System\CurrentControlSet\Services\NcpServer\Parameters\Ndi\params\BrowseMaster\enum,0,,%NWSERVER_PARAM_BROWSEMASTER_DISABLED%
+; Context help
+HKR,Ndi,HelpText,,%NWSERVER_HELP%
+
+[NWSERVER.Install]
+AddReg=NWSERVER.AddReg,SERVER.AddReg
+CopyFiles=NWSERVER.Files,SERVER.Files,LOGIN.Files
+
+[NWSERVER.AddReg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,nwserver.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWSERVER",StaticVxD,,nwserver.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWSERVER",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWSERVER",NetClean,1,1
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETSUP,StaticVxD,,"vnetsup.vxd"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETSUP,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETSUP,NetClean,1,1
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\FILESEC",StaticVxD,,filesec.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\FILESEC",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\FILESEC",NetClean,1,1
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWSP",StaticVxD,,nwsp.vxd
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWSP",Start,1,00
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\NWSP",NetClean,1,1
+
+[NWSERVER.Files]
+nwserver.vxd,,,32       ;suppress version conflicts
+vnetsup.vxd,,,32        ;suppress version conflicts
+
+[LOGIN.Files]
+login.exe

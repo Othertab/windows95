@@ -1,0 +1,68 @@
+ with writable IO window
+HKLM,System\CurrentControlSet\Services\VxD\PCI,00471014,1,00,00,04,00
+
+; More than one bit
+HKLM,System\CurrentControlSet\Services\VxD\PCI,3202100C,1,00,8A,00,00
+
+;
+; Override of routing of some bridges
+;
+;                                                 devfunc of child device
+;                                                            ||
+;                                                    dwVenDev||
+;                                                    vvvvvvvvvv 1  A  B  C  D
+; Toshiba DeskStation V
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0605117908,1,03,04,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0605117920,1,01,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0605117940,1,03,04,01,02
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0605117948,1,04,03,02,01
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0605117960,1,02,01,04,03
+; Toshiba DeskStation V+
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0609117908,1,04,00,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0609117920,1,01,02,00,00
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0609117950,1,03,04,01,02
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0609117958,1,02,03,04,01
+HKLM,System\CurrentControlSet\Services\VxD\PCI,IRQORT0609117968,1,04,01,00,00
+
+;
+; IRQ Miniport Data
+;
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\04828086,Name,,"Intel 82375EB/SB"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\04828086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\04828086,Instance,1,00,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\122E8086,Name,,"Intel 82371FB"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\122E8086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\122E8086,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\04848086,Name,,"Intel 82378"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\04848086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\04848086,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\12348086,Name,,"Intel 82371MX"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\12348086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\12348086,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\70008086,Name,,"Intel 82371SB"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\70008086,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\70008086,Instance,1,01,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\00061004,Name,,"VLSI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\00061004,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\00061004,Instance,1,02,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\C5581045,Name,,"Opti Viper"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\C5581045,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\C5581045,Instance,1,03,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\00081039,Name,,"SiS5503"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\00081039,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\00081039,Instance,1,04,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\01021004,Name,,"VLSI Eagle"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\01021004,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\01021004,Instance,1,05,00,00,00
+
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\06021179,Name,,"Toshiba"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\06021179,Path,,"PCIMP.PCI"
+HKLM,System\CurrentControlSet\Services\VxD\PCI\IRQMiniports\06021179,Instan

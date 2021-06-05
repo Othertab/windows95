@@ -1,0 +1,63 @@
+"FailInform"
+;	PRINTING
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\PageSetup","margin_left",2,"0.750000"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\PageSetup","margin_top",2,"0.750000"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\PageSetup","margin_right",2,"0.750000"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\PageSetup","margin_bottom",2,"0.750000"
+;	URL Mappings
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix",,0,"http://"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL\Prefixes","ftp.",0,"ftp://"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL\Prefixes","gopher.",0,"gopher://"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL\Prefixes","home.",0,"http://"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL\Prefixes","mosaic.",0,"http://"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\URL\Prefixes","www.",0,"http://"
+
+
+;	International Registry Setting
+HKCU,"Software\Microsoft\Internet Explorer\International\1250","IEFixedFontName",2,"Courier New"
+HKCU,"Software\Microsoft\Internet Explorer\International\1250","IEPropFontName",2,"Times New Roman"
+HKCU,"Software\Microsoft\Internet Explorer\International\1250","Script",2,"%CENTRAL_EUROPEAN%"
+
+HKCU,"Software\Microsoft\Internet Explorer\International\1251","IEFixedFontName",2,"Courier New"
+HKCU,"Software\Microsoft\Internet Explorer\International\1251","IEPropFontName",2,"Times New Roman"
+HKCU,"Software\Microsoft\Internet Explorer\International\1251","Script",2,"%CYRILLIC%"
+
+HKCU,"Software\Microsoft\Internet Explorer\International\1252","IEFixedFontName",2,"Courier New"
+HKCU,"Software\Microsoft\Internet Explorer\International\1252","IEPropFontName",2,"Times New Roman"
+HKCU,"Software\Microsoft\Internet Explorer\International\1252","Script",2,"%WESTERN%"
+
+HKCU,"Software\Microsoft\Internet Explorer\International\1253","IEFixedFontName",2,"Courier New"
+HKCU,"Software\Microsoft\Internet Explorer\International\1253","IEPropFontName",2,"Times New Roman"
+HKCU,"Software\Microsoft\Internet Explorer\International\1253","Script",2,"%GREEK%"
+
+
+;	WININET.DLL Registry Entries
+HKLM,"Software\Microsoft\Internet Explorer\Security\Basic","SecurityName",,"Basic Authentication"
+HKLM,"Software\Microsoft\Internet Explorer\Security\Basic","DLLFile",0,"wininet.dll"
+HKLM,"Software\Microsoft\Internet Explorer\Security\Basic","SchemeList",,"Basic"
+HKLM,"Software\Microsoft\Internet Explorer\Security\Basic","Flags",1,00,00,00,00
+
+
+;	MSNSSPC/WinSSPI Reg Entries
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\MSN","DLLFile",0,"winsspi.dll"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\MSN","Flags",1,0A,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\MSN","SchemeList",0,"MSN"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\MSN","SecurityName",0,"MSN SSPI Authentication"
+
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\NTLM","DLLFile",0,"winsspi.dll"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\NTLM","Flags",1,08,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\NTLM","SchemeList",0,"NTLM"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Security\NTLM","SecurityName",0,"NTLM SSPI Authentication"
+
+
+;	Font Settings
+
+HKCU,"Software\Microsoft\Internet Explorer\Styles","Default_Style_Sheet",2,"SerifMedium"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","StyleSheet_Name_1",0,"SerifSmallest"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","StyleSheet_Name_2",0,"SerifSmall"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","StyleSheet_Name_3",0,"SerifMedium"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","StyleSheet_Name_4",0,"SerifLarge"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","StyleSheet_Name_5",0,"SerifLargest"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifMedium_Normal_font",2,"IEPropFont,NoBold,12,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifMedium_H1_font",2,"IEPropFont,Bold,24,NoItalic,NoUnderline"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Styles","SerifMedium_H2_font",2,"IEPropFont,Bold,18,NoItalic,NoUnderline"

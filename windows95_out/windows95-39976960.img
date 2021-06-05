@@ -1,0 +1,98 @@
+d to restart the program 
+to make sure the changed setting works properly.
+
+Color Cursors
+-------------
+Color cursors require a Windows 95 display driver running at 256 or
+more colors. They are not supported for ATI mach8 display adapters. 
+
+If Windows 95 is not using 32-bit disk access, cursors will not
+animate. You can check this setting in System properties on the
+Performance tab.
+
+PCI Display Adapters
+--------------------
+Your screen resolution may revert to 640x480 when Setup starts
+Windows 95 for the first time. Resolution should return to your usual
+settings in subsequent sessions.
+
+IRQ Conflicts with PCI Display Adapters
+---------------------------------------
+If your PCI display adapter is configured by your BIOS to use IRQ 15 
+and a functioning secondary PCI IDE disk controller is also configured 
+to use IRQ 15 (by default), Windows 95 assigns IRQ 15 to the IDE disk 
+controller. This forces your display adapter to use VGA mode. 
+
+To load the accelerated Windows 95 driver for your display adapter, 
+you must eliminate the resource conflict. One of the following 
+methods should work for you:
+
+- Obtain a BIOS upgrade from your hardware vendor. 
+- If your BIOS supports it, disable the secondary PCI IDE controller 
+  in the BIOS and on the Device Manager tab in System properties.
+- If your BIOS supports it, disable the IRQ of the display adapter.
+- If your BIOS supports it, manually reconfigure the display adapter 
+  to use a different IRQ setting.
+
+Avance Logic Display Adapters
+-----------------------------
+A Windows 95 driver for Avance Logic 2301 adapters (for example, 
+the Hercules Stingray adapter) is available on the Windows 95 CD-ROM 
+in the \Drivers\Display\Advance folder. 
+
+The driver is also available in the Windows Driver Library. For 
+more information, see the Windows Driver Library section earlier 
+in this file. 
+
+Diamond Stealth and SpeedStar 64/Pro
+------------------------------------
+If you have the Windows 95 CD-ROM, enhanced drivers for these 
+adapters are available in the \Drivers\Display\Diamond folder. 
+These enhanced drivers enable you to set refresh rate based on 
+the monitor type selected in Display properties. For more 
+information about how to install these drivers, see the 
+Readme.txt file. 
+
+These drivers are also available in the Windows Driver Library. 
+For more information, see the Windows Driver Library section 
+earlier in this file.
+
+Diamond Viper
+-------------
+Windows 95 does not have a built-in driver for Diamond Viper 
+adapters. However, if you install Windows 95 in the directory 
+that contains your Windows 3.x files, Setup will preserve and use 
+the drivers that are already there. If you install Windows 95 in 
+a different directory, Setup will install the VGA driver.
+
+If you have the Windows 95 CD-ROM, a Windows 95 driver for Diamond 
+Viper VLB and PCI adapters (Weitek P9000 based) is available in the 
+\Drivers\Display\Diamond folder. For more information about how to 
+install these drivers, see the Readme.txt file. 
+
+These drivers are also available in the Windows Driver Library. For 
+more information, see the Windows Driver Library section earlier in 
+this file.
+
+S3 Display Adapters
+-------------------
+S3 adapters conflict with COM4 ports and modems. If you have modem
+problems using this configuration, change your modem to a different
+COM port. Or open System properties in Control Panel, click the 
+Performance tab, click Graphics, and then drag the slider to None.
+
+You can correct certain S3 display problems by adding one of the
+following lines to the [Display] section of your System.ini file,
+which is located in the folder that contains your Windows 95 files.
+  
+For problems with line and shape outline appearance, add:  
+  Polygon=0       
+
+For color problems with "High Color (16 bit)," add:                  
+  HighColor=15
+
+For color problems with "True Color (24 bit)," add:                  
+  TrueColor=24
+
+NOTE: The Windows 95 S3 driver supports 24-bit mode only at a 
+resolution 

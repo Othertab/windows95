@@ -1,0 +1,125 @@
+KR,NDI\params\maxtransmits,max,,96
+;HKR,NDI\params\maxtransmits,step,,1
+;HKR,NDI\params\maxtransmits,flag,1,10,00,00,00
+;HKR,NDI\params\maxtransmits,optional,,1
+; receivebuffers
+;HKR,NDI\params\receivebuffers,ParamDesc,,"Receive Buffers"
+;HKR,NDI\params\receivebuffers,type,,int
+;HKR,Ndi\params\receivebuffers,default,,12
+;HKR,NDI\params\receivebuffers,min,,6
+;HKR,NDI\params\receivebuffers,max,,96
+;HKR,NDI\params\receivebuffers,step,,1
+;HKR,NDI\params\receivebuffers,flag,1,10,00,00,00
+;HKR,NDI\params\receivebuffers,optional,,1
+; receivebufsize
+;HKR,NDI\params\receivebufsize,ParamDesc,,"Receive Buffer Size"
+;HKR,NDI\params\receivebufsize,type,,int
+;HKR,Ndi\params\receivebufsize,default,,256
+;HKR,NDI\params\receivebufsize,min,,256
+;HKR,NDI\params\receivebufsize,max,,1536
+;HKR,NDI\params\receivebufsize,step,,1
+;HKR,NDI\params\receivebufsize,flag,1,10,00,00,00
+;HKR,NDI\params\receivebufsize,optional,,1
+; receivechains
+;HKR,NDI\params\receivechains,ParamDesc,,"Receive Chains Entries"
+;HKR,NDI\params\receivechains,type,,int
+;HKR,Ndi\params\receivechains,default,,12
+;HKR,NDI\params\receivechains,min,,6
+;HKR,NDI\params\receivechains,max,,96
+;HKR,NDI\params\receivechains,step,,1
+;HKR,NDI\params\receivechains,flag,1,10,00,00,00
+;HKR,NDI\params\receivechains,optional,,1
+
+[SMC.Mulitcast.Param]
+; maxmulticast
+HKR,NDI\params\maxmulticast,ParamDesc,,"Maximum Multicast Addresses"
+HKR,NDI\params\maxmulticast,type,,int
+HKR,Ndi\params\maxmulticast,default,,16
+HKR,NDI\params\maxmulticast,min,,1
+HKR,NDI\params\maxmulticast,max,,32
+HKR,NDI\params\maxmulticast,step,,1
+HKR,NDI\params\maxmulticast,flag,1,20,00,00,00
+
+[Slot]
+HKR,Ndi\params\slotnumber,ParamDesc,,"Adapter Slot Number"
+HKR,Ndi\params\slotnumber,type,,int
+HKR,Ndi\params\slotnumber,default,,1
+HKR,Ndi\params\slotnumber,min,,1
+HKR,Ndi\params\slotnumber,max,,8
+HKR,Ndi\params\slotnumber,step,,1
+HKR,Ndi\params\slotnumber,optional,,1
+HKR,NDI\params\slotnumber,flag,1,30,00,00,00
+
+[MC_Channel]
+HKR,Ndi\params\micro_channel,ParamDesc,,"Bus Type (0=ISA, 1=MCA)"
+HKR,Ndi\params\micro_channel,type,,int
+HKR,Ndi\params\micro_channel,default,,0
+HKR,Ndi\params\micro_channel,min,,0
+HKR,Ndi\params\micro_channel,max,,1
+HKR,Ndi\params\micro_channel,step,,1
+HKR,NDI\params\micro_channel,flag,1,10,00,00,00
+
+[MCPS_Channel]
+HKR,Ndi\params\micro_channel,ParamDesc,,"Bus Type (0=ISA, 1=MCA)"
+HKR,Ndi\params\micro_channel,type,,int
+HKR,Ndi\params\micro_channel,default,,1
+HKR,Ndi\params\micro_channel,min,,0
+HKR,Ndi\params\micro_channel,max,,1
+HKR,Ndi\params\micro_channel,step,,1
+HKR,NDI\params\micro_channel,flag,1,10,00,00,00
+
+
+;****************************************************************************
+; SMCMAC NDIS3, NDIS2 ODI install section
+;****************************************************************************
+; Install NDIS3
+[SMCMAC.ndis3]
+CopyFiles=SMCMAC.ndis3.CopyFiles
+[SMCMAC.ndis3.CopyFiles]
+smc8000w.vxd
+
+; Install NDIS2
+[SMCMAC.ndis2]
+CopyFiles=SMCMAC.ndis2.CopyFiles
+[SMCMAC.ndis2.CopyFiles]
+smc8000.dos
+
+; Install ODI
+[smc8000.odi]
+CopyFiles=smc8000.odi.CopyFiles
+[smc8000.odi.CopyFiles]
+smc8000.com
+
+
+;****************************************************************************
+; SMCARC NDIS2 ODI install section
+;****************************************************************************
+; Install NDIS2
+[SMCARC.ndis2]
+CopyFiles=SMCARC.ndis2.CopyFiles
+[SMCARC.ndis2.CopyFiles]
+smc_arc.dos
+
+; Install ODI
+[smcarcws.odi]
+CopyFiles=smcarcws.odi.CopyFiles
+[smcarcws.odi.CopyFiles]
+smcarcws.com
+
+;****************************************************************************
+; SMC9000 install section
+;****************************************************************************
+
+[Smc9000.ndi.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,smc9000.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+
+HKR,NDIS,LogDriverName,,"SMC9000"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+
+HKR,NDIS\NDIS2,DriverName,,"SMC9X$"
+HKR,NDIS\NDIS2,FileName,,"smc9000.dos"
+
+HKR,Ndi\Interfaces,DefUpp

@@ -1,0 +1,143 @@
+okenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"T30ND.ndis3"
+HKR,Ndi\Install,ndis2,,"T30ND.ndis2"
+
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+
+
+; Install NDIS3
+[T30ND.ndis3]
+CopyFiles=T30ND.ndis3.CopyFiles
+[T30ND.ndis3.CopyFiles]
+T30n3.vxd
+
+; Install NDIS2
+[T30ND.ndis2]
+CopyFiles=T30ND.ndis2.CopyFiles
+[T30ND.ndis2.CopyFiles]
+T30ND.dos
+
+
+;****************************************************************************
+; E3100 Series DNI base section
+;****************************************************************************
+[e3100.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,E31N3.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"E31N3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"E31ND$"
+HKR,NDIS\NDIS2,FileName,,"E31ND.dos"
+HKR,NDIS\ODI,DriverName,,"E31ODI"
+HKR,NDIS\ODI,FileName,,"e31odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"E31ND.ndis3"
+HKR,Ndi\Install,ndis2,,"E31ND.ndis2"
+HKR,Ndi\Install,odi,,"E31ND.odi"
+
+; Install NDIS3
+[E31ND.ndis3]
+CopyFiles=E31ND.ndis3.CopyFiles
+[E31ND.ndis3.CopyFiles]
+e31n3.vxd
+
+; Install NDIS2
+[E31ND.ndis2]
+CopyFiles=E31ND.ndis2.CopyFiles
+[E31ND.ndis2.CopyFiles]
+E31ND.dos
+
+; Install ODI
+[E31ND.odi]
+CopyFiles=e31nd.odi.CopyFiles
+[e31nd.odi.CopyFiles]
+e31odi.com
+
+;****************************************************************************
+; E3000 Series DNI base section
+;****************************************************************************
+[e3000.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,E30N3.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"E30N3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"E30ND$"
+HKR,NDIS\NDIS2,FileName,,"E30ND.dos"
+HKR,NDIS\ODI,DriverName,,"E30ODI"
+HKR,NDIS\ODI,FileName,,"e30odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"E30ND.ndis3"
+HKR,Ndi\Install,ndis2,,"E30ND.ndis2"
+HKR,Ndi\Install,odi,,"E30ND.odi"
+
+; Install NDIS3
+[E30ND.ndis3]
+CopyFiles=E30ND.ndis3.CopyFiles
+[E30ND.ndis3.CopyFiles]
+e30n3.vxd
+
+; Install NDIS2
+[E30ND.ndis2]
+CopyFiles=E30ND.ndis2.CopyFiles
+[E30ND.ndis2.CopyFiles]
+E30ND.dos
+
+; Install ODI
+[E30ND.odi]
+CopyFiles=e30nd.odi.CopyFiles
+[e30nd.odi.CopyFiles]
+e30odi.com
+
+;****************************************************************************
+; E2100 Series DNI base section
+;****************************************************************************
+[e2100.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,E21N3.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"E21N3"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"E21ND$"
+HKR,NDIS\NDIS2,FileName,,"E21ND.dos"
+HKR,NDIS\ODI,DriverName,,"e21odi"
+HKR,NDIS\ODI,FileName,,"e21odi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"E21ND.ndis3"
+HKR,Ndi\Install,ndis2,,"E21ND.ndis2"
+;HKR,Ndi\Install,odi,,"E21ND.odi"
+; resources
+HKR,,InterruptNumber,1,04,00,00,00
+HKR,,IObaseAddress,1,02,00,00,00
+HKR,,MemoryMappedBaseAddress,1,01,00,00,00
+HKR,NDI\params\InterruptNumber,resc,1,04,00,00,00

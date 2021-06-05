@@ -1,0 +1,104 @@
+tions and possibly drivers for hardware 
+peripherals (sound cards, tape drives, etc.) must be re-installed 
+to put the proper support files in place as well as the application 
+settings in the .ini files and/or the registry.
+
+NOTE: Windows 95 version 4.00.950B does not support dual booting 
+to a previous MS-DOS/Windows 3.x installation. To check the 
+Windows 95 version number, right-click the My Computer icon on 
+your desktop, click Properties, and then click the General tab.
+
+
+[Q: How do I set up Windows 95 into a separate subdirectory?]
+
+During Setup, Windows 95 you are prompted to provide a directory 
+to install Windows 95 into. 
+
+To install Windows 95 into a new directory:
+1. Click the Other Directory option, and then click Next.
+2. Enter the new directory. For example, C:\Win95.
+
+
+[Q: What files do I backup to preserve Windows 95 settings?]
+
+You can use the Windows 95 Backup utility to backup your system 
+and all user and software specific preferences. In order to do 
+this, use the Full System Backup File set which is described on 
+the second screen that comes up when you run Backup.
+
+NOTE: After installing Windows 95 into another directory, all 
+programs (and possibly all hardware-peripheral drivers) must be 
+re-installed.
+
+
+[Q: I have installed Windows 95 into different directory than 
+    Windows 3.x or Windows for Workgroups 3.1x. How do I set up 
+    to dual boot between them?]
+
+When installing Windows 95 into a different directory, dual 
+booting is enabled by default. Dual boot is available only if 
+the existing version of MS-DOS is version 5.0 or greater. If 
+you are using version 5.0 or greater, you can set up dual-
+booting as follows:
+
+1. Start your computer. When you see the "Starting Windows 95" 
+   prompt, press F8.
+2. From the menu, select Previous Version Of MS-DOS.
+
+NOTE: Windows 95 version 4.00.950B does not support this method 
+of dual booting to a previous version of MS-DOS. To check the 
+Windows 95 version number, right-click the My Computer icon on 
+your desktop, click Properties, and then click the General tab.
+
+
+[Q: What files does Windows 95 modify during Setup?]
+
+Windows 95 is a new operating system, and affects many files on 
+the system.
+
+
+[Q: Can I run the Windows 95 Setup program from MS-DOS? Do I lose 
+    any functionality?]
+
+If you have a running installation of Windows 3.x or Windows for 
+Workgroups 3.x1, it is strongly recommended that you run Setup 
+from your existing version of Windows. This provides the safest 
+and smoothest installation. If you do run Setup from MS-DOS, and 
+it detects Windows on the computer, it will recommend quitting 
+Setup and rerunning it from Windows. If you do run Setup from 
+MS-DOS, Setup may run slower (especially if you are installing 
+from floppy disks). 
+
+
+[Q: Can I set up Windows 95 from a network?]
+
+Yes. There are two ways to set up Windows 95 from a network 
+location:
+
+- Create a Windows 95 flat directory either by using the COPY 
+  command for a CD-ROM, or by using the EXTRACT command for 
+  floppy disks. Connect to the shared directory, run Setup, and 
+  then choose a directory on your computer to set up to. 
+- Go to the Nettools directory (CD-ROM only) to use the Netsetup 
+  Utility.
+
+
+[Q: Setup stops after the first reboot. Why won't it restart?]
+
+There could be several reasons, ranging from video problems to 
+disk-access issues. Here are some steps to troubleshoot a no-start 
+situation:
+  
+1. Restart Windows 95, and then press F8 when you see the message 
+   "Starting Windows 95...". 
+2. Choose Safe Mode from the Startup menu. If Windows 95 starts, 
+   change the video driver to the standard VGA driver by following 
+   these steps:
+
+   1. Click the Start button, point to Settings, and then click 
+      Control Panel.
+   2. Double-click the Display icon.
+   3. Click the Settings tab, and then click Change Display Type.
+   4. Click Change in the Adapter Type section, and then click 
+      Show Compatible Devices.
+   5. Click Standard Display Typ

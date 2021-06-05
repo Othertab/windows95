@@ -1,0 +1,49 @@
+,,"deskmgmt.dll,DM_Query_BIOS_Characteristic_Info"
+HKLM,DesktopManagement\Data\2\IRQ,",IRQNumber",,"deskmgmt.dll,DM_Query_System_IRQ_Info"
+HKLM,DesktopManagement\Data\2\IRQ,",IRQAvailability",,"deskmgmt.dll,DM_Query_System_IRQ_Info"
+HKLM,DesktopManagement\Data\2\IRQ,",IRQOwner",,"deskmgmt.dll,DM_Query_System_IRQ_Info"
+HKLM,DesktopManagement\Data\2\IRQ,",IRQShareable",,"deskmgmt.dll,DM_Query_System_IRQ_Info"
+HKLM,DesktopManagement\Data\2\IRQ,",IRQTriggerType",,"deskmgmt.dll,DM_Query_System_IRQ_Info"
+HKLM,DesktopManagement\Data\2\DMA,",DMAOwner",,"deskmgmt.dll,DM_Query_System_DMA_Info"
+HKLM,DesktopManagement\Data\2\DMA,",DMANumber",,"deskmgmt.dll,DM_Query_System_DMA_Info"
+HKLM,DesktopManagement\Data\2\DMA,",DMAAvailability",,"deskmgmt.dll,DM_Query_System_DMA_Info"
+HKLM,DesktopManagement\Data\2\DMA,",DMAChannelWidth",,"deskmgmt.dll,DM_Query_System_DMA_Info"
+HKLM,DesktopManagement\Data\2\I/O,",I/OOwner",,"deskmgmt.dll,DM_Query_System_IO_Info"
+HKLM,DesktopManagement\Data\2\I/O,",I/OEndingAddress",,"deskmgmt.dll,DM_Query_System_IO_Info"
+HKLM,DesktopManagement\Data\2\I/O,",I/OStartingAddress",,"deskmgmt.dll,DM_Query_System_IO_Info"
+HKLM,DesktopManagement\Data\2\MemoryMappedI/O,",MemoryMappedI/OOwner",,"deskmgmt.dll,DM_Query_System_Memory_Mapped_IO_Info"
+HKLM,DesktopManagement\Data\2\MemoryMappedI/O,",MemoryMappedI/OEndingAddress",,"deskmgmt.dll,DM_Query_System_Memory_Mapped_IO_Info"
+HKLM,DesktopManagement\Data\2\MemoryMappedI/O,",MemoryMappedI/OStartingAddress",,"deskmgmt.dll,DM_Query_System_Memory_Mapped_IO_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceInstance",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceNumber",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceType",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceBase",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceSize",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceOwner",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+HKLM,DesktopManagement\Data\2\SystemResources,",ResourceOwnerClass",,"deskmgmt.dll,DM_Query_System_Resource_Info"
+
+HKLM,DesktopManagement\Data\2\LogicalMemory,",LogicalMemory",,"deskmgmt.dll,DM_Query_Memory_Info"
+
+;  This part fills in targets in system component for links 
+;  from MIF section.  Some of these just indicate "Unknown",
+;  while others are links to other Reg locations.
+;
+HKLM,DesktopManagement\Data\2\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Data\2\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Data\2\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Data\2\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Data\2\ComponentID,"Installation",1,
+HKLM,DesktopManagement\Data\2\ComponentID,"Verify",1,02
+HKLM,DesktopManagement\Data\2\GeneralInformation,":SystemName",,"HKLM\\System\\CurrentControlSet\\control\\ComputerName\\ComputerName\ComputerName"
+HKLM,DesktopManagement\Data\2\GeneralInformation,":SystemPrimaryUserName",,"HKLM\Software\Microsoft\Windows\CurrentVersion\RegisteredOwner"
+HKLM,DesktopManagement\Data\2\GeneralInformation,"SystemLocation",,"Unknown"
+HKLM,DesktopManagement\Data\2\GeneralInformation,"SystemPrimaryUserPhone",,"Unknown"
+HKLM,DesktopManagement\Data\2\SystemBIOS,"BIOSLoaderVersion",,"Unknown"
+; Can't use this date - wrong format
+; HKLM,DesktopManagement\Data\2\SystemBIOS,":BIOSDate",,"HKLM\Enum\Root\*PNP0C01\0000\BIOSDate"
+HKLM,DesktopManagement\Data\2\SystemBIOS,"BIOSDate",1,
+HKLM,DesktopManagement\Data\2\SystemBIOS,":BIOSName",,"HKLM\Enum\Root\*PNP0C01\0000\BIOSName"
+HKLM,DesktopManagement\Data\2\SystemBIOS,":BIOSVersion",,"HKLM\Enum\Root\*PNP0C01\0000\BIOSVersion"
+HKLM,DesktopManagement\Data\2\Processor\ProcessorVersionInformation,"1",,""
+HKLM,DesktopManagement\Data\2\Processor\MaximumSpeed,"1",1,
+HKLM,DesktopManagement\Data\2\Processor\CurrentSpeed,"

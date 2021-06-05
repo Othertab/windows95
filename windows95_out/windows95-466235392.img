@@ -1,0 +1,75 @@
+classic="MSN Classic", [classic]
+
+
+[Local]
+local = "Local Info", http://essentials.uk.msn.com/default.asp
+other = "Other Cities", http://essentialsbeta.msn.com/goto.asp?pane=other 	
+sidewalk = "Sidewalk", http://www.sidewalk.com 
+
+[custom]
+custompage="Custom Page", http://www.uk.msn.com/custom/msntoday.asp,,,"Customize your own page to get the information and links you want."
+
+[shopping]
+books="Waterstone's Books", http://www.waterstones.co.uk/
+dixons="Dixon's", http://www.dixons.co.uk/prd.i/pgen/dixons/0L/welcome.html
+action="Action Computers", http://www.action.com/
+hamleys="Hamley's Toy Shop",http://www.hamleys.co.uk/
+shoppers="Shoppers Universe", http://www.shoppersuniverse.com/
+loot="Loot", http://www.loot.com/
+
+[cars]
+autolocate="Autolocate", http://autolocate.uk.msn.com/
+carpoint="Car Point", http://carpoint.msn.com/,,,"The best source for information about buying your next car."
+autoexpress="Auto Express", http://www.autoexpress.co.uk/
+loot="Loot", http://www.loot.com/
+
+
+[travel]
+expedia="Expedia World Guide", http://expedia.msn.com/,,,"Start your travel here. Book flights, cars, and hotels. Research trips and get expert tips."
+railtrack="Railtrack", http://www.rail.co.uk/
+bus="National Express", http://www.nationalexpress.co.uk/
+underground="London Transport", http://www.londontransport.co.uk/system/area.html
+traffic="Traffic Reoprts", http://www.vauxhall.co.uk/trnet/tn-check.htm
+aahotels="AA Hotels && Restaurants", http://www.theaa.co.uk/hotels/index.html
+ukmaps="UK Maps", http://www.streetmap.co.uk/
+
+[international]
+AU="Australia (AUS)", http://essentials.msn.com/International/iniSwitch.asp?from=UK&to=AU,,,"Visit MSN Australia."
+CA="Canada (CAN)", http://essentials.msn.com/International/iniSwitch.asp?from=UK&to=CA,,,"Visit MSN Canada."
+FR="France (FRA)", http://essentials.msn.com/International/iniSwitch.asp?from=UK&to=FR,,,"Visit MSN French." 
+DE="Germany (DEU)", http://essentials.msn.com/International/iniSwitch.asp?from=UK&to=DE,,,"Visit MSN Germany."
+JP="Japan (JPN)", http://essentials.msn.com/International/iniSwitch.asp?from=UK&to=JP,,,"Visit MSN Japan.  Nihon go kimasu ka?"
+US="United States (USA)", http://essentials.msn.com/International/iniSwitch.asp?from=UK&to=US,,,"Visit MSN United States."
+
+[AnE]
+Music = "Music Central", http://musiccentral.msn.com/Default/Home,,,"Latest music and the most comprehensive list of all types of music."
+Cinem = "Cinemania", http://cinemania.msn.com/Default/Home,,,"Movie reviews and help searching for your next movie rental."
+Zone = "Internet Gaming Zone", http://www.zone.com/asp/default.asp,,,"The online site for multiplayer gaming."
+
+[reference]
+encarta="Encarta", http://encarta.eng.msn.com/EncartaHome.asp,,,"The World's most popular reference encyclopedia online."
+parenting="Parent Handbook", http://onparenting.msn.com,,,"Great information about toddlers kids and parenting."
+wine="Wine Guide", http://vinsight.msn.com/reference/,,,"The online source for wine snobs or people who want to become one." # surely not ?
+scientist="New Scientist", http://www.newscientist.co.uk/
+library="British Library", http://www.bl.uk/
+yellowpages="Electronic Yellow Pages", http://www.eyp.co.uk/ 
+insite="In Site", http://www.thesite.org.uk/
+grammar="English Grammar", http://www.go-ed.com/el-public/
+government="Government Info Services", http://www.open.gov.uk/
+taps="Taps Job Listings", http://www.taps.com/
+
+
+[finance]
+money="Money Manager", http://moneymanager.uk.msn.com/
+investor="Investor", http://investor.msn.com/,,,"Powerful tools for managing your investments."
+financialtimes="Financial Times", http://www.ft.com/
+pcquote="PC Quote Europe", http://www.pcquote-europe.co.uk/
+bank="Royal Bank of Scotland", http://www.rbos.co.uk/
+barclays="Barclays Bank", http://www.barclays.co.uk/
+citibank="Citibank", http://www.citibank.com/uk/
+halifax="Halifax", http://www.halifax.co.uk/Nhalifax.html
+
+
+[computer]
+computing="Computing on MSN", http://msncomputing.msn.com/,,,"Talk to the experts. Get advice. Bare your digital soul."
+mic

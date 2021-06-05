@@ -1,0 +1,120 @@
+IX.cpk"
+system.ini,iccvid.drv,"Display="
+system.ini,iccvid.drv,"Accelerator="
+system.ini,drivers,"timer="
+system.ini,drivers,"wavemapper="
+system.ini,drivers,,"wavemapper=*.drv"
+system.ini,drivers,"midimapper="
+system.ini,drivers,"joystick=ibmjoy.drv"
+system.ini,386Enh,"device=vtdapi.386"
+system.ini,386Enh,"device=mmdevldr.386"
+system.ini,386Enh,"device=vsbd.386"
+system.ini,386Enh,"device=vadlibd.386"
+system.ini,drivers,"sndevnts=",
+system.ini,mciseq.drv,"disablewarning=",,
+system.ini,drivers,"wave*=vodafax.drv",,1	;Driver GPFault
+system.ini,drivers,"wave*=wavedec.drv",,1	;Driver GPFault
+system.ini,drivers,"Mixer*=wavedec.drv",,1	;Driver GPFault
+system.ini,386Enh,"device=vwavdec.386"          ;Driver GPFault
+
+win.ini,"mci extensions",,"mid=Sequencer"
+win.ini,"mci extensions",,"rmi=Sequencer"
+win.ini,"mci extensions",,"wav=waveaudio"
+win.ini,"mci extensions",,"avi=AVIVideo"
+win.ini,"MCICompatibility",,"QTWVideo=0x0001"
+win.ini,"MCICompatibility",,"MCIXSND=0x0001"
+win.ini,"MCICompatibility",,"GDAnim=0x0001"
+
+control.ini,"don't load",,"snd.cpl=no"
+control.ini,"don't load",,"joystick.cpl=no"
+control.ini,"don't load",,"midimap.drv=no"
+
+[mmsys.fields]
+system.ini,boot,drivers,,mmsystem.dll
+system.ini,boot,drivers,msmixmgr.dll
+system.ini,boot,drivers,sndevnts.drv
+system.ini,boot,drivers,mmmixer.dll
+
+[mmsys.del.reg]
+;Clean up these two keys here because motown is the first to add them
+HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\CheckVerDLLs
+HKLM,%KEY_WARNVER%
+HKCR,mplayer
+HKCR,wavfile
+HKCR,%KEY_OLE1%
+HKCR,mplayer3
+HKCR,%KEY_OLE2%
+HKLM,%KEY_FIL%
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\Nature
+
+
+[mmsys.add.reg]
+HKLM,%KEY_CURRENT%\RunOnce,MultimediaProperties,,"Rundll32.exe mmsys.cpl,mmseRunOnce"
+HKLM,%KEY_CURRENT%\SETUP,ConfigPath,,"%10%\config"
+HKLM,%KEY_CURRENT%\SETUP,MediaPath,,"%25%\media"
+
+;Reset attributes on these old files
+HKLM,%KEY_CURRENT%\RenameFiles\Media,,,"%25%\media"
+HKLM,%KEY_CURRENT%\RenameFiles\Media,multimed,,"multimed,128"
+HKLM,%KEY_CURRENT%\RenameFiles\Media,advanced,,"advanced,128"
+HKLM,%KEY_CURRENT%\RenameFiles\Advanced,,,"%25%\media\advanced"
+HKLM,%KEY_CURRENT%\RenameFiles\Advanced,advanced,,"advanced,128"
+
+;Media Class Installer
+HKLM,%KEY_CLASS%,,,%V_MEDIACLASSDESC%
+HKLM,%KEY_CLASS%,Icon,,"0"
+HKLM,%KEY_CLASS%,Installer,,mmci.dll
+
+;File overwrite warnings
+HKLM,%KEY_CHKVER%,mciavi.drv,2,0
+HKLM,%KEY_CHKVER%,avicap.dll,2,0
+HKLM,%KEY_CHKVER%,mciole.dll,2,0
+HKLM,%KEY_CHKVER%,msacm.dll,2,0
+HKLM,%KEY_CHKVER%,msacm.drv,2,0
+HKLM,%KEY_CHKVER%,dispdib.dll,2,0
+HKLM,%KEY_CHKVER%,msvideo.dll,2,0
+HKLM,%KEY_CHKVER%,avifile.dll,2,0
+HKLM,%KEY_CHKVER%,mvmixer.dll,2,0
+HKLM,%KEY_CHKVER%,mvproaud.drv,2,0
+HKLM,%KEY_CHKVER%,midimap.drv,2,0
+HKLM,%KEY_CHKVER%,mmmixer.dll,2,0
+HKLM,%KEY_CHKVER%,msmixmgr.dll,2,0
+HKLM,%KEY_CHKVER%,dciman.dll,2,0
+HKLM,%KEY_CHKVER%,dciman32.dll,2,0
+HKLM,%KEY_WARNVER%,mcicda.drv,2,0
+
+;MediaResources
+HKLM,%KEY_MEDIA%,,,
+HKLM,%KEY_MEDIA%\wave,,,%V_CLSWAVEFORM%
+HKLM,%KEY_MEDIA%\wave,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\midi,,,%V_CLSMIDI%
+HKLM,%KEY_MEDIA%\midi,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\mixer,,,%V_CLSMIXER%
+HKLM,%KEY_MEDIA%\mixer,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\aux,,,%V_CLSAUX%
+HKLM,%KEY_MEDIA%\aux,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\mci,,,%V_CLSMEDIA%
+HKLM,%KEY_MEDIA%\mci,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\acm,,,%V_CLSAUDIO%
+HKLM,%KEY_MEDIA%\acm,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\icm,,,%V_CLSIMAGE%
+HKLM,%KEY_MEDIA%\icm,Installer,,%11%\mmsys.cpl
+HKLM,%KEY_MEDIA%\joystick,,,%V_CLSJOYSTICK%
+HKLM,%KEY_MEDIA%\mapper,,,%V_CLSMAP%
+HKLM,%KEY_MEDIA%\msvideo,,,%V_CLSVIDCAP%
+HKLM,%KEY_MEDIA%\unknown,,,%V_CLSUNKNOWN%
+
+HKLM,%KEY_NEW%,,,
+HKLM,%KEY_NEW%\wave,,,
+HKLM,%KEY_NEW%\midi,,,
+HKLM,%KEY_NEW%\mixer,,,
+HKLM,%KEY_NEW%\aux,,,
+HKLM,%KEY_NEW%\joystick,,,
+HKLM,%KEY_NEW%\mapper,,,
+HKLM,%KEY_NEW%\mci,,,
+HKLM,%KEY_NEW%\acm,,,
+HKLM,%KEY_NEW%\icm,,,
+HKLM,%KEY_NEW%\msvideo,,,
+HKLM,%KEY_NEW%\unknown,,,
+
+HKLM,%KEY_MEDIA%\

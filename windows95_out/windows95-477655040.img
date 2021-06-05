@@ -1,0 +1,73 @@
+rosoft="Microsoft UK", http://www.microsoft.com/uk/
+zdnet="ZD Net", http://www1.zdnet.com/uk/
+gamingzone="Internet Gaming Zone", http://www.zone.com/
+games="Games Domain", http://www.gamesdomain.co.uk/
+sony="Sony Playstation", http://www.playstation.com/
+nintendo="Nintendo", http://www.nintendo.com/
+sega="Sega", http://www.sega.com/
+
+[Communicate]
+URLKey = communicate
+URL = http://communicate.uk.msn.com/
+start = "Communicate Home Page", http://communicate.uk.msn.com/,,,"Communication command center. Chat, e-mail, forums."
+email = "Send or Read E-mail", <e-mail>,,,"Compose, edit, and send your mail."
+chat  = "Chat World",http://chatworld.msn.com/,,,"Chat fanatic? Casual chatter? Jump in!"
+forum = "MSN Forums",http://forums.msn.com/,,,"Join your MSN forums community."
+bul = "Internet Community", http://forums.msn.com/internetcommunity/,,,"Launching pad to the Internet."
+bbs   = "Browse MSN Bulletin Boards",news://msnnews.msn.com/msn.communicate.internet.NewComer,,,"Read or post to MSN and Internet newsgroups."
+fol = "Friends Online", http://friendsonline.msn.com/,,,"Are your cyberfriends online? Find out here!"
+flist = "MSN Forums", [ForumCat] # what is this
+sev   = "Specials", [Specials] # what is this
+
+
+[ForumCat]
+ForCat1 = "Arts, Entertainment && Leisure", [ForArts]
+ForCat2 = "Business && Investing", [ForBusin]
+ForCat3 = "Education && Sciences", [ForEduSci]
+ForCat4 = "People && Communities", [ForPeople]
+ForCat5 = "Sports && Outdoor Recreation", [ForSports]
+ForCat6 = "Travel && Destinations", [ForTravel]
+
+[ForArts]
+ForArts1 = "Books && Publishing", [BooksPub]
+ForArts2 = "Fine Art && Architecture", [FineArt]
+ForArts3 = "Food && Spirits", [FoodSprits]
+ForArts4 = "Games && Gaming", [Games]
+ForArts5 = "Hobbies", [Hobbies]
+ForArts6 = "Movies, TV && Radio", [Movies]
+ForArts7 = "Music && Performing Arts", [Music]
+
+[BooksPub]
+BooksPub1 ="Reading", http://forums.msn.com/reading,,,"Discuss your last reading adventure here!"
+BooksPub2 ="Science Fiction", http://forums.msn.com/sciencefiction,,,"Seek signs of intelligent life!"
+BooksPub3 ="Writing", http://forums.msn.com/writing,,,"MSN's center for authors and poets."
+
+[FineArt]
+FineArt1 ="KidSpace Design", http://forums.msn.com/kidspace,,,"Designing kid-friendly home environments."
+FineArt2 ="Photography", http://forums.msn.com/photography,,,"Devoted to the creation of great photographs."
+FineArt3 ="Theatre", http://forums.msn.com/theatre,,,"The stage: information, resources, and discussion."
+
+[FoodSprits]
+FoodSprits1 ="Ale && Lager Beerbrewing", http://forums.msn.com/ale,,,"Discuss fine crafted ales & lagers."
+FoodSprits2 ="What's Cooking... Online!", http:/forums.msn.com/cooking,,,"Recipes, information, cooking chats, and more."
+
+[Games]
+Games1 ="Games", http://forums.msn.com/games,,,"Explore and discuss games of all kinds!"
+Games2 ="Internet Center", http://forums.msn.com/internetcenter,,,"Learn more about the Internet here!" 
+Games3 ="ChatWorld", http://chatworld.msn.com,,,"The world's chat hangout!"
+
+[Hobbies]
+Hobbies1 ="Collecting", http://forums.msn.com/collectors,,,"If you can collect it, we discuss it!"
+Hobbies2 ="NeedleArts Network", http://forums.msn.com/needlearts/,,,"Discuss resources and techniques for needleartists."
+
+[Movies]
+Movies1 ="MovieTALK", http://forums.msn.com/movies,,,"Revel in the fascinating world of film!"
+Movies2 ="Television", http:/forums.msn.com/television,,,"Tune in to the hippest tube-talk around!"
+
+[Music]
+Music1="Classical Music", http://forums.msn.com/classicalmusic,,,"The interactive classical music magazine."
+Music2="Comedy Connection", http:/forums.msn.com/comedy,,,"Comedy and humor for all ages."
+Music3="Country Club Music", http://forums.msn.com/countrymusic,,,"Country music at its finest."
+Music4="Guitar Center", http://forums.msn.com/guitar,,,"Music education, musicians, bands, and more."
+Music5="Jazz, Blues, Folk && World Music", http://forums.msn.com/jazz,,,"A rich and varied online world of music!"
+Music6="Magic && Illusion", http://forums.msn.com/magic,,,"A world 

@@ -1,0 +1,141 @@
+HCO",,""
+HKLM,"%KEY_DCG%\PropertyIndex","MNMNET",,""
+HKLM,"%KEY_DCG%\PropertyIndex","MNMOM",,""
+HKLM,"%KEY_DCG%\PropertyIndex","AAPLAY Animation:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","MT_Popup_Help:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","MSINToolTip:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","ToolTipWClass:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","CDR50_Toolbox:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","CDR50_ToolboxFlyout:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","BobAndTim:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","EncartaGameNote:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","vs_cblist:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","TzBubble:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","TzBubble32:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","Lotus_Drawer:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","PNTextPal:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","Persuasion TDGColorPicker:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","OTBDock:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","Virtus:WindoidProc:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","Missions:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","pvView:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","FloatWindow:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","IRIS.bubblehelp:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","WXGIMECand:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","ATOK9WKO:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","msime95cand:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","VJED95_UICand:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","msime96cand:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","NECAI_CAND:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","IMECAND:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","WinGaugeTitle:CLASS",,""
+HKLM,"%KEY_DCG%\PropertyIndex","MultiScope Debugger Tool Bar Class:CLASS",,""
+
+HKLM,"%KEY_DCG%\PropertyIndex","MPPopupMsgWClass:NOSHADOW",,""
+HKLM,"%KEY_DCG%\PropertyIndex","CoverWindow:NOSHADOW",,""
+
+HKLM,"%KEY_DCG%\FloatWindow:CLASS","120",1,00,04,00,00
+HKLM,"%KEY_DCG%\FloatWindow:CLASS","121",1,00,04,00,00
+HKLM,"%KEY_DCG%\Virtus:WindoidProc:CLASS","120",1,40,00,00,00
+HKLM,"%KEY_DCG%\Virtus:WindoidProc:CLASS","121",1,40,00,00,00
+HKLM,"%KEY_DCG%\OTBDock:CLASS","120",1,80,96,00,00
+HKLM,"%KEY_DCG%\OTBDock:CLASS","121",1,80,96,00,00
+HKLM,"%KEY_DCG%\PNTextPal:CLASS","121",1,80,94,00,00
+HKLM,"%KEY_DCG%\Persuasion TDGColorPicker:CLASS","121",1,80,94,00,00
+HKLM,"%KEY_DCG%\CDR50_Toolbox:CLASS","120",1,04,00,00,00
+HKLM,"%KEY_DCG%\CDR50_Toolbox:CLASS","121",1,04,00,00,00
+HKLM,"%KEY_DCG%\MNMSHCO","1",1,02,00,00,00
+HKLM,"%KEY_DCG%\MNMNET","1",1,01,00,00,00
+HKLM,"%KEY_DCG%\MNMOM","1",1,01,00,00,00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HKLM,"%KEY_DCG%\Multi-TDD","TDD1",,"NetBIOS TDD"
+HKLM,"%KEY_DCG%\Multi-TDD","TDD2",,"Modem TDD"
+HKLM,"%KEY_DCG%\Multi-TDD","TDD3",,"IPX TDD"
+
+
+
+HKLM,"%KEY_DCG%\Modem TDD","TDD",,"%24%\%ProgramFiles%\%NETMTGDIR%\mnmtddm_.dll"
+
+HKLM,"%KEY_DCG%\Modem TDD","Type",1,04,00,00,00
+HKLM,"%KEY_DCG%\Modem TDD","Enabled",,"N"
+HKLM,"%KEY_DCG%\Modem TDD","DetectDeadCall",1,00,00,00,00
+HKLM,"%KEY_DCG%\Modem TDD","MonitorDSR",1,01,00,00,00
+HKLM,"%KEY_DCG%\Modem TDD","MonitorCD",1,01,00,00,00
+HKLM,"%KEY_DCG%\Modem TDD","Display Name",,"%PROTNAME_R11_PSTN%"
+HKLM,"%KEY_DCG%\Modem TDD","Description",,"%PROTDESC_R11_PSTN%"
+HKLM,"%KEY_DCG%\Modem TDD","Properties UI Module",,"confcp.dll"
+
+
+
+HKLM,"%KEY_DCG%\NetBIOS TDD","TDD",,"%24%\%ProgramFiles%\%NETMTGDIR%\mnmtddn_.dll"
+
+HKLM,"%KEY_DCG%\NetBIOS TDD","Type",1,01,00,00,00
+HKLM,"%KEY_DCG%\NetBIOS TDD","Enabled",,"N"
+HKLM,"%KEY_DCG%\NetBIOS TDD","PadSpaces",1,00,00,00,00
+HKLM,"%KEY_DCG%\NetBIOS TDD","Display Name",,"%PROTNAME_R11_NETBIOS%"
+HKLM,"%KEY_DCG%\NetBIOS TDD","Description",,"%PROTDESC_R11_NETBIOS%"
+
+
+
+HKLM,"%KEY_DCG%\IPX TDD","TDD",,"%24%\%ProgramFiles%\%NETMTGDIR%\mnmtdds_.dll"
+
+HKLM,"%KEY_DCG%\IPX TDD","Type",1,02,00,00,00
+HKLM,"%KEY_DCG%\IPX TDD","Enabled",,"N"
+HKLM,"%KEY_DCG%\IPX TDD","Display Name",,"%PROTNAME_R11_IPX%"
+HKLM,"%KEY_DCG%\IPX TDD","Description",,"%PROTDESC_R11_IPX%"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

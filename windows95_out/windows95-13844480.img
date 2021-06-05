@@ -1,0 +1,99 @@
+F::),A40-A5F(3FF::),A60-A7F(3FF::),1A00-1A1F(3FF::),1A20-1A3F(3FF::),1A40-1A5F(3FF::),1A60-1A7F(3FF::)
+IRQConfig=9,3,4,5,6,7,10,11
+DMAConfig=3,5,6,7
+
+[isa_4_16.PioMode]
+ConfigPriority=HARDRECONFIG
+IOConfig=A00-A1F(3FF::),A20-A3F(3FF::),A40-A5F(3FF::),A60-A7F(3FF::),1A00-1A1F(3FF::),1A20-1A3F(3FF::),1A40-1A5F(3FF::),1A60-1A7F(3FF::)
+IRQConfig=9,3,4,5,6,7,10,11
+
+;****************************************************************************
+; IRMATRAC Drivers
+;****************************************************************************
+[IRMATRAC.Info]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,IRMATRAC.vxd
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS
+HKR,NDIS,LogDriverName,,"IRMATRAC"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"IRMATR$"
+HKR,NDIS\NDIS2,FileName,,"IRMATR.dos"
+HKR,NDIS\ODI,DriverName,,"IRMATRAC"
+HKR,NDIS\ODI,FileName,,"IRMATRAC.com"
+; Interfaces
+HKR,Ndi\Interfaces,Upper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,Lower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"IRMATRAC.ndis3"
+HKR,Ndi\Install,ndis2,,"IRMATRAC.ndis2"
+;HKR,Ndi\Install,odi,,"IRMATRAC.odi"
+;Earlyrelease
+HKR,Ndi\params\earlyrelease,ParamDesc,,"Early Release"
+HKR,Ndi\params\earlyrelease,default,,0
+HKR,Ndi\params\earlyrelease,type,,enum
+HKR,Ndi\params\earlyrelease\enum,0,,"Off"
+HKR,Ndi\params\earlyrelease\enum,1,,"On"
+HKR,NDI\params\earlyrelease,flag,1,30,00,00,00
+; NetworkAddress
+HKR,NDI\params\NetworkAddress,ParamDesc,,"Local Network Address"
+HKR,NDI\params\NetworkAddress,type,,edit
+HKR,NDI\params\NetworkAddress,LimitText,,18
+HKR,NDI\params\NetworkAddress,UpperCase,,1
+HKR,Ndi\params\NetworkAddress,default,,""
+HKR,NDI\params\NetworkAddress,flag,1,20,00,00,00
+HKR,Ndi\params\NetworkAddress,optional,,1
+; RecvBufCount (Win95 Ndis3 only)
+HKR,NDI\params\Ndis3RecvBufCount,ParamDesc,,"32 bit only-Receive Buffers"
+HKR,NDI\params\Ndis3RecvBufCount,flag,1,20,00,00,00
+HKR,NDI\params\Ndis3RecvBufCount,type,,int
+HKR,Ndi\params\Ndis3RecvBufCount,default,,32
+HKR,NDI\params\Ndis3RecvBufCount,min,,2
+HKR,NDI\params\Ndis3RecvBufCount,max,,32
+HKR,NDI\params\Ndis3RecvBufCount,step,,1
+; MaxTransmits (Win95 Ndis3 only)
+HKR,NDI\params\Ndis3MaxTransmits,ParamDesc,,"32 bit only-Max Transmits"
+HKR,NDI\params\Ndis3MaxTransmits,flag,1,20,00,00,00
+HKR,NDI\params\Ndis3MaxTransmits,type,,int
+HKR,Ndi\params\Ndis3MaxTransmits,default,,64
+HKR,NDI\params\Ndis3MaxTransmits,min,,1
+HKR,NDI\params\Ndis3MaxTransmits,max,,64
+HKR,NDI\params\Ndis3MaxTransmits,step,,1
+; MaxFrameLen (Win95 Ndis3 only)
+HKR,NDI\params\Ndis3MaxFrameLen,ParamDesc,,"32 bit only-Max Frame Size"
+HKR,NDI\params\Ndis3MaxFrameLen,flag,1,20,00,00,00
+HKR,NDI\params\Ndis3MaxFrameLen,type,,int
+HKR,Ndi\params\Ndis3MaxFrameLen,default,,4500
+HKR,NDI\params\Ndis3MaxFrameLen,min,,2048
+HKR,NDI\params\Ndis3MaxFrameLen,max,,18000
+HKR,NDI\params\Ndis3MaxFrameLen,step,,1
+; RecvBufCount (Ndis2 only)
+HKR,NDI\params\RecvBufCount,ParamDesc,,"16 bit only-Receive Buffers"
+HKR,NDI\params\RecvBufCount,flag,1,10,00,00,00
+HKR,NDI\params\RecvBufCount,type,,int
+HKR,Ndi\params\RecvBufCount,default,,3
+HKR,NDI\params\RecvBufCount,min,,2
+HKR,NDI\params\RecvBufCount,max,,12
+HKR,NDI\params\RecvBufCount,step,,1
+; MaxTransmits (Ndis2 only)
+HKR,NDI\params\MaxTransmits,ParamDesc,,"16 bit only-Max Transmits"
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\MaxTransmits,default,,32
+HKR,NDI\params\MaxTransmits,min,,1
+HKR,NDI\params\MaxTransmits,max,,40
+HKR,NDI\params\MaxTransmits,step,,1
+; MaxFrameLen (Ndis2 only)
+HKR,NDI\params\MaxFrameLen,ParamDesc,,"16 bit only-Max Frame Size"
+HKR,NDI\params\MaxFrameLen,flag,1,10,00,00,00
+HKR,NDI\params\MaxFrameLen,type,,int
+HKR,Ndi\params\MaxFrameLen,default,,4500
+HKR,NDI\params\MaxFrameLen,min,,2048
+HKR,NDI\params\MaxFrameLen,max,,18000
+HKR,NDI\params\MaxFrameLen,step,,1
+; OdiAlertUser (ODI only)
+HKR,N

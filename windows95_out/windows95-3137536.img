@@ -1,0 +1,61 @@
+,23298,,23298,,,
+ 5,SP_ERROR.WA8<Sports program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,6590,,6590,,,
+ 5,SP_EXCLA.WA8<Sports exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,22438,,22438,,,
+ 5,SP_EXIT.WA8<Sports exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,17070,,17070,,,
+ 5,SP_MAX.WA8<Sports maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,8832,,8832,,,
+ 5,SP_MENU.WA8<Sports menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4660,,4660,,,
+ 5,SP_MENUC.WA8<Sports menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,5110,,5110,,,
+ 5,SP_MIN.WA8<Sports minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,12000,,12000,,,
+ 5,SP_QUEST.WA8<Sports question.wav>,,,,1995-10-24,,,,,,,,,SHARED,11156,,11156,,,
+ 5,SP_START.WA8<Sports startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,28506,,28506,,,
+ 5,SP_STOP.WA8<Sports critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,11608,,11608,,,
+
+[MT_Mystery_thm]
+ 5,MYSTERY.THM<Mystery (high color).theme>,,,,1995-10-24,,,,,,,,,SHARED,5009,,5009,,,
+
+[MT_Mystery_bmp]
+ 5,MY_WALL.JPG<Mystery wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,80213,,80213,,,
+ 5,MY_WALL.PAL<Mystery wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,1048,,1048,,,
+ 5,MY_COMP.ICO<Mystery My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 5,MY_NET.ICO<Mystery Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 5,MY_RECYE.ICO<Mystery Recycle Empty.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 5,MY_RECYF.ICO<Mystery Recycle Full.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+
+[MT_Mystery_cur]
+ 5,MY_BUSY.ANI<Mystery busy.ani>,,,,1995-10-24,,,,,,,,,SHARED,13640,,13640,,,
+ 5,MY_WAIT.ANI<Mystery wait.ani>,,,,1995-10-24,,,,,,,,,SHARED,22574,,22574,,,
+ 5,MY_ARROW.CUR<Mystery arrow.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_BEAM.CUR<Mystery beam.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_CROSS.CUR<Mystery cross.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_HELP.CUR<Mystery help.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_MOVE.CUR<Mystery move.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_NESW.CUR<Mystery Size NESW.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_NO.CUR<Mystery no.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_NS.CUR<Mystery Size NS.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_NWSE.CUR<Mystery Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_PEN.CUR<Mystery pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_UP.CUR<Mystery up.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 5,MY_WE.CUR<Mystery Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+
+[MT_Mystery_scr]
+ 5,MYSTERY.DLL<Mystery.dll>,,,,1995-10-24,,1033,,,,,,,SHARED,473088,SYSTEM,473088,,4.40.0.310,
+ 3,WL32SCR.EXE<Mystery.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,38400,SYSTEM,38400,,4.40.0.310,
+
+[MT_Mystery_ttf]
+"my1" = 5,CALIST.TTF,,,,1995-10-24,,,,,,,,,SHARED,70828,SYSTEM,70828,,1.0.0.0,
+
+[MT_Mystery_wav16]
+ 5,MY_ASTRX.WAV<Mystery asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,33290,,33290,,,
+ 5,MY_BEEP.WAV<Mystery beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,10534,,10534,,,
+ 5,MY_DEFAU.WAV<Mystery default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,26594,,26594,,,
+ 6,MY_EMPTY.WAV<Mystery empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,14470,,14470,,,
+ 6,MY_ERROR.WAV<Mystery program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,21536,,21536,,,
+ 6,MY_EXCLA.WAV<Mystery exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,37602,,37602,,,
+ 6,MY_EXIT.WAV<Mystery exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,33766,,33766,,,
+ 6,MY_MAX.WAV<Mystery maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,15432,,15432,,,
+ 6,MY_MENU.WAV<Mystery menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,7058,,7058,,,
+ 6,MY_MENUC.WAV<Mystery menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,13314,,13314,,,
+ 6,MY_MIN.WAV<Mystery minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,13458,,13458,,,
+ 6,MY_QUEST.WAV<Mystery question.wav>,,,,1995-10-24,,,,,,,,,SHARED,13960,,13960,,,
+ 6,MY_START.WAV<Mystery startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,64456,,64456,,,
+ 6,MY_STOP.WAV<Mystery critical stop.wav>

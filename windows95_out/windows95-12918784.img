@@ -1,0 +1,94 @@
+rb\1,,,"%V_SOUND_EDIT%"
+HKCR,avifile\protocol\StdFileEditing\verb\2,,,"%V_SOUND_OPEN%"
+HKCR,avifile\Insertable,,,
+
+HKCR,.rmi,,,midfile
+HKCR,.mid,,,midfile
+HKCR,midfile,,,"%V_MIDI%"
+HKCR,midfile\DefaultIcon,,,"%25%\mplayer.exe,5"
+HKCR,midfile\shell,,,play
+HKCR,midfile\shell\open,,,"%V_OPEN%"
+HKCR,midfile\shell\open\command,,,"%25%\mplayer.exe %%1"
+HKCR,midfile\shell\play,,,"%V_PLAY%"
+HKCR,midfile\shell\play\command,,,"%25%\mplayer.exe /play /close %%1"
+HKCR,midfile\protocol\StdExecute\Server,,,"%25%\mplayer.exe /mid"
+HKCR,midfile\protocol\StdFileEditing\PackageObjects,,,
+HKCR,midfile\protocol\StdFileEditing\Server,,,"%25%\mplayer.exe /mid"
+HKCR,midfile\protocol\StdFileEditing\verb\0,,,"%V_SOUND_PLAY%"
+HKCR,midfile\protocol\StdFileEditing\verb\1,,,"%V_SOUND_EDIT%"
+HKCR,midfile\protocol\StdFileEditing\verb\2,,,"%V_SOUND_OPEN%"
+HKCR,midfile\Insertable,,,
+HKCR,midfile\CLSID,,,"%KEY_MIDID%"
+HKCR,midfile\shellex\PropertySheetHandlers,,,MidiPage
+HKCR,midfile\shellex\PropertySheetHandlers\MidiPage,,,"%KEY_CLSPROP%"
+
+[MPlay.remove.reg]
+HKLM,%KEY_OPTIONAL%\MPlay,Installed,,"0"
+
+[MPlay.remove.DelReg]
+;OLE 2.0
+HKCR,mplayer
+
+;PowerPoint extensions
+HKLM,%KEY_FIL%\fl.UpdateInis,powerpntAVIFile
+HKLM,%KEY_FIL%\fl.UpdateInis,powerpntMIDFile
+
+;Compatibility with OLE 1.0
+HKCR,%KEY_OLE1%
+
+;OLE 2.0
+HKCR,%KEY_OLE2%
+
+HKCU,%KEY_CURRENT%\Applets\"Media Player"\Options
+
+;mci extensions
+HKCR,avifile\protocol
+HKCR,avifile\Insertable
+
+HKCR,.rmi
+HKCR,.mid
+HKCR,midfile
+;------------------------------------------------
+
+[Strings]
+;Non-localized strings
+KEY_OPTIONAL="SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+KEY_CURRENT="Software\Microsoft\Windows\CurrentVersion"
+KEY_WARNVER="SYSTEM\CurrentControlSet\Control\SessionManager\WarnVerDLLs"
+KEY_CHKVER="SYSTEM\CurrentControlSet\Control\SessionManager\CheckVerDLLs"
+KEY_MEDIA="SYSTEM\CurrentControlSet\Control\MediaResources"
+KEY_NEW="SYSTEM\CurrentControlSet\Control\MediaResources\newdrivers"
+KEY_CLASS="SYSTEM\CurrentControlSet\Services\Class\MEDIA"
+KEY_SHELLX="SYSTEM\CurrentControlSet\Control\MediaResources\MediaExtensions\shellx"
+KEY_SHELLADV="SYSTEM\CurrentControlSet\Control\MediaResources\MediaExtensions\shellx\AdvancedProperties"
+KEY_SHELLSIM="SYSTEM\CurrentControlSet\Control\MediaResources\MediaExtensions\shellx\SimpleProperties"
+KEY_FIL="SYSTEM\CurrentControlSet\Control\MediaResources\FilterList"
+KEY_OEM="SYSTEM\CurrentControlSet\Control\MediaProperties\PrivateProperties\Joystick\OEM"
+KEY_GEN="SYSTEM\CurrentControlSet\Control\MediaResources\NonGeneralMIDIDriverList"
+KEY_APPS="AppEvents\Schemes\Apps"
+KEY_DEF="AppEvents\Schemes\Apps\.Default"
+KEY_LABELS="AppEvents\EventLabels"
+KEY_AUDIO="Software\Microsoft\Multimedia\Audio"
+KEY_CLSPROP="{00022613-0000-0000-C000-000000000046}"
+KEY_OLE1="CLSID\{0003000E-0000-0000-C000-000000000046}"
+KEY_OLE2="CLSID\{00022601-0000-0000-C000-000000000046}"
+KEY_AVI="CLSID\{00022602-0000-0000-C000-000000000046}"
+KEY_MID="CLSID\{00022603-0000-0000-C000-000000000046}"
+KEY_OLE2ID="{00022601-0000-0000-C000-000000000046}"
+KEY_AVIID="{00022602-0000-0000-C000-000000000046}"
+KEY_MIDID="{00022603-0000-0000-C000-000000000046}"
+KEY_AVIFILE="Interface\{00020020-0000-0000-C000-000000000046}"
+KEY_AVISTRM="Interface\{00020021-0000-0000-C000-000000000046}"
+KEY_AVIPROC="CLSID\{0002000D-0000-0000-C000-000000000046}"
+KEY_AVIPROX="CLSID\{0002000D-0000-0000-C000-000000000046}"
+KEY_AVIPROXID="{0002000D-0000-0000-C000-000000000046}"
+KEY_AVIREAD1="CLSID\{00020000-0000-0000-C000-000000000046}"
+KEY_AVIREAD1ID="{00020000-0000-0000-C000-000000000046}"
+KEY_AVIREAD2="CLSID\{0002001F-0000-0000-C000-000000000046}"
+KEY_AVIREAD3="CLSID\{00020001-0000-0000-C000-000000000046}"
+KEY_AVIREAD4="CLSID\{0002000F-0000-0000-C000-000000000046}"
+KEY_AVIREAD5="CLSID\{00020003-0000-0000-C000-000000000046}"
+KEY_AVIREAD5ID="{00020003-0000-0000-C000-000000000046}"
+KEY_SOUND1="CLSID\{0003000D-0000-0000-C000-000000000046}"
+KEY_SOUND2="CLSID\{00020C01-0000-0000-C000-000000000046}"
+KEY_SOUND2ID="{00020C01-0000-0000-C0

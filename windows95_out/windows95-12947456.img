@@ -1,0 +1,147 @@
+ctKodiakServe	="Kodiak Serve Board Network Adapter"
+DetectKodiakNote	="Kodiak NotePort Network Adapter"
+DetectCTron21		="Cabletron E2100 Series DNI Network Adapter"
+DetectELnkI		="3Com EtherLink I Network Adapter"
+DetectELnk16		="3Com EtherLink 16 Network Adapter"
+DetectArcNet		="SMC ARCNET Network Adapter"
+DetectELnkPlus		="3Com EtherLink Plus Network Adapter"
+DetectFD8xx		="Future Domain TMC-950 SIC-based SCSI Host Adapter"
+DetectHardCard		="Plus Hardcard"
+;DetectT128		 ="Trantor T128 SCSI Host Adapter"
+DetectIN2000		="Always IN-2000 SCSI Host Adapter"
+DetectFloppy		="Standard Floppy Controller"
+DetectCOM		="Serial Communication Port"
+DetectInportMouse	="Inport Mouse"
+DetectSerialMouse	="Serial Mouse"
+DetectUSC14x		="UltraStor 14x SCSI Host Adapter"
+DetectFD18xx		="Future Domain TMC-18xx SIC-based SCSI Host Adapter"
+DetectFD7000ex		="Future Domain 7000EX EISA SCSI Host Adapter"
+DetectBusLogic		="BusLogic SCSI Host Adapter"
+DetectAHA154x		="Adaptec AHA-154x/AHA-164x SCSI Host Adapter"
+DetectAIC6x60		="Adaptec AIC-6x60 ISA Single-Chip SCSI Host Adapter"
+DetectSpock		="IBM MCA SCSI Host Adapter"
+DetectDPTISA		="DPT 20x1 ISA SCSI Host Adapter"
+DetectESDI		="Standard IDE/ESDI Hard Disk Controller"
+DetectAIC777x		="Adaptec AHA274x/AIC-777x EISA SCSI Host Adapter"
+DetectLPT		="Parallel Printer Port"
+;DetectXircomPE3	 ="Xircom Pocket Ethernet III"
+;DetectT3x8		 ="Trantor T3x8 Parallel Port SCSI Adapter"
+DetectPCIC		="Intel PCIC Compatible PCMCIA Controller"
+DetectBusMouse		="Bus Mouse"
+DetectPC2x		="Iomega PC2x 8-bit SCSI Host Adapter"
+DetectSonyCD		="Sony Proprietary CD-ROM Controller"
+DetectOPTIMediaCHIPS    ="OPTi MediaCHIPS (82C928 & 82C929)"
+DetectPAS		="Media Vision Pro Audio Spectrum"
+DetectJazz		="Media Vision Jazz"
+DetectWSS		="Windows Sound System"
+DetectSB		="Sound Blaster Compatible"
+DetectAdlib		="Adlib Compatible (MIDI)"
+DetectVxP500            ="AuraVision VxP500 Compatible Video Capture Adapter"
+DetectMitsumi		="Mitsumi CD-ROM Drive"
+DetectMKECR5xx		="Panasonic CD-ROM Drive"
+;DetectEISACards	 ="Miscellaneous EISA Adapter"
+DetectT13B		="Trantor T13B 8-bit SCSI Host Adapter"
+DetectMPU401		="MPU-401 Compatible (MIDI)"
+DetectDBK		="Databook PCMCIA Controller"
+DetectT160		="Trantor T160 SCSI Host Adapter"
+system			="System"
+keyboard		="Keyboard"
+net			="Network Adapter"
+media			="Sound, MIDI, or Video Capture Card"
+SCSIAdapter		="SCSI Controllers"
+mouse			="Mouse"
+display 		="Display"
+hdc			="Hard Disk Controllers"
+fdc			="Floppy Disk Controllers"
+ports			="Ports"
+pcmcia			="PCMCIA Socket"
+adapter 		="CD-ROM Drive"
+eisa			="Other EISA Adapters"
+mca			="Other MCA Adapters"
+unknown 		="Unknown Devices"
+*pnpffff.DeviceDesc	="Unsupported Device"
+Unknown 		="Unknown"
+
+[Manufacturer]
+%Unknown%=Unknown
+
+[Unknown]
+%*pnpffff.DeviceDesc%=UnsupportedDev,*pnpffff	;unsupported device
+
+[UnsupportedDev]
+
+[Det.ClassInfo]
+;SCSIAdapter=*:DetectSCSI
+Adapter=*:DetectAdapter
+Media=*:DetectMedia
+Net=*:DetectNet,SAFE_EXCL
+pcmcia=,SAFE_EXCL
+display=,SAFE_EXCL
+
+[Det.RegCfgSysDev]
+*pnpffff=satisfax
+*pnpffff=hhscand
+*pnpffff=sonycdu
+
+[Det.RegIniDev]
+*pnpffff=MachinePro
+*pnpffff=PictureTel0
+*pnpffff=PictureTel2
+*pnpffff=PictureTel4
+*pnpffff=ReelMagic
+*pnpffff=RReveal
+
+[Det.RegEnvDev]
+*pnpffff=Promotion
+
+[satisfax]
+Name=SATISFAX
+IO="IOADDR=",10
+
+[hhscand]
+Name=HHSCAND
+IO="/A=",10
+IRQ="/I="
+DMA="/D="
+
+[sonycdu]
+Name=SONY_CDU
+IO="/B:",10
+
+[MachinePro]
+Name=moviecod.ini,"Hardware Settings"
+IO="H5IOBase",8
+IRQ="H5IntNumb"
+
+[PictureTel0]
+Name=system.ini,"PICTEL00"
+IO="PICTEL00_IO",20
+Mem="PICTEL00_MEM",4000
+IRQ="PICTEL00_IRQ"
+
+[PictureTel2]
+Name=system.ini,"PICTEL02"
+IO="V35_BASE",40,"RS_366_BASE",10
+
+[PictureTel4]
+Name=system.ini,"PICTEL04"
+IO="SW56_BASE",10
+IRQ="SW56_IRQ"
+
+[ReelMagic]
+Path=system.ini,"drivers","reeldrv"
+Name=fmpdrv.ini,"ReelMagic"
+IO="Port",4
+
+[RReveal]
+Name=rreveal.ini,"SYSTEM"
+IO="ADDR",4
+
+[Promotion]
+Name=VIP8000
+IO=,10
+
+[Det.DevINFs]
+mca_7f4c=scsi.inf
+mca_7f4d=scsi.inf
+mca_7f4f=scsi.

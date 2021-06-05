@@ -1,0 +1,105 @@
+
+HKCR,QuickView\.TXT\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+;HKCR,QuickView\.REG,,,"Registration Entries"
+;HKCR,QuickView\.REG\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WK3,,,"Lotus 1-2-3 v 3 File"
+HKCR,QuickView\.WK3\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WK4,,,"Lotus 1-2-3 v 4 File"
+HKCR,QuickView\.WK4\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.BMP,,,"Windows Bitmap Graphics File"
+HKCR,QuickView\.BMP\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.DIB,,,"Windows Bitmap Graphics File (DIB)"
+HKCR,QuickView\.DIB\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.SAM,,,"AMI, AMI PRO FILE"
+HKCR,QuickView\.SAM\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.ASC,,,"ASCII file"
+HKCR,QuickView\.ASC\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.RTF,,,"Rich Text Format File"
+HKCR,QuickView\.RTF\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.DOC,,,"ANY of a number of word processing file formats"
+HKCR,QuickView\.DOC\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.RLE,,,"Bitmap Files (RunLengthEncoding)"
+HKCR,QuickView\.RLE\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WK1,,,"Lotus 1-2-3 v 1'n'2 Files"
+HKCR,QuickView\.WK1\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WDB,,,"Works Database Files"
+HKCR,QuickView\.WDB\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WPS,,,"Works Word Processing Files"
+HKCR,QuickView\.WPS\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.EXE,,,"Executable Files"
+HKCR,QuickView\.EXE\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.DLL,,,"Dynamic Link Libraries"
+HKCR,QuickView\.DLL\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView,,,"Quick View File"
+HKCR,QuickView\shell\open\command,,,%21%\quikview.EXE
+
+HKLM,"SOFTWARE\SCC\Viewer Technology\MS1",verify,1,11,11,11,11
+
+
+[FileViewer.uninstall.reg]
+
+;HKCR,QuickView\.XLS,,,"Excel 4 and 5 Spreadsheet Files"
+HKCR,QuickView\.XLS\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.XLC,,,"Excel 4 Chart File"
+HKCR,QuickView\.XLC\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WKS,,,"Lotus 1-2-3 File or MS Works v 3 File"
+HKCR,QuickView\.WKS\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WQ1,,,"Quattro Pro for MS-DOS File"
+HKCR,QuickView\.WQ1\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WQ2,,,"Quattro Pro v 5 for MS-DOS File"
+HKCR,QuickView\.WQ2\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WB1,,,"Quattro Pro for Windows File"
+HKCR,QuickView\.WB1\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WRI,,,"Windows 3.x WRITE files"
+HKCR,QuickView\.WRI\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.INF,,,"setup files"
+HKCR,QuickView\.INF\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.INI,,,"configuration files"
+HKCR,QuickView\.INI\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.CDR,,,"Corel Draw v 4,5 files"
+HKCR,QuickView\.CDR\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.EPS,,,"Encapsulated PostScript files"
+;HKCR,QuickView\.EPS\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\*,,,"Default Viewers"
+HKCR,QuickView\*\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+HKCR,QuickView\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+HKCR,CLSID\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.TXT,,,"Text File"
+HKCR,QuickView\.TXT\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.REG,,,"Registration Entries"
+HKCR,QuickView\.REG\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WK3,,,"Lotus 1-2-3 v 3 File"
+HKCR,QuickView\.WK3\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WK4,,,"Lotus 1-2-3 v 4 File"

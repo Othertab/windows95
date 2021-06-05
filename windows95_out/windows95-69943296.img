@@ -1,0 +1,107 @@
+ntrol_Forced,, "\N2"
+HKR, Settings, Compression_On,, "%%C3"
+HKR, Settings, Compression_Off,, "%%C0"
+HKR, Settings, Modulation_CCITT,, "B0"
+HKR, Settings, Modulation_Bell,, "B1"
+HKR, Responses, "2<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "9<cr>", 1, 02, 00, 58,02,00,00, 00,00,00,00
+HKR, Responses, "11<cr>", 1, 02, 00, 00,00,00,00, c0,12,00,00
+HKR, Responses, "12<cr>", 1, 02, 00, 00,00,00,00, 80,25,00,00
+HKR, Responses, "13<cr>", 1, 02, 00, 00,00,00,00, 20,1c,00,00
+HKR, Responses, "14<cr>", 1, 02, 00, 00,00,00,00, e0,2e,00,00
+HKR, Responses, "15<cr>", 1, 02, 00, 00,00,00,00, 40,38,00,00
+HKR, Responses, "16<cr>", 1, 02, 00, 00,00,00,00, 00,4b,00,00
+HKR, Responses, "17<cr>", 1, 02, 00, 00,00,00,00, 00,96,00,00
+HKR, Responses, "18<cr>", 1, 02, 00, 00,00,00,00, 00,e1,00,00
+
+[Modem3.AddReg]
+HKR,, Properties, 1, 80,01,00,00, 50,00,00,00, ff,00,00,00, 01,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F E0 F0 V1 S95=47<cr>"
+HKR, Settings, ErrorControl_On,, "\N3"
+HKR, Settings, ErrorControl_Off,, "\N0"
+HKR, Settings, ErrorControl_Forced,, "\N2"
+HKR, Settings, Compression_On,, "%%C3"
+HKR, Settings, Compression_Off,, "%%C0"
+HKR, Settings, Modulation_CCITT,, "B0"
+HKR, Settings, Modulation_Bell,, "B1"
+HKR, Responses, "2<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "9<cr>", 1, 02, 00, 58,02,00,00, 00,00,00,00
+HKR, Responses, "11<cr>", 1, 02, 00, 00,00,00,00, c0,12,00,00
+HKR, Responses, "12<cr>", 1, 02, 00, 00,00,00,00, 80,25,00,00
+HKR, Responses, "13<cr>", 1, 02, 00, 00,00,00,00, 20,1c,00,00
+HKR, Responses, "14<cr>", 1, 02, 00, 00,00,00,00, e0,2e,00,00
+HKR, Responses, "15<cr>", 1, 02, 00, 00,00,00,00, 40,38,00,00
+HKR, Responses, "16<cr>", 1, 02, 00, 00,00,00,00, 00,4b,00,00
+HKR, Responses, "17<cr>", 1, 02, 00, 00,00,00,00, 00,96,00,00
+HKR, Responses, "18<cr>", 1, 02, 00, 00,00,00,00, 00,e1,00,00
+
+[Modem4.AddReg]
+HKR,, Properties, 1, c0,01,00,00, 78,00,00,00, ff,00,00,00, 01,00,00,00, 0d,00,00,00, f7,03,00,00, 00,96,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F \N11 E0 V1 W1 S95=47<cr>"
+HKR, Settings, ErrorControl_On,, "\N11"
+HKR, Settings, ErrorControl_Off,, "\N0"
+HKR, Settings, ErrorControl_Forced,, "\N10"
+HKR, Settings, Compression_On,, "%%C1"
+HKR, Settings, Compression_Off,, "%%C0"
+HKR, Settings, Modulation_CCITT,, "B0"
+HKR, Settings, Modulation_Bell,, "B1"
+HKR, Settings, SpeedNegotiation_On,, "F0"
+HKR, Responses, "2<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+
+[Modem5.AddReg]
+HKR,, Properties, 1, c0,01,00,00, 78,00,00,00, ff,00,00,00, 01,00,00,00, 0d,00,00,00, f7,03,00,00, 00,96,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F E0 V1 S95=47<cr>"
+HKR, Settings, ErrorControl_On,, "\N11"
+HKR, Settings, ErrorControl_Off,, "\N0"
+HKR, Settings, ErrorControl_Forced,, "\N11"
+HKR, Settings, Compression_On,, "%%C1"
+HKR, Settings, Compression_Off,, "%%C0"
+HKR, Settings, Modulation_CCITT,, "B0F(I4)"
+HKR, Settings, Modulation_Bell,, "B1F(i4)"
+HKR, Settings, SpeedNegotiation_On,, "F0"
+HKR, Responses, "2<cr>", 1, 01, 00, 00,00,00,00, 00,00,00,00
+
+; Strings
+
+[Strings]
+ClassName = "Modem"
+Mfg = "TELINDUS"
+
+; Model strings
+
+Modem1="TELINDUS ASTER 4"
+Modem2="TELINDUS PARTITA PC CO TO"
+Modem3="TELINDUS PARTITA PO"
+Modem4="TELINDUS QUINTET PC & MC V32Bis"
+Modem5="TELINDUS QUINTET TT V32Bis"
+
+; Plug and Play device names
+
+[EXTERNAL]
+HKR,, DeviceType, 1, 01
+
+[INTERNAL]
+HKR,, DeviceType, 1, 02
+
+[All]
+HKR,,FriendlyDriver,,Unimodem.vxd
+HKR,,DevLoader,,*VCOMM
+HKR,,PortSubClass,1,02
+HKR,,ConfigDialog,,modemui.dll
+HKR,, InactivityScale, 1, 0a,00,00,00
+HKR,,EnumPropPages,,"modemui.dll,EnumPropPages"
+
+[MfgAddReg]
+HKR, Init, 1,, "AT<cr>"
+HKR, Init, 2,, "AT &Q0&C1&D1&K3Q0V1W0X4E1B0F0%%C2\N7<cr>"
+HKR, Monitor, 1,, "ATS0=0<cr>"
+HKR, Monitor, 2,, "None"
+HKR, Hangup, 1,, "ATH<cr>"
+HKR, Answer, 1,, "ATA<cr>"
+HKR,, Reset,, "AT&F<cr>"
+HKR, Settings, Prefix,, "AT"
+HKR, Settings, Terminator,, "<cr>"
+HKR, Settings, DialPrefix,, "D"
+HKR, Settings, DialSuffix,, ""
+HKR, Settings, SpeakerVolume_Low,, "L0"
+HKR, Se

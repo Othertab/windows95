@@ -1,0 +1,153 @@
+s\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,10,00,00,00
+
+;****************************************************************************
+; MDG_PCMCIA Madge Smart PCMCIA Token Ring Adapter
+;****************************************************************************
+[MDG_PCMCIA.ndi]
+AddReg=MDG_PCMCIA.ndi.reg,Madgep.ndi.reg,MadgeISA.ndi.reg
+
+[MDG_PCMCIA.ndi.reg]
+HKR,Ndi,DeviceID,,"MADGE-SMART_16/4_PCMCIA_Ringnode-0757"
+HKR,Ndi,CardType,,"PCMCIA"
+;
+; PCMCIA hardware type.
+;
+HKR,,AdapterType,,"200"
+;
+; Hardware settings required by PCMCIA adapters.
+;
+HKR,Override,0000,1, \
+;
+; CONFIGMG_VERSION
+;
+00,04,00,00, \
+;
+; PRIORITY
+;
+00,00,00,00, \
+;
+; I/O
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00,0C,00, \
+00,00,00,00, \
+00,00,00,00, \
+E0,FF,20,00, \
+00,00,FF,FF, \
+00,00,00,00, \
+40,00,00,00, \
+;
+; IRQ
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00,00,00, \
+B8,DC,00,00, \
+20,00,00,00, \
+;
+; REQUEST_CONFIG_PKT
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00,02,00, \
+32,32,32,02, \
+00,08,00,00, \
+00,00,00,01, \
+03, \
+;
+; TERMINATOR
+;
+00,00,00,00
+;
+; Ring speed selection.
+;
+HKR,NDI\params\RingSpeed,ParamDesc,,"Ring speed"
+HKR,NDI\params\RingSpeed,default,,0
+HKR,NDI\params\RingSpeed,type,,enum
+HKR,NDI\params\RingSpeed\enum,0,,"Default (set at adapter)"
+HKR,NDI\params\RingSpeed\enum,1,,"4 MBit/s"
+HKR,NDI\params\RingSpeed\enum,2,,"16 MBit/s"
+HKR,NDI\params\RingSpeed,flag,1,28,00,00,00
+;
+; Old Force4/Force16 for backwards compatibility.
+;
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+; Force4 (ndis3 & ndis2)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,30,00,00,00
+
+;****************************************************************************
+; *MDG0101 Madge Smart 16/4 ISA Client PnP Ringnode
+;****************************************************************************
+[*MDG0101.ndi]
+AddReg=*MDG0101.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+
+[*MDG0101.ndi.reg]
+HKR,Ndi,DeviceID,,"*MDG0101"
+;
+; PnP hardware type.
+;
+HKR,,AdapterType,,"300"
+;
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+; Force4 (ndis3 & ndis2)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,30,00,00,00
+
+;****************************************************************************
+; MDG_PCI Madge Smart 16/4 PCI Ringnode
+;****************************************************************************
+[MDG_PCI.ndi]
+AddReg=MDG_PCI.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+
+[MDG_PCI.ndi.reg]
+HKR,Ndi,DeviceID,,"PCI\VEN_10B6&DEV_0001"
+;
+; PCI Hardware type.
+;
+HKR,,AdapterType,,"700"
+;
+; Ring speed selection.
+;
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+; Force4 (ndis3 & ndis2)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Forc

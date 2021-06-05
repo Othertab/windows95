@@ -1,0 +1,109 @@
+ent
+HKCR,.cpd,,,FaxCover.Document
+HKCR,FaxCover.Document,,,%CPE_DOC%
+HKCR,FaxCover.Document\DefaultIcon,,,"%25%\FaxCover.exe,1"
+HKCR,FaxCover.Document\shell\open\command,,,"%25%\FaxCover.exe ""%%1"""
+HKCR,FaxCover.Document\shell\print\command,,,"%25%\FaxCover.exe ""%%1"" /p"
+;
+; Registry for the message in the bottle....
+;
+; keys below should match those in awfaxp.c
+HKLM,"SOFTWARE\Microsoft\At Work Fax\Local Modems\Received",,""
+HKLM,"SOFTWARE\Microsoft\At Work Fax\Local Modems\Received",R00,,"001"
+HKLM,"SOFTWARE\Microsoft\At Work Fax\Local Modems\Received",F00,,"RCV0000.EFX"
+HKLM,"SOFTWARE\Microsoft\At Work Fax\Local Modems\Defaults",BlindDial,,"3"
+HKLM,"SOFTWARE\Microsoft\At Work Fax\General",FirstRun,,"1"
+;
+; CPE-Transport interface
+;
+HKCU,Software\Microsoft\"At Work Fax","Transport Service Provider",,"transport service provider"
+HKCU,"Software\Microsoft\At Work Fax\Transport Service Provider","Cover Page Editor",,"%25%\FaxCover.exe /SSESS_ID"
+;
+; Register our client Extensions
+;
+HKLM,Software\Microsoft\Exchange\Client\Extensions,,," "
+HKLM,Software\Microsoft\Exchange\Client\Extensions,"MicrosoftFax",,"4.0;awfext32.dll;10;;;AWFAX"
+
+
+[FAXRenameReg.Add]
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\Fax,,,%10%
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\Fax,confdent.cpe,,"%CPE_1desc%.cpe" 
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\Fax,fyi.cpe,,"%CPE_2desc%.cpe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\Fax,urgent.cpe,,"%CPE_4desc%.cpe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\Fax,generic.cpe,,"%CPE_5desc%.cpe"
+
+[FAXRenameReg.Del]
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Fax,,,%10%
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Fax,confdent.cpe,,"%CPE_1desc%.cpe" 
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Fax,fyi.cpe,,"%CPE_2desc%.cpe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Fax,urgent.cpe,,"%CPE_4desc%.cpe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Fax,generic.cpe,,"%CPE_5desc%.cpe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Fax,generic.cpe,,"%OLD_CPE_5desc%.cpe"
+
+
+; /W Add entry run=awadpr32 /D to Win.ini 
+; /D deletes Printer 
+; /A Add printer 
+; /M fixes the msmail,inf file
+[FAXPrintReg.Delete]
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,FAXPrint,,"%11%\awadpr32.exe /D"
+
+[FAXPrintReg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,FAXPrint,,"%11%\awadpr32.exe /AM"
+
+
+[FAXReg.Remove]
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents","Faxview"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents","FaxTop"
+HKLM,Software\Microsoft\Exchange\Client\Extensions,"MicrosoftFax"
+HKLM,SOFTWARE\Microsoft\"At Work Fax"
+HKCU,Software\Microsoft\"At Work Fax"
+HKCR,.cpe
+HKCR,.cpd
+HKCR,FaxCover.Document
+
+[FaxReg.Old]
+HKCR,AwFaxvur.Document
+HKCR,Awcpe.Document
+HKCR,AWCPE.CoverPage
+
+
+
+;--------------------------------------Localizable Strings Section-------------------------------
+
+; User-visible strings
+[Strings]
+FAXDesc			= "Microsoft Fax"
+
+FAXTip          	= "Allows you to send and receive faxes"
+
+; Program Groups
+FAXApps_DESC		= "Accessories\Fax"
+FaxPrograms		= "Programs"		; The Programs Group
+SendTo_DESC     	= "SendTo"    		; Name of SendTo folder in the Windows dir
+FaxStartMenu		= "StartMen"		; Name of the Start Menu Folder MUST USE 8.3 PATH NAME
+
+: Group Item Names
+SendToFax_DESC  	= "Fax Recipient"   	; 
+FAXVIEW_Link_Desc	= "Fax Viewer"		; Not used
+FAXCOVER_Link_Desc	= "Cover Page Editor"
+CallaFaxService		= "Request a Fax"
+ShowFaxQueue		= "Show Fax Queue"
+SendNewFax		= "Compose New Fax"
+
+; 8.3 name of the equivelent items above.... Have fun...
+
+FaxPoll			= "Request"
+Newfax			= "NewFax"
+FaxCover		= "FaxCover"
+Sendfax			= "SendFax"
+
+; OLE Verb Names (Localized??)
+
+PRINT			= "&Print"
+OPEN			= "&Open"
+EDIT			= "&Edit"
+
+; The name of the Spool directory in c:\windows
+SPOOL_DIR		= "spool"
+; 

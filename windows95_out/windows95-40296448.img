@@ -1,0 +1,96 @@
+]
+If Quick View is installed, and if Quick View supports a particular file 
+format, you can quickly view the contents of that file by using the right
+mouse button to click it, and then select Quick View.
+ 
+You can also create a link to Notepad.exe in your SendTo folder. Then, 
+use the right mouse button to click the file you want to view. Click
+Sent To, and then click Notepad.
+
+[Disk Tools]
+Use the right mouse button to click a drive in My Computer, and then click 
+Properties. Click the Tools tab to use ScanDisk, Backup, and Defragmenter.
+
+[Converting Windows 3.1 Program Groups]
+You can convert Windows 3.1 program groups in two ways:
+1. Double-click a .grp file to automatically convert it to a Windows 95
+   folder.
+2. Run the GRPCONV command with the /m parameter to display a dialog box 
+   in which you can select groups to convert.
+
+[Open With]
+To open an associated file with a different program, hold down Shift, and
+then use the right mouse button to click the file. Click Open With on the 
+menu to open the file with a different program.
+
+[Hotkey]
+In Windows 95, hotkeys assigned to shortcuts in the Start Menu or 
+its subfolders can be used to start programs any time.
+
+[Screen Resolution]
+To quickly change screen resolution for different applications, use the
+right mouse button to click the desktop, and then click the Settings tab.
+In the Desktop Area, move the slider bar to the desired resolution.
+
+[Context Help]
+On the upper right side of each dialog box is a question mark button (?). 
+Click it and then click a control or item in the dialog box. A short 
+description of the item appears.
+
+[Find Tool]
+To find a file, mail message, computer, or file on The Microsoft Network,
+use the Find command on the Start menu. In addition, you can save 
+a search in the Find dialog box by clicking Save Search on the File menu. 
+
+[Bitmap Viewer]
+MS Paint can serve as a bitmap viewer. Drag a bitmap icon onto an MS Paint 
+window to view it. 
+
+
+[File Names and Extensions]
+The following are valid filenames for Windows 95 applications:
+	12345678.ABC (MS-DOS name)
+	12345678.ABCDEF (no limit on extensions)
+	123456789012345678901234567890123456789.ABC (long filename)
+	1234567890123456789012345678901234567890.ABCDEF (long filename and 
+		long extension)
+This is a valid filename (long names with spaces that mean something).
+To see the MS-DOS name associated with a long filename, use the right
+mouse button to click the file, and then click Properties. 
+
+[Developer's Trick]
+If you need to restart the taskbar (for example, when you've changed a 
+registry entry that you want to use), you can use CTRL+ALT+DEL to remove
+Windows Explorer. When the Shutdown dialog box appears, click No. At the 
+next prompt, click End Task. The taskbar is removed, and then restarts. 
+
+[Making an Emergency Startup Disk]
+To create a complete emergency startup disk, double-click the Add/Remove 
+Programs icon in Control Panel, and then click the Startup Disk tab.
+
+[Undoing a File Move or File Rename]
+If you forget where you just moved a file, or if you accidentally rename
+a file, click Undo from the Edit menu (or press ALT+Backspace).
+
+[Display Properties]
+Use the right mouse button to click the desktop, and then click Properties 
+to change the desktop background, screen saver, appearance, or video 
+settings. To change your primary display font, change the icon font on the 
+Appearance tab.
+
+[Tips for Using the Taskbar Clock]
+Hold the mouse pointer over taskbar clock to see the date.
+
+Double click the taskbar clock to set the system time, date, and time zone.
+
+To remove the clock from the taskbar: 
+1. Use the right mouse button to click the taskbar, and then click 
+   Properties.
+2. Click the Taskbar Options tab, and uncheck Show Clock (or press C).
+
+[Easy Access to Computer Properties]
+To view your computer (system) properties, use the right mouse button to
+click My Computer and then click Properties. If you have a Microsoft Natural 
+Keyboard, press Win+Break. 
+
+To view Network prop

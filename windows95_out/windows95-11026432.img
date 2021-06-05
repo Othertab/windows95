@@ -1,0 +1,114 @@
+E,,,,,%Dialer_ShortDesc%"    ;creates link
+
+[Dialer.install.reg]
+HKLM,%KEY_OPTIONAL%\Dialer,Installed,,"1"
+
+[Dialer.links.remove]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"   ;creates folder
+setup.ini, group4,, """%Dialer_Desc%"""            ;deletes link
+setup.ini, group4,, """%Dialer_ShortDesc%"""            ;deletes link
+
+[Dialer.remove.reg]
+HKLM,%KEY_OPTIONAL%\Dialer,Installed,,"0"
+
+;---------------------------------------------
+
+;---- MS Backup Install Sections ----------------------
+[backup.files]
+backup.exe
+; backup.hlp  now copied to the help subdirectory
+backup.cfg
+;chiadi.dll   now copied to system subdirectory
+;chikdi.dll   now copied to system subdirectory
+
+[backup.del.files]
+backup.exe      ; review -- no longer in \windows
+backup.cfg      ; review -- no longer in \windows
+
+[backup.vxd]
+qic117.vxd
+chiadi.dll
+chikdi.dll
+
+[backup.hlp]
+backup.hlp
+backup.cnt
+
+[backup.links]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%Backup_Desc%"", ""%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE"""  ;creates link
+
+[backup.links.remove]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%Backup_Desc%"""              ;deletes link
+
+[backup.addreg]
+HKCR,.set,,,File.Set
+HKCR,File.Set,,,%DESC_FC%
+HKCR,File.Set\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE %%1"
+HKCR,File.Set\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE /p %%1"
+HKCR,File.Set\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE,1"
+
+HKCR,.qic,,,Backup.Set
+HKCR,Backup.Set,,,%DESC_QIC%
+HKCR,Backup.Set\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE %%1"
+HKCR,Backup.Set\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE /p %%1"
+HKCR,Backup.Set\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE,2"
+
+; create the long-name for "Program Files"
+; Note that when you rename a long name, VFAT changes the short name from
+; foobar~1 to foobar~2.  To avoid this, we introduce a work around in the form of
+; an intermediate rename
+HKLM,%KEY_RENAME%\AppFilesRoot,,,%24%
+HKLM,%KEY_RENAME%\AppFilesRoot,%OLD_PROGRAMF%,,"%Old_Program_Files%" ; review
+HKLM,%KEY_RENAME%\AppFilesRoot,%PROGRAMF%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFilesRoot,!$!$!$!$.$!$,,"%Program_Files%,1"
+HKLM,%KEY_RENAME%\AppFiles,,,"%24%\%PROGRAMF%"
+HKLM,%KEY_RENAME%\AppFiles,%ACCESSOR%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFiles,!$!$!$!$.$!$,,"%Accessories%,1"
+
+; set hidden flags on the .cfg file
+; R=1; H=2; S=4; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Accessories,,,"%24%\%PROGRAMF%\%ACCESSOR%"
+HKLM,%KEY_RENAME%\Accessories,backup.cfg,,"backup.cfg,2"
+
+; set up the per-app path
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\BACKUP.EXE",,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE"
+
+; point disk properties to it
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\backuppath",,,"%24%\%PROGRAMF%\%ACCESSOR%\BACKUP.EXE"
+
+[backup.delreg]
+HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Backup
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Applets\Backup
+
+[backup.install.reg]
+HKLM,%KEY_OPTIONAL%\msbackup,Installed,,"1"
+
+[backup.remove.reg]
+HKLM,%KEY_OPTIONAL%\msbackup,Installed,,"0"
+;------------------------------------------------------
+
+;---- System Resource Meter Install Sections -----------------------
+[Sysmeter.Win.Copy]
+rsrcmtr.exe
+
+[Sysmeter.Sys.Copy]
+rsrc16.dll
+rsrc32.dll
+
+[Sysmeter.Inis]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"     ;creates folder
+setup.ini, group11,, """%SysMeter_Desc%"", rsrcmtr.exe,,,,,%SysMeter_ShortDesc%"   ;creates link
+
+[Sysmeter.Rem.Inis]
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"     ;creates folder
+setup.ini, group11,, """%SysMeter_Desc%"""                ;deletes link
+setup.ini, group11,, """%SysMeter_ShortDesc%"""                ;deletes link
+
+[Sysmeter.install.reg]
+HKLM,%KEY_OPTIONAL%\sysmeter,Installed,,"1"
+
+[Sysmeter.remove.reg]
+HKLM,%KEY_OPTIONAL%\sysmeter,Installed,,"0"
+;-----------

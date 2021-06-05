@@ -1,0 +1,61 @@
+4,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_NS.CUR<Nature Size NS.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_NWSE.CUR<Nature Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_PEN.CUR<Nature pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_UP.CUR<Nature up.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_WAIT.CUR<Nature wait.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+ 6,NA_WE.CUR<Nature Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,2238,,2238,,,
+
+[MT_Nature_scr]
+ 6,NATURE.DLL<Nature.dll>,,,,1995-10-24,,1033,,,,,,,SHARED,281088,SYSTEM,281088,,4.40.0.310,
+ 3,WL32SCR.EXE<Nature.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,38400,SYSTEM,38400,,4.40.0.310,
+
+[MT_Nature_ttf]
+"na1" = 6,COPRGTB.TTF,,,,1995-10-24,,,,,,,,,SHARED,56096,SYSTEM,56096,,1.0.0.0,
+"na2" = 6,COPRGTL.TTF,,,,1995-10-24,,,,,,,,,SHARED,57224,SYSTEM,57224,,1.0.0.0,
+
+[MT_Nature_wav16]
+ 6,NA_ASTRX.WAV<Nature asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,11106,,11106,,,
+ 6,NA_BEEP.WAV<Nature beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,18580,,18580,,,
+ 6,NA_DEFAU.WAV<Nature default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,10502,,10502,,,
+ 6,NA_EMPTY.WAV<Nature empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,43478,,43478,,,
+ 6,NA_ERROR.WAV<Nature program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,49316,,49316,,,
+ 6,NA_EXCLA.WAV<Nature exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,15746,,15746,,,
+ 6,NA_EXIT.WAV<Nature exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,48778,,48778,,,
+ 6,NA_MAX.WAV<Nature maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,6924,,6924,,,
+ 6,NA_MENU.WAV<Nature menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4640,,4640,,,
+ 6,NA_MENUC.WAV<Nature menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,9810,,9810,,,
+ 6,NA_MIN.WAV<Nature minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,7790,,7790,,,
+ 6,NA_QUEST.WAV<Nature question.wav>,,,,1995-10-24,,,,,,,,,SHARED,15050,,15050,,,
+ 6,NA_RESTD.WAV<Nature restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,7400,,7400,,,
+ 6,NA_RESTU.WAV<Nature restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,7842,,7842,,,
+ 6,NA_START.WAV<Nature startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,74634,,74634,,,
+ 6,NA_STOP.WAV<Nature critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,15538,,15538,,,
+
+[MT_Nature_wav8]
+ 6,NA_ASTRX.WA8<Nature asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,6744,,6744,,,
+ 6,NA_BEEP.WA8<Nature beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,10480,,10480,,,
+ 6,NA_DEFAU.WA8<Nature default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,6442,,6442,,,
+ 6,NA_EMPTY.WA8<Nature empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,22930,,22930,,,
+ 6,NA_ERROR.WA8<Nature program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,25848,,25848,,,
+ 6,NA_EXCLA.WA8<Nature exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,9064,,9064,,,
+ 6,NA_EXIT.WA8<Nature exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,25580,,25580,,,
+ 6,NA_MAX.WA8<Nature maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,4654,,4654,,,
+ 6,NA_MENU.WA8<Nature menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,3512,,3512,,,
+ 6,NA_MENUC.WA8<Nature menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,6096,,6096,,,
+ 6,NA_MIN.WA8<Nature minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,5086,,5086,,,
+ 6,NA_QUEST.WA8<Nature question.wav>,,,,1995-10-24,,,,,,,,,SHARED,8716,,8716,,,
+ 6,NA_RESTD.WA8<Nature restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,4890,,4890,,,
+ 6,NA_RESTU.WA8<Nature restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,5112,,5112,,,
+ 6,NA_START.WA8<Nature startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,38508,,38508,,,
+ 6,NA_STOP.WA8<Nature critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,8960,,8960,,,
+
+[MT_Travel_thm]
+ 6,TRAVEL.THM<Travel (high color).theme>,,,,1995-10-24,,,,,,,,,SHARED,4991,,4991,,,
+
+[MT_Travel_bmp]
+ 6,TR_WALL.JPG<Travel wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,48791,,48791,,,
+ 6,TR_WALL.PAL<Travel wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,728,,728,,,
+ 6,TR_COMP.ICO<Travel My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,10506,,10506,,,
+ 6,TR_NET.ICO<Travel Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,10134,,10134,,,
+ 6,TR_RECYE.ICO<Travel Recycle Emp

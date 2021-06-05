@@ -1,0 +1,127 @@
+ or Windows for Workgroups.
+- Shut down any running programs.
+- Remove programs from the Startup group before installation.
+
+
+[Q: How do I uninstall Windows 95?]
+
+To return to a previously installed version of Windows 3.1, run 
+the Uninstall program. To uninstall Windows 95, you must have 
+chosen "Save System Files" during Setup. 
+
+To run the uninstall program:
+
+** If Windows 95 is running:
+1. Click the Start menu, point to Settings, and then click 
+   Control Panel.
+2. Double-click the Add/Remove Programs icon, and then click 
+  the Install/Uninstall tab.
+3. In the list of software that can be removed by Windows, 
+  click Windows 95.
+4. Click Add/Remove, and then follow the directions on your 
+   screen. 
+
+   The Uninstall program removes all long filename entries 
+   from your hard disk, and then runs an MS-DOS-based program 
+   to remove Windows 95 and restore your previous MS-DOS and 
+   Windows 3.x files.
+
+** If Windows 95 is not running:
+1. Start your computer  from the Windows 95 Emergency Repair 
+   Disk if you created one during setup.
+2. Type UNINSTAL at the A prompt. 
+
+OR
+
+1. Start your computer from an MS-DOS boot disk.
+2. Type the following at the A prompt:
+
+     X:\Windows\Command\Uninstall.exe
+
+     Where x is the drive letter where Windows 95 is installed, 
+     and \Windows is the name of your Windows 95 directory.
+
+NOTES:
+
+* It is recommended that you run Uninstall from within Windows 95;
+  otherwise, all long filename information may not be completely
+  removed from your hard disk.
+
+* If Windows 95 came preinstalled on your computer, there is no
+  uninstall option.
+
+
+[Q: How do I install Windows 95 from a CD-ROM drive?]
+
+Windows 95 can be installed from a CD-ROM drive from within MS-DOS 
+or from within an existing version of Windows. The preferred and 
+most reliable method is to install it from an existing version of 
+Windows. 
+
+To install Windows 95 from MS-DOS: 
+1. Insert the Windows 95 CD in the CD-ROM drive. 
+2. At the C:\ prompt, type the drive letter of your CD-ROM drive 
+   followed by a colon (:) and a backslash (\), and the word Setup. 
+   For example: 
+
+     D:\Setup
+
+3. Press ENTER, and then follow the instructions on your screen.
+4. Click Next to continue Setup, and then follow the instructions 
+   on your screen.
+
+To install from your current version of Windows: 
+1. Start Windows, and then insert the Windows 95 CD in the 
+   appropriate drive.
+2. In File Manager or Program Manager, click the File menu, and 
+   then click Run.
+3. Type:
+
+     x:\Setup
+
+   where x is the drive letter of your CD-ROM drive.
+4. Follow the instructions on your screen.
+5. Click Next to continue Setup.
+
+
+[Q: How do I install Windows 95 from a remote CD-ROM drive?]
+
+If the computer with the CD-ROM drive is running Windows for 
+Workgroups or Windows 95, share the CD-ROM drive, and then follow 
+these steps:
+
+1. Connect to the shared CD-ROM by connecting to a network drive 
+   in File Manager or by typing the NET USE command at the command 
+   prompt. For example:
+
+     net use * \\machine\cdshare
+
+2. Double-click Setup.exe, or at the command prompt type Setup.
+
+
+[Q: How do I prepare my computer for a clean installation of 
+    Windows 95?]
+
+Windows 95 will install over MS-DOS, as well as over existing 
+versions of Windows and Windows for Workgroups.
+
+From File Manager in Windows or Windows for Workgroups:
+
+1. Click the drive letter for the drive that Windows 95 will be 
+   installed from. For example:
+
+     a:\ (floppy disk users)
+     d:\ (CD-ROM users)
+
+2. Double-click Setup.exe to start the installation process.
+
+During installation, Windows 95 checks for available disk space.
+If the required hard-disk space is not available, Windows 95 
+displays how much free space is available and how much is 
+required. To free up space on the hard disk, remove unnecessary 
+files.
+
+
+[Q: Do I need to reinstall my programs when I install Windows 95?]
+
+Windows 95 will pick up program settings when you upgrade

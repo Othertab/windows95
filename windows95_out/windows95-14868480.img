@@ -1,0 +1,113 @@
+ction=WPS_DATA
+
+[WPSSS.DRV]
+CopyFiles=WPS_FILES
+DriverFile=WPSSS.DRV
+DataSection=WPS_DATA
+
+[WPSOO.DRV]
+CopyFiles=WPS_FILES
+DriverFile=WPSOO.DRV
+DataSection=WPS_DATA
+
+[WPSNC3.DRV]
+CopyFiles=WPS_FILES
+DriverFile=WPSNC3.DRV
+DataSection=WPS_DATA
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation)
+;
+
+[WPS_FILES]
+WPSMON.DLL
+WPSMON16.DLL
+WPS_UPDT.DLL
+
+;
+; Data Sections
+;
+; Sections containing data that is shared among similar devices
+;
+
+[WPS_DATA]
+DefaultDataType=EMF
+LanguageMonitor="WPS Monitor,wpsmon.dll"
+VendorSetup="wps_updt.dll,WPS_Update"
+
+;
+; All files go to the same destination, so this is easy.
+;
+
+[DestinationDirs]
+DefaultDestDir=11
+
+[Strings]
+ClassName="Printer Upgrades"
+
+
+; Printer Mapping Sections--[Printer Mapping] and [Setup Printer Mapping]
+;
+; These sections map old model names (models whose names have changed
+; or that are not directly supported in Windows 95) to models that are
+; supported in the current version. The [Setup Printer Mapping] section
+; describes models to map only during setup. The [Printer Mapping]
+; section describes models to map either during setup or when a device
+; has been installed directly to WIN.INI without going through the
+; normal printer setup (generally done by applications with private
+; printer drivers)
+;
+; The syntax is
+;
+; <OldName> = <NewName>
+;
+; where
+;
+; <OldName> is the old model name. For example, "IBM Laser Printer 4019"
+;
+; <NewName> is the new model name. For example, "IBM 4019 LaserPrinter".
+
+[Setup Printer Mapping]
+"Agfa Compugraphic Genics"       = "HP LaserJet 2000"
+"Apricot Laser"                  = "HP LaserJet Plus"
+"AST TurboLaser/PS"              = "AST TurboLaser-PS"
+"Canon BJ-10e"                   = "Canon Bubble-Jet BJ-10e"
+"Canon BJ-200"                   = "Canon Bubble-Jet BJ-200"
+"Canon BJ-200e"                  = "Canon Bubble-Jet BJ-200e"
+"Canon BJ-230"                   = "Canon Bubble-Jet BJ-230"
+"Canon BJC-70"                   = "Canon Bubble-Jet BJC-70"
+"Canon BJC-600"                  = "Canon Bubble-Jet BJC-600"
+"Canon BJC-600e"                 = "Canon Bubble-Jet BJC-600e"
+"Canon BJC-800"                  = "Canon Bubble-Jet BJC-800"
+"Canon BJC-4000"                 = "Canon Bubble-Jet BJC-4000"
+"Canon Bubble-Jet"               = "Canon Bubble-Jet BJ-130e"
+"Canon LBP-8II"                  = "Canon LBP-8 II"
+"Canon LBP-8III/LBP-4"           = "Canon LBP-8 III"
+"Digital PrintServer 20/turbo"   = "Digital turbo PrintServer 20"
+"Digital PrintServer 40"         = "Digital PrintServer 40 Plus"
+"Fujitsu DL 1100 Colour"         = "Fujitsu DL 1100 Color"
+"HP DeskJet PLUS Printer"        = "HP DeskJet Plus"
+"HP DeskJet Printer"             = "HP DeskJet"
+"HP DeskJet 1200C PostScript"    = "HP DeskJet 1200C/PS"
+"HP DeskJet 1200C/PS v1"         = "HP DeskJet 1200C/PS"
+"HP DeskJet 310"                 = "HP DeskJet 310 Printer"
+"HP DeskJet 310 (Monochrome)"    = "HP DeskJet 310 Printer"
+"HP DeskJet 320"                 = "HP DeskJet 320 Printer"
+"HP DeskJet 320 (Monochrome)"    = "HP DeskJet 320 Printer"
+"HP DeskJet 500 Printer"         = "HP DeskJet 500"
+"HP DeskJet 510 Printer"         = "HP DeskJet 510"
+"HP DeskJet 500C"                = "HP DeskJet 500C Printer"
+"HP DeskJet 500C (Monochrome)"   = "HP DeskJet 500C Printer"
+"HP DeskJet 520"                 = "HP DeskJet 520 Printer"
+"HP DeskJet 540"                 = "HP DeskJet 540 Printer"
+"HP DeskJet 540 (Monochrome)"    = "HP DeskJet 540 Printer"
+"HP DeskJet 550C (Monochrome)"   = "HP DeskJet 550C Printer"
+"HP DeskJet 550C"                = "HP DeskJet 550C Printer"
+"HP DeskJet 560C"                = "HP DeskJet 560C Printer"
+"HP DeskJet 600 Printer"         = "HP DeskJet 540 Printer"
+"HP DeskJet 660C Printer"        = "HP DeskJet 550C Printer"
+"HP DeskJet

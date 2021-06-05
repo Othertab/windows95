@@ -1,0 +1,85 @@
+02.DeviceDesc%=ATI32, *ATI4402
+%*PNP0916.DeviceDesc%=ATI64, *PNP0916
+%PCI\VEN_1002&DEV_4158.DeviceDesc%=ATI32, PCI\VEN_1002&DEV_4158 ; Mach32
+%PCI\VEN_1002&DEV_4758.DeviceDesc%=ATI64, PCI\VEN_1002&DEV_4758 ; Mach64 GX
+%PCI\VEN_1002&DEV_4358.DeviceDesc%=ATI64, PCI\VEN_1002&DEV_4358 ; Mach64 CX
+%PCI\VEN_1002&DEV_4354.DeviceDesc%=ATI64, PCI\VEN_1002&DEV_4354 ; Mach64 CT
+%PCI\VEN_1002&DEV_4554.DeviceDesc%=ATI64, PCI\VEN_1002&DEV_4554 ; Mach64 ET
+%PCI\VEN_1002&DEV_4C54.DeviceDesc%=ATI64, PCI\VEN_1002&DEV_4C54 ; Mach64 LT
+%PCI\VEN_1002&DEV_5654.DeviceDesc%=ATI64, PCI\VEN_1002&DEV_5654 ; Mach64 VT
+%PCI\VEN_1002&DEV_4754.DeviceDesc%=ATI3D, PCI\VEN_1002&DEV_4754 ; Mach64 GT
+
+%8514Ultra%=ATI8,, *PNP090B
+%GraphVantage%=ATI8,, *PNP090B
+%GraphWonder%=ATI32,, *PNP090A
+%GraphXPress%=ATI64,, *PNP0916
+%WinTurbo%=ATI64,, *PNP0916
+
+[Mfg.Avance]
+%PCI\VEN_1005&DEV_2301.DeviceDesc%=UNSUPPORTED,NullId4,PCI\VEN_1005&DEV_2301
+
+[Mfg.Boca]
+%Vortek%=AGX
+%Voyager%=ChipsAcc,, *PNP0931
+%BocaSVGA%=Cirrus,, *PNP0905
+%SuperX%=Cirrus,, *PNP0905
+
+[Mfg.Cardinal]
+%VidColor%=Cirrus,, *PNP0905
+%VidSpect%=Cirrus,, *PNP0905
+
+[Mfg.Chips]
+%*PNP0930.DeviceDesc%=ChipsSVGA, *PNP0930, *PNP0931     ; Super VGA
+%*PNP0931.DeviceDesc%=ChipsAcc, *PNP0931, *PNP0930,     ; Accelerator
+%PCI\VEN_102C&DEV_00D8.DeviceDesc%=ChipsAcc,PCI\VEN_102C&DEV_00D8
+%PCI\VEN_102C&DEV_00B8.DeviceDesc%=ChipsAcc,PCI\VEN_102C&DEV_00B8
+%PCI\VEN_102C&DEV_00DC.DeviceDesc%=ChipsAcc,PCI\VEN_102C&DEV_00DC
+;%PCI\VEN_102C&DEV_00E0.DeviceDesc%=ChipsAcc,PCI\VEN_102C&DEV_00E0
+
+[Mfg.Cirrus]
+%*PNP0905.DeviceDesc%=Cirrus, *PNP0905          ; Cirrus Logic
+%*PNP0905.DeviceDesc%=Cirrus, *PNP0904          ; Cirrus Logic laptop
+%*PNP0914.DeviceDesc%=CirrusMemMap, *PNP0914    ; Cirrus memory mapped
+%PCI\VEN_1013&DEV_1200.DeviceDesc%=Cirrus, PCI\VEN_1013&DEV_1200
+%PCI\VEN_1013&DEV_1202.DeviceDesc%=Cirrus, PCI\VEN_1013&DEV_1202
+%PCI\VEN_1013&DEV_00A0.DeviceDesc%=CirrusMemMap, PCI\VEN_1013&DEV_00A0
+%PCI\VEN_1013&DEV_00A8.DeviceDesc%=CirrusMemMap, PCI\VEN_1013&DEV_00A8
+%PCI\VEN_1013&DEV_00AC.DeviceDesc%=CirrusMemMap, PCI\VEN_1013&DEV_00AC
+%PCI\VEN_1013&DEV_0038.DeviceDesc%=CirrusMemMap, PCI\VEN_1013&DEV_0038
+%PCI\VEN_1013&DEV_00B8.DeviceDesc%=CirrusMemMap, PCI\VEN_1013&DEV_00B8
+%PCI\VEN_1013&DEV_00D0.DeviceDesc%=CirrusLaguna, PCI\VEN_1013&DEV_00D0
+
+[Mfg.Compaq]
+%*PNP0915.DeviceDesc%=CpqAVGA, *PNP0915         ; Advanced VGA
+%*CPQ3001.DeviceDesc%=CpqAVGA, *CPQ3001         ; EISA Advanced VGA
+%*CPQA0DF.DeviceDesc%=WD,      *CPQA0DF         ; Notebook
+%*PNP0910.DeviceDesc%=QVision, *PNP0910         ; QVision
+%*CPQ3011.DeviceDesc%=QVision, *CPQ3011         ; QVision 1024/E
+%*CPQ3111.DeviceDesc%=QVision, *CPQ3111         ; QVision 1024/E
+%*CPQ3112.DeviceDesc%=QVision, *CPQ3112         ; QVision 1280/E
+%*CPQ3122.DeviceDesc%=QVision, *CPQ3122         ; QVision 1280/I
+%*PNP0919.DeviceDesc%=MGA,     *PNP0919         ; QVision 2000 (Matrox MGA)
+%PCI\VEN_0E11&DEV_3032.DeviceDesc%=QVision, PCI\VEN_0E11&DEV_3032
+%PCI\VEN_0E11&DEV_3033.DeviceDesc%=QVision, PCI\VEN_0E11&DEV_3033
+%PCI\VEN_0E11&DEV_3034.DeviceDesc%=VGA,,    PCI\VEN_0E11&DEV_3034
+
+[Mfg.Diamond]
+%Stealth%=S3911,, *PNP0909
+%Stealth24%=S3,,  *PNP0913
+%Diamond&DEV_88B0.DeviceDesc%=S3,,PCI\VEN_5333&DEV_88B0
+%Diamond&DEV_88C0.DeviceDesc%=S3,,PCI\VEN_5333&DEV_88C0
+%Diamond&DEV_88C1.DeviceDesc%=S3,,PCI\VEN_5333&DEV_88C1
+%Diamond&DEV_88D0.DeviceDesc%=S3,,PCI\VEN_5333&DEV_88D0
+%Diamond&DEV_88D1.DeviceDesc%=S3,,PCI\VEN_5333&DEV_88D1
+%StealthPro.DeviceDesc%=S3,,*PNP0913
+%StealthSEVLB.DeviceDesc%=S3,,*PNP0913
+%Stealth64DRAMVLB.DeviceDesc%=S3,,*PNP0913
+%Stealth64VRAMVLB.DeviceDesc%=S3,,*PNP0913
+%Stealth64VideoVRAMVLB.DeviceDesc%=S3,,*PNP0913
+%StealthVideoVLB.DeviceDesc%=S3,,*PNP0913
+%Diamond&DEV_8810.DeviceDesc%=S3MMD,,PCI\VEN_5333&DEV_8810
+%Diamond&DEV_8811.DeviceDesc%=S3MMD,,PCI\VEN_5333&DEV_8811
+%Diamond&DEV_8811a.DeviceDesc%=S3MMD,,PCI\VEN_5333&DEV_8811
+%Diamond&DEV_8880.DeviceDesc%=S3MMD,,PCI\VEN_5333&DEV_8880
+%Diamond&DEV_88F0.DeviceDesc%=S3MMD,,PCI\VEN_5333&DEV_88F0
+%PCI\VEN_5333&DEV_8881.Device

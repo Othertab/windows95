@@ -1,0 +1,149 @@
+ath$) = 0 then
+        n% = 1
+    elseif szBackup$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "BackupFile", szFullPath$+", "+szBackup$
+    end if
+'$endif ''DEBUG
+
+    IF YnrcBackupFile(szFullPath$, szBackup$, cmoNone) = ynrcNo THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "BackupFile", szFullPath$+", "+szBackup$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB RenameFile (szFullPath$, szBackup$) STATIC
+'$ifdef DEBUG
+    if FValidFATPath(szFullPath$) = 0 then
+        n% = 1
+    elseif szBackup$ = "" then
+        n% = 2
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "RenameFile", szFullPath$+", "+szBackup$
+    end if
+'$endif ''DEBUG
+
+    IF YnrcBackupFile(szFullPath$, szBackup$, cmoNone) = ynrcNo THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "RenameFile", szFullPath$+", "+szBackup$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB AddSectionFilesToCopyList (szSect$, szSrc$, szDest$) STATIC
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif FValidFATDir(szSrc$) = 0 then
+        n% = 2
+    elseif FValidFATDir(szDest$) = 0 then
+        n% = 3
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "AddSectionFilesToCopyList", szSect$+", "+szSrc$+", "+szDest$
+    end if
+'$endif ''DEBUG
+
+    IF FAddSectionFilesToCopyList (szSect$, szSrc$, szDest$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "AddSectionFilesToCopyList", szSect$+", "+szSrc$+", "+szDest$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB AddSectionKeyFileToCopyList (szSect$, szKey$, szSrc$, szDest$) STATIC
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    elseif FValidFATDir(szSrc$) = 0 then
+        n% = 3
+    elseif FValidFATDir(szDest$) = 0 then
+        n% = 4
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "AddSectionKeyFileToCopyList", szSect$+", "+szKey$+", "+szSrc$+", "+szDest$
+    end if
+'$endif ''DEBUG
+
+    IF FAddSectionKeyFileToCopyList (szSect$, szKey$, szSrc$, szDest$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "AddSectionKeyFileToCopyList", szSect$+", "+szKey$+", "+szSrc$+", "+szDest$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB AddSpecialFileToCopyList (szSect$, szKey$, szSrc$, szDest$) STATIC
+'$ifdef DEBUG
+    if FValidInfSect(szSect$) = 0 then
+        n% = 1
+    elseif szKey$ = "" then
+        n% = 2
+    elseif FValidFATDir(szSrc$) = 0 then
+        n% = 3
+    elseif FValidFATPath(szDest$) = 0 then
+        n% = 4
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "AddSpecialFileToCopyList", szSect$+", "+szKey$+", "+szSrc$+", "+szDest$
+    end if
+'$endif ''DEBUG
+
+    IF FAddSpecialFileToCopyList (szSect$, szKey$, szSrc$, szDest$) = 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeFail, "AddSpecialFileToCopyList", szSect$+", "+szKey$+", "+szSrc$+", "+szDest$
+'$endif ''DEBUG
+        ERROR STFERR
+    END IF
+END SUB
+
+
+'*************************************************************************
+SUB AddToBillboardList (szDll$, idDlg%, szProc$, lTicks&) STATIC
+'$ifdef DEBUG
+    if szDll$ = "" then
+        n% = 1
+    elseif idDlg% = 0 then
+        n% = 2
+    elseif szProc$ = "" then
+        n% = 3
+    elseif lTicks& <= 0 then
+        n% = 4
+    else
+        n% = 0
+    end if
+    if n% > 0 then
+        BadArgErr n%, "AddToBillboardList", szDll$+", "+STR$(idDlg%)+", "+szProc$+", "+STR$(lTicks&)
+    end if
+'$endif ''DEBUG
+
+    IF FAddToBillboardList(szDll$, idDlg%, szProc$, lTicks&) = 0 THEN
+'$ifdef DEBUG
+        StfA

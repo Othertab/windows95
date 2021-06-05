@@ -1,0 +1,227 @@
+9]	;DEC (DE200) EtherWorks Turbo
+NCDID=233
+DeviceIDs=*pnp80e9
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ewtrb"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80eb]	;DEC (DE201) EtherWorks Turbo/TP
+NCDID=235
+DeviceIDs=*pnp80eb
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ewtrbtp"
+LanManKeys="DE16DNB"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80ec]	;DEC (DE202) EtherWorks Turbo/TP_BNC
+NCDID=236
+DeviceIDs=*pnp80ec
+Flags=ISA
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$ewtbtpb"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80ef]	;DECpc 433 WS (Built-in)
+NCDID=239
+DeviceIDs=*pnp80ef
+Flags=ISA,NoDetect
+IO1=16,%0
+Mem1=0x10000,%8
+IRQ1=1,%0
+WFWKeys="ms$decpc"
+ODIKeys="depca"
+IEEEIDs=0x08002b
+
+[*pnp80f0]	;DEC EtherWorks 3 (ISA)
+NCDID=240
+DeviceIDs=*pnp80f0
+Flags=ISA,OptionalMem
+IO1=16,%0
+IRQ1=1,%0
+WFWKeys="ewrk3"
+LanManKeys="ewrk3"
+ODIKeys="ewrk3"
+
+[*pnp814b]	;Everex SpeedLink /PC16 (EV2027)
+NCDID=331
+DeviceIDs=*pnp814b
+Flags=ISA
+IO1=16,%0
+IRQ1=1,%0
+WFWKeys="ms$spdlk16"
+LanManKeys="macevx"
+ODIKeys="spdlink"
+NovellIDs=0x042c
+
+[*pnp8157]	;HP PC LAN Adapter/8 TL (HP27250)
+NCDID=343
+DeviceIDs=*pnp8157
+Flags=ISA,NoDetect
+IO1=32,%0
+IRQ1=1,%0
+WFWKeys="ms$hp27250"
+ODIKeys="hpisaodi"
+IEEEIDs=0xffffffff
+
+[*pnp8155]	;HP PC LAN Adapter/8 TP (HP27245)
+NCDID=341
+DeviceIDs=*pnp8155
+Flags=ISA,NoDetect
+IO1=32,%0
+IRQ1=1,%0
+WFWKeys="ms$hp27245"
+ODIKeys="hpisaodi"
+IPXNames="PC LAN/AT"
+NovellIDs=0x0076
+IEEEIDs=0xffffffff
+
+[*pnp8156]	;HP PC LAN Adapter/16 TP (HP27247A)
+NCDID=342
+DeviceIDs=*pnp8156
+Flags=ISA,NoDetect
+IO1=32,%0
+IRQ1=1,%0
+WFWKeys="ms$hp27247A"
+LanManKeys="hplanp"
+ODIKeys="hpisaodi"
+IEEEIDs=0xffffffff
+
+[*pnp8159]	;HP PC LAN Adapter/16 TL Plus (HP27252)
+NCDID=345
+DeviceIDs=*pnp8159
+Flags=ISA
+IO1=32,%0
+IRQ1=1,%0
+WFWKeys="ms$hp27252"
+ODIKeys="hpisaodi"
+IEEEIDs=0xffffffff
+
+[*pnp8158]	;HP PC LAN Adapter/16 TP Plus (HP27247B)
+NCDID=344
+DeviceIDs=*pnp8158
+Flags=ISA
+IO1=32,%0
+IRQ1=1,%0
+WFWKeys="ms$hp27247B","hp27247b"
+ODIKeys="hpisaodi","hp3at16p"
+IPXNames="Adapter/16"
+NovellIDs=0x0076
+IEEEIDs=0x080009
+
+[*pnp82c2]	;Xircom CE10 or CE10/A Upgrade from WFW NDIS3 Driver Only
+NCDID=706
+DeviceIDs=*pnp82c2
+Flags=PCMCIA,NoDetect
+IO1=32,%6
+Mem1=0x1000,%10
+IRQ1=1,%6
+WFWKeys="xirc$cendis3"
+
+[*pnp82c3]	;Xircom CEM2 Upgrade from WFW NDIS3 Driver Only
+NCDID=707
+DeviceIDs=*pnp82c3
+Flags=PCMCIA,NoDetect
+IO1=32,%6
+Mem1=0x1000,%10
+IRQ1=1,%6
+WFWKeys="xirc$cm2ndis3"
+
+[*pnp82c4]	;Xircom CE2 Upgrade from WFW NDIS3 Driver Only
+NCDID=708
+DeviceIDs=*pnp82c4
+Flags=PCMCIA,NoDetect
+IO1=32,%6
+Mem1=0x1000,%10
+IRQ1=1,%6
+WFWKeys="xirc$ce2ndis3"
+
+[*pnp80c9]	;IBM Token Ring
+NCDID=201
+DeviceIDs=*pnp80c9
+Flags=ISA,NoDetect
+IO1=4
+WFWKeys="ms$ibmtr1"
+IEEEIDs=0xffffffff
+
+[*pnp806a]	;IBM Token Ring (MCA)
+NCDID=106
+DeviceIDs=*pnp806a,mca_e000
+Flags=MCA,NoDetect
+WFWKeys="ms$ibmtra"
+IEEEIDs=0xffffffff
+
+[*pnp80ca]	;IBM Token Ring II
+NCDID=202
+DeviceIDs=*pnp80ca
+Flags=ISA,NoDetect
+WFWKeys="ms$ibmtr2"
+IEEEIDs=0xffffffff
+
+[*pnp80cb]	;IBM Token Ring II/Short
+NCDID=203
+DeviceIDs=*pnp80cb
+Flags=ISA,NoDetect
+WFWKeys="ms$ibmtr2s"
+IEEEIDs=0xffffffff
+
+[*pnp80cc]	;IBM Token Ring 4/16Mbs
+NCDID=204
+DeviceIDs=*pnp80cc
+Flags=ISA,NoDetect
+IO1=4
+Mem1=0x2000
+WFWKeys="ms$ibmtr4"
+ODIKeys="NTR2000"
+IEEEIDs=0x08005a
+
+[*pnp806b]	;IBM Token Ring 4/16Mbs (MCA)
+NCDID=107
+DeviceIDs=*pnp806b,mca_e001
+Flags=MCA,NoDetect
+WFWKeys="ms$ibmtr4a"
+ODIKeys="NTR2000"
+IEEEIDs=0x10005a
+
+[*pnp8327]	;IBM Token Ring (All Types)
+NCDID=807
+DeviceIDs=*pnp8327
+Flags=ISA
+IO1=4
+IRQ1=1
+WFWKeys="ms$genibmtok"
+LanManKeys="ibmtok"
+NovellIDs=0x0006
+
+[*pnp812d]	;Intel EtherExpress 16 or 16TP
+NCDID=301
+DeviceIDs=*pnp812d
+Flags=ISA
+IO1=16,%0
+IRQ1=1,%2
+WFWKeys="ms$ee16"
+LanManKeys="exp16"
+ODIKeys="exp16odi"
+NovellIDs=0x0461
+
+[*pnp8132]	;Intel EtherExpress PRO/10
+NCDID=306
+DeviceIDs=*pnp8132
+Flags=ISA
+IO1=16,%0
+IRQ1=1,%0
+WFWKeys="ms$epro"
+LanManKeys="epro$","epro"
+ODIKeys="eproodi"
+
+[*pnp8133]	;Compaq Ethernet 16

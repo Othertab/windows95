@@ -1,0 +1,138 @@
+"Name"="Enclosure or Chassis Type"
+"Description"="The type of enclosure."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\EnclosureOrChassisType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\1\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Desktop"
+"4"="Low Profile Desktop"
+"5"="Pizza Box"
+"6"="Mini Tower"
+"7"="Tower"
+"8"="Portable"
+"9"="LapTop"
+"10"="Notebook"
+"11"="Hand Held"
+"12"="Docking Station"
+"13"="All in One"
+"14"="Sub Notebook"
+"15"="Space-saving"
+"16"="Lunch Box"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\2]
+"Name"="Asset Tag"
+"Description"="The system asset tag string."
+"Column"="2"
+"Access"="Read-Write"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\AssetTag"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\3]
+"Name"="Chassis Lock Present"
+"Description"="If true, a chassis lock is present."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\ChassisLockPresent"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\3\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\4]
+"Name"="Bootup State"
+"Description"="The current state of this system when it booted."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\BootupState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\4\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Safe"
+"4"="Warning"
+"5"="Critical"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\5]
+"Name"="Power State"
+"Description"="The current state of the power supply for this system."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\PowerState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Safe"
+"4"="Warning"
+"5"="Critical"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\6]
+"Name"="Thermal State"
+"Description"="The current thermal state of this system."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\ThermalState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Safe"
+"4"="Warning"
+"5"="Critical"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\7]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\FRUGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\16\8]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\SystemEnclosure\\OperationalGroupIndex"
+
+
+;=========================================
+;  Power Supply group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\17]
+"Name"="Power Supply"
+"Class"="DMTF|Power Supply|001"
+"Description"="This group defines various attributes for power supplies in this system."
+"Key"="2"
+; ";Table"="HKLM\\DesktopManagement\\DATA\\2\\PowerSupply"
+"^Index"=hex:02
+"^ROW"="^ROWNUM|2|3"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\17\1]
+"Name"="Power Supply Index"
+"Description"="The index number of the current power supply."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Column"="^ROWNUM"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\17\2]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of ano

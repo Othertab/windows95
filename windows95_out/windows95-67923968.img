@@ -1,0 +1,105 @@
+, FClass, 1, 09,00,00,00
+HKR, Init,      3,, "AT W1 \V0 &D2<cr>"
+HKR, Settings, Compression_On,, "%%C1"
+HKR, Settings, InactivityTimeout,, "\T<#>"
+
+[Modem2.AddReg]	; SG 144
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 0b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem3.AddReg]	; LC 144 VF
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 4b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem5.AddReg]	; PC 144 SF
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 37,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 09,00,00,00
+HKR, Init,      3,, "AT W1 \V0 &D2<cr>"
+HKR, Settings, Compression_On,, "%%C1"
+HKR, Settings, InactivityTimeout,, "\T<#>"
+
+[Modem6.AddReg]	;  LC 288 FC
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, FClass, 1, 0b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem8.AddReg]	;  LC 144
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 30,03,00,00, 00,96,00,00, 40,38,00,00
+HKR,, FClass, 1, 03,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem10.AddReg]	; SG 2834
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, FClass, 1, 0b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem12.AddReg]	; SG 2834
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,c2,01,00, 80,70,00,00
+HKR,, FClass, 1, 0b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem13.AddReg]	; SG 144
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 0b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem14.AddReg]	;  LC 144
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 30,03,00,00, 00,96,00,00, 40,38,00,00
+HKR,, FClass, 1, 03,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem15.AddReg]	; LC 144 VF
+HKR,, Properties, 1, 80,01,00,00, 64,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 3f,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, FClass, 1, 4b,00,00,00
+HKR, Init,      3,, "AT W0 S95=249 S25=0 S38=0<cr>"
+
+[Modem17.AddReg]	; BTX-COM
+HKR,, Properties, 1, 00,00,00,00, 00,00,00,00, 00,00,00,00, 07,00,00,00, 00,00,00,00, 10,01,00,00, b0,04,00,00, b0,04,00,00
+HKR,, FClass, 1, 00,00,00,00
+HKR,, InactivityFormat,, "seconds"
+HKR, Init,      2,, "ATE1V1<cr>"
+HKR, Monitor,   1,, "None"
+HKR, Hangup,    1,, 
+HKR, Answer,    1,, ""
+HKR,, Reset,, "ATE1<cr>"
+HKR, Settings, Prefix,, "AT"
+HKR, Settings, Terminator,,"<cr>" 
+HKR, Settings, DialPrefix,, "D"
+HKR, Settings, DialSuffix,, 
+HKR, Settings, SpeakerVolume_Low,, 
+HKR, Settings, SpeakerVolume_Med,, 
+HKR, Settings, SpeakerVolume_High,, 
+HKR, Settings, SpeakerMode_Off,, 
+HKR, Settings, SpeakerMode_Dial,, 
+HKR, Settings, SpeakerMode_On,, 
+HKR, Settings, SpeakerMode_Setup,, 
+HKR, Settings, FlowControl_Off,, 
+HKR, Settings, FlowControl_Hard,, 
+HKR, Settings, FlowControl_Soft,, 
+HKR, Settings, Modulation_CCITT,, 
+HKR, Settings, Modulation_Bell,, 
+HKR, Settings, SpeedNegotiation_Off,, 
+HKR, Settings, SpeedNegotiation_On,, 
+HKR, Settings, Pulse,, "P"
+HKR, Settings, Tone,, "T"
+HKR, Settings, Blind_Off,, 
+HKR, Settings, Blind_On,, 
+HKR, Settings, CallSetupFailTimer,, 
+HKR, Settings, InactivityTimeout,, 
+HKR, Responses, "<cr><lf>CONNECT<cr><lf>", 1, 02, 00, 00,00,00,00, 00,00,00,00
+
+; User visible strings
+
+[Strings]
+ClassName = "Modem"
+Mfg = "Creatix Polymedia GmbH"
+
+; Model strings
+
+Modem1="Creatix SR 2496"
+Modem2="Creatix SG 144"
+Modem3="Creatix LC 144 VF"
+Modem4="Creatix LC 144 VFI"
+Modem5="

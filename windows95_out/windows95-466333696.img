@@ -1,0 +1,85 @@
+ect over 
+a LAN and start a "sleep" timer, which will count down and put MSN Quick 
+View to sleep.  When MSN Quick View is running, it will notify you of 
+Friends Online, e-mail and software updates.  You will not be notified of 
+these events when MSN Quick View is asleep.  
+
+MSN Quick View's sleep timer is set by 
+the Idle Disconnect value in your Internet browser properties.
+
+To change your sleep timer settings:
+1. Click the MSN Quick View icon.
+2. Click MSN Options, then Internet Properties.
+3. Click the Connection Tab, then click the Connect to the Internet 
+   using a modem check box to enable the Settings button.
+4. Click the Settings button and then choose a value for Disconnect 
+   if idle for ____ minutes.  
+5. Click OK and then reselect Connect to the Internet using a local 
+   area network.
+6. Click OK again to accept these settings.
+
+
+MSN QUICK VIEW BEHAVIOR WHEN CONNECTING WITH DIAL UP 
+NETWORKING OR PROPRIETARY DIALER:
+The MSN dialer starts MSN Quick View once a successful 
+connection has been made, and it turns it off once the modem 
+disconnects.  While MSN Quick View is running, it will provide 
+intermittent notice of e-mail and friends online status, and it 
+will estimate how long you have been connected.  
+
+If you use a proprietary dialer (like AOL), or you start your 
+connection by clicking a Dial-Up Networking icon, then MSN 
+Quick View will only start when you visit a page that uses MSN 
+Quick View's services.  MSN Quick View cannot detect the end of a 
+dial-up connection started by another service and may still be 
+active after you have disconnected.  MSN Quick View will detect 
+that you are configured to connect via non-MSN connection and 
+start a "sleep" timer which will count down and put MSN Quick 
+View to sleep.  To change the interval used to put MSN to sleep, 
+refer to the instructions for changing the sleep timer interval 
+in the LAN connection section above.
+
+
+7. Outlook Express Mail and News
+================================
+UPGRADING TO MICROSOFT OUTLOOK EXPRESS FROM MICROSOFT EXCHANGE 
+("INBOX"), OUTLOOK, OR WINDOWS MESSAGING:
+MSN 2.51 installs a new Internet e-mail program called 
+Microsoft Outlook Express. If you have an existing MSN e-mail 
+account (Microsoft Exchange), MSN Setup will give you
+the option of importing your existing mail file to this new program. 
+
+If you choose to upgrade (recommended), MSN 2.51 will replace your 
+previous mail account with a new MSN Internet mail account, and you 
+will no longer be able to use Exchange, Outlook, or Windows Messaging 
+as your MSN e-mail program.
+
+If you have MSN installed on another computer and you want to be 
+able to access your MSN e-mail account on that computer, you'll have 
+to install MSN 2.51 and Microsoft Outlook Express there as well.
+
+
+CHANGES IN EXISTING MSN E-MAIL ACCOUNT ADDRESSES:
+You may note, as you receive replies to the messages you send, that 
+your e-mail address is listed as MSN_Member_ID@email.msn.com, instead
+of MSN_Member_ID@msn.com.  This DOES NOT mean that your e-mail 
+address has changed. The addition of the word "email" after the "@" 
+sign is simply a behind-the-scenes mechanism used to ensure higher 
+levels of performance on the new MSN mail platform. Your e-mail 
+address is the same as before the upgrade.
+
+8.  Connection Problems
+=======================
+COMPUSERVE USERS WHO INSTALL MSN 2.5
+WinCim 2.0 and above should work fine after installing MSN 2.5.  If 
+you encounter problems with your connection to Compuserve you should 
+install the Dial-Up Networking/Winsock upgrade (COMMUPDT.EXE).  See 
+the instructions for installing COMMUPDT below.  Installing a new version 
+of Dial-Up Networking will enable Compuserve to work.  If this fails to 
+correct the problem, you should re-install Compuserve.
+
+If you want to access both MSN and Compuserve at the same time you 
+will need to configure your Compuserve connection to use MSN's 
+network.  You will then need to connect to MSN and then access Compuserve.
+
+AOL USERS WHO INSTALL MSN 2.

@@ -1,0 +1,70 @@
+rnet Explorer\EmbedExtnToClsidMappings\.enc",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.m1v",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.mp2",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.mpa",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.mpe",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.mpeg",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.mpg",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.snd",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.wav",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.rpm",,2,"clsid:CFCDAA03-8BE4-11CF-B84B-0020AFBBCCFA"
+
+
+
+
+
+
+
+[W95.Sweeper.AddReg]
+
+HKLM,%Key_Runonce%,"IE3_RegSvr_rsabase.dll",0,"%11%\regsvr32.exe /s %11%\rsabase.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_olepro32.dll",0,"%11%\regsvr32.exe /s %11%\olepro32.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_schannel.dll",0,"%11%\regsvr32.exe /s %11%\schannel.dll"
+HKLM,%Key_Runonce%,"IE3_RegSvr_oleaut32.dll",0,"%11%\regsvr32.exe /s %11%\oleaut32.dll"
+
+; W95 Only Java VXD
+HKLM,"System\CurrentControlSet\Services\VXD\JAVASUP","Start",1,0
+HKLM,"System\CurrentControlSet\Services\VXD\JAVASUP","Start",0,"JAVASUP.VXD"
+
+
+;	Configuration Registry Entries
+HKLM,"System\CurrentControlSet\control\Shutdown","SetupProgramRan",1,02,00,00,00
+HKLM,"System\CurrentControlSet\control\SessionManager\CheckVerDLLs","url.dll",0,""
+
+;	Set User Agent String
+HKCU,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings","User Agent",0,"Mozilla/2.0 (compatible; MSIE 3.0; Windows 95)"
+
+;	MSN Mail Values
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\InternetMail,INF,,"INETMAIL.INF"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\InternetMail,Section,,"InternetMail"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\InternetMail,Installed,,"0"
+
+
+;	Favorites Directory
+HKCU,"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders","Favorites",0,"%10%\%FAVORITES_DIR%"
+
+
+;	System Configuration
+HKLM,"System\CurrentControlSet\Control\SessionManager\KnownDLLs","SHDOCVW",0,"SHDOCVW.DLL"
+HKLM,"System\CurrentControlSet\Control\SessionManager\KnownDLLs","SHLWAPI",0,"SHLWAPI.DLL"
+
+;	Wizard Mappings
+HKCR,".ins",,0,"x-internet-signup"
+HKCR,".ins","Content Type",0,"application/x-internet-signup"
+HKCR,".ins","EditFlags",1,00,00,01,00
+HKCR,".isp",,0,"x-internet-signup"
+HKCR,".isp","Content Type",0,"application/x-internet-signup"
+HKCR,".isp","EditFlags",1,00,00,01,00
+HKCR,"x-internet-signup",,0,"Internet Communication Settings"
+HKCR,"x-internet-signup","EditFlags",1,00,00,01,00
+HKCR,"x-internet-signup\Shell",,0,""
+HKCR,"x-internet-signup\Shell\Open","EditFlags",1,01,00,00,00
+HKCR,"x-internet-signup\Shell\Open\command",,0,"%24%\%PROGRAM_FULL%\%ICW_FULL%\ISIGNUP.EXE %%1"
+HKCR,"x-internet-signup\DefaultIcon",,0,"%24%\%PROGRAM_FULL%\%ICW_FULL%\ICWCONN1.EXE,0"
+HKCR,"MIME\Database\Content Type\application/x-internet-signup","Extension",0,".ins"
+HKLM,"SOFTWARE\Microsoft\ICW","Version",,"1.00"
+; Create the long Directory name for C:\Program Files\ICW-Internet Connection Wizard
+;   Note that when you rename a long name, VFAT changes the short name from foobar~1 to foobar~2.
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\ICW",,0,"%24%\%PROGRAMF%"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\ICW","%ICW_SHORT%",0,"$!$!$!$!.ICW"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\ICW","$!$!$!$!.ICW",0,"%

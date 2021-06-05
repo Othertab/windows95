@@ -1,0 +1,140 @@
+.DeviceDesc%=1024.Install, MonID_1024 
+%1280.DeviceDesc%=1280.Install, MonID_1280 
+%1600.DeviceDesc%=1600.Install, MonID_1600
+
+[AST]
+%AST4V%=AST4V, Monitor\AST8001
+%AST4I%=AST4I, Monitor\AST8002
+%AST4N%=AST4N, Monitor\AST8003
+%AST4L%=AST4L, Monitor\AST8004
+%AST5L%=AST5L, Monitor\AST8005
+%AST7L%=AST7L, Monitor\AST8006
+%AST7H%=AST7H, Monitor\AST8007
+%AST20H%=AST20H, Monitor\AST8008
+%AST4Ls%=AST4Ls, Monitor\AST8009
+%AST5V%=AST5V, Monitor\AST800A
+
+[Aamazing]
+%CM-8426%=CM-8426.Install, MonID_CM-8426
+%MS-8431%=MS-8431.Install, MonID_MS-8431
+
+[Actix]
+%CX1557%=CX1557.Install, MonID_CX1557
+
+[Adara]
+%AML-1402%=AML-1402.Install, MonID_AML-1402
+%AML-2001%=AML-2001.Install, MonID_AML-2001
+
+[ADI]
+%SM-5514B%=SM-5514B.Install, MonID_SM5514B
+%SM-5514A%=SM-5514A.Install, MonID_SM5514A
+%SM-5514E%=SM-5514E.Install, MonID_SM-5514E
+%SM-5515%=SM-5515.Install, MonID_SM-5515
+%ADI4GP%=ADI4GP, MonID_ADI4GP
+%ADI4V% =ADI4GP, MonID_ADI4V
+%ADI5AP%=ADI4GP, MonID_ADI5AP
+%ADI5EP%=ADI4GP, MonID_ADI5EP
+
+[AOC]
+%CM-324%=CM-324.Install, MonID_CM-324
+%CM-325%=CM-325.Install, MonID_CM-325
+%CM-326%=CM-326.Install, MonID_CM-326
+
+[Bus]
+%Bus_VGA%=Bus_VGA.Install, MonID_BUS_VGA
+
+[Carroll]
+%CT1381A%=CT1381A.Install, MonID_CT1381A
+
+[Colorgraphic]
+%EG2040%=EG2040.Install, MonID_EG2040
+
+[Compeq]
+%CT-1458%=CT-1458.Install, MonID_CT-1458
+%CT-1958%=CT-1958.Install, MonID_CT-1958
+
+[Conrac]
+%7250%=7250.Install, MonID_7250
+%7351%=7351.Install, MonID_7351
+%7214%=7214.Install, MonID_7214
+%7241%=7241.Install, MonID_7241
+%7550%=7550.Install, MonID_7550
+%9250%=9250.Install, MonID_9250
+%7126%=7126.Install, MonID_7126
+%7211%=7211.Install, MonID_7211
+
+[Cordata]
+%CMC-141M%=CMC-141M.Install, MonID_CMC-141M
+%CMC-1500BF%=CMC-1500BF.Install, MonID_CMC-1500BF
+%CMC-1500M%=CMC-1500M.Install, MonID_CMC-1500M
+%CMC-1500TF%=CMC-1500TF.Install, MonID_CMC-1500TF
+%CMC-1700M%=CMC-1700M.Install, MonID_CMC-1700M
+%CMC-2100H%=CMC-2100H.Install, MonID_CMC-2100H
+%CMC-2100M%=CMC-2100M.Install, MonID_CMC-2100M
+
+[Darius]
+%TSM-1431%=TSM-1431.Install, MonID_TSM-1431
+
+[Everex]
+%Eversync_SVGA%=Eversync_SVGA.Install, MonID_Eversync_SVGA
+
+[Falco]
+%FMS%=FMS.Install, MonID_FMS
+
+[Fora]
+%MON-7C5%=MON-7C5.Install, MonID_MON-7C5
+
+[Forefront]
+%MTS-9608S%=MTS-9608S.Install, MonID_MTS-9608S
+
+[Fujikama]
+%PVGA-1024A%=PVGA-1024A.Install, MonID_PVGA-1024A
+
+[Gateway]
+%14svga%=14svga.Install, MonID_14svga
+%cs1024%=cs1024.Install, MonID_cs1024
+%cs1024ni%=cs1024ni.Install, MonID_cs1024ni
+%cs1024ni2g%=cs1024ni2g.Install, MonID_cs1024ni2g
+%cs1572dgm%=cs1572dgm.Install, MonID_cs1572dgm
+%cs1572dg%=cs1572dg.Install, MonID_1572dg
+%cs1572fs%=cs1572fs.Install, MonID_1572fs
+%Vivitron15%=Vivitron15.Install, MonID_Vivitron15
+%cs17762leg%=cs17762leg.Install, MonID_cs17762leg
+%Vivitron17%=Vivitron17.Install, MonID_Vivitron17
+%Vivitron20%=Vivitron20.Install, MonID_Vivitron20
+
+[GoldenDragon]
+%TY-1411%=TY-1411.Install, MonID_TY-1411
+%TY-2015%=TY-2015.Install, MonID_TY-2015
+
+[Goldstar]
+%1423%=1423.Install, MonID_1423
+%1423+VGA%=1423+VGA.Install, MonID_1423+VGA
+%1453_Plus%=1453_Plus.Install, MonID_1453_Plus
+%1460+VGA%=1460+VGA.Install, MonID_1460+VGA
+%1470_Plus%=1470_Plus.Install, MonID_1470_Plus
+%1490%=1490.Install, MonID_1490
+%1510%=1510.Install, MonID_1510
+%1620%=1620.Install, MonID_1620
+%1710%=1710.Install, MonID_1710
+%1725%=1725.Install, MonID_1725
+
+[HCI]
+%Maxiscan%=Maxiscan.Install, MonID_Maxiscan
+
+[Iiyama]
+%DR-3114%=DR-3114.Install, MonID_DR-3114
+%MF-5014A%=MF-5014A.Install, MonID_MF-5014A
+%MF-5015A%=MF-5015A.Install, MonID_MF-5015A
+%MF-5017%=MF-5017.Install, MonID_MF-5017
+%MF-5021%=MF-5021.Install, MonID_MF-5021
+%MF-5115%=MF-5115.Install, MonID_MF-5115
+%MF-5117%=MF-5117.Install, MonID_MF-5117
+%MF-5121A%=MF-5121A.Install, MonID_MF-5121A
+%MF-5214A%=MF-5214A.Install, MonID_MF-5214A
+%MF-5215A%=MF-5215A.Install, MonID_MF-5215A
+%MF-5217%=MF-5217.Install, MonID_MF-5217
+%MF-5221%=MF-5221.Install, MonID_MF-5221
+%MR-5314%=MR-5314.Install, MonID_MF-5314
+%MF-5315%=MF-5315.Install, MonID_MF-5315
+%MF-5317%=MF-5317.Ins

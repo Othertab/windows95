@@ -1,0 +1,104 @@
+
+FF,03, \               ;   IOR_Max
+00,00, \               ;   IOR_RangeFlags
+00, \                  ;   IOR_Alias
+00, \                  ;   IOR_Decode
+; COM2
+F8,FF, \               ;   IOR_Align           // 8 byte align
+08,00, \               ;   IOR_nPorts          // 8 ports
+F8,02, \               ;   IOR_Min
+FF,02, \               ;   IOR_Max
+00,00, \               ;   IOR_RangeFlags
+00, \                  ;   IOR_Alias
+00, \                  ;   IOR_Decode
+; COM3
+F8,FF, \               ;   IOR_Align           // 8 byte align
+08,00, \               ;   IOR_nPorts          // 8 ports
+E8,03, \               ;   IOR_Min
+EF,03, \               ;   IOR_Max
+00,00, \               ;   IOR_RangeFlags
+00, \                  ;   IOR_Alias
+00, \                  ;   IOR_Decode
+; COM4
+F8,FF, \               ;   IOR_Align           // 8 byte align
+08,00, \               ;   IOR_nPorts          // 8 ports
+E8,02, \               ;   IOR_Min
+EF,02, \               ;   IOR_Max
+00,00, \               ;   IOR_RangeFlags
+00, \                  ;   IOR_Alias
+00, \                  ;   IOR_Decode
+;
+00,00,00,00, \         ; PCCARD flags, 0x40 = 16-bit port
+;
+; I/O Resource Descriptor 1
+;
+24,00,00,00, \         ; Total length of I/O Resource Descriptor
+02,00,00,00, \         ; ResType_IO = 0x00000002
+01,00, \               ; IOD_Count
+0C,00, \               ; IOD_Type      IOType_Range = 0x000C
+00,00, \               ; IOD_Alloc_Base
+00,00, \               ; IOD_Alloc_End
+00,00, \               ; IOD_DesFlags
+00, \                  ; IOD_Alloc_Alias
+00, \                  ; IOD_Alloc_Decode
+C0,FF, \               ;   IOR_Align           // 64 byte align
+20,00, \               ;   IOR_nPorts          // 32 ports
+00,02, \               ;   IOR_Min
+FF,FF, \               ;   IOR_Max
+00,00, \               ;   IOR_RangeFlags
+00, \                  ;   IOR_Alias
+00, \                  ;   IOR_Decode
+40,00,00,00, \         ; PCCARD flags, 0x40 = 16-bit port
+;
+; IRQ Resource Descriptor 0
+;
+14,00,00,00, \         ; Total length of IRQ Resource Descriptor
+04,00,00,00, \         ; ResType_IRQ = 0x00000004
+00,00, \               ; IRQD_Flags
+00,00, \               ; IRQD_Alloc_Num
+FF,FF, \               ; IRQD_Req_Mask
+00,00, \               ; IRQD_Reserved
+20,00,00,00, \         ; PCCARD flags, 0x20 = Level mode int's
+;
+; IRQ Resource Descriptor 1
+;
+;14,00,00,00, \         ; Total length of IRQ Resource Descriptor
+;04,00,00,00, \         ; ResType_IRQ = 0x00000004
+;00,00, \               ; IRQD_Flags
+;00,00, \               ; IRQD_Alloc_Num
+;FF,FF, \               ; IRQD_Req_Mask
+;00,00, \               ; IRQD_Reserved
+;20,00,00,00, \         ; PCCARD flags, 0x20 = Level mode int's
+;
+; Memory Resource Descriptor 0
+;
+;34,00,00,00, \         ; Total length of Memory Descriptor
+;01,00,00,00, \         ; ResType_Mem = 0x00000001
+;01,00, \               ; MD_Count
+;14,00, \               ; MD_Type
+;00,00,00,00, \         ; MD_Alloc_Base
+;00,00,00,00, \         ; MD_Alloc_End
+;00,00, \               ; MD_Flags
+;00,00, \               ; MD_Reserved
+;00,F0,FF,FF, \         ;   MR_Align
+;00,10,00,00, \         ;   MR_nBytes             // 4k
+;00,00,00,00, \         ;   MR_Min
+;FF,FF,FF,FF, \         ;   MR_Max
+;00,00, \               ;   MR_Flags
+;00,00, \               ;   MR_Reserved
+;02,00,00,00, \         ; PCCARD flags, 0x02 = attribute mem, or
+;                       ;     0x08 = 16-bit common mem
+;00,00,00,00, \         ; Memory card address offset
+;
+; REQUEST_CONFIG_PKT
+;
+19,00,00,00, \         ; Length of REQUEST_CONFIG_PKT Descriptor
+7C,89,00,00, \         ; ResType_Ignored_Bit + PCCARD_DEVICE 0x897C
+00,00, \               ;   Socket
+02,00, \               ;   Attributes   // Enable IRQ
+32, \                  ;   Vcc
+00, \                  ;   Vpp1
+00, \                  ;   Vpp2
+02, \                  ;   IntType;     // CFGI_MEMORY_AND_IO
+00,08,00,00, \         ;   ConfigBase   // 0x0800
+08, \                  ;   Status       // CCR2 (00, 08 or

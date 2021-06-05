@@ -1,0 +1,55 @@
+1",1,
+HKLM,DesktopManagement\Data\2\Processor\ProcessorUpgrade,"1",1,02
+HKLM,DesktopManagement\Data\2\Processor\FRUGroupIndex,"1",1,
+HKLM,DesktopManagement\Data\2\Processor\OperationalGroupIndex,"1",1,
+;  Motherboard
+HKLM,DesktopManagement\Data\2\MotherBoard,"NumberOfExpansionSlots",1,
+HKLM,DesktopManagement\Data\2\MotherBoard,"FRUGroupIndex",1,
+HKLM,DesktopManagement\Data\2\MotherBoard,"OperationalGroupIndex",1,
+
+;  Physical Memory
+; HKLM,DesktopManagement\Data\2\PhysicalMemory,"^Index",1,02,00,00,00
+; HKLM,DesktopManagement\Data\2\PhysicalMemory,"^ROW",,"^ROWNUM|PhysicalMemoryLocation|MemoryStartingAddress|MemoryEndingAddress|MemoryUsage|MaximumMemoryCapacity|NumberOfSIMMSlots|NumberofSIMMSlotsUsed|MemorySpeed|MemoryErrorCorrection|FRUGroupIndex|OperationalGroupIndex|MaximumMemoryCapacityFractionalPart"
+HKLM,DesktopManagement\Data\2\PhysicalMemory\PhysicalMemoryLocation,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MemoryStartingAddress,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MemoryEndingAddress,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MemoryUsage,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MaximumMemoryCapacity,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\NumberOfSIMMSlots,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\NumberofSIMMSlotsUsed,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MemorySpeed,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MemoryErrorCorrection,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\FRUGroupIndex,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\OperationalGroupIndex,"1",1,
+HKLM,DesktopManagement\Data\2\PhysicalMemory\MaximumMemoryCapacityFractionalPart,"1",1,
+
+;  Logical Memory
+HKLM,DesktopManagement\Data\2\LogicalMemory,"BaseMemorySize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,"FreeBaseMemorySize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,"ExtendedMemorySize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,"FreeExtendedMemorySize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,":ExtendedMemoryManagerName",,"HKLM\DesktopManagement\Data\2\OperatingSystem\OperatingSystemName\1"
+HKLM,DesktopManagement\Data\2\LogicalMemory,":ExtendedMemoryManagerVersion",,"HKLM\DesktopManagement\Data\2\OperatingSystem\OperatingSystemVersion\1"
+HKLM,DesktopManagement\Data\2\LogicalMemory,"ExpandedMemorySize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,"FreeExpandedMemorySize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,":ExpandedMemoryManagerName",,"HKLM\DesktopManagement\Data\2\OperatingSystem\OperatingSystemName\1"
+HKLM,DesktopManagement\Data\2\LogicalMemory,":ExpandedMemoryManagerVersion",,"HKLM\DesktopManagement\Data\2\OperatingSystem\OperatingSystemVersion\1"
+HKLM,DesktopManagement\Data\2\LogicalMemory,"ExpandedMemoryPageFrameAddress",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,"ExpandedMemoryPageFrameSize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,"ExpandedMemoryPageSize",1,
+HKLM,DesktopManagement\Data\2\LogicalMemory,":BaseMemorySize",,"HKLM\DesktopManagement\DATA\2\LogicalMemory\LogicalMemory\TotalPhysicalMemorySize"
+HKLM,DesktopManagement\Data\2\LogicalMemory,":FreeBaseMemorySize",,"HKLM\DesktopManagement\DATA\2\LogicalMemory\LogicalMemory\FreePhysicalMemorySize"
+
+;  System Cache
+; HKLM,DesktopManagement\Data\2\SystemCache,"^Index",1,02,00,00,00
+; HKLM,DesktopManagement\Data\2\SystemCache,"^ROW",,"^ROWNUM|Level|Speed|Size|WritePolicy|ErrorCorrection|FRUGroupIndex|OperationalGroupIndex"
+HKLM,DesktopManagement\Data\2\SystemCache\Level,"1",1,
+HKLM,DesktopManagement\Data\2\SystemCache\Level\Enum,"0",,"Other"
+HKLM,DesktopManagement\Data\2\SystemCache\Level\Enum,"1",,"Unknown"
+HKLM,DesktopManagement\Data\2\SystemCache\Level\Enum,"2",,"Primary"
+HKLM,DesktopManagement\Data\2\SystemCache\Level\Enum,"3",,"Secondary"
+HKLM,DesktopManagement\Data\2\SystemCache\Level\Enum,"4",,"Tertiary"
+HKLM,DesktopManagement\Data\2\SystemCache\Speed,"1",1,
+HKLM,DesktopManagement\Data\2\SystemCache\Size,"1",1,
+HKLM,DesktopManagement\Data\2\SystemCache\WritePolicy,"1",1,
+HKLM,DesktopManage

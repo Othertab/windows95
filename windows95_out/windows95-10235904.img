@@ -1,0 +1,113 @@
+.386"
+system.ini, 386Enh, "device=8k2int13.386"
+
+;Remove Compaq FastDisk Drivers:
+system.ini, 386Enh, "device=cpqint13.386"
+system.ini, 386Enh, "device=cpqwdctl.386"
+
+;Remove CMD FastDisk Drivers:
+system.ini, 386Enh, "DEVICE=CMD640X.386"
+system.ini, 386Enh, "DEVICE=CMD646X.386"
+system.ini, 386Enh, "DEVICE=CMDINT13.386"
+
+;Remove Ontrack FastDisk Driver:
+system.ini, 386Enh, "device=ontrackw.386"
+
+;Remove Compaq vcd (funtionality now in PnP detection)
+system.ini, 386Enh, "device=csvcd.386"
+
+;Remove Compaq vkd
+system.ini, 386Enh, "device=cpqvkd.386"
+system.ini, 386Enh, "device=vkda.386"
+
+;Remove Compaq Pentium fix:
+system.ini, 386Enh, "device=CPQCPPRO.386"
+
+;Remove Ontrack's fastdisk driver installed when DMDRIVER is installed over windows
+system.ini, 386Enh, "device=wdcdrv.386"
+
+;Remove Phoenix/Toshiba PCMCIA VCD
+system.ini, 386Enh, "device=pcmvcd.386"
+
+; Remove Promise Technologies FASTDISK drivers 
+system.ini, 386Enh, "device=PTI13.386"
+system.ini, 386Enh, "device=PTICTRL.386"
+
+;Remove Future Domain FastDisk Drivers (now built-in)
+system.ini, 386Enh, "device=V18FCAMD.386"
+system.ini, 386Enh, "device=FDSCSI.386"
+
+;Remove AMD PCscsi PCI ASPI manager and fastdisk drivers
+system.ini, 386Enh, "device=amsiwf.386"
+system.ini, 386Enh, "device=amsint13.386"
+system.ini, 386Enh, "device=amsiav.386"
+system.ini, 386Enh, "AMSIWF="
+system.ini, 386Enh, "AMSIAV="
+
+;Remove PCAnywhere vcd replacement:
+system.ini, 386Enh, "device=aw5vcd.386"
+
+;Remove driver for BusLogic IDE controllers
+system.ini, 386Enh, "device=wdctrl32.386"
+
+;Remove Mountain Backup and CMS MS-DOS Backup Drivers:
+system.ini, 386Enh, "device=MNSTD.386"
+system.ini, 386Enh, "device=CMSDTAPE.386"
+
+;Remove win 3.1 specific driver from MSDN:
+system.ini, 386Enh, "device=wps.386"
+
+;Remove Zenth FastDisk driver:
+system.ini, 386Enh, "device=sgat.386"
+
+;Old code page fonts (no longer used)
+system.ini,386Enh,"CGA40WOA.FON=CGA40WOA.FON"
+system.ini,386Enh,"CGA80WOA.FON=CGA80WOA.FON"
+system.ini,386Enh,"EGA40WOA.FON=EGA40WOA.FON"
+system.ini,386Enh,"EGA80WOA.FON=EGA80WOA.FON"
+system.ini,386Enh,"CGA40WOA.FON=CGA40850.FON"
+system.ini,386Enh,"CGA80WOA.FON=CGA80850.FON"
+system.ini,386Enh,"EGA40WOA.FON=EGA40850.FON"
+system.ini,386Enh,"EGA80WOA.FON=EGA80850.FON"
+;Removed (this is now the default)
+system.ini,386Enh,"local=CON"
+;Remove entries in VCACHE section (used in wfwg 3.11 and alpha Win 95)
+system.ini,vcache,"minfilecache="
+system.ini,vcache,"maxfilecache="
+
+;Remove Obsolete entry:
+system.ini,boot,"286grabber="
+
+; Change location of msoffice toolbar:
+msoffice.ini,Options,,"RightPos=72"
+
+;The following was ported from the win 3.1 setup.inf for upgrade over win 3.0:
+  ; Remove these Win 3.0 font entries from win.ini because they have either
+  ; been replaced or removed for Win 3.1
+  ;
+  win.ini, Fonts, "Helv 8,10,12,14,18,24 (CGA res)="
+  win.ini, Fonts, "Helv 8,10,12,14,18,24 (EGA res)="
+  win.ini, Fonts, "Helv 8,10,12,14,18,24 (60 dpi)="
+  win.ini, Fonts, "Helv 8,10,12,14,18,24 (120 dpi)="
+  win.ini, Fonts, "Helv 8,10,12,14,18,24 (VGA res)="
+  win.ini, Fonts, "Helv 8,10,12,14,18,24 (8514/a res)="
+  win.ini, Fonts, "Tms Rmn 8,10,12,14,18,24 (CGA res)="
+  win.ini, Fonts, "Tms Rmn 8,10,12,14,18,24 (EGA res)="
+  win.ini, Fonts, "Tms Rmn 8,10,12,14,18,24 (60 dpi)="
+  win.ini, Fonts, "Tms Rmn 8,10,12,14,18,24 (120 dpi)="
+  win.ini, Fonts, "Tms Rmn 8,10,12,14,18,24 (VGA res)="
+  win.ini, Fonts, "Tms Rmn 8,10,12,14,18,24 (8514/a res)="
+  ;
+  ; Remove these font entries if they exist because these .ini entries
+  ; are obsolete. We use "TrueType" rather than "Scalable"
+  ;
+  win.ini, Fonts, "Arial (Scalable)="
+  win.ini, Fonts, "Arial Bold (Scalable)="
+  win.ini, Fonts, "Arial Bold Italic (Scalable)="
+  win.ini, Fonts, "Arial Italic (Scalable)="
+  win.ini, Fonts, "Courier (Scalable)="
+  win.ini, Fonts, "Courier Bold (Scalable)="
+  win.ini, Fonts, "Courier Italic (Scalable)="
+  win.ini, Fonts, "Courier Bold Italic (Scalable)="
+  win.ini, Fonts, "Courier (TrueType)"
+  win.ini, Fonts, "Courier

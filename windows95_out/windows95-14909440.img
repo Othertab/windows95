@@ -1,0 +1,77 @@
+CLSID\%CLSID_AVISPL%\InprocServer32",,,"%11%\quartz.dll"
+HKCR,"CLSID\%CLSID_AVISPL%\InprocServer32","ThreadingModel",,"Both"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input","Direction",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input","IsRendered",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input","AllowedZero",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input","AllowedMany",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input\Types"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input\Types\%MT_STREAM%"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Input\Types\%MT_STREAM%\{e436eb88-524f-11ce-9f53-0020af0ba770}"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output","Direction",1,01,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output","IsRendered",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output","AllowedZero",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output","AllowedMany",1,00,00,00,00
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output\Types"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output\Types\%MT_ONE%"
+HKCR,"CLSID\%CLSID_AVISPL%\Pins\Output\Types\%MT_ONE%\%CLSID_NULL%"
+;
+; Async file reader
+;
+HKCR,"CLSID\%CLSID_ASYRDR%",,,"%F_ASYNC_READ%"
+HKCR,"CLSID\%CLSID_ASYRDR%","Merit",1,00,00,40,00
+HKCR,"CLSID\%CLSID_ASYRDR%\InprocServer32",,,"%11%\quartz.dll"
+HKCR,"CLSID\%CLSID_ASYRDR%\InprocServer32","ThreadingModel",,"Both"
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins"
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output","Direction",1,01,00,00,00
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output","IsRendered",1,00,00,00,00
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output","AllowedZero",1,00,00,00,00
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output","AllowedMany",1,00,00,00,00
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output\Types"
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output\Types\%MT_STREAM%"
+HKCR,"CLSID\%CLSID_ASYRDR%\Pins\Output\Types\%MT_STREAM%\%CLSID_NULL%"
+;
+; URL File Reader
+;
+HKCR,"CLSID\%CLSID_URLRDR%",,,"%F_URL_READ%"
+HKCR,"CLSID\%CLSID_URLRDR%","Merit",1,00,00,40,00
+HKCR,"CLSID\%CLSID_URLRDR%\InprocServer32",,,"%11%\quartz.dll"
+HKCR,"CLSID\%CLSID_URLRDR%\InprocServer32","ThreadingModel",,"Both"
+HKCR,"CLSID\%CLSID_URLRDR%\Pins"
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output","Direction",1,01,00,00,00
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output","IsRendered",1,00,00,00,00
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output","AllowedZero",1,00,00,00,00
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output","AllowedMany",1,00,00,00,00
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output\Types"
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output\Types\{E436EB83-524F-11CE-9F53-0020AF0BA770}"
+HKCR,"CLSID\%CLSID_URLRDR%\Pins\Output\Types\{E436EB83-524F-11CE-9F53-0020AF0BA770}\{00000000-0000-0000-0000-000000000000}"
+;
+HKCR,"HTTP","Source Filter",,"%CLSID_URLRDR%"
+HKCR,"HTTPS","Source Filter",,"%CLSID_URLRDR%"
+HKCR,"file","Source Filter",,"%CLSID_URLRDR%"
+HKCR,"ftp","Source Filter",,"%CLSID_URLRDR%"
+HKCR,"gopher","Source Filter",,"%CLSID_URLRDR%"
+;
+; MOV file splitter
+;
+HKCR,"CLSID\%CLSID_MOVSPL%",,,"%F_MOV_SPLIT%"
+HKCR,"CLSID\%CLSID_MOVSPL%","Merit",1,00,00,60,00
+HKCR,"CLSID\%CLSID_MOVSPL%\InprocServer32",,,"%11%\quartz.dll"
+HKCR,"CLSID\%CLSID_MOVSPL%\InprocServer32","ThreadingModel",,"Both"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output","Direction",1,01,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output","IsRendered",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output","AllowedZero",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output","AllowedMany",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output\Types"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output\Types\%MT_ONE%"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Output\Types\%MT_ONE%\%CLSID_NULL%"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input","Direction",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input","IsRendered",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input","AllowedZero",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input","AllowedMany",1,00,00,00,00
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input\Types"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input\Types\%MT_STREAM%"
+HKCR,"CLSID\%CLSID_MOVSPL%\Pins\Input\Types\%MT_STREAM%\{e436eb89-524f-11ce-9f53-0020af0ba770}"
+;
+; .wav

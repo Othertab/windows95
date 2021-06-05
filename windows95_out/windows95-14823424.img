@@ -1,0 +1,59 @@
+ntent Type\application/x-x509-ca-cert","Extension",0,".crt"
+
+
+;	Other Formats (Compressed, UNIX formats)
+HKCR,".txt","Content Type",2,"text/plain"
+HKCR,"MIME\Database\Content Type\text/plain","Extension",2,".txt"
+HKCR,"MIME\Database\Content Type\text/plain","Encoding",3,07,00,00,00
+HKCR,"MIME\Database\Content Type\text/plain","CLSID",2,"{%CLSID_MSHTML%}"
+HKCR,".tar","Content Type",2,"application/x-tar"
+HKCR,"MIME\Database\Content Type\application/x-tar","Extension",2,".tar"
+HKCR,".tgz","Content Type",2,"application/x-compressed"
+HKCR,"MIME\Database\Content Type\application/x-compressed","Extension",2,".tgz"
+HKCR,".man","Content Type",2,"application/x-troff-man"
+HKCR,"MIME\Database\Content Type\application/x-troff-man","Extension",2,".man"
+HKCR,".latex","Content Type",2,"application/x-latex"
+HKCR,"MIME\Database\Content Type\application/x-latex","Extension",2,".latex"
+HKCR,".ps","Content Type",2,"application/postscript"
+HKCR,".eps","Content Type",2,"application/postscript"
+HKCR,".ai","Content Type",2,"application/postscript"
+HKCR,"MIME\Database\Content Type\application/postscript","Extension",2,".ps"
+HKCR,".sit","Content Type",2,"application/x-stuffit"
+HKCR,"MIME\Database\Content Type\application/x-stuffit","Extension",2,".sit"
+HKCR,".hqx","Content Type",2,"application/mac-binhex40"
+HKCR,"MIME\Database\Content Type\application/mac-binhex40","Extension",2,".hqx"
+HKCR,".fif","Content Type",2,"application/fractals"
+HKCR,"MIME\Database\Content Type\application/fractals","Extension",2,".fif"
+HKCR,".zip","Content Type",2,"application/x-zip-compressed"
+HKCR,"MIME\Database\Content Type\application/x-zip-compressed","Extension",2,".zip"
+HKCR,".gz","Content Type",2,"application/x-gzip"
+HKCR,"MIME\Database\Content Type\application/x-gzip","Extension",2,".gz"
+HKCR,".z","Content Type",2,"application/x-compress"
+HKCR,"MIME\Database\Content Type\application/x-compress","Extension",2,".z"
+HKCR,".css","Content Type",2,"text/css"
+HKCR,"MIME\Database\Content Type\text/css","Extension",2,".css"
+
+; AVI File
+HKLM,"SOFTWARE\Classes\CLSID\{00022602-0000-0000-C000-000000000046}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}","",2,""
+HKLM,"SOFTWARE\Classes\CLSID\{00022602-0000-0000-C000-000000000046}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}","",2,""
+
+; MIDI File
+HKLM,"SOFTWARE\Classes\CLSID\{00022603-0000-0000-C000-000000000046}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}","",2,""
+HKLM,"SOFTWARE\Classes\CLSID\{00022603-0000-0000-C000-000000000046}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}","",2,""
+
+; WAV File
+HKLM,"SOFTWARE\Classes\CLSID\{00020C01-0000-0000-C000-000000000046}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}","",2,""
+HKLM,"SOFTWARE\Classes\CLSID\{00020C01-0000-0000-C000-000000000046}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}","",2,""
+
+
+; CLSIDs for Embed Formats.  
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.dcr",,2,"clsid:166B1BCA-3F9C-11CF-8075-444553540000"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.dir",,2,"clsid:166B1BCA-3F9C-11CF-8075-444553540000"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.ra",,2,"clsid:CFCDAA03-8BE4-11CF-B84B-0020AFBBCCFA"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.ram",,2,"clsid:CFCDAA03-8BE4-11CF-B84B-0020AFBBCCFA"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.aif",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.aifc",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.aiff",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.au",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\EmbedExtnToClsidMappings\.avi",,2,"clsid:05589FA1-C356-11CE-BF01-00AA0055595A"
+HKLM,"SOFTWARE\Microsoft\Inte

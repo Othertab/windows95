@@ -1,0 +1,178 @@
+Sub mnu200_Click()
+'Set zoom to 200% and redisplay image.
+'Zoom value is a float
+oleImgEdit1.Zoom = 200!
+oleImgEdit1.Refresh
+
+'check the current menu pick and uncheck the others.
+mnuBestFit.Checked = False
+mnuFitHeight.Checked = False
+mnuFitWidth.Checked = False
+mnuActual.Checked = False
+mnu25.Checked = False
+mnu50.Checked = False
+mnu75.Checked = False
+mnu100.Checked = False
+mnu200.Checked = True
+mnu400.Checked = False
+End Sub
+
+
+Private Sub mnu25_Click()
+'Set zoom to 25% and redisplay image.
+'Zoom value is a float
+oleImgEdit1.Zoom = 25!
+oleImgEdit1.Refresh
+
+'check the current menu pick and uncheck the others.
+mnuBestFit.Checked = False
+mnuFitHeight.Checked = False
+mnuFitWidth.Checked = False
+mnuActual.Checked = False
+mnu25.Checked = True
+mnu50.Checked = False
+mnu75.Checked = False
+mnu100.Checked = False
+mnu200.Checked = False
+mnu400.Checked = False
+End Sub
+
+
+Private Sub mnu400_Click()
+'Set zoom to 400% and redisplay image.
+'Zoom value is a float
+oleImgEdit1.Zoom = 400!
+oleImgEdit1.Refresh
+
+'check the current menu pick and uncheck the others.
+mnuBestFit.Checked = False
+mnuFitHeight.Checked = False
+mnuFitWidth.Checked = False
+mnuActual.Checked = False
+mnu25.Checked = False
+mnu50.Checked = False
+mnu75.Checked = False
+mnu100.Checked = False
+mnu200.Checked = False
+mnu400.Checked = True
+End Sub
+
+
+Private Sub mnu50_Click()
+'Set zoom to 50% and redisplay image.
+'Zoom value is a float
+oleImgEdit1.Zoom = 50!
+oleImgEdit1.Refresh
+
+'check the current menu pick and uncheck the others.
+mnuBestFit.Checked = False
+mnuFitHeight.Checked = False
+mnuFitWidth.Checked = False
+mnuActual.Checked = False
+mnu25.Checked = False
+mnu50.Checked = True
+mnu75.Checked = False
+mnu100.Checked = False
+mnu200.Checked = False
+mnu400.Checked = False
+End Sub
+
+
+Private Sub mnu75_Click()
+'Set zoom to 75% and redisplay image.
+'Zoom value is a float
+oleImgEdit1.Zoom = 75!
+oleImgEdit1.Refresh
+
+'check the current menu pick and uncheck the others.
+mnuBestFit.Checked = False
+mnuFitHeight.Checked = False
+mnuFitWidth.Checked = False
+mnuActual.Checked = False
+mnu25.Checked = False
+mnu50.Checked = False
+mnu75.Checked = True
+mnu100.Checked = False
+mnu200.Checked = False
+mnu400.Checked = False
+End Sub
+
+
+Private Sub mnuAbout_Click()
+'Add your code here
+MsgBox "Function to be implemented by user."
+End Sub
+
+
+Private Sub mnuActual_Click()
+'Set fit to inch to inch and redisplay image.
+oleImgEdit1.FitTo (InchToInch)
+oleImgEdit1.Refresh
+
+'check the current zoom menu pick and uncheck the others.
+mnuBestFit.Checked = False
+mnuFitHeight.Checked = False
+mnuFitWidth.Checked = False
+mnuActual.Checked = True
+mnu25.Checked = False
+mnu50.Checked = False
+mnu75.Checked = False
+mnu100.Checked = False
+mnu200.Checked = False
+mnu400.Checked = False
+End Sub
+
+
+Private Sub mnuAppend_Click()
+'Add your code here.
+MsgBox "Function to be implemented by user."
+
+End Sub
+
+
+Private Sub mnuAttachNote_Click()
+'see documentation for the list of annotation types
+oleImgEdit1.SelectTool AnnoAttachNote
+
+
+'Check the current annotation tool and uncheck all
+'the others
+mnuNoTool.Checked = False
+mnuSelectPointer.Checked = False
+mnuAttachNote.Checked = True
+mnuFillRect.Checked = False
+mnuFreeHand.Checked = False
+mnuHiLight.Checked = False
+mnuHollowRect.Checked = False
+mnuStamp.Checked = False
+mnuStraightLine.Checked = False
+mnuTextFromFile.Checked = False
+mnuTypedText.Checked = False
+
+End Sub
+
+
+Private Sub mnuBack_Click()
+'Save current page if modified, then return to the
+'previously displayed page.
+If oleImgEdit1.ImageModified = True Then
+    If MsgBox(ImageChanged, vbYesNo) = vbYes Then
+        mnuSave_Click
+    End If
+End If
+oleImgEdit1.page = LastPage
+oleImgEdit1.Display
+
+'Update the selected page thumbnail
+oleImgThumbnail1.DeselectAllThumbs
+oleImgThumbnail1.ThumbSelected(LastPage) = True
+
+End Sub
+
+
+Private Sub mnuBestFit_Click()
+'zoom the image so that the entire image
+'fits in the display window
+oleImgEdit1.FitTo (BestFit)
+
+'check the curr

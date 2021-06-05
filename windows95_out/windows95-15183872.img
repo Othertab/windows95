@@ -1,0 +1,232 @@
+s.dll,,,1
+systhunk.dll,,,1
+unicode.bin
+user.exe,,,1
+user32.dll,,,9
+vdmdbg.dll
+vfd.vxd,,,1
+ver.dll,ver.new,,8
+version.dll
+vmm32.vxd,,,1
+win32s16.dll
+winaspi.dll
+winoa386.mod,winoa386.new
+wnaspi32.dll
+wow32.dll
+
+[VxD.Files]
+;Copy these to the \system\vmm32 dir to be bound into VMM32.VxD:
+biosxlat.vxd,,,1
+combuff.vxd,,,1
+configmg.vxd,,,1
+
+
+
+dosmgr.vxd,,,1
+ebios.vxd,,,1
+pageswap.vxd,,,1
+parity.vxd,,,1
+reboot.vxd,,,1
+shell.vxd,,,1
+v86mmgr.vxd,,,1
+vcd.vxd,,,1
+vpd.vxd,,,1
+vdmad.vxd,,,1
+vmcpd.vxd,,,1
+vmpoll.vxd,,,1
+vpicd.vxd,,,1
+vshare.vxd,,,1
+vsd.vxd,,,1
+vtd.vxd,,,1
+vtdapi.vxd,,,1
+
+vwin32.vxd,,,1
+vfbackup.vxd,,,1
+vcomm.vxd,,,1
+ifsmgr.vxd,,,1
+ios.vxd,,,1
+spooler.vxd,,,1
+vfat.vxd,,,1
+vcache.vxd,,,1
+vcond.vxd,,,1
+vcdfsd.vxd,,,1
+int13.vxd,,,1
+vxdldr.vxd,,,1
+vdef.vxd,,,1
+dynapage.vxd,,,1
+perf.vxd,,,1
+
+vmd.vxd
+
+dosnet.vxd,,,1    ;REVIEW this should be handled by Net setup when they adopt the new vxd stuff
+
+qemmfix.vxd       ;Not bound into VMM32.VxD, but should always be there
+
+[VxD.Del.Files]
+;Delete these from the system dir since they are now replaced w/ .vxd files
+vshare.vxd
+
+biosxlat.386
+combuff.386
+configmg.386
+dos386.exe
+dosmgr.386
+ebios.386
+pageswap.386
+parity.386
+reboot.386
+shell.386
+v86mmgr.386
+vcd.386
+vpd.386
+vdmad.386
+vmcpd.386
+vmpoll.386
+vpicd.386
+vsd.386
+vtd.386
+vtdapi.386
+
+vwin32.386
+vfbackup.386
+vcomm.386
+ifsmgr.386
+ios.386
+spooler.386
+vfat.386
+vcache.386
+vcond.386
+vcdfsd.386
+int13.386
+vxdldr.386
+vdef.386
+dynapage.386
+perf.386
+
+lpt.386
+lptenum.386
+pagefile.386
+pagefile.vxd
+peloader.386
+serial.386
+vfd.386
+vshare.386
+
+isapnp.386
+dosnet.386
+
+[winboot.devices.files]
+aspi2hlp.sys,,,1
+CMD640X.SYS
+CMD640X2.SYS
+dblbuff.sys
+setver.win,setver.exe
+ifshlp.sys,,,1
+himem.sys,,,1
+
+[win.devices.files]
+emm386.exe
+ramdrive.sys
+smartdrv.exe
+
+[win.devices.files.machine]
+ios.ini
+win.com, win.cnf,,1
+
+; these go in %25%
+;winbug.dat
+;winbug.exe
+;winbug.hlp
+;winbug10.dll
+
+[betatools.files]
+display.txt
+general.txt
+internet.txt
+network.txt
+printers.txt
+mouse.txt
+msn.txt
+readme.txt
+support.txt
+winnews.txt
+faq.txt
+hardware.txt
+exchange.txt
+tips.txt
+programs.txt
+config.txt
+msdosdrv.txt
+infrared.txt
+
+[betatools.delfiles]
+relnotes.rtf
+
+[betatools.addreg]
+HKLM,%KEY_RENAME%\Win,,,%25%
+HKLM,%KEY_DEL%\Win,,,%25%
+HKLM,%KEY_RENAME%\Win,%Readme_Loc%.txt,,$!$!$w95.txt
+HKLM,%KEY_RENAME%\Win,readme.txt,,"%Readme%.txt"
+HKLM,%KEY_DEL%\Win,$!$!$w95.txt,,$!$!$w95.txt
+
+[betatools.inis]
+setup.ini, progman.groups,, "groupDelDoc=..\%ProgramsFolder%\%DOC_GRP%"
+setup.ini, progman.groups,, "groupDoc=%DOC_GRP%"
+setup.ini, groupDelDoc,,"""%Readme%"""
+setup.ini, groupDoc,,"""readme"",""%25%\%Readme%.txt"""
+
+[winother.files]
+APPWIZ.CPL
+commdlg.dll, commdlg.new,,8
+ddeml.dll
+deskcp16.dll
+devmgr32.dll
+DSKMAINT.DLL,,,32  ;32 flag suppresses ver conflict dlg
+enumfile.dll
+main.cpl
+maincp16.dll
+timedate.cpl
+mspcic.dll
+desk.cpl
+olecli.dll
+olesvr.dll
+pifmgr.dll
+runonce.exe
+sysdm.cpl
+sysedit.exe
+toolhelp.dll
+win87em.dll
+sage.dll
+powercfg.dll
+
+[winother.files.shared]
+notepad.exe,,,32        ; suppress version conflicts
+SCANDSKW.EXE,,,32       ; suppress version conflicts
+
+[winother.links]
+;create link to NotePad:
+setup.ini, progman.groups,, "group4=%APPS_DESC%"         ;creates folder
+setup.ini, group4,, """%Notepad_DESC%"", NOTEPAD.EXE" ;creates link
+
+;create link to ScanDisk (for Windows):
+setup.ini, progman.groups,, "group11=%SYSTOOLS_DESC%"         ;creates folder
+setup.ini, group11,, """%Fixdrive_Desc%"", SCANDSKW.EXE"
+
+[cmd.files]
+; NOTE: If you add/remove any files from this section, make sure you do the same
+;       to the [del.win.reboot] section right below it, and that you check to
+;       see if they should be deleted in the [del.old.msdos.files] section as well.
+
+ansi.sys
+attrib.exe
+chkdsk.exe
+choice.com
+country.sys
+debug.exe
+deltree.exe
+diskcopy.com
+display.sys
+doskey.com
+drvspace.bin,,,32   ;32 flag suppresses version conflict dlg
+edit.com
+edi

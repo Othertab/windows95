@@ -1,0 +1,125 @@
+EDIAOC  ;Turns Optional Component OFF if no MEDIA devs
+
+[scheme_remove]
+AddReg  =  scheme.remove.reg, musica.remove.reg, jungle.remove.reg, robotz.remove.reg, utopiz.remove.reg
+DelReg  =  musica.remove.DelReg, jungle.remove.Delreg, robotz.remove.Delreg, utopia.remove.Delreg
+
+[mediaopt_remove]
+DelFiles    = mediaopt.files
+AddReg      = mediaopt.remove.reg
+
+[CDPlayer]
+OptionDesc   = %CDPlayer_Desc%
+Tip          = %CDPlayer_tip%
+Parent       = MultiM
+CopyFiles    = CDPlayer.shared, CDPlayer.hlp
+UpdateInis   = CDPlayer.inis
+Addreg       = CDPlayer.reg
+InstallType  = 14    ;Typical, Portable, Custom
+IconIndex    =  52    ;Speaker mini-icon for dialogs
+ValidateProc = SETUPX.DLL, P_CDROMOC  ;Turns Optional Component OFF if no CDROM is present
+Uninstall    = CDPlayer_remove
+
+[CDPlayer_remove]
+DelFiles    = CDPlayer.shared, CDPlayer.hlp
+AddReg      = CDPlayer.remove.reg
+DelReg      = CDPlayer.remove.DelReg
+UpdateInis  = CDPlayer.links.remove
+
+;--- Sound and Video Clips Install Sections ------------
+[mediaopt.files]
+canyon.mid
+passport.mid
+BEETHO~2.RMI
+CLAIRE~1.RMI
+DANCEO~2.RMI
+FURELI~1.RMI
+HALLOF~2.RMI
+MOZART~2.RMI
+BACHSB~1.RMI
+chimes.wav
+chord.wav
+ding.wav
+tada.wav
+
+[mediaopt.delfiles]
+canyon.mid,,,1
+passport.mid,,,1
+chimes.wav,,,1
+chord.wav,,,1
+ding.wav,,,1
+tada.wav,,,1
+
+
+[mediaopt.reg]
+HKLM,%KEY_OPTIONAL%\Clips,Installed,,"1"
+HKLM,%KEY_RENAME%\Clips,,,"%25%\media"
+HKLM,%KEY_RENAME%\Clips,BEETHO~2.RMI,,"%BEETHO_RMI%.rmi"
+HKLM,%KEY_RENAME%\Clips,CLAIRE~1.RMI,,"%CLAIRE_RMI%.rmi"
+HKLM,%KEY_RENAME%\Clips,DANCEO~2.RMI,,"%DANCEO_RMI%.rmi"
+HKLM,%KEY_RENAME%\Clips,FURELI~1.RMI,,"%FURELI_RMI%.rmi"
+HKLM,%KEY_RENAME%\Clips,HALLOF~2.RMI,,"%HALLOF_RMI%.rmi"
+HKLM,%KEY_RENAME%\Clips,MOZART~2.RMI,,"%MOZART_RMI%.rmi"
+HKLM,%KEY_RENAME%\Clips,BACHSB~1.RMI,,"%BACHSB_RMI%.rmi"
+
+;Event Schemes
+HKCU,%KEY_APPS%\Explorer\EmptyRecycleBin\.Default,,,%25%\media\ding.wav
+HKCU,%KEY_DEFSCH%\.Default\.Default,,,%25%\media\ding.wav
+HKCU,%KEY_DEFSCH%\SystemExit\.Default,,,%25%\media\tada.wav
+HKCU,%KEY_DEFSCH%\SystemHand\.Default,,,%25%\media\chord.wav
+HKCU,%KEY_DEFSCH%\SystemQuestion\.Default,,,%25%\media\chord.wav
+HKCU,%KEY_DEFSCH%\SystemExclamation\.Default,,,%25%\media\chord.wav
+HKCU,%KEY_DEFSCH%\SystemAsterisk\.Default,,,%25%\media\chord.wav
+
+HKCU,%KEY_APPS%\Explorer\EmptyRecycleBin\.Current,,2,%25%\media\ding.wav
+HKCU,%KEY_DEFSCH%\.Default\.Current,,2,%25%\media\ding.wav
+HKCU,%KEY_DEFSCH%\SystemExit\.Current,,2,%25%\media\tada.wav
+HKCU,%KEY_DEFSCH%\SystemHand\.Current,,2,%25%\media\chord.wav
+HKCU,%KEY_DEFSCH%\SystemQuestion\.Current,,2,%25%\media\chord.wav
+HKCU,%KEY_DEFSCH%\SystemExclamation\.Current,,2,%25%\media\chord.wav
+HKCU,%KEY_DEFSCH%\SystemAsterisk\.Current,,2,%25%\media\chord.wav
+
+[mediaopt.remove.reg]
+HKLM,%KEY_OPTIONAL%\Clips,Installed,,"0"
+HKLM,%KEY_DEL%\Clips,,,"%25%\media"
+HKLM,%KEY_DEL%\Clips,BEETHO~2.RMI,,"%BEETHO_RMI%.rmi"
+HKLM,%KEY_DEL%\Clips,CLAIRE~1.RMI,,"%CLAIRE_RMI%.rmi"
+HKLM,%KEY_DEL%\Clips,DANCEO~2.RMI,,"%DANCEO_RMI%.rmi"
+HKLM,%KEY_DEL%\Clips,FURELI~1.RMI,,"%FURELI_RMI%.rmi"
+HKLM,%KEY_DEL%\Clips,HALLOF~2.RMI,,"%HALLOF_RMI%.rmi"
+HKLM,%KEY_DEL%\Clips,MOZART~2.RMI,,"%MOZART_RMI%.rmi"
+HKLM,%KEY_DEL%\Clips,BACHSB~1.RMI,,"%BACHSB_RMI%.rmi"
+
+;-------------------------------------------------
+
+;--- Musica Sound Scheme Install Sections --------
+[musica.files]
+musicaas.wav
+musicacl.wav
+musicacr.wav
+musicade.wav
+musicaer.wav
+musicaex.wav
+musicama.wav
+musicame.wav
+musicami.wav
+musicaop.wav
+musicaqu.wav
+musicare.wav
+musicawi.wav
+musica~1.wav
+musica~2.wav
+musica~3.wav
+musica~4.wav
+
+[sound_scheme.reg]
+HKLM,%KEY_OPTIONAL%\Schemes,Installed,,"1"
+
+[musica.reg]
+HKLM,%KEY_OPTIONAL%\Musica,Installed,,"1"
+
+HKCU,AppEvents\Schemes\Names\Musica0,,,"%V_MUSICA%"
+HKCU,AppEvents\Schemes\Apps\Explorer,,,"%V_EXPLORER%"
+HKCU,AppEvents\Schemes\Apps\Explorer\EmptyRecycleBin\Musica0,,,%25%\media\%MUSICA_RECYCLE%.wav
+HKCU,%KEY_DEFSCH%\.Default\Musica0,,,"%25%\media\%MUSICA_DEFAULT%.wav"
+HKCU,%KEY_DEFSCH%\SystemStart\Musica0,,,"%25%\media\%MUSICA_

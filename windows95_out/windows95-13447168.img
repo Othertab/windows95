@@ -1,0 +1,239 @@
+
+AddReg = KeyReg_PO
+CopyFiles = @kbdpo.kbd
+UpdateAutoBat=Keyb_Del, Keyb_PO
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_POIni
+
+[KEYBOARD_0000041D]
+OptionDesc=%KBD_SW%
+AddReg = KeyReg_SW
+CopyFiles = @kbdsw.kbd
+UpdateAutoBat=Keyb_Del, Keyb_SV
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_SWIni
+
+[KEYBOARD_0000100C]
+OptionDesc=%KBD_SF%
+AddReg = KeyReg_SF
+CopyFiles = @kbdsf.kbd
+UpdateAutoBat=Keyb_Del, Keyb_SF
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_SFIni
+
+[KEYBOARD_00000807]
+OptionDesc=%KBD_SG%
+AddReg = KeyReg_SG
+CopyFiles = @kbdsg.kbd
+UpdateAutoBat=Keyb_Del, Keyb_SG
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_SGIni
+
+[KEYBOARD_00000409]
+OptionDesc=%KBD_US%
+AddReg = KeyReg_US
+CopyFiles = @kbdus.kbd
+UpdateAutoBat=Keyb_Del
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_USIni
+
+[KEYBOARD_00020409]
+OptionDesc=%KBD_DV%
+AddReg = KeyReg_DV
+CopyFiles = @kbddv.kbd
+UpdateAutoBat=Keyb_Del
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_DVIni
+
+[KEYBOARD_00030409]
+OptionDesc=%KBD_DVL%
+AddReg = KeyReg_DVL
+CopyFiles = @kbddvl.kbd
+UpdateAutoBat=Keyb_Del
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_DVLIni
+
+[KEYBOARD_00040409]
+OptionDesc=%KBD_DVR%
+AddReg = KeyReg_DVR
+CopyFiles = @kbddvr.kbd
+UpdateAutoBat=Keyb_Del
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_DVRIni
+
+[KEYBOARD_00010409]
+OptionDesc=%KBD_USX%
+AddReg = KeyReg_USX
+CopyFiles = @kbdusx.kbd
+UpdateAutoBat=Keyb_Del
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_USXIni
+
+[KEYBOARD_00000C0C]
+OptionDesc=%KBD_CA%
+AddReg = KeyReg_CA
+CopyFiles = @kbdca.kbd
+UpdateAutoBat=Keyb_Del, Keyb_CF
+DelReg=DelEBD_Keyboard
+UpdateInis=KBD_CAIni
+
+[KEYBOARD_0000042D]
+CopyFiles = @kbdsp.kbd
+
+[KEYBOARD_00000403]
+CopyFiles = @kbdsp.kbd
+
+[KEYBOARD_00000813]
+CopyFiles = @kbdne.kbd
+
+[KEYBOARD_00000419]
+CopyFiles = @kbdru.kbd
+
+[KEYBOARD_00000402]
+CopyFiles = @kbdbul.kbd
+
+[KEYBOARD_00000423]
+CopyFiles = @kbdblr.kbd
+
+[KEYBOARD_00010402]
+CopyFiles = @kbdbll.kbd
+
+[KEYBOARD_0000041A]
+CopyFiles = @kbdcr.kbd
+
+[KEYBOARD_00000405]
+CopyFiles = @kbdcz.kbd
+
+[KEYBOARD_00010405]
+CopyFiles = @kbdcz1.kbd
+
+[KEYBOARD_00000408]
+CopyFiles = @kbdgk.kbd
+
+[KEYBOARD_0000040E]
+CopyFiles = @kbdhu.kbd
+
+[KEYBOARD_0001040E]
+CopyFiles = @kbdhu1.kbd
+
+[KEYBOARD_00000415]
+CopyFiles = @kbdpl.kbd
+
+[KEYBOARD_00010415]
+CopyFiles = @kbdpl1.kbd
+
+[KEYBOARD_00000418]
+CopyFiles = @kbdro.kbd
+
+[KEYBOARD_00010419]
+CopyFiles = @kbdru1.kbd
+
+[KEYBOARD_0000041B]
+CopyFiles = @kbdsl.kbd
+
+[KEYBOARD_0001041B]
+CopyFiles = @kbdsl1.kbd
+
+[KEYBOARD_00000424]
+CopyFiles = @kbdsv.kbd
+
+[KEYBOARD_0000041F]
+CopyFiles = @kbdtuf.kbd
+
+[KEYBOARD_0001041F]
+CopyFiles = @kbdtuq.kbd
+
+[KEYBOARD_00000422]
+CopyFiles = @kbdur.kbd
+
+[KEYBOARD_00010408]
+CopyFiles = @kbdgk220.kbd
+
+[KEYBOARD_00020408]
+CopyFiles = @kbdgl220.kbd
+
+[KEYBOARD_00030408]
+CopyFiles = @kbdgk319.kbd
+
+[KEYBOARD_00040408]
+CopyFiles = @kbdgl319.kbd
+
+[KEYBOARD_00000425]
+CopyFiles = @kbdes.kbd
+
+[KEYBOARD_00000426]
+CopyFiles = @kbdlv.kbd
+
+[KEYBOARD_00010426]
+CopyFiles = @kbdlv1.kbd
+
+[KEYBOARD_00000427]
+CopyFiles = @kbdlt.kbd
+
+[KEYBOARD_0000081A]
+CopyFiles= @kbdycc.kbd
+
+[KEYBOARD_0001081A]
+CopyFiles= @kbdycl.kbd
+
+[KEYBOARD_0000081A]
+CopyFiles=@kbdycc.kbd
+
+[KEYBOARD_0001081A]
+CopyFiles=@kbdycl.kbd
+
+[KEYBOARD_0000100A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000140A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000180A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_00001C0A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000200A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000240A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000280A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000300A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000340A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_00003C0A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_00002C0A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_0000380A]
+CopyFiles=@kbdla.kbd
+
+[KEYBOARD_00002009]
+CopyFiles=@kbdus.kbd
+
+[KEYBOARD_00002409]
+CopyFiles=@kbdus.kbd
+
+[KEYBOARD_0000041C]
+CopyFiles=@kbdal.kbd
+
+
+;** Makes the selected keyboard layout the default at bootup time **
+
+[Keyb_Del]
+CmdDelete=keyb
+
+[Keyb_BE]
+CmdAdd=keyb,"be,,%13%\keyboard.sys"
+
+[Key

@@ -1,0 +1,112 @@
+     6
+
+[NumberOfMidiAddresses]                 4
+[MidiAddress]                                   0x330
+[MidiAltAddress]                                0x340
+[MidiAltAddress]                                0x350
+[MidiAltAddress]                                0x360
+
+[NumberOfDigitalAddresses]              1
+[DigitalAddress]                                0x220
+
+[NumberOfIrqs]                                  4
+[Irq]                                                   2
+[AltIrq]                                                7
+[AltIrq]                                                5
+[AltIrq]                                                15
+
+[NumberOfMidiIrqs]                              4
+[MidiIrq]                                               2
+[MidiAltIrq]                                    7
+[MidiAltIrq]                                    5
+[MidiAltIrq]                                    15
+
+[NumberOfDmas]                                  3
+[Dma]                                                   1
+[AltDma]                                                0
+[AltDma]                                                3
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+
+[StartRecord]
+
+[CardName]                                              [Orchid Soundwave32]
+[CardId]                                                130
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [mt32mpu.adv]
+[RmDigitalDriverName]           [sbdig.adv]
+[PmMidiDriverName]                              [a32mt32.dll]
+[PmDigitalDriverName]           [a32sbdg.dll]
+
+
+[MidiDriverChunkNumber]                 2
+[DigitalDriverChunkNumber]              6
+
+[NumberOfMidiAddresses]                 6
+[MidiAddress]                                   0x330
+[MidiAltAddress]                                0x332
+[MidiAltAddress]                                0x334
+[MidiAltAddress]                                0x336
+[MidiAltAddress]                                0x300
+[MidiAltAddress]                                0x320
+
+[NumberOfDigitalAddresses]              1
+[DigitalAddress]                                0x220
+
+[NumberOfIrqs]                                  3
+[Irq]                                                   7
+[AltIrq]                                                3
+[AltIrq]                                                5
+
+[NumberOfMidiIrqs]                              3
+[MidiIrq]                                               7
+[MidiAltIrq]                                    3
+[MidiAltIrq]                                    5
+
+[NumberOfDmas]                                  1
+[Dma]                                                   1
+
+[Flags]                                                 1       ; number of flags to follow
+[DspEnabled]
+
+[Jumpers]                                               3
+[AddressJumper]
+[IrqJumper]
+[DmaJumper]
+
+[EndRecord]
+
+// -------------------------------------------------------------------------
+
+[StartRecord]
+
+[CardName]                                              [Aria Type Cards]
+[CardId]                                                125
+[CardGroup]                                             4
+
+[RmMidiDriverName]                              [ariatsr.adv]
+[RmDigitalDriverName]           [ariadig.adv]
+[PmMidiDriverName]                              [a32arxm.dll]
+[PmDigitalDriverName]           [a32ardg.dll]
+
+
+[MidiDriverChunkNumber]                 19
+[DigitalDriverChunkNumber]              20
+
+[NumberOfMidiAddresses]                 4
+[MidiAddress]                                   0x290
+[MidiAltAddress]                                0x280
+[MidiAltAddress]                                0x2a0
+[MidiAltAddress]       

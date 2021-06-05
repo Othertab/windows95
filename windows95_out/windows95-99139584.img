@@ -1,0 +1,136 @@
+ELETE [/YES] 
+NET USE port: | \\computer\printer /DELETE [/YES]
+NET USE * /DELETE [/YES]
+
+NET USE drive: | * /HOME
+
+  drive       Specifies the drive letter you assign to a
+              shared directory.
+  *           Specifies the next available drive letter.
+              If used with /DELETE, specifies to
+              disconnect all of your connections.
+  port        Specifies the parallel (LPT) port name you
+              assign to a shared printer.
+  computer    Specifies the name of the computer sharing
+              the resource.
+  directory   Specifies the name of the shared directory.
+  printer     Specifies the name of the shared printer.
+  password    Specifies the password for the shared 
+              resource, if any.
+  ?           Specifies that you want to be prompted for the 
+              password of the shared resource. You don't 
+              need to use this option unless the password is 
+              optional.
+  /SAVEPW:NO  Specifies that the password you type
+              should not be saved in your password-list
+              file. You need to retype the password the
+              next time you connect to this resource.
+  /YES        Carries out the NET USE command without
+              first prompting you to provide information or
+              confirm actions.
+  /DELETE     Breaks the specified connection to a shared
+              resource.
+  /NO         Carries out the NET USE command, responding 
+              with NO automatically when you are prompted
+              to confirm actions.
+  /HOME       Makes a connection to your HOME directory if 
+              one is specified in your LAN Manager or
+              Windows NT user account.
+
+To list all of your connections, type NET USE without
+options.
+
+To see this information one screen at a time, type the
+following at the command prompt:
+
+NET USE /? | MORE
+ or
+NET HELP USE | MORE
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SDisplays the type and version number of the workgroup
+redirector you are using.
+
+  NET VER
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SDisplays a list of computers in a specified workgroup or
+the shared resources available on a specified computer.
+
+  NET VIEW [\\computer] [/YES]
+  NET VIEW [/WORKGROUP:wgname] [/YES]
+
+  computer    Specifies the name of the computer whose
+              shared resources you want to see listed.
+  /WORKGROUP  Specifies that you want to view the names 
+              of the computers in another workgroup that
+              share resources. 
+  wgname      Specifies the name of the workgroup whose
+              computer names you want to view.
+  /YES        Carries out the NET VIEW command without
+              first prompting you to provide information or
+              confirm actions.
+
+To display a list of computers in your workgroup that share
+resources, type NET VIEW without options.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+S
+Displays your current workgroup settings.
+
+NET CONFIG [/YES]
+
+  /YES        Carries out the NET CONFIG command without
+              first prompting you to provide information or
+              confirm actions.
+?
+?
+?
+?
+?
+?
+?
+?
+?
+S
+Displays the time on or synchronizes your computer's 
+clock with the shared clock on a Microsoft Windows for 
+Workgroups, Windows NT, Windows 95, or NetWare
+time server.
+
+NET TIME [\\computer | /WORKGROUP:wgname] [/SET] [/YES]
+
+  computer    Specifies the name of the computer (time
+              server) whose time you want to check or
+              synchronize your computer's clock with.
+  /WORKGROUP  Specifies that you want to use the clock on a 
+              computer (time server) in another workgroup.
+  wgname      Specifies the name of the workgroup containing
+              a computer whose clock you want to check or
+              synchronize your computer's clock with. If
+              there are multiple time servers in that
+              workgroup, NET TIME uses the first one it 
+              finds.
+  /SET        Synchronizes your computer's clock with the
+              clock

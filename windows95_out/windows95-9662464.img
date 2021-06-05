@@ -1,0 +1,60 @@
+\PPP, Desc,, %PP_Desc%
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\PPP, Usage,1,03,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\PPP, Options,1,17,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\PPP, Protocols,1,07,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\RAS, Path,2, "rasapi32.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\RAS, Desc,, %WFW_Desc%
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\RAS, Usage,1,03,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\RAS, Options,1,04,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\RAS, Protocols,1,01,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\NWC, Path,2, "rasapi32.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\NWC, Desc,, %NWC_Desc%
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\NWC, Usage,1,01,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\NWC, Options,1,04,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\NWC, Protocols,1,02,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP, Path,2, "rasapi32.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP, Desc,, %SLIP_Desc%
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP, Usage,1,01,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP, Options,1,04,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\SLIP, Protocols,1,04,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP, Path,2, "rasapi32.dll"
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP, Desc,, %CSLIP_Desc%
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP, Usage,1,01,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP, Options,1,04,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\SMM_Files\CSLIP, Protocols,1,04,00,00,00
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\Class\Com\PPPMAC,,,
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\Authentication\Drivers,,,
+;
+; RunOnce
+;
+HKLM, Software\Microsoft\Windows\CurrentVersion\RunOnce,RNA_SMM_order,,"rundll32.exe smmsetup.dll,SMM_Setup /a PPPMAC PPP,RAS,NWC,SLIP,CSLIP"
+;
+; Script files
+;
+HKCR,.scp,,,scpfile
+HKCR,scpfile,,,%SCP_Desc%
+HKCR,scpfile\DefaultIcon,,,"%11%\shell32.dll,-152"
+HKCR,scpfile\shell\open\command,,,"%25%\NOTEPAD.EXE %%1"
+HKCR,scpfile\shell\print\command,,,"%25%\NOTEPAD.EXE /p %%1"
+;
+; Import files
+;
+HKCR,.dun,,,dunfile
+HKCR,dunfile,,,%DUN_File_Desc%
+HKCR,dunfile\DefaultIcon,,,"%11%\rnaui.dll,3"
+HKCR,dunfile\shell\open\command,,,"%25%\RUNDLL32.EXE RNAUI.DLL,RnaRunImport %%1"
+;
+;Implicit connection
+;
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\NetworkProvider, Description,, %Remote_Desc%
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\NetworkProvider, Name,, RemoteAccess
+HKLM, SYSTEM\CurrentControlSet\Services\RemoteAccess\NetworkProvider, ProviderPath,, "rnanp.dll"
+;
+;Known DLLs to speed up Rna load / fix problems when loading from SBS.
+;These will always be loaded from system dir
+;
+HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\KnownDLLs,SYNCENG,,SYNCENG.DLL
+HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\KnownDLLs,RNAP,,RNAP.DLL
+HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\KnownDLLs,RNATHUNK,,RNATHUNK.DLL
+HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\KnownDLLs,RNAUI,,RNAUI.DLL
+HKLM,SYSTEM\CurrentControlSet\Control\SessionManager\KnownDLLs,RNASERV,,RNASERV.D

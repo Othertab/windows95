@@ -1,0 +1,67 @@
+CRO%\textchat.exe /Automation"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}",,,"TextConf Interface"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}\ProxyStubClsid",,,"{00020420-0000-0000-C000-000000000046}"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}\NumMethod",,,"4"
+HKCR,"Interface\{00028B2B-0000-0000-C000-000000000046}\BaseInterface",,,"{00020420-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00028B8E-0000-0000-C000-000000000046}\ProgID",,,"MosShell.Application.1"
+HKCR,"CLSID\{00028B8E-0000-0000-C000-000000000046}\VersionIndependentProgID",,,"MosShell.Application"
+HKCR,"MosShell.Application\Clsid",,,"{00028B8E-0000-0000-C000-000000000046}"
+HKCR,"MosShell.Application.1\Clsid",,,"{00028B8E-0000-0000-C000-000000000046}"
+HKCU,"Software\Microsoft\MOS\FTM","DefaultDir",,"%24%\%PROGRAMF%\%THEMICRO%\%Download_Dir_Name%"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CCDIALER.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\CCDIALER.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\CCDIALER.EXE","Path",,"%24%\%PROGRAMF%\%THEMICRO%;"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\ENGCT.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\ENGCT.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\GUIDE.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\GUIDE.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\MOSCP.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\MOSCP.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\msncall.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNCALL.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\SIGNUP.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\SIGNUP.EXE"
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\SIGNUP.EXE","Path",,"%24%\%PROGRAMF%\%THEMICRO%;"
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\MSNSIG13.EXE",,,"%24%\%PROGRAMF%\%THEMICRO%\MSNSIG13.EXE"
+;HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\MSNSIG13.EXE","Path",,"%24%\%PROGRAMF%\%THEMICRO%;"
+HKLM,"Software\Microsoft\MOS","MSNShortcutsEnabled",,"1"
+HKLM,"Software\Microsoft\MOS\Applications",,," "
+HKLM,"Software\Microsoft\MOS\Directories","MOS",,"%24%\%PROGRAMF%\%THEMICRO%"
+HKLM,"Software\Microsoft\MOS\Directories","MOSBin",,"%24%\%PROGRAMF%\%THEMICRO%"
+HKLM,"Software\Microsoft\MOS\Directories","Win",,"%25%"
+HKLM,"Software\Microsoft\MOS\Directories","WinSys",,"%11%"
+HKLM,"Software\Microsoft\MOS\Directories","WinHelp",,"%18%"
+HKLM,"Software\Microsoft\Windows\CurrentVersion","InventoryPath",,"%11%\PRODINV.DLL"
+HKLM,"Software\Microsoft\Shared Tools\Registration Wizard\1.0","Location",,"%11%"
+; Rome. Add assoc for msn: urls
+HKCR,"msn",,,"URL:Microsoft Network Protocol"
+HKCR,"msn","URL Protocol",,""
+HKCR,"msn","EditFlags",1,02,00,00,00
+HKCR,"msn\DefaultIcon",,,"%24%\%PROGRAMF%\%THEMICRO%\CCDIALER.EXE,0"
+HKCR,"msn\shell\open\command",,,"%24%\%PROGRAMF%\%THEMICRO%\CCDIALER.EXE -f %%l"
+; =================== Paste above this line ===================
+
+; ********************************************************************
+; [BaseWin_DelReg]
+;
+; Cleans up reg keys which are obsolete.
+; ********************************************************************
+
+[BaseWin_DelReg]
+HKLM,Software\Microsoft\MOS\MosServiceList,,,
+HKLM,Software\Microsoft\MOS\CoreUpgradeInProgress,,,
+HKCU,Software\Microsoft\OlReg,,,
+HKCU,Software\Microsoft\Moslogin,,,
+HKCU,Software\Microsoft\MOSSignup,,,
+HKLM,"Software\Microsoft\MosServer",,,
+HKLM,"Software\Microsoft\MOS\Applications","Version of last update",,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\App Paths\FTMCL.EXE",,,
+;don't remove this key - it is entered by the ICW inf
+;HKCR,"INSfile",,,
+HKCR,"Dialer10CallingCard\protocol\StdFileEditing",,,
+
+; ********************************************************************
+; [MOS_Reg]
+;
+; Installs remaining reg keys that are needed, renames MSNFULL.HLP to
+; MSN.HLP, and hides files installed as part of MSN optional component.
+; ********************************************************************
+
+[MOS_Reg]
+
+
+; **********************************************

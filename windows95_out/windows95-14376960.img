@@ -1,0 +1,130 @@
+as 7 different Token-Ring Adapters:
+; 	    ISA 16/4 Adapter
+; 	    MC 16/4 Adapter
+; 	    EISA 16/4 Adapter
+; 	    EISA 16/4 Server Adapter
+; 	    PCA 16/4 Adapter
+; 	    Token-Ring PCMCIA Card
+; 	    Pocket Token-Ring Adapter
+; 
+; 	All adapters except the Pocket Token-Ring Adapter run with the same
+; 	drivers, which have the following information:
+; 
+; 	ODI:
+; 	    Short Name OCTOK16
+; 	    Long Name Olicom Token-Ring 16/4 Adapter MLID
+; 
+; 	IPX:
+; 	    IPX Name Olicom Token-Ring 16/4
+; 	    Novell ID: 226
+; 
+; 	The Pocket Token-Ring Adapter drivers have the following information:
+; 
+; 	ODI:
+; 	    Short Name OCTOK16P
+; 	    Long Name Olicom Token-Ring Adapter MLID
+; 
+; 	IPX:
+; 	    IPX Name Token-Ring Pocket
+; 	    Novell ID: 226
+; 
+; 	The EISA 16/4 Adapter has its own ODI driver, as well as being able
+; 	to use the standard driver, with the following information:
+; 
+; 	ODI:
+; 	    Short Name OC32TR16
+; 	    Long Name Olicom EISA 32 Token-Ring 16/4 MLID
+; 
+; 	All driver share the same IEEE ID which is 000083
+; 
+; 	The Adapters are differentiated on type on the first byte following
+; 	the IEEE ID in the Node Address (Except for the Pocket Adapter which
+; 	can be differentiated on driver name).
+; 
+; 	000083XX:
+; 	    7X	ISA 16/4 Adapter
+; 	    8X	MC 16/4 Adapter
+; 	    9X	EISA 16/4 Adapter
+; 	    9X	EISA 16/4 Server Adapter
+; 	    BX	PCA 16/4 Adapter
+; 	    FX	Token-Ring PCMCIA Card
+; 
+; 	The Two different EISA Boards can not be differentiated except by
+; 	hardware test or EISA setup information
+; 
+; 	    the EISA 16/4 Adapter can have ID OLC0901 or OLC0902
+; 	    the EISA 16/4 Server Adapter has ID OLC1201
+
+;*** Thomas-Conrad Adapter info. (We support none of the below cards?)
+; 
+;   Long names listed first, then short, then IEEE reported node id
+;   Except where listed, the driver works with all adapters of the media.
+;   ------------------------------------------------------------------
+;   TCNS (Thomas-Conrad Networking System, 100 Mb/s):
+;   ------------------------------------------------------------------
+;   ODI:	"TCC TCNS MLID"
+; 		"TCNSW"
+; 		00 00 00
+;   LINKABLE:	"Thomas-Conrad TCNS/ARCNET for WS Vx.xx"
+; 		"TCC ARC-CARD"
+; 		00 00 00
+; 
+;   ------------------------------------------------------------------
+;   ARCNET:
+;   ------------------------------------------------------------------
+;   ODI:	"TCC ARCNET MLID"
+; 		"TCCARC"
+; 		00 00 00
+;   LINKABLE:	"Thomas-Conrad TCNS/ARCNET for WS Vx.xx"
+; 		"TCC ARC-CARD"
+; 		00 00 00
+;   LINKABLE:	The following may be seen on some systems:
+; 		"Thomas-Conrad Corp. ARC-CARD Accel. Vx.x"
+; 		"TCC ARC-CARD"
+; 		00 00 00
+; 
+;   ------------------------------------------------------------------
+;   ETHERNET:
+;   ------------------------------------------------------------------
+;   ODI:	"Thomas-Conrad Ethernet"	TC5045 (ISA)
+; 		"TCE16ATW"
+; 		00 80 13
+;   ODI:	"Thomas-Conrad Ethernet"	TC5046 (MCA, 16 bit)
+; 		"TCE16MCW"
+; 		00 80 13
+;   ODI:	"Thomas-Conrad Ethernet"	TC5046 (MCA, 32 bit)
+; 		"TCE32MCW"
+; 		00 80 13
+;   ODI:	"Thomas-Conrad Ethernet"	TC5047 (EISA)
+; 		"TCE32MCW"
+; 		00 80 13
+; 
+;   ------------------------------------------------------------------
+;   TOKEN RING:
+;   ------------------------------------------------------------------
+;   ODI:	"Thomas-Conrad Token Ring"		TC4045 (ISA)
+; 		"TCTOKSH"
+; 		00 01 C8
+;   LINKABLE:	"TCC Token Ring WS Driver Vx.xx"	TC4045 (ISA)
+; 		"TCC Token Ring"
+; 		00 01 C8
+;   ODI:	"Thomas-Conrad Token Ring"		TC4046 (MCA)
+; 		"TCTOKSH"
+; 		00 01 C8
+;   LINKABLE:	"TCC Token Ring WS Driver Vx.xx"	TC4046 (MCA)
+; 		"TCC Token Ring"
+; 		00 01 C8
+
+;*** Intel Adapter info. (Doesn't match what I have in the table?)
+; 
+;   ODI
+;   ----
+; 	Card's short Name           EXPODI (we have EXP16ODI?)
+; 	Card's Long Name            Intel EtherExpress 16 Ethernet Adapter
+; 	Card's IEEE ID  (3 bytes)   00AA00
+; 
+; 
+;   IPX
+;   ---
+; 	Card's Long Name        Intel EtherExpress(tm) 16
+; 	Novell ID		453 (we have 0x461 or 1121?

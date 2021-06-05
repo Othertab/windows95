@@ -1,0 +1,71 @@
+gman.groups,, "group4=%APPS_DESC%"         ;creates folder
+setup.ini, group4,, """%Paint_Desc%"", ""%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE"""      ;creates link
+;Remove old Link to Paintbrush (replaced w/ Paint)
+setup.ini, group4,, """%PAINTBRUSH_DESC%"""            ;deletes link
+
+;Keep some things in the extensions section for compatibility with cc-Mail
+win.ini,Extensions,,"bmp=%24%\%PROGRAMF%\%ACCESSOR%\mspaint.exe ^.bmp"
+win.ini,Extensions,,"pcx=%24%\%PROGRAMF%\%ACCESSOR%\mspaint.exe ^.pcx"
+
+[mspaint.links.remove]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"    ;creates folder
+setup.ini, group4,, """%Paint_Desc%"""              ;deletes link
+
+[mspaint.addreg.1]
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652},,,%DESC_BMP%
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\AuxUserType\2,,,%DESC_BMP%
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\AuxUserType\3,,,"Paint"
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\ProgID,,,Paint.Picture
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\LocalServer32,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE"
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE,1"
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\InprocHandler32,,,ole32.dll
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\Verb\0,,,"%EDIT%,0,2"
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\Verb\1,,,"%OPEN%,0,2"
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\Insertable
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\DataFormats\PriorityCacheFormats,"#8",,""
+
+; Need to tell OLE to use Paint to open PBrush objects
+HKCR,CLSID\{0003000A-0000-0000-C000-000000000046}\TreatAs,,,{D3E34B21-9D75-101A-8C3D-00AA001A1652}
+HKCR,CLSID\{0003000A-0000-0000-C000-000000000046}\Ole1Class,,,PBrush
+HKCR,CLSID\{0003000A-0000-0000-C000-000000000046}\ProgID,,,PBrush
+HKCR,PBrush,,,%DESC_PBRUSH%
+HKCR,PBrush\protocol\StdFileEditing\server,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE"
+
+HKCR,Paint.Picture,,,%DESC_BMP%
+HKCR,Paint.Picture\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE ""%%1"""
+HKCR,Paint.Picture\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE /p ""%%1"""
+HKCR,Paint.Picture\shell\printto\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE /pt ""%%1"" ""%%2"" ""%%3"" ""%%4"""
+HKCR,Paint.Picture\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE,1"
+HKCR,Paint.Picture\Insertable
+HKCR,Paint.Picture\protocol\StdFileEditing\verb\0,,,%EDIT%
+HKCR,Paint.Picture\protocol\StdFileEditing\server,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE"
+HKCR,Paint.Picture\CLSID,,,{D3E34B21-9D75-101A-8C3D-00AA001A1652}
+
+;HKCR,Paint.PCX,,,%DESC_PCX%
+;HKCR,Paint.PCX\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE ""%%1"""
+;HKCR,Paint.PCX\shell\print\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE /p ""%%1"""
+;HKCR,Paint.PCX\shell\printto\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE /pt ""%%1"" ""%%2"" ""%%3"" ""%%4"""
+;HKCR,Paint.PCX\DefaultIcon,,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE,1"
+
+; create the long-name for "Program Files"
+; Note that when you rename a long name, VFAT changes the short name from
+; foobar~1 to foobar~2.  To avoid this, we introduce a work around in the form of
+; an intermediate rename
+HKLM,%KEY_RENAME%\AppFilesRoot,,,%24%
+HKLM,%KEY_RENAME%\AppFilesRoot,%OLD_PROGRAMF%,,"%Old_Program_Files%" ; review
+HKLM,%KEY_RENAME%\AppFilesRoot,%PROGRAMF%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFilesRoot,!$!$!$!$.$!$,,"%Program_Files%,1"
+HKLM,%KEY_RENAME%\AppFiles,,,"%24%\%PROGRAMF%"
+HKLM,%KEY_RENAME%\AppFiles,%ACCESSOR%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFiles,!$!$!$!$.$!$,,"%Accessories%,1"
+
+; set up the per-app path
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\MSPAINT.EXE",,,"%24%\%PROGRAMF%\%ACCESSOR%\MSPAINT.EXE"
+
+;hide the pcx filter engine
+HKLM,%KEY_RENAME%\Accessories,,2,"%24%\%PROGRAMF%\%ACCESSOR%"
+HKLM,%KEY_RENAME%\Accessories,mspcx32.dll,,"mspcx32.dll,2"
+HKLM,%KEY_RENAME%\Accessories,pcximp32.flt,,"pcximp32.flt,2"
+
+[mspaint.addreg.2]
+; don't delete these k

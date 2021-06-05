@@ -1,0 +1,129 @@
+b_UK]
+CmdAdd=keyb,"uk,,%13%\keyboard.sys"
+
+[Keyb_DK]
+CmdAdd=keyb,"dk,,%13%\keyboard.sys"
+
+[Keyb_SU]
+CmdAdd=keyb,"su,,%13%\keyboard.sys"
+
+[Keyb_FR]
+CmdAdd=keyb,"fr,,%13%\keyboard.sys"
+
+[Keyb_CF]
+CmdAdd=keyb,"cf,,%13%\keybrd2.sys"
+
+[Keyb_GR]
+CmdAdd=keyb,"gr,,%13%\keyboard.sys"
+
+[Keyb_IC]
+CmdAdd=keyb,"is,,%13%\keybrd2.sys"
+
+[Keyb_IT]
+CmdAdd=keyb,"it,,%13%\keyboard.sys"
+
+[Keyb_IT1]
+CmdAdd=keyb,"it,,%13%\keyboard.sys /id:142"
+
+[Keyb_LA]
+CmdAdd=keyb,"la,,%13%\keyboard.sys"
+
+[Keyb_NL]
+CmdAdd=keyb,"nl,,%13%\keyboard.sys"
+
+[Keyb_NO]
+CmdAdd=keyb,"no,,%13%\keyboard.sys"
+
+[Keyb_BR]
+CmdAdd=keyb,"br,,%13%\keyboard.sys"
+
+[Keyb_PO]
+CmdAdd=keyb,"po,,%13%\keyboard.sys"
+
+[Keyb_SP]
+CmdAdd=keyb,"sp,,%13%\keyboard.sys"
+
+[Keyb_SV]
+CmdAdd=keyb,"sv,,%13%\keyboard.sys"
+
+[Keyb_SF]
+CmdAdd=keyb,"sf,,%13%\keyboard.sys"
+
+[Keyb_SG]
+CmdAdd=keyb,"sg,,%13%\keyboard.sys"
+
+
+[KeyReg_BE]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000080C
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000080C
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb be,,keyboard.sys"
+
+[KeyReg_UK]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000809
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000809
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb uk,,keyboard.sys"
+
+[KeyReg_DA]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000406
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000406
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb dk,,keyboard.sys"
+
+[KeyReg_FI]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000040B
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000040B
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb su,,keyboard.sys"
+
+[KeyReg_FR]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000040C
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000040C
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb fr,,keyboard.sys"
+
+[KeyReg_FC]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00001009
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00001009
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard2
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb cf,,keybrd2.sys"
+
+[KeyReg_GR]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000407
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000407
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb gr,,keyboard.sys"
+
+[KeyReg_GR1]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00010407
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00010407
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb gr,,keyboard.sys"
+
+[KeyReg_IC]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,0000040F
+HKEY_USERS,".Default\keyboard layout\preload\1",,,0000040F
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard2
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb is,,keybrd2.sys"
+
+[KeyReg_IT]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000410
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000410
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb it,,keyboard.sys"
+
+[KeyReg_IT1]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00010410
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00010410
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb it,,keyboard.sys /id:142"
+
+[KeyReg_NE]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,00000413
+HKEY_USERS,".Default\keyboard layout\preload\1",,,00000413
+HKLM,%KEY_EBD%\EBDFilesKeyboard,multilng.inf,,EBD_Keyboard
+HKLM,%KEY_EBD%\EBDAutoexecBatKeyboard,10,,"keyb nl,,keyboard.sys"
+
+[KeyReg_NO]
+HKEY_CURRENT_USER,"keyboard layout\preload\1",,,

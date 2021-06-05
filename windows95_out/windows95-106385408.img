@@ -1,0 +1,100 @@
+
+   - Click the Start button, and then point to Programs.
+   - Click Microsoft NetMeeting.
+
+3. When you open Microsoft NetMeeting for the first time, a 
+   wizard appears that helps you get ready to use NetMeeting. 
+   
+   If you cancel this wizard, you will not be able to use 
+   NetMeeting.
+
+To Uninstall Microsoft NetMeeting
+---------------------------------
+1. In Control Panel, double-click the Add/Remove Programs icon.
+
+2. Click the Install/Uninstall tab.
+
+3. Click Microsoft NetMeeting, and then click Add/Remove.
+
+4. If a dialog box appears asking if you want to restart your 
+   computer, click Yes.
+
+
+USING MICROSOFT NETMEETING
+==========================
+
+- Only the released version of Internet Explorer 3.0  will work
+  with NetMeeting.
+
+- When you first run Microsoft NetMeeting, a setup wizard prompts 
+  you for the name of the User Location Server (ULS) you want to 
+  use.  Microsoft maintains a User Location Server on the Internet 
+  at uls.microsoft.com.  
+
+- Whenever you run Microsoft NetMeeting after you have completed 
+  the setup wizard, you are automatically logged on to the ULS you 
+  specified. This server maintains a list of the people currently 
+  running Microsoft NetMeeting and their IP addresses. You can use 
+  this service to locate people to meet with by clicking Call, then
+  Directory, or you can type the person's computer name, 
+  IP address, e-mail address, or modem phone number in the Place
+  A Call box. 
+
+  You can use a web view of the User Location Service to call people
+  by clicking Call, then Web Directory.  In the Web Directory, click
+  the e-mail address of the person you wish to call. 
+
+- To use the User Location Server to find people running Microsoft 
+  NetMeeting on the Internet:
+
+  1. On the Tools menu, click Options.
+
+  2. Click the My Information tab.
+
+  3. Select the User Location Service Name check box, and then 
+     type uls.microsoft.com.
+
+  NOTE: You will not be able to use uls.microsoft.com to locate 
+	people on the Internet if you connect to the Internet 
+	through a proxy server. For information about setting up 
+	your own User Location Server, see the Microsoft NetMeeting 
+	SDK.
+
+- Audio works only over TCP/IP between two people. You can use all
+  other features with more than two people over TCP/IP, modems, 
+  and IPX.
+
+- Microsoft NetMeeting supports meetings of up to 32 people.  In
+  addition, only the first two people connected with audio can 
+  participate in an audio call, and only three people can share 
+  applications from their computers at one time.  The total number 
+  of people that can successfully participate in your meeting will 
+  vary based upon available network bandwidth and the speed of the
+  participant's computers.
+
+- Some activities might cause large amounts of data to be sent 
+  between the computers in your meeting(for example, speaking and 
+  sharing several applications while transferring a large file)  In 
+  extreme cases, this might cause computers in the meeting to become 
+  very slow. To remedy this, stop one or more of the meeting 
+  activities.
+
+- If you try to make a TCP/IP call on your local area network
+  and MSN or Dial-Up Networking displays a connection dialog box, 
+  you can disable this by double-clicking the Internet icon in 
+  Control Panel and then making sure that Auto-Dial is not selected.
+
+- Sharing of DirectX, MS-DOS, and graphic-intensive games and 
+  AVIs does not work well and is not supported.
+
+- If different computers have different screen resolutions during 
+  a meeting, the shared windows can be as large as the highest 
+  resolution desktop allows. Users with lower resolution desktops 
+  will have to scroll to view windows that don't fit their screens.
+
+- When you share an application, others can use the File Open 
+  and File Save dialog boxes in your application to access files on
+  your computer or network.  You will be able to see everything 
+  other users are doing in your shared applications.
+
+  To stop someone from 

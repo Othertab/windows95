@@ -1,0 +1,47 @@
+tp://find.msn.com/srchmain.htm?tbn=2,,,"Type in a word and find what you're looking for."
+Explore = "Browse by Subject", http://find.msn.com/srchmain.htm?tbn=1,,,"Walk through our list of all the different places, events, and stuff on the Web."
+Calendar = "View MSN Calendar", http://find.msn.com/srchmain.htm?tbn=3,,,"Find out what is happening and when."
+blank = ""
+Alta = "Search Using AltaVista", http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q=&msav=msav,,,"Powerful search tools to find a site on the Web."
+InfoSeek = "Search Using InfoSeek", http://guide-p.infoseek.com//Titles?col=WW&sv=M5&lk=noframes&x=47&y=8&qt=,,,"Easy to use interface to locate the right site."
+Excite = "Search Using Excite", http://www.excite.com/,,,"The place to start your search on the Web."
+DejaNews = "Search Using Deja News", http://www.dejanews.com/,,,"Search Internet Newsgroups."
+
+[Help]
+URLKey = memberservices.msn.com
+URL = http://memberservices.msn.com/default.asp
+start = "Member Services Home Page", http://memberservices.msn.com/default.asp,,,"The place to get help, check your account, and find out how to use MSN."
+Newmem = "Getting Started on MSN", http://memberservices.msn.com/default.asp?command=gettingstarted,,,"Where newcomers can kick-start their online adventure."
+AB = "Check or Change Your Account", http://accounts.msn.com/default.asp,,,"Where you can review your billing statement, change your password, and more.
+Feedback= "Send Us Your Feedback", http://memberservices.msn.com/default.asp?command=feedback,,,"The place to share your  MSN suggestions."
+blank = ""
+Help = "Help && Support", http://memberservices.msn.com/default.asp?command=help,,,"The source for answers to your questions and help with problems."
+blank = ""
+Promo = "Hot Offers", http://hotoffers.msn.com/,,,"Money-saving help from MSN."
+MS = "Microsoft on the Web", [MSFT]
+CSmem = "Help for CompuServe Members", http://welcome.msn.com/csmembers/
+About = "About MSN Program Viewer", <about>,,,"Information on the version of your MSN software."
+
+[MSFT]
+msh = "Microsoft Home Page", http://www.microsoft.com/,,,"The Microsoft Corporate Home Page with information about all Microsoft products."
+free = "Free Stuff", http://www.microsoft.com/ie/download/,,,"Tools and utilities that enhance Microsoft Internet Explorer."
+Prod = "Internet Explorer Product News", http://www.microsoft.com/ie/,,,"News about Microsoft's Internet browser."
+Ols = "Internet Explorer Online Support", http://www.microsoft.com/iesupport/,,,"Help with Microsoft Internet Explorer."
+
+[Channel1]
+Show1 = "MSNBC Front Page", http://www.msnbc.com/news/default.asp,,,"The MSNBC front page with today's latest news and information."
+Show2 = "L'Actualite du Net",http://leguide.fr.msn.com/adnaujo.asp,,,"Toute l'actualite de l'internet"
+Show3 = "World", http://www.msnbc.com/news/wld_front.asp,,,"News from around the world."
+Show4 = "Weather", http://www.msnbc.com/weather.asp,,,"Get the latest weather information from MSNBC."
+Show5 = "Commerce", http://www.msnbc.com/news/com_front.asp,,,"MSNBC business news."
+Show6 = "Sports", http://www.msnbc.com/news/spt_front.asp,,,"Scores updates and news for all kinds of sports."
+Show7 = "SciTech", http://www.msnbc.com/news/st_front.asp,,,"The latest Science and Technology news from MSNBC."
+Show8 = "SLATE", http://slate.msn.com/,,,"Politics, culture, and insights edited by Michael Kinsley."
+Show9 = "LinkStation 1", http://linkstation.msn.com/linkstation/1/,,,"Other news links on the Web."
+
+[Channel2]
+Show1 = "dewLINE Comics", http://dewline.ca.msn.com/,,,"Great Canadian History!"
+Show2 = "Fou-Net", http://founet.ca.msn.com/,,,"Les nouvelles pour cybernautes."
+Show3 = "Internet Gaming Zone", http://www.zone.com/,,,"The online site for multiplayer gaming. Play it on the Zone."
+Show4 = "STAR TREK: CONTINUUM", http://startrek.msn.com/stohtml/introcontinuum.html,,,"The official online source to the Star Trek Universe."
+Show5 = "Scrawl", http://scrawl.msn.com/scrawl/default.htm,,,"The place for entertainment, games and fun online

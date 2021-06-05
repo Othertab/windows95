@@ -1,0 +1,135 @@
+00
+HKR,NDI\params\IOBASE,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBASE,flag,1,10,00,00,00
+; params
+; MAXRECEIVES
+HKR,NDI\params\MAXRECEIVES,ParamDesc,,"Maximum Receives"
+HKR,NDI\params\MAXRECEIVES,flag,1,10,00,00,00
+HKR,NDI\params\MAXRECEIVES,type,,int
+HKR,NDI\params\MAXRECEIVES,default,,4
+HKR,NDI\params\MAXRECEIVES,min,,1
+HKR,NDI\params\MAXRECEIVES,max,,8
+HKR,NDI\params\MAXRECEIVES,step,,1
+
+; Install NDIS2
+[NI6510.ndis2]
+CopyFiles=NI6510.ndis2.CopyFiles
+[NI6510.ndis2.CopyFiles]
+NI6510.dos
+
+; Install ODI
+[NI6510.odi]
+CopyFiles=NI6510.odi.CopyFiles
+[NI6510.odi.CopyFiles]
+ni6510.com
+
+
+;****************************************************************************
+; ni5210 base section
+;****************************************************************************
+[ni5210.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"NI5210"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NI5210$"
+HKR,NDIS\NDIS2,FileName,,"NI5210.dos"
+HKR,NDIS\ODI,DriverName,,"NI5210"
+HKR,NDIS\ODI,FileName,,"ni5210.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"NI5210.ndis2"
+HKR,Ndi\Install,odi,,"NI5210.odi"
+; resources
+HKR,,Irq,1,04,00,00,00
+HKR,,IOBASE,1,02,00,00,00
+HKR,,BASEMEM,1,01,00,00,00
+HKR,NDI\params\Irq,resc,1,04,00,00,00
+HKR,NDI\params\Irq,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Irq,flag,1,50,00,00,00
+HKR,NDI\params\IOBASE,resc,1,02,00,00,00
+HKR,NDI\params\IOBASE,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBASE,flag,1,10,00,00,00
+HKR,Ndi\params\BASEMEM,resc,1,01,00,00,00
+HKR,Ndi\params\BASEMEM,ParamDesc,,"Memory Base Address"
+HKR,NDI\params\BASEMEM,flag,1,10,00,00,00
+; params
+; MAXRECEIVES
+HKR,NDI\params\MAXRECEIVES,ParamDesc,,"Maximum Receives"
+HKR,NDI\params\MAXRECEIVES,flag,1,10,00,00,00
+HKR,NDI\params\MAXRECEIVES,type,,int
+HKR,NDI\params\MAXRECEIVES,default,,3
+HKR,NDI\params\MAXRECEIVES,min,,1
+HKR,NDI\params\MAXRECEIVES,max,,6
+HKR,NDI\params\MAXRECEIVES,step,,1
+
+; Install NDIS2
+[NI5210.ndis2]
+CopyFiles=NI5210.ndis2.CopyFiles
+[NI5210.ndis2.CopyFiles]
+NI5210.dos
+
+; Install ODI
+[NI5210.odi]
+CopyFiles=NI5210.odi.CopyFiles
+[NI5210.odi.CopyFiles]
+NI5210.com
+
+;****************************************************************************
+; es3210 base section
+;****************************************************************************
+[es3210.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"ES3210"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"ES3210$"
+HKR,NDIS\NDIS2,FileName,,"es3210.dos"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis2,,"es3210.ndis2"
+; params
+; MAXRECEIVES
+HKR,NDI\params\MAXRECEIVES,ParamDesc,,"Number of Receive Queues"
+HKR,NDI\params\MAXRECEIVES,flag,1,10,00,00,00
+HKR,NDI\params\MAXRECEIVES,type,,int
+HKR,NDI\params\MAXRECEIVES,default,,3
+HKR,NDI\params\MAXRECEIVES,min,,1
+HKR,NDI\params\MAXRECEIVES,max,,8
+HKR,NDI\params\MAXRECEIVES,step,,1
+
+; Install NDIS2
+[es3210.ndis2]
+CopyFiles=es3210.ndis2.CopyFiles
+[es3210.ndis2.CopyFiles]
+es3210.dos
+
+;
+; general stuff
+;
+[racal.gen.param]
+; MaxTransmits
+HKR,NDI\params\MaxTransmits,ParamDesc,,"Maximum Transmits"
+HKR,NDI\params\MaxTransmits,flag,1,10,00,00,00
+HKR,NDI\params\MaxTransmits,type,,int
+HKR,Ndi\params\Maxtransmits,default,,6
+HKR,NDI\params\MaxTransmits,min,,1
+HKR,NDI\params\MaxTransmits,max,,50
+HKR,NDI\params\MaxTransmits,step,,1
+; MAXMULTICASTS
+HKR,NDI\params\MAXMULTICASTS,ParamDesc,,"Maximum Multicast Addresses"
+HKR,NDI\params\MAXMULTICASTS,flag,1,10,00,00,00
+HKR,NDI\params\MAXMULTICASTS,type,,int
+HKR,N

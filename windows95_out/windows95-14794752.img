@@ -1,0 +1,53 @@
+
+;	History Interface
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Special Paths\History","",0,"Software\Microsoft\Windows\CurrentVersion\Internet Settings\Url History"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Url History","DaysToKeep",3,14,00,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Url History","CacheLimit",1,00,02,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Url History","Directory",2,"%10%\%HISTORY_DIR%"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Url History","CachePrefix",0,"Visited: "
+
+
+
+;	Cache Settings
+
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache","FreshnessInterval",1,80,f4,03,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache","CleanupFactor",1,19,00,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache","CleanupTime",1,00,00,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache","Persistent",1,01,00,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache","CleanupInterval",1,80,51,01,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache","DebugFlag",1,ff,ff,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths","Paths",1,04,00,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths","Directory",2,"%10%\%CACHE_DIR%"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths","Size",1,24,01,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path1","CacheLimit",1,00,20,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path1","CachePath",2,"%10%\%CACHE_DIR%\cache1"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path2","CacheLimit",1,00,20,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path2","CachePath",2,"%10%\%CACHE_DIR%\cache2"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path3","CacheLimit",1,00,20,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path3","CachePath",2,"%10%\%CACHE_DIR%\cache3"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path4","CacheLimit",1,00,20,00,00
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Paths\path4","CachePath",2,"%10%\%CACHE_DIR%\cache4"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Special Paths\Cookies","Directory",2,"%10%\Cookies"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Special Paths\Cookies","CachePrefix",0,"Cookie:"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Cache\Special Paths\Cookies","CacheLimit",1,00,04,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Document Caching","Number",1,04,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Image Caching","Number",1,04,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Enable_Disk_Cache",2,"yes"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Cache_Percent_of_Disk",3,0A,00,00,00
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Main","Delete_Temp_Files_On_Exit",0,"yes"
+HKCU,"Software\Microsoft\Internet Explorer\Main","Cache_Update_Frequency",2,"Once_Per_Session"
+
+
+;   Accept types for top-level documents
+
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Accepted Documents","0",2,"image/gif"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Accepted Documents","1",2,"image/x-xbitmap"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Accepted Documents","2",2,"image/jpeg"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Accepted Documents","3",2,"image/pjpeg"
+
+
+;	Miscellaneous IE Settings
+
+HKLM,"Software\Microsoft\Internet Explorer\Plugins",,0,
+HKLM,"Software\Microsoft\Internet Explorer\Plugins\Extension",,0,
+HKLM,"Software\Microso

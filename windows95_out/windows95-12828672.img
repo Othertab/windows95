@@ -1,0 +1,182 @@
+-,-"
+HKR,,ICMProfile,1,9
+
+; -------------- Samtron
+[428PT/PTL.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.5-48.0,43.5-75.0,+,+"
+HKR,,ICMProfile,1,9
+
+[528MXLJ.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"24.0-66.0,50.0-100.0,-,-"
+HKR,,ICMProfile,1,9
+
+[528TXL.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-48.0,50.0-100.0,-,-"
+HKR,,ICMProfile,1,9
+
+[528UXL.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-65.0,50.0-120.0,-,-"
+HKR,,ICMProfile,1,9
+
+[726GXL.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-85.0,50.0-120.0,-,-"
+HKR,,ICMProfile,1,9
+
+[728FXL.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-65.0,50.0-120.0,-,-"
+HKR,,ICMProfile,1,9
+
+[208DXL+.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,50.0-120.0,-,-"
+HKR,,ICMProfile,1,8
+
+[528MDL.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-48.0, 50.0-120.0,-,-"
+HKR,,ICMProfile,1,9
+
+; -------------- Tatung
+[TM651X.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"31.0-65.0,50.0-90.0,+,+"
+HKR,,ICMProfile,1,9
+
+[TM671X.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"31.0-65.0,50.0-110.0,+,+"
+HKR,,ICMProfile,1,9
+
+[TM442X.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-50.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,9
+
+[TM452X.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-50.0,50.0-100.0,+,+"
+HKR,,ICMProfile,1,9
+
+; -------------- TRL
+[TRL-DL1564.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"29.0-64.0,47.0-100.0,+,+"
+HKR,,ICMProfile,1,7
+
+[TRL-DH1570.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"29.0-64.0,47.0-120.0,+,+"
+HKR,,ICMProfile,1,7
+
+
+; -------------- ViewSonic
+[14ES.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31-51.0,50-75,-,-"
+HKR,,ICMProfile,1,9
+
+[15GA.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-69,50-160,+,+"
+HKR,,ICMProfile,1,9
+
+[17EA.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-65,50-120,+,+"
+HKR,,ICMProfile,1,9
+
+[17GS.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-69,50-160,+,+"
+HKR,,ICMProfile,1,9
+
+[17PS.AddReg]
+HKR,"MODES\1600,1200",Mode1,,"30-82,50-160,+,+"
+HKR,,ICMProfile,1,9
+
+[21PS.AddReg]
+HKR,"MODES\1600,1200",Mode1,,"30-82,50-160,+,+"
+HKR,,ICMProfile,1,9
+
+[PT810.AddReg]
+HKR,"MODES\1600,1200",Mode1,,"30-86,50-130,+,+"
+HKR,,ICMProfile,1,9
+
+[V775.AddReg]
+HKR,"MODES\1600,1200",Mode1,,"30-82,50-130,+,+"
+HKR,,ICMProfile,1,9
+
+[1000S.AddReg]
+HKR,"MODES\640,480",Mode1,,"31.5,50-100,-,-"
+HKR,"MODES\800,800",Mode2,,"37.8,50-72,+,+"
+HKR,"MODES\1024,768",Mode3,,"48.4,0-60,-,-"
+HKR,,ICMProfile,1,9
+
+[V1769DC.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-69,50-120,+,+"
+HKR,,ICMProfile,1,9
+
+; Common AddReg/DelReg sections
+;-------------------------------------------------
+[DEL_CURRENT_REG]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+[640]
+HKR,,MaxResolution,,"640,480"
+[800]
+HKR,,MaxResolution,,"800,600"
+[1024]
+HKR,,MaxResolution,,"1024,768"
+[1280]
+HKR,,MaxResolution,,"1280,1024"
+[1600]
+HKR,,MaxResolution,,"1600,1200"
+
+[DPMS]
+HKR,,DPMS,,1
+
+[ICM2]
+HKR,,ICMProfile,1,2
+
+; User visible strings
+;-------------------------------------------------
+[Strings]
+MS="Microsoft"
+
+AOC="AOC International (USA) Ltd."
+4VLR="AOC SPECTRUM 4V,4VA,4Vlr & 4VlrA"
+
+Daewoo="Daewoo"
+CMC-1427X1="Daewoo CMC-1427X1"
+CMC-1507X1="Daewoo CMC-1507X1"
+CMC-1505X="Daewoo CMC-1505X"
+CMC-1423B1="Daewoo CMC-1423B1"
+CMC-1502B1="Daewoo CMC-1502B1"
+CMC-1703B="Daewoo CMC-1703B"
+CMC-1704C="Daewoo CMC-1704C"
+
+Hitachi="Hitachi, Ltd."
+CM-1711M="Hitachi, Ltd CM-1711M"
+CM-2110M="Hitachi, Ltd CM-2110M"
+CM-2111M="Hitachi, Ltd CM-2111M"
+CM-2112M="Hitachi, Ltd CM-2112M"
+
+HYUNDAI="Hyundai Electronics Industries Co., Ltd."
+HL-7864="Hyundai DeluxScan 17"
+HL-5864E="Hyundai DeluxScan 15 Pro"
+
+IBM="IBM PC Company"
+IBMP50="IBM P50"
+IBMP70="IBM P70"
+IBMP200="IBM P200"
+IBMP201="IBM P201"
+IBMG41="IBM G41"
+IBMG50="IBM G50"
+IBMG70="IBM G70"
+IBMG200="IBM G200"
+
+LG="LG Electronics Inc."
+StudioWorks20i="LG StudioWorks 20i" 
+StudioWorks78i="LG StudioWorks 78i" 
+1505s="LG 1505s" 
+StudioWorks56m="LG StudioWorks 56m" 
+StudioWorks44m="LG StudioWorks 44m" 
+
+MAG="MAG Technology Co., Ltd."
+DX1595="DX1595"
+DX15T="DX15T"
+DX1795="DX1795"
+
+Mitsubishi="Mitsubishi Electronics"
+FFF-8705 ="Mitsub

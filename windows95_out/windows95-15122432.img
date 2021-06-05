@@ -1,0 +1,165 @@
+78.DeviceDesc%= AIC78XX,PCI\VEN_9004&DEV_6378
+%PCI\VEN_9004&DEV_7860.DeviceDesc%= AIC78XX,PCI\VEN_9004&DEV_7860
+%ADP460%=APA460,PCMCIA\Adaptec__Inc.-APA-460_16-Bit_PCMCIA_to_SCSI_Host_Adapter-96E6
+%ADP460-OLD%=APA460-OLD,PCMCIA\Trantor_Systems__Ltd.-T460_SCSI_Host_Adapter-AF7E
+%APA1460.DeviceDesc%=NewMed6X60,PCMCIA\Adaptec__Inc.-APA-1460_SCSI_Host_Adapter-BE89
+;****************************
+; New flavor of 1460s
+;
+%APA1460.DeviceDesc%=NewMed6X60,PCMCIA\Adaptec__Inc.-APA-1460_SCSI_Host_Adapter-B67E
+
+;****************************
+New Media-manufacturer device list
+[Nmedia]
+%Bus-Toast%=NewMed6X60,PCMCIA\New_Media-SCSI-128C
+%Bus-Toast%=NewMed6X60,PCMCIA\New_Media-SCSI-4082
+%Bus-Toast-X%=NewMedX-Inst,PCMCIA\NEW_MEDIA-SCSI-E28C
+%Bus-Toast-X%=NewMedX-Inst,PCMCIA\NEW_MEDIA-SCSI-3B3A
+%Bus-Toast-X%=NewMedX-Inst,MF\SS16-D11C_BT
+
+;****************************
+;Compaq-manufacturer device list
+[COMPAQ]
+%*CPQ4410.DeviceDesc%=NCR53C710,*CPQ4410
+%*CPQ4411.DeviceDesc%=NCR53C710,*CPQ4411
+%*CPQA050.DeviceDesc%= AIC6X60,*CPQA050
+
+;****************************
+;Trantor-manufacturer device list
+[TRANTOR]
+%*pnpA020.DeviceDesc%=*pnpA020.drv,*pnpA020     ;Media Vision SCSI Port
+%*pnpA02F.DeviceDesc%=*pnpA02F.drv,*pnpA02F     ;Trantor 358 SCSI
+%*pnpA01F.DeviceDesc%=*pnpA01F.drv,*pnpA01F     ;Trantor 348 Parallel SCSI
+%*pnpA01D.DeviceDesc%=*pnpA01D.drv,*pnpA01D     ;Trantor 160
+%T460%=APA460-OLD,"PCMCIA\Trantor_Systems__Ltd.-T460_SCSI_Host_Adapter-AF7E"
+%ADP460%=APA460,PCMCIA\Trantor_Systems__Ltd.-T460_SCSI_Host_Adapter-9BC5
+%MV101_Trantor.DeviceDesc%=*pnpA020.drv, MF\PNPB00A_Dev0
+%MV101_Trantor.DeviceDesc%=*pnpA020.drv, MF\PNPB00E_Dev0
+%MV101_Trantor.DeviceDesc%=*pnpA020.drv, MF\PNPB019_Dev0
+
+;****************************
+;IBM-manufacturer device list
+[IBM]
+%mca_8eff.DeviceDesc%=spock,mca_8eff            ;IBM SCSI
+
+;****************************
+;BLC-manufacturer device list
+[BLCdevices]
+%*BUS0042.DeviceDesc%=AllBLC,*BUS0042
+%MF\EISA_BUS4201_DEV0.DeviceDesc%=BLCEISA,MF\EISA_BUS4201_DEV0
+%PCI\VEN_104B&DEV_1040.DeviceDesc%=BLCPCI,PCI\VEN_104B&DEV_1040
+
+;****************************
+;Iomega-manufacturer device list
+[Iomega]
+%*isaB701.DeviceDesc%=*isaB701.drv,*isaB701
+%*isaB702.DeviceDesc%=*isaB702.drv,*isaB702     ;IOMEGA Cards
+;***************************************************************************
+;End of manufacturer device lists
+
+;******************************** AMD Installation Sections
+;
+
+[AMDPCI.drv]
+CopyFiles=@AMSINT.mpd
+AddReg=IOS,AMDPCIReg
+
+[AMDPCIREG]
+HKR,,PortDriver,,amsint.mpd
+
+;******************************** Trantor Driver Installation Sections
+;
+[*pnpA020.drv]                  ; Media Vision Scsi Board
+CopyFiles=@tmv1.mpd
+AddReg=IOS,Poll,Tmv1Reg,NoReadAhead
+LogConfig=*pnpA020.LogConfig
+
+[*pnpA02F.drv]                  ; Trantor T358
+CopyFiles=@T358.mpd
+AddReg=IOS,Poll,T358Reg
+
+[*pnpA01F.drv]                  ; Trantor T348 Parallel Installation
+CopyFiles=@T348.mpd
+AddReg=IOS,Poll,T348Reg
+
+[*pnpA01D.drv]                  ; Trantor T160 Installation
+CopyFiles=@t160.mpd
+AddReg=IOS,Poll,T160Reg
+LogConfig=*pnpA01D.LogConfig
+
+[APA460-OLD]
+CopyFiles=@t160.mpd
+AddReg=IOS,Poll,T160Reg,460-Override
+
+[APA460]
+CopyFiles=@t160.mpd
+AddReg=IOS,T160Reg
+
+[tmv1Reg]
+HKR,,PortDriver,,tmv1.mpd
+
+[T358Reg]
+HKR,,PortDriver,,t358.mpd
+HKR,,PollingSupportNeeded,1,01
+
+[t348Reg]
+HKR,,PortDriver,,t348.mpd
+HKR,,PollingSupportNeeded,1,01
+
+[t160Reg]
+HKR,,PortDriver,,t160.mpd
+
+[460-Override]
+HKR,Override,0000,1, \
+;
+00,04,00,00, \
+00,00,00,00, \
+;
+; I/O Resource Descriptor
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00, \
+0C,00, \
+00,00, \
+00,00, \
+00,00, \
+00, \
+00, \
+F0,FF, \
+10,00, \
+60,03, \
+6F,03, \
+00,00, \
+00, \
+00, \
+40,00,00,00, \
+;
+; IRQ Resource Descriptor
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00, \
+00,00, \
+FF,FF, \
+00,00, \
+20,00,00,00, \
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00, \
+02,00, \
+32, \
+32, \
+32, \
+02, \
+00,80,00,00, \
+00, \
+00, \
+00, \
+08, \
+01, \
+;
+00,00,00,00

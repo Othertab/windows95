@@ -1,0 +1,104 @@
+n its icon.
+
+4)  In  the installation program's window, you will see two dialogue boxes.
+    Enter  the  name of the drive where the installation program is located
+    in  the  upper  dialogue box.  This will normally be the internal drive
+    "DF0"  and  this  is the drive indicated by the program by default.  If
+    the  installation  floppy  disk is located on the external drive, enter
+    the corresponding letter (DF1-DF3).  Confirm by pressing the RETURN key.
+
+The  lower  dialogue  box  is only used for the target drive.  As this disk
+normally  carries  the name "DHO:3", it is the drive selected by default If
+you  want  to  install  the  program  in  another directory, enter the path
+corresponding  to  your  configuration.   As  you  have  probably created a
+special  folder for your games, you can also specify the directory in which
+you want to install the game, for example:
+
+dhO:games /bluebyte/
+
+If the specified directory does not exist, it will be created automatically
+by the installation program.
+
+Status screen
+
+As  the  PC  version  differs  in  terms  of the utilisation of the systems
+capabilities,  PC  users can skip this chapter as the status screen will be
+of  no  use  for  them.   When you launch the program, the status screen is
+displayed.   It  will  tell you how the program is using your computer.  It
+displays the following information:
+
+1. Workbench
+ 
+Indicates whether the workbench has been deactivated (which allows the user
+to  free up memory), if the workbench has not been deactivated, if start up
+programs have been loaded, or if the workbench has not been opened.
+
+2. Program
+
+Indicates  if  the  program is stored in Fastram.  If this is the case, the
+program is much faster because it can work in tandem with the Blitter.
+
+3. Data
+
+Indicates,  as  for  the program, if the data is stored in Fastram (thereby
+further increasing the speed of the program).
+
+4. Sounds
+
+Indicates  if  the  sound  effects  (none or a part) are loaded or not into
+memory (based on the size of the Chipram memory available)
+
+5. Music
+
+If you have 1 MB of memory, the music must be loaded into memory.
+
+6. The game worlds
+
+The  number  indicates  the  maximum  size  of the game's world.  This will
+depend  on  the  size  of  the  available  memory and can be limited by the
+storage  device  (see  9)  or  the  processor  (see 8).  You will find more
+precise information in the table at the end of this chapter.
+
+7. Missions
+
+You can undertake missions beginning with a size three world
+
+8. Processor
+
+Indicates the type of processor(s) installed in your Amiga.
+
+9. Storage device
+
+The  games are saved on hard disk or floppy disk, The size of a games world
+is  limited  to  5  for floppy disks (size 7 represents 1.6 MB) Moreover, a
+size 5 world is already immense.
+
+If you play on a PC, do not worry about all this information.  As indicated
+above,  your computer will load all necessary data into its memory based on
+your system's configuration.
+
+TO GET STARTED
+--------------
+
+Copy protection 
+
+When  the  program  is launched, the computer will ask you to enter a code.
+You  will  be  presented  with  16  different symbols.  For example, if the
+program  asks  you which combination of symbols is found at the top of page
+18,  look  on  the  page  in  question  and  click  with  the  mouse on the
+corresponding  symbols  in  the correct order.  If you click on the correct
+symbols, the program will continue.
+
+The main menu
+
+This  is  where  all  the  preliminary  parameters are displayed before the
+launching  of  the game.  A maximum of 4 groups of settlers can participate
+in  the  game.   A  group  of  settlers  is controlled by the player by the
+computer or by two players working as a team.
+
+To  choose a game mode, click on the second icon from the left.  The icon's
+graphic and the text will indicate the game mode chosen among the following
+modes:
+
+Mission:   Orders fixed opponents controlled by the computer (1 player), or
+2 players in a team, wi

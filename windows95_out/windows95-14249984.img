@@ -1,0 +1,120 @@
+******************
+[*CPQ6200T.ndi]
+AddReg=*CPQ6200T.ndi.reg,NetFlex.ndi.reg,NetFlexEnet.ndi.reg
+[*CPQ6200T.ndi.reg]
+HKR,Ndi,DeviceID,,"MF\EISA_CPQ6200_TOPNET"
+HKR,,PortNumber,,1
+
+;****************************************************************************
+; *CPQ6200 Compaq NetFlex-2 DualPort ENET Controller
+;****************************************************************************
+[*CPQ6200B.ndi]
+AddReg=*CPQ6200B.ndi.reg,NetFlex.ndi.reg,NetFlexEnet.ndi.reg
+[*CPQ6200B.ndi.reg]
+HKR,Ndi,DeviceID,,"MF\EISA_CPQ6200_BOTTOMNET"
+HKR,,PortNumber,,2
+
+;****************************************************************************
+; *CPQ6300 Compaq NetFlex-2 DualPort TR Controller
+;****************************************************************************
+[*CPQ6300T.ndi]
+AddReg=*CPQ6300T.ndi.reg,NetFlex.ndi.reg,NetFlexTR.ndi.reg
+[*CPQ6300T.ndi.reg]
+HKR,Ndi,DeviceID,,"MF\EISA_CPQ6300_TOPNET"
+HKR,,PortNumber,,1
+
+;****************************************************************************
+; *CPQ6300 Compaq NetFlex-2 DualPort TR Controller
+;****************************************************************************
+[*CPQ6300B.ndi]
+AddReg=*CPQ6300B.ndi.reg,NetFlex.ndi.reg,NetFlexTR.ndi.reg
+[*CPQ6300B.ndi.reg]
+HKR,Ndi,DeviceID,,"MF\EISA_CPQ6300_BOTTOMNET"
+HKR,,PortNumber,,2
+
+;****************************************************************************
+; Compaq NetFlex Common NDIS Settings
+;****************************************************************************
+[NetFlex.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,netflx.sys
+; NDIS Info
+HKR,NDIS,LogDriverName,,"NETFLX"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NETFLX$"
+HKR,NDIS\NDIS2,FileName,,"netflx.dos"
+; Install sections
+HKR,Ndi\Install,ndis3,,"NetFlex.ndis3"
+HKR,Ndi\Install,ndis2,,"NetFlex.ndis2"
+
+;****************************************************************************
+; Compaq NetFlex Token Ring Specific NDIS Settings
+;****************************************************************************
+[NetFlexTR.ndi.reg]
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+
+
+;****************************************************************************
+; Compaq NetFlex Ethernet Specific NDIS Settings
+;****************************************************************************
+[NetFlexEnet.ndi.reg]
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+
+
+;****************************************************************************
+; Compaq NetFlex Ethernet Specific NDIS Settings
+;****************************************************************************
+[NetFlexETR.ndi.reg]
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring,ethernet"
+
+; Install NDIS3
+[NetFlex.ndis3]
+CopyFiles=NetFlex.ndis3.CopyFiles
+[NetFlex.ndis3.CopyFiles]
+netflx.sys
+
+; Install NDIS2
+[NetFlex.ndis2]
+CopyFiles=NetFlex.ndis2.CopyFiles
+[NetFlex.ndis2.CopyFiles]
+netflx.dos
+netflx.bin
+
+
+;****************************************************************************
+; Destination Directories
+;****************************************************************************
+[DestinationDirs]
+DefaultDestDir              =11 ; LDID_SYS
+Netflex.ndis3.CopyFiles      =11
+Netflex.ndis2.CopyFiles      =26 ; LDID_WINBOOT
+
+;****************************************************************************
+; Localizable Strings
+;****************************************************************************
+[strings]
+; Provider
+V_MS="Microsoft"
+
+; Manufacturers
+V_COMPAQ="Compaq"
+
+; Source Disks
+DSK_DESC="MS ITG Drivers Directory"
+
+; PNP Devices
+*CPQ6001.De

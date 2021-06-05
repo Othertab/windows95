@@ -1,0 +1,63 @@
+**********************
+; [Uninstall.Xxx]
+;
+; Extra tasks to complete when uninstalling MSN.
+; ********************************************************************
+
+[Uninstall.UpdateInis]
+; Remove Start/Programs/[Explore] The Microsoft Network menu item
+setup.ini, progman.groups,, "group0="
+setup.ini, group0,, """The Microsoft Network"""
+
+[Uninstall.AddReg]
+; Turn off Installed flags for CPL
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,Installed,,"0"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105","Installed",,"0"
+; Delete the desktop icon
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\MSNetwork,,,"%25%\%Shared_Desktop%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\MSNetwork,MSN.MSN,,"The Microsoft Network.{00028B00-0000-0000-C000-000000000046}"
+HKCU,"Software\Microsoft\MOS\Connection","OlRegPhone",,"+1 (800) 328-2427::A"
+HKCU,"Software\Microsoft\MOS\Connection","PBKVerClient",1,05,00,00,00
+; Rome keys, set with overwrite flag (i.e. default flags)
+HKCU,"Software\Microsoft\MOS\Connection","PrimaryMSNGateway",,"gateway.moswest.msn.net"
+HKCU,"Software\Microsoft\MOS\Connection","BackupMSNGateway",,"gw-backup.moswest.msn.net"
+HKCU,"Software\Microsoft\MOS\Connection","LoginPrefix",,"MSN/"
+; sets identification of current version
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnDisk",0,"0.0"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnSource",2,"1.3"
+HKLM,"SOFTWARE\Microsoft\MSN\SoftwareInstalled","VersionOnWeb",2,"0.0"
+
+[Uninstall.DelReg]
+; These keys should be deleted in addition to other keys which were created on install
+HKLM,Software\Microsoft\MOS\SoftwareInstalled,,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Marvel Mail",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Microsoft Network Mail",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Mail via The Microsoft Network",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\%MSN_MAIL_DESC%",,,
+; Delete Upgrade In Progress value for component manager
+HKLM,"Software\Microsoft\MOS\Applications","UpgradeInProgress",,
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00028B00-0000-0000-C000-000000000046}",,,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\FindExtensions\Static\MSNFind",,,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\FindExtensions\MSNFind",,,
+HKLM,"Software\Microsoft\Exchange\Client\Extensions","MSN Menu Extensions",,
+; Following 4 values need to be deleted when reverting to 1.0 because 1.05+ values may not be backwardly compatible
+HKCU,"Software\Microsoft\MOS\Connection","ConnectProtocol",,
+HKCU,"Software\Microsoft\MOS\Connection","Phone",,
+HKCU,"Software\Microsoft\MOS\Connection","BackupPhone",,
+HKCU,"Software\Microsoft\MOS\Connection","CityBaud",,
+HKCU,"Software\Microsoft\MOS\Connection","UserInfo",,
+
+[Strings]
+; ************************************************************************
+; General strings
+; ************************************************************************
+APPS_DESC         = "Accessories"                                ; name of Start/Programs submenu
+OLR_Link_Desc     = "Online Registration"                        ; Start menu shortcut (Online Registration)
+MOS_DESC          = "The Microsoft Network"
+MOS_TIP           = "Microsoft's online service (requires Windows Messaging and a modem)"
+CallCard_Desc     = "Shortcut to The Microsoft Network"          ; MSN shortcut description
+CallCardProp_Desc = "Properties for Shortcuts to The Microsoft Network"
+Signup_Link_Desc  = "The Microsoft Network"                      ; Start menu shortcut (MSN Signup)
+M8_Link_Desc      = "The Microsoft Network"                      ; Item on Start/Programs for M8 (was Signup_Link_Desc)
+Old_Signup_Link_Desc = "Sign Up for The Microsoft Network"       ; M7 signup shortcut to delete
+MSN_MAIL_DESC     = "The Microsoft Network Online Service"       ; Exchange profile, a

@@ -1,0 +1,96 @@
+
+HP Color LaserJet Printer - PCL Support
+---------------------------------------
+Recommended software: HP Color LaserJet driver & HP TrueType Screen 
+Fonts. 
+
+NOTE: Locate the disks that shipped with your HP Color LaserJet printer, 
+and then follow the steps below. If you cannot find your software disks, 
+contact your Hewlett-Packard Driver Distribution Center.
+
+1. Insert Disk 1 of the HP Color LaserJet Printing System disk set
+   (Windows 3.1 PCL Printing System) into the appropriate floppy disk 
+   drive.
+2. Click Start, and then click Run.
+3. Type "A:\Setup."
+4. Select "Express" installation, and then follow the steps displayed 
+   on the screen.
+
+NOTE: To take advantage of Image Color Matching support in Windows 95, 
+you need to install the HP Color LaserJet driver shipped with Windows 95.
+
+HP LaserJet 4M to 5MP printers - PostScript Support
+---------------------------------------------------
+Recommended software: Windows 95 PostScript printer driver.
+
+NOTE: Do not use the PostScript printer driver supplied with your HP 
+printer. 
+
+HP Color LaserJet Printer - PostScript Support
+Recommended software: HP Color LaserJet PostScript printer driver.
+
+NOTE: Locate the disks that shipped with your HP Color LaserJet printer, 
+and then follow the steps below. If you cannot find the disks, contact 
+your Hewlett-Packard Driver Distribution center.
+
+1. Insert the HP Color LaserJet Printer disk, Windows 3.1 PostScript 
+   2.1.1., into the appropriate floppy disk drive.
+2. Click Start, point to Settings, and then click Printers.
+3. Click the Add Printer icon, and then follow the instructions using  
+   the HP Color LaserJet PostScript driver disk. 
+4. Click the Have Driver Disk button. If you are prompted to replace or 
+   update the driver, click Yes.
+
+HP LaserJet Troubleshooting
+---------------------------
+Printer Status Conflicts: You can potentially have a conflict between the 
+Microsoft printer status reporting program and the HP Status Window. Here 
+are the symptoms: During printing, the Microsoft status program gives you 
+printing status information. At other times, if a printer error or other 
+condition occurs (the printer runs out of paper, paper jam, the parallel 
+cable is disconnected, the printer cover is open, etc.), the HP Status 
+Window gives you a message. 
+
+If you have installed the HP Status Window, uninstall it by following 
+these steps:
+
+1. Click Start, and then click Programs.
+2. Click the HP LaserJet folder.
+3. Double-click the Deinstall HP Status Window icon.
+4. Click Yes to restart Windows.
+
+"Error 21 -- print overrun"
+If this occurs on your LaserJet printers, turn on "Page Protection" 
+if the option is available in the Device Options tab of the  printer 
+properties. On LaserJet 3 printers, you will need to set it directly 
+on the printer's front panel. If the Page Protection option is not 
+available, and you are using a LaserJet 4 printer, try changing the 
+printer driver to Raster mode instead of vector mode in the Graphics 
+tab of the printer properties and/or reduce the complexity of the page.
+
+
+LEXMARK PRINTER SUPPORT
+=======================
+
+You may experience difficulties in using the bidirectional support 
+with some Lexmark 40x9 LaserPrinter printers under Windows 95. To 
+enable bidirectional support, follow the instructions below:
+
+1. Verify you have a file named LEX01.386 in your Windows\System folder.
+2. Under the [386Enhanced] section of System.ini in your Windows folder, 
+   add these lines:
+       *device=lex01.385
+        WPSLPT#=1
+   where # = 1, 2 or 3, corresponding with LPT1, LPT2, or LPT3 
+   respectively. 
+   (Example: For LPT2, the line would read WPSLPT2=1)
+3. Save the changes and restart your computer.
+
+
+QMS JETSCRIPT BOARDS
+====================
+
+To print with QMS JetScript boards under Windows 95, it is necessary 
+to create a port called LPTx.DOS (where LPTx is LPT1, LPT2, or LPT3 
+based on how the JetScript board is configured). To do this, follow the 
+steps below. These steps assume you ha

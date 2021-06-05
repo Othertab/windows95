@@ -1,0 +1,130 @@
+"
+
+; Force16 (ndis3 & ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,30,00,00,00
+; Force4 (ndis3)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,20,00,00,00
+
+[MDGISACP.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F(3FF::),1A20-1A2F(3FF::),2A20-2A2F(3FF::),3A20-3A2F(3FF::)
+IRQConfig=3,5,7,10,11,12,15,9
+DMAConfig=0
+
+;****************************************************************************
+; MDGSM16 Madge Networks Smart 16 Ringnode
+;****************************************************************************
+[MDGSM16.ndi]
+AddReg=MDGSM16.ndi.reg,Madge.ndi.reg,MadgeISA.ndi.reg
+LogConfig=MDGSM16.LogConfig
+
+[MDGSM16.ndi.reg]
+HKR,Ndi,DeviceID,,"MDGSM16"
+;
+; Smart 16 hardware type.
+;
+HKR,,AdapterType,,"400"
+
+[MDGSM16.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=4A20-4A2F(3FF::),6A20-6A2F(3FF::),4E20-4E2F(3FF::),6E20-6E2F(3FF::)
+IRQConfig=3,7,9
+DMAConfig=0
+
+;****************************************************************************
+; *MDG0002 Madge Networks Smart 16/4 EISA Ringnode
+;****************************************************************************
+[*MDG0002.ndi]
+AddReg=*MDG0002.ndi.reg,Madge.ndi.reg
+
+[*MDG0002.ndi.reg]
+HKR,Ndi,DeviceID,,"*MDG0002"
+;
+; 16/4 EISA hardware type.
+;
+HKR,,AdapterType,,"500"
+
+; Force16 (ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,10,00,00,00
+; Force4 (ndis2)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,10,00,00,00
+
+;****************************************************************************
+; MCA_002D Madge Networks Smart 16/4 MC Ringnode
+;****************************************************************************
+[MCA_002D.ndi]
+AddReg=MCA_002D.ndi.reg,Madge.ndi.reg,Microchannel
+
+[MCA_002D.ndi.reg]
+HKR,Ndi,DeviceID,,"MCA_002D"
+;
+; 16/4 MCA hardware type.
+;
+HKR,,AdapterType,,"600"
+
+; Force16 (ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,10,00,00,00
+; Force4 (ndis2)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\params\Force4,type,,enum
+HKR,NDI\params\Force4\enum,0,,"No"
+HKR,NDI\params\Force4\enum,1,,"Yes"
+HKR,NDI\params\Force4,optional,,1
+HKR,NDI\params\Force4,flag,1,10,00,00,00
+
+;****************************************************************************
+; MCA_0074 Madge Networks Smart 16/4 MC32 Ringnode
+;****************************************************************************
+[MCA_0074.ndi]
+AddReg=MCA_0074.ndi.reg,Madge.ndi.reg,Microchannel
+
+[MCA_0074.ndi.reg]
+HKR,Ndi,DeviceID,,"MCA_0074"
+;
+; 16/4 MCA hardware type.
+;
+HKR,,AdapterType,,"600"
+
+; Force16 (ndis2)
+HKR,NDI\params\Force16,ParamDesc,,"Force 16 Mbits/s"
+HKR,NDI\params\Force16,default,,""
+HKR,NDI\params\Force16,type,,enum
+HKR,NDI\params\Force16\enum,0,,"No"
+HKR,NDI\params\Force16\enum,1,,"Yes"
+HKR,NDI\params\Force16,optional,,1
+HKR,NDI\params\Force16,flag,1,10,00,00,00
+; Force4 (ndis2)
+HKR,NDI\params\Force4,ParamDesc,,"Force 4 Mbits/s"
+HKR,NDI\params\Force4,default,,""
+HKR,NDI\param

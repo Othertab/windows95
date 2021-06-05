@@ -1,0 +1,75 @@
+y 
+  the following steps:
+
+  1. Put an actively searching IR device close to the computer's IR 
+     device.
+
+  2. Click the Infrared Monitor Options tab, and then choose a 
+     different communications port (for example, COM1 instead of COM2).
+
+  3. Continue selecting different COM ports in this way until the IR 
+     device on the computer discovers the nearby IR device.
+
+     Note that the alternatives displayed in the IrMon Options tab are 
+     always based on the internal wiring of the computer platform:
+
+     - COM1 always means a COM port wired to IRQ 4 and I/O address 
+       range 0x3F8 to 0x3FF.
+     - COM2 always means wired to IRQ 3 and 0x2F8 to 0x2FF.
+     - Physical COM3 always means IRQ 4 and 0x3E8 and 0x3EF.
+     - Physical COM4 always means IRQ5 and 0x2E8 and 0x2EF. 
+     
+- To get two IR devices to discover each other, you may have to 
+  realign the IR devices so they point right at each other, move 
+  them closer together, and/or change the batteries in an IR adapter 
+  or plug the AC power into an IR adapter. The devices must be three 
+  feet or less apart, and the angle of the cone of IR transmission 
+  is 30 degrees. Some devices work best if kept at least six inches 
+  apart. If an IR adapter is attached to a COM port that is using an 
+  8250 UART instead of a 16550 UART, or if an IR adapter is connected 
+  to a relatively slow computer (such as a 386 running at 20 MHz), 
+  you might need to use the Limit Connection Speed To option in the 
+  Infrared Monitor Options tab to limit the connection speed to 19.2 
+  kbps. After establishing a successful IR connection at this speed, 
+  you can use the Limit Connection Speed To option to experiment 
+  with establishing a connection at a higher speed on that computer.
+
+- If you change the port the IR adapter is attached to while IR 
+  communications are in progress, the IR connection is lost without 
+  prompting you to verify that it is OK to disconnect.
+
+- Communication over a virtual COM port link between two computers 
+  might not be reliable if a printer's IR adapter is also within range. 
+  You should move the printer's IR adapter out of range.
+
+- You should not suspend a Windows 95 computer while an IR connection 
+  is established. Wait until the IR link is disconnected or force a 
+  disconnection before putting the computer in suspend mode. For 
+  example, if an IrLan connection is established on a laptop computer, 
+  you must always move the laptop out of range of the IrLan access point 
+  before suspending the system or closing the laptop lid. Otherwise, the 
+  connection remains active and over time can drain the battery.
+
+- Connecting and disconnecting over a low-speed IR link or over a poor-
+  quality link can take a long period of time (a few seconds), during 
+  which the screen will appear to be frozen. To work around this, 
+  use a higher speed connection and/or take steps to improve the 
+  quality of the connection by, for example, realigning the IR devices 
+  so they point right at each other, moving the devices closer together, 
+  changing the batteries in an IR adapter, or plugging the AC power into 
+  an IR adapter.
+
+Troubleshooting Tips for Using IrLan Access Point Devices
+---------------------------------------------------------
+- Do not assume that because an IR device on a PC communicates with 
+  an IR device on another PC at 115.2 kbps that the IR device will 
+  also communicate with an IrLan access point device at that speed. 
+  For example, suppose a user has two PC-based IR devices that have 
+  negotiated a link speed of 115.2 kbps. Then if the user points 
+  one of the devices at an IrLan access point device, these two 
+  devices can negotiate a link speed of 115.2 kbps but no subsequent 
+  communication takes place (the PC has no access to the network 
+  through the IR link). No error message is displayed in this case.
+
+- Extended Systems ESI-9910 JetEye Net Plus users utilizing NETBEUI 
+  may receive an error message when copying large files (for examp

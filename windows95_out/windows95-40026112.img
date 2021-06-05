@@ -1,0 +1,108 @@
+ax require at least 10 MB of free space to 
+install.
+
+
+[Q: After running Setup I can no longer access my CD-ROM, why?]
+
+If your CD-ROM is proprietary, (Sony, Mitsumi, and Panasonic), 
+Windows 95 will install the drivers. If the CD-ROM is not detected, 
+there is a conflict with the device or the controller, and you 
+should check the settings for conflicts in the Device Manager in 
+Control Panel. Add new devices by double-clicking the Install New 
+Hardware icon in Control Panel.
+
+
+[Q: I am having a problem with the refresh rate of my monitor. How 
+    do I fix it?]
+
+To adjust the refresh rate in Windows 95, click the Start button,
+click Settings, and then click Control Panel. Double-click the 
+Display icon, click the Settings tab, and then click the Advanced 
+Properties button. Click the Adapter tab, and then select the 
+refresh rate from the list.
+
+To adjust the refresh rate in MS-DOS mode, you must specify your 
+monitor type in an adapter setup program supplied by your display 
+adapter or PC manufacturer. Some utilities must be run in Autoexe.bat. 
+On some PCs, monitor type is set in BIOS configuration programs. 
+Examples of utilities from adapter manufacturers include:
+
+     ATI                      INSTALL.EXE
+     Cirrus Logic             MONTYPE.EXE, CLMODE.EXE, WINMODE.EXE
+     Diamond Stealth          STLMODE.EXE
+     Diamond Stealth 64       S64MODE.EXE
+     Matrox                   \MGA\SETUP\SETUP.EXE
+     Tseng Labs               VMODE.EXE
+     Western Digital          VGAMODE.EXE
+
+
+=======
+MS-DOS
+=======
+
+[Q: How do I boot to an MS-DOS prompt ( C:\> )?]
+
+You can find this information in Windows Help Index. Look up
+"Restarting your computer, in MS-DOS mode."
+
+
+[Q: How do I boot to my previous version of DOS?]
+
+Windows 95 version 4.00.950 B does not support dual booting 
+to a previous MS-DOS/Windows 3.x installation. To check the 
+Windows 95 version number, right-click the My Computer icon on 
+your desktop, click Properties, and then click the General tab.
+
+
+[Q: Will I be able to multiboot PC-DOS 7.0?]
+
+No, for the same reason as listed above.
+
+
+=================
+Disk Compression
+=================
+
+[Q: Will Windows 95 work if I have compressed my hard drive using 
+    Stac Electronics Stacker software?]
+
+Yes, Windows 95 is fully compatible with Stacker versions 2.x and 
+greater, as well as all versions of Superstore. Older compression 
+drivers from third-party disk compression utilities function in 
+real-mode only. For upgraded Windows 95 drivers, contact your 
+software compression vendor.
+
+Windows 95 supplies a built-in disk compression utility called 
+DriveSpace that runs in protected mode. The advantages of DriveSpace 
+are that compression is faster, and it is built into the operating
+system. See Windows 95 Help for more information on DriveSpace.
+
+
+=============================
+Using CD-ROMs with Windows 95
+=============================
+
+[Q: Windows 95 does not detect my CD-ROM. Why is this? How do I get 
+    my CD-ROM to work?]
+
+CD-ROMs may be SCSI, proprietary, or IDE controller based.
+
+Windows 95 only detects proprietary controller-based CD-ROMS 
+(specifically Panasonic, Mitsumi, and Sony brands). Windows 95 also 
+detects the SCSI controllers; however, drivers for the SCSI bus will 
+enumerate the CD-ROMs. 
+
+1. Open Control Panel, and then double-click the System icon.
+2. Select the Device Manager tab.
+3. Verify that a SCSI or IDE controller exists in the device tree.
+   (If the SCSI or IDE controller branch is not available look up
+   "Adding, Hardware" in the Help Index.)
+4. Open the branch for SCSI or IDE controller by clicking the 
+   plus (+) sign.
+5. Click the controller, and then click Properties.
+6. In the General Tab, verify that the Device Status message states 
+   "This device is working properly" and that the Device Usage 
+   checkbox is enabled for "Current Configuration"
+7. Click the Resources tab, and then verify that the "Conflicting 
+   Device List" displays "No Conflicts."
+   - If a 

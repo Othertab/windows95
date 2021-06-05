@@ -1,0 +1,90 @@
+ installed in the default c:\vermeer
+directory, do not install FrontPage Version 1.1 in c:\vermeer.
+
+-After installing FrontPage Version 1.1, if you no longer plan to use
+your Version 1.0 Personal Web Server you can delete the following
+items :
+-- the c:\vermeer directory
+-- under Windows NT 3.51, the Vermeer program group
+-- under Windows 95 , the Vermeer folder
+-- the files c:\Windows\vermeer.ini, c:\vermeer.log, and c:\vermeer.out
+-- in the Windows\System directory, the following 5 files:
+      vt10wel.dll, vt10tl.dll, vt10txt.dll, vt10utl.dll, and vt10htp.dll
+
+    Note that if you install FrontPage Version 1.1 and also keep the 
+    FrontPage 1.0 Personal Web Server you should not delete these
+    items.
+
+[FrontPage TCP/IP Test Utility]
+
+If you are installing FrontPage on a computer that is not part
+of a network, or if you need to learn your host name, IP address,
+or other network-related information, run FrontPage TCP/IP Test,
+described below, after installing FrontPage. When you use FrontPage
+you will be prompted to supply the host name of your machine during
+some operations. Also, if you have problems after installing
+FrontPage, you may need to ensure that you have a correctly operating
+32-bit version of Winsock, version 1.1.
+
+The FrontPage TCP/IP Test utility analyzes the following elements
+of your network configuration:
+
+-Host name of your machine
+The utility finds and displays the host name of your machine. When
+you create a web with FrontPage, you need to indicate the server on
+which you want the web stored. This field supplies the TCP/IP host
+name of your machine on which you can store a web.
+
+-Correct Winsock version
+FrontPage requires a 32-bit Winsock, version 1.1. If your machine
+only has a 16-bit Winsock, FrontPage will not work.
+
+-Internet Protocol (IP) address of your machine.
+Your machine has a unique address for sending and receiving
+information on the Internet. This address is reported by FrontPage
+TCP/IP Test.
+
+-Connection to localhost
+The IP address of localhost is checked and its connection is verified.
+If access to localhost is reported as OK, you may use "localhost" as
+your host name in FrontPage. (The host address 127.0.0.1 is the
+address used to designate the loopback address of the local host,
+therefore, the name localhost.)
+
+You can run TCP/IP Test from the Windows 95 Start menu or from the
+File menu in Windows NT. After running FrontPage TCP/IP Test, if an
+element is correct, it has Yes next to it. If the utility detects a
+problem, the problem category displays No. Choose the
+Explain Results button for information about the problem and how to
+resolve it or for additional information after a successful test.
+
+[ Additional Tips and Known Problems]
+
+Please keep in mind the following tips and known problems when
+using this FrontPage 1.1 release:
+
+-To delete a table, select the table using the FrontPage Editor's
+Table: Select Table command and press Delete.
+
+-If two users try to post articles to the same discussion group
+at the same time, one of them may get the error message:
+"FrontPage Error: User: please report details to this site's
+webmaster." This message should say: "The server is busy. 
+Please try to post your article again later."
+
+-You can create tables in the FrontPage Editor so that the widths
+of the columns do not add up to the width of the table. For example,
+you could create a 3-column table with each column having a fixed
+width of 50%, adding up to 150%. Tables created in this way may
+not display properly in all web browsers, and the column widths
+may be different in the FrontPage Editor then they are in the
+web browser. For best results, if you create a table with columns
+of fixed percentage width, make sure that column widths add up
+to 100%.
+
+-You cannot import files with the extension .tmp into your
+web. Rename .tmp files to another extension before importing them.
+
+-The FrontPage Personal Web Server supports standard CGI only.
+It does not support Win CGI. See http://hoohoo.ncsa.uiuc.edu
+f

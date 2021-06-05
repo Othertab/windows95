@@ -1,0 +1,127 @@
+
+[*linksys.ndi.reg]
+HKR,Ndi,DeviceID,,"PCMCIA\LINKSYS-E-CARD-0BB7"
+
+[ne2000cc.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,ne2000.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"NE2000"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis3"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ne2000.ndis3"
+
+HKR,NDI,CardType,,"PCMCIA"
+
+;****************************************************************************
+; AE1 Driver
+;****************************************************************************
+[ne1000a.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,ne1000.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"NE1000"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"MS1000$"
+HKR,NDIS\NDIS2,FileName,,"ne1000.dos"
+HKR,NDIS\ODI,DriverName,,"NE1000"
+HKR,NDIS\ODI,FileName,,"ne1000.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ne1000.ndis3"
+HKR,Ndi\Install,ndis2,,"ne1000.ndis2"
+;HKR,Ndi\Install,odi,,"ne1000.odi"
+; params
+HKR,,InterruptNumber,1,04,00,00,00
+HKR,,IOBaseAddress,1,02,00,00,00
+HKR,NDI\params\InterruptNumber,resc,1,04,00,00,00
+HKR,Ndi\params\interruptNumber,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interruptNumber,flag,1,60,00,00,00
+HKR,NDI\params\IOBaseAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOBaseAddress,ParamDesc,,"IO Base Address"
+HKR,NDI\params\IOBaseAddress,flag,1,20,00,00,00
+;ndis2
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,Ndi\params\interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interrupt,flag,1,10,00,00,00
+HKR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"IOBASE"
+HKR,NDI\params\IOBase,flag,1,10,00,00,00
+
+;****************************************************************************
+; NE1000 Drivers
+;****************************************************************************
+[ne1000.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,ne1000.sys
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"NE1000"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"MS1000$"
+HKR,NDIS\NDIS2,FileName,,"ne1000.dos"
+HKR,NDIS\ODI,DriverName,,"NE1000"
+HKR,NDIS\ODI,FileName,,"ne1000.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ne1000.ndis3"
+HKR,Ndi\Install,ndis2,,"ne1000.ndis2"
+;HKR,Ndi\Install,odi,,"ne1000.odi"
+; params
+HKR,,InterruptNumber,1,04,00,00,00
+HKR,,IOBaseAddress,1,02,00,00,00
+HKR,NDI\params\InterruptNumber,resc,1,04,00,00,00
+HKR,Ndi\params\interruptNumber,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interruptNumber,flag,1,60,00,00,00
+HKR,NDI\params\IOBaseAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOBaseAddress,ParamDesc,,"IO Base Address"
+HKR,NDI\params\IOBaseAddress,flag,1,20,00,00,00
+;ndis2
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,Ndi\params\interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\interrupt,flag,1,10,00,00,00
+HKR,NDI\params\IOBase,resc,1,02,00,00,00
+HKR,NDI\params\IOBase,ParamDesc,,"IOBASE"
+HKR,NDI\params\IOBase,flag,1,10,00,00,00
+
+
+; Install NDIS3
+[ne1000.ndis3]
+CopyFiles=ne1000.ndis3.CopyFiles
+[ne1000.ndis3.CopyFiles]
+ne1000.sys
+
+; Install NDIS2
+[NE1000.ndis2]
+CopyFiles=ne1000.ndis2.CopyFiles
+[ne1000.ndis2.CopyFiles]
+ne1000.dos
+
+; Install ODI
+[NE1000.odi]
+CopyFiles=ne1000.odi.CopyFiles
+[ne1000.odi.CopyFiles]
+ne1000.com
+
+;**

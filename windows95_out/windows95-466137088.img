@@ -1,0 +1,87 @@
+edit Union", http://www.ozemail.com.au/~sgecu/
+
+[CnS]
+msn = "Computing on MSN", http://msncomputing.msn.com/
+microsoft = "Microsoft Pty Ltd", http://www.microsoft.com.au/
+netguide ="Australian Netguide", http://www.netguide.aust.com/
+compweek = "Computer Week", http://www.apnpc.com.au/compweek/
+internetau = "Internet AU", http://i-net.com.au/
+
+
+[Communicate]
+URLKey = communicate
+URL = http://communicate.msn.com/
+start = "Communicate Home Page", http://communicate.msn.com/
+email = "Send or Read E-mail", <e-mail>
+chat  = "Chat World",http://chatworld.msn.com/
+forum = "MSN Forums", http://forums.msn.com/
+bul = "Internet Community", http://forums.msn.com/internetcommunity/
+bbs   = "Browse MSN Bulletin Boards",news://msnnews.msn.com/msn.communicate.internet.NewComer
+
+
+[Find]
+URLKey = find.msn.com
+URL = http://find.msn.com/srchmain.htm
+Find = "Search MSN and the Web", http://find.msn.com/srchmain.htm?tbn=2
+Explore = "Browse All of MSN", http://find.msn.com/srchmain.htm?tbn=1
+Calendar = "View MSN Calendar", http://find.msn.com/srchmain.htm?tbn=3
+Alta = "Search Using AltaVista", http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q=&msav=msav
+InfoSeek = "Search Using InfoSeek", http://guide-p.infoseek.com/Titles?qt=QUERY&col=WW&sv=MS
+Excite = "Search Using Excite", http://www.excite.com/
+DejaNews = "Search Using Deja News", http://www.dejanews.com/
+
+[Help]
+URLKey = memberservices.msn.com
+URL = http://memberservices.msn.com/default.asp
+start = "Member Services Home Page", http://memberservices.msn.com/default.asp
+Newmem = "Getting Started on MSN", http://memberservices.msn.com/default.asp?command=gettingstarted
+AB = "Check or Change Your Account", http://accounts.msn.com/
+Feedback= "Send Us Your Feedback", http://memberservices.msn.com/default.asp?command=feedback
+blank = ""
+Help = "Help && Support", http://memberservices.msn.com/default.asp?command=help
+blank = ""
+Promo = "Hot Offers", http://hotoffers.msn.com/
+MS = "Microsoft on the Web", [MSFT]
+CSmem = "Help for CompuServe Members", http://welcome.msn.com/csmembers/
+About = "About MSN Program Viewer", <about>
+
+[MSFT]
+msh = "Microsoft Home Page", http://www.microsoft.com/
+free = "Free Stuff", http://www.microsoft.com/ie/download/
+Prod = "Internet Explorer Product News", http://www.microsoft.com/ie/
+Ols = "Internet Explorer Online Support", http://www.microsoft.com/iesupport/
+
+[Channel1]
+Show1 = "MSN News", http://www.au.msn.com/news/default.asp
+Show2 = "Vote", http:/www.au.msn.com/news/vote/default.asp
+Show3 = "Quick Headlines", http://www.au.msn.com/news/text/General.asp
+Show4 = "Commerce", http://www.au.msn.com/news/text/business.asp
+Show5 = "Sport", http://www.au.msn.com/news/text/sport.asp
+Show6 = "Weather", http://www.au.msn.com/news/weather/weather.htm
+Show7 = "World Wine Roundup", http://www.au.msn.com/news/audio/wine.htm
+Weather="National Weather",[Weather]
+
+[Weather]
+w0 = "Australia", http://www.au.msn.com/news/weather/weather.htm
+w1 = "Adelaide",  http://www.au.msn.com/news/weather/adelaide.htm
+w2 = "Brisbane", http://www.au.msn.com/news/weather/brisbane.htm
+w3 = "Cairns", http://www.au.msn.com/news/weather/cairns.htm
+w4 = "Canberra", http://www.au.msn.com/news/weather/canberra.htm
+w5 = "Darwin", http://www.au.msn.com/news/weather/darwin.htm
+w6 = "Hobart", http://www.au.msn.com/news/weather/hobart.htm
+w7 = "Melbourne", http://www.au.msn.com/news/weather/melbourne.htm
+w8 = "Perth", http://www.au.msn.com/news/weather/perth.htm
+w9 = "Sydney", http://www.au.msn.com/news/weather/sydney.htm
+
+[Channel2]
+Show1 = "Internet Gaming Zone", http://zone.msn.com/
+Show2 = "Friday's Beach", http://fridaysbeach.au.msn.com/
+Show3 = "Surfcam", http://surfcam.au.msn.com/
+Show4 = "Spokenworld", http://spokenworld.msn.com/spokenworld/
+Show5 = "STAR TREK: CONTINUUM", http://startrek.msn.com/stohtml/introcontinuum.html
+Show6 = "Entertainment Tonight", http://et.msn.com/et2/default.asp
+
+[Channel3]
+Show1 = "Reefbound", http://reefbound.au.msn.com/
+Show2 = "Shark", http://shark.au.msn.com/
+Show3 

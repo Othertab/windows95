@@ -1,0 +1,28 @@
+e Internet, and Internet Mail."	Group	499 97				yes	%1\MICROS~1<%1\Microsoft Internet>
+34	yes	"Desktop Themes           "	"Customizes your Windows® 95 desktop around a central theme.                                                "	OptionDlg	81 82 83 84 85 86 87 88 89 90 91 92 : 93 2000 2440 				yes	%1
+35	yes	"Dial-Up Networking Server"	"Configures your computer so you can dial into it from another location.                                    "	Group	1900 96				no	%M
+36	yes	"3D Pinball               "	"The classic arcade game with great graphics and sound.                                                     "	Group	1950				yes	%1\PINBALL<%1\Pinball>
+37	yes	"Visual Enhancements      "	"Unleashes the power of high-end systems to make Windows® 95 look even better.                              "	OptionDlg	71 72 74 75 76 : 2440 2530				no	%M
+68										
+69		[ Custom Module Options ]								
+70		******* Visual Enhancements *******								
+71	yes	"Full-Window Drag    "	"Displays a window's contents while it's being moved or resized.      "	Group	2410				no	%M
+72	yes	"Font Smoothing (high color)"	"Smooths jagged screen fonts to improve their look and legibility. "	Group	2419				no	%M
+74	yes	"Enhanced MS-DOS Font"	"More legible Lucida font for the MS-DOS Command Prompt window.       "	Group	2450				no	%M
+75	yes	"Animated Pointers   "	"Additional animated mouse pointers.                                   "	Group	2460				no	%W\CURSORS<%W\Cursors>
+76	yes	"High-Color Icons    "	"Replaces standard Windows 95 icons with high-color icons.             "	Group	2600				no	%M
+78										
+79		Video Resolution Check		CustomAction	"""plus.dll"",""HighColorCheck"","""""					
+80		******* Desktop Themes *******								
+81	yes	"Dangerous Creatures (256 color)  "	"Watch out and listen for the wild animals; choose a hornet for your cursor!                                        "	Group	93 2140				no	%34\THEMES<%34\Themes>
+82	yes	"Inside Your Computer (high color)"	"Discover the amazing, mysterious universe where your data goes.                                                    "	Group	93 2290				no	%34\THEMES<%34\Themes>
+83	yes	"Leonardo da Vinci (256 color)    "	"Enrich your desktop, icons and pointers with the flair of the great master himself.                                 "	Group	93 2170				no	%34\THEMES<%34\Themes>
+84	yes	"Nature (high color)              "	"Ahh, the birds and the bees and the leaves and the caterpillars. They all come to life as you work!                "	Group	93 2320				no	%34\THEMES<%34\Themes>
+85	yes	"The Golden Era (high color)      "	"Work in that industrial, art-deco 'golden age of radio' atmosphere that is pure 40's and great fun!                "	Group	93 2200				no	%34\THEMES<%34\Themes>
+86	yes	"Mystery (high color)             "	"Col. Batwing did it in your computer's haunted library with the knife!                                             "	Group	93 2260				no	%34\THEMES<%34\Themes>
+87	yes	"Science (256 color)              "	"From the elemental atom to the vastness of the universe, your desktop becomes a fascinating laboratory!            "	Group	93 2110				no	%34\THEMES<%34\Themes>
+88	yes	"The 60's USA (256 color)         "	"Right on! Return with us now to that tie-dyed wonderworld of flower children. Peace.                               "	Group	93 2080				no	%34\THEMES<%34\Themes>
+89	yes	"Sports (256 color)               "	"Get into the ultimate computing environment for sports fans!                                                        "	Group	93 2230				no	%34\THEMES<%34\Themes>
+90	yes	"Travel (high color)              "	"Take the grand tour while you work. Go by train, plane or car to see and hear it all!                              "	Group	93 2350				no	%34\THEMES<%34\Themes>
+91	yes	"Windows 95 (256 color)           "	"The desktop of the future -- where Windows 95 opens up a new world of possibilities, and  makes computing more fun."	Group	93 2050				no	%34\THEMES<%34\Themes>
+92	yes	"More Windows (high color)        "	"More Windows, Windows, Windows for your desktop.      

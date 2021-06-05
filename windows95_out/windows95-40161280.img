@@ -1,0 +1,109 @@
+------------------------------------------------------------
+
+at           1       IBM AT or 100% compatible
+
+ps2          2       IBM PS/2
+
+ptlcascade   3       Phoenix Cascade BIOS
+
+hpvectra     4       HP Vectra (A & A+)
+
+att6300plus  5       AT&T 6300 Plus
+
+acer1100     6       Acer 1100
+
+toshiba      7       Toshiba 1600 & 1200XE
+
+wyse         8       Wyse 12.5 Mhz 286
+
+tulip        9       Tulip SX
+
+zenith       10      Zenith ZBIOS
+
+at1          11      IBM PC/AT (alternative delay)
+
+at2          12      IBM PC/AT (alternative delay)
+
+css          12      CSS Labs
+
+at3          13      IBM PC/AT (alternative delay)
+
+philips      13      Philips
+
+fasthp       14      HP Vectra
+
+ibm7552      15      IBM 7552 Industrial Computer
+
+bullmicral   16      Bull Micral 60
+
+dell         17      Dell XBIOS
+
+
+/NOABOVE16
+    Specifies not to use INT 15h (ax==E801h) Compaq Bigmem support to scan 
+    for extended memory.
+
+/NOEISA
+    Specifies that HIMEM should not do EISA scanning for extended memory.
+
+/NUMHANDLES=n
+    Specifies the maximum number of extended-memory block (EMB) handles that
+    can be used simultaneously. You can specify a value from 1 to 128; the
+    default value is 32. Each additional handle requires an additional 6
+    bytes of memory.
+
+    The /NUMHANDLES option has no effect when Windows is running in 386 
+    Enhanced mode.
+
+/SHADOWRAM:ON|OFF
+    Specifies whether to disable shadow RAM (SHADOWRAM:OFF) or to leave the
+    ROM code running from RAM (SHADOWRAM:ON).
+
+    Some computers make ROM code run faster by "shadowing" it in RAM--that
+    is, by copying the ROM code into faster RAM memory at startup, which
+    uses some extended memory. On computers that use shadow RAM and have
+    less than 2 MB of RAM, HIMEM usually attempts to disable shadow RAM to
+    recover additional extended memory for Windows to use. (HIMEM can
+    disable shadow RAM only on certain types of systems.) When HIMEM
+    disables shadow RAM, the ROM code runs in the slower ROM instead of RAM;
+    therefore, your computer might run slightly slower than it did before.
+
+/TESTMEM:ON|OFF
+    Determines whether HIMEM performs a memory test when your computer
+    starts. By default, HIMEM tests the reliability of your computer's
+    extended memory each time your computer starts. This test can identify
+    memory that is no longer reliable; unreliable memory can cause system
+    instability or loss of data. HIMEM's memory test is more thorough than
+    the standard power-up memory test performed by most computers. To
+    prevent HIMEM from performing the memory test, specify /TESTMEM:OFF.
+    Disabling the memory test will shorten the startup process. (The default
+    setting is /TESTMEM:ON.)
+
+/VERBOSE
+    Directs HIMEM to display status and error messages while loading. By
+    default, HIMEM does not display any messages unless it encounters an
+    error. You can abbreviate /VERBOSE as /V. (To display status messages
+    without adding the /VERBOSE switch, press and hold the ALT key while
+    HIMEM starts and loads.)
+
+/X
+    Specifies not to use INT 15h (ax==E820h), the latest extended memory 
+    support API.
+
+
+RAMDRIVE.SYS
+============
+
+Uses part of your computer's random-access memory (RAM) to simulate a hard
+disk drive. This device driver must be loaded by a DEVICE or DEVICEHIGH
+command in your CONFIG.SYS file.
+
+RAM drives are much faster than hard disk drives because your computer can
+read information faster from memory than from a hard disk. A RAM drive
+appears to be a normal hard disk drive; you can use it just as you would any
+hard disk drive. The most important difference between a real disk drive and
+a RAM drive is that because it exists only in memory, information on a RAM
+drive is lost when you turn off or restart your computer. You can set up as
+many RAM drives as you want, up to the amount of memory your computer has.
+To do this, add one RAMDRIVE.SYS line to your CONFIG.SYS file for each
+additional RAM drive you want

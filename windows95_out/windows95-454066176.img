@@ -1,0 +1,47 @@
+LP, and hides files installed as part of MSN optional component.
+; ********************************************************************
+
+[MOS_Reg]
+; Hide optional component files in \Program Files\The Microsoft Network
+; that are not useful for the user to see or double-click.
+HKLM,Software\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,,,"%24%\%PROGRAMF%\%THEMICRO%"
+; Following two lines should fail if LFNs are disabled
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,THEMIC~1.MSN,,"LongTempName.MSN"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,"LONGTE~1.MSN",,"The Microsoft Network.MSN,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetworkHelp,,,"%18%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetworkHelp,MSNFULL.HLP,,"MSN.HLP"
+; =============== Paste "RegOnly = No" SHR keys below this line ==============
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,BBSNAV.NAV,,"BBSNAV.NAV,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,CALLNED.NED,,"CALLNED.NED,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,DATAEDCL.DLL,,"DATAEDCL.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,DNR.EXE,,"DNR.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,DSNAV.NAV,,"DSNAV.NAV,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,DSNED.NED,,"DSNED.NED,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,FINDSTUB.DLL,,"FINDSTUB.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,GUIDENAV.NAV,,"GUIDENAV.NAV,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,HOMEBASE.DLL,,"HOMEBASE.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,INSTBE.BAT,,"INSTBE.BAT,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSAF.DLL,,"MOSAF.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSFIND.DLL,,"MOSFIND.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSSHELL.DLL,,"MOSSHELL.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSSTUB.DLL,,"MOSSTUB.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MOSVIEW.EXE,,"MOSVIEW.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MSNCALL.EXE,,"MSNCALL.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MSNDUI.DLL,,"MSNDUI.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MSNFIND.EXE,,"MSNFIND.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MSNVER.TXT,,"MSNVER.TXT,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MVCL14N.DLL,,"MVCL14N.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MVPR14N.DLL,,"MVPR14N.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MVTTL14C.DLL,,"MVTTL14C.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,MVUT14N.DLL,,"MVUT14N.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,SACLIENT.DLL,,"SACLIENT.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,SECURCL.DLL,,"SECURCL.DLL,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,TEXTCHAT.EXE,,"TEXTCHAT.EXE,2"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles\MSNetwork,TREEEDCL.DLL,,"TREEEDCL.DLL,2"
+; =============== Paste SHR keys above this line ==============
+; =============== Full MSN reg keys below =====================
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00028B00-0000-0000-C000-000000000046}",,,"The Microsoft Network"
+HKLM,"Software\Microsoft\Exchange\Client\Extensions","MSN Menu Extensions",,"4.0;MOSCFG32.DLL;1;;;MSN"
+HKCR,"3INfile",,,"%BE_Install%"
+HKCR,"3INfile\Shell\Open\command",,,"%24%\%PROGRAMF%\%THEMICRO%\instbe.bat %%1"
+HKCR,"3INfile\DefaultIc

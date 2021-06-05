@@ -1,0 +1,124 @@
+Icons
+--------------
+Windows 95 does not support animated icons.
+
+Microsoft MS-DOS Utilities Running Under Windows 95
+---------------------------------------------------
+The MS-DOS utilities that are installed into the \Windows\Command 
+directory have been enhanced to work with Windows 95. The disk repair 
+utilities that shipped with older versions of MS-DOS should not be used 
+with Windows 95. Most of the other MS-DOS utilities that worked with 
+Windows 3.1 should continue to work with Windows 95, but if they were 
+bound to an older version of MS-DOS, you may need to use the SETVER 
+command to enable them.
+
+The following MS-DOS utility files will be deleted after you upgrade 
+from an earlier version of Windows:
+	Defrag.hlp
+	Mwundel.exe
+	Mwundel.hlp
+	Networks.txt
+	OS2.txt
+
+The following MS-DOS utility files will be upgraded after you upgrade 
+from an earlier version of Windows:
+	Ansi.sys
+	Attrib.exe
+	Chkdsk.exe
+	Choice.com
+	Country.sys
+	Debug.exe
+	Deltree.exe
+	Diskcopy.com
+	Display.sys
+	Doskey.com
+	Edit.com
+	Ega.cpi
+	Fc.exe
+	Fdisk.exe
+	Find.exe
+	Format.com
+	Keyb.com
+	Keyboard.sys
+	Label.exe
+	Mem.exe
+	Mode.com
+	More.com
+	Move.exe
+	Mscdex.exe
+	Nlsfunc.exe
+	Scandisk.exe
+	Scandisk.ini
+	Share.exe
+	Sort.exe
+	Subst.exe
+	Sys.com
+	Xcopy.exe
+	Defrag.exe
+	Drvspace.exe
+	Emm386.exe
+	Ramdrive.sys
+	Readme.txt
+	Setver.exe
+	Smartdrv.exe
+
+Disk Utilities
+--------------
+In general, disk utilities that perform low-level disk functions, such as 
+defragmenters, disk-repair tools, and disk compression utilities will not 
+function properly on FAT32 drives. These utilities should continue to work 
+properly on Windows 95 version 4.00.950 B on FAT16 drives. The disk utilities 
+included with Windows 95 (ScanDisk and Disk Defragmenter) have already been 
+modified and fully support FAT32. DriveSpace 3 is included with 
+Windows 95 version 4.00.950 B. It has been modified to detect FAT32 drives, 
+but it will not compress them.
+
+Norton Utilities/Anti-Virus/Navigator for Windows 95
+----------------------------------------------------
+Many of the utilities contained in these products will not function properly 
+on FAT32 drives. In some cases, (for example, Norton Disk Doctor), they will 
+not function properly on FAT16 drives under Windows 95 version 4.00.950 B. 
+For updated versions of these utilities that support FAT32 drives, contact 
+Symantec.
+
+Microsoft Plus! for Windows 95
+------------------------------
+If you install Microsoft Plus! on top of Windows 95 version 4.00.950 B, 
+it will not install any DriveSpace 3 components because Windows 95 
+version 4.00.950 B contains a newer version of DriveSpace 3.
+
+DriveSpace 3, including Compression Agent, will be enabled when you 
+install Plus!.
+
+Share.exe no longer works in MS-DOS mode
+----------------------------------------
+In order to support FAT32, SHARE support has been disabled in the 
+real-mode MS-DOS kernel (sharing support is still provided under 
+protect-mode Windows 95). 
+
+Adobe Photoshop 3.0.4
+---------------------
+If you have more than 2GB of free space on your start-up drive, 
+Photoshop may be unable to run. You may be able to work around 
+this by setting a large *maximum* size for your swap file.
+
+Windows 95 Service Pack 1 
+-------------------------
+The Windows 95 Service Pack #1 and its components will not properly 
+install or run on Windows 95 version 4.00.950 B. All of the fixes in 
+Service Pack 1 are included in Windows 95 version 4.00.950 B.
+
+Microsoft Exchange Server - Client 
+----------------------------------
+If you are running the Microsoft Exchange Server Client (if your mail 
+system is based on Microsoft Exchange), when you install or reinstall 
+Windows 95, and select MSN or Exchange, you will need to reinstall the 
+Exchange and Schedule+ software. If you do not do this, the advanced 
+Tools menus in Exchange and the Schedule+ functionality will no longer 
+work.
+
+
+
+Re-installing Programs
+----------------------
+If you upgrade your existing Windows 3.1 or Windows for 

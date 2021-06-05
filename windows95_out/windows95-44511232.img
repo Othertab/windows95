@@ -1,0 +1,103 @@
+ription"="The total size of the extended memory in kilobytes."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExtendedMemorySize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\4]
+"Name"="Free Extended Memory Size"
+"Description"="The size of free extended memory in kilobytes."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\FreeExtendedMemorySize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\5]
+"Name"="Extended Memory Manager Name"
+"Description"="The name of the extended memory manager."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExtendedMemoryManagerName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\6]
+"Name"="Extended Memory Manager Version"
+"Description"="The version information of the extended memory manager."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExtendedMemoryManagerVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\7]
+"Name"="Expanded Memory Size"
+"Description"="The total size of the expanded memory in kilobytes."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExpandedMemorySize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\8]
+"Name"="Free Expanded Memory Size"
+"Description"="The size of free expanded memory in kilobytes."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\FreeExpandedMemorySize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\9]
+"Name"="Expanded Memory Manager Name"
+"Description"="The name of the expanded memory manager."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExpandedMemoryManagerName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\10]
+"Name"="Expanded Memory Manager Version"
+"Description"="The version information of the expanded memory manager."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExpandedMemoryManagerVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\11]
+"Name"="Expanded Memory Page Frame Address"
+"Description"="The starting physical address of the expanded memory page frame."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer64"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExpandedMemoryPageFrameAddress"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\12]
+"Name"="Expanded Memory Page Frame Size"
+"Description"="The size in kilobytes of the expanded memory page frame."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExpandedMemoryPageFrameSize"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\9\13]
+"Name"="Expanded Memory Page Size"
+"Description"="The size in kilobytes of an expanded memory page, as opposed to the expanded memory page frame, which consists of a number of memory pages."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalMemory\\ExpandedMemoryPageSize"
+
+
+;===================================
+;  System Cache
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10]
+"Name"="System Cache"
+"Class"="DMTF|System Cache|001"
+"Description"="This group defines the attributes for different System Caches installed in this system."
+"Key"="1"
+; ";Table"="HKLM\\DesktopManagement\\DATA\\2\\SystemCache"
+"^Index"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\10\1]
+"Name"="System Cache Index"
+"Description"="An index into the System Cache table."
+"Column

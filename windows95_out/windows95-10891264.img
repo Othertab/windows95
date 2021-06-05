@@ -1,0 +1,140 @@
+eryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=324-327
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=328-32b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=32c-32f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=330-333
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=334-337
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=338-33b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=33c-33f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=340-343
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=344-347
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=348-34b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=34c-34f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=350-353
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=354-357
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=358-35b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=35c-35f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=360-363
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=364-367
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=368-36b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=36c-36f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=370-373
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=4
+	IO=374-377
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=4
+	IO=378-37b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=37c-37f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=380-383
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=384-387
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=388-38b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=38c-38f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=390-393
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=394-397
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=398-39b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=39c-39f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3a0-3a3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3a4-3a7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3a8-3ab
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3ac-3af
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3d0-3d3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3d4-3d7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3d8-3db
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3dc-3df
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3e0-3e3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3e4-3e7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3e8-3eb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=3ec-3ef
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3f0-3f3
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=4
+	IO=3f4-3f7
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3f8-3fb
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=1
+	IO=3fc-3ff
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=630-633
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=634-637
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=638-63b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=63c-63f
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=650-653
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=654-657
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=658-65b
+QueryIOMem: Caller=DETECTMITSUMI, rcQuery=0
+	IO=65c-65f
+Checking for: Panasonic CD-ROM Drive
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=230-237
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=250-257
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=260-267
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=270-277
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=290-297
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=300-307
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=310-317
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=320-327
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=330-337
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=340-347
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=350-357
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=360-367
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=4
+	IO=370-377
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0
+	IO=630-637
+QueryIOMem: Caller=DETECTMKECR5XX, rcQuery=0

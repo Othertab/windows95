@@ -1,0 +1,96 @@
+rotocols\nntp","URL Protocol",,""
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\nntp\DefaultIcon",,,"%11%\mailnews.dll,-3"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\Protocols\nntp\shell\open\command",,,"rundll32.exe %11%\mailnews.dll,News_RunDLL %1"
+HKCR,"news",,2,"URL:News Protocol"
+HKCR,"news","EditFlags",3,02,00,00,00
+HKCR,"news","URL Protocol",,""
+HKCR,"news\DefaultIcon",,2,"%11%\mailnews.dll,-3"
+HKCR,"news\shell\open\command",,2,"rundll32.exe %11%\mailnews.dll,News_RunDLL %1"
+HKCR,"nntp",,2,"URL:nntp Protocol"
+HKCR,"nntp","EditFlags",3,02,00,00,00
+HKCR,"nntp","URL Protocol",,""
+HKCR,"nntp\DefaultIcon",,2,"%11%\mailnews.dll,-3"
+HKCR,"nntp\shell\open\command",,2,"rundll32.exe %11%\mailnews.dll,News_RunDLL %1"
+HKCR,"snews",,2,"URL:snews Protocol"
+HKCR,"snews","EditFlags",3,02,00,00,00
+HKCR,"snews","URL Protocol",,""
+HKCR,"snews\DefaultIcon",,2,"%11%\mailnews.dll,-3"
+HKCR,"snews\shell\open\command",,2,"rundll32.exe %11%\mailnews.dll,News_RunDLL %1"
+
+[News.Add.Reg.Default]
+HKCR,CLSID\{89292103-4755-11cf-9DC2-00AA006C2B84}\ShellFolder,Attributes,1,4,00,00,00
+HKCR,CLSID\{89292103-4755-11cf-9DC2-00AA006C2B84}\Shell\Open\Command,,,"EXPLORER.EXE /root,%%1"
+HKLM,%KEY_RENAME%\WinNews,,,%25%
+HKLM,%KEY_RENAME%\WinNews,news.txt,,"Internet News.{89292103-4755-11cf-9DC2-00AA006C2B84}"
+HKLM,"%KEY_NEWSCLIENT%\%KEY_ATHENA%\shell\open\command",,,"%25%\EXPLORER.EXE /root,%25%\Internet News.{89292103-4755-11cf-9DC2-00AA006C2B84}"
+
+[Thor.Del.Reg]
+HKCR,CLSID\{89292101-4755-11cf-9DC2-00AA006C2B84},,,"Internet Mail and News"
+HKCR,CLSID\{89292101-4755-11cf-9DC2-00AA006C2B84}\InProcServer32,,,"%11%\mailnews.dll"
+HKCR,CLSID\{89292101-4755-11cf-9DC2-00AA006C2B84}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{89292101-4755-11cf-9DC2-00AA006C2B84}\ShellFolder,Attributes,1,4,00,00,a0
+HKCR,CLSID\{89292101-4755-11cf-9DC2-00AA006C2B84}\DefaultIcon,,,"%11%\mailnews.dll,-4"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{89292101-4755-11cf-9DC2-00AA006C2B84},,,"Internet Mail and News"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{89292102-4755-11cf-9DC2-00AA006C2B84},,,"%DT_MESSAGES%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{89292103-4755-11cf-9DC2-00AA006C2B84},,,"%DT_NEWS%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\mycomputer\NameSpace\{89292102-4755-11cf-9DC2-00AA006C2B84},,,"%DT_MESSAGES%"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\mycomputer\NameSpace\{89292103-4755-11cf-9DC2-00AA006C2B84},,,"%DT_NEWS%"
+
+[Uninstall.Del.Reg]
+HKCU,SOFTWARE\Microsoft\"Internet Mail and News"
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\InternetMailNews"
+HKLM,%KEY_NEWSCLIENT%\%KEY_ATHENA%
+HKLM,%KEY_MAILCLIENT%\%KEY_ATHENA%
+
+[Thor.copy.sys]
+mailnews.dll,,,8
+wab32.dll,,,8
+imnimp.dll,,,8
+htmledit.dll,,,8
+gapia32.dll,,,8
+mailnews.txt,,,8
+
+[Thor.copy.help.mail]
+mailnews.hlp
+mailnews.cnt
+wab.hlp
+wab.cnt
+
+[Thor.copy.help.news]
+;mailnews.hlp
+;mailnews.cnt
+
+[Thor.copy.inf]
+athena.inf
+
+[thor.copy.win.news]
+news.txt
+
+[thor.copy.win.mail]
+mail.txt
+wabmig.exe
+
+[thor.del.win.links]
+INTERN~1.{89
+INTERN~2.{89
+wabmig.exe
+
+[Mail.links]
+setup.ini, progman.groups,, "desktop=""..\..\%DT_DESKTOP%"""
+setup.ini, progman.groups,,"MailNews1="
+setup.ini, MailNews1,,"""%DT_MESSAGES%"", ""%25%\EXPLORER.EXE /root,%25%\Internet Mail.{89292102-4755-11cf-9DC2-00AA006C2B84}"", "%11%\mailnews.dll", -2"
+
+[News.links]
+setup.ini, progman.groups,, "desktop=""..\..\%DT_DESKTOP%"""
+setup.ini, progman.groups,,"MailNews2="
+setup.ini, MailNews2,,"""%DT_NEWS%"", ""%25%\EXPLORER.EXE /root,%25%\Internet News.{89292103-4755-11cf-9DC2-00AA006C2B84}"", "%11%\mailnews.dll", -3"
+
+[del.links]
+setup.ini, progman.groups,,"MailNews=%INET_DESC%"
+setup.ini, MailNews,, """%DT_MESSAGES%"""
+setup.ini, MailNews,, """%DT_NEWS%"""
+setup.ini, MailNews,, """%MN_README%"""
+setup.ini, progman.groups,, "desktop=""..\..\%DT_DESKTOP%"""
+setup.ini, desktop,, """%DT_MESSAGES%"""
+setup.ini, desktop,, """%DT_NEWS%"""
+se

@@ -1,0 +1,113 @@
+---
+;; Templates install section
+
+[templates.install.reg]
+HKLM,%KEY_OPTIONAL%\templates,Installed,,"1"
+
+[templates.remove.reg]
+; sets status for Maint Mode Setup to 'not installed'
+HKLM,%KEY_OPTIONAL%\templates,Installed,,"0"
+
+[templates.AddReg]
+HKCR,".doc\Word.Document.6\ShellNew",FileName,,"winword.doc"
+HKCR,".doc\WordDocument\ShellNew",FileName,,"winword2.doc"
+HKCR,".sam\AmiProDocument\ShellNew",FileName,,"amipro.sam"
+HKCR,".shw\Presentations31.Show\ShellNew",FileName,,"presenta.shw"
+HKCR,".wb2\QuattroPro.Notebook.6\ShellNew",FileName,,"quattro.wb2"
+HKCR,".wb2\QuattroPro.Graph.6\ShellNew",FileName,,"quattro.wb2"
+HKCR,".wk4\123Worksheet\ShellNew",FileName,,"lotus.wk4"
+HKCR,".wpd\WPWin6.1File\ShellNew",FileName,,"wordpfct.wpd"
+HKCR,".wpg\TextArt.Document\ShellNew",FileName,,"wordpfct.wpg"
+HKCR,".wpg\WPDraw30.Drawing\ShellNew",FileName,,"wordpfct.wpg"
+HKCR,".wpg\WPDraw30.Chart\ShellNew",FileName,,"wordpfct.wpg"
+HKCR,".xls\Excel.Sheet.5\ShellNew",FileName,,"excel.xls"
+HKCR,".xls\ExcelWorksheet\ShellNew",FileName,,"excel4.xls"
+
+; Set the Hidden attribute on the ShellNew Folder:
+; R=1; H=2; S=4; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Win,,,%25%
+HKLM,%KEY_RENAME%\Win,ShellNew,,"ShellNew,2"
+
+[templates.DelReg]
+; delete the old entries
+HKCR,.doc\ShellNew,NullFile
+HKCR,.xls\ShellNew,NullFile
+HKCR,.doc\ShellNew,FileName
+HKCR,.ppt\ShellNew,FileName
+HKCR,.pre\ShellNew,FileName
+HKCR,.sam\ShellNew,FileName
+HKCR,.wk4\ShellNew,FileName
+HKCR,.xls\ShellNew,FileName
+HKCR,.shw\ShellNew,FileName
+HKCR,.wb2\ShellNew,FileName
+HKCR,.wpd\ShellNew,FileName
+HKCR,.wpg\ShellNew,FileName
+HKCR,.wpf\ShellNew,FileName
+HKCR,.wpw\ShellNew,FileName
+HKCR,.evy\ShellNew,FileName
+HKCR,".wk4\1-2-3 Worksheet\ShellNew",FileName
+HKCR,".sam\AmiPro Document\ShellNew",FileName
+HKCR,".pre\Freelance Presentation\ShellNew",FileName
+; regenerate the location of the templates folder
+HKCU,"%KEY_CURRENT%\Explorer\Shell Folders",Templates
+HKCU,"%KEY_CURRENT%\Explorer\User Shell Folders",Templates
+
+[templates.CopyFiles]
+amipro.sam
+excel.xls
+excel4.xls
+lotus.wk4
+powerpnt.ppt
+presenta.shw
+quattro.wb2
+winword.doc
+winword2.doc
+wordpfct.wpd
+wordpfct.wpg
+
+[templates.OldFiles]
+amipro.sam              ;REVIEW
+excel.xls               ;REVIEW
+freelanc.pre            ;REVIEW
+informs.wpf             ;REVIEW
+lotus.wk4               ;REVIEW
+powerpnt.ppt            ;REVIEW
+presenta.shw            ;REVIEW
+quattro.wb2             ;REVIEW
+winword.doc             ;REVIEW
+wordpfct.wpd            ;REVIEW
+wordpfct.wpg            ;REVIEW
+wordpfct.wpw            ;REVIEW
+
+;----------------------
+; generic Shell stuff
+
+[shlold.files]
+BatMeter.Exe
+
+[shell.inis]
+system.ini,boot,,"shell=Explorer.exe"
+
+[patterns.inis]
+control.ini,Patterns,,"%NoneDesc%=%NoneDesc%"
+control.ini,Patterns,,"%BricksDesc%=187 95 174 93 186 117 234 245"
+control.ini,Patterns,,"%ButtonsDesc%=170 125 198 71 198 127 190 85"
+control.ini,Patterns,,"%CargoNetDesc%=120 49 19 135 225 200 140 30"
+control.ini,Patterns,,"%CircuitsDesc%=82 41 132 66 148 41 66 132"
+control.ini,Patterns,,"%CobblestonesDesc%=40 68 146 171 214 108 56 16"
+control.ini,Patterns,,"%ColosseumDesc%=130 1 1 1 171 85 170 85"
+control.ini,Patterns,,"%DaisiesDesc%=30 140 216 253 191 27 49 120"
+control.ini,Patterns,,"%DizzyDesc%=62 7 225 7 62 112 195 112"
+control.ini,Patterns,,"%FieldEffectDesc%=86 89 166 154 101 149 106 169"
+control.ini,Patterns,,"%KeyDesc%=254 2 250 138 186 162 190 128"
+control.ini,Patterns,,"%LiveWireDesc%=239 239 14 254 254 254 224 239"
+control.ini,Patterns,,"%PlaidDesc%=240 240 240 240 170 85 170 85"
+control.ini,Patterns,,"%RounderDesc%=215 147 40 215 40 147 213 215"
+control.ini,Patterns,,"%ScalesDesc%=225 42 37 146 85 152 62 247"
+control.ini,Patterns,,"%StoneDesc%=174 77 239 255 8 77 174 77"
+control.ini,Patterns,,"%ThatchesDesc%=248 116 34 71 143 23 34 113"
+control.ini,Patterns,,"%TileDesc%=69 130 1 0 1 130 69 170"
+control.ini,Patterns,,"%TrianglesDesc%=135 7 6 4 0 247 231 199"
+control.ini,Patterns,,"%RevengeDesc%=77 154 8 85 239 154 77 154"
+
+[shell.

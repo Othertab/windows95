@@ -1,0 +1,111 @@
+nagement\Install\Defaults\MIF\Mouse\%ComponentID\28\1\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Serial"
+"4"="PS/2"
+"5"="Infrared"
+"6"="HP-HIL"
+"7"="Bus mouse"
+"8"="ADB"
+"160"="Bus mouse DB-9"
+"161"="Bus mouse micro-DIN"
+
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\2]
+"Name"="Mouse IRQ"
+"Description"="The IRQ number used by this mouse."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\IRQ\\IRQNumber\\1"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\3]
+"Name"="Mouse Buttons"
+"Description"="The number of mouse buttons on this mouse."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Mouse\\MouseButtons"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\4]
+"Name"="Mouse Port Name"
+"Description"="The name of the port currently being used by this mouse."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\MousePortName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\5]
+"Name"="Mouse Driver Name"
+"Description"="The name of the mouse driver."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Driver\\DriverDesc"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\6]
+"Name"="Mouse Driver Version"
+"Description"="The version number of the mouse driver."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\Driver\\DriverDate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\7]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\28\8]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01
+
+
+;==========================
+;  Component ID Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1]
+"Name"="ComponentID Group"
+"Class"="DMTF|ComponentID|001"
+"Description"="This group defines attributes common to all components. This group is required."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\1]
+"Name"="Manufacturer"
+"Description"="Manufacturer of this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\2]
+"Name"="Product"
+"Description"="Product name for this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Product"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\3]
+"Name"="Version"
+"Description"="Version of this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Version"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Mouse\%ComponentID\1\4]
+"Name"="Serial Number"
+"Description"="Serial number for this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\SerialNumber"
+
+[HKEY_LOC

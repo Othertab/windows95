@@ -1,0 +1,162 @@
+      to select option 
+  [F3]        to exit the program
+  [ALT+Key]   to activate a button 
+$
+
+#MESSAGE = 23
+TITLE="CD-ROM driver Installation" 
+LINES=6x48
+$
+Installer does not have the CD-ROM driver for
+your CD-ROM. Installer will only update the 
+the CD-ROM settings of the Sound Card in 
+CONFIG.SYS. Please run the installation program
+from your CD-ROM manufacturer to install the 
+CD-ROM driver and MSCDEX program.
+$
+
+#MESSAGE = 24
+TITLE="Reboot System"
+LINES=5x49
+$
+Your CONFIG.SYS has been updated according to 
+the new settings for your CD-ROM. You must REBOOT
+your computer in order for the new settings to 
+take effect. Select [OK] to REBOOT your computer.
+Select [EXIT] to return to DOS.
+$
+
+#MESSAGE = 25
+TITLE="Reboot System"
+LINES=4x46
+$
+Your BLASTER Environment Variable is updated
+in your AUTOEXEC.BAT file. Some DOS games may
+reference this variable for initialization
+purposes. Do you wish to REBOOT your computer?
+$
+
+#MESSAGE = 26
+TITLE="Error!"
+LINES=2x48
+$
+Hardware Error Detected! Please reconfigure your
+Sound Card's I/O Port, IRQ, or DMA settings.
+$
+
+#MESSAGE = 27
+TITLE="Error!"
+LINES=4x45
+$
+You have selected the same I/O Port setting
+between your Audio, CD-ROM, and MPU-401
+device. This will cause conflict on your
+system. Please reselect a different I/O Port.
+$
+
+#MESSAGE = 28
+TITLE="Error!"
+LINES=4x47
+$
+You have selected the same IRQ settings between
+your Audio, CD-ROM, Modem, and MPU-401 device.
+This will cause conflict on your system. Please
+reselect a different IRQ setting.
+$
+
+#MESSAGE = 29
+TITLE="Error!"
+LINES=4x47
+$
+You have selected the same DMA settings between
+your Audio, and CD-ROM device. This will cause
+conflict on your system. Please reselect a
+different DMA setting.
+$
+
+#MESSAGE = 30
+TITLE="Warning!"
+LINES=3x48
+$
+You have selected Windows Sound System using IRQ
+5.  Some DOS games that support Windows Sound
+System may not work with this option.  
+$
+
+#MESSAGE = 31
+TITLE="CD-ROM driver Installation" 
+LINES=7x48
+$
+The CD-ROM you selected can not be set up at
+this time. The IDE CD-ROM device's required 
+resources, I/O address 170, 376 and IRQ 15 is 
+not avaiable in your system. Please check if 
+your system have a secondary CD-ROM controller 
+or another device that uses resource that may
+conflict with the sound card CD-ROM interface.
+$
+
+#MESSAGE = 32
+TITLE="PNP Resource Update"
+LINES=5x48
+$
+Your sound card's PNP resource has been changed.
+Select [OK] to update system PNP configuration. 
+The new settings for your sound card will not 
+be effective until the system is rebooted.
+$
+
+#MESSAGE = 33
+TITLE="PNP Resource Update"
+LINES=6x47
+$
+Your CONFIG.SYS has been updated according to 
+the new settings for your CD-ROM.  Your sound
+card PNP resource has also been changed. 
+Select [OK] to update system PNP configuration. 
+The new settings for your sound card will not 
+be effective until the system is rebooted.
+$
+
+#MESSAGE = 34
+TITLE="Installation Successful"
+LINES=10x48
+$
+Installer has completed successfully. Your
+sound card's PNP resource has been updated
+during the installation. You must reboot 
+your system in order to run sound applications.
+Select [REBOOT] now to reboot. Please first
+remove any diskettes from your floppy drives.
+Type "SNDINIT" at the DOS prompt to test and
+reconfigure your Sound Card settings when
+necessary at a later time.
+Thank you for selecting the SE14SRS/SE34SRS!
+$
+
+#MESSAGE = 35
+TITLE="Audio device not enabled"
+LINES=6x48
+$
+There is no proper audio resources assigned for
+your sound card. To play DOS games or to run 
+Audio applications, resources must be assigned 
+to the Audio device. Please check your Audio 
+configuration to see if there is any conflict 
+with other devices on your system.
+$
+
+#MESSAGE = 36
+TITLE="Modem Interface Configuration"
+LINES=6x48
+$
+SE14SRS/SE34SRS
+Modem Configuration. Select the I/O
+Address for the desired COM port.
+
+    COM1=3F8       COM2=2F8
+    COM3=3E8       COM4=2E8
+$
+
+#MESSAGE = 37
+TITLE="Modem Interfa

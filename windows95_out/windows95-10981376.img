@@ -1,0 +1,155 @@
+uickView\.DRW\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.PRE,,,"Freelance for Windows"
+HKCR,QuickView\.PRE\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.GIF,,,"Compuserve GIF File"
+;HKCR,QuickView\.GIF\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.MOD,,,"Multiplan v 3, 4.0, 4.1 File"
+HKCR,QuickView\.MOD\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.PPT,,,"PowerPoint, ver 4 files"
+HKCR,QuickView\.PPT\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.TIF,,,"Tiff File"
+;HKCR,QuickView\.TIF\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WMF,,,"Windows Metafile"
+HKCR,QuickView\.WMF\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WPD,,,"WordPerfect Demo Files"
+HKCR,QuickView\.WPD\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+[QVplus.remove.reg]
+;AddReg section
+;review next line
+HKLM,"SOFTWARE\SCC\Viewer Technology\MS1",verify
+;-----------------------------------------------------
+
+;---- File Viewers Install Sections -----------------------
+[FileViewer.Exe.Copy]
+quikview.exe
+
+[FileViewer.Sys.Copy]
+debmp.dll
+dehex.dll
+demet.dll
+dess.dll
+dewp.dll
+sccview.dll
+vsami.dll
+vsasc8.dll
+vsbmp.dll
+vsexe2.dll
+vsmsw.dll
+vsrtf.dll
+vsw6.dll
+vswk4.dll
+vswks.dll
+vsword.dll
+vswork.dll
+vswp5.dll
+vswp6.dll
+vsxl5.dll     
+msviewut.dll  
+vsqpw2.dll    
+
+[FileViewer.Sys.Del]
+; review -- do not need this for upgrades over M8 and later builds
+debmp.dll
+dehex.dll
+demet.dll
+dess.dll
+dewp.dll
+qvstub.exe
+sccch.dll
+sccexp.dll
+sccfa.dll
+sccfi.dll
+scclo.dll
+sccpg.dll
+sccut.dll
+sccview.dll
+sccvw.dll
+vsami.dll
+vsasc8.dll
+vsbmp.dll
+vsdrw.dll
+vsexe.dll
+vsexe2.dll
+vsflw.dll
+vsmsw.dll
+vsqpw.dll
+vsrtf.dll
+;vstiff.dll
+;vsgif.dll
+vsw6.dll
+vswk3.dll
+vswk4.dll
+vswks.dll
+vswmf.dll
+vsword.dll
+vswork.dll
+vswp5.dll
+vswp6.dll
+vswpf.dll
+vsxl.dll
+vsxlc.dll
+vsxl5.dll
+vspp.dll
+msviewut.dll
+vsqpw2.dll
+
+[FileViewer.Win.Del]
+qvstub.exe
+
+[FileViewer.DelReg]
+; Note, HKCR, FileViewers key deleted in winver
+; 
+HKCR,CLSID\{00021117-0000-0000-C000-000000000046}
+
+[FileViewer.AddReg]
+
+HKCR,QuickView\.XLS,,,"Excel 4 and 5 Spreadsheet Files"
+HKCR,QuickView\.XLS\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.XLC,,,"Excel 4 Chart File"
+HKCR,QuickView\.XLC\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WKS,,,"Lotus 1-2-3 File or MS Works v 3 File"
+HKCR,QuickView\.WKS\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WQ1,,,"Quattro Pro for MS-DOS File"
+HKCR,QuickView\.WQ1\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WQ2,,,"Quattro Pro v 5 for MS-DOS File"
+HKCR,QuickView\.WQ2\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WB1,,,"Quattro Pro for Windows File"
+HKCR,QuickView\.WB1\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.WRI,,,"Windows 3.x WRITE files"
+HKCR,QuickView\.WRI\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.INF,,,"setup files"
+HKCR,QuickView\.INF\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.INI,,,"configuration files"
+HKCR,QuickView\.INI\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\.CDR,,,"Corel Draw v 4,5 files"
+HKCR,QuickView\.CDR\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+;HKCR,QuickView\.EPS,,,"Encapsulated PostScript files"
+;HKCR,QuickView\.EPS\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\*,,,"Default Viewers"
+HKCR,QuickView\*\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+
+HKCR,QuickView\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+HKCR,CLSID\{F0F08735-0C36-101B-B086-0020AF07D0F4},,,"SCC Quick Viewer"
+HKCR,CLSID\{F0F08735-0C36-101B-B086-0020AF07D0F4}\InProcServer32,,,%11%\VIEWERS\sccview.dll
+HKCR,CLSID\{F0F08735-0C36-101B-B086-0020AF07D0F4}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,QuickView\.TXT,,,"Text File"

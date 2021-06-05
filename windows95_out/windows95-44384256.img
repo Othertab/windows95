@@ -1,0 +1,114 @@
+ne entry in the FRU table for this component.  But
+;  what if there is not any?  We'll put in an empty one, which can be over-
+;  ridden.
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\17]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="17"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+;  We put in this one attribute of the FRU (the rest is loaded by default for every
+;  component), the Device Group Index.  It's a "back pointer" to which group is pointing
+;  to this FRU.
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\30]
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\30\2]
+"1"=hex:14,00,00,00
+
+;====================
+;  Video BIOS Group
+;====================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21]
+"Name"="Video BIOS"
+"Class"="DMTF|Video BIOS|001"
+"Description"="This group defines the attributes for the Video BIOS."
+"Key"="1"
+"^Index"=hex:01,00,00,00
+"^ROW"="1|2|3|4|5"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21\1]
+"Name"="Video BIOS Index"
+"Description"="The index into the Video BIOS table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21\2]
+"Name"="Video BIOS Manufacturer"
+"Description"="The name of the company that wrote this Video BIOS."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(80)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\VideoBIOS\\VideoBIOSManufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21\3]
+"Name"="Video BIOS Version"
+"Description"="The version number or version string of this Video BIOS."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\VideoBIOS\\VideoBIOSVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21\4]
+"Name"="Video BIOS Release Date"
+"Description"="The Video BIOS release date."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Date"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\VideoBIOSDate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21\5]
+"Name"="Video BIOS Shadowing State"
+"Description"="If true, the Video BIOS is currently being shadowed."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\VideoBIOSShadowingState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\21\5\Enum]
+"0"="False"
+"1"="True"
+
+
+;========================================
+;  Video BIOS Characteristics Group
+;========================================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\22]
+"Name"="Video BIOS Characteristics"
+"Class"="DMTF|Video BIOS Characteristic|001"
+"Description"="This group defines the characteristics for the Video BIOS."
+"Key"="1,2"
+"^Index"=hex:03,00,00,00
+"^ROW"="^ROWNUM|2|3|4"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\22\1]
+"Name"="Video BIOS Characteristic Index"
+"Description"="This is an index into the Video BIOS Characteristics table."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\%ComponentID\22\2]
+"Name"="Video BIOS Number"
+"Description"="This is the Video BIOS number which correlates to the Video BIOS Index."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"Value"=hex:01,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Display\

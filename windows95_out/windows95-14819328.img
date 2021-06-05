@@ -1,0 +1,87 @@
+MIME\Database\Content Type\video/x-sgi-movie","Extension",2,".movie"
+HKCR,".qt","Content Type",2,"video/quicktime"
+HKCR,".mov","Content Type",2,"video/quicktime"
+HKCR,"MIME\Database\Content Type\video/quicktime","Extension",0,".mov"
+HKCR,".mpeg","Content Type",2,"video/mpeg"
+HKCR,".mpg","Content Type",2,"video/mpeg"
+HKCR,".mpe","Content Type",2,"video/mpeg"
+HKCR,"MIME\Database\Content Type\video/mpeg","Extension",2,".mpeg"
+HKCR,".avi","Content Type",2,"video/avi"
+HKCR,"MIME\Database\Content Type\video/avi","Extension",2,".avi"
+HKCR,"MIME\Database\Content Type\video/x-msvideo","Extension",2,".avi"
+
+;	Audio/Aiff Files (*.aiff, *.aif, *.aifc)
+HKCR,".aiff",,2,"aifffile"
+HKCR,".aiff","Content Type",2,"audio/aiff"
+HKCR,".aif",,2,"aifffile"
+HKCR,".aif","Content Type",2,"audio/aiff"
+HKCR,".aifc",,2,"aifffile"
+HKCR,".aifc","Content Type",2,"audio/aiff"
+HKCR,"aifffile",,2,"%AIFF%"
+HKCR,"MIME\Database\Content Type\audio/aiff","Extension",2,".aiff"
+HKCR,"MIME\Database\Content Type\audio/x-aiff","Extension",2,".aiff"
+HKCR,"aifffile\DefaultIcon",,2,"MPlayer.exe,2"
+HKCR,"aifffile\shell\open\command",,2,"""%24%\%OEM_PROGRAMF%\%OEM_MICROS%\iexplore.exe"" -nohome"
+HKCR,"aifffile\shell\open\ddeexec",,2,"""file:%%1"",,-1,,,,,"
+HKCR,"aifffile\shell\open\ddeexec\Application",,2,"IExplore"
+HKCR,"aifffile\shell\open\ddeexec\Topic",,2,"WWW_OpenURL"
+HKCR,"aifffile\CLSID",,2,"{%CLSID_MSHTML%}"
+HKCR,"MIME\Database\Content Type\audio/x-aiff","CLSID",2,"{%CLSID_MSHTML%}"
+
+;	Sound Files (*.au, *.snd)
+HKCR,".au",,2,"aufile"
+HKCR,".au","Content Type",2,"audio/basic"
+HKCR,".snd",,2,"aufile"
+HKCR,".snd","Content Type",2,"audio/basic"
+HKCR,"aufile",,2,"%AUSOUND%"
+HKCR,"aufile\CLSID",,,"{%CLSID_MSHTML%}"
+HKCR,"aufile\DefaultIcon",,2,"MPlayer.exe,2"
+HKCR,"soundrec\shell\play\command",,2,"%25%\SNDREC32.EXE /PLAY /CLOSE %%1"
+HKCR,"aufile\shell\open\command",,2,"""%24%\%OEM_PROGRAMF%\%OEM_MICROS%\iexplore.exe"" -nohome"
+HKCR,"aufile\shell\open\ddeexec",,2,"""file:%%1"",,-1,,,,,"
+HKCR,"aufile\shell\open\ddeexec\Application",,2,"IExplore"
+HKCR,"aufile\shell\open\ddeexec\Topic",,2,"WWW_OpenURL"
+HKCR,"MIME\Database\Content Type\audio/basic","Extension",2,".au"
+HKCR,"MIME\Database\Content Type\audio/basic","CLSID",2,"{%CLSID_MSHTML%}"
+HKCR,"soundrec","EditFlags",3,00,00,01,00
+
+;	Real Audio Files (*.ra, *.ram)
+HKCR,".ra",,0,"ramfile"
+HKCR,".ram",,0,"ramfile"
+HKCR,".rpm",,0,"ramfile"
+HKCR,".rpm","Content Type",0,"audio/x-pn-realaudio"
+HKCR,"ramfile",,0,"%REALAUD%"
+HKCR,"ramfile","EditFlags",1,00,00,01,00
+HKCR,"ramfile\DefaultIcon",,0,"%11%\raplayer.exe,0"
+HKCR,"ramfile\Shell\open\command",,0,"""%11%\raplayer.exe"" %%1"
+HKCR,"MIME\Database\Content Type\audio/x-pn-realaudio","CLSID",0,"{CFCDAA03-8BE4-11CF-B84B-0020AFBBCCFA}"
+HKCR,"MIME\Database\Content Type\audio/x-pn-realaudio","Extension",0,".rpm"
+
+HKCR,"avifile","EditFlags",3,00,00,01,00
+HKCR,"midfile","EditFlags",3,00,00,01,00
+HKCR,"mplayer","EditFlags",3,00,00,01,00
+HKCR,".wav","Content Type",2,"audio/wav"
+
+;	AOL Image Format Files (*.art)
+HKCR,".art",,0,"artfile"
+HKCR,".art","Content Type",0,"image/x-jg"
+HKCR,"artfile",,0,"%ART_DESC%"
+HKCR,"artfile\DefaultIcon",,0,"%11%\jgdwmie.dll,0"
+HKCR,"artfile\shell\open\command",,0,"""%40002%\iexplore.exe"" -nohome"
+HKCR,"artfile\shell\open\ddeexec",,0,"""file:%%1"",,-1,,,,,"
+HKCR,"artfile\shell\open\ddeexec\Application",,0,"IExplore"
+HKCR,"artfile\shell\open\ddeexec\Topic",,0,"WWW_OpenURL"
+HKCR,"artfile\CLSID",,2,"{%CLSID_MSHTML%}"
+HKCR,"MIME\Database\Content Type\image/x-jg","Extension",0,".art"
+HKCR,"MIME\Database\Content Type\image/x-jg","CLSID",0,"{%CLSID_MSHTML%}"
+
+
+;	Certificate Files (*.crt)
+HKCR,".crt",,0,"certificatefile"
+HKCR,".der",,0,"certificatefile"
+HKCR,".crt","Content Type",0,"application/x-x509-ca-cert"
+HKCR,".der","Content Type",0,"application/x-x509-ca-cert"
+HKCR,"certificatefile",,0,"%CERT_DESC%"
+HKCR,"certificatefile","EditFlags",1,00,00,01,00
+HKCR,"certificatefile\shell\open\command",,0,"rundll32.exe %11%\inetcpl.cpl,SiteCert_RunFromCmdLine %%1"
+HKCR,"MIME\Database\Co

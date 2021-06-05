@@ -1,0 +1,67 @@
+5sec)
+4 To delete part of a text link=LINK_text_delete_part@frontpg.HLP>(w95sec)
+3 Creating and Using Bookmarks
+4 To create a bookmark=LINK_creating_bookmark@frontpg.HLP>(w95sec)
+4 To create a link to a bookmark=LINK_bookmark_creating@frontpg.HLP>(w95sec)
+4 To delete a bookmark=LINK_bookmark_delete@frontpg.HLP>(w95sec)
+4 To visit a bookmark=LINK_bookmark_visiting
+3 Viewing Links From the FrontPage Explorer
+4 To view links to images=LINK_view_to_images@frontpg.HLP>(w95sec)
+4 To view repeated links=LINK_view_repeated@frontpg.HLP>(w95sec)
+4 To view links inside a page=LINK_view_inside@frontpg.HLP>(w95sec)
+3 Verifying and Repairing Links
+4 To repair a broken external link=LINK_repair_external@frontpg.HLP>(w95sec)
+4 To repair a broken internal link=LINK_repair_internal@frontpg.HLP>(w95sec)
+4 To verify external links=LINK_verify_external@frontpg.HLP>(w95sec)
+4 To verify internal links=LINK_verify_internal@frontpg.HLP>(w95sec)
+3 Other Link Procedures
+4 To add extended attributes to a link=LINK_extended_attributes@frontpg.HLP>(w95sec)
+4 To create a link to a multi-media file=LINK_to_multimedia_file@frontpg.HLP>(w95sec)
+4 To recalculate links=LINK_recalculate@frontpg.HLP>(w95sec)
+4 To select a text link=LINK_select@frontpg.HLP>(w95sec)
+4 To select a link color=LINK_select_color@frontpg.HLP>(w95sec)
+4 To select a visited link color=LINK_select_visited_color@frontpg.HLP>(w95sec)
+2 Creating and Configuring Forms
+3 About Forms=Overview_Forms
+3 Creating Forms
+4 To create a form=FORM_creating@frontpg.HLP>(w95sec)
+4 To delete a form=FORM_deleting@frontpg.HLP>(w95sec)
+3 Viewing and Editing a Form's Properties
+4 To add extended attributes to a form=FORM_extended_attributes@frontpg.HLP>(w95sec)
+4 To view a form's properties=FORM_view_properties@frontpg.HLP>(w95sec)
+3 Adding and Deleting Fields
+4 To add a field to a form=FORM_add_field@frontpg.HLP>(w95sec)
+4 To delete a field=FORM_delete_field@frontpg.HLP>(w95sec)
+3 Assigning Handlers To Forms
+4 To assign a form's handler=FORM_handler_assign@frontpg.HLP>(w95sec)
+3 Discussion Groups
+4 To create a discussion group=FORM_create_discussion_group@frontpg.HLP>(w95sec)
+3 Search Forms
+4 To create a search form=FORM_create_search@frontpg.HLP>(w95sec)
+3 General Forms
+4 To collect data from a form=FORM_collect_data@frontpg.HLP>(w95sec)
+3 User-Registration Forms
+4 To create a user-registration form=FORM_user_registration@frontpg.HLP>(w95sec)
+3 Custom Form Handlers
+4 To assign a custom form handler=FORM_custom_handler@frontpg.HLP>(w95sec)
+2 Creating and Editing Fields
+3 About Fields=Overview_Fields
+3 Editing Fields
+4 To add extended attributes to a field=FIELD_extended_attributes@frontpg.HLP>(w95sec)
+4 To copy a form field=FIELD_copy@frontpg.HLP>(w95sec)
+4 To create a confirmation field=FIELD_confirmation_creating@frontpg.HLP>(w95sec)
+4 To delete a form field=FIELD_delete@frontpg.HLP>(w95sec)
+4 To rename a form field=FIELD_renaming@frontpg.HLP>(w95sec)
+3 One-Line Text Boxes
+4 To change the width of a one-line text box field=FIELD_one_line_text_box_change_width@frontpg.HLP>(w95sec)
+4 To create a one-line text box field=FIELD_one_line_text_box_create@frontpg.HLP>(w95sec)
+4 To create a password field=FIELD_password_create@frontpg.HLP>(w95sec)
+4 To limit the length of entries in a one-line text box field=FIELD_one_line_text_box_entry_length@frontpg.HLP>(w95sec)
+4 To provide an initial string for a one-line text box field=FIELD_one_line_text_box_initial_string@frontpg.HLP>(w95sec)
+3 ScrollingText Boxes
+4 To change the height of a scrolling text box field=FIELD_scrolling_text_box_change_height@frontpg.HLP>(w95sec)
+4 To change the width of a scrolling text box field=FIELD_scrolling_text_box_change_width@frontpg.HLP>(w95sec)
+4 To create a scrolling text box field=FIELD_scrolling_text_box_create@frontpg.HLP>(w95sec)
+4 To provide an initial string for a scrolling text box field=FIELD_scrolling_text_box_initial_string@frontpg.HLP>(w95sec)
+3 Check Boxes
+4 To change the initial state of a check box field=FIELD_check_box_change_initial_state@frontpg.HLP

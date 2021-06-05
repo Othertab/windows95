@@ -1,0 +1,139 @@
+ble (szDrive$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if FValidDrive(szDrive$) = 0 then
+        BadArgErr 1, "IsDriveRemovable", szDrive$
+    end if
+'$endif ''DEBUG
+    IsDriveRemovable = FIsRemoveDrive(ASC(UCASE$(szDrive$)) - ASC("A") + 1)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION IsDriveNetwork (szDrive$) STATIC  AS INTEGER
+'$ifdef DEBUG
+    if FValidDrive(szDrive$) = 0 then
+        BadArgErr 1, "IsDriveNetwork", szDrive$
+    end if
+'$endif ''DEBUG
+    IsDriveNetwork = FIsRemoteDrive(ASC(UCASE$(szDrive$)) - ASC("A") + 1)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetTotalSpaceForDrive (szDrive$) STATIC  AS LONG
+'$ifdef DEBUG
+    if FValidDrive(szDrive$) = 0 then
+        BadArgErr 1, "GetTotalSpaceForDrive", szDrive$
+    end if
+'$endif ''DEBUG
+    GetTotalSpaceForDrive = LcbTotalDrive(ASC(UCASE$(szDrive$)) - ASC("A") + 1)
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetFreeSpaceForDrive (szDrive$) STATIC  AS LONG
+'$ifdef DEBUG
+    if FValidDrive(szDrive$) = 0 then
+        BadArgErr 1, "GetFreeSpaceForDrive", szDrive$
+    end if
+'$endif ''DEBUG
+    GetFreeSpaceForDrive = LcbFreeDrive(ASC(UCASE$(szDrive$)) - ASC("A") + 1)
+END FUNCTION
+
+
+'*************************************************************************
+SUB GetValidDrivesList (szSymbol$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetValidDrivesList", szSymbol$
+    end if
+'$endif ''DEBUG
+    if FGetValidDrivesList(szSymbol$) = 0 then
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetValidDrivesList", szSymbol$
+'$endif ''DEBUG
+        ERROR STFERR
+    end if
+END SUB
+
+
+'*************************************************************************
+SUB GetLocalHardDrivesList (szSymbol$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetLocalHardDrivesList", szSymbol$
+    end if
+'$endif ''DEBUG
+    if FGetLocalHardDrivesList(szSymbol$) = 0 then
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetLocalHardDrivesList", szSymbol$
+'$endif ''DEBUG
+        ERROR STFERR
+    end if
+END SUB
+
+
+'*************************************************************************
+SUB GetRemovableDrivesList (szSymbol$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetRemovableDrivesList", szSymbol$
+    end if
+'$endif ''DEBUG
+    if FGetRemovableDrivesList(szSymbol$) = 0 then
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetRemovableDrivesList", szSymbol$
+'$endif ''DEBUG
+        ERROR STFERR
+    end if
+END SUB
+
+
+'*************************************************************************
+SUB GetNetworkDrivesList (szSymbol$) STATIC
+'$ifdef DEBUG
+    if szSymbol$ = "" then
+        BadArgErr 1, "GetNetworkDrivesList", szSymbol$
+    end if
+'$endif ''DEBUG
+    if FGetNetworkDrivesList(szSymbol$) = 0 then
+'$ifdef DEBUG
+        StfApiErr saeFail, "GetNetworkDrivesList", szSymbol$
+'$endif ''DEBUG
+        ERROR STFERR
+    end if
+END SUB
+
+
+'*************************************************************************
+FUNCTION GetDOSMajorVersion STATIC  AS INTEGER
+    GetDOSMajorVersion = WGetDOSMajorVersion
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetDOSMinorVersion STATIC  AS INTEGER
+    GetDOSMinorVersion = WGetDOSMinorVersion
+END FUNCTION
+
+
+'*************************************************************************
+FUNCTION GetEnvVariableValue (szEnvVar$) STATIC  AS STRING
+'$ifdef DEBUG
+    if szEnvVar$ = "" then
+        BadArgErr 1, "GetEnvVariableValue", szEnvVar$
+    end if
+'$endif ''DEBUG
+    cb% = 1024
+    szBuf$ = STRING$(cb%, 32)
+    cbRet% = CbGetEnvVariableValue(szEnvVar$, szBuf$, cb%)
+    GetEnvVariableValue = szBuf$
+'$ifdef DEBUG
+    IF cbRet% >= cb% THEN
+        StfApiErr saeOvfl, "GetEnvVariableValue", szEnvVar$
+        ERROR STFERR
+    END IF
+'$endif ''DEBUG
+    szBuf$ = ""
+END FUNCTION
+

@@ -1,0 +1,330 @@
+RO]
+   Hz=75.020
+   kHz=67.820
+   MHz=102.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=128
+   H_BP=208
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*864*15@75Hz.MIRO]
+   Hz=75.020
+   kHz=67.820
+   MHz=102.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=128
+   H_BP=208
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*864*16@75Hz.MIRO]
+   Hz=75.020
+   kHz=67.820
+   MHz=102.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=128
+   H_BP=208
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*864*32@75Hz.MIRO]
+   Hz=75.020
+   kHz=67.820
+   MHz=102.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=128
+   H_BP=208
+
+   V_TOTAL=904
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=36
+
+[1152*870*8@75Hz.APPL]
+   Hz=75.080
+   kHz=68.680
+   MHz=100.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1456
+   H_DISP=1152
+   H_FP=32
+
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=915
+   V_DISP=870
+   V_FP=3
+   V_SYNC=3
+   V_BP=39
+
+[1152*870*15@75Hz.APPL]
+   Hz=75.080
+   kHz=68.680
+   MHz=100.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1456
+   H_DISP=1152
+   H_FP=32
+
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=915
+   V_DISP=870
+   V_FP=3
+   V_SYNC=3
+   V_BP=39
+
+[1152*870*16@75Hz.APPL]
+   Hz=75.080
+   kHz=68.680
+   MHz=100.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1456
+   H_DISP=1152
+   H_FP=32
+
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=915
+   V_DISP=870
+   V_FP=3
+   V_SYNC=3
+   V_BP=39
+
+[1152*870*32@75Hz.APPL]
+   Hz=75.080
+   kHz=68.680
+   MHz=100.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1456
+   H_DISP=1152
+   H_FP=32
+
+   H_SYNC=128
+   H_BP=144
+
+   V_TOTAL=915
+   V_DISP=870
+   V_FP=3
+   V_SYNC=3
+   V_BP=39
+
+[1152*864*8@80Hz.MIRO]
+   Hz=79.740
+   kHz=71.290
+   MHz=109.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*15@80Hz.MIRO]
+   Hz=79.740
+   kHz=71.290
+   MHz=109.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*16@80Hz.MIRO]
+   Hz=79.740
+   kHz=71.290
+   MHz=109.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*32@80Hz.MIRO]
+   Hz=79.740
+   kHz=71.290
+   MHz=109.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=16
+   H_SYNC=160
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*8@85Hz.VESA]
+   Hz=84.999
+   kHz=77.094
+   MHz=121.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1576
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=232
+
+   V_TOTAL=907
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[1152*864*15@85Hz.VESA]
+   Hz=84.999
+   kHz=77.094
+   MHz=121.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1576
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=232
+
+   V_TOTAL=907
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[1152*864*16@85Hz.VESA]
+   Hz=84.999
+   kHz=77.094
+   MHz=121.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1576
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=232
+
+   V_TOTAL=907
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[1152*864*32@85Hz.VESA]
+   Hz=84.999
+   kHz=77.094
+   MHz=121.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1576
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=232
+
+   V_TOTAL=907
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=39
+
+[1152*864*8@90Hz.MIRO]
+   Hz=90.420
+   kHz=81.380
+   MHz=125.000
+
+   H_SYN

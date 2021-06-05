@@ -1,0 +1,75 @@
+ar=IDH_PROCED_CUST_TOOL
+3 For Using Internet Mail with Other Programs
+4 Importing mail messages from Microsoft Exchange folders=MAIL_WAB_IMPORT_MESS
+4 Importing address book entries from an Exchange address book=MAIL_WAB_IMPORT_PAB
+4 Exporting Internet Mail messages to Exchange folders=MAIL_WAB_EXPORT_MESS
+4 Using Internet Mail as your default e-mail program=MAIL_SETDEFAULT
+4 Switching between Internet Mail and Internet News=NEWS_SWITCHING_MAILNEWS
+2 Troubleshooting
+3 If you have trouble using the network=NET_WHAT_WRONG@network.hlp>proc4
+3 If you have trouble using Dial-Up Networking=RNA_WHAT_WRONG@windows.hlp>proc4
+3 If you have trouble using your modem=IDH_DIAL_WHAT_WRONG@windows.hlp>proc4
+3 If you have trouble using Internet Mail=INETML_TRB
+1 Microsoft Internet News
+2 Overview
+3 Welcome to Internet News=plsnw_ovr_welcome>medium
+3 Internet News features=COOL_NEWS>medium
+3 Getting started with Internet News=NEWS_GET_STARTED>Medium
+2 How To...
+3 Add a news server=nwspr_changing_servers
+3 Subscribe To and View Newsgroups
+4 Viewing a subscribed newsgroup=nwspr_viewing_newsgroups
+4 Viewing a newsgroup without subscribing=nwspr_viewing_unsubscribed_newsgroups
+4 Subscribing to a newsgroup=nwspr_subscribing_newsgroups
+3 View Messages and Threads
+4 Viewing messages by thread=nwspr_view_threads
+4 Decoding messages=NEWS_COMBINENDECODE
+4 Viewing file attachments=NEWS_VIEW_ATTACHMENTS
+4 Automatically marking messages as read=nwspr_auto_mark
+3 Mark and Download Messages for Offline Viewing
+4 Downloading individual newsgroup messages=nwspr_download_articles
+4 Downloading messages by subscribed newsgroup=nwspr_download_newsgroups
+3 Post Messages and Replies
+4 Posting new messages in newsgroups=nwspr_posting_articles
+4 Posting replies in newsgroups=nwspr_posting_replies
+4 Replying by mail to the author=nwspr_reply_by_mail
+4 Posting encoded messages=NEWS_POSTING_ENCODED
+4 Displaying the HTML format bar=MAILNEWS_TURN_ON_HTML
+4 Changing the font type, style, and size=MAILNEWS_FORMAT_FONT
+4 Aligning paragraphs=ALIGN_FORMAT_PARAGRAPH
+4 Creating a bulleted list=MAILNEWS_INSERT_BULLET
+4 Inserting your signature into outgoing messages=NEWS_AUTO_SIG
+4 Checking the spelling in outgoing messages=NEWS_CHECK_SPELL
+4 Checking names before sending a message=WAB_RESOLVE_NAMES_NEWS
+4 Wrapping text in outgoing messages=NEWS_WRAP
+4 Saving copies of outgoing messages=nwspr_save_sent_items
+2 Tips and Tricks
+3 For Navigating and Displaying Internet News
+4 Using keyboard shortcuts=NEWS_HOTKEYS>medium
+4 Identifying message list icons=NEWS_MESSLIST_ICONS>medium
+4 Sorting messages=nwspr_sort_newsgroup_articles
+4 Adding and removing columns in the message list=nwspr_add_remove_columns
+4 Displaying messages in a preview pane=nwspr_display_preview_pane
+4 Customizing the Internet News window=nwspr_customize_display
+4 Viewing full message headers=NEWS_FULL_HDRS
+4 Customizing the icon bar=IDH_PROCED_CUST_TOOL
+3 For Reducing Disk Space Used by Internet News
+4 Removing cached messages =NEWS_PURGE_CACHE
+4 Compacting Internet Mail message folders=NEWS_COMPACT_MAIL_FOLDERS
+3 For Minimizing Connection Time
+4 Preventing messages from automatically downloading =NEWS_SUSPEND_MESSAGE_DOWNLOAD
+3 For Using Internet News with Other Programs
+4 Setting Internet News as your default news reader=NEWS_SETDEFAULT
+4 Setting Internet News to use Internet Mail for e-mail=NEWS_MAIL_EMAIL_DEF
+4 Switching between Internet Mail and Internet News=NEWS_SWITCHING_MAILNEWS
+2 Troubleshooting
+3 If you have trouble using the network=NET_WHAT_WRONG@network.hlp
+3 If you have trouble using Dial-Up Networking=RNA_WHAT_WRONG@windows.hlp
+3 If you have trouble using your modem=IDH_DIAL_WHAT_WRONG@windows.hlp
+3 If you have trouble with Internet News=INETNWS_TRB
+1 Address Book
+2 Inserting recipients from your address book=WAB_INSERTING_CONTACTS_INTO_MESSAGE_NEWS
+2 Importing address book entries from an Exchange address book=MAIL_WAB_IMPORT_PAB
+1 Accessibility
+:include accessib.cnt
+2 Using accessibility features in Internet Mail and New

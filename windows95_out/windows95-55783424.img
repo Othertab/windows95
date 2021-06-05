@@ -1,0 +1,141 @@
+ll occurrences of the text at once, click the
+  Replace All button.
+ To find text that is an entire word and not part of a longer
+  word, click Match Whole Word Only.
+ To find text with the same combination of uppercase and
+  lowercase letters as the find text, click Match Case.
+
+The first occurrence of the text is selected, and you are
+prompted to either Replace this match, or to Skip this match
+without replacing it, or to Cancel the search.
+You can also press ESC at any time to cancel the operation.
+@@!5!@
+File Open
+
+Opens an existing file or creates a new named file.
+
+ You can use the Files and Directories boxes to select the
+  path name for the file.  Or you can type the path name in the
+  File Name box.
+
+ If the file doesn't exist, a new empty file is created with
+  the specified path name.
+
+ To open the file in read-only mode, click Open Read-only.
+
+ To open the file in binary mode, click Open Binary.  Then
+  enter the line width desired in the Line Width box below the
+  Open Binary checkbox.
+@@!6!@
+File Save As
+
+Saves and names the file you are working on.
+
+ Use this to name a new unnamed file, or to rename an existing
+  file.  Use the File Save command to save an existing file
+  without renaming it.
+
+ Enter the new path name in the File Name box.  Or you can use
+  the Directories and Existing Files boxes to help you select a
+  different filename, directory, or drive.
+
+ If there's already an existing file with the same name, then
+  Edit asks you if you're sure you want to replace it with this
+  file.
+@@!8!@
+Print
+
+Prints the selected file you are working on.
+
+ To print only part of the file, select the text you want to
+  print.  In the Print dialog box, click Selected Text Only.
+
+ To print the whole file, click Complete Document.
+@@!9!@
+Colors
+
+Determines the color of screen elements.
+
+1. From the Item list, click the item you want to change.
+
+2. From the Foreground list, click the color you want the item
+   to be.
+
+3. From the Background list, click the color you want the
+   background to be.
+
+Tip:
+ To go back to the original color scheme, click Default.
+  This undoes all the changes you have made.
+@@!10!@
+Settings
+
+Determines settings for Edit.
+
+ Use Tab Stops to determine the number of tab stops on a line.
+ Use Printer Port to indicate the port your printer is
+  connected to.
+@@!101!@
+File New
+
+Creates a new file.
+
+When you save this file, you are prompted for the path name to
+save it to.
+
+Use the File Open command to open an existing file.
+@@!102!@
+File Open
+
+Opens an existing file or creates a new named file.  You can have
+up to 9 files in memory at once.
+@@!103!@
+File Close
+
+Closes the file that you're currently viewing.
+
+If you have changed the file since you last saved it, you are
+prompted to save it again.  
+@@!104!@
+File Save
+
+Saves the file that you're currently viewing.
+
+If the file is unnamed, you are prompted for a path name to
+save it to.  If an existing file has the same name as the file
+being saved, you are prompted whether you want to overwrite the
+existing file.
+@@!105!@
+File Save As
+
+Saves the file that you're currently viewing under a different
+name, or lets you name a new unnamed file.
+
+If an existing file has the same name as the file being saved,
+you are prompted whether you want to overwrite the existing
+file.
+
+You can also use this command to save a file opened in read-only
+mode to a different name.  After this is done, the file is
+in read-write mode.
+@@!106!@
+File Print
+
+Prints the current file to the printer.
+
+You can print the entire file or just the current selection.
+@@!107!@
+File Exit
+
+Exits you from Edit.
+
+If you have changed any files since you last saved them, you are
+prompted whether to save each one.
+Click Yes to save the file, or No to discard the changes, or
+Cancel to continue editing the file.
+@@!112!@
+Edit Cut
+
+Deletes the selected region and copies it to the Edit clipboard.
+
+The Edit clipboard is a temporary holding area 

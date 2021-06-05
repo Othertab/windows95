@@ -1,0 +1,90 @@
+cessories"     ; Name of Accessories menu
+StartUp_DESC     = "StartUp"
+SendTo_DESC      = "SendTo"          ; Name of SendTo folder in the Windows dir
+FileXfer_DESC    = "File Transfer"   ; Name of file tranfer app in Accessories menu
+SendToPhone_DESC = "Person On Phone" ; Name for file transfer app in SendTo menu
+StartXfer_DESC   = "VoiceView Auto Detection"   ; Name for auto start feature
+
+[Scout]
+HKR, Init, 2,, "AT &F E0 V1 *M2<cr>"
+HKR, Settings, FlowControl_Off,, "*F0"
+HKR, Settings, FlowControl_Hard,, "*F3"
+HKR, Settings, FlowControl_Soft,, "*F2"
+HKR, Settings, ErrorControl_On,, "*E9"
+HKR, Settings, ErrorControl_Off,, "*E0"
+HKR, Settings, ErrorControl_Forced,, "*E6"
+HKR, Settings, Compression_On,, "*E9"
+HKR, Settings, Compression_Off,, "*E5"
+
+[DestinationDirs]
+Register.Copy    = 17     ;LDID_INF
+VV_Sys           = 11           
+VV_Sock_Sys      = 11     ;LDID_SYS \Windows\system dir
+VV_Sock_Win      = 10     ;LDID_WIN \Windows dir
+VV_App           = 10
+VV_Help          = 18     ;LDID_HELP
+
+[ROCK_VOICE_ALL]
+HKR,,Enumerator,,serwave.vxd
+HKR,, ForwardDelay,            1,88,13    
+HKR,, SpeakerPhoneSpecs,       1, 00,00,00,00,  0f,00,00,00,  03,00,00,00,  00,00,00,00
+HKR, SpeakerPhoneEnable,      1,, "at#vls=6<cr>"
+HKR, SpeakerPhoneDisable,     1,, "at#vls=6<cr>"
+HKR, SpeakerPhoneDisable,     2,, "at#spk=0,15,,<cr>"
+HKR, SpeakerPhoneDisable,     3,, "at#vls=0<cr>"
+HKR, SpeakerPhoneMute,        1,, "at#vls=6<cr>"
+HKR, SpeakerPhoneMute,        2,, "at#spk=0,,,<cr>"
+HKR, SpeakerPhoneUnMute,      1,, "at#vls=6<cr>"
+HKR, SpeakerPhoneUnMute,      2,, "at#spk=1,,,<cr>"
+HKR, SpeakerPhoneSetVolumeGain,  1,, "at#vls=6<cr>"
+HKR, SpeakerPhoneSetVolumeGain,  2,, "at#spk=,<Vol>,<Gain><cr>"
+HKR,, VoiceManufacturerID,  1, 01,00
+HKR,, VoiceProductIDWaveIn, 1, 80,00
+HKR,, VoiceProductIDWaveOut,1, 81,00
+HKR,, VoiceProductIDHandsetWaveOut,1, 82,00
+HKR,, VoiceProductIDHandsetWaveOut,1, 83,00
+HKR, EnableCallerID, 1,, "at#cid=1<cr>"
+HKR, EnableDistinctiveRing, 1,, "at-sdr=7<cr>"
+HKR, CloseHandset,      1,, "at#cls=0<cr>"
+HKR,, VoiceMixerMid,1,02,00
+HKR,, VoiceMixerPid,1,99,01
+HKR,, VoiceMixerLineID,1,00,00,05,00
+HKR,, CallerIDPrivate,,P
+HKR,, CallerIDOutSide,,O
+HKR,, VariableTerminator,,<cr><lf>
+HKR, GenerateDigit,               1,, "at#vts=<Digit><cr>"
+HKR, Monitor,                   1,, "ATS0=0<cr>"
+HKR, Monitor,                   2,, "None"
+HKR, VoiceToDataAnswer,         1,, "at#cls=0<cr>"
+HKR, VoiceToDataAnswer,         2,, "ata<cr>"
+
+HKR, Responses, "<cr><lf>VCON<cr><lf>", 1, 00, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>DATE = ", 1, 93, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "TIME = ", 1, 94, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "NMBR = ", 1, 95, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "NAME = ", 1, 96, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "MESG = ", 1, 97, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>RING1<cr><lf>",        1, 18, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>RING2<cr><lf>",        1, 19, 00, 00,00,00,00, 00,00,00,00
+HKR, Responses, "<cr><lf>RING3<cr><lf>",        1, 1a, 00, 00,00,00,00, 00,00,00,00
+
+[ROCK_VOICE_SERWAVE]
+HKR,, VoiceProfile,         1, 27,03,00,00
+HKR,, HandsetCloseDelay,      1, 1e,00,00,00
+HKR, StartPlay,               1,, "at#vtx<cr>"
+HKR, StopPlay,                1,, "None"
+HKR, StopPlay,                2,, "NoResponse"
+HKR, StartRecord,             1,, "at#vrx<cr>"
+HKR, StopRecord,              1,, "None"
+HKR, StopRecord,              2,, "NoResponse"
+HKR,, TerminateRecord,,      "<h10>E<cr>at<cr>"
+HKR,, TerminatePlay,,        "<h10><h03>at<cr>"
+HKR,, AbortPlay,,            "<h10><h18>at<cr>"
+HKR, LineSetPlayFormat,       1,, "at#vls=0<cr>"
+HKR, LineSetRecordFormat,     1,, "None"
+HKR, LineSetRecordFormat,     2,, "NoResponse"
+HKR, HandsetSetRecordFormat,   1,,"at#vsr=7200<cr>"
+HKR, HandsetSetRecordFormat,   2,,"at#vbs=4<cr>"
+HKR, HandsetSetPlayFormat,     1,,"at#vsr=7200<cr>"
+HKR, HandsetSetPlayFormat,     2,,"at#vbs=4<cr>"
+HKR, OpenHandset,             

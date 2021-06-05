@@ -1,0 +1,158 @@
+UpgradeWIN]
+; Used to cleanup/do stuff for an upgrade case
+DelReg = Temp.DelReg
+Ini2Reg = SUIni2RegSec
+UpdateInis = SU.Update.Inis
+	 
+[Temp.DelReg]
+; Temp.DelReg is only for cleanup of keys from previous builds
+
+[SetupNewDOS]
+; This section will be installed if the user is doing new/clean install and
+; the new DOS (CMD) dir is different from the prev. one.
+; Use LDID 34 as the old dos dir.
+; backup d??space utilities and replace w/ stub batch files
+RenFiles  = ren.dxxspace.utils
+CopyFiles = dxxspace.bat.files
+
+
+[SetupUpgradeDOS]
+; Used to nuke files from their old DOS dir, if it is an upgrade and the
+; new DOS(CMD) dir is different from prev. one, we GenInstall() this section.
+; Use 34 as LDID for old dos dir (LDID_OLD_DOS) when adding DelFiles=
+
+; delete d??space utilities and replace w/ stub batch files
+; and delete ms-dos utils that are updated w/ Win 95 versions
+CopyFiles = dxxspace.bat.files
+DelFiles = del.old.msdos.files, del.dxxspace.utils, del.old.msdos.root
+RenFiles = ren.old.msdos.files
+
+
+[SetupCleanupOldDOS]
+; Used to cleanup/do stuff when prev. DOS version < 5.0
+DelFiles = del.premsdos5.files
+
+
+[NewWin.DelReg]
+; REVIEW: check this list and add/del as appropriate. Some of
+; these branches that are removed are relevant only to interim releases
+; where these obsolete keys were added. This might not be an issue for 
+; future products. Also, we might be able to move these to [SetupInit] section.
+; Warning: if you del the  HKLM,SOFTWARE\CLASSES branch, OLE 2 apps might not run
+; and will have to be re-installed.
+HKLM,SOFTWARE\FONTS
+HKLM,SOFTWARE\PRODUCTS
+HKLM,SOFTWARE\MICROSOFT\WINDOWS\4.0
+HKLM,SYSTEM\CURRENTCONTROLSET\CONTROL
+HKLM,SYSTEM\MEDIAEXTENSIONS
+
+[NewWin.AddReg]
+; Set default wallpaper to nothing for clean install:
+; (runonce.exe sets the wallpaper to these values when it's done)
+HKLM,%KEY_CURRENT%\Setup,"WallPaper",,""
+HKLM,%KEY_CURRENT%\Setup,"TileWallpaper",,"0"
+
+; Set color scheme to Windows Default for clean install:
+HKCU,"Control Panel\Appearance",Current,,"%WINDOWS_DEFAULT%"
+
+
+[NewWin.Shared]
+dosprmpt.pif
+
+[NewWin.Ren]
+;rename win.bat in root if clean install
+win_bat.bak,win.bat
+
+[SetupBeforeReboot]
+; This section is GenInstall-ed just before we update the root files, etc.
+; This is the place where you can delete more stuff like C:\WINBOOT files,
+; DBLSPACE.* if applicable, etc.
+;
+DelFiles = del.oldwinboot, del.cmd, del.oldnet, del.win.reboot, del.oldnet.win, del.bootroot
+DelReg=del.oldnetreg
+UpdateInis = msdos.sys.reboot.inis 
+
+[del.bootroot]
+;These would be left over from a single-msdos-app mode session:
+autoexec.app
+autoexec.wos
+config.app
+config.wos
+
+
+[del.oldwinboot]
+; REVIEW: this section not needed in future products
+ndishlp.sys
+net.exe
+net.msg
+neth.msg
+netstart.bak
+netstart.bat
+odihlp.exe
+protman.dos
+protman.exe
+protocol.bak
+protocol.ini
+
+[del.cmd]
+COMMAND.COM             ; REVIEW: Not needed in future releases.
+
+[del.oldnet]
+am1500t.386
+ee16.386
+elnk3.386
+elnkii.386
+ibmtok.386
+declan.386
+ne1000.386
+ne2000.386
+nice.386
+ubnei.386
+elnk16.386
+elnkmc.386
+ne3200.386
+pppmac.386
+proteon.386
+snip.386
+wsock.386,,,32          ; suppress version conflicts
+wstcp.386
+wsipx.386
+vserver.386
+nwserver.386
+vredir.386
+nwredir.386
+ndis.386
+ndis2sup.386
+msodisup.386
+filesec.386
+mssp.386
+nscl.386
+nwlink.386
+nwnblink.386
+nwsp.386
+nwsup.386
+snapshot.386
+nw416.dll
+nwlogin3.exe
+lscon.exe
+vnetsup.386
+vnetbios.386
+netbeui.386
+netcp.cpl
+netlib32.dll
+wfwnet.drv
+
+[del.oldnet.win]
+admincfg.exe
+admincfg.adm
+
+[del.oldnetreg]
+HKLM,System\CurrentControlSet\Control\NetworkProvider\Order,SCRSAVE
+
+[msdos.sys.reboot.inis]
+;Add lines to msdos.sys to make it >1024B for compatibility w/ other apps.
+;(Done right before we reboot)
+%31%\msdos.sys,Options,,";"
+%31%\msdos.sys,Options,,";The following lines are required for compatibility with other programs."
+%31%\msdos.sys,Options,,";Do not remove them (MSDOS.SYS needs to be >1024 bytes)."
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxx

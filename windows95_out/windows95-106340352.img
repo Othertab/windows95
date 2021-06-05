@@ -1,0 +1,71 @@
+le, 
+  5 MB files) to a network drive. If this happens, call Extended 
+  Systems, Inc. product support for NETBEUI configuration changes. 
+  For Extended Systems, Inc. contact information, see the topic "IR 
+  Adapter Manufacturer Names and Addresses."
+
+- If there is a problem establishing an IR link to an IrLan access 
+  point device when the network is also connected to a network 
+  interface card in the computer, try disconnecting the LAN from 
+  the network interface card. Restart the computer and make sure 
+  the computer IR device and the LAN access point IR port are within 
+  range. Then use the Infrared icon in the Control Panel to activate 
+  the IR link between the computer and the LAN access point device.
+
+- The IPX protocol may not communicate over an IrLan access point. 
+  This can be caused by the Dial-Up Adapter becoming the primary IPX 
+  adapter and no other adapter, such as the IrLan adapter, can take 
+  over. To work around this problem, create a profile that does not 
+  contain the dial-up adapter and use it when accessing the net 
+  through IrLan.
+
+- During a file copy to a NetWare server running burst mode, if the 
+  IR connection between the computer and the IrLan access point is 
+  disconnected (for example, the IR beam is blocked), the file 
+  transfer cannot recover and the computer screen will stay the same 
+  indefinitely. If this happens often, turn off burst mode to enable 
+  recovery from a disconnection. There will be performance degradation 
+  with burst mode off.
+
+- Using the virtual parallel port connection to an Extended Systems 
+  ESI-9910 JetEye Net Plus IrLan access point to send data to a printer 
+  might result in a program fault. To work around this problem, use the 
+  virtual serial port on the IrLan access point to reach the printer.
+
+Troubleshooting Tips for Using Specific Programs Over IR Links
+--------------------------------------------------------------
+- If the Windows 95 program HyperTerminal is used to transfer files, 
+  there might be trouble doing file transfers successfully over an IR 
+  link. If the Zmodem protocol fails with a link speed of 115.2 kbps, 
+  use the IR Monitor Limit Connection Speed To tab to limit the link 
+  speed to 19.2 kbps and then retry the Zmodem file transfer. 
+
+- When the Windows 95 program Direct Cable Connection (DCC) is run to 
+  establish the connection between the host and guest computers, the 
+  guest computer might display the message "Direct Cable Connection 
+  was unable to display shared folders of the host computer" and 
+  prompt the user to enter the computer name of the host computer. 
+  A convenient way to find the computer name of the host computer 
+  is on the Status tab of the Infrared Monitor interface screen.
+
+- When the Windows 95 program Direct Cable Connection (DCC) is run 
+  to establish an IR connection between the host and guest computers, 
+  DCC prompts you to select a communications port (this procedure is 
+  described in the topic "Establishing and Using the DCC IR Link 
+  Between Host and Guest"). Selecting the virtual Infrared port in 
+  this step will fail (DCC announces the virtual port is not available) 
+  in the rare case that you have suspended the Windows 95 operating 
+  system before invoking DCC in a session. To begin a new session, 
+  restart Windows 95, and DCC will work over an IR link.
+
+Troubleshooting Tip for Developing an IrDA Standard IrCOMM 
+Component for an IR Communications Driver
+-----------------------------------------------------------
+- The IrCOMM implementation in the IR communications driver that 
+  runs on Windows 95 supports full emulation of 9-wire connections, 
+  but does not support emulation of 3-wire cooked connections. A 
+  specific example of this is the inability to print over an IR 
+  virtual COM port from the MS-DOS prompt, which uses a 3-wire 
+  cooked connection. IrDA drivers developed for platforms designed 
+  to communicate with Windows 95 platforms over IR links must 
+  implement full emulation of 9-wi

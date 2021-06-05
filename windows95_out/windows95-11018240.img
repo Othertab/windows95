@@ -1,0 +1,97 @@
+eys on uninstall! ISV may be using the extensions
+HKCR,.bmp,,,Paint.Picture
+HKCR,.pcx,,,Paint.Picture
+;  point to PCX filter
+HKLM,"Software\Microsoft\Shared Tools\Graphics Filters\Import\PCX",Name,2,"%DESC_PCX2%"
+HKLM,"Software\Microsoft\Shared Tools\Graphics Filters\Import\PCX",Path,2,"%24%\%PROGRAMF%\%ACCESSOR%\pcximp32.flt"
+HKLM,"Software\Microsoft\Shared Tools\Graphics Filters\Import\PCX",Extensions,2,"pcx"
+
+[mspaint.delreg]
+HKCR,Paint.Picture
+HKCR,MSPaint
+HKCR,olcfile
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\LocalServer
+HKCR,CLSID\{D3E34B21-9D75-101A-8C3D-00AA001A1652}\InprocHandler
+
+[mspaint.install.reg]
+HKLM,%KEY_OPTIONAL%\mspaint,Installed,,"1"
+
+[mspaint.remove.reg]
+HKLM,%KEY_OPTIONAL%\mspaint,Installed,,"0"
+;--------------------------------------------
+
+;---- Hyper Terminal Install Sections ---------------
+[online.files.user]
+hypertrm.exe
+hypertrm.dll
+hticons.dll
+
+[online.files.icons]
+at&t.ht,at&tma~1.ht
+cis.ht,compus~1.ht
+mci.ht,mcimai~1.ht
+
+[online.del.files]
+hypertrm.exe    ; review -- no longer in \WINDOWS\HYPERTRM
+
+[online.files.sys]
+hypertrm.dll    ; review -- now deleted
+hticons.dll     ; review -- now deleted
+
+[online.files.hlp]
+hypertrm.cnt
+hypertrm.hlp
+
+[online.links]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"       ;creates folder
+setup.ini, group4,, """%HypTrm_Desc%"", ""%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%"",,,,,%HypTrm_ShortDesc%" ;creates link to HyperTrm FOLDER
+
+[online.links.remove]
+setup.ini, progman.groups,, "group4=%APPS_DESC%"  ;creates folder
+setup.ini, group4,, """%HypTrm_Desc%"""           ;deletes link to HyperTrm FOLDER
+setup.ini, group4,, """%HypTrm_ShortDesc%"""      ;deletes link to HyperTrm FOLDER
+
+[online.delreg]
+HKCR,htfile\shell\dial  ; review
+
+[online.addreg]
+HKCR,.ht,,,htfile
+HKCR,htfile,,,"%HypTrm_File%"
+HKCR,htfile\DefaultIcon,,,%%1
+HKCR,htfile\shell\connect\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%\HYPERTRM.EXE /d %%1"
+HKCR,htfile\shell\connect,,,%CONNECT%
+HKCR,htfile\shell,,,connect
+HKCR,htfile\shell\open\command,,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%\HYPERTRM.EXE %%1"
+HKCR,htfile\shellex\PropertySheetHandlers\TermPage,,,{1B53F360-9A1B-1069-930C-00AA0030EBC8}
+HKCR,htfile\shellex\IconHandler,,,{88895560-9AA2-1069-930E-00AA0030EBC8}
+HKCR,CLSID\{1B53F360-9A1B-1069-930C-00AA0030EBC8},,,"HyperTerminal Connection Page Ext"
+HKCR,CLSID\{1B53F360-9A1B-1069-930C-00AA0030EBC8}\InProcServer32,,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%\hypertrm.dll"
+HKCR,CLSID\{1B53F360-9A1B-1069-930C-00AA0030EBC8}\InProcServer32,ThreadingModel,,"Apartment"
+HKCR,CLSID\{88895560-9AA2-1069-930E-00AA0030EBC8},,,"HyperTerminal Icon Ext"
+HKCR,CLSID\{88895560-9AA2-1069-930E-00AA0030EBC8}\InProcServer32,,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%\hticons.dll"
+HKCR,CLSID\{88895560-9AA2-1069-930E-00AA0030EBC8}\InProcServer32,ThreadingModel,,"Apartment"
+
+; create the long-name for "Program Files"
+; Note that when you rename a long name, VFAT changes the short name from
+; foobar~1 to foobar~2.  To avoid this, we introduce a work around in the form of
+; an intermediate rename
+HKLM,%KEY_RENAME%\AppFilesRoot,,,%24%
+HKLM,%KEY_RENAME%\AppFilesRoot,%OLD_PROGRAMF%,,"%Old_Program_Files%" ; review
+HKLM,%KEY_RENAME%\AppFilesRoot,%PROGRAMF%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFilesRoot,!$!$!$!$.$!$,,"%Program_Files%,1"
+HKLM,%KEY_RENAME%\AppFiles,,,"%24%\%PROGRAMF%"
+HKLM,%KEY_RENAME%\AppFiles,%ACCESSOR%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\AppFiles,!$!$!$!$.$!$,,"%Accessories%,1"
+HKLM,%KEY_RENAME%\Accessories,,,"%24%\%PROGRAMF%\%ACCESSOR%"
+HKLM,%KEY_RENAME%\Accessories,%HYPERTER%,,!$!$!$!$.$!$
+HKLM,%KEY_RENAME%\Accessories,!$!$!$!$.$!$,,"%HyperTerminal%,1"
+
+
+; set hidden flags on the .dlls
+; R=1; H=2; S=4; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Hypertrm,,,"%24%\%PROGRAMF%\%ACCESSOR%\%HYPERTER%"
+HKLM,%KEY_RENAME%\Hypertrm,hypertrm.dll,,"hypertrm.dll,2"
+HKLM,%KEY_RENAME%\Hypertrm,hticons.dll,,"hticons.dll,2"
+HKLM,%KEY_RENAME%\Hypertrm,at&t.ht,,"%HyperTrm_ATT%.ht"
+HKLM,%KEY_RENAME%\Hypertrm,cis.ht,,"%HyperTrm_CIS%.ht"
+HKLM,%KEY_R

@@ -1,0 +1,116 @@
+"
+"Storage"="Specific"
+"Type"="DisplayString(32)"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Device\\PortName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\5]
+"Name"="Connector Type"
+"Description"="The connector used to interface with the I/O device on this parallel port."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\ConnectorType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="DB-25 Female"
+"4"="DB-25 Male"
+"5"="Centronics"
+"6"="Mini-Centronics"
+"7"="Proprietary"
+"160"="Centronics-14"
+"161"="DB-36 Female"
+"162"="Mini-Centronics-20"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\6]
+"Name"="Connector Pinout"
+"Description"="The pinout used by the I/O device on this parallel port."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\ConnectorPinout"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="XT/AT"
+"4"="PS/2"
+"5"="IEEE 1284"
+"6"="Proprietary"
+"160"="PC-98"
+"161"="PC-98-Hireso"
+"162"="PC-H98"
+"163"="PC-98Note"
+"164"="PC-98Full"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\7]
+"Name"="DMA Support"
+"Description"="If true, DMA is supported."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\DMASupport"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\7\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\8]
+"Name"="Parallel Port Capabilities"
+"Description"="Capabilities of this parallel port. This is a bit field mask with the bits defined as follows:Bit 0 set=XT/AT compatible,Bit 1 set=PS/2 compatible,Bit 2 set=ECP,Bit 3 set=EPP,Bit 4 set=PC-98,Bit 5 set=PC-98-Hireso,Bit 6 set=PC-H98."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\ParallelPort\\ParallelPortCapabilities"
+
+;  On this one, we assume only one entry in the Op State table, so we hard code
+;  the index to 1.
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\11\9]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+
+;==========================
+;  Component ID Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\1]
+"Name"="ComponentID Group"
+"Class"="DMTF|ComponentID|001"
+"Description"="This group defines attributes common to all components. This group is required."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\1\1]
+"Name"="Manufacturer"
+"Description"="Manufacturer of this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\1\2]
+"Name"="Product"
+"Description"="Product name for this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Product"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\ParallelPort\%ComponentID\1\3]
+"Name"="Version"
+"Description"="Version of this system."
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\ComponentID\\Version"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Parall

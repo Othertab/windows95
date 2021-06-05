@@ -1,0 +1,116 @@
+FileToCopyList (szSect$, szKey$, szSrc$, szDest$)
+DECLARE SUB AddSpecialFileToCopyList (szSect$, szKey$, szSrc$, szDest$)
+DECLARE SUB CopyFilesInCopyList
+DECLARE SUB RemoveIniSection (szFile$, szSect$, cmo%)
+DECLARE SUB CreateIniKeyValue (szFile$, szSect$, szKey$, szValue$, cmo%)
+DECLARE SUB RemoveIniKey (szFile$, szSect$, szKey$, cmo%)
+DECLARE SUB CreateSysIniKeyValue (szFile$, szSect$, szKey$, szValue$, cmo%)
+DECLARE SUB CreateProgmanGroup (szGroup$, szPath$, cmo%)
+DECLARE SUB CreateProgmanItem (szGroup$, szItem$, szCmd$, szOther$, cmo%)
+DECLARE SUB ShowProgmanGroup (szGroup$, Cmd%, cmo%)
+DECLARE SUB StampResource (szSect$, szKey$, szDst$, wResType%, wResId%, szData$, cbData%)
+DECLARE SUB DumpCopyList (szFile$)
+DECLARE SUB ClearCopyList
+DECLARE FUNCTION GetCopyListCost (szExtraList$, szCostList$, szNeedList$) AS LONG
+DECLARE SUB AddDos5Help (szProgName$, szProgHelp$, cmo%)
+DECLARE SUB CopyFile (szFullPathSrc$, szFullPathDst$, cmo%, fAppend%)
+DECLARE SUB RemoveFile (szFullPathSrc$, cmo%)
+DECLARE SUB BackupFile (szFullPath$, szBackup$)
+DECLARE SUB RenameFile (szFullPath$, szBackup$)
+DECLARE SUB InitInstall
+DECLARE SUB AddToBillboardList (szDll$, idDlg%, szProc$, lTicks&)
+DECLARE SUB AddBlankToBillboardList (lTicks&)
+DECLARE SUB ClearBillboardList
+DECLARE SUB OpenLogFile (szFile$, fAppend%)
+DECLARE SUB CloseLogFile
+DECLARE SUB WriteToLogFile (szStr$)
+DECLARE SUB SetCopyGaugePosition (x%, y%)
+DECLARE SUB SetRestartDir(szDir$)
+DECLARE FUNCTION RestartListEmpty AS INTEGER
+DECLARE FUNCTION ExitExecRestart AS INTEGER
+DECLARE FUNCTION FindFileUsingFileOpen (szFile$) AS STRING
+DECLARE FUNCTION IsDirWritable (szDir$) AS INTEGER
+DECLARE FUNCTION IsFileWritable (szFile$) AS INTEGER
+DECLARE FUNCTION GetNthFieldFromIniString (szLine$, iField%) AS STRING
+DECLARE SUB PrependToPath (szSrc$, szDst$, szDir$, cmo%)
+
+
+'' Error Handling
+
+'$ifdef DEBUG
+
+'' Setup API Errors
+CONST saeFail   = 0
+CONST saeInit   = 1
+CONST saeNYI    = 3
+CONST saeArg    = 4    ''must be max sae value
+
+DECLARE SUB StfApiErr (nMsg%, szApi$, szArgs$)
+DECLARE SUB BadArgErr (nArg%, szApi$, szArgs$)
+
+'' chk arg
+DECLARE FUNCTION FValidFATDir LIB "mscomstf.dll" (szDir$) AS INTEGER
+DECLARE FUNCTION CchlValidFATSubPath LIB "mscomstf.dll" (szPath$) AS INTEGER
+DECLARE FUNCTION FValidFATPath LIB "mscomstf.dll" (szPath$) AS INTEGER
+DECLARE FUNCTION FValidDrive (szDrive$) AS INTEGER
+
+DECLARE FUNCTION FValidInfSect (szSect$) AS INTEGER
+DECLARE FUNCTION FValidIniFile (szFile$) AS INTEGER
+
+'$endif ''DEBUG
+
+
+
+'' Windows system detect
+
+DECLARE FUNCTION GetWindowsMajorVersion AS INTEGER
+DECLARE FUNCTION GetWindowsMinorVersion AS INTEGER
+DECLARE FUNCTION GetWindowsMode AS INTEGER
+DECLARE FUNCTION GetWindowsDir  AS STRING
+DECLARE FUNCTION GetWindowsSysDir AS STRING
+DECLARE FUNCTION IsWindowsShared AS INTEGER
+DECLARE FUNCTION GetScreenWidth AS INTEGER
+DECLARE FUNCTION GetScreenHeight AS INTEGER
+
+
+'*************************************************************************
+'*****************  Setup Basic Wrapper Definitions  *********************
+'*************************************************************************
+FUNCTION InitSetup(szCmdLine$) STATIC AS INTEGER
+    fFrameInit = 0
+    fInstallInit = 0
+
+    IF hSetup > 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeInit, "InitSetup", szCmdLine$
+'$endif ''DEBUG
+    END IF
+
+    i% = InitFrame(szCmdLine$)
+    fFrameInit = 1
+
+    InitInstall
+    fInstallInit = 1
+
+    InitSetup = i%
+END FUNCTION
+
+
+
+'**************************************************************************
+FUNCTION InitFrame(szCmdLine$) STATIC AS INTEGER
+    IF hSetup > 0 THEN
+'$ifdef DEBUG
+        StfApiErr saeInit, "InitFrame", szCmdLine$
+'$endif ''DEBUG
+    ELSE
+        i% = InitializeFrame(szCmdLine$)
+        IF i% = -1 THEN
+            END   '' NOT an error - Usage (/?) or Command line copy operation
+        ELSEIF i% = 0 THEN
+'$ifdef DEBUG
+            StfApiErr saeFail, "InitFrame", szCmdLine$
+'$endif ''DEBUG
+            END
+        ELSE
+            InitFrame =

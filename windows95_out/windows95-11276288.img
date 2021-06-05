@@ -1,0 +1,80 @@
+ement\DATA\2\OperationalState,"^ROW",,"^ROWNUM|OperationalStatus|UsageState|AvailabilityStatus|AdministrativeState|FatalErrorCount|MajorErrorCount|WarningErrorCount"
+HKLM,DesktopManagement\DATA\2\OperationalState\DeviceGroupIndex,"1",1,00
+HKLM,DesktopManagement\DATA\2\OperationalState\OperationalStatus,"1",1,01
+HKLM,DesktopManagement\DATA\2\OperationalState\UsageState,"1",1,01
+HKLM,DesktopManagement\DATA\2\OperationalState\AvailabilityStatus,"1",1,01
+HKLM,DesktopManagement\DATA\2\OperationalState\AdministrativeState,"1",1,01
+HKLM,DesktopManagement\DATA\2\OperationalState\FatalErrorCount,"1",1,00
+HKLM,DesktopManagement\DATA\2\OperationalState\MajorErrorCount,"1",1,00
+HKLM,DesktopManagement\DATA\2\OperationalState\WarningErrorCount,"1",1,00
+
+;;;;;;;;;;;;;;;;;;;;;;;
+; Here is the registry stuff for the Service Layer
+;
+;  Install is "in progress"
+HKLM,DesktopManagement\Install\Schemas,"MIF",1,01
+;  Name of REG file to load (since not all will fit in this INF).
+HKLM,DesktopManagement\Install\Schemas\Regfiles,"MIF",,"DMIMGMT.REG"
+
+; Install the Component Group MIF Mappings
+HKLM,%DMMIF%\1,"Name",,"DMI Service Layer"
+HKLM,%DMMIF%\1,"Description",,"DMI Service Layer for cross platform manageability"
+
+HKLM,%DMMIF%\1\1,"Name",,"ComponentID"
+HKLM,%DMMIF%\1\1,"Class",,"DMTF|ComponentID|001"
+HKLM,%DMMIF%\1\1,"Description",,"This group defines attributes common to all components. This group is required."
+
+HKLM,%DMMIF%\1\1\1,"Name",,"Manufacturer"
+HKLM,%DMMIF%\1\1\1,"Description",,"Manufacturer of this system."
+HKLM,%DMMIF%\1\1\1,"Access",,"Read-Only"
+HKLM,%DMMIF%\1\1\1,"Storage",,"Common"
+HKLM,%DMMIF%\1\1\1,"Type",,"String(64)"
+HKLM,%DMMIF%\1\1\1,":Value",,"HKEY_LOCAL_MACHINE\DesktopManagement\DATA\1\1\1\Value"
+
+HKLM,%DMMIF%\1\1\2,"Name",,"Product"
+HKLM,%DMMIF%\1\1\2,"Description",,"Product Name for this System"
+HKLM,%DMMIF%\1\1\2,"Access",,"Read-Only"
+HKLM,%DMMIF%\1\1\2,"Storage",,"Common"
+HKLM,%DMMIF%\1\1\2,"Type",,"String(64)"
+HKLM,%DMMIF%\1\1\2,":Value",,"HKEY_LOCAL_MACHINE\DesktopManagement\DATA\1\1\2\Value"
+
+HKLM,%DMMIF%\1\1\3,"Name",,"Version"
+HKLM,%DMMIF%\1\1\3,"Description",,"Version of this system."
+HKLM,%DMMIF%\1\1\3,"Access",,"Read-Only"
+HKLM,%DMMIF%\1\1\3,"Storage",,"Common"
+HKLM,%DMMIF%\1\1\3,"Type",,"String(64)"
+HKLM,%DMMIF%\1\1\3,":Value",,"HKEY_LOCAL_MACHINE\DesktopManagement\DATA\1\SLInstrumented\Version"
+
+HKLM,%DMMIF%\1\1\4,"Name",,"Serial Number"
+HKLM,%DMMIF%\1\1\4,"Description",,"Serial number for this system"
+HKLM,%DMMIF%\1\1\4,"Type",,"String(64)"
+HKLM,%DMMIF%\1\1\4,"Access",,"Read-Only"
+HKLM,%DMMIF%\1\1\4,"Storage",,"Common"
+HKLM,%DMMIF%\1\1\4,":Value",,"HKEY_LOCAL_MACHINE\DesktopManagement\DATA\1\1\4\Value"
+
+HKLM,%DMMIF%\1\1\5,"Name",,"Installation"
+HKLM,%DMMIF%\1\1\5,"Description",,"The time and date when this component was installed."
+HKLM,%DMMIF%\1\1\5,"Access",,"Read-Only"
+HKLM,%DMMIF%\1\1\5,"Storage",,"Specific"
+HKLM,%DMMIF%\1\1\5,"Type",,"Date"
+HKLM,%DMMIF%\1\1\5,":Value",,"HKEY_LOCAL_MACHINE\DesktopManagement\DATA\1\1\5\Value"
+
+HKLM,%DMMIF%\1\1\6,"Name",,"Verify"
+HKLM,%DMMIF%\1\1\6,"Type",,"ENUM"
+HKLM,%DMMIF%\1\1\6,"Access",,"Read-Only"
+HKLM,%DMMIF%\1\1\6,"Storage",,"Common"
+HKLM,%DMMIF%\1\1\6,":Value",,"HKEY_LOCAL_MACHINE\DesktopManagement\DATA\1\1\6\Value"
+HKLM,%DMMIF%\1\1\6,"Description",,"A code that provides a level of verification that the componet is still installed and working."
+
+HKLM,%DMMIF%\1\1\6\ENUM,"0",,"An error occured; check status code."
+HKLM,%DMMIF%\1\1\6\ENUM,"1",,"This component does not exist."
+HKLM,%DMMIF%\1\1\6\ENUM,"2",,"Verification is not supported."
+HKLM,%DMMIF%\1\1\6\ENUM,"3",,"Reserved."
+HKLM,%DMMIF%\1\1\6\ENUM,"4",,"This component exists, but the functionality is untested."
+HKLM,%DMMIF%\1\1\6\ENUM,"5",,"This component exists,  but the functionality is unknown."
+HKLM,%DMMIF%\1\1\6\ENUM,"6",,"This component exists, and is not functioning correctly."
+HKLM,%DMMIF%\1\1\6\ENUM,"7",,"This component exists, and is functioning correctly."
+
+
+HKLM,%DMMIF%\1\2,"Name",,"Software Component Information"
+HKLM,%DM

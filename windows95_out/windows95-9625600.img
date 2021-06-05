@@ -1,0 +1,106 @@
+
+2 MSBATCH.INF Parameters
+2 Introduction = RKD_BAT_1_
+3 Setup Script Parameters
+3 Introduction = RKD_BAT_3_
+3 [Setup] = RKD_BAT_4_
+3 [System] = RKD_BAT_5_
+3 [NameAndOrg] = RKD_BAT_6_
+3 [InstallLocationsMRU] = RKD_BAT_7_
+3 [OptionalComponents] = RKD_BAT_8_
+4 [Network]
+4 Introduction = RKD_BAT_10_
+4 Installation Parameters in [Network] = RKD_BAT_11_
+4 Computer Identification Parameters in [Network] = RKD_BAT_12_
+4 Shared Installation Parameters in [Network] = RKD_BAT_13_
+4 Security Parameters in [Network] = RKD_BAT_14_
+4 User Interface Options for [Network] Parameters = RKD_BAT_15_
+3 [netcard_ID] = RKD_BAT_16_
+3 [MSTCP] = RKD_BAT_17_
+3 [NWLink] = RKD_BAT_18_
+3 [NWRedir] = RKD_BAT_19_
+3 [NWServer] = RKD_BAT_20_
+3 [VRedir] = RKD_BAT_21_
+3 [VServer] = RKD_BAT_22_
+3 [Printers] = RKD_BAT_23_
+3 [Strings] = RKD_BAT_24_
+4 [Install]
+4 Introduction = RKD_BAT_26_
+4 [Install] Example: Copying Custom Files = RKD_BAT_27_
+4 [Install] Example: Enabling User Profiles and Remote Administration = RKD_BAT_28_
+4 [Install] Example: Replacing Configuration Entries = RKD_BAT_29_
+2 MSBATCH.INF Sample File = RKD_BAT_30_
+2 Windows 95 Network Adapter INF Summary = RKD_BAT_31_
+2 Microsoft Systems Management Server
+2 Introduction = RKE_SMS_1_
+2 Microsoft Systems Management Server Overview = RKE_SMS_2_
+3 Systems Management Server Requirements
+3 Introduction = RKE_SMS_4_
+3 How Systems Management Server Reduces Migration Costs = RKE_SMS_5_
+3 The Systems Management Server Solution = RKE_SMS_6_
+3 Systems Management Server Components = RKE_SMS_7_
+3 Systems Management Server Services
+3 Introduction = RKE_SMS_9_
+4 Hardware and Software Inventory
+4 Introduction = RKE_SMS_11_
+4 How Inventory Is Processed = RKE_SMS_12_
+4 Creating an Inventory Package = RKE_SMS_13_
+4 Software Distribution and Installation
+4 Introduction = RKE_SMS_15_
+4 Querying the SQL Server Database = RKE_SMS_16_
+4 Creating Packages = RKE_SMS_17_
+4 Creating Jobs = RKE_SMS_18_
+4 Distributing the Software = RKE_SMS_19_
+3 Managing Shared Applications = RKE_SMS_20_
+4 Remote Control and Troubleshooting
+4 Introduction = RKE_SMS_22_
+4 Help Desk = RKE_SMS_23_
+4 Diagnostics = RKE_SMS_24_
+3 Network Protocol Analysis = RKE_SMS_25_
+2 Using Systems Management Server to Deploy Windows 95 = RKE_SMS_26_
+2 Windows 95 Deployment Procedures = RKE_SMS_27_
+2 Macintosh and Windows 95
+2 Introduction = RKF_MAC_1_
+2 Windows NT Services for Macintosh = RKF_MAC_2_
+2 Exchanging Mail Between Windows 95 and Macintosh = RKF_MAC_3_
+2 Switching from Macintosh to Windows 95  = RKF_MAC_4_
+2 HOSTS and LMHOSTS Files for Windows 95
+2 Introduction = RKG_HOST_1_
+2 Setting Up HOSTS Files = RKG_HOST_2_
+2 Setting Up LMHOSTS Files = RKG_HOST_3_
+2 Shortcuts for Windows 95
+2 Introduction = RKH_CUT_1_
+2 Shortcuts for Objects, Folders, and Windows Explorer = RKH_CUT_2_
+2 General Keyboard-Only Commands = RKH_CUT_3_
+2 Accessibility Shortcuts = RKH_CUT_4_
+2 Microsoft Natural Keyboard Keys = RKH_CUT_5_
+2 Accessibility
+2 Introduction = RKI_ACC_1_
+2 Accessibility in Windows 95: Overview = RKI_ACC_2_
+3 Windows 95 Accessibility Features
+3 Introduction = RKI_ACC_4_
+4 General Accessibility Enhancement Features
+4 Introduction = RKI_ACC_6_
+4 Online Help = RKI_ACC_7_
+4 Control Panel Support for Accessibility Features = RKI_ACC_8_
+4 Emergency Hot Keys = RKI_ACC_9_
+4 Accessibility Time-out = RKI_ACC_10_
+4 Accessibility Status Indicator = RKI_ACC_11_
+4 Features for Users with Low Vision
+4 Introduction = RKI_ACC_13_
+4 Scalable User Interface Elements = RKI_ACC_14_
+4 Customizable Display for Mouse Pointer = RKI_ACC_15_
+4 High-Contrast Color Schemes = RKI_ACC_16_
+4 High-Contrast Mode = RKI_ACC_17_
+4 Features for Making Keyboard and Mouse Input Easier
+4 Introduction = RKI_ACC_19_
+4 StickyKeys = RKI_ACC_20_
+4 FilterKeys = RKI_ACC_21_
+4 MouseKeys = RKI_ACC_22_
+4 ToggleKeys = RKI_ACC_23_
+4 Features for Users Who Are Deaf or Hard-of-Hearing
+4 Introduction = RKI_ACC_25_
+4 ShowSounds = RKI_ACC_26_
+4 SoundSentry = RKI_ACC_27_
+4 WinChat = RKI_ACC_28_
+4 Features Suppo

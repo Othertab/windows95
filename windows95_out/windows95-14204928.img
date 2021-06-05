@@ -1,0 +1,127 @@
+25088
+pro_sign.gif=32803,,9089,25088
+pro_site.gif=32803,,9089,25088
+pro_tria.gif=32803,,9089,25088
+pro_tria.htm=32803,,9089,25088
+pro_unta.gif=32803,,9089,25088
+pro_welc.gif=32803,,9089,25088
+[Windows 95 Disk2]
+DCE:D:\WIN95\\PRECOPY2.CAB=1
+DCE:remaining=0
+layout1.inf=17,,8472,22885
+[Windows 95 Disk2]
+format.com=13,,9089,25088
+DCE:D:\WIN95\\WIN95_02.CAB=23
+DCE:remaining=0
+sys.com=13,,8472,22885
+himem.sys=26,,8472,22885
+fdisk.exe=13,,8472,22885
+attrib.exe=13,,8472,22885
+edit.com=13,,8472,22885
+regedit.exe=25,,8472,22885
+scandisk.ini=13,,8472,22885
+debug.exe=13,,8472,22885
+chkdsk.exe=13,,8472,22885
+MSGCCMCS.DLL=32853,,8472,22885
+ACCESS.CPL=11,,8472,22885
+ENABLE3.DLL=11,,8472,22885
+ACCSTAT.EXE=25,,8472,22885
+ACCESS.HLP=18,,8472,22885
+enable.vxd=22,,8472,22885
+ENABLE2.VXD=11,,8472,22885
+ENABLE4.VXD=11,,8472,22885
+hypertrm.cnt=18,,8472,22885
+MSPAINT.CNT=18,,8472,22885
+packager.cnt=18,,8472,22885
+hticons.dll=32833,,8472,22885
+hypertrm.dll=32833,,8472,22885
+mfc30.dll=11,,8472,22885
+[Windows 95 Disk3]
+DCE:D:\WIN95\\WIN95_03.CAB=55
+DCE:remaining=0
+mfc40.dll=11,,8472,22885
+mfcd30.dll=11,,8472,22885
+mfcn30.dll=11,,8472,22885
+mfco30.dll=11,,8472,22885
+mfco40.dll=11,,8472,22885
+mspcx32.dll=32832,,8472,22885
+msvcrt20.dll=11,,8472,22885
+calc.exe=25,,8472,22885
+hypertrm.exe=32833,,8472,22885
+mspaint.exe=32832,,8472,22885
+notepad.exe=25,,8472,22885
+packager.exe=25,,8472,22885
+pbrush.exe=25,,8472,22885
+sysedit.exe=11,,8472,22885
+write.exe=25,,8472,22885
+pcximp32.flt=32832,,8; NETDLC32.INF
+;
+; DLC 32 bit support transport
+;
+; Copyright 1993-1995, Microsoft Corporation
+
+[version]
+layoutfile=layout.inf
+signature="$CHICAGO$"
+Class=NetTrans
+provider=%V_MS%
+
+[Manufacturer]
+%V_MS%=MS
+
+[MS]
+%DLC.DeviceDesc%=       DLC.ndi,        MSDLC32    ;DLC LLC 802.2 protocol
+
+
+;****************************************************************************
+; DLC NETDI information
+;****************************************************************************
+[DLC.ndi]
+AddReg=DLC.ndi.reg
+;Unique PnP ID, entry need to be present so that setup can back track
+;the device name from the driver
+DeviceID=MSDLC32
+
+;Specify if the device can be installed more than once
+; REVISIT - this should be 16!
+MaxInstance=16
+
+[DLC.ndi.reg]
+HKR,Ndi,DeviceID,,MSDLC32
+HKR,Ndi,MaxInstance,,16
+HKR,Ndi,NdiInstaller,,"dlcndi.dll,DlcNdiProc"
+
+; NDIS Info
+HKR,NDIS,LogDriverName,,DLC
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,""
+HKR,Ndi\Interfaces,DefLower,,"ndis3"
+HKR,Ndi\Interfaces,UpperRange,,""
+HKR,Ndi\Interfaces,LowerRange,,"ndis3"
+
+;****************************************************************************
+; Install and remove section names
+;****************************************************************************
+HKR,Ndi\Install,,,"DLC.Install"
+HKR,Ndi\Remove,,,"DLC.Remove"
+
+;****************************************************************************
+; Global parameters
+;****************************************************************************
+; Max Adapters Parameter (global)
+HKR,"Ndi\params\Max Adapters",location,,"System\CurrentControlSet\Services\Vxd\DLC"
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Adapters",ParamDesc,,%DLC_MAX_ADAPTERS%
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Adapters",default,,4
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Adapters",type,,int
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Adapters",min,,1
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Adapters",max,,16
+
+; Max Users Parameter (global)
+HKR,"Ndi\params\Max Users",location,,"System\CurrentControlSet\Services\Vxd\DLC"
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Users",ParamDesc,,%DLC_MAX_USERS%
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Users",default,,5
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\Ndi\params\Max Users",type,,int
+HKLM,"System\CurrentControlSet\Services\VxD\DLC\

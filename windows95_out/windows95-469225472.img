@@ -1,0 +1,59 @@
+are\Microsoft\Windows Messaging Subsystem\Profiles\Marvel Mail",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Microsoft Network Mail",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\Mail via The Microsoft Network",,,
+HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles\%MSN_MAIL_DESC%",,,
+; Delete Upgrade In Progress value for component manager
+HKLM,"Software\Microsoft\MOS\Applications","UpgradeInProgress",,
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00028B00-0000-0000-C000-000000000046}",,,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\FindExtensions\Static\MSNFind",,,
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\FindExtensions\MSNFind",,,
+HKLM,"Software\Microsoft\Exchange\Client\Extensions","MSN Menu Extensions",,
+; Following 4 values need to be deleted when reverting to 1.0 because 1.05+ values may not be backwardly compatible
+HKCU,"Software\Microsoft\MOS\Connection","ConnectProtocol",,
+HKCU,"Software\Microsoft\MOS\Connection","Phone",,
+HKCU,"Software\Microsoft\MOS\Connection","BackupPhone",,
+HKCU,"Software\Microsoft\MOS\Connection","CityBaud",,
+HKCU,"Software\Microsoft\MOS\Connection","UserInfo",,
+
+;-- remove keys identifying Windows Optional Components
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MOSTop,,,
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork,,,
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSNetwork105,,,
+
+
+[Strings]
+; ************************************************************************
+; General strings
+; ************************************************************************
+APPS_DESC         = "Accessories"                                ; name of Start/Programs submenu
+OLR_Link_Desc     = "Online Registration"                        ; Start menu shortcut (Online Registration)
+MOS_TIP           = "Microsoft's online service (requires Microsoft Exchange and a modem)"
+CallCard_Desc     = "Shortcut to The Microsoft Network"          ; MSN shortcut description
+CallCardProp_Desc = "Properties for Shortcuts to The Microsoft Network"
+Signup_Link_Desc  = "The Microsoft Network"                      ; Start menu shortcut (MSN Signup)
+M8_Link_Desc      = "The Microsoft Network"                      ; Item on Start/Programs for M8 (was Signup_Link_Desc)
+Old_Signup_Link_Desc = "Sign Up for The Microsoft Network"       ; M7 signup shortcut to delete
+MSN_MAIL_DESC     = "The Microsoft Network Online Service"       ; Exchange profile, address book, service
+MSN_Document      = "MSN Central"                                ; desktop icon description
+BE_Install        = "MSN Setup Information"                      ; Installer document description ("MSN " + .INF description)
+MSN_App_Extension = "MSN Application Extension"                  ; Description of .NAV and .NED files ("MSN " + .DLL description)
+MSN_Phone_Book    = "MSN Phone Book"                             ; Description of .PBK files
+Saved_MSN_Search  = "Saved MSN Search"                           ; Description of .MNF files (from .FND description "Saved Search")
+MSN_Attached_File = "MSN Attached File"                          ; Description of BBS attachment objects
+File_Desc         = "File"                                       ; Short description of BBS attachment
+
+; ************************************************************************
+; Menu commands
+; These are used for the common OLE object and Shell command verbs.
+; Ellipses, if required, are included here
+; ************************************************************************
+Menu_Open         = "&Open"
+Menu_Properties   = "&Properties..."
+Menu_Download     = "&Download"
+Menu_Explore      = "&Explore"
+Menu_Activate     = "&Activate"
+Menu_Find         = "On The &Microsoft Network..."
+Menu_Context_Find = "&Find..."
+
+; ************************************************************************
+; Directory names - note that that short versions must match the

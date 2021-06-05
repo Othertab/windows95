@@ -1,0 +1,63 @@
+0,,,
+ 5,MO_MENU.WA8<The Golden Era menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,3658,,3658,,,
+ 5,MO_MENUC.WA8<The Golden Era menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,5594,,5594,,,
+ 5,MO_MIN.WA8<The Golden Era minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,4528,,4528,,,
+ 5,MO_QUEST.WA8<The Golden Era question.wav>,,,,1995-10-24,,,,,,,,,SHARED,16614,,16614,,,
+ 5,MO_START.WA8<The Golden Era startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,14658,,14658,,,
+ 5,MO_STOP.WA8<The Golden Era critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,13654,,13654,,,
+
+[MT_Sports_thm]
+ 5,SPORTS.THM<Sports (256 color).theme>,,,,1995-10-24,,,,,,,,,SHARED,4966,,4966,,,
+
+[MT_Sports_bmp]
+ 5,SP_WALL.JPG<Sports wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,90714,,90714,,,
+ 5,SP_WALL.PAL<Sports wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,1048,,1048,,,
+ 5,SP_COMP.ICO<Sports My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 5,SP_NET.ICO<Sports Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 5,SP_RECYE.ICO<Sports Recycle Empty.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 5,SP_RECYF.ICO<Sports Recycle Full.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+
+[MT_Sports_cur]
+ 5,SP_BUSY.ANI<Sports busy.ani>,,,,1995-10-24,,,,,,,,,SHARED,10266,,10266,,,
+ 5,SP_WAIT.ANI<Sports wait.ani>,,,,1995-10-24,,,,,,,,,SHARED,8684,,8684,,,
+ 5,SP_ARROW.CUR<Sports arrow.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_BEAM.CUR<Sports beam.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_CROSS.CUR<Sports cross.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_HELP.CUR<Sports help.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_MOVE.CUR<Sports move.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_NESW.CUR<Sports Size NESW.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_NO.CUR<Sports no.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_NS.CUR<Sports Size NS.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_NWSE.CUR<Sports Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_PEN.CUR<Sports pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_UP.CUR<Sports up.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 5,SP_WE.CUR<Sports Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+
+[MT_Sports_scr]
+ 5,SPORTS.DLL<Sports.dll>,,,,1995-10-24,,1033,,,,,,,SHARED,182272,SYSTEM,182272,,4.40.0.310,
+ 3,WL32SCR.EXE<Sports.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,38400,SYSTEM,38400,,4.40.0.310,
+
+[MT_Sports_ttf]
+"si1" = 5,OCRAEXT.TTF,,,,1995-10-24,,,,,,,,,SHARED,47996,SYSTEM,47996,,1.0.0.0,
+
+[MT_Sports_wav16]
+ 5,SP_ASTRX.WAV<Sports asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,27856,,27856,,,
+ 5,SP_BEEP.WAV<Sports beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,7164,,7164,,,
+ 5,SP_DEFAU.WAV<Sports default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,10670,,10670,,,
+ 5,SP_EMPTY.WAV<Sports empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,44214,,44214,,,
+ 5,SP_ERROR.WAV<Sports program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,10800,,10800,,,
+ 5,SP_EXCLA.WAV<Sports exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,42494,,42494,,,
+ 5,SP_EXIT.WAV<Sports exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,31760,,31760,,,
+ 5,SP_MAX.WAV<Sports maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,15284,,15284,,,
+ 5,SP_MENU.WAV<Sports menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,6936,,6936,,,
+ 5,SP_MENUC.WAV<Sports menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,7840,,7840,,,
+ 5,SP_MIN.WAV<Sports minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,21616,,21616,,,
+ 5,SP_QUEST.WAV<Sports question.wav>,,,,1995-10-24,,,,,,,,,SHARED,19930,,19930,,,
+ 5,SP_START.WAV<Sports startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,54630,,54630,,,
+ 5,SP_STOP.WAV<Sports critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,20876,,20876,,,
+
+[MT_Sports_wav8]
+ 5,SP_ASTRX.WA8<Sports asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,15120,,15120,,,
+ 5,SP_BEEP.WA8<Sports beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,4774,,4774,,,
+ 5,SP_DEFAU.WA8<Sports default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,6526,,6526,,,
+ 5,SP_EMPTY.WA8<Sports empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED

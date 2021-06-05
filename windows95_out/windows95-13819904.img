@@ -1,0 +1,94 @@
+NetWareMenus,,,"{D824F840-ABCB-101B-9B38-00AA000C4F5D}"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D},,,"Netware hood verbs"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}\InProcServer32,,,"nwnp32.dll"
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+HKCR,Folder\shellex\ContextMenuHandlers\NetwareUNCMenu,,,"{B91C21C0-0050-101B-8A87-00AA000C4F5D}"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D},,,"Netware UNC Folder Menu"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}\InProcServer32,,,"mpr.dll"
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+; property sheets
+HKCR,Netware\shellex\PropertySheetHandlers\NetwarePage,,,"{AB2662E1-083B-101B-B4C7-00AA000C4F5D}"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D},,,"Netware Pages"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}\InProcServer32,,,"nwnp32.dll"
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}\InProcServer32,ThreadingModel,,"Apartment"
+
+[NWNP32.delreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",NWNP32
+HKLM,"SYSTEM\CurrentControlSet\Services\NWNP32"
+HKLM,"System\CurrentControlSet\Control\Print\Providers\Microsoft Print Provider for Netware"
+HKCR,Netware\shellex
+HKCR,CLSID\{4E046421-F7BC-101A-8A87-00AA000C4F5D}
+HKCR,CLSID\{AB2662E1-083B-101B-B4C7-00AA000C4F5D}
+HKCR,Folder\shellex\ContextMenuHandlers\NetwareUNCMenu
+HKCR,CLSID\{B91C21C0-0050-101B-8A87-00AA000C4F5D}
+HKCR,CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}\shellex\ContextMenuHandlers\NetWareMenus
+HKCR,CLSID\{D824F840-ABCB-101B-9B38-00AA000C4F5D}
+
+[NWNP32.copyfiles]
+;nwlscon.exe
+;nwlsproc.exe
+nwnp32.dll
+nwpp32.dll
+nw16.dll
+nwnet32.dll
+
+[NETWARE.addreg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETWARE,StaticVxD,,"vnetware.386"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETWARE,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETWARE,NetClean,1,1
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VIPX,StaticVxD,,"vipx.386"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VIPX,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VIPX,NetClean,1,1
+
+[NETWARE.delreg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VNETWARE
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\VIPX
+
+[NETWARE.copyfiles]
+vnetware.386,,,16
+vipx.386,,,16
+netware.hlp,,,16
+nwpopup.exe,,,16
+
+;****************************************************************************
+;   PC-NFS
+;****************************************************************************
+
+[PCNFS50.ndi]
+AddReg=PCNFS50.ndi.reg
+DeviceID=PCNFS50
+[PCNFS50.ndi.reg]
+HKR,Ndi,NetworkProvider3,,"PCNFS"
+HKR,Ndi,DeviceID,,PCNFS50
+HKR,Ndi,NdiInstaller,,"netdi.dll,ThirdPartyClientNdiProc"
+HKR,Ndi\Interfaces,DefUpper,,"winnet31"
+HKR,Ndi\Interfaces,UpperRange,,"winnet31,multinet31"
+HKR,Ndi\Interfaces,DefLower,,"pcnfs"
+HKR,Ndi\Interfaces,LowerRange,,"pcnfs"
+HKR,Ndi\Interfaces,ExcludeAny,,"winnet31,multinet31"
+HKR,Ndi\Compatibility,Multinet31,,"NFSLINK"
+HKR,Ndi\Install,winnet31,,"PCNFS50.inst"
+HKR,Ndi\Remove ,winnet31,,"PCNFS50.rmv"
+HKR,Ndi\Install,multinet31,,"PCNFS50_m.inst"
+HKR,Ndi\Remove ,multinet31,,"PCNFS50_m.rmv"
+[PCNFS50.inst]
+AddReg=PCNFS.addreg,WNPP32.addreg,RMNET.Addreg,PrimaryNet.AddReg
+CopyFiles=PCNFS.copyfiles,WNPP32.copyfiles
+[PCNFS50.rmv]
+DelReg=PCNFS.delreg,WNPP32.delreg,RMNET.Delreg,PrimaryNet.DelReg
+[PCNFS50_m.inst]
+AddReg=PCNFS.addreg,WNPP32.addreg,RMNET.Addreg
+CopyFiles=PCNFS.copyfiles,WNPP32.copyfiles
+DelReg=PrimaryNet.DelReg
+[PCNFS50_m.rmv]
+DelReg=PCNFS.delreg,WNPP32.delreg,RMNET.Delreg
+
+[PCNFS.addreg]
+HKLM,"SYSTEM\CurrentControlSet\Control\NetworkProvider\Order",PCNFS,,
+HKLM,"SYSTEM\CurrentControlSet\Services\PCNFS\NetworkProvider",Name,,"PC-NFS"
+HKLM,"SYSTEM\CurrentControlSet\Services\PCNFS\NetworkProvider",ProviderPath,,"pcnfs.drv"
+HKLM,"SYSTEM\CurrentControlSet\Services\PCNFS\NetworkProvider",Description,,"SunSoft PC-NFS"
+HKLM,"SYSTEM\CurrentControlSet\Services\PCNFS\NetworkProvider",NetID,1,00,00,07,00
+HKLM,"SYSTEM\CurrentControlSet\Services\PCNFS\NetworkProvider",Windows31

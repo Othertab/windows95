@@ -1,0 +1,172 @@
+1]
+UpdateInis = MSDOSSYS.1
+
+[MSDOSSYS.0]
+%31%\msdos.sys,Options,,"BootGUI=0"
+
+[MSDOSSYS.1]
+%31%\msdos.sys,Options,,"BootGUI=1"
+
+
+[FILESYNC.UninstallDelReg]
+; Briefcase Inproc server
+HKCR,CLSID\{85BBD920-42A0-1069-A2E4-08002B30309D}
+
+; New Menu entry
+HKCR,.bfc
+HKCR,Briefcase
+
+; netware.drv remove using wininit.ini
+[NET_NETWAREDRV_RMV]
+UpdateInis = WININIT.NETWAREDRV.RMV
+[WININIT.NETWAREDRV.RMV]
+wininit.ini, Rename,,"NUL=%11%\netware.drv",1
+wininit.ini, Rename,,"NUL=%10%\netware.drv",1
+
+; netware.drv rename using wininit.ini
+[NET_NETWAREDRV_RENAME]
+UpdateInis = WININIT.NETWAREDRV.RENAME
+[WININIT.NETWAREDRV.RENAME]
+wininit.ini, Rename,,"%11%\netware.drv=%11%\netware.tmp"
+
+
+[NET_NETWAREDRV_SBSRMV]
+UpdateInis = WININIT.NETWAREDRV.SBSRMV
+[WININIT.NETWAREDRV.SBSRMV]
+wininit.ini, Rename,,"NUL=%10%\netware.drv",1
+
+; netware.drv rename using wininit.ini
+[NET_NETWAREDRV_SBSRENAME]
+UpdateInis = WININIT.NETWAREDRV.SBSRENAME
+[WININIT.NETWAREDRV.SBSRENAME]
+wininit.ini, Rename,,"%10%\netware.drv=%10%\netware.tmp"
+
+
+
+; net odi install section
+[NET_ODI.add]
+AddReg=NET_ODI.add.reg
+CopyFiles=NET_ODI.add.copy.sys,NET_ODI.add.copy.boot
+[NET_ODI.add.reg]
+;msodisup vxd install
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\MSODISUP,StaticVxD,,"msodisup.vxd"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\MSODISUP,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\MSODISUP,NetClean,1,1
+[NET_ODI.add.copy.sys]
+msodisup.vxd
+[NET_ODI.add.copy.boot]
+odihlp.exe
+
+[NET_ODI.rmv]
+DelReg=NET_ODI.rmv.reg
+[NET_ODI.rmv.reg]
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\MSODISUP,StaticVxD
+
+; Server-based Setup
+
+; SBS section executes for all SBS environments.  SBS.msnet for systems using Microsoft clients, SBS.thirdpartynet
+; for all non-Microsoft clients.
+
+; *.hd executes for both local and remote home directories.  *.hd.localHome and *.hd.remoteHome
+; run for local and remote home directories.
+
+[SBS]
+AddReg=SBS.add.reg
+CopyFiles=SBS.copy.winboot 
+
+
+[SBS.msnet]
+AddReg=SBS.msnet.add.reg
+CopyFiles=SBS.msnet.copy.winboot
+
+[SBS.msnet.hd]
+CopyFiles=SBS.msnet.hd.copy.winboot
+
+[SBS.msnet.hd.localHome]
+
+[SBS.msnet.hd.remoteHome]
+
+[SBS.msnet.floppydisk]
+
+[SBS.msnet.rpl]
+CopyFiles=SBS.msnet.rpl.copy.winboot
+
+
+[SBS.thirdpartynet]
+AddReg=SBS.thirdpartynet.add.reg
+
+[SBS.thirdpartynet.hd]
+
+[SBS.thirdpartynet.hd.localHome]
+
+[SBS.thirdpartynet.hd.remoteHome]
+
+[SBS.thirdpartynet.floppydisk]
+
+[SBS.thirdpartynet.rpl]
+
+
+[SBS.hd]
+CopyFiles=SBS.hd.copy.winboot
+
+[SBS.hd.localHome]
+
+[SBS.hd.remoteHome]
+
+
+[SBS.floppydisk]
+CopyFiles=SBS.rplAndFd.copy.winboot
+AddReg=SBS.rplAndFd.addreg
+
+[SBS.rpl]
+CopyFiles=SBS.rplAndFd.copy.winboot,SBS.rpl.copy.winboot
+AddReg=SBS.rplAndFd.addreg
+
+[SBS.add.reg]
+HKU,.Default\Software\Microsoft\Windows\CurrentVersion\Policies\WinOldApp,NoRealMode,1,1
+HKCU,"\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders",Fonts,,"%25%\%FontDir%"
+HKCU,"\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders",Fonts,,"%25%\%FontDir%"
+
+[SBS.msnet.add.reg]
+HKLM,System\CurrentControlSet\Services\VxD\SNAPSHOT,StaticVxD,,"snapshot.vxd"
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\SNAPSHOT,Start,1,00
+HKLM,SYSTEM\CurrentControlSet\Services\VxD\SNAPSHOT,NetClean,1,1
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",Transition,1,1
+HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",SetupN,1,1
+
+[SBS.thirdpartynet.add.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",SetupN,1,1
+
+[SBS.rplAndFd.addreg]
+HKCU,Software\Microsoft\Windows\CurrentVersion\Policies\System,NoConfigPage,1,1
+
+[SBS.copy.winboot]
+
+[SBS.msnet.copy.winboot]
+ndishlp.sys
+net.exe
+net.msg
+protman.dos
+protman.exe
+snapshot.exe
+
+[SBS.msnet.hd.copy.winboot]
+neth.msg
+
+[SBS.msnet.rpl.copy.winboot]
+nwrpltrm.com
+
+[SBS.hd.copy.winboot]
+LOGOW.SYS
+LOGOS.SYS
+
+[SBS.rpl.copy.winboot]
+ramdrive.sys
+rplboot.sys
+
+[SBS.rplAndFd.copy.winboot]
+setmdir.exe
+
+[Manufacturer]
+
+[DestinationDirs]

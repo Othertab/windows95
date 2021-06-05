@@ -1,0 +1,103 @@
+up.ini, group3,, """%Setup_WFW311%"""
+setup.ini, group3,, """%PIFED_DESC%"""
+setup.ini, group3,, """%PIFED_WFW311%"""
+setup.ini, group3,, """%ReadMe_DESC%"""
+setup.ini, group3,, """%ReadMe_WFW311%"""
+setup.ini, group3,, """%DOSPrompt_DESC%"""
+setup.ini, group3,, """%Tutorial_DESC%"""
+setup.ini, group3,, """%Fileman_DESC%"""
+setup.ini, group3,, """%Fileman_WFW311%"""
+setup.ini, group3,, """%CPanel_DESC%"""
+setup.ini, group3,, """%CPanel_WFW311%"""
+setup.ini, group3,, """%PRINTMAN_DESC%"""
+setup.ini, group3,, """%PRINTMAN_WFW311%"""
+setup.ini, group3,, """%MSDOSPrompt_DESC%"""
+setup.ini, group3,, """%MSDOSPrompt_WFW311%"""
+setup.ini, progman.groups,, "group3_USA=Main"
+setup.ini, progman.groups,, "group4_USA=Accessories"
+setup.ini, group3_USA,, """ClipBook Viewer""" 
+setup.ini, group3_USA,, """Clipboard Viewer"""
+setup.ini, group3_USA,, """Clipboard"""
+setup.ini, group3_USA,, """Windows Setup"""
+setup.ini, group3_USA,, """PIF Editor"""
+setup.ini, group3_USA,, """Read Me"""
+setup.ini, group3_USA,, """DOS Prompt"""
+setup.ini, group3_USA,, """Tutorial"""
+setup.ini, group3_USA,, """File Manager"""
+setup.ini, group3_USA,, """Control Panel"""
+setup.ini, group3_USA,, """Print Manager"""
+setup.ini, group3_USA,, """MS-DOS Prompt"""
+setup.ini, group4_USA,, """Clock"""
+setup.ini, group4_USA,, """Object Packager"""
+setup.ini, group4_USA,, """Recorder"""
+setup.ini, group4_USA,, """Write"""
+setup.ini, group4_USA,, """Terminal"""
+setup.ini, group4_USA,, """PIF Editor"""
+setup.ini, group4_USA,, """Media Player"""
+setup.ini, group4,, """%Defrag_DESC%"""
+setup.ini, group4,, """%SysMon_DESC%"""
+setup.ini, group4,, """%NetWatch_DESC%"""
+setup.ini, group4,, """%AdmCfg_DESC%"""
+setup.ini, group11,, """%CreateBrief_Desc%"""
+setup.ini, group4,, """%Mapisp32_Link_Desc%"""
+setup.ini, group4,, """%WinBug_DESC%"""
+setup.ini, group4,, """%Backup_DESC%"""
+setup.ini, progman.groups,, "group4_USA=Accessories"
+setup.ini, group4_USA,, "%Notepad_WIN31%"
+setup.ini, group4_USA,, "%Calculator_WIN31%"
+setup.ini, group4_USA,, "%CharacterMap_WIN31%"
+setup.ini, group4_USA,, "%Paintbrush_WIN31%"
+setup.ini, group4_USA,, "%Clipbd_WIN31%"
+setup.ini, group4,, """%SoundRec_DESC%"""
+setup.ini, group4,, """%SoundRec_WFW311%"""
+setup.ini, group4,, """%MPlayer_DESC%"""
+setup.ini, group4,, """%MPlayer_WFW311%"""
+setup.ini, group4,, """%SndVol_DESC%"""
+setup.ini, group4,, """%CDPlayer_DESC%"""
+setup.ini, group4,, """%Mixer_DESC%"""
+setup.ini, group4,, """%OldHypTrm_DESC%"""
+setup.ini, group4,, """%MTDemo_DESC%"""
+setup.ini, group4,, """%Clock_DESC%"""
+setup.ini, group4,, """%Clock_WFW311%"""
+setup.ini, group4,, """%OldWinPad_DESC%"""
+setup.ini, group4,, """%Packager_DESC%"""
+setup.ini, group4,, """%Packager_WFW311%"""
+setup.ini, group4,, """%OLR_Link_Desc%"""
+
+[old.win.cleanup.reg]      ;BaseWinOption
+; always remove this to cover the case of a win95 upgrade that had enable installed,
+; and on upgrade, didn't install it, so we DelReg the following:
+HKLM,System\CurrentControlSet\Control\VMM32Files,enable.vxd
+
+; Clean out these optional components to avoid probs when upgrading:
+HKLM,%KEY_OPTIONAL%,"CSMAPI"
+HKLM,%KEY_OPTIONAL%\CSMAPI
+HKLM,%KEY_OPTIONAL%,"Cursors"
+HKLM,%KEY_OPTIONAL%\cursors
+HKLM,%KEY_OPTIONAL%,"Bezier"
+HKLM,%KEY_OPTIONAL%\Bezier
+HKLM,%KEY_OPTIONAL%,"Ssmyst"
+HKLM,%KEY_OPTIONAL%\Ssmyst
+HKLM,%KEY_OPTIONAL%,"Sstars"
+HKLM,%KEY_OPTIONAL%\Sstars
+HKLM,%KEY_OPTIONAL%,"ssmarque"
+HKLM,%KEY_OPTIONAL%\ssmarque
+;HKLM,%KEY_OPTIONAL%,"Msonline"
+;HKLM,%KEY_OPTIONAL%\msonline
+
+
+[quickview.cleanup.reg]		;BaseWinOption
+
+;HKCR,QuickView\.XLS,,,"Excel 4 and 5 Spreadsheet Files"
+HKCR,QuickView\.XLS\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.XLC,,,"Excel 4 Chart File"
+HKCR,QuickView\.XLC\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WKS,,,"Lotus 1-2-3 File or MS Works v 3 File"
+HKCR,QuickView\.WKS\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickView\.WQ1,,,"Quattro Pro for MS-DOS File"
+HKCR,QuickView\.WQ1\{F0F08735-0C36-101B-B086-0020AF07D0F4}
+
+;HKCR,QuickVie

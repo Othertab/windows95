@@ -1,0 +1,327 @@
+=912
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=44
+
+[1152*864*15@70Hz.VESA]
+   Hz=70.012
+   kHz=63.851
+   MHz=94.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1480
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=96 
+   H_BP=200
+
+   V_TOTAL=912
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=44
+
+[1152*864*16@70Hz.VESA]
+   Hz=70.012
+   kHz=63.851
+   MHz=94.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1480
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=96 
+   H_BP=200
+
+   V_TOTAL=912
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=44
+
+[1152*864*32@70Hz.VESA]
+   Hz=70.012
+   kHz=63.851
+   MHz=94.500
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1480
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=96 
+   H_BP=200
+
+   V_TOTAL=912
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=44
+
+[1152*864*8@70Hz.MIRO]
+   Hz=69.970
+   kHz=62.830
+   MHz=94.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=128
+   H_BP=192
+
+   V_TOTAL=898
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*15@70Hz.MIRO]
+   Hz=69.970
+   kHz=62.830
+   MHz=94.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=128
+   H_BP=192
+
+   V_TOTAL=898
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*16@70Hz.MIRO]
+   Hz=69.970
+   kHz=62.830
+   MHz=94.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=128
+   H_BP=192
+
+   V_TOTAL=898
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*32@70Hz.MIRO]
+   Hz=69.970
+   kHz=62.830
+   MHz=94.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1504
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=128
+   H_BP=192
+
+   V_TOTAL=898
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[1152*864*8@72Hz.MIRO]
+   Hz=71.950
+   kHz=64.320
+   MHz=98.800
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=144
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*15@72Hz.MIRO]
+   Hz=71.942
+   kHz=64.316
+   MHz=98.790
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=144
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*16@72Hz.MIRO]
+   Hz=71.950
+   kHz=64.323
+   MHz=98.800
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=144
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*32@72Hz.MIRO]
+   Hz=71.950
+   kHz=64.320
+   MHz=98.800
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1536
+   H_DISP=1152
+   H_FP=32
+   H_SYNC=144
+   H_BP=208
+
+   V_TOTAL=894
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=26
+
+[1152*864*8@75Hz.VESA]
+   Hz=75.000
+   kHz=67.500
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1600
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=256
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=32
+
+[1152*864*15@75Hz.VESA]
+   Hz=75.000
+   kHz=67.500
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1600
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=256
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=32
+
+[1152*864*16@75Hz.VESA]
+   Hz=75.000
+   kHz=67.500
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1600
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=256
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=32
+
+[1152*864*24@75Hz.VESA]
+   Hz=75.000
+   kHz=67.500
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1600
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=256
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=32
+
+[1152*864*32@75Hz.VESA]
+   Hz=75.000
+   kHz=67.500
+   MHz=108.000
+
+   H_SYNC_POL=+
+   V_SYNC_POL=+
+
+   H_TOTAL=1600
+   H_DISP=1152
+   H_FP=64
+   H_SYNC=128
+   H_BP=256
+
+   V_TOTAL=900
+   V_DISP=864
+   V_FP=1
+   V_SYNC=3
+   V_BP=32
+
+[1152*864*8@75Hz.MI

@@ -1,0 +1,57 @@
+,,,1995-10-24,,,,,,,,,SHARED,29952,,29952,,,
+ 4,SC_RESTD.WAV<Science restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,10688,,10688,,,
+ 4,SC_RESTU.WAV<Science restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,10742,,10742,,,
+ 4,SC_START.WAV<Science startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,19836,,19836,,,
+ 4,SC_STOP.WAV<Science critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,17642,,17642,,,
+
+[MT_Science_wav8]
+ 4,SC_ASTRX.WA8<Science asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,9046,,9046,,,
+ 4,SC_BEEP.WA8<Science beep.wav>,,,,1995-10-24,,,,,,,,,SHARED,8944,,8944,,,
+ 4,SC_DEFAU.WA8<Science default sound.wav>,,,,1995-10-24,,,,,,,,,SHARED,7522,,7522,,,
+ 4,SC_EMPTY.WA8<Science empty recycle bin.wav>,,,,1995-10-24,,,,,,,,,SHARED,7252,,7252,,,
+ 4,SC_ERROR.WA8<Science program error.wav>,,,,1995-10-24,,,,,,,,,SHARED,6632,,6632,,,
+ 4,SC_EXCLA.WA8<Science exclamation.wav>,,,,1995-10-24,,,,,,,,,SHARED,16452,,16452,,,
+ 4,SC_EXIT.WA8<Science exit windows.wav>,,,,1995-10-24,,,,,,,,,SHARED,17562,,17562,,,
+ 4,SC_MAX.WA8<Science maximize.wav>,,,,1995-10-24,,,,,,,,,SHARED,5912,,5912,,,
+ 4,SC_MENU.WA8<Science menu popup.wav>,,,,1995-10-24,,,,,,,,,SHARED,4850,,4850,,,
+ 4,SC_MENUC.WA8<Science menu command.wav>,,,,1995-10-24,,,,,,,,,SHARED,4822,,4822,,,
+ 4,SC_MIN.WA8<Science minimize.wav>,,,,1995-10-24,,,,,,,,,SHARED,5850,,5850,,,
+ 4,SC_QUEST.WA8<Science question.wav>,,,,1995-10-24,,,,,,,,,SHARED,29952,,29952,,,
+ 4,SC_RESTD.WA8<Science restore down.wav>,,,,1995-10-24,,,,,,,,,SHARED,6536,,6536,,,
+ 4,SC_RESTU.WA8<Science restore up.wav>,,,,1995-10-24,,,,,,,,,SHARED,6562,,6562,,,
+ 4,SC_START.WA8<Science startup.wav>,,,,1995-10-24,,,,,,,,,SHARED,11110,,11110,,,
+ 4,SC_STOP.WA8<Science critical stop.wav>,,,,1995-10-24,,,,,,,,,SHARED,10012,,10012,,,
+
+[MT_Dangerous_thm]
+ 4,DANGER~1.THM<Dangerous Creatures (256 color).theme>,,,,1995-10-24,,,,,,,,,SHARED,5419,,5419,,,
+
+[MT_Dangerous_bmp]
+ 4,DA_WALL.JPG<Dangerous Creatures wallpaper.jpg>,,,,1995-10-24,,,,,,,,,SHARED,99357,,99357,,,
+ 4,DA_WALL.PAL<Dangerous Creatures wallpaper.pal>,,,,1995-10-24,,,,,,,,,SHARED,1048,,1048,,,
+ 4,DA_COMP.ICO<Dangerous Creatures My Computer.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 4,DA_NET.ICO<Dangerous Creatures Network Neighborhood.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 4,DA_RECYE.ICO<Dangerous Creatures Recycle Empty.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+ 4,DA_RECYF.ICO<Dangerous Creatures Recycle Full.ico>,,,,1995-10-24,,,,,,,,,SHARED,2734,,2734,,,
+
+[MT_Dangerous_cur]
+ 4,DA_BUSY.ANI<Dangerous Creatures busy.ani>,,,,1995-10-24,,,,,,,,,SHARED,4744,,4744,,,
+ 4,DA_WAIT.ANI<Dangerous Creatures wait.ani>,,,,1995-10-24,,,,,,,,,SHARED,4712,,4712,,,
+ 4,DA_ARROW.CUR<Dangerous Creatures arrow.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_BEAM.CUR<Dangerous Creatures beam.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_CROSS.CUR<Dangerous Creatures cross.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_HELP.CUR<Dangerous Creatures help.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_MOVE.CUR<Dangerous Creatures move.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_NESW.CUR<Dangerous Creatures Size NESW.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_NO.CUR<Dangerous Creatures no.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_NS.CUR<Dangerous Creatures Size NS.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_NWSE.CUR<Dangerous Creatures Size NWSE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_PEN.CUR<Dangerous Creatures pen.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_UP.CUR<Dangerous Creatures up.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+ 4,DA_WE.CUR<Dangerous Creatures Size WE.cur>,,,,1995-10-24,,,,,,,,,SHARED,766,,766,,,
+
+[MT_Dangerous_scr]
+ 4,DANGEROU.DLL<Dangerous Creatures.dll>,,,,1995-10-24,,1033,,,,,,,SHARED,279040,SYSTEM,279040,,4.40.0.310,
+ 3,WL32SCR.EXE<Dangerous Creatures.scr>,,,,1995-10-24,,1033,,,,,,,SHARED,38400,SYSTEM,38400,,4.40.0.310,
+
+[MT_Dangerous_wav16]
+ 4,DA_ASTRX.WAV<Dangerous Creatures asterisk.wav>,,,,1995-10-24,,,,,,,,,SHARED,13782,,13782

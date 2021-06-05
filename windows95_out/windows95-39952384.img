@@ -1,0 +1,136 @@
+ollowing syntax:
+
+    BREAK=ON|OFF
+
+Parameter
+
+ON|OFF
+    Turns extended CTRL+C checking on or off.
+
+
+BUFFERS/BUFFERSHIGH
+===================
+
+Allocates memory for a specified number of disk buffers when your system
+starts. Use the BUFFERSHIGH command to load the buffers in the upper
+memory area. You can use these commands only in your Config.sys file.
+
+Syntax
+
+    BUFFERS=n[,m]
+    BUFFERSHIGH=n[,m]
+
+Parameters
+
+n
+    Specifies the number of disk buffers. The value of n must be in the
+    range 1 through 99.  The default is 30.
+
+m
+    Specifies the number of buffers in the secondary buffer cache. The value
+    of m must be in the range 0 through 8.  The default is 0 (no secondary
+    cache buffers).
+
+If you specify an invalid value for n or m, BUFFERs uses the default 
+settings.
+
+
+COUNTRY
+========
+
+Enables MS-DOS to use country-specific conventions for displaying times,
+dates, and currency; for determining the order by which characters are
+sorted; and for determining which characters can be used in filenames. You 
+can use this command only in your Config.sys file.
+
+The COUNTRY command configures MS-DOS to recognize the character set and
+punctuation conventions observed when using one of the supported languages.
+
+Syntax
+
+    COUNTRY=xxx[,[yyy][,[drive:][path]filename]]
+
+Parameters
+
+xxx
+    Specifies the country code.
+
+yyy
+    Specifies the character set for the country.
+
+[drive:][path]filename
+    Specifies the location and name of the file containing country
+    information.
+
+
+DEVICE
+======
+
+Loads into memory the device driver you specify. You can use this command
+only in your Config.sys file.
+
+Syntax
+
+    DEVICE=[drive:][path]filename [dd-parameters]
+
+Parameters
+
+[drive:][path]filename
+    Specifies the location and name of the device driver you want to load.
+
+[dd-parameters]
+    Specifies any command-line information required by the device driver.
+
+
+DEVICEHIGH
+==========
+
+Loads a device driver you specify into the upper memory area. Loading a 
+device driver into the upper memory area frees more bytes of conventional 
+memory for other programs. If upper memory is not available, the DEVICEHIGH 
+command functions just like the DEVICE command.
+
+You can use this command only in your Config.sys file.
+
+Syntax
+
+    DEVICEHIGH [drive:][path]filename [dd-parameters]
+
+To specify the region(s) of memory into which to load the device driver, use
+the following syntax:
+
+    DEVICEHIGH [[/L:region1[,minsize1][;region2[,minsize2] [/S]]=
+    [drive:][path]filename [dd-parameters]
+
+Parameters
+
+[drive:][path]filename
+    Specifies the location and name of the device driver you want to load
+    into the upper memory area.
+
+dd-parameters
+    Specifies any command-line information required by the device driver.
+
+Switches
+
+/L:region1[,minsize1][;region2[,minsize2]...
+    Specifies one or more regions of memory into which to load the device
+    driver. By default, MS-DOS loads the driver into the largest free
+    upper memory block (UMB) and makes all other UMBs available for the
+    driver's use. You can use the /L switch to load the device driver into a
+    specific region of memory or to specify which region(s) the driver can
+    use.
+
+    To load the driver into the largest block in a specific region of upper
+    memory, specify the region number after the /L switch. For example, to
+    load the driver into the largest free block in region 4, you would type
+    /L:4. (To list the free areas of memory, type MEM /F at the command
+    prompt.)
+
+    When loaded with the /L switch, a device driver can use only the
+    specified memory region. Some device drivers use more than one area of
+    memory; for those drivers, you can specify more than one region. (To
+    find out how a particular device driver uses memory, issue the MEM /M
+    command and specify the device-driver name as an argument.) To specify
+    two or more regions, separate the block numbers with a semicolon (;).
+    For example, to use blocks 2 

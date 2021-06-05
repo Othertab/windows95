@@ -1,0 +1,70 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxa"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxb"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxc"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxd"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxe"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxf"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxg"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxh"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxj"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxl"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxm"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxn"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxo"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxp"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxq"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr"
+%31%\msdos.sys,Options,,";xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxs"
+
+[Setup.Init.Inis]
+; THIS IS ONLY EXECUTED ON A CLEAN INSTALL
+; Use a non-existent line spec. to delete from the INI files
+; For Boot and 386Enh we use lines that need to be added anyway
+
+;Create System.ini entries for Machine (only done for Clean Install--
+;on an upgrade we leave whatever the user has installed in place)
+system.ini,boot, ";DelMe"
+system.ini, keyboard, ";DelMe"
+system.ini, boot.description, ";DelMe"
+system.ini,386Enh,,"ebios=*ebios"
+wininit.ini, CombineVxDs,,"%22%\ebios.vxd=%11%\vmm32.vxd"
+
+win.ini, windows, ";DelMe"
+win.ini, Desktop, ";DelMe"
+win.ini, intl, ";DelMe"
+win.ini, fonts, ";DelMe"
+win.ini, FontSubstitutes, ";DelMe"
+win.ini, Compatibility, ";DelMe"
+win.ini, Compatibility32, ";DelMe"
+
+;make ghost entries in msdos.sys to get order of sections correct:
+%31%\msdos.sys,Paths, ";DelMe"
+%31%\msdos.sys,Options,,"BootMulti=1"
+
+[SUIni2RegSec]
+win.ini,windows,CursorBlinkRate,HKCU,"Control Panel\Desktop"
+win.ini,windows,BorderWidth,HKCU,"Control Panel\Desktop"
+win.ini,windows,ScreenSaveTimeOut,HKCU,"Control Panel\Desktop"
+win.ini,windows,ScreenSaveActive,HKCU,"Control Panel\Desktop"
+win.ini,windows,KeyboardSpeed,HKCU,"Control Panel\Keyboard"
+win.ini,windows,KeyboardDelay,HKCU,"Control Panel\Keyboard"
+win.ini,windows,Beep,HKCU,"Control Panel\Sound"
+win.ini,windows,SwapMouseButtons,HKCU,"Control Panel\Mouse"
+win.ini,windows,DoubleClickSpeed,HKCU,"Control Panel\Mouse"
+win.ini,windows,MouseThreshold1,HKCU,"Control Panel\Mouse"
+win.ini,windows,MouseThreshold2,HKCU,"Control Panel\Mouse"
+win.ini,windows,MouseSpeed,HKCU,"Control Panel\Mouse"
+win.ini,Colors,ActiveTitle,HKCU,"Control Panel\Colors"
+win.ini,Colors,Background,HKCU,"Control Panel\Colors"
+win.ini,Colors,Hilight,HKCU,"Control Panel\Colors"
+win.ini,Colors,HilightText,HKCU,"Control Panel\Colors"
+win.ini,Colors,TitleText,HKCU,"Control Panel\Colors"
+win.ini,Colors,Window,HKCU,"Control Panel\Colors"
+win.ini,Colors,WindowText,HKCU,"Control Panel\Colors"
+win.ini,Desktop,TileWallpaper,HKCU,"Control Panel\Desktop"
+win.ini,Desktop,Wallpaper,HKCU,"Control Panel\Desktop"
+win.ini,Desktop,WallpaperStyle,HKCU,"Control Panel\Desktop"
+win.ini,Desktop,GridGranularity,HKCU,"Control Panel\Desktop"
+win.ini,Desktop,Pattern,HKCU

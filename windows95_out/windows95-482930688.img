@@ -1,0 +1,332 @@
+12
+
+   V_TOTAL=509
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=25
+
+[640*480*32@85Hz.VESA]
+   Hz=85.008
+   kHz=43.269
+   MHz=36.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=832
+   H_DISP=640
+   H_FP=32
+   H_SYNC=48
+   H_BP=112
+
+   V_TOTAL=509
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=25
+
+[640*480*8@90Hz.MIRO]
+   Hz=90.070
+   kHz=46.300
+   MHz=40.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=864
+   H_DISP=640
+   H_FP=32
+   H_SYNC=80
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=3
+   V_SYNC=3
+   V_BP=28
+
+[640*480*15@90Hz.MIRO]
+   Hz=90.070
+   kHz=46.300
+   MHz=40.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=864
+   H_DISP=640
+   H_FP=32
+   H_SYNC=80
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=3
+   V_SYNC=3
+   V_BP=28
+
+[640*480*16@90Hz.MIRO]
+   Hz=90.070
+   kHz=46.300
+   MHz=40.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=864
+   H_DISP=640
+   H_FP=32
+   H_SYNC=80
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=3
+   V_SYNC=3
+   V_BP=28
+
+[640*480*32@90Hz.MIRO]
+   Hz=90.070
+   kHz=46.300
+   MHz=40.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=864
+   H_DISP=640
+   H_FP=32
+   H_SYNC=80
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=3
+   V_SYNC=3
+   V_BP=28
+
+[640*480*8@100Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=44.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*15@100Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=44.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*16@100Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=44.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*32@100Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=44.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=848
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=112
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*8@150Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=65.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=104
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*15@150Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=65.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=104
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*16@150Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=65.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=104
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[640*480*32@150Hz.MIRO]
+   Hz=100.950
+   kHz=51.890
+   MHz=65.000
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=840
+   H_DISP=640
+   H_FP=32
+   H_SYNC=64
+   H_BP=104
+
+   V_TOTAL=514
+   V_DISP=480
+   V_FP=1
+   V_SYNC=3
+   V_BP=30
+
+[768*576*8@50Hz.VTX2]
+   Hz=50.000
+   kHz=31.250
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1008
+   H_DISP=768
+   H_FP=35
+   H_SYNC=80
+   H_BP=125
+
+   V_TOTAL=625
+   V_DISP=576
+   V_FP=3
+   V_SYNC=3
+   V_BP=43
+
+[768*576*15@50Hz.VTX2]
+   Hz=50.000
+   kHz=31.250
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1008
+   H_DISP=768
+   H_FP=35
+   H_SYNC=80
+   H_BP=125
+
+   V_TOTAL=625
+   V_DISP=576
+   V_FP=3
+   V_SYNC=3
+   V_BP=43
+
+[768*576*16@50Hz.VTX2]
+   Hz=50.000
+   kHz=31.250
+   MHz=31.500
+
+   H_SYNC_POL=-
+   V_SYNC_POL=-
+
+   H_TOTAL=1008
+   H_DISP=768
+   H_FP=35
+   H_SYNC=80
+   H_BP=125
+
+   V_TOTAL=625
+   V_DISP=576
+   V_FP=3
+   V_SYNC=3
+   V_BP=43
+
+[768*576*32@50Hz.VTX2]
+   Hz=50.000
+   kHz=31.250
+ 

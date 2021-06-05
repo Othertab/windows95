@@ -1,0 +1,127 @@
+Vxd\DECPW\Ndi\params\SM_BUFFERS,type,,int
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\SM_BUFFERS,default,,6
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\SM_BUFFERS,min,,1
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\SM_BUFFERS,max,,16
+; OUTSTANDING
+HKR,Ndi\params\OUTSTANDING,location,,"System\CurrentControlSet\Services\Vxd\DECPW"
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\OUTSTANDING,ParamDesc,,"Out Standing"
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\OUTSTANDING,flag,1,10,00,00,00
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\OUTSTANDING,type,,int
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\OUTSTANDING,default,,32
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\OUTSTANDING,min,,1
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\OUTSTANDING,max,,256
+; DECPARM
+HKR,Ndi\params\DECPARM,location,,"System\CurrentControlSet\Services\Vxd\DECPW"
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\DECPARM,ParamDesc,,"DECnet database path"
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\DECPARM,flag,1,10,00,00,00
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\DECPARM,type,,edit
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\DECPARM,LimitText,,64
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\DECPARM,UpperCase,,1
+HKLM,System\CurrentControlSet\Services\Vxd\DECPW\Ndi\params\DECPARM,default,,"C:\DECNET"
+
+[DEC40NDIS.inst]
+UpdateInis=DEC40NDIS.Inis
+AddReg=DEC40NDIS.inst.reg
+CopyFiles=DEC40NDIS.Copyfiles.sys,DEC40NDIS.Copyfiles.winboot
+
+[DEC40NDIST.inst]
+UpdateInis=DEC40NDIS.Inis
+AddReg=DEC40NDIS.inst.reg
+CopyFiles=DEC40NDIS.Copyfiles.sys,DEC40NDIST.Copyfiles.winboot
+
+[DEC40NDIS.inst.reg]
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,decnet.386
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",StaticVxD,,"decnet.386"
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET",Start,1,00
+
+[DEC40NDIS.Inis]
+system.ini,386Enh,,"TimerCriticalSection=10000"
+system.ini,386Enh,,"NetHeapSize=42"
+system.ini,386Enh,,"DNETHeapSize=64"
+[DEC40NDIS.Copyfiles.sys]
+decnet.386
+;pwconfig.dll
+pwwfwcfg.exe
+pwwfwcfg.dat
+pwwfwcfg.tpl
+pwwfw.hlp
+vbrun300.dll
+cmdialog.vbx
+pwicon.exe
+pwgroup.tpl
+[DEC40NDIS.Copyfiles.winboot]
+dllndis.exe
+srm.exe
+[DEC40NDIST.Copyfiles.winboot]
+dllndist.exe
+srm.exe
+
+[DEC40NDIS.rmv]
+DelReg=DEC40NDIS.delreg.rmv
+[DEC40NDIS.delreg.rmv]
+HKLM,"SYSTEM\CurrentControlSet\Services\VxD\DECNET"
+
+;****************************************************************************
+; DEC50
+;****************************************************************************
+; DLLNDIS
+
+[DEC50.ndi]
+AddReg=DEC50.ndi.reg,DEC50.ether
+DeviceID=DEC50
+MaxInstance=1
+[DEC50.ether]
+HKR,NDIS\NDIS2,FileName,,"dllndis.exe"
+HKR,Ndi,DeviceID,,DEC50
+HKR,Ndi\Install,,,"DEC50NDIS.inst"
+
+; DLLNDIST
+
+[DEC50T.ndi]
+AddReg=DEC50.ndi.reg,DEC50.Token
+DeviceID=DEC50T
+MaxInstance=1
+[DEC50.Token]
+HKR,NDIS\NDIS2,FileName,,"dllndist.exe"
+HKR,Ndi,DeviceID,,DEC50T
+HKR,Ndi\Install,,,"DEC50NDIST.inst"
+
+; ODI
+
+[DEC50O.ndi]
+AddReg=DEC50.ndi.reg, DEC50O.ODI
+DeviceID=DEC50O
+MaxInstance=1
+[DEC50O.ODI]
+HKR,NDIS\NDIS2,FileName,,"dllodi.exe"
+HKR,Ndi,DeviceID,,DEC50O
+HKR,Ndi\Install,,,"DEC50ODI.inst"
+
+; dlc, depca, ewrk3 - installs ndis; difference is files copied
+
+[DEC50U.ndi]
+AddReg=DEC50.ndi.reg, DEC50U.Upgrade
+DeviceID=DEC50O
+MaxInstance=1
+[DEC50U.Upgrade]
+HKR,NDIS\NDIS2,FileName,,"dllndis.exe"
+HKR,Ndi,DeviceID,,DEC50U
+HKR,Ndi\Install,,,"DEC50UPG.inst"
+
+;; all dec sections share this block
+[DEC50.ndi.reg]
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,DLL$MAC
+HKR,Ndi\Interfaces,DefUpper,,"netbios"
+HKR,Ndi\Interfaces,UpperRange,,"netbios"
+HKR,Ndi\Interfaces,DefLower,,"ndis2,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ndis2,odi"
+HKR,Ndi\Compatibility,RequireAll,,"VREDIR"
+HKR,Ndi\Remove,,,"DEC50NDIS.rmv"
+;
+; autoexec.bat line placements
+;
+; call dec licensing stuff
+HKR,Ndi

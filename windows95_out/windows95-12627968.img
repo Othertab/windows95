@@ -1,0 +1,191 @@
+9
+
+[C2193]
+DelReg=DEL_CURRENT_REG
+AddReg=C2193.AddReg, 1600, DPMS, ICM9
+
+[C21107]
+DelReg=DEL_CURRENT_REG
+AddReg=C21107.AddReg, 1600, DPMS, ICM9
+
+[D1568]
+DelReg=DEL_CURRENT_REG
+AddReg=D1568.AddReg, 1280, DPMS, ICM9
+
+[D1769]
+DelReg=DEL_CURRENT_REG
+AddReg=D1769.AddReg, 1280, DPMS, ICM9
+
+
+; -------------- Zenith
+
+[ZCM1411]
+AddReg=ZCM1411.AddReg, 1024
+
+[ZCM1426]
+AddReg=ZCM1426.AddReg, 1024
+
+[ZCM1440]
+AddReg=ZCM1440.AddReg, 1024, DPMS
+
+[ZCM1450]
+AddReg=ZCM1450.AddReg, 1024, DPMS
+
+[ZCM1520]
+AddReg=ZCM1520.AddReg, 1024, DPMS
+
+[ZCM1522]
+AddReg=ZCM1522.AddReg, 1024, DPMS
+
+[ZCM1540]
+AddReg=ZCM1540.AddReg, 1024, DPMS
+
+[ZCM1550]
+AddReg=ZCM1550.AddReg, 1024, DPMS
+
+[ZCM1740]
+AddReg=ZCM1740.AddReg, 1280, DPMS
+
+[ZCM1750]
+AddReg=ZCM1750.AddReg, 1280, DPMS
+
+
+; Model AddReg sections
+;-------------------------------------------------
+
+[Unknown.AddReg]
+HKR,"MODES\640,480"
+
+[VESADDC.AddReg]
+HKR,"MODES\1600,1200"
+
+[VGA.AddReg]
+HKR,"MODES\640,480",Mode1,,"31.5,50.0-70.0,-,-"
+
+
+; -------------- AST
+
+[AST4V.AddReg]
+HKR,"MODES\640,480",Mode1,,"31.5,60.0-70.0,-,-"
+
+[AST4I.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-38.0,50.0-90.0,+,+"
+
+[AST4N.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-64.0,50.0-90.0,+,+"
+
+[AST4L.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-64.0,50.0-90.0,+,+"
+
+[AST5L.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-64.0,50.0-90.0,+,+"
+
+[AST7L.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-64.0,50.0-90.0,+,+"
+
+[AST7H.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-82.0,50.0-90.0,+,+"
+
+[AST20H.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"29.0-82.0,50.0-150.0,+,+"
+
+[AST5V.AddReg]
+HKR,"MODES\1024,768",Mode2,,"30.0-50.0,50.0-120.0,+,+"
+
+[AST4Ls.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-64.0,50.0-90.0,+,+"
+
+; -------------- Aamazing
+
+[CM-8426.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.0-60.0,40.0-80.0,+,+"
+
+[MS-8431.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.0,50.0-70.0,+,+"
+
+[CX1557.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-57.0,40.0-100.0,+,+"
+
+[AML-1402.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.0-36.0,45.0-90.0,+,+"
+
+[AML-2001.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-36.5,50.0-90.0,+,+"
+
+[SM-5514B.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-38.0,50.0-100.0,+,+"
+
+[SM-5514A.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-50.0,50.0-100.0,+,+"
+
+[SM-5514E.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-58.0,50.0-100.0,+,+"
+
+[SM-5515.AddReg]
+HKR,"MODES\1024,768",Mode1,,"30.0-58.0,50.0-100.0,+,+"
+
+[ADI4GP.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30-64,50-100,+,+"
+
+; -------------- A0C
+
+[CM-324.AddReg]
+HKR,"MODES\800,600",Mode1,,"15.0-37.0,50.0-90.0,+,+"
+
+[CM-325.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.0-38.0,50.0-90.0,+,+"
+
+[CM-326.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.0-38.0,50.0-90.0,+,+"
+
+[Bus_VGA.AddReg]
+HKR,"MODES\1024,768",Mode1,,"31.5-38.0,50.0-70.0,+,+"
+
+[CT1381A.AddReg]
+HKR,"MODES\800,600",Mode1,,"15.7-38.0,45.0-90.0,+,+"
+
+[EG2040.AddReg]
+HKR,"MODES\1024,768",Mode1,,"20.0-40.0,40.0-100.0,+,+"
+
+[CT-1458.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.0-48.0,47.0-100.0,+,+"
+
+[CT-1958.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.0-51.0,47.0-100.0,+,+"
+
+[7250.AddReg]
+HKR,"MODES\1024,1024",Mode1,,"15.5-37.0,47.0-80.0,+,+"
+
+[7351.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"62.5-67.5,47.0-63.0,+,+"
+
+[7214.AddReg]
+HKR,"MODES\1024,1024",Mode1,,"15.0-37.5,48.0-90.0,+,+"
+
+[7241.AddReg]
+HKR,"MODES\1024,1024",Mode1,,"15.0-37.0,47.0-80.0,+,+"
+
+[7550.AddReg]
+HKR,"MODES\1600,1200",Mode1,,"46.0-80.0,47.0-80.0,+,+"
+
+[9250.AddReg]
+HKR,"MODES\1024,1024",Mode1,,"15.0-37.5,48.0-90.0,+,+"
+
+[7126.AddReg]
+HKR,"MODES\800,600",Mode1,,"15.0-32.0,48.0-75.0,+,+"
+
+[7211.AddReg]
+HKR,"MODES\1024,1024",Mode1,,"15.0-37.0,47.0-80.0,+,+"
+
+[CMC-141M.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.5-39.0,50.0-70.0,+,+"
+
+[CMC-1500BF.AddReg]
+HKR,"MODES\1024,768",Mode1,,"15.5-39.0,50.0-90.0,+,+"
+
+[CMC-1500M.AddReg]
+HKR,"MODES\1280,1024",Mode1,,"30.0-65.0,50.0-90.0,+,+"
+
+[CMC-1500TF.AddReg]
+HKR,"MODES\640,480",Mode1,,"31.47,50.0-90.0,+,+"
+HKR,"MODES\1024,768",

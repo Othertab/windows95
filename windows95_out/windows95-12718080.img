@@ -1,0 +1,258 @@
+NT_REG
+AddReg=7134TL.AddReg
+
+[7155]
+DelReg=DEL_CURRENT_REG
+AddReg=7155.AddReg
+
+[7155L]
+DelReg=DEL_CURRENT_REG
+AddReg=7155L.AddReg
+
+[7156L]
+DelReg=DEL_CURRENT_REG
+AddReg=7156L.AddReg
+
+[7176N]
+DelReg=DEL_CURRENT_REG
+AddReg=7176N.AddReg
+
+[7176i]
+DelReg=DEL_CURRENT_REG
+AddReg=7176i.AddReg
+
+[7178i]
+DelReg=DEL_CURRENT_REG
+AddReg=7178i.AddReg
+
+[7198i]
+DelReg=DEL_CURRENT_REG
+AddReg=7198i.AddReg
+
+[7133s]
+DelReg=DEL_CURRENT_REG
+AddReg=7133s.AddReg
+
+[7134e]
+DelReg=DEL_CURRENT_REG
+AddReg=7134e.AddReg
+
+[7134s]
+DelReg=DEL_CURRENT_REG
+AddReg=7134s.AddReg
+
+[7154e]
+DelReg=DEL_CURRENT_REG
+AddReg=7154e.AddReg
+
+[7154s]
+DelReg=DEL_CURRENT_REG
+AddReg=7154s.AddReg
+
+[7156e]
+DelReg=DEL_CURRENT_REG
+AddReg=7156e.AddReg
+
+[7156i]
+DelReg=DEL_CURRENT_REG
+AddReg=7156i.AddReg
+
+[7156s]
+DelReg=DEL_CURRENT_REG
+AddReg=7156s.AddReg
+
+[7156is]
+DelReg=DEL_CURRENT_REG
+AddReg=7156is.AddReg
+
+[7176ie]
+DelReg=DEL_CURRENT_REG
+AddReg=7176ie.AddReg
+
+[7176is]
+DelReg=DEL_CURRENT_REG
+AddReg=7176is.AddReg
+
+[7178ie]
+DelReg=DEL_CURRENT_REG
+AddReg=7178ie.AddReg
+
+[Acer_7015]
+DelReg=DEL_CURRENT_REG
+AddReg=Acer_7015.AddReg, 800
+
+[Acer_15P]
+DelReg=DEL_CURRENT_REG
+AddReg=Acer_15P.AddReg, 1024
+
+[Acer_33]
+DelReg=DEL_CURRENT_REG
+AddReg=Acer_33.AddReg, 1024
+
+[Acer_35]
+DelReg=DEL_CURRENT_REG
+AddReg=Acer_35.AddReg, 1024
+
+
+; -------------- AT&T
+[CRT-365]
+DelReg=DEL_CURRENT_REG
+AddReg=CRT-365.AddReg, 1280
+
+[CRT-395]
+DelReg=DEL_CURRENT_REG
+AddReg=CRT-395.AddReg, 1280
+
+[14Mono]
+DelReg=DEL_CURRENT_REG
+AddReg=14Mono.AddReg, 640
+
+[14Econ]
+DelReg=DEL_CURRENT_REG
+AddReg=14Econ.AddReg, 1024
+
+[14Value]
+DelReg=DEL_CURRENT_REG
+AddReg=14Value.AddReg, 1024, DPMS
+
+[15Color]
+DelReg=DEL_CURRENT_REG
+AddReg=15Color.AddReg, 1024, DPMS
+
+[17Value]
+DelReg=DEL_CURRENT_REG
+AddReg=17Value.AddReg, 1280, DPMS
+
+[17Pro]
+DelReg=DEL_CURRENT_REG
+AddReg=17Pro.AddReg, 1280, DPMS
+
+
+; -------------- Compaq
+[CVGA]
+DelReg=DEL_CURRENT_REG
+AddReg=CVGA.AddReg, 640
+
+[IVGA]
+DelReg=DEL_CURRENT_REG
+AddReg=IVGA.AddReg, 640
+
+[AGS]
+DelReg=DEL_CURRENT_REG
+AddReg=AGS.AddReg, 1024
+
+[SVGA]
+DelReg=DEL_CURRENT_REG
+AddReg=SVGA.AddReg, 800, DPMS
+
+[C1024]
+DelReg=DEL_CURRENT_REG
+AddReg=1024.AddReg, 1024, DPMS
+
+[151FS]
+DelReg=DEL_CURRENT_REG
+AddReg=151FS.AddReg, 1024, DPMS
+
+[171FS]
+DelReg=DEL_CURRENT_REG
+AddReg=171FS.AddReg, 1024, DPMS
+
+[172]
+DelReg=DEL_CURRENT_REG
+AddReg=172.AddReg, 1280, DPMS
+
+[140]
+DelReg=DEL_CURRENT_REG
+AddReg=140.AddReg, 1024, DPMS
+
+[150]
+DelReg=DEL_CURRENT_REG
+AddReg=150.AddReg, 1024, DPMS
+
+[PRA]
+DelReg=DEL_CURRENT_REG
+AddReg=PRA.AddReg, 1024, DPMS
+
+[PRB]
+DelReg=DEL_CURRENT_REG
+AddReg=PRB.AddReg, 1024, DPMS
+
+[QV150]
+DelReg=DEL_CURRENT_REG
+AddReg=QV150.AddReg, 1024
+
+[QV200]
+DelReg=DEL_CURRENT_REG
+AddReg=QV200.AddReg, 1280, DPMS
+
+; -------------- CTX
+[1451]
+DelReg=DEL_CURRENT_REG
+AddReg=1451.AddReg
+
+[1551]
+DelReg=DEL_CURRENT_REG
+AddReg=1551.AddReg
+
+[1562]
+DelReg=DEL_CURRENT_REG
+AddReg=1562.AddReg
+
+[1565]
+DelReg=DEL_CURRENT_REG
+AddReg=1565.AddReg
+
+[1765]
+DelReg=DEL_CURRENT_REG
+AddReg=1765.AddReg
+
+[1785]
+DelReg=DEL_CURRENT_REG
+AddReg=1785.AddReg
+
+[2085]
+DelReg=DEL_CURRENT_REG
+AddReg=2085.AddReg
+
+[2185]
+DelReg=DEL_CURRENT_REG
+AddReg=2185.AddReg
+
+[CTX-1562ES.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1562ES.AddReg, 1280, DPMS
+
+[CTX-1562GM.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1562GM.AddReg, 1280, DPMS
+
+[CTX-1565GM.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1565GM.AddReg, 1280, DPMS
+
+[CTX-1765GM.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1765GM.AddReg, 1280
+
+[CTX-1785GM.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1785GM.AddReg, 1280
+
+[CTX-1451ES.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1451ES.AddReg, 1024, DPMS
+
+[CTX-1451GM.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1451GM.AddReg, 1024
+
+[CTX-1462GM.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CTX-1462GM.AddReg, 1024
+
+[CPS-1460.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=CPS-1460.AddReg, 1024
+
+[CPS-1560.Install]
+DelReg=DEL_CURRENT_REG

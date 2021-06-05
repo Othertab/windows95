@@ -1,0 +1,171 @@
+00002409%
+CopyFiles=CodePage437
+DelFiles=CodePage437_Del
+UpdateInis=CodePage437_Ini
+AddReg=SysLocale_2409, RegCP437
+DelReg=DelEBD
+
+
+
+;***********************************************************************
+;*** These entries allow DOS Boxes to display the correct characters ***
+;***********************************************************************
+
+[CopyDat850]
+charset.dat, 850.dat
+xlat850.bin
+
+;**************************************************************
+;** EraseIntlAuto and EraseIntlConfig will remove references **
+;** to international DOS functions.                          **
+;**************************************************************
+
+[EBD_CopyFiles]
+CopyFiles=EBD_DOSIntl
+
+
+[EBD_DOSIntl]
+display.sys,,,2
+country.sys,,,2
+ega.cpi,,,2
+mode.com,,,2
+
+[EraseIntlAuto]
+CmdSetupSpecial=1
+CmdDelete=nlsfunc
+CmdDelete=chcp
+
+[EraseIntlConfig]
+DelKey=country
+DevDelete=display.sys
+DevDelete=BILING.SYS
+DevDelete=JFONT.SYS
+DevDelete=KKCFUNC.SYS
+DevDelete=JDISP.SYS
+DevDelete=JKEYB.SYS
+DevDelete=KKFUNC.SYS
+DevDelete=MSIMEK.SYS
+DevDelete=MSIME.SYS
+
+
+;*********************************************************
+;** The following AutoXXX lines are used to add         **
+;** international specific lines to the user's autoexec **
+;** The XXX is the code page which the user's system    **
+;** will be running after the modifications are made.   **
+;*********************************************************
+
+[Auto850]
+CmdAdd=mode, "con codepage prepare=((850) %13%\ega.cpi)"
+CmdAdd=mode, "con codepage select=850"
+
+; File Update References
+; Where to find the source files
+; CopyFiles References
+
+[CodePage437]
+dosapp.fon
+
+[CodePage437_Del]
+; Delete this since it's now copied to the Fonts Folder
+dosapp.fon
+
+[CodePage850]
+app850.fon
+vga850.fon
+
+[CodePage850_Del]
+; Delete this since it's now copied to the Fonts Folder
+app850.fon
+vga850.fon
+
+
+[CodePage850_Ini]
+system.ini,386Enh,,"woafont=app850.fon"
+system.ini,boot,,"oemfonts.fon=vga850.fon"
+system.ini,keyboard,,"oemansi.bin=xlat850.bin"
+win.ini,FontSubstitutes,,"MS Shell Dlg=MS Sans Serif"
+
+[CodePage437_Ini]
+system.ini,386Enh,,"woafont=dosapp.fon"
+system.ini,boot,,"oemfonts.fon=vgaoem.fon"
+system.ini,keyboard,,"oemansi.bin="
+
+
+;*************************************************************
+;** The following list are locale specific country settings **
+;*************************************************************
+
+[EBD593]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=593,850,country.sys"
+
+[Config593]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=593, 850
+
+
+[EBD057]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=057,850,country.sys"
+
+[Config057]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=057, 850
+
+[EBD054]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=054,850,country.sys"
+
+[Config054]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=054, 850
+
+[EBD056]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=056,850,country.sys"
+
+[Config056]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=056, 850
+
+[EBD058]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=058,850,country.sys"
+
+[Config058]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=058, 850
+
+
+[EBD043]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=043,850,country.sys"
+
+[Config043]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=043, 850
+
+[EBD044]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=044,850,country.sys"
+
+[Config044]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=044, 850
+
+[EBD353]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=353,850,country.sys"
+
+[Config353]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=353, 850
+
+
+[EBD033]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=033,850,country.sys"
+
+[Config033]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=033, 850
+
+[EBD049]
+HKLM, %KEY_EBD%\EBDConfigSysLocale,1,,"country=049,850,country.sys"
+
+[Config049]
+DevAddDev=display.sys, device,,"con=(ega,,1)"
+Country=049, 850
+

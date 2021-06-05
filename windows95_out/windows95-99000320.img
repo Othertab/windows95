@@ -1,0 +1,27 @@
+of the file, and a second process has attempted to use the same portion. Try again later.
+PThe wrong disk is in the drive.
+Insert %2 (Volume Serial Number: %3)
+into drive %1.
+EThe program could not open the requested file because the file control block (FCB) limit was exceeded. Edit your CONFIG.SYS file to increase the value in the FCBS= line. Restart your computer, and then try again.
+EThe maximum number of files in the sharing buffer has temporarily been exceeded. Quit one or more programs, and then try again, or try again later.
+EDisk %1 is write-protected. Remove the write protection or use a different disk, and then try again.
+EThe system cannot find the %1 device. Make sure you are specifying a valid device name, and then try again.
+EThe %1 device is not ready. Make sure there is a disk in the drive, that the drive door is properly closed, and that the drive is available.
+IThe %1 device does not recognize the command. Make sure you are specifying a valid command for that device, and then try again.
+EMS-DOS cannot read or write the data on disk %1 correctly. If the error occurred on a hard disk, retry the command. If the error persists, the hard disk may have to be reformatted. If the error occurred on a floppy disk, insert a formatted disk or the backup disk, and then try again.
+?
+EDrive %1 cannot locate a specific area or track on the disk. Make sure the disk is properly inserted in the drive and that it is in a format compatible with MS-DOS. If the error persists, run ScanDisk to check the disk for damage.
+?
+EDrive %1 cannot find the sector requested. Make sure the disk is properly inserted in the drive and that it is in a format compatible with MS-DOS. If the error persists, run ScanDisk to check the disk for damage.
+EThe %1 printer is out of paper. Make sure the printer is properly installed and connected, turned on, and loaded with paper.
+EMS-DOS detected an error while writing to the %1 device. Make sure the device is installed and connected properly, turned on, and not in use by another process. The device may need to be in the proper receive mode. If the device is a disk, make sure it is formatted properly.
+EMS-DOS detected an error while reading from the %1 device. Make sure the device is installed and connected properly, turned on, and not in use by another process. The device may need to be in the proper send mode. If the device is a disk, make sure it is formatted properly.
+EThe %1 device is not functioning. For more information, type NET HELP 49 at the command prompt.
+EYou attempted an operation that cannot be performed from your computer or that is not supported on the specified server. Make sure you are using the correct server for the command or task that you want to perform. If the problem persists, contact your network administrator.
+EThe specified computer is not receiving requests. Make sure you are specifying the computer name correctly, or try again later when the remote computer is available.
+EA duplicate workgroup or computer name exists on the network. Specify a unique name, and then try again.
+EThe computer name specified in the network path cannot be located. Make sure you are specifying the computer name correctly, or try again later when the remote computer is available.
+EThe network is currently busy processing other requests or is out of resources. Try again later, or verify your network configuration to be sure that enough network resources are specified.
+EThe specified resource is not available. The computer that shared the resource might have been turned off, or the permissions might have been changed. For more information, contact your network administrator.
+EThe network currently has too many NetBIOS requests waiting to be processed. Try again later. If the problem persists, contact your network administrator.
+EThe hardware that connects your computer to the network is experiencing a problem. Make sure that the cable on the back of your computer is properly connected. If the problem persists, contact your network administrator or the manufacturer of the 

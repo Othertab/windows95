@@ -1,0 +1,135 @@
+icm
+Rec
+Vol
+MPlay
+
+
+[media_acm]
+OptionDesc   = %mediaacmdesc%
+Tip          = %mediaacmtip%
+Parent       = MultiM
+CopyFiles    = imaadpcm.cf, msadpcm.cf, msgsm610.cf, msg711.cf, truespeech.cf
+DelFiles     = imaadpcm.del, msadpcm.del, msgsm610.del, msg711.del, truespeech.del
+UpdateInis   = imaadpcm.inis, msadpcm.inis, msgsm610.inis, msg711.inis, truespeech.inis
+Addreg       = acm.install.Reg, imaadpcm.Reg, msadpcm.Reg, msgsm610.Reg, msg711.Reg, truespeech.Reg
+InstallType  = 14       ;Typical, Portable, Custom
+ValidateProc = SETUPX.DLL, P_MEDIAOC  ;Turns Optional Component OFF if no MEDIA devs
+IconIndex    = 51       ;Speaker mini-icon for dialogs
+Uninstall    = acm_remove
+
+[acm_remove]
+DelFiles     = imaadpcm.cf, msadpcm.cf, msgsm610.cf, msg711.cf, truespeech.cf
+UpdateInis   = imaadpcm.inis.del, msadpcm.inis.del, msgsm610.inis.del, msg711.inis.del, truespeech.inis.del
+AddReg       = acm.remove.reg
+Delreg       = imaadpcm.DelReg, msadpcm.DelReg, msgsm610.DelReg, msg711.DelReg, truespeech.DelReg
+
+
+[media_icm]
+OptionDesc   = %mediaicmdesc%
+Tip          = %mediaicmtip%
+Parent       = MultiM
+CopyFiles    = cvid.cf, iv.cf, msvc.cf, msrle.cf
+UpdateInis   = cvid.inis, iv31.inis, iv32.inis, msvc.inis, msrle.inis
+Addreg       = icm.install.Reg, cvid.Reg, iv31.Reg, iv32.Reg, msvc.Reg, msrle.Reg
+InstallType  = 14       ;Typical, Portable, Custom
+IconIndex    = 56      ;Speaker mini-icon for dialogs
+Uninstall    = icm_remove
+
+[icm_remove]
+DelFiles     = cvid.cf, iv.cf, msvc.cf, msrle.cf
+UpdateInis   = cvid.inis.del, iv31.inis.del, iv32.inis.del, msvc.inis.del, msrle.inis.del
+AddReg       = icm.remove.reg
+Delreg       = cvid.DelReg, iv31.DelReg, iv32.DelReg, msvc.DelReg, msrle.DelReg
+
+
+[Rec]
+;Sound Recorder
+OptionDesc  = %SoundRec_Desc%
+Tip         = %Rec_TIP%
+Parent      = MultiM
+CopyFiles   = Rec.copy, Rec.hlp.copy
+UpdateInis  = Rec.links
+AddReg      = Rec.install.reg
+InstallType = 14              ;Typical, Portable, Custom
+IconIndex	= 8			;Speaker mini-icon for dialogs
+ValidateProc = SETUPX.DLL, P_MEDIAOC  ;Turns Optional Component OFF if no MEDIA devs
+Uninstall   = Rec_remove
+
+[Rec_remove]
+DelFiles    = Rec.copy, Rec.hlp.copy
+AddReg      = Rec.remove.reg
+DelReg      = Rec.remove.DelReg
+UpdateInis  = Rec.links.remove
+
+[Vol]
+;Volume Control
+OptionDesc  = %SndVolLinkDesc%
+Tip         = %Vol_TIP%
+Parent      = MultiM
+CopyFiles   = Vol.copy, Vol.hlp.copy
+UpdateInis  = Vol.links
+AddReg      = Vol.install.reg
+InstallType = 14              ;Typical, Portable, Custom
+IconIndex   = 57                     ;Speaker mini-icon for dialogs
+ValidateProc = SETUPX.DLL, P_MEDIAOC  ;Turns Optional Component OFF if no MEDIA devs
+Uninstall   = Vol_remove
+
+[Vol_remove]
+DelFiles    = Vol.copy, Vol.hlp.copy
+AddReg      = Vol.remove.reg
+UpdateInis  = Vol.links.remove
+
+[MPlay]
+;Media Player
+OptionDesc  = %MPlayerLinkDesc%
+Tip         = %MPlay_TIP%
+Parent      = MultiM
+CopyFiles   = MPlay.copy, MPlay.hlp.copy
+UpdateInis  = MPlay.links
+AddReg      = MPlay.install.reg
+InstallType = 14              ;Typical, Portable, Custom
+IconIndex   = 53                     ;Speaker mini-icon for dialogs
+Uninstall   = MPlay_remove
+
+[MPlay_remove]
+DelFiles    = MPlay.copy, MPlay.hlp.copy
+AddReg      = MPlay.remove.reg
+DelReg      = MPlay.remove.DelReg
+UpdateInis  = MPlay.links.remove
+
+[acm.install.Reg]
+HKLM,%KEY_OPTIONAL%\acm,Installed,,"1"
+
+[acm.remove.reg]
+HKLM,%KEY_OPTIONAL%\acm,Installed,,"0"
+
+[icm.install.Reg]
+HKLM,%KEY_OPTIONAL%\icm,Installed,,"1"
+
+[icm.remove.reg]
+HKLM,%KEY_OPTIONAL%\icm,Installed,,"0"
+
+[Media.Software.Devs.MCI]
+%V_MCIAVI%=MCIAVI
+%V_MCICDA%=MCICDA
+%V_MCIWAVE%=MCIWAVE
+%V_MCISEQ%=MCISEQ
+
+[Media.Software.Devs.VIDC]
+%V_VIDC.MSVC%=VIDC.MSVC
+%V_VIDC.MSRLE%=VIDC.MSRLE
+
+[Media.Software.Devs.ACM]
+%V_MSACM.IMAADPCM%=MSACM.IMAADPCM
+%V_MSACM.MSADPCM%=MSACM.MSADPCM
+%V_MSACM.MSGSM610%=MSACM.MSGSM610
+%V_MSACM.MSG711%=MSACM.MSG711
+
+[Intel.Devs]
+%V_VIDC.IV31%=VIDC.IV31
+%V_VIDC.IV32%=VIDC.IV32
+
+[SuperMatch.Devs]
+%V_VIDC.CVID%=VIDC.CVID
+
+[D

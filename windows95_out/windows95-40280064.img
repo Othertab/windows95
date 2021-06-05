@@ -1,0 +1,96 @@
+k Delete (or 
+hold down the Shift key when pressing the Delete key if using the keyboard). 
+
+[Copying and Moving Files]
+Use the right mouse button to click the files you want to copy or move, 
+and then click Copy or Cut. Open the destination location, and then click 
+the right mouse button and select Paste.
+
+
+
+Folders and Windows Explorer
+----------------------------
+
+[Selecting Multiple Files]
+Selecting multiple files in large icon view works differently from list view.
+To extend a selection, click the first icon, and then hold down the Shift 
+key while you click the last icon to be selected. To change an icon from 
+selected to unselected, hold down the CTRL key while you select the icon.
+
+[Keyboard Shortcuts]
+* Press Win+E to start Windows Explorer by pointing to 'My Computer'
+ (on Microsoft Natural Keyboard).
+* Press Backspace to display the parent folder.
+* To select all files is a folder, press CTRL+A.
+* Press F5 to update the contents list.
+
+[Special Folders]
+You can put the contents of Control Panel or other special folders on your
+Start menu (or in any folder). Create a folder by clicking New on the
+File menu, and then clicking Folder. Then, paste in the appropriate name 
+as shown below:
+
+For				Use This Name
+----------------------------------------------	
+Control Panel		Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}
+Dial Up Network		Dial Up Net.{992CFFA0-F557-101A-88EC-00DD010CCC48}
+Printers		Printers.{2227A280-3AEA-1069-A2DE-08002B30309D}
+
+[Windows Explorer Switches]
+Windows Explorer switches are useful in creating rooted folders:
+ 
+	Explorer [/e][,/root,<object>][[,/select],<sub object>]	
+
+/e	Use Explorer view (scope and results pane view). The default is Open 
+	view (results in pane view only).	
+/root<object>	Specify the object in the "normal" name space that is used 
+	as the root (top level) of this Explorer/Folder (i.e., local path 
+	or UNC name). The default is the Desktop).	
+/Select	The parent folder opens and the specified object is selected.
+<sub object>	Specify the folder unless /select is used. The default is
+	the root.	
+
+Examples: Explorer /e, /root, \\Reports  opens an Explorer window at \\Reports.
+	
+	  Explorer /select, C:\Windows\Calc.exe  opens a folder at
+		C:\Windows (or activates one that is currently open) and
+		selects Calc.exe.	
+	  Explorer /e, /root, \\Source\Internal\Design\Users\David\Archive
+		opens a folder to the Archive folder above. This is a good
+		way to create a dedicated, remote, documents archive 
+		folder. A link to this folder 
+		(\\Source\Internal\Design\ Users\David\Archive) can then be
+		placed in the SendTo folder for quick routing of documents.
+
+
+
+Hardware Profiles
+------------------
+
+Hardware Profiles are used to set up multiple hardware configurations. This 
+is especially useful for laptops that have docking stations or workstations
+with removable storage media.
+
+The following example demonstrates how to set up hardware profiles for a
+laptop with a docking station that has this configuration:
+
+Configuration		Docked			Undocked
+---------------------------------------------------------	
+Display driver		S3			VGA
+Network			w/Microsoft Network	None
+RNA			no RNA			with RNA
+
+[Open Systems Properties:]
+1. Use the right mouse button to click the My Computer icon.
+2. Click Properties, and then click the Hardware Profiles tab.
+3. Verify that two hardware profile options labeled Docked and Undocked
+exist. If these options are not available, highlight Original Configuration,
+and then click Rename. Type DOCKED and then click OK. Highlight the word
+DOCKED and then click Copy. In the Copy Profile Dialog Box type UNDOCKED.
+
+[To Set Up the Video Driver for Docked and Undocked Configurations]
+First, verify that VGA is installed. If it is not installed, double-click
+the Display icon in Control Panel. Click the Settings tab, and then click
+Change Display Type. In the Adapter Type area, click Change, and then 
+install the VGA driver.
+1. In Control Panel, double-click the System icon, and then

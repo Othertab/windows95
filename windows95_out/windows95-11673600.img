@@ -1,0 +1,119 @@
+erif%
+HKLM,%KEY_FontSize%\96\User,sserife.fon,,%Small.SSerif%
+HKLM,%KEY_FontSize%\96\User,coure.fon,,%Small.Cour%
+HKLM,%KEY_FontSize%\96\User,symbole.fon,,%Small.Symbol%
+HKLM,%KEY_FontSize%\96\User,smalle.fon,,%Small.Small%
+
+HKLM,%KEY_FontSize%\120,Description,,%Large.Desc%
+HKLM,%KEY_FontSize%\120\System,8514sys.fon,,fonts.fon
+HKLM,%KEY_FontSize%\120\System,8514fix.fon,,fixedfon.fon
+HKLM,%KEY_FontSize%\120\System,8514oem.fon,,oemfonts.fon
+HKLM,%KEY_FontSize%\120\User,seriff.fon,,%Large.Serif%
+HKLM,%KEY_FontSize%\120\User,sseriff.fon,,%Large.SSerif%
+HKLM,%KEY_FontSize%\120\User,courf.fon,,%Large.Cour%
+HKLM,%KEY_FontSize%\120\User,symbolf.fon,,%Large.Symbol%
+HKLM,%KEY_FontSize%\120\User,smallf.fon,,%Large.Small%
+
+; Mark .FON and Marlet.ttf w/ the HIDDEN attrib on first boot:
+; (Note that you need to use CAPS so the filesystem doesn't treat it as a LFN)
+; R=1; H=2; S=4; HR=3; HS=6; SHR=7
+HKLM,%KEY_RENAME%\Fonts,,,%20%
+HKLM,%KEY_RENAME%\Fonts,MARLETT.TTF,,",6"
+HKLM,%KEY_RENAME%\Fonts,MODERN.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,DOSAPP.FON,,",6"
+HKLM,%KEY_RENAME%\Fonts,APP850.FON,,",6"
+HKLM,%KEY_RENAME%\Fonts,VGA850.FON,,",6"
+
+HKLM,%KEY_RENAME%\Fonts,VGASYS.FON,,",6"
+HKLM,%KEY_RENAME%\Fonts,VGAFIX.FON,,",6"
+HKLM,%KEY_RENAME%\Fonts,VGAOEM.FON,,",6"
+HKLM,%KEY_RENAME%\Fonts,SSERIFE.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SERIFE.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,COURE.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SYMBOLE.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SMALLE.FON,,",2"
+
+HKLM,%KEY_RENAME%\Fonts,8514SYS.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,8514FIX.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,8514OEM.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SSERIFF.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SERIFF.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,COURF.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SYMBOLF.FON,,",2"
+HKLM,%KEY_RENAME%\Fonts,SMALLF.FON,,",2"
+
+; User-visible strings
+
+[Strings]
+;Non-Localizable strings:
+KEY_Optional="SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+KEY_FontSize="software\Microsoft\windows\currentversion\fontsize"
+KEY_KLayout="system\currentcontrolset\control\keyboard layouts"
+KEY_RENAME     = "Software\Microsoft\Windows\CurrentVersion\RenameFiles"
+KEY_Nls="system\currentcontrolset\control\Nls"
+
+;Localizable strings:
+MSFontSizeOptions="Font Size Options"
+TTFONTS          ="True Type Fonts"
+Font_Folder_Desc = "Fonts"
+Bold="Bold"
+Italic="Italic"
+Bold.Italic="Bold Italic"
+
+;Normal Strings
+
+Small.Desc="Small Fonts"
+Small.Serif="MS Serif 8,10,12,14,18,24 (VGA res)"
+Small.SSerif="MS Sans Serif 8,10,12,14,18,24 (VGA res)"
+Small.Cour="Courier 10,12,15 (VGA res)"
+Small.Symbol="Symbol 8,10,12,14,18,24 (VGA res)"
+Small.Small="Small Fonts (VGA res)"
+Large.Desc="Large Fonts"
+Large.Serif="MS Serif 8,10,12,14,18,24 (8514/a res)"
+Large.SSerif="MS Sans Serif 8,10,12,14,18,24 (8514/a res)"
+Large.Cour="Courier 10,12,15 (8514/a res)"
+Large.Symbol="Symbol 8,10,12,14,18,24 (8514/a res)"
+Large.Small="Small Fonts (8514/a res)"
+
+;****************************************************
+;*** This section added for MultiLanguage Support ***
+;****************************************************
+
+MultiLanguageDesc="Language Support"
+EnglishDes="English and Western European Languages"
+GreekDes="Adds support for Greek"
+CyrillicDes="Adds support for Cyrillic Languages"
+CEDes="Adds support for Central European Languages"
+BalticDes="Adds support for Baltic Languages"
+TurkishDes="Adds support for Turkish"
+0000041C="Albanian"
+00000423="Belarusian"
+00000402="Bulgarian"
+0000041A="Croatian"
+00000405="Czech"
+00000425="Estonian"
+00000408="Greek"
+0000040E="Hungarian"
+00000426="Latvian"
+00000427="Lithuanian"
+00000415="Polish"
+00000418="Romanian"
+00000419="Russian"
+00000C1A="Serbian"
+0000041B="Slovak"
+00000424="Slovenian"
+0000041F="Turkish"
+00000422="Ukrainian"
+
+KBD_RU="Russian"
+KBD_BUL="Bulgarian"
+KBD_BLL="Bulgarian (Latin)"
+KBD_BLR="Belarusian"
+KBD_CR="Croatian"
+KBD_CZ="Czech"
+KBD_CZ1="Czech (Qwerty)"
+KBD_GK="Greek"
+KBD_GKL="Greek Latin"
+KBD_GK220="Greek IBM 220"
+KBD_GK319="Greek IBM 319"
+KBD

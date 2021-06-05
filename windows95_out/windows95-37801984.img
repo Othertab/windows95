@@ -1,0 +1,117 @@
+PM driver exists
+btmdisk.sys	; BUSLOGIC PM driver exists
+buf160.sys	; BUSLOGIC PM driver exists
+cardtalk.sys	; DATABOOK
+casmgr.exe	; Intel Satisfax
+dcam18xx.exe	; Future Domain Cam manager
+faxpop.exe	; Intel Satisfax
+faxtsr.exe	; Intel FAX driver
+cufloppy.sys	; Businessland Floppy Driver PM driver exists
+cuss12.sys	; Businessland Floppy Driver PM driver exists
+dosdata.sys	; QEMM
+dos-up.sys	; QEMM
+loadhi.sys	; QEMM
+qemm386.sys	; QEMM
+hookrom.sys	; QEMM
+dc2000.sys 	; Promise technologies DC2000 DOS driver (32bit)
+dosdrv.sys	; Promise Technologies DC200 IDE accelerator
+vlide.sys	; Promise Technologies PM driver (ESDI_506) exists
+aspipro.sys	; Promise ASPI driver. PM driver exists.
+eide2300.sys    ; Promise EIDE2300+ driver
+dosoad.sys	; IOMEGA
+scsidrvr.sys    ; IOMEGA SCSI driver.
+aspi1616.sys    ; IOMEGA 16 bit driver
+aspipc16.sys    ; IOMEGA 16 bit driver
+dptddl.sys	; DPT PM driver exists
+drunner.sys	; MAXTOR
+dblspace.*	; MS-DOS
+doskey.exe 	; MS-DOS
+drvspace.*	; MS-DOS
+emm386.exe	; MS-DOS
+power.exe 	; MS-DOS
+print.exe 	; MS-DOS
+smartdrv.exe	; MS-DOS
+ramdrive.sys, NON_DISK  ; MS-DOS	
+interlnk.exe, NON_DISK	; MS-DOS
+laddrv.sys, NON_DISK	; MS-DOS
+ibmavdt.*	; IBM virus detection
+ibmcdrom.sys	; IBM PM driver exists
+aspi2ibm.sys	; IBM cdrom driver
+ibmidecd.sys	; IBM ATAPI Driver.  PM Driver exists.
+sramdrv2.sys	; IBM pcmcia driver
+$fdd5.sys	; IBM Floppy driver.
+ibmdss02.sys	; IBM PCMCIA driver
+ibmdoscs.sys	; IBM PCMCIA driver
+dicrmu02.sys	; IBM PCMCIA driver
+$icpmdos.sys	; IBM PCMCIA driver
+autodrv.sys	; IBM PCMCIA pc card auto config
+bluemax.sys	; IBM Memory Manager
+lad.exe		; DEC NET
+ladcddrv.sys	; DEC NET
+sl.exe		; DEC driver
+ma100.sys	; Trantor no PM driver
+ma120.sys	; Trantor PM driver exists
+ma130.sys	; Trantor PM driver exists
+ma13b.sys	; Trantor PM driver exists
+ma160.sys	; Trantor PM driver exists
+ma200.sys	; Trantor PM driver exists
+ma338.sys	; Trantor PM driver exists
+ma348.sys	; Trantor PM driver exists
+ma358.sys	; Trantor PM driver exists
+tscsi.sys	; Trantor PM driver exists
+tslcdr.sys	; Trantor PM driver exists
+ma460.sys    	; Trantor SCSIWorks
+mamv1.sys	; Media Vision/Trantor PM driver exists
+rcd.sys		; Media Vision CD driver
+mkecdapl.exe   	; Panasonic CD PM driver exists
+mtmcdae.sys	; Mitsumi PM driver exists
+mtmcdas.sys	; Mitsumi PM driver exists
+mtmcde.sys	; Mitsumi PM driver exists
+mtmcds.sys	; Mitsumi PM driver exists
+nav&.sys	; Norton Desktop for Windows
+navtsr.exe	; Norton Desktop for Windows
+navboot.exe	; Norton Utilities
+pcds.sys	
+rm386.exe	; Netroom
+xload.sys	; Netroom
+syscloak.exe	; netroom
+afm.com		; Netroom
+scplus.exe	
+slcd.sys	; SONY PM driver exists
+par.exe		; Syquest
+sqatdrvr.sys	; Syquest
+sqdriver.sys	; Syquest
+syatdrvr.sys	; Syquest
+sydriver.sys	; Syquest
+syq55.sys	; Syquest
+sqdrutil.exe	; Syquest utility.
+sqepp.sys	; Syquest RM driver.
+stacker.*	; Stac
+sswap.com	; Stac
+tapedisk.exe	; TapeDisk Corp driver
+exfdrv.sys	; Ultrastor floppy PM driver exists
+ultracd.sys	; Ultrastor PM driver exists
+ultrarem.sys	; Ultrastor PM driver exists
+uspi14.sys	; Ultrastor PM driver exists
+uspi24.sys	; Ultrastor PM driver exists
+uspi34.sys    	; Ultrastor 34F driver.  PM Driver exists.
+usp14N.sys	; Ultrastor PM driver exists.
+flptical.sys    ; Ultrastor Floptical driver.
+virstop.exe	; f-prot (virusscan)
+novcast.exe	; f-prot (virusscan)
+nwredir.exe
+extdisk.sys	; Compaq HDD driver. PMD exists
+cpqidecd.sys	; Compaq IDE CDROM driver  PMD exists
+scsic710.sys	; Compaq SCSI RM Driver.  PM driver exists
+cdc710.sys	; Compaq SCSI CD RM Driver. PM driver exists
+smrt.sys	; Compaq RM driver
+smrtscsi.sys	; Compaq RM driver
+rocket.bin	; Ontrack IDE Accellerator. PMD exists
+dh.exe		; Ontrack
+amsida.sys	; AMD SCSI driver PMD exists
+aspidrvr.sys, LUNZeroOnly	; Always RM driver  PM driver exists
+aspi461.sys	; Always PM driver exists.
+al24aspi.sys	; Always AL2400 ASPI driver.  PM Driver exists.
+al7aspi.sys	; Always AL 7000 ASPI driver.
+adi2*.sys	; Appian RM Drivers
+adic143.sys     ; Appian IDE Driver.  PM driver exists

@@ -1,0 +1,88 @@
+on FAT32 drives. This includes the 
+original version of Windows 95, Windows NT 4.0 and earlier, and previous 
+versions of MS-DOS and Windows. However, this version of Windows does 
+support accessing FAT32 drives in MS-DOS mode. In addition, FAT32 drives 
+can be shared over a network and accessed by remote computers in the 
+same way as older-style FAT drives, even if the remote computers don't 
+support FAT32.
+
+Known Problems
+--------------
+
+Running Interlink on a FAT32 drive
+----------------------------------
+If you are running Interlink as a server on a FAT32 drive, all 
+connections and inquiries (such as DIR) result in the following 
+error message: "File allocations table bad, Drive X." Also, the 
+Interlink "manager" shows the incorrect total drive size.
+
+This problem does not occur on FAT16 drives. To see your FAT32 
+server, start your computer in protect mode with Interlink running.
+
+Incorrect free disk space reported by programs
+----------------------------------------------
+Programs not developed specifically for this version of Windows 
+may be unable to report free space accurately on large hard disks 
+that use FAT32. Older programs are unable to report more than 2 GB 
+of free or total disk space, and many will report incorrect amounts 
+of free, total, or used space on large hard drives. Windows 95 
+version 4.00.950 B provides new MS-DOS and Win32 APIs that programs 
+can use to determine free or total disk space over 2 GB. 
+
+Save to File (Hibernate) feature 
+may be incompatible with FAT32
+--------------------------------
+On computers containing a BIOS made by Phoenix Technologies, you 
+might not be able to use the Save to File feature if your primary 
+(boot) drive is formatted using FAT32. If your PhDISK utility is 
+earlier than version 5.0, you must obtain an updated version of the 
+utility and an updated ROM BIOS from your computer manufacturer in 
+order to use a Save to Disk file. 
+
+With older versions of the ROM BIOS, your computer may be unable to 
+start if it tries to read a Save to Disk file from a FAT32 drive. If 
+this occurs, you must disable the Save to File feature in your ROM BIOS. 
+This does not affect computers using a disk partition to store the Save 
+to Disk data.  
+
+Ontrack Systems Disk Manager
+----------------------------
+If you use the Ontrack Systems Disk Manager program on a computer with 
+FAT32 drives, there might be a long pause when you start your computer 
+and/or the drive will be set to run in compatibility mode. If you use 
+version 7.0x, you can avoid this pause by using the /L=0 option with 
+Disk Manager. To do this, carry out the following steps:
+
+1. Start your computer normally, and then run Disk Manager.
+
+2. Click the Maintenance menu, and then click Update Dynamic Drive 
+   Overlay.
+
+3. Add /L=0 to any other options that are already present.
+
+4. Save the settings, and then restart your computer.
+
+If you are running an earlier version of Disk Manager and you want 
+to use FAT32, you should update to version 7.04 or later and use 
+the /L=0 switch.
+
+V Communications System Commander
+---------------------------------
+Versions 2.28 and earlier of V Communications System Commander are 
+incompatible with FAT32. If your primary (boot) hard disk uses FAT32 
+exclusively, you must obtain version 3 or later of System Commander.
+
+Iomega Jaz tools may be incompatible with FAT32
+-----------------------------------------------
+If you format an Iomega Jaz disk using FAT32, you may need to obtain 
+updated versions of the Jaz tools. Older versions of the tools do not 
+support FAT32 Jaz disks properly. As a result, the eject, write-
+protection, and password-protection options will be disabled. Updated 
+versions of these tools that are compatible with FAT32 are available 
+from Iomega, and from the Microsoft Windows Driver Library contained 
+on the Windows CD-ROM disk and available for download from various 
+on-line services.
+
+SyQuest Techology, Inc. device drivers
+--------------------------------------
+Older versions of

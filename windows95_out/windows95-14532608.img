@@ -1,0 +1,109 @@
+*pnp81eb.LogConfig2,*pnp81eb.LogConfig3,*pnp81eb.LogConfig4
+
+[*pnp8329.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp8329"
+HKR,,DeviceVxDs,,proteon.vxd
+HKR,NDIS\ODI,DriverName,,"osh392r"
+HKR,NDIS\ODI,FileName,,"osh392r.com"
+;HKR,Ndi\Install,odi,,"ndis392.odi"
+
+
+;****************************************************************************
+; *pnp81eb Proteon Token Ring (P1390)
+;****************************************************************************
+[*pnp81eb.ndi]
+AddReg=*pnp81eb.ndi.reg,ndis39.reg
+LogConfig=*pnp81eb.LogConfig1,*pnp81eb.LogConfig2,*pnp81eb.LogConfig3,*pnp81eb.LogConfig4
+
+[*pnp81eb.ndi.reg]
+HKR,Ndi,DeviceID,,"*pnp81eb"
+HKR,,DeviceVxDs,,proteon.vxd
+HKR,NDIS\ODI,DriverName,,"osh392r"
+HKR,NDIS\ODI,FileName,,"osh392r.com"
+;HKR,Ndi\Install,odi,,"ndis392.odi"
+
+[*pnp81eb.LogConfig1]
+ConfigPriority=HARDRECONFIG
+IOConfig=A20-A2F,E20-E2F,1220-122F,1620-162F,1A20-1A2F,1E20-1E2F,2220-222F,2620-262F,2A20-2A2F,2E20-2E2F,3220-322F,3620-362F,3A20-3A2F,3E20-3E2F
+IRQConfig=3,4,5,6,7,9,10,11,12
+DMAConfig=5,6,7,0
+
+[*pnp81eb.LogConfig2]
+ConfigPriority=HARDRECONFIG
+IOConfig=4220-422F,4620-462f,4A20-4A2F,4E20-4E2F,5220-522F,5620-562F,5A20-5A2F,5E20-5E2F,6220-622F,6620-662F,6A20-6A2F,6E20-6E2F,7220-722F,7620-762F,7A20-7A2F,7E20-7E2F
+IRQConfig=3,4,5,6,7,9,10,11,12
+DMAConfig=5,6,7,0
+
+[*pnp81eb.LogConfig3]
+ConfigPriority=HARDRECONFIG
+IOConfig=8220-822F,8620-862f,8A20-8A2F,8E20-8E2F,9220-922F,9620-962F,9A20-9A2F,9E20-9E2F,A220-A22F,A620-A62F,AA20-AA2F,AE20-AE2F,B220-B22F,B620-B62F,BA20-BA2F,BE20-BE2F
+IRQConfig=3,4,5,6,7,9,10,11,12
+DMAConfig=5,6,7,0
+
+[*pnp81eb.LogConfig4]
+ConfigPriority=HARDRECONFIG
+IOConfig=C220-C22F,C620-C62f,CA20-CA2F,CE20-CE2F,D220-D22F,D620-D62F,DA20-DA2F,DE20-DE2F,E220-E22F,E620-E62F,EA20-EA2F,EE20-EE2F,F220-F22F,F620-F62F,FA20-FA2F,FE20-FE2F
+IRQConfig=3,4,5,6,7,9,10,11,12
+DMAConfig=5,6,7,0
+
+;****************************************************************************
+; ndis39 base section
+;****************************************************************************
+[ndis39.reg]
+HKR,,DevLoader,,*ndis
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"PROTEON"
+HKR,NDIS,MajorNdisVersion,1,03
+HKR,NDIS,MinorNdisVersion,1,0A
+HKR,NDIS\NDIS2,DriverName,,"NDI39XR$"
+HKR,NDIS\NDIS2,FileName,,"ndis39xr.dos"
+; odi driver info is up in device id
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"tokenring"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"tokenring"
+; Install sections
+HKR,Ndi\Install,ndis3,,"ndis39.ndis3"
+HKR,Ndi\Install,ndis2,,"ndis39.ndis2"
+;
+; odi install section is in base section
+
+; resources
+HKR,,INTLEVEL,1,04,00,00,00
+HKR,,IOBASE,1,02,00,00,00
+HKR,,DMAChannel,1,03,00,00,00
+HKR,NDI\params\INTLEVEL,resc,1,04,00,00,00
+HKR,NDI\params\INTLEVEL,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\INTLEVEL,flag,1,30,00,00,00
+HKR,NDI\params\IOBASE,resc,1,02,00,00,00
+HKR,NDI\params\IOBASE,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOBASE,flag,1,30,00,00,00
+HKR,NDI\params\DMAChannel,resc,1,03,00,00,00
+HKR,NDI\params\DMAChannel,ParamDesc,,"DMA Channel"
+HKR,NDI\params\DMAChannel,flag,1,30,00,00,00
+; params
+; linkspeed
+HKR,NDI\params\LINKSPEED,ParamDesc,,"Ring Speed/16-bit driver"
+HKR,NDI\params\LINKSPEED,flag,1,10,00,00,00
+HKR,NDI\params\LINKSPEED,default,,16
+HKR,NDI\params\LINKSPEED,type,,enum
+HKR,NDI\params\LINKSPEED\enum,4,,4
+HKR,NDI\params\LINKSPEED\enum,16,,16
+; cardspeed
+HKR,NDI\params\CardSpeed,ParamDesc,,"Ring Speed/32-bit driver"
+HKR,NDI\params\CardSpeed,flag,1,20,00,00,00
+HKR,NDI\params\CardSpeed,default,,16
+HKR,NDI\params\CardSpeed,type,,enum
+HKR,NDI\params\CardSpeed\enum,4,,4
+HKR,NDI\params\CardSpeed\enum,16,,16
+; media
+HKR,NDI\params\MEDIA,ParamDesc,,"Cable Type/16-bit driver"
+HKR,NDI\params\MEDIA,flag,1,10,00,00,00
+HKR,NDI\params\MEDIA,default,,STP
+HKR,NDI\params\MEDIA,type,,enum
+HKR,NDI\params\MEDIA\enum,"STP",,"STP"
+HKR,NDI\params\MEDIA\enum,"UTP",,"UTP"
+; media
+HKR,NDI\params\CableType,ParamDesc,,"Cable Type/32-

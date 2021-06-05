@@ -1,0 +1,114 @@
+cluding floppy. We map all removable to floppy.
+"!0"="B;IN(2,7)(3,3)(4,5)(5,6)(6,8)"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Fixed Drive"
+"4"="Removable Drive"
+"5"="Remote Drive"
+"6"="CDROM"
+"7"="Floppy Drive"
+"8"="RAM Drive"
+"9"="Drive Array"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\4]
+"Name"="Logical Drive Size"
+"Description"="The size of this logical drive in kilobytes."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalDrives\\LogicalTotalSizeK"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\5]
+"Name"="Free Logical Drive Size"
+"Description"="The remaining space on this logical drive in kilobytes."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalDrives\\LogicalFreeSizeK"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\6]
+"Name"="Logical Drive Path"
+"Description"="The path used to access this logical drive (for remote drives)."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(512)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalDrives\\LogicalDrivePath"
+
+
+;======================================
+;  Field Replaceable Unit (FRU) group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30]
+"Name"="Field Replaceable Unit"
+"Class"="DMTF|FRU|001"
+"Description"="A Field Replaceable Unit (FRU), is defined as a hardware component which is designed to be separately removable for replacement or repair. For the purposes of this definition, a motherboard and a fixed hard disk are FRUs, whereas a fixed hard disk platter or a chip fixed in place on the motherboard are not FRUs since they are not designed to be separately removable. Each instance within the FRU table should contain the device group and instance data for the associated hardware component."
+"Key"="1"
+; ";Table"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\FRU"
+"^Index"=hex:03
+"^ROW"="^ROWNUM|2|3|4|5|6|7|8|9|10|11"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\1]
+"Name"="FRU Index"
+"Description"="The index into the Field Replaceable Unit table."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\2]
+"Name"="Device Group Index"
+"Description"="The group ID of the group referencing this Field Replaceable Unit instance."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\FRU\\DeviceGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\3]
+"Name"="Description"
+"Description"="A clear description of this Field Replaceable Unit."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(255)"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\FRU\\Description"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\4]
+"Name"="Manufacturer"
+"Description"="The name of the company manufacturing or providing this Field Replaceable Unit."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(80)"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\FRU\\Manufacturer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\5]
+"Name"="Model"
+"Description"="The manufacturer's model number for this Field Replaceable Unit."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\FRU\\Model"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\6]
+"Name"="Part Number"
+"Description"="A part number by which a replacement part can be ordered for this Field Replaceable Unit."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKLM\\DesktopManagement\\DATA\\2\\FRU\\PartNumber"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\30\7]
+"Name"="FRU Serial Number"
+"Description"="The manufacturer's serial number for this Field Replaceable Unit."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString

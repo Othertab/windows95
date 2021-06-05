@@ -1,0 +1,142 @@
+ive
+CmdDelete       = super         ; Super PC Kwik
+CmdDelete       = superon,1     ; Batch file which turns on Super PC Kwik (REM out line)
+CmdDelete       = superpck      ; Multisoft Super PC Kwik disk cache
+CmdDelete       = zcache        ; Zenith Data Systems OEM from DOS 3.3 & 4.01
+CmdDelete       = pcache        ; Print cache
+
+;For non MS-DOS operating systems:
+CmdDelete = diskopt
+CmdDelete = delq
+CmdDelete = delpurge
+CmdDelete = delwatch
+CmdDelete = diskmap
+CmdDelete = dpms
+CmdDelete = eraq
+;CmdDelete = lock
+;CmdDelete = login
+CmdDelete = memmax
+CmdDelete = nwcache
+CmdDelete = password
+CmdDelete = ramboost
+CmdDelete = rendir
+CmdDelete = script
+CmdDelete = taskmax
+CmdDelete = taskmgr
+CmdDelete = touch
+CmdDelete = xdel
+CmdDelete = xdir
+
+;
+; Rem lines out in autoexec.bat or any batch file executed
+; by autoexec.bat which has a copy,del,move,rename, command
+; followed by one of these file names somewhere on it's
+; commandline
+; Review:  Do we need this list anymore as we un-conditionally Rem out the
+; Cpy, Ren and Del lines.
+
+RemCpyRenDel = config.sys
+RemCpyRenDel = autoexec.bat
+RemCpyRenDel = protocol.ini
+RemCpyRenDel = win.ini
+RemCpyRenDel = system.ini
+CmdFixArgs = keyb
+
+;
+; These will be called before setup queued any files to copy
+[PreQueueProviders]
+netdi.dll,SBSTREECOPYNWBOOTDISK
+
+; These are called before any files are copied.
+[BeforeProvider]
+msprint.dll, SETUPENTRY
+
+; These are called once all the files (.infs etc)
+; have been copied. Also the directory hierarchy is there. Also, we are
+; about ready to reboot after flushing TP cache.
+[AfterProvider]
+netdi.dll,NDICLEANUPB4REBOOT
+;The SURPLSETUP must be the last afterprovider to get things in the rpl image.
+setupx.dll,SURPLSETUP
+
+; These are all the keys that are not deleted in HKLM if doing a
+; clean install.
+[CleanoutReg]
+HARDWARE
+SOFTWARE
+SYSTEM
+CONFIG
+ENUM
+REGISTRY
+
+[SetverEntries]
+APPEND.EXE
+BASIC.COM
+BASICA.COM
+DISKCOMP.EXE
+EXTDISK.SYS
+GRAPHICS.COM
+FASTOPEN.EXE
+MODE_DOS.COM
+PRINT.EXE
+REPLACE.EXE
+RESTORE.EXE
+SCPLUS.EXE
+SCSIC710.SYS
+TREE.COM
+VDISK.SYS
+
+[SetupUnInstallYes]
+CopyFiles=un.copy
+AddReg=Un.AddReg
+
+[SetupUnInstallNo]
+
+[un.copy]
+uninstal.exe
+
+[Un.AddReg]
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows95,DisplayName,,"%Win_DESC%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows95,UninstallString,,"uninstal.exe"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows95Cleanup,DisplayName,,"%Win_Cln_DESC%"
+HKLM,Software\Microsoft\Windows\CurrentVersion\Uninstall\Windows95Cleanup,UninstallString,,"uninstal.exe /delete"
+
+[Data]
+
+
+
+
+
+
+
+
+ CCP=0
+
+
+
+[Strings]
+;Non-Localizable strings:
+KEY_OPTIONAL   = "Software\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents"
+KEY_RENAME     = "Software\Microsoft\Windows\CurrentVersion\RenameFiles"
+KEY_DEL        = "Software\Microsoft\Windows\CurrentVersion\DeleteFiles"
+KEY_CFGMGR     = "System\CurrentControlSet\Services\VxD\CONFIGMG"
+KEY_MULTIFUNC  = "Hardware\Description\System\MultifunctionAdapter"
+KEY_GROUPORDER = "System\CurrentControlSet\Control\GroupOrderList"
+KEY_SERVICEGRP = "System\CurrentControlSet\Control\ServiceGroupOrder"
+KEY_NTKERN     = "System\CurrentControlSet\Services\VxD\NTKern"
+KEY_SVCSVXD    = "System\CurrentControlSet\Services\VxD"
+KEY_RUNONCE    = "Software\Microsoft\Windows\CurrentVersion\RunOnce"
+KEY_VMM32FILES = "System\CurrentControlSet\Control\VMM32Files"
+KEY_INSTALLED  = "System\CurrentControlSet\Control\InstalledFiles"
+KEY_CURRENT    = "Software\Microsoft\Windows\CurrentVersion"
+KEY_ASDLIST    = "System\CurrentControlSet\Control\AttemptingSomethingDangerous\List"
+KEY_FILESYSTEM = "System\CurrentControlSet\Control\FileSystem"
+
+;Localizable strings:
+Desktop         = "Desktop"
+ProductName     = "Microsoft Windows 95"
+WINDOWS_DEFAULT = "Windows Standard"    ; must match name of default color scheme
+NULL            = ""
+WINBASE         = "Base Windows Components"
+SRCPATH         = "Distribution directory"
+MAIN

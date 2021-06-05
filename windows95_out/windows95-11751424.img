@@ -1,0 +1,137 @@
+iles        = KBD_VxDs_Del
+UpdateInis      = PC_XT_84_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[PC_AT_Enh_Inst]        ;*PNP0303
+LogConfig       = kbdlc
+CopyFiles       = MS_KBD_ENH_CopyFiles, KBD_VxDs
+DelFiles        = KBD_VxDs_Del
+UpdateInis      = PC_AT_Enh_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[Olivetti_83_Inst]      ;*PNP0304
+LogConfig       = kbdlc
+CopyFiles       = MS_KBD_ENH_CopyFiles, KBD_VxDs
+DelFiles        = KBD_VxDs_Del
+UpdateInis      = Olivetti_83_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[Olivetti_102_Inst]     ;*PNP0305
+LogConfig       = kbdlc
+CopyFiles       = MS_KBD_ENH_CopyFiles, KBD_VxDs
+DelFiles        = KBD_VxDs_Del
+UpdateInis      = Olivetti_102_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[Olivetti_86_Inst]      ;*PNP0306
+LogConfig       = kbdlc
+CopyFiles       = MS_KBD_ENH_CopyFiles, KBD_VxDs
+DelFiles        = KBD_VxDs_Del
+UpdateInis      = Olivetti_86_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[Olivetti_101_102_Inst] ;*PNP0309
+LogConfig       = kbdlc
+CopyFiles       = MS_KBD_ENH_CopyFiles, KBD_VxDs
+DelFiles        = KBD_VxDs_Del
+UpdateInis      = Olivetti_101_102_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[ATT_302_Inst]          ;*PNP030a
+LogConfig       = kbdlc
+CopyFiles       = MS_KBD_ENH_CopyFiles, KBD_VxDs
+DelFiles        = KBD_VxDs_Del
+UpdateInis      = ATT_302_Inis, Keyb.Common.Inis
+AddReg=Keyb.Common.Reg
+AddReg          = MS_KBD_AddReg
+
+[kbdlc]
+ConfigPriority=HARDWIRED
+IOConfig=60-60(ffff::)
+IOConfig=64-64(ffff::)
+IRQConfig=1
+
+[MS_KBD_ENH_CopyFiles]
+keyboard.drv
+
+[MS_KBD_AddReg]
+HKR,,DriverDesc,,"Keyboard Driver"
+HKR,,DevLoader,,*CONFIGMG
+
+[PC_XT_83_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0300.DeviceDesc%"
+system.ini,keyboard,,"subtype=42"
+system.ini,keyboard,,"type=1"
+
+[PC_AT_84_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0301.DeviceDesc%"
+system.ini,keyboard,,"subtype=0"
+system.ini,keyboard,,"type=3"
+
+[PC_XT_84_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0302.DeviceDesc%"
+system.ini,keyboard,,"subtype="
+system.ini,keyboard,,"type=1"
+
+[PC_AT_Enh_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0303.DeviceDesc%"
+system.ini,keyboard,,"subtype="
+system.ini,keyboard,,"type=4"
+
+[Olivetti_83_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0304.DeviceDesc%"
+system.ini,keyboard,,"subtype="
+system.ini,keyboard,,"type=1"
+
+[Olivetti_102_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0305.DeviceDesc%"
+system.ini,keyboard,,"subtype=1"
+system.ini,keyboard,,"type=2"
+
+[Olivetti_86_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0306.DeviceDesc%"
+system.ini,keyboard,,"subtype=10"
+system.ini,keyboard,,"type=3"
+
+[Olivetti_101_102_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP0309.DeviceDesc%"
+system.ini,keyboard,,"subtype=40"
+system.ini,keyboard,,"type=4"
+
+[ATT_302_Inis]
+system.ini,boot.description,,"keyboard.typ=%*PNP030a.DeviceDesc%"
+system.ini,keyboard,,"subtype=4"
+system.ini,keyboard,,"type=1"
+
+[Keyb.Common.Inis]
+system.ini,keyboard,,"keyboard.dll="
+system.ini,boot,,"keyboard.drv=keyboard.drv"
+
+; Install *vkd unless "device=alrvkd.386", "keyboard=alrvkd.386", "device=vkd.386", or "keyboard=vkd.386" is already present
+system.ini, 386enh, "keyboard=alrvkd.386", "~SetupTemp~=*",3
+system.ini, 386enh, "device=alrvkd.386", "~SetupTemp~=*",3
+system.ini, 386enh, "keyboard=vkd.386", "~SetupTemp~=*",3
+system.ini, 386enh, "device=vkd.386", "~SetupTemp~=*",3
+system.ini, 386enh,, "keyboard=*vkd"
+system.ini, 386enh, "~SetupTemp~=*", "keyboard=*vkd",3
+
+; always combine *vkd into VMM32.VxD:
+wininit.ini, CombineVxDs,,"%22%\vkd.vxd=%11%\vmm32.vxd"
+
+[Keyb.Common.Reg]
+HKLM,System\CurrentControlSet\Control\VMM32Files,vkd.vxd,1,
+
+[KBD_VxDs]
+vkd.vxd
+
+[KBD_VxDs_Del]
+vkd.386
+
+[Strings]
+KeyboardClassName       

@@ -1,0 +1,92 @@
+, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR,, InactivityScale, 1, 3c,00,00,00  ; minutes 
+HKR, Init, 2,, "AT &F E0 V1 &D2 &C1 \V2 S0=0<cr>"
+HKR, Settings, ErrorControl_On,, "\N7"
+HKR, Settings, ErrorControl_Forced,, "\N6"
+HKR, Settings, Compression_On,, "%%C3"
+HKR, Settings, SpeedNegotiation_Off,, "N0"
+HKR, Settings, SpeedNegotiation_On,, "N1"
+
+[Modem14.AddReg] ; IBM SM-24HN-1
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init, 2,, "AT&FE0V1Q0&C1&D2<cr>"
+
+[Modem13.AddReg] ; IBM 24-96 Internal
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 00,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init, 2,, "AT&F&C1&D2E0V1<cr>"
+HKR, Settings, DialSuffix,, ""
+
+[Modem9.AddReg]  ; Turbomodem and GVC 14.4 internal
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Settings, FlowControl_Off,, "\Q0"
+HKR, Settings, FlowControl_Hard,, "\Q3"
+HKR, Settings, FlowControl_Soft,, "\Q1"
+
+[Modem8.AddReg]  ; PB-144HV/R6 
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,c2,01,00, 40,38,00,00
+HKR, Settings, FlowControl_Off,, "\Q0"
+HKR, Settings, FlowControl_Hard,, "\Q3"
+HKR, Settings, FlowControl_Soft,, "\Q1"
+
+[Modem7.AddReg]  ; GVC Fax 14400 V.42bis-MNP5
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, FlowControl_Off,, "\Q0"
+HKR, Settings, FlowControl_Hard,, "\Q3"
+HKR, Settings, FlowControl_Soft,, "\Q1"
+
+[Modem6.AddReg]  ; FaxModem 9696
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 V1<cr>"
+
+[Modem5.AddReg]  ; GVC Fax Modem 9648 External
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 V1<cr>"
+
+[Modem4.AddReg]  ; GVC Super Modem 2400
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Settings, DialSuffix,, ""
+HKR, Init, 2,, "AT&FS0=0E0V1Q0&C1&D2<cr>"
+
+[Modem3.AddReg]  ; FM144/144V(P)
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, ff,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init, 2,, "AT &F E0 V1 W2 &C1 &D2 S95=47<cr>"
+HKR, Settings, ErrorControl_On,, "\N3"
+HKR, Settings, ErrorControl_Forced,, "\N2"
+HKR, Settings, InactivityTimeout,, "S30=<#>"
+HKR,, InactivityScale, 1, 0a,00,00,00
+HKR, Settings, Compression_On,, "%%C3"
+HKR, Settings, SpeedNegotiation_Off,, "N0"
+HKR, Settings, SpeedNegotiation_On,, "N1"
+
+[Modem2.AddReg]  ; GVC Faxmodem PFM-964824
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 40,01,00,00, 80,25,00,00, 60,09,00,00
+HKR, Init, 2,, "AT &F E0 V1<cr>"
+
+[Modem1.AddReg]  ; 28800 Fax Modem
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 5a,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 80,70,00,00
+
+; User visible strings
+
+[Strings]
+MS  = "Microsoft"
+GVC = "GVC"
+PB  = "Packard Bell"
+IBM = "IBM"
+Turbomodem = "Turbomodem"
+
+Modem37 ="GVC Super Modem 9600"
+Modem32 ="GVC External Fax Modem GM9648E"
+Modem31 ="IBM 7852 013, V.34 Data Fax"
+Modem30 ="IBM 7852 010, V.34 Data Fax"
+Modem29 ="IBM 28.8, V.34 Data Fax"
+Modem28 ="IBM 14.4 Data Fax with DAA PCMCIA"
+Modem26 ="14.4 Bps Data Fax Modem"
+Modem25 ="Packard Bell F-1114HV-R2 Data Fax"   
+Modem24 ="IBM Aptiva 310, 2400 Bps Data Fax"
+Modem23 ="IBM Aptiva 730, 14.4 Data Fax"
+Modem22 ="IBM Aptiva 510, 14.4 Data Fax Voice"
+Modem21 ="Packard Bell 24DBF Data Fax Modem"
+Modem20 ="GVC 14.4 Data Fax GM144i, F-1114HV-R2"
+Modem19 ="IBM Thinkpad 701 Internal Modem"
+Modem18 ="Packard Bell 14.4AM(SP) Modem-Soundcard"
+Modem17 ="IBM Aptiva 14.4 Data Fax Mo

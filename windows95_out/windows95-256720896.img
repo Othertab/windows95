@@ -1,0 +1,155 @@
+d%,GWL_STYLE,WS_VISIBLE+WS_BORDER+WS_CLIPCHILDREN) 
+ j1%=ShowWindow(hWnd%,SW_SHOWMAXIMIZED) 
+'' End of Maximize stuff
+
+    CUIDLL$ = "mscuistf.dll"            ''Custom user interface dll
+    HELPPROC$ = "FHelpDlgProc"          ''Help dialog procedure
+
+    SetBitmap CUIDLL$, LOGO
+    SetTitle " SimTower(TM) for Windows Setup"
+
+    szInf$ = GetSymbolValue("STF_SRCINFPATH")
+    IF szInf$ = "" THEN
+		szInf$ = GetSymbolValue("STF_CWDDIR") + "SETUP.INF"
+    END IF
+    ReadInfFile szInf$
+
+    DEST$ = "C:\SIMTOWER"
+
+ 
+'$IFDEF DEBUG
+    i% = SetSizeCheckMode(scmOnIgnore)    '' could use scmOff; def = scmOnFatal
+    WinDrive$ = MID$(GetWindowsDir, 1, 1)
+    IF IsDriveValid(WinDrive$) = 0 THEN
+	i% = DoMsgBox("Windows drive ('"+WinDrive$+"') is not a valid drive.", "DEBUG", MB_TASKMODAL+MB_ICONHAND+MB_OK)
+	GOTO QUIT
+    END IF
+'$ENDIF ''DEBUG
+
+
+	IF Dont_Check_For_Space = 1 THEN
+		i% = DoMsgBox("NO_CHECK specified, skipping Free Space and Valid Drive Checks. I will not be held responsible for my actions!", "Verification Status", MB_TASKMODAL+MB_ICONHAND+MB_OK)
+	END IF
+
+
+'' This just tosses up a nice welcome screen
+WELCOME:
+    sz$ = UIStartDlg(CUIDLL$, WELCOME, "FInfoDlgProc", APPHELP, HELPPROC$)
+    IF sz$ = "CONTINUE" THEN
+		UIPop 1
+    ELSE
+		GOSUB ASKQUIT
+		GOTO WELCOME
+    END IF
+
+    
+'' Check the Windows mode - if user isn't not in Enhanced mode, quit
+CHECKMODE:
+    i% = GetWindowsMode ()
+    IF i% < 2 THEN
+		sz$ = UIStartDLG(CUIDLL$, BADMODE, "FInfoDlgProc", MODEHELP, HELPPROC$)
+		IF SZ$ = "CONTINUE" THEN
+			UIPop 1
+		ELSE
+			UIPop 1
+			GOSUB ASKQUIT
+			GOTO CHECKMODE
+		END IF
+    END IF
+
+
+'' Input user name and company name
+GETTHEUSER:
+    sz$ = UIStartDlg(CUIDLL$, GETUSER, "FNameOrgDlgProc", APPHELP, HELPPROC$)
+    USERNAME$ = GetSymbolValue("NameOut")
+    COMPANYNAME$ = GetSymbolValue("OrgOut")
+
+    IF sz$ = "CONTINUE" THEN
+		IF LEN(USERNAME$) < 1 OR LEN(USERNAME$) > 22 OR MID$(USERNAME$,1,1) = " " THEN
+		GOSUB BADNAME
+		    GOTO GETTHEUSER
+		END IF
+		IF LEN(COMPANYNAME$) > 22 OR MID$(COMPANYNAME$,1,1) = " " THEN
+		    GOSUB BADCOMPANY
+		    GOTO GETTHEUSER
+		END IF
+		UIPop 1
+    ELSEIF sz$ = "REACTIVATE" THEN
+		GOTO GETTHEUSER
+    ELSEIF sz$ = "BACK" THEN
+		UIPop 1
+		GOTO WELCOME
+	ELSE
+		GOSUB ASKQUIT
+		GOTO GETTHEUSER
+    END IF
+
+GETPATH:
+    SetSymbolValue "EditTextIn", DEST$
+    SetSymbolValue "EditFocus", "END"
+GETPATHL1:
+    sz$ = UIStartDlg(CUIDLL$, DESTPATH, "FEditDlgProc", APPHELP, HELPPROC$)
+    DEST$ = GetSymbolValue("EditTextOut")
+
+''Compute this later!!!! - KO
+''(using GetCopyListCost())
+	required% = 7731847
+
+    IF sz$ = "CONTINUE" THEN
+		IF MID$(DEST$, LEN(DEST$), 1) = "\" THEN
+		    DEST$ = MID$(DEST$,1,LEN(DEST$) - 1)
+		END IF
+		UIPop 1
+
+		' Check space requirements
+		IF Dont_Check_For_Space = 0 THEN
+			IF IsDirWritable(DEST$) = 0 THEN
+			    GOSUB BADPATH
+			GOTO GETPATHL1
+			END IF
+			''temp$ = "Free Space is " + str$(GetFreeSpaceForDrive(MID$(DEST$,1,1)))
+			''i% = DoMsgBox(temp$, "Setup Message", MB_OK+MB_TASKMODAL+MB_ICONHAND)
+	
+			' Check free space
+
+			IF GetFreeSpaceForDrive(MID$(DEST$,1,1)) < required% THEN
+			    GOSUB TOOBIG
+				GOTO GETPATHL1
+			END IF
+
+			' Does it exist?
+
+			IF DoesFileExist(DEST$ + "\SIMTOWER.EXE", FemExists) = 1 THEN
+				SetSymbolValue "ConfirmTextIn", DEST$
+				sz$ = UIStartDlg(CUIDLL$, PATHEXISTS, "FConfirmDlgProc", 0, "")
+			IF sz$ = "EXIT" THEN
+					UIPopAll
+					ERROR STFQUIT
+				ELSEIF sz$ = "BACK" THEN
+					UIPop 1
+					GOTO GETTHEUSER
+				ELSEIF sz$ = "REACTIVATE" THEN
+					GOTO CONFIRMALL
+			ELSE
+					UIPop 1
+				END IF
+			END IF
+		END IF
+	' (end of >IF sz$ = "CONTINUE"<)
+    ELSEIF sz$ = "REACTIVATE" THEN
+		GOTO GETPATHL1
+    ELSEIF sz$ = "BACK" THEN
+		UIPop 1
+		GOTO GETTHEUSER
+    ELSE
+		GOSUB ASKQUIT
+		GOTO GETPATH
+    END IF
+
+
+
+CONFIRMALL:
+    SetSymbolValue "ConfirmTextIn", USERNAME$
+    AddListItem "ConfirmTextIn", COMPANYNAME$
+    AddListItem "ConfirmTextIn", DEST$
+    sz$ = UIStartDlg(CUIDLL$, CONFNAME, "F

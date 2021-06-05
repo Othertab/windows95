@@ -1,0 +1,100 @@
+2"""
+
+;OLE 2.0
+HKCR,mplayer,,,"%V_MEDIACLIP%"
+HKCR,mplayer\DefaultIcon,,,"%25%\mplayer.exe,1"
+HKCR,mplayer\Insertable,,,
+HKCR,mplayer\shell,,,play
+HKCR,mplayer\shell\open,,,"%V_OPEN%"
+HKCR,mplayer\shell\open\command,,,"%25%\mplayer.exe %%1"
+HKCR,mplayer\shell\play,,,"%V_PLAY%"
+HKCR,mplayer\shell\play\command,,,"%25%\mplayer.exe /play /close %%1"
+HKCR,mplayer\protocol\StdExecute\Server,,,%25%\mplayer.exe
+HKCR,mplayer\protocol\StdFileEditing\PackageObjects,,,
+HKCR,mplayer\protocol\StdFileEditing\Handler,,,%25%\mciole.dll
+HKCR,mplayer\protocol\StdFileEditing\Server,,,%25%\mplayer.exe
+HKCR,mplayer\protocol\StdFileEditing\verb\0,,,"%V_MEDIA_PLAY%"
+HKCR,mplayer\protocol\StdFileEditing\verb\1,,,"%V_MEDIA_EDIT%"
+HKCR,mplayer\protocol\StdFileEditing\verb\2,,,"%V_MEDIA_OPEN%"
+HKCR,mplayer\CLSID,,,"%KEY_OLE2ID%"
+HKCR,mplayer\shellex\PropertySheetHandlers,,,MediaPage
+HKCR,mplayer\shellex\PropertySheetHandlers\MediaPage,,,"%KEY_CLSPROP%"
+
+;Compatibility with OLE 1.0
+HKCR,%KEY_OLE1%,,,"%V_MEDIACLIP%"
+HKCR,%KEY_OLE1%\Insertable,,,
+HKCR,%KEY_OLE1%\TreatAs,,,"%KEY_OLE2ID%"
+HKCR,%KEY_OLE1%\ProgID,,,mplayer
+HKCR,%KEY_OLE1%\Ole1Class,,,mplayer
+
+;OLE 2.0
+HKCR,%KEY_OLE2%,,,"%V_MEDIACLIP%"
+HKCR,%KEY_OLE2%\Insertable,,,
+HKCR,%KEY_OLE2%\InprocHandler32,,,"ole32.dll"
+HKCR,%KEY_OLE2%\LocalServer,,,"%25%\mplayer.exe"
+HKCR,%KEY_OLE2%\LocalServer32,,,"%25%\mplayer.exe"
+HKCR,%KEY_OLE2%\verb\2,,,"%V_MEDIA_OPEN%,0,2"
+HKCR,%KEY_OLE2%\verb\1,,,"%V_MEDIA_EDIT%,0,2"
+HKCR,%KEY_OLE2%\verb\0,,,"%V_MEDIA_PLAY%,0,3"
+HKCR,%KEY_OLE2%\AuxUserType\2,,,"%V_MEDIACLIP%"
+HKCR,%KEY_OLE2%\DataFormats\DefaultSet,,,"mplayer"
+HKCR,%KEY_OLE2%\DataFormats\GetSet\2,,,"8,1,1,1"
+HKCR,%KEY_OLE2%\DataFormats\GetSet\1,,,"3,1,32,1"
+HKCR,%KEY_OLE2%\DataFormats\GetSet\0,,,"Embed Source,1,8,1"
+HKCR,%KEY_OLE2%\MiscStatus,,,"0"
+HKCR,%KEY_OLE2%\ProgID,,,"mplayer"
+HKCR,%KEY_OLE2%\DefaultIcon,,,"%25%\mplayer.exe,1"
+
+;AVIFILE
+HKCR,%KEY_AVI%,,,"%V_VIDEO%"
+HKCR,%KEY_AVI%\Insertable,,,
+HKCR,%KEY_AVI%\InprocHandler32,,,"ole32.dll"
+HKCR,%KEY_AVI%\LocalServer,,,"%25%\mplayer.exe /avi"
+HKCR,%KEY_AVI%\LocalServer32,,,"%25%\mplayer.exe /avi"
+HKCR,%KEY_AVI%\verb\2,,,"%V_MEDIA_OPEN%,0,2"
+HKCR,%KEY_AVI%\verb\1,,,"%V_MEDIA_EDIT%,0,2"
+HKCR,%KEY_AVI%\verb\0,,,"%V_MEDIA_PLAY%,0,3"
+HKCR,%KEY_AVI%\AuxUserType\2,,,"%V_VIDEO%"
+HKCR,%KEY_AVI%\DataFormats\DefaultSet,,,"avifile"
+HKCR,%KEY_AVI%\DataFormats\GetSet\2,,,"8,1,1,1"
+HKCR,%KEY_AVI%\DataFormats\GetSet\1,,,"3,1,32,1"
+HKCR,%KEY_AVI%\DataFormats\GetSet\0,,,"Embed Source,1,8,1"
+HKCR,%KEY_AVI%\MiscStatus,,,"0"
+HKCR,%KEY_AVI%\ProgID,,,"avifile"
+HKCR,%KEY_AVI%\DefaultIcon,,,"%25%\mplayer.exe,3"
+
+;MIDFILE
+HKCR,%KEY_MID%,,,"%V_MIDI%"
+HKCR,%KEY_MID%\Insertable,,,
+HKCR,%KEY_MID%\InprocHandler32,,,"ole32.dll"
+HKCR,%KEY_MID%\LocalServer,,,"%25%\mplayer.exe /mid"
+HKCR,%KEY_MID%\LocalServer32,,,"%25%\mplayer.exe /mid"
+HKCR,%KEY_MID%\verb\2,,,"%V_MEDIA_OPEN%,0,2"
+HKCR,%KEY_MID%\verb\1,,,"%V_MEDIA_EDIT%,0,2"
+HKCR,%KEY_MID%\verb\0,,,"%V_MEDIA_PLAY%,0,3"
+HKCR,%KEY_MID%\AuxUserType\2,,,"%V_MIDI%"
+HKCR,%KEY_MID%\DataFormats\DefaultSet,,,"midfile"
+HKCR,%KEY_MID%\DataFormats\GetSet\2,,,"8,1,1,1"
+HKCR,%KEY_MID%\DataFormats\GetSet\1,,,"3,1,32,1"
+HKCR,%KEY_MID%\DataFormats\GetSet\0,,,"Embed Source,1,8,1"
+HKCR,%KEY_MID%\MiscStatus,,,"0"
+HKCR,%KEY_MID%\ProgID,,,"midfile"
+HKCR,%KEY_MID%\DefaultIcon,,,"%25%\mplayer.exe,5"
+
+
+HKCU,%KEY_CURRENT%\Applets\"Media Player"\Options,"waveaudio Directory",,""
+HKCU,%KEY_CURRENT%\Applets\"Media Player"\Options,"cdaudio Directory",,""
+HKCU,%KEY_CURRENT%\Applets\"Media Player"\Options,"avivideo Directory",,""
+HKCU,%KEY_CURRENT%\Applets\"Media Player"\Options,"sequencer Directory",,""
+
+;mci extensions
+;
+; Taken over by ActiveMovie OLE Control
+;
+;HKCR,.avi,,,avifile
+;
+HKCR,avifile\protocol\StdExecute\Server,,,"%25%\mplayer.exe /avi"
+HKCR,avifile\protocol\StdFileEditing\PackageObjects,,,
+HKCR,avifile\protocol\StdFileEditing\Server,,,"%25%\mplayer.exe /avi"
+HKCR,avifile\protocol\StdFileEditing\verb\0,,,"%V_SOUND_PLAY%"
+HKCR,avifile\protocol\StdFileEditing\ve

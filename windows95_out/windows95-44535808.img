@@ -1,0 +1,131 @@
+,\"Unknown\")(2,\"FAT\")(3,\"HPFS\")(4,\"NTFS\")(5,\"OFS\")(6,\"MFS\")(7,\"HFS\")(8,\"VXFS\")(9,\"SFS\")(10,\"S5\")(11,\"S52K\")(12,\"UFS\")(13,\"FFS\")(14,\"Netware286\")(15,\"Netware386\")"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\25\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="FAT"
+"4"="HPFS"
+"5"="NTFS"
+"6"="OFS"
+"7"="MFS"
+"8"="HFS"
+"9"="VXFS"
+"10"="SFS"
+"11"="S5"
+"12"="S52K"
+"13"="UFS"
+"14"="FFS"
+"15"="Netware286"
+"16"="Netware386"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\25\7]
+"Name"="Compressed"
+"Description"="If true, this partition is compressed."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\Partition\\Compressed"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\25\7\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\25\8]
+"Name"="Encrypted"
+"Description"="If true, this partition is encrypted."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\Partition\\Encrypted"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\25\8\Enum]
+"0"="False"
+"1"="True"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\25\9]
+"Name"="Number Of Disks Occupied"
+"Description"="The number of disks this partition occupies."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\Partition\\NumberOfDisksOccupied"
+
+
+;====================================
+;  Disk Controller Table
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\26]
+"Name"="Disk Controller"
+"Class"="DMTF|Disk Controller|001"
+"Description"="This group defines the disk controller in this system."
+"Key"="1"
+"^Index"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\26\1]
+"Name"="Disk Controller Index"
+"Description"="Index value used by the system to identify the disk controller."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\26\2]
+"Name"="FRU Group Index"
+"Description"="If this is a Field Replaceable Unit or if it is part of another FRU, this provides an index into the FRU table; 'Value = -1' indicates that the group is not a FRU."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\DiskController\\FRUGroupIndex"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\26\3]
+"Name"="Operational Group Index"
+"Description"="The index into the Operational State table for this device, if applicable."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\DiskController\\OperationalGroupIndex"
+
+
+;====================================
+;  Logical Drive Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27]
+"Name"="Logical Drives"
+"Class"="DMTF|Logical Drives|001"
+"Description"="This group defines the attributes of the logical drives in a system."
+"Key"="1"
+"^Index"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3|4|5|6"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\1]
+"Name"="Logical Drive Index"
+"Description"="An index into the Logical Drive table."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\2]
+"Name"="Logical Drive Name"
+"Description"="Name used by the system to identify this logical drive. For DOS, this could be the logical drive letter (A, B, C...)."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalDrives\\LogicalDriveName"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\27\3]
+"Name"="Logical Drive Type"
+"Description"="This defines the logical drive type."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\2\\LogicalDrives\\LogicalDriveType"
+; Instr type 2 is "Removable", in

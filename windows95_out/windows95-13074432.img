@@ -1,0 +1,71 @@
+d "Microsoft Exchange.lnk" from the desktop
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Desktop,,,%25%\%desktop_DESC%
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Desktop,microsof.lnk,,"%MlviewROOT_Desc%.lnk"
+HKLM,Software\Microsoft\Windows\CurrentVersion\DeleteFiles\Desktop,microsof.exe,,"%MlviewROOT_Desc%.exe"
+
+;Create entries for Maint Mode Setup, set all initially to uninstalled:
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"EMAIL",,"EMAIL"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\EMAIL,INF,,"msmail.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\EMAIL,Section,,"EMAIL"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\EMAIL,Installed,,"0"
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"MAPI",,"MAPI"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MAPI,INF,,"msmail.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MAPI,Section,,"MSMAIL"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MAPI,Installed,,"0"
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents,"MSFS",,"MSFS"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSFS,INF,,"msmail.inf"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSFS,Section,,"MSFS"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSFS,Installed,,"0"
+
+HKLM,Software\Microsoft\Windows\CurrentVersion\RunOnce,"%EmailRunOnce%",,"%24%\%PROGRAMF%\%WINMSG%\mlset32.exe -b"
+
+[MAPIAddReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MAPI,Installed,,"1"
+
+[MAPIAddReg.Remove]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MAPI,Installed,,"0"
+
+[MSFSAddReg]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSFS,Installed,,"1"
+
+; Add MSFS extensions
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","MSFS Menu Extensions",,"4.0;msfs32.dll;1;01111111111;1;MSFS"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","MSFS PropSheet Extensions",,"4.0;msfs32.dll;2;01;000001;MSFS"
+
+[MSFSAddReg.Remove]
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\OptionalComponents\MSFS,Installed,,"0"
+
+[MSFSDelReg]
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","MSFS Menu Extensions"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","MSFS PropSheet Extensions"
+
+[MAPIDelReg]
+; Remove the Inbox wizard if it happens to exist
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{00020D76-0000-0000-C000-000000000046}"
+HKCR,"CLSID\{00020D76-0000-0000-C000-000000000046}"
+
+; Uncomment this to blow away profiles during install
+;HKCU,"Software\Microsoft\Windows Messaging Subsystem\Profiles"
+
+; remove old info center from explorer
+HKLM,SOFTWARE\MICROSOFT\WINDOWS\CurrentVersion\Explorer\Desktop\NameSpace\{00020D23-0000-0000-C000-000000000046}
+HKLM,SOFTWARE\MICROSOFT\WINDOWS\CurrentVersion\Explorer\FindExtensions\Static\InfoCenter
+HKCR,CLSID\{00020D20-0000-0000-C000-000000000046}
+HKCR,CLSID\{00020D21-0000-0000-C000-000000000046}
+HKCR,CLSID\{00020D22-0000-0000-C000-000000000046}
+HKCR,CLSID\{00020D23-0000-0000-C000-000000000046}
+HKCR,CLSID\{00020D25-0000-0000-C000-000000000046}
+HKCR,CLSID\{00020D26-0000-0000-C000-000000000046}
+
+; delete any old extensions that may be hanging around
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","Schedule+"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","exutil"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","inetui"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","etexch"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","Exchange Extensions"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","Internet News"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","inewsui"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions","ml3ext"
+HKLM,"SOFTWARE\Microsoft\Exchange\Client\Extensions",

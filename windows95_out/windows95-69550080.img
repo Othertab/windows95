@@ -1,0 +1,112 @@
+well-n, PCMCIA\TOSHIBA-SLIMV34___-B57C
+; %ComOne9% = Rockwell-n, PCMCIA\PHILIPS-S217_CARD_-7791
+; %ComOne8% = Rockwell-n, PCMCIA\CXR_SA_-AJ_1448___-E24C
+; %ComOne7% = Rockwell-n, PCMCIA\TOSHIBA-SLIM144___-7781
+; %ComOne5% = Rockwell20                                             ;external
+; %ComOne3% = Rockwell18                                             ;external              
+
+; Installation sections
+
+[Rockwell1] ; (internal/external 14400)
+AddReg=All, MfgAddReg, Rockwell1.AddReg, EXTERNAL
+
+[Rockwell2] ; (internal 14400)
+AddReg=All, MfgAddReg, Rockwell2.AddReg, INTERNAL
+
+[Rockwell3] ; (external 14400) - Best Data
+AddReg=All, MfgAddReg, Rockwell3.AddReg, EXTERNAL
+
+[Rockwell4] ; (internal 14400) - Best Data
+AddReg=All, MfgAddReg, Rockwell4.AddReg, INTERNAL
+
+[Rockwell5] ; (internal 28.8) - Best Data
+AddReg=All, MfgAddReg, Rockwell5.AddReg, INTERNAL
+
+[Rockwell6] ; (internal 28.8) - Best Data and Zoom combo
+AddReg=All, MfgAddReg, Rockwell6.AddReg, INTERNAL
+
+[Rockwell7] ; (external 28.8) - Best Data
+AddReg=All, MfgAddReg, Rockwell5.AddReg, EXTERNAL
+
+[Rockwell8] ; (external 28.8) - Best Data and zoom combo
+AddReg=All, MfgAddReg, Rockwell6.AddReg, EXTERNAL
+
+[Rockwell9] ; (external 14400) - Best Data 1442FX (FTX, RPI model)
+AddReg=All, MfgAddReg, Rockwell9.AddReg, EXTERNAL
+
+[Rockwell10] ; (internal 14400) - Best Data 1442FX (FT, RPI model)
+AddReg=All, MfgAddReg, Rockwell10.AddReg, INTERNAL
+
+[Rockwell11] ; (internal 2400) - Best Data 9624FQ 
+AddReg=All, MfgAddReg, Rockwell11.AddReg, INTERNAL
+
+[Rockwell12] ; (external 2400) - Best Data 9648Fx, 2400B, 2400X and other modems
+AddReg=All, MfgAddReg, Rockwell12.AddReg, EXTERNAL  
+
+[Rockwell13] ; Smart V.34 PCMCIA
+AddReg=All, MfgAddReg, Rockwell13.AddReg, PCMCIA 
+
+[Rockwell14] ; SMART ST1414 PCMCIA with cell
+AddReg=All, MfgAddReg, Rockwell14.AddReg, PCMCIA 
+
+[Rockwell15] ; Apex V.34 PCMCIA and Tosh combo. 
+AddReg=All, MfgAddReg, Rockwell15.AddReg, PCMCIA 
+
+[Rockwell16] ; PCMCIA 2400 bps, 19.2 max dte, no cell
+AddReg=All, MfgAddReg, Rockwell16.AddReg, PCMCIA 
+
+[Rockwell17] ; Com1 by AT&T-KeepinTouch PCMCIA
+AddReg=All, MfgAddReg, Rockwell17.AddReg, PCMCIA
+
+[Rockwell18] ; (internal 14400) - no speed negotiation, inactivity timer is \Tn with max 90 minutes
+AddReg=All, MfgAddReg, Rockwell18.AddReg, INTERNAL
+
+[Rockwell19] ; V.34 external with cell
+AddReg=All, MfgAddReg, Rockwell13.AddReg, EXTERNAL
+
+[Rockwell20] ; V.34 internal with cell
+AddReg=All, MfgAddReg, Rockwell13.AddReg, INTERNAL
+
+[Rockwell21] ; (internal 14400) - with cell
+AddReg=All, MfgAddReg, Rockwell21.AddReg, INTERNAL
+
+[Rockwell22] ; (external 14400) - Logicode data-fax-voice with cell
+AddReg=All, MfgAddReg, Rockwell22.AddReg, EXTERNAL
+
+[Rockwell23] ; (external 14400)  Logicode and Microcom combo
+AddReg=All, MfgAddReg, Rockwell23.AddReg, EXTERNAL
+
+[Rockwell24] ; (internal 14400) - cirrus chipset found in Logicode, no cell
+AddReg=All, MfgAddReg, Rockwell24.AddReg, INTERNAL
+
+[Rockwell25] ; (internal 2400) - Logicode 9426
+AddReg=All, MfgAddReg, Rockwell25.AddReg, INTERNAL
+
+[Rockwell26] ; (external 2400) - Logicode 9426
+AddReg=All, MfgAddReg, Rockwell25.AddReg, EXTERNAL
+
+[Rockwell28] ; (internal 1200)  - no compr, ec, speed neg, hard flow, cell
+AddReg=All, MfgAddReg, Rockwell28.AddReg, INTERNAL
+
+[Rockwell29] ; Piiceon Dispatcher 14.4 with cell
+AddReg=All, MfgAddReg, Rockwell29.AddReg, PCMCIA 
+
+[Rockwell30] ; Piiceon Dispatcher V.34
+AddReg=All, MfgAddReg, Rockwell30.AddReg, INTERNAL
+
+[Rockwell31] ; Winbook 14.4 Internal
+AddReg=All, MfgAddReg, Rockwell31.AddReg, INTERNAL
+
+[Rockwell33] ; internal 14.4 Dispatcher *OR* combo, Piiceon PCMCIA 14.4 and 14.4 for Contura+LTE (ISA)
+AddReg=All, MfgAddReg, Rockwell29.AddReg, INTERNAL
+
+[Rockwell34] ; Piiceon 14.4 for toshiba
+AddReg=All, MfgAddReg, Rockwell34.AddReg, INTERNAL
+
+[Rockwell35] ; Cardinal+CPI (Viva) V.34
+AddReg=All, MfgAddReg, Rockwell35.AddReg, EXTERNAL
+
+[Rockwell36] ; Cardinal 14.4 mvp144xf
+AddReg=All, MfgAddReg, Rockwell10.AddReg, EXTERNAL
+
+[Rockwell37] ; Cardinal 14.4 dat

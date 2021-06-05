@@ -1,0 +1,102 @@
+s DxxSPACE.BIN to its final location in memory.
+
+    Initially, DxxSPACE.BIN loads at the top of conventional memory. After
+    Windows finishes carrying out the commands in the CONFIG.SYS file, it
+    moves DxxSPACE.BIN to the bottom of conventional memory. When
+    DxxSPACE.SYS is loaded by using the DEVICE command, it moves
+    DxxSPACE.BIN from the top of conventional memory to the bottom. This can
+    be useful for avoiding conflicts with programs that are loaded from the
+    CONFIG.SYS file and require access to the top of conventional memory.
+
+    When DxxSPACE.SYS is loaded by using the DEVICEHIGH command, 
+    DxxSPACE.BIN moves to upper memory, if available. Moving DxxSPACE.BIN 
+    to upper memory makes more conventional memory available.
+
+/NOHMA
+    Prevents DxxSPACE.SYS from moving a portion of DxxSPACE.BIN to the high
+    memory area (HMA).
+
+    If MS-DOS is loaded into the HMA, DxxSPACE.SYS moves a  portion of
+    DxxSPACE.BIN to the HMA (if there is enough room in the HMA). Use this
+    switch if you do not want DxxSPACE.BIN to use the HMA. 
+
+/LOW
+    Prevents DxxSPACE.SYS from loading at the top of conventional memory.
+    Use this switch if you have an MS-DOS-based program that does not support
+    DriveSpace or DoubleSpace at the top of conventional memory. Note that
+    use of this switch will prevent Windows from reusing the memory
+    occupied by DxxSPACE.sys.
+
+Parameter
+
+[drive:][path]
+    Specifies the location of the DxxSPACE.SYS file.
+
+
+EGA.SYS
+=======
+
+Saves and restores the display when the MS-DOS Shell Task Swapper is used
+with EGA monitors. If you have an EGA monitor, you must install the EGA.SYS
+device driver before using Task Swapper. This device driver must be loaded
+by a DEVICE or DEVICEHIGH command in your CONFIG.SYS file.
+
+Syntax
+
+    DEVICE=[drive:][path]EGA.SYS
+
+Parameters
+
+[drive:][path]
+    Specifies the location of the EGA.SYS file.
+
+
+EMM386.EXE
+==========
+
+Provides access to the upper memory area and uses extended memory to
+simulate expanded memory. This device driver must be loaded by a DEVICE
+command in your CONFIG.SYS file and can be used only on computers with an
+80386 or higher processor.
+
+EMM386 uses extended memory to simulate expanded memory for programs that
+can use expanded memory. EMM386 also makes it possible to load programs and
+device drivers into upper memory blocks (UMBs).
+
+Syntax
+
+    DEVICE=[drive:][path]EMM386.EXE [ON|OFF|AUTO] [memory] [MIN=size]
+    [W=ON|W=OFF] [Mx|FRAME=address|/Pmmmm] [Pn=address] [X=mmmm-nnnn]
+    [I=mmmm-nnnn] [B=address] [L=minXMS] [A=altregs] [H=handles] [D=nnn]
+    [RAM=mmmm-nnnn] [NOEMS] [NOVCPI] [HIGHSCAN] [VERBOSE] [WIN=mmmm-nnnn]
+    [NOHI] [ROM=mmmm-nnnn] [NOMOVEXBDA] [ALTBOOT] [NOBACKFILL]
+
+Parameters
+
+[drive:][path]
+    Specifies the location of the EMM386.EXE file.
+
+[ON|OFF|AUTO]
+    Activates the EMM386 device driver (if set to ON), or suspends the
+    EMM386 device driver (if set to OFF), or places the EMM386 device driver
+    in auto mode (if set to AUTO). Auto mode enables expanded-memory support
+    and upper memory block support only when a program calls for it. The
+    default value is ON. Use the EMM386 command to change this value after
+    EMM386 has started.
+
+memory
+    Specifies the maximum amount of extended memory (in kilobytes) that you
+    want EMM386 to provide as expanded/Virtual Control Program Interface
+    (EMS/VCPI) memory. This amount is in addition to the memory used for
+    UMBs and EMM386 itself. Values for memory are in the range 64 through
+    the lesser of either 32768 or the amount of extended memory available
+    when EMM386 is loaded. The default value is the amount of free extended
+    memory. If you specify the NOEMS switch, the default value is 0. EMM386
+    rounds the value down to the nearest multiple of 16.
+
+Switches
+
+MIN=size
+    Specifies the minimum amount of EMS/VCPI memory (in kilobytes) that
+    EMM386 will provide, if that amount of memory is available. EMM386
+    reserves this amoun

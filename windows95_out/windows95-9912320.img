@@ -1,0 +1,134 @@
+adapterslot,flag,1,10,00,00,00
+; MaxIcNest
+HKR,NDI\params\MaxIcNest,ParamDesc,,"Max Nest/Indicate Comp"
+HKR,NDI\params\MaxIcNest,type,,int
+HKR,Ndi\params\MaxIcNest,default,,2
+HKR,NDI\params\MaxIcNest,min,,1
+HKR,NDI\params\MaxIcNest,max,,4
+HKR,NDI\params\MaxIcNest,step,,1
+HKR,NDI\params\MaxIcNest,flag,1,10,00,00,00
+
+; Install NDIS3 hplane
+[HPLANE.ndis3]
+CopyFiles=HPLANE.ndis3.CopyFiles
+[HPLANE.ndis3.CopyFiles]
+hpeisa.vxd
+
+; Install NDIS2 hplane
+[HPLANE.ndis2]
+CopyFiles=HPLANE.ndis2.CopyFiles
+AddReg=HPLANE.ndis2.reg
+[HPLANE.ndis2.reg]
+HKLM,"Software\Microsoft\Windows\CurrentVersion\Network\Real Mode Net",hplane.dos,,low
+[HPLANE.ndis2.CopyFiles]
+HPLANE.dos
+
+; Install ODI hplane
+[hp32odi.odi]
+CopyFiles=hp32odi.odi.CopyFiles
+[hp32odi.odi.CopyFiles]
+hp32odi.com
+
+;****************************************************************************
+; HPFEND base section
+;****************************************************************************
+[HPFEND.ndi.reg]
+; key,subkey,valuname,type,value
+HKR,,DevLoader,,*ndis
+HKR,,DeviceVxDs,,HPFEND.VXD
+HKR,,EnumPropPages,,"netdi.dll,EnumPropPages"
+; NDIS Info
+HKR,NDIS,LogDriverName,,"HPFEND"
+HKR,NDIS,MajorNdisVersion,HEX,03
+HKR,NDIS,MinorNdisVersion,HEX,0A
+HKR,NDIS\NDIS2,DriverName,,"HPFEND$"
+HKR,NDIS\NDIS2,FileName,,"hpfend.dos"
+HKR,NDIS\ODI,DriverName,,"hpfeodi"
+HKR,NDIS\ODI,FileName,,"hpfeodi.com"
+; Interfaces
+HKR,Ndi\Interfaces,DefUpper,,"ndis2,ndis3"
+HKR,Ndi\Interfaces,DefLower,,"ethernet"
+HKR,Ndi\Interfaces,UpperRange,,"ndis2,ndis3,odi"
+HKR,Ndi\Interfaces,LowerRange,,"ethernet"
+; Install sections
+HKR,Ndi\Install,ndis3,,"HPFEND.ndis3"
+HKR,Ndi\Install,ndis2,,"HPFEND.ndis2"
+;HKR,Ndi\Install,odi,,"HPFEND.odi"
+
+;maxhwtrans
+HKR,NDI\params\maxhwtrans,ParamDesc,,"Max H/W Transmit Packets"
+HKR,NDI\params\maxhwtrans,type,,int
+HKR,Ndi\params\maxhwtrans,default,,8
+HKR,NDI\params\maxhwtrans,min,,2
+HKR,NDI\params\maxhwtrans,max,,20
+HKR,NDI\params\maxhwtrans,step,,1
+HKR,NDI\params\maxhwtrans,flag,1,10,00,00,00
+;maxswtrans
+HKR,NDI\params\maxswtrans,ParamDesc,,"Max S/W Transmit Packets"
+HKR,NDI\params\maxswtrans,type,,int
+HKR,Ndi\params\maxswtrans,default,,2
+HKR,NDI\params\maxswtrans,min,,1
+HKR,NDI\params\maxswtrans,max,,20
+HKR,NDI\params\maxswtrans,step,,1
+HKR,NDI\params\maxswtrans,flag,1,10,00,00,00
+;maxmulticast
+HKR,NDI\params\maxmulticast,ParamDesc,,"Max Multicast Addresses"
+HKR,NDI\params\maxmulticast,type,,int
+HKR,Ndi\params\maxmulticast,default,,5
+HKR,NDI\params\maxmulticast,min,,1
+HKR,NDI\params\maxmulticast,max,,50
+HKR,NDI\params\maxmulticast,step,,1
+HKR,NDI\params\maxmulticast,flag,1,30,00,00,00
+; maxicnest
+HKR,NDI\params\maxicnest,ParamDesc,,"Max Nest/Indicate Comp"
+HKR,NDI\params\maxicnest,type,,int
+HKR,Ndi\params\maxicnest,default,,1
+HKR,NDI\params\maxicnest,min,,1
+HKR,NDI\params\maxicnest,max,,4
+HKR,NDI\params\maxicnest,step,,1
+HKR,NDI\params\maxicnest,flag,1,10,00,00,00
+;priority
+HKR,NDI\params\priority,ParamDesc,,"100VG net high-pri node?"
+HKR,Ndi\params\priority,default,,no
+HKR,Ndi\params\priority,type,,enum
+HKR,Ndi\params\priority\enum,yes,,"Yes"
+HKR,Ndi\params\priority\enum,no,,"No"
+HKR,NDI\params\priority,flag,1,30,00,00,00
+HKR,Ndi\params\priority,optional,,1
+
+; Install NDIS2
+[HPFEND.ndis2]
+CopyFiles=HPFEND.ndis2.CopyFiles
+[HPFEND.ndis2.CopyFiles]
+HPFEND.dos
+
+; Install NDIS3
+[HPFEND.ndis3]
+CopyFiles=HPFEND.ndis3.CopyFiles
+[HPFEND.ndis3.CopyFiles]
+HPFEND.VXD
+
+; Used by hplanb and hplanp
+; Install ODI
+[HPFEND.odi]
+CopyFiles=HPFEND.odi.CopyFiles
+[HPFEND.odi.CopyFiles]
+hpfeodi.com
+
+[J2577A.ndi.reg]
+HKR,,AdapterType,,1
+
+[J2573A.ndi.reg]
+HKR,,AdapterType,,0
+
+; Resources
+HKR,,Interrupt,1,04,00,00,00
+HKR,,IOAddress,1,02,00,00,00
+HKR,NDI\params\Interrupt,resc,1,04,00,00,00
+HKR,NDI\params\Interrupt,ParamDesc,,"Interrupt Level"
+HKR,NDI\params\Interrupt,flag,1,30,00,00,00
+HKR,NDI\params\IOAddress,resc,1,02,00,00,00
+HKR,NDI\params\IOAddress,ParamDesc,,"I/O Base Address"
+HKR,NDI\params\IOAddress,flag,1,30,00,00,00
+
+;*****************************************************

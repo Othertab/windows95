@@ -1,0 +1,103 @@
+ = PROPRINT.DRV,IBM_Proprinter_II
+"IBM Proprinter III"              = PROPRINT.DRV,IBM_Proprinter_III
+"IBM Proprinter X24"              = PROPRN24.DRV,IBM_Proprinter_X24
+"IBM Proprinter X24e"             = PROPRN24.DRV,IBM_Proprinter_X24e
+"IBM Proprinter XL"               = PROPRINT.DRV,IBM_Proprinter_XL
+"IBM Proprinter XL II"            = PROPRINT.DRV,IBM_Proprinter_XL_II
+"IBM Proprinter XL III"           = PROPRINT.DRV,IBM_Proprinter_XL_III
+"IBM Proprinter XL24"             = PROPRN24.DRV,IBM_Proprinter_XL24
+"IBM Proprinter XL24e"            = PROPRN24.DRV,IBM_Proprinter_XL24e
+"IBM PS/1 2205"                   = PS1.DRV,IBM_PS/1_2205
+"IBM QuickWriter 5204"            = IBM5204.DRV,IBM_QuickWriter_5204
+"IBM QuietWriter III"             = QWIII.DRV,IBM_QuietWriter_III
+"Lexmark ValueWriter 300"         = IBMPPDSL.DRV,LPTENUM\Lexmark_Internationa8344,Lexmark_Internationa8344,LPTENUM\--VALUEWRITER_3000036,--VALUEWRITER_3000036,Lexmark_ValueWriter_300
+"Lexmark ValueWriter 600"         = HPPCL5MS.DRV,LPTENUM\Lexmark_Internationa8256,Lexmark_Internationa8256,Lexmark_ValueWriter_600
+
+[Kodak]
+"KODAK ColorEase PS Printer"      = KDCOLOR1.SPD,KODAK_ColorEase_PS_Printer
+
+[Kyocera]
+"Kyocera F-800"                   = KYOCERA.DRV,Kyocera_F-800
+"Kyocera F-800A"                  = KYOCERA.DRV,Kyocera_F-800A
+"Kyocera F-820"                   = KYOCERA.DRV,Kyocera_F-820
+"Kyocera F-1000"                  = KYOCERA.DRV,Kyocera_F-1000
+"Kyocera F-1000A"                 = KYOCERA.DRV,Kyocera_F-1000A
+"Kyocera F-1010"                  = KYOCERA.DRV,Kyocera_F-1010
+"Kyocera F-1200S"                 = KYOCERA.DRV,Kyocera_F-1200S
+"Kyocera F-1800"                  = KYOCERA.DRV,Kyocera_F-1800
+"Kyocera F-1800A"                 = KYOCERA.DRV,Kyocera_F-1800A
+"Kyocera F-2000A"                 = KYOCERA.DRV,Kyocera_F-2000A
+"Kyocera F-2010"                  = KYOCERA.DRV,Kyocera_F-2010
+"Kyocera F-2200"                  = KYOCERA.DRV,Kyocera_F-2200
+"Kyocera F-2200S"                 = KYOCERA.DRV,Kyocera_F-2200S
+"Kyocera F-3000"                  = KYOCERA.DRV,Kyocera_F-3000
+"Kyocera F-3000A"                 = KYOCERA.DRV,Kyocera_F-3000A
+"Kyocera F-3010"                  = KYOCERA.DRV,Kyocera_F-3010
+"Kyocera F-3300"                  = KYOCERA.DRV,Kyocera_F-3300
+"Kyocera F-5000"                  = KYOCERA.DRV,Kyocera_F-5000
+"Kyocera FS-400 / FS-400A"        = HPPCL5MS.DRV,Kyocera_FS-400_/_FS-400A
+"Kyocera FS-850 / FS-850A"        = HPPCL5MS.DRV,Kyocera_FS-850_/_FS-850A
+"Kyocera FS-1500 / FS-1500A"      = HPPCL5MS.DRV,Kyocera_FS-1500_/_FS-1500A
+"Kyocera FS-1550 / FS-1550A"      = HPPCL5MS.DRV,Kyocera_FS-1550_/_FS-1550A
+"Kyocera FS-3400 / FS-3400A"      = HPPCL5MS.DRV,Kyocera_FS-3400_/_FS-3400A
+"Kyocera FS-3500 / FS-3500A"      = HPPCL5MS.DRV,Kyocera_FS-3500_/_FS-3500A
+"Kyocera FS-5500 / FS-5500A"      = HPPCL5MS.DRV,Kyocera_FS-5500_/_FS-5500A
+
+;
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. The section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+[A_PNT518.SPD]
+CopyFiles=@A_PNT518.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APLW8101.SPD]
+CopyFiles=@APLW8101.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APLWIIF1.SPD]
+CopyFiles=@APLWIIF1.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APLWIIG1.SPD]
+CopyFiles=@APLWIIG1.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APLWNTR1.SPD]
+CopyFiles=@APLWNTR1.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APLWSEL.SPD]
+CopyFiles=@APLWSEL.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APPLE230.SPD]
+CopyFiles=@APPLE230.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APPLE380.SPD]
+CopyFiles=@APPLE380.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APTOLLD1.SPD]
+CopyFiles=@APTOLLD1.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[APTOLLW1.SPD]
+CopyFiles=@APTOLLW1.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[AST__470.SPD]
+CopyFiles=@AST__470.SPD,PSCRIPT
+DataSection=PSCRIPT_DATA
+
+[BRHJ770.DRV]
+CopyFiles=@BRHJ770.DRV,UNICLR
+DataSection=UNI_DATA
+
+[BROTHER9.DRV]
+CopyFiles=@BROTHER9.D

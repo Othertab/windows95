@@ -1,0 +1,219 @@
+.win32s.sys,del.win32s.win32s,del.win.setup,del.sys.setup,dspace.ios,dspace.sys,dspace.win,del.old.help,del.win30.win,del.win30.sys,del.old.VxDs,del.ttfonts,del.opt,d.sb
+RenFiles = ren.cleanup.files
+UpdateInis = old.win.cleanup.inis, win32s.inis
+UpdateIniFields = win32s.inifields
+DelReg          = old.win.cleanup.reg, quickview.cleanup.reg
+
+[NTSection]
+UpdateInis = WinNT.inis
+
+[dspace.ios]
+dblspace.386
+
+[dspace.sys]
+mrci32.386
+
+[dspace.win]
+winspace.exe
+
+; Conditional updates depending on Windows version.
+;
+[WinVerSpecific]
+0300 = win3.0
+030a = win3.0
+0310 = win3.1
+0311 = win3.11
+0399 = win4.0
+0400 = win4.0
+
+[win3.0]
+UpdateInis = Upgrade.LinkCleanup.Inis, del.penwin10.inis, win3.inis
+UpdateIniFields=Del.PENWIN_IniFields
+CopyFiles = win3.copy, win3.copy.hlp
+DelFiles  = win3.del
+RenFiles = PENWIN_OLD_WINFiles, PENWIN_OLD_SYSFiles
+AddReg = win3.addreg
+
+[win3.1]
+UpdateInis = Upgrade.LinkCleanup.Inis, del.penwin10.inis, win3.inis
+UpdateIniFields=Del.PENWIN_IniFields
+CopyFiles = win3.copy, win3.copy.hlp
+DelFiles  = win3.del
+RenFiles = PENWIN_OLD_WINFiles, PENWIN_OLD_SYSFiles
+AddReg = win3.addreg
+
+[win3.11]
+CopyFiles = win311.copy, win311.copy.hlp, win311.copy.sys
+DelFiles  = win311.del
+UpdateInis = win311.inis, Upgrade.LinkCleanup.Inis, del.penwin10.inis
+UpdateIniFields=Del.PENWIN_IniFields
+RenFiles = PENWIN_OLD_WINFiles, PENWIN_OLD_SYSFiles
+
+[win4.0]
+DelFiles=M6.sys,M6.win,M6.ht,M6.fv,old.builds.sys,old.builds.win,old.builds.cmd,del.bootlog,del.new.help,oldsetup.files.win,oldsetup.files.sys,Tour.sys.del,Tour.win.del,M6.pif,vmm32.del,M7.inf, online.loc, newdir.loc
+UpdateInis = old.build.inis, Upgrade.LinkCleanup.Inis, English.LinkCleanup.Inis
+UpdateIniFields = old.build.ini.fields
+DelReg = old.build.DelReg, del.reg.bootlog, del.m6pnpcomm
+AddReg = Win95.AddReg
+
+
+[del.win]
+_default.pif
+apps.hlp
+apps.inf
+control.hlp
+control.ini
+edit.pif
+install.pif
+logonoff.exe
+netwatch.exe
+packager.hlp
+pifedit.exe
+pifedit.hlp
+printman.exe
+printman.hlp
+setup.pif
+winmeter.exe
+wintutor.exe
+wintutor.dat
+
+;Old win 3.x readme files:
+networks.wri
+printers.wri
+readme.wri
+sysini.wri
+winini.wri
+
+[d.sb]
+;Review: Delete from windows\SYSBCKUP so we can overwrite newer versions
+shell.dll
+
+[d.pif]
+;review -- not needed after M8
+install.pif
+setup.pif
+
+[del.win.setup]
+;Delete Win 3.x Setup files
+setup.exe
+setup.hlp
+setup.txt
+winsetup.exe
+
+[del.sys]
+ACCESS.CPL,,,1  ;review -- not needed after M8
+APPS.INF
+COMLPT.386
+control.exe
+cpwin386.cpl,,,1
+dosx.exe
+dswap.exe
+GALILEO.CPL,,,1
+krnl286.exe
+msnet.inf
+msprint.cpl,,,1
+netsetup.cpl,,,1
+network.inf
+olc.dll
+passwds.cpl,,,1
+pifconv.exe     ;from M8, leave in for RTM
+printman.exe
+regedit.exe
+setup.reg
+spoolexe.exe
+VMOUSE.386
+wfwsetup.cpl,,,1
+wfwsetup.dll
+win.cnf
+win386.exe
+win386.ps2
+winnet.inf
+winoldap.mod
+wswap.exe
+
+;True type .FOT files shipped in win 3.x (now obsolete)
+ARIAL.FOT
+ARIALBD.FOT
+ARIALBI.FOT
+ARIALI.FOT
+COUR.FOT
+COURBD.FOT
+COURBI.FOT
+COURI.FOT
+SYMBOL.FOT
+TIMES.FOT
+TIMESBD.FOT
+TIMESBI.FOT
+TIMESI.FOT
+WINGDING.FOT
+
+
+; Old Code Page Fonts (No longer needed)
+cga40woa.fon
+cga80woa.fon
+ega40woa.fon
+ega80woa.fon
+cga40850.fon
+cga80850.fon
+ega40850.fon
+ega80850.fon
+
+; Old grabber files (No longer needed)
+cga.2gr
+egacolor.2gr
+egamono.2gr
+hercules.2gr
+oligrab.2gr
+vgacolor.2gr
+vgamono.2gr
+
+cga.gr2
+egacolor.gr2
+egamono.gr2
+hercules.gr2
+oligrab.gr2
+sv400a.gr2
+vgacolor.gr2
+vgamono.gr2
+
+;LGO and RLE files that are obsolete:
+CGALOGO.RLE
+EGALOGO.RLE
+EGAMONO.RLE
+HERCLOGO.RLE
+VGALOGO.RLE
+
+CGALOGO.LGO
+EGALOGO.LGO
+EGAMONO.LGO
+HERCLOGO.LGO
+VGALOGO.LGO
+
+[del.win30.win]
+;Ported from the win 3.1 setup.inf.
+;these files are win 3.0 files that sould be deleted:
+setup.inf
+olecli.dll
+olesvr.dll
+commdlg.dll
+ver.dll
+toolhelp.dll
+;*.pcl
+3270.txt
+networks.txt
+printers.txt
+readme.txt
+SYSINI.TXT
+SYSINI2.TXT
+SYSINI3.TXT
+WININI.TXT
+WININI2.TXT
+DRWATSON.EXE
+SETUP.EXE
+INSTALL.EXE
+ASETTA.EXE
+CONFIG.EXE
+INSTALAR.EXE
+KURMA.EXE
+
+[del.win

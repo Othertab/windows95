@@ -1,0 +1,114 @@
+copy        = 11    ; LDID_SYS
+sspipes.del         = 25    ; LDID_SHARED
+sstext3d.copy       = 11    ; LDID_SYS
+sstext3d.del        = 25    ; LDID_SHARED
+ssflwbox.copy       = 11    ; LDID_SYS
+ssflwbox.del        = 25    ; LDID_SHARED
+winbmps.files           = 25    ; LDID_SHARED
+Sysmeter.Win.Copy       = 25    ; LDID_SHARED
+Sysmeter.Sys.Copy       = 11    ; LDID_SYS
+
+
+[BaseWinOptions]
+Register_Applets
+
+[Register_Applets]
+AddReg=Register_Applets.AddReg
+CopyFiles=Register_Applets.Copy
+
+[Register_Applets.Copy]
+applets.inf
+clip.inf
+
+[Register_Applets.AddReg]
+;Create entries for Maint Mode Setup, set all initially to uninstalled:
+HKLM,%KEY_OPTIONAL%,"Mspaint",,"mspaint"
+HKLM,%KEY_OPTIONAL%\mspaint,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\mspaint,Section,,"mspaint"
+HKLM,%KEY_OPTIONAL%\mspaint,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Msonline",,"msonline"
+HKLM,%KEY_OPTIONAL%\msonline,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\msonline,Section,,"msonline"
+HKLM,%KEY_OPTIONAL%\msonline,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Dxxspace",,"dxxspace"
+HKLM,%KEY_OPTIONAL%\dxxspace,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\dxxspace,Section,,"dxxspace"
+HKLM,%KEY_OPTIONAL%\dxxspace,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"DiskTools",,"disktools"
+HKLM,%KEY_OPTIONAL%\disktools,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\disktools,Section,,"disktools"
+HKLM,%KEY_OPTIONAL%\disktools,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Calc",,"Calc"
+HKLM,%KEY_OPTIONAL%\Calc,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\Calc,Section,,"Calc"
+HKLM,%KEY_OPTIONAL%\Calc,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"MultiM",,"MultiM"
+HKLM,%KEY_OPTIONAL%\MultiM,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\MultiM,Section,,"MultiM"
+HKLM,%KEY_OPTIONAL%\MultiM,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"AccessTop",,"AccessTop"
+HKLM,%KEY_OPTIONAL%\AccessTop,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\AccessTop,Section,,"AccessTop"
+HKLM,%KEY_OPTIONAL%\AccessTop,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"CommApps",,"CommApps"
+HKLM,%KEY_OPTIONAL%\CommApps,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\CommApps,Section,,"CommApps"
+HKLM,%KEY_OPTIONAL%\CommApps,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"DiskToolTop",,"DiskToolTop"
+HKLM,%KEY_OPTIONAL%\DiskToolTop,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\DiskToolTop,Section,,"DiskToolTop"
+HKLM,%KEY_OPTIONAL%\DiskToolTop,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"screensavers",,"screensavers"
+HKLM,%KEY_OPTIONAL%\screensavers,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\screensavers,Section,,"screensavers"
+HKLM,%KEY_OPTIONAL%\screensavers,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Dialer",,"Dialer"
+HKLM,%KEY_OPTIONAL%\Dialer,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\Dialer,Section,,"Dialer"
+HKLM,%KEY_OPTIONAL%\Dialer,Installed,,"0"
+
+;Note that this option isn't in this file, it's in CLIP.INF
+;but we add it here since we need it always done.
+HKLM,%KEY_OPTIONAL%,"ClipBrd",,"ClipBrd"
+HKLM,%KEY_OPTIONAL%\ClipBrd,INF,,"clip.inf"
+HKLM,%KEY_OPTIONAL%\ClipBrd,Section,,"ClipBrd"
+HKLM,%KEY_OPTIONAL%\ClipBrd,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"flywinss",,"flywinss"
+HKLM,%KEY_OPTIONAL%\flywinss,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\flywinss,Section,,"flywinss"
+HKLM,%KEY_OPTIONAL%\flywinss,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Msbackup",,"msbackup"
+HKLM,%KEY_OPTIONAL%\msbackup,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\msbackup,Section,,"msbackup"
+HKLM,%KEY_OPTIONAL%\msbackup,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Bitmaps",,"Bitmaps"
+HKLM,%KEY_OPTIONAL%\Bitmaps,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\Bitmaps,Section,,"bitmaps"
+HKLM,%KEY_OPTIONAL%\Bitmaps,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"SSOpenGL",,"SSOpenGL"
+HKLM,%KEY_OPTIONAL%\SSOpenGL,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\SSOpenGL,Section,,"SSOpenGL"
+HKLM,%KEY_OPTIONAL%\SSOpenGL,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"scrnsave",,"scrnsave"
+HKLM,%KEY_OPTIONAL%\scrnsave,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\scrnsave,Section,,"scrnsave"
+HKLM,%KEY_OPTIONAL%\scrnsave,Installed,,"0"
+
+HKLM,%KEY_OPTIONAL%,"Games",,"Games"
+HKLM,%KEY_OPTIONAL%\Games,INF,,"applets.inf"
+HKLM,%KEY_OPTIONAL%\Games,S

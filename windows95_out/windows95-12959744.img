@@ -1,0 +1,130 @@
+   ; IIT AGX (e.g. Hercules Graphite)
+agx.drv,*,*
+agx16.drv,*,*
+agx64024.drv,*,*
+agx80016.drv,*,*
+agx80024.drv,*,*
+agx1280.drv,*,*
+wspdsf.drv,*,*          ; IBM ThinkPad 486/50
+vgap.drv,*,*            ; Pen Windows 3.1 VGA driver
+sspro16.drv,*,*         ; SpeedStar Pro 16 colors
+p9100_16.drv,*,*        ; Weitek 9100 16bpp
+*,v98032.386,*          ; Appian Renegade
+98032_08.drv,*,*
+98032_16.drv,*,*
+commdis.drv,*,* ; CPS Commute display driver replacement
+rgdi.drv,*,*            ; Appian RGDI
+*,rgdi.386,*
+oakvga.drv,*,*          ; Oak Spitfire
+gogh480.drv,*,* ; Toshiba 
+t19v480.drv,*,*
+avga6256.drv,*,*        ; AVGA2
+avga8256.drv,*,*
+tliw32p8.drv,*,*        ; Tseng W32p - require dva.386
+tliw32p3.drv,*,*        ; (Needed in case of misdetection)
+tliw32p6.drv,*,*
+tliw32p1.drv,*,*
+hires32.drv,*,*         ; Media Vision ProGraphics 1280
+pro1280.drv,*,*
+*,vddark.386,*          ; ARK Logic
+
+; Win3.1 drivers that should *not* be updated by Win95:
+; ---------------------------------------------------------
+[display.update.fail]
+
+; Install class "Display"
+; ---------------------------------------------------------
+[ClassInstall]
+AddReg=ClassAddReg
+DelReg=ClassDelReg
+
+[ClassAddReg]
+HKR,,,,%ClassName%
+HKR,,Installer,,"SetupX.Dll, Display_ClassInstaller"
+HKR,,Icon,,"-1"
+HKR,,EnumDriverStack,,"enumfile.dll,EnumDisplayDriverStack"
+
+[ClassDelReg]
+HKLM,System\CurrentControlSet\Services\Class\Display,EnumPropPages
+
+
+; Device IDs to exclude from Setup pick list
+; ---------------------------------------------------------
+[ControlFlags]
+ExcludeFromSelect=*PNP0917                      ; Special ID
+ExcludeFromSelect=*ATI4402                      ; ATI EISA mach32
+ExcludeFromSelect=PCI\VEN_1005&DEV_2301         ; Avance Logic PCI
+ExcludeFromSelect=PCI\VEN_100E&DEV_9001         ; Weitek P9000
+ExcludeFromSelect=PCI\VEN_100E&DEV_9100         ; Weitek P9100
+ExcludeFromSelect=PCI\VEN_EDD8&DEV_A091         ; ARK Logic
+ExcludeFromSelect=PCI\CC_0300                   ; Standard PCI Graphics Adapter (VGA)
+ExcludeFromSelect=PCI\CC_0301                   ; Standard PCI Graphics Adapter (XGA)
+ExcludeFromSelect=PCI\CC_0380                   ; Standard PCI Graphics Adapter
+ExcludeFromSelect=NullId1,NullId2,NullId3,NullId4       ; Unsupported PCI adapters
+
+; Manufacturers
+; ---------------------------------------------------------
+[Manufacturer]
+%Std%    =Mfg.Std
+%Actix%  =Mfg.Actix
+%ARK%    =Mfg.ARK
+%ATI%    =Mfg.ATI
+%Avance% =Mfg.Avance
+%Boca%   =Mfg.Boca
+%Cardinal%=Mfg.Cardinal
+%Chips%  =Mfg.Chips
+%Cirrus% =Mfg.Cirrus
+%Compaq% =Mfg.Compaq
+%Diamond%=Mfg.Diamond
+%DEC%    =Mfg.DEC
+%DFI%    =Mfg.DFI
+%ELSA%   =Mfg.ELSA
+%Genoa%  =Mfg.Genoa
+%Herc%   =Mfg.Herc
+%IBM%    =Mfg.IBM
+%IIT%    =Mfg.IIT
+%Matrox% =Mfg.Matrox
+%Number9%=Mfg.Number9
+%Oak%    =Mfg.Oak
+%Orchid% =Mfg.Orchid
+%Paradise%=Mfg.Paradise
+%S3%     =Mfg.S3
+%Spider% =Mfg.Spider
+%STB%    =Mfg.STB
+%Trident%=Mfg.Trident
+%Tseng%  =Mfg.Tseng
+%WD%     =Mfg.WD
+%Weitek% =Mfg.Weitek
+%Video7% =Mfg.Video7
+%VidLog% =Mfg.VideoLogic
+%Rend%   =Mfg.Rendition
+
+; Driver Sections
+; ---------------------------------------------------------
+
+[Mfg.Std]
+%*PNP0900.DeviceDesc%=VGA,*PNP0900      ; Standard Graphics Adapter (VGA)
+%*PNP0917.DeviceDesc%=VGA,*PNP0917      ; VGA
+%SuperVGA.DriverDesc%=SVGA              ; Super VGA
+%PCI\CC_0300.DeviceDesc%=VGA,,PCI\CC_0300; Standard PCI Graphics Adapter (VGA)
+%PCI\CC_0301.DeviceDesc%=XGA,,PCI\CC_0301; Standard PCI Graphics Adapter (XGA)
+%PCI\CC_0380.DeviceDesc%=PCIVID,,PCI\CC_0380; Standard PCI Graphics Adapter
+
+[Mfg.Actix]
+%GE32i%=S3,, *PNP0913
+%GE32VL%=S3,, *PNP0913
+%GE64%=S3,, *PNP0913
+%GEUltra64%=S3,, *PNP0913
+%GEUltraPlus%=S3,, *PNP0913
+%GEUltraVL%=S3,, *PNP0913
+%ProSTAR%=CirrusMemMap,, *PNP0914
+%ProSTAR64%=CirrusMemMap,, *PNP0914
+
+[Mfg.ARK]
+%PCI\VEN_EDD8&DEV_A091.DeviceDesc%=UNSUPPORTED,NullId3,PCI\VEN_EDD8&DEV_A091
+
+[Mfg.ATI]
+%*PNP090D.DeviceDesc%=ATIVGA, *PNP090D
+%*PNP090B.DeviceDesc%=ATI8, *PNP090B, *PNP090A
+%*PNP090A.DeviceDesc%=ATI32, *PNP090A
+%*ATI44

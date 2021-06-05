@@ -1,0 +1,105 @@
+tional%,"Greek",,"Greek"
+HKLM,%KEY_Optional%\Greek,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Greek,Section,,"Greek"
+HKLM,%KEY_Optional%\Greek,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Cyrillic",,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Cyrillic,Section,,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"1"
+
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"0"
+
+HKLM, %KEY_Nls%\Locale,00000425,,%00000425%                ;Estonia
+HKLM,"%KEY_KLayout%\00000425","layout file",,kbdes.kbd
+HKLM,"%KEY_KLayout%\00000425","layout text",,%KBD_ES%
+HKLM, %KEY_Nls%\Locale,00000426,,%00000426%                ;Latvia
+HKLM,"%KEY_KLayout%\00000426","layout file",,kbdlv.kbd
+HKLM,"%KEY_KLayout%\00000426","layout text",,%KBD_LV%
+HKLM,"%KEY_KLayout%\00010426","layout file",,kbdlv1.kbd
+HKLM,"%KEY_KLayout%\00010426","layout text",,%KBD_LV1%
+HKLM,"%KEY_KLayout%\00010426","layout id",,0015
+HKLM, %KEY_Nls%\Locale,00000427,,%00000427%                ;Lithuania
+HKLM,"%KEY_KLayout%\00000427","layout file",,kbdlt.kbd
+HKLM,"%KEY_KLayout%\00000427","layout text",,%KBD_LT%
+HKLM, %KEY_Nls%\Codepage,1257,,cp_1257.nls
+
+[TurkishInstalled]
+HKLM,%KEY_Optional%,"Greek",,"Greek"
+HKLM,%KEY_Optional%\Greek,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Greek,Section,,"Greek"
+HKLM,%KEY_Optional%\Greek,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Cyrillic",,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Cyrillic,Section,,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"0"
+
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"0"
+
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"1"
+
+HKLM, %KEY_Nls%\Locale,0000041F,,%0000041F%
+HKLM,"%KEY_KLayout%\0000041F","layout file",,kbdtuq.kbd
+HKLM,"%KEY_KLayout%\0000041F","layout text",,%KBD_TUQ%
+HKLM,"%KEY_KLayout%\0001041F","layout file",,kbdtuf.kbd
+HKLM,"%KEY_KLayout%\0001041F","layout text",,%KBD_TUF%
+HKLM,"%KEY_KLayout%\0001041F","layout id",,0014
+HKLM, %KEY_Nls%\Codepage,1254,,cp_1254.nls
+
+[RegMultiLanguage]
+HKLM,%KEY_Optional%,"MultiLanguageTop",,"MultiLanguageTop"
+HKLM,%KEY_Optional%\MultiLanguageTop,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\MultiLanguageTop,Section,,"MultiLanguageTop"
+HKLM,%KEY_Optional%\MultiLanguageTop,Installed,,"1"
+
+[EnglishOnly]
+HKLM,%KEY_Optional%,"Cyrillic",,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Cyrillic,Section,,"Cyrillic"
+HKLM,%KEY_Optional%\Cyrillic,Installed,,"0"
+HKLM,%KEY_Optional%,"Greek",,"Greek"
+HKLM,%KEY_Optional%\Greek,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Greek,Section,,"Greek"
+HKLM,%KEY_Optional%\Greek,Installed,,"0"
+HKLM,%KEY_Optional%,"CE",,"CE"
+HKLM,%KEY_Optional%\CE,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\CE,Section,,"CE"
+HKLM,%KEY_Optional%\CE,Installed,,"0"
+HKLM,%KEY_Optional%,"Baltic",,"Baltic"
+HKLM,%KEY_Optional%\Baltic,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Baltic,Section,,"Baltic"
+HKLM,%KEY_Optional%\Baltic,Installed,,"0"
+HKLM,%KEY_Optional%,"Turkish",,"Turkish"
+HKLM,%KEY_Optional%\Turkish,INF,,"mullang.inf"
+HKLM,%KEY_Optional%\Turkish,Section,,"Turkish"
+HKLM,%KEY_Optional%\Turkish,Installed,,"0"
+
+;** END ML SUPPORT ***
+
+[folder.addreg]
+HKCR,CLSID\{BD84B381-8CA2-1069-

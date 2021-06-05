@@ -1,0 +1,107 @@
+\\DATA\\%ComponentID\\BootROM\\BootROMVersion"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\10\3]
+"Name"="Remote Boot Protocol Type"
+"Description"="This is the type of remote boot protocol supported by this ROM."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\BootROM\\RemoteBootProtocolType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\10\3\Enum]
+"1"="Other"
+"2"="None"
+"3"="RPL"
+"4"="BootP"
+"5"="DEC MOP"
+"6"="Native NetWare"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\10\4]
+"Name"="Remote Boot Protocol Version"
+"Description"="The version of the remote boot protocol supported by this ROM."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\BootROM\\RemoteBootProtocolVersion"
+
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\11]
+"Name"="Boot ROM Capabilities"
+"Class"="DMTF|Boot ROM Capabilities|001"
+"Description"="This group describes the capabilities or special features supported by this ROM."
+"Key"="1"
+"^Index"=hex:02,00,00,00
+"^ROW"="^ROWNUM|2|3"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\11\1]
+"Name"="Capability Index"
+"Description"="This is an arbitrary number assigned to each capability.Capability Index usually starts with 1 and increments for each additional capability."
+"Column"="^ROWNUM"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\11\2]
+"Name"="Capability Description"
+"Description"="This is a clear description of a property or special feature of the ROM, e.g. 'virus protection'."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\BootROM\\CapabilityDescription"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\11\3]
+"Name"="Capability Status"
+"Description"="The current state or value associated with the capability or special feature, e.g. 'enabled', 'active', etc."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":0"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\BootROM\\CapabilityStatus"
+
+;==========================
+;  FRU Group
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\30]
+"Name"="Field Replaceable Unit"
+"Class"="DMTF|FRU|001"
+"Description"="A Field Replaceable Unit (FRU), is defined as a hardware component which is designed to be separately removable for replacement or repair."
+"Key"="1"
+"^Index"=hex:03,00,00,00
+"^ROW"="1|2|3|4|5|6|7|8|9|10|11"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\30\1]
+"Name"="FRU Index"
+"Description"="The index into the Field Replaceable Unit table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\30\2]
+"Name"="Device Group Index"
+"Description"="The group ID of the group referencing this Field Replaceable Unit instance."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:04,00,00,00
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\30\3]
+"Name"="Description"
+"Description"="A clear description of this Field Replaceable Unit."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(255)"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\FRU\\Description"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Net\%ComponentID\30\4]
+"Name"="Manufacturer"
+"Description"="The name of the company manufacturing or providing this Field Replaceable Unit."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(80)"
+":1"="HKEY_LOCAL_MACHINE\\

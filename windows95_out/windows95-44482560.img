@@ -1,0 +1,125 @@
+ational status of the device instance."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\OperationalStatus"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\3\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Enabled"
+"4"="Disabled"
+"5"="Not Applicable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\4]
+"Name"="Usage State"
+"Description"="The usage state of the device instance."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\UsageState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\4\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Idle"
+"4"="Active"
+"5"="Busy"
+"6"="Not Applicable"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\5]
+"Name"="Availability Status"
+"Description"="The availability status of the device instance."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AvailabilityStatus"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\5\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Running"
+"4"="Warning"
+"5"="In Test"
+"6"="Not Applicable"
+"7"="Power Off"
+"8"="Off Line"
+"9"="Off Duty"
+"10"="Degraded"
+"11"="Not Installed"
+"12"="Install Error"
+"13"="Power Save"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\6]
+"Name"="Administrative State"
+"Description"="The administrative state of the device instance."
+"Column"="6"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\AdministrativeState"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Locked"
+"4"="Unlocked"
+"5"="Not Applicable"
+"6"="Shutting Down"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\7]
+"Name"="Fatal Error Count"
+"Description"="The accumulated fatal error count for this device instance."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\FatalErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\8]
+"Name"="Major Error Count"
+"Description"="The accumulated major error count for this device instance."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\MajorErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\Keyboard\%ComponentID\31\9]
+"Name"="Warning Error Count"
+"Description"="The accumulated warning error count for this device instance."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\WarningErrorCount"
+
+
+
+;=============================================
+;  PC System Component
+;  This part gets installed directly under the 
+;  system component, not under "Install".
+;=============================================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF]
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2]
+"Name"="PC System"
+"Description"="This component implements a set of groups relating to the PC System."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1]
+"Name"="ComponentID Group"
+"Class"="DMTF|ComponentID|001"
+"Description"="This group defines attributes common to all components. This group is required."
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\MIF\2\1\1]
+"Name"="Manufacturer"
+"Description"="Manufacturer of this system."
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="DisplayString(64)"
+":Value"=

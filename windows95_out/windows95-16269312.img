@@ -1,0 +1,173 @@
+i,drivers,"aux*=sbaux.drv",,1
+system.ini,drivers,"aux*=sbpaux.drv",,1
+system.ini,drivers,"aux*=sb16aux.drv",,1
+system.ini,drivers,"aux*=wsssb16.drv",,1
+system.ini,drivers,"aux*=wsssbpro.drv",,1
+system.ini,drivers,"mixer*=sbpmixer.drv",,1
+system.ini,drivers,"mixer*=wsssb16.drv",,1
+system.ini,drivers,"mixer*=wsssbpro.drv",,1
+system.ini,drivers,"mixer*=mvmixer.drv",,1
+system.ini,drivers,"mixer*=sb16aux.drv",,1
+
+[WSS.UpdateInis]
+system.ini,386Enh,"device=vsndsys.386"
+system.ini,386Enh,"device=vaudiod.386"
+system.ini,386Enh,"device=vadlibd.386"
+system.ini,386Enh,"device=vsbd.386"
+system.ini,386Enh,"device=nmcmssnd.386"
+system.ini,drivers,"wave*=sndsys.drv",,1
+system.ini,drivers,"wave*=cpqaudio.drv",,1
+system.ini,drivers,"wave*=cs31ba11.drv",,1
+system.ini,drivers,"wave*=cs32ba11.drv",,1
+system.ini,drivers,"wave*=nmcmssnd.drv",,1
+system.ini,drivers,"midi*=sndsys.drv",,1
+system.ini,drivers,"midi*=nmcmssnd.drv",,1
+system.ini,drivers,"aux*=sndsys.drv",,1
+system.ini,drivers,"aux*=cpqaudio.drv",,1
+system.ini,drivers,"aux*=cs31ba11.drv",,1
+system.ini,drivers,"aux*=cs32ba11.drv",,1
+system.ini,drivers,"aux*=nmcmssnd.drv",,1
+system.ini,drivers,"mixer*=sndsys.drv",,1
+system.ini,drivers,"mixer*=cs31ba11.drv",,1
+system.ini,drivers,"mixer*=cs32ba11.drv",,1
+system.ini,drivers,"mixer*=nmcmssnd.drv",,1
+
+;---------------------------------------------------------------;
+
+[WSS.LC1]
+ConfigPriority=NORMAL
+IOConfig=530-537, 604-60B, E80-E87, F40-F47
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[WSS.LC2]
+ConfigPriority=NORMAL
+IOConfig=530-537, 604-60B, E80-E87, F40-F47
+IOConfig=388-38B
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[WSS.LC3]
+ConfigPriority=NORMAL
+IOConfig=530-537, 604-60B, E80-E87, F40-F47
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[WSS.LC4]
+ConfigPriority=NORMAL
+IOConfig=530-537, 604-60B, E80-E87, F40-F47
+IOConfig=388-38B
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[WSS.LC5]
+ConfigPriority=HARDRECONFIG
+IOConfig=534-537, 608-60B, E84-E87, F44-F47
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[WSS.LC6]
+ConfigPriority=HARDRECONFIG
+IOConfig=534-537, 608-60B, E84-E87, F44-F47
+IOConfig=388-38B
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[CBA.LC1]
+ConfigPriority=HARDRECONFIG
+IOConfig=534-537, 608-60B
+IOConfig=C44-C47
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[CBA.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=534-537, 608-60B
+IOConfig=C44-C47
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[CBA.LC3]
+ConfigPriority=HARDRECONFIG
+IOConfig=534-537
+IOConfig=530-533
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[CBA.LC4]
+ConfigPriority=HARDRECONFIG
+IOConfig=534-537
+IOConfig=530-533
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[CBA.LC5]
+ConfigPriority=HARDRECONFIG
+IOConfig=608-60B
+IOConfig=604-607
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+
+[CBA.LC6]
+ConfigPriority=HARDRECONFIG
+IOConfig=608-60B
+IOConfig=604-607
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[AZT16C.LC1]
+ConfigPriority=NORMAL
+IOConfig=220-22F, 240-24F
+IOConfig=530-537, 604-60B, E80-E87, F40-F47
+IOConfig=388-38B
+IRQConfig=3, 5, 7, 9
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[AZT16W.LC1]
+ConfigPriority=NORMAL
+IOConfig=220-22F, 240-24F
+IOConfig=530-537, 604-60B, E80-E87, F40-F47
+IOConfig=388-38B
+IRQConfig=5, 7, 9, 10
+IRQConfig=7, 9, 10, 11
+DMAConfig=0, 1, 3
+DMAConfig=0, 1, 3
+
+[ESS4881.LC1]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1 , 3
+
+[ESS4881.LC2]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IOConfig=388-389
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1 , 3
+
+[ESS4881.LC3]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IOConfig=388-38B
+IRQConfig=3 , 5 , 7 , 9
+DMAConfig=1 , 3
+
+[ESS4881.LC4]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IRQConfig=3 , 5 , 9 , 10
+DMAConfig=1 , 3
+
+[ESS4881.LC5]
+ConfigPriority=HARDRECONFIG
+IOConfig=220-22F , 240-24F
+IOConfig=388-389
+IRQConfig=3 , 5 , 9 , 10

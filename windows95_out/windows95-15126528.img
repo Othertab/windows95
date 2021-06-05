@@ -1,0 +1,273 @@
+
+
+
+HKR,Override,0001,1, \
+;
+00,04,00,00, \
+00,00,00,00, \
+;
+; I/O Resource Descriptor
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00, \
+0C,00, \
+00,00, \
+00,00, \
+00,00, \
+00, \
+00, \
+F0,FF, \
+10,00, \
+50,03, \
+5F,03, \
+00,00, \
+00, \
+00, \
+40,00,00,00, \
+;
+; IRQ Resource Descriptor
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00, \
+00,00, \
+FF,FF, \
+00,00, \
+20,00,00,00, \
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00, \
+02,00, \
+32, \
+32, \
+32, \
+02, \
+00,80,00,00, \
+00, \
+00, \
+00, \
+09, \
+01, \
+;
+00,00,00,00
+
+
+HKR,Override,0002,1, \
+;
+00,04,00,00, \
+00,00,00,00, \
+;
+; I/O Resource Descriptor
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00, \
+0C,00, \
+00,00, \
+00,00, \
+00,00, \
+00, \
+00, \
+F0,FF, \
+10,00, \
+60,02, \
+6F,02, \
+00,00, \
+00, \
+00, \
+40,00,00,00, \
+;
+; IRQ Resource Descriptor
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00, \
+00,00, \
+FF,FF, \
+00,00, \
+20,00,00,00, \
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00, \
+02,00, \
+32, \
+32, \
+32, \
+02, \
+00,80,00,00, \
+00, \
+00, \
+00, \
+0C, \
+01, \
+;
+00,00,00,00
+
+
+HKR,Override,0003,1, \
+;
+00,04,00,00, \
+00,00,00,00, \
+;
+; I/O Resource Descriptor
+;
+24,00,00,00, \
+02,00,00,00, \
+01,00, \
+0C,00, \
+00,00, \
+00,00, \
+00,00, \
+00, \
+00, \
+F0,FF, \
+10,00, \
+50,02, \
+5F,02, \
+00,00, \
+00, \
+00, \
+40,00,00,00, \
+;
+; IRQ Resource Descriptor
+;
+14,00,00,00, \
+04,00,00,00, \
+00,00, \
+00,00, \
+FF,FF, \
+00,00, \
+20,00,00,00, \
+;
+; REQUEST_CONFIG_PKT Descriptor
+;
+19,00,00,00, \
+7C,89,00,00, \
+00,00, \
+02,00, \
+32, \
+32, \
+32, \
+02, \
+00,80,00,00, \
+00, \
+00, \
+00, \
+0D, \
+01, \
+;
+00,00,00,00
+
+[*pnpA01B.det]                  ; T128 Installation
+AddReg=ForceMPCopy
+
+[*pnpA02D.det]                  ; Trantor T13B Installation
+AddReg=ForceMPCopy
+
+[*pnpA020.det]                  ; Media Vision Scsi Board
+AddReg=ForceMPCopy
+
+[*pnpA020.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=4@280-28f%fffc(3ff::),4@384-38f%fffc(3ff::)
+;IRQConfig=
+;DMAConfig=
+
+[*pnpA01E.det]                  ; Trantor T338 Parallel Installation
+AddReg=ForceMPCopy
+
+[*pnpA01F.det]                  ; Trantor T348 Parallel Installation
+AddReg=ForceMPCopy
+
+[*pnpA02F.det]                  ; Trantor T358 Parallel Installation
+AddReg=ForceMPCopy
+
+[*pnpA01D.det]                  ; Trantor T160 Installation
+AddReg=ForceMPCopy
+
+[*pnpA01D.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=10@230-25f%fff0(3ff::),10@330-36f%fff0(3ff::)
+IRQConfig=3,5,7,10,12,14,15
+;DMAConfig=
+
+;******************************** Iomega Driver Installation Sections
+;
+
+[*isaB701.drv]          ;Iomega installation
+Copyfiles=@PC2X.mpd
+AddReg=IOS,Poll,PC2XReg
+LogConfig=*isaB701.LogConfig
+
+[*isaB702.drv]          ;Iomega installation
+Copyfiles=@PC2X.mpd
+AddReg=IOS,Poll,PC2XReg
+LogConfig=*isaB702.LogConfig
+
+[*isaB701.det]          ; Iomega installation
+addreg=ForceMPCopy
+
+[pc2xReg]
+HKR,,PortDriver,,pc2x.mpd
+
+[*isaB701.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=4@340-373%fff0(3ff::)
+IRQConfig=5
+DMAConfig=1,3
+
+[*isaB702.det]          ; Iomega installation
+addreg=ForceMPCopy
+
+[*isaB702.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=4@340-373%fff8(3ff::)
+IRQConfig=5,7
+DMAConfig=1,3
+
+;******************************** BusLogic Driver Installation Sections
+;
+[AllBLC]
+CopyFiles=@buslogic.mpd
+AddReg=IOS,BLCRegLines
+UpdateInis=DoubleBuffer
+
+[BLCEISA]
+CopyFiles=@buslogic.mpd
+AddReg=IOS,BLCRegLines
+UpdateInis=DoubleBuffer
+LogConfig=*BUS0042.LogConfig
+
+[BLCEISA.PosDup]
+*BUS0042
+
+[BLCPCI]
+CopyFiles=@buslogic.mpd
+AddReg=IOS,BLCRegLines
+UpdateInis=DoubleBuffer
+
+[BLCPCI.PosDup]
+*BUS0042
+
+[BLCRegLines]
+HKR,,PortDriver,,buslogic.mpd
+
+[*BUS0042.Det]
+AddReg=ForceMPCopy
+
+[*BUS0042.LogConfig]
+ConfigPriority=HARDRECONFIG
+IOConfig=130-133(3FF::),230-233(3FF::),330-333(3FF::),134-137(3FF::),234-237(3FF::),334-337(3FF::)
+IRQConfig=9,10,11,12,14,15
+DMAConfig=0,5,6,7
+
+
+
+;****************************

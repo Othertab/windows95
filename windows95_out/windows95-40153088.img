@@ -1,0 +1,90 @@
+55. The default value is 64.
+
+D=nnn
+    Specifies how many kilobytes of memory should be reserved for buffered
+    direct memory access (DMA). Discounting floppy disk DMA, this value
+    should reflect the largest DMA transfer that will occur while EMM386 is
+    active. Valid values for nnn are in the range 16 through 256. The
+    default value is 32.
+
+RAM=mmmm-nnnn
+    Specifies a range of segment addresses to be used for UMBs and also
+    enables EMS support. If you do not specify a range, EMM386 uses all
+    available adapter space to create UMBs and a page frame for EMS.
+
+NOEMS
+    Provides access to the upper memory area but prevents access to expanded
+    memory.
+
+NOVCPI
+    Disables support for VCPI programs. This switch must be used with
+    the NOEMS switch. If you specify the NOVCPI switch without specifying
+    the NOEMS switch, EMM386 does not disable VCPI support. If you specify
+    both switches, EMM386 disregards the MEMORY parameter and the MIN
+    switch. Disabling support for VCPI programs reduces the amount of
+    extended memory allocated.
+
+HIGHSCAN
+    Specifies that EMM386 use an additional check to determine the
+    availablity of upper memory for use as UMBs or EMS windows. On some
+    computers, specifying this switch may have no effect or cause EMM386 to
+    identify upper memory areas as available when they are not. As a
+    result, your computer might stop responding.
+
+VERBOSE
+    Directs EMM386 to display status and error messages while loading. By
+    default, EMM386 displays messages only if it encounters an error
+    condition. You can abbreviate VERBOSE as V. (To display status messages
+    without adding the VERBOSE switch, press and hold down the ALT key 
+    while EMM386 starts and loads.)
+
+WIN=mmmm-nnnn
+    Reserves a specified range of segment addresses for Windows instead of
+    for EMM386. Valid values for mmmm and nnnn are in the range A000h
+    through FFFFh and are rounded down to the nearest 4-kilobyte boundary.
+    The X switch takes precedence over the WIN switch if the two ranges
+    overlap. The WIN switch takes precedence over the RAM, ROM, and I
+    switches if their ranges overlap.
+
+[NOHI]
+    Prevents EMM386 from loading into the upper memory area. Normally, a
+    portion of EMM386 is loaded into upper memory. Specifying this switch
+    decreases available conventional memory and increases the upper memory
+    area available for UMBs.
+
+[ROM=mmmm-nnnn]
+    Specifies a range of segment addresses that EMM386 uses for shadow
+    RAM--random-access memory used for read-only memory (ROM). Valid values
+    for mmmm and nnnn are in the range A000h through FFFFh and are rounded
+    down to the nearest 4-kilobyte boundary. Specifying this switch may
+    speed up your system if it does not already have shadow RAM.
+
+[NOMOVEXBDA]
+    Prevents EMM386 from moving the extended BIOS data from conventional
+    memory to upper memory.
+
+[ALTBOOT]
+    Specifies that EMM386 use an alternate handler to restart your computer
+    when you press CTRL+ALT+DEL. Use this switch only if your computer stops
+    responding or exhibits other unusual behavior when EMM386 is loaded and
+    you press CTRL+ALT+DEL.
+
+[NOBACKFILL]
+    When EMM386 is configured to provide upper memory blocks (by using the
+    NOEMS or RAM switches), EMM386 will also automatically backfill
+    conventional memory if there is less than 640k, in order to bring total
+    conventional memory up to 640k.  However, because Windows does not
+    support backfilled conventional memory, use the NOBACKFILL switch if
+    your computer has less than 640K of conventional memory.
+
+
+HIMEM.SYS
+=========
+
+HIMEM is an extended-memory manager--a program that coordinates the use of
+your computer's extended memory, including the high memory area (HMA), so
+that no two programs or device drivers use the same memory at the same
+time.
+
+You install HIMEM by adding a DEVICE command for HIMEM.SYS to your
+CONFIG.SYS file. The HIMEM.SYS command line must come before any

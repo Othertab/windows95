@@ -1,0 +1,131 @@
+ click the Device
+   Manager tab.
+2. Double-click Display Adapter, and then double-click VGA. 
+3. In the Device Usage area, make sure Undocked is checked and Docked is 
+   unchecked. Click OK.
+4. In the  Device Manager tab, double-click Display Adapter, and then 
+   double-click the S3 adapter.
+5. In the Device Usage area, make sure the Docked option is checked and 
+   the Undocked option is unchecked. 
+6. Click OK to exit Device Manager.
+
+
+[To Set Up for No Network in an Undocked State]
+1. In Control Panel, double-click the System icon, and then click the Device
+   Manager tab.
+2. Double-click Network Adapter, and then double-click the network card. 
+3. In the Device Usage area of the General tab, remove the check mark from 
+   the Undocked option. Click OK, and then return to Device Manager.
+
+[To set up for no RNA while docked]
+1. Repeat Step 1.
+2. Double-click the Dial-up Networking adapter. Remove the check mark for 
+   the Docked option. 
+
+
+Keyboard Shortcut Keys
+----------------------
+
+[Hot and Other Keys]
+*General folder / Windows Explorer shortcuts for a selected object:
+
+	Keys			Action
+      -----------------------------------------------------------------	
+	F2			Rename	
+	F3			Find	
+	CTRL+X, C, or V		Cut, Copy, or Paste	
+	SHIFT+DELETE		Delete immediately without putting the file 
+				in Recycle Bin	
+	ALT+ENTER		Properties	
+	ALT+double-click	Properties	
+	CTRL+right-click	Put alternative verbs on the context menu 
+				(Open With)				
+	SHIFT+double-click	Explore the object if it has an Explore 
+				command	
+
+	CTRL+drag a file to a 
+	folder			Copy a file
+	
+	CTRL+SHIFT+drag a
+	file to the desktop 
+	or a folder		Create a shortcut	
+
+	CTRL+ESC,ESC,TAB,SHIFT+F10	
+				Open taskbar properties
+
+[General control over folders/Windows Explorer]	
+
+	F4 (Explorer)		Displays the combo box	
+	F5			Refresh	
+	F6			Switches between panes in Windows Explorer	
+	CTRL+G(Windows 
+	Explorer)		Goto	
+	CTRL+Z			Undo	
+	CTRL+A			Select all	
+	BACKSPACE		Goes to the parent folder	
+	SHIFT+<close>		Closes this folder and all its parent folders
+				
+[In Windows Explorer]	
+	Num*			Expands everything under selection	
+	Num-			Expands selection	
+	Num+ or Right arrow	Collapses selection	
+	Right arrow		Expands current selection if it's collapsed;
+				otherwise goes to the first child.	
+	Left arrow		Collapses current selection if it's expanded; 
+				otherwise goes to the parent	
+
+[In Properties]
+	CTRL+TAB or
+	CTRL+SHIFT+TAB		Switches between Properties tabs	
+
+[In Open/Save Common Dialog Boxes]
+ 	F4			Drop down the location list	
+	F5			Refresh the view	
+	Backspace		Go to parent folder if focus is on view window	
+
+[General Keyboard-Only Commands]
+	F1			Help	
+	F10			Goes to menu mode	
+	SHIFT+F10		Context menu for selected item	
+	CTRL+ESC		Brings up Start menu	
+	CTRL+ESC, ESC		Focus on the Start button	
+	SHIFT+F10		Context menu	
+	ALT+TAB			Switch to the running program	
+	SHIFT while 
+	inserting CD		Bypasses auto-run	
+	Alt+M when focus 
+	is on taskbar		Minimizes all windows	
+
+[Accessibility Shortcuts]
+	Tap SHIFT 5 times	Toggles StickyKeys on/off	
+	Hold down Right 
+	SHIFT for 8 seconds	Toggles FilterKeys on/off	
+	Hold down NumLock 
+	for 5 seconds		Toggles ToggleKeys on/off
+	
+	Left ALT+LEFT+SHIFT
+	+NumLock		Toggles MouseKeys on/off	
+	Left ALT+LEFT+SHIFT
+	+PrintScreen		Toggles HighContrast on/off	
+
+[MS Natural Keyboard]
+ 	Win+R			Run dialog	
+	Win+M			Minimize All	
+	Shift-Win+M		Undo Minimize All	
+	Win+F1			Windows Help	
+	Win+E			Explorer	
+	Win+F			Find Files or Folders	
+	CTRL+Win+F		Find Computer	
+	Win+Tab			Cycle through taskbar buttons	
+	Win+Break		PSS Hotkey... (System properties)
+
+
+
+Mobile Computing
+-----------------
+
+[Automatic Synchronizing of Files on Laptop]
+If you have files that you want to keep synchronized between your portable,
+your office desktop, and your home computer, you should create Briefcases
+on both your desktop computers, and then keep the files on your portable. 
+Drag the documents from your portable to the Briefca

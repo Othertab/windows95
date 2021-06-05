@@ -1,0 +1,34 @@
+s. It’s a sad comment on our times that virus protection programs are a necessity, but really, the only time they actually do any good is when a disk is inserted. There’s no reason to have them running if all you're doing is building a tower. If you experience trouble running SimTower for Windows, try disabling virus protection programs. 
+
+To determine if something else is running, hold down the <Ctrl> key on your keyboard then press the <Esc> key at the same time. This brings up the Windows Task List.
+
+Ideally, the only item in the Task List window should be Program Manager. If there are any other items shown, and you want to disable them, click on the item to highlight it and click on the End Task button to turn it off. Repeat until only Program Manager is active. Now run SimTower for Windows.
+
+Some Other Things To Consider
+
+Windows Shells other than Program Manager
+Shell programs are third party replacement programs that you can use in place of the standard Windows Program Manager. These include such things as HP Dashboard, the Norton Desktop, and XSoft's TabWorks (which comes installed on most Compaq computers).
+
+If you are having trouble installing or running SimTower for Windows, try either turning off the shell you are using, or using that program's File - Run command to run Program Manager. The command line to run Program Manager is C:\WINDOWS\PROGMAN.EXE. Once you have installed SimTower, you should be able to close Program Manager and run SimTower through the shell program you usually run.
+
+Some shell programs simply won't let you run SimTower properly. If you have successfully installed SimTower but it still won't run, try turning off the shell program you have been using.
+
+A Special Note About TabWorks: If you are running TabWorks, we STRONGLY recommend the following procedure to eliminate extraneous icon creation and other bizarre problems.
+1. Go to the Options menu.
+2. Select File Tracking Options, and deselect Track File Creation and Track File Modification.
+This will allow you to install SimTower through TabWorks without having to run Program Manager.
+
+QEMM, 386MAX, and other "cloaking" or "shadowing" memory managers.
+QEMM has a feature called "Full Stealth Mode". Full Stealth Mode tries to free as much lower memory as possible by "cloaking" or "shadowing" all the devices and drivers in upper memory. This would include most the BIOS on most video cards. Unfortunately, neither SimTower nor WinG (the Windows Graphic utility that SimTower uses) will detect your video BIOS if it’s cloaked or shadowed. We recommend that you turn off Stealth Mode altogether or do not include the Video Regions in the optimization of your system. If you need any assistance with these procedures PLEASE call the manufacturer of your memory manager to confirm that what you are using is WinG compatible.
+
+Increase Resources
+If you get occasional General Protection Faults in MMTASK or MCISEQ, try increasing the buffers allocated for sounds. To do this, open the Control Panel icon and select Drivers. In the Drivers window, there will be a list of items like "Timer" and "[MCI] Sound". Highlight "[MCI] Sound", and click on the Setup button. Usually, the MCI Waveform Driver Setup window will be configured for a 4 second buffer. You should try increasing that to 6 seconds.
+
+Be Bold!
+When all else fails, increase the amount of low memory available in DOS. See your DOS manual for information on increasing the amount of memory available.
+
+Sound and Music
+
+SimTower for Windows supports all sound cards that are compatible with Windows 3.1. If you do not have a sound card, you will get a message reminding you of this. Click Continue. SimTower will run without sound.
+
+If you have a sound card, check the Options menu in SimTower. In the Options menu is an item called Sound, which has three selections: Elevators, Background, and Events. For sound to play, at least one of these menu items must be selected. Having all three selected gives you the full range of sounds in a building. Turning off all three gives you more

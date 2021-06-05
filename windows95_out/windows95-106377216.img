@@ -1,0 +1,87 @@
+t and then choosing
+  Align/Left or Align/Top. To customize the toolbar, right-click on
+  it, and then click Customize Toolbar.
+
+- You can resize the preview pane or the message list by dragging the 
+  divider between the preview pane and the message list.
+
+- You can change how the preview pane splits, or turn it off entirely 
+  by changing the options under Preview Pane on the View menu.
+
+- You can specify that you want to see only unread News messages. To 
+  do this, click the View menu, and then click Unread Messages Only.
+
+- You can set messages to automatically download to the preview pane 
+  by clicking the News menu, clicking options, clicking the Read tab,
+  then selecting the Automatically Show Messages in the Preview Pane
+  check box.
+
+- To view the e-mail address of someone who has sent you a message, 
+  double-click the message to open it, then double-click the author's 
+  name in the From field. You can also add this person to your 
+  Address Book by right-clicking the name, and then clicking Add To 
+  Address Book.
+
+- To view responses to a particular message in a newsgroup, click the 
+  plus sign (+) next to the message. The responses appear indented 
+  below it. 
+  
+- You should use HTML formatting to send messages only to recipients 
+  who have e-mail software that can display HTML. Otherwise, send 
+  messages as plain text, which is the default.
+
+- In Internet Mail, you can leave a copy of your messages on the 
+  server. To set this option, click the Mail menu, and then click 
+  Options. Click the Server tab, click Advanced Settings and select
+  the Leave a copy of messages on server check box.
+
+- In Internet News, you can search for newsgroups that contain 
+  several keywords. To do this, click the News menu, and then click 
+  Newgroups. In the Search box, enter the keywords separated by a 
+  space. You can also search newsgroup descriptions. If you cannot 
+  see the descriptions, click the News menu, click Options, and then 
+  click the Server tab. Click a news server, click Properties, click 
+  the Advanced tab, and then select the Use Newsgroup Descriptions 
+  check box.
+
+- You can have your signature added to all messages, including those
+  that you reply to or forward. To do this, click the Mail menu, and 
+  then click Options. On the Signature tab, select the following check 
+  box: Add Signature To The End Of All Outgoing Messages.
+
+- To switch to your Inbox, you can press CTRL+I.
+
+- To reorder columns, you can drag and drop column headings.
+
+- To save an attachment with a message from the preview pane, click 
+  the paper clip icon, and then hold down the CTRL key while you 
+  click the file you want to save. The Save As dialog box appears.
+
+- You can view all the headers for a news message. To do this, 
+  double-click the message to open it in a separate window, click 
+  the View menu, and then click Full Headers.
+
+- If you are running Internet Mail and News on Windows NT and you 
+  need to add support for a different language, double-click the 
+  Keyboard icon in Control Panel, and then click Add. Follow the 
+  instructions on your screen. This installs the appropriate NLS 
+  (National Language Support) files. You do not have to use the 
+  associated keyboard layout.
+
+- To send or receive messages in PanEuropean languages, choose 
+  between one of these character sets: CE/Baltic/Greek/Turkish (ISO) 
+  or CE/Baltic/Greek/Turkish (Windows).
+
+- To send or receive messages in Russian, use Cyrillic (Windows). 
+  To send messages in other Cyrillic languages (Ukrainian, 
+  Belorussian, Bulgarian), you can use either Cyrillic (KOI8-R) 
+  or Cyrillic (Windows; however, to reply, you should use the 
+  character set that was used in the original message.
+
+- If Internet Mail and News is unable to determine the language 
+  of an incoming message, the language defaults to the one 
+  selected in the Language list. To open the Language list, 
+  click the View menu, and then point to Language.
+
+
+SUPPORT FOR MICROSOFT INTERNET

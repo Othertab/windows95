@@ -1,0 +1,121 @@
+e"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\31\6\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="Locked"
+"4"="Unlocked"
+"5"="Not Applicable"
+"6"="Shutting Down"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\31\7]
+"Name"="Fatal Error Count"
+"Description"="The accumulated fatal error count for this device instance."
+"Column"="7"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\FatalErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\31\8]
+"Name"="Major Error Count"
+"Description"="The accumulated major error count for this device instance."
+"Column"="8"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\MajorErrorCount"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\MIF\SerialPort\%ComponentID\31\9]
+"Name"="Warning Error Count"
+"Description"="The accumulated warning error count for this device instance."
+"Column"="9"
+"Access"="Read-Only"
+"Storage"="Specific"
+"Type"="Counter"
+":1"="HKEY_LOCAL_MACHINE\\DesktopManagement\\DATA\\%ComponentID\\OperationalState\\WarningErrorCount"
+
+
+
+;========================================
+;                  Video Component
+;========================================
+;
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID]
+"Name"="Video Adapter"
+"Description"="This component implements a set of groups relating to the Video Adapter."
+
+;====================
+;  Video Group
+;====================
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20]
+"Name"="Video"
+"Class"="DMTF|Video|002"
+"Description"="This group defines the attributes of video devices in this system."
+"Key"="1"
+"^Index"=hex:01
+"^ROW"="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\1]
+"Name"="Video Index"
+"Description"="An index into the video table."
+"Column"="1"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+"1"=hex:01
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\2]
+"Name"="Video Type"
+"Description"="The architecture of the video subsystem in this system."
+"Column"="2"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Enum"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\VideoType"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\2\Enum]
+"1"="Other"
+"2"="Unknown"
+"3"="CGA"
+"4"="EGA"
+"5"="VGA"
+"6"="SVGA"
+"7"="MDA"
+"8"="HGC"
+"9"="MCGA"
+"10"="8514A"
+"11"="XGA"
+"12"="Linear Frame Buffer"
+"160"="PC-98"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\3]
+"Name"="Current Video Mode"
+"Description"="The current video mode in this system. Value = -1 if this information is not available."
+"Column"="3"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\CurrentVideoMode"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\4]
+"Name"="Minimum Refresh Rate"
+"Description"="The minimum refresh rate for this video subsystem in Hz."
+"Column"="4"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\MinimumRefreshRate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\5]
+"Name"="Maximum Refresh Rate"
+"Description"="The maximum refresh rate for this video subsystem in Hz."
+"Column"="5"
+"Access"="Read-Only"
+"Storage"="Common"
+"Type"="Integer"
+":1"="HKLM\\DesktopManagement\\DATA\\%ComponentID\\Video\\MaximumRefreshRate"
+
+[HKEY_LOCAL_MACHINE\DesktopManagement\Install\Defaults\Mif\Display\%ComponentID\20\6]
+"Name"="Video Memory Type"
+"Description"="The type of video memory for this adapter."

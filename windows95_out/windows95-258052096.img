@@ -1,0 +1,83 @@
+his readme file informative, useful and fun. You might even find a clue to any SimTower cheat codes in here.
+
+What’s in this Document
+Reading This document
+Using Write
+Using Something Other Than Write
+Technical Stuff
+Introduction
+Installation Problems
+System Conflicts
+Some Other Things To Consider
+Windows Shells Other Than Program Manager
+QEMM, 386MAX, and other “cloaking” or "shadowing" Memory Managers
+Increase Resources
+Be Bold!
+Sound And Music
+Video, Palettes and Pictures
+The Most Important Video Information in This File
+What are Video Drivers?
+What Does This Have to Do with SimTower?
+General Note On Video Cards
+Changing Your Video Driver
+It Don’t Work. Now What?
+Specialized Video Stuff
+Diamond Stealth 64 DRAM/VRAM
+Cirrus Logic Chipset
+Windows for Workgroups 3.11
+Memory Issues
+The General Idea
+Windows for Workgroups 3.11
+Using Virtual Memory
+Disk Compression Users
+Non Disk Compression Users
+Gameplay Issues
+Elevators
+The Elevator Control Panel
+What Does It Mean: Floors Closer than Moving Cars?
+What About the “Car Response Time?”
+Renaming Stuff
+Housekeeping Stuff
+Hidden Stuff
+Limits
+Some (Confusing) Money Matters
+More Hidden Stuff
+Talking to Real People
+Customer Support
+Before You Call Customer Support
+The Most Important Stuff
+The Next Most Important Stuff
+Ways to Get Ahold of Us
+Who we are
+
+Reading this Document
+Using Write
+To make this document easier to read, enlarge the Write window by clicking the Maximize button in the upper-right corner of the window. Or open the Control menu in the upper-left corner of the Write window (press ALT+SPACEBAR), and choose the Maximize command.
+
+Make sure that you are in Portrait Orientation. To check, open the File menu and select Print Setup.... Click the Portrait button if it’s not set.
+
+Use the Find menu to search for information which may be of interest to you. Readme files are the last chance for producers, programmers, managers, play testers and other nefarious types to include important information. As such, information can be a little “scattered”. Search (with Find) and you may be pleasantly surprised. It ain’t hyper-linked text, but it’s the next best thing.
+
+To move through the document, press PAGE UP or PAGE DOWN. Or click the arrows at the top and bottom of the scroll bar along the right side of the Write window.
+
+To print the document, choose Print... from the File menu. 
+
+For Help on using Write, press F1.
+
+NOTE: The screen shots in this Readme file are in 16 color BMP files to keep this file as small as possible. Also, the screen shots may not look all that spiffy when printed. Believe me when I tell you that the game looks much better in 256 colors. 
+Using Something Other Than Write
+This document has been written using an outline structure. Unfortunately, Write doesn’t support an outline structure.
+
+If you can load this document into another word processor that CAN display it in an outline, you’ll be able to find help and information more quickly by reading subject headings.
+
+Actual Read Me information starts here...
+
+Technical Stuff
+Introduction
+Games are pushing the envelope of software development. Word processors and spreadsheets, for all their menus and functions and what not, mostly just sit in memory and wait for you to do something. Games are running all the time, grabbing resources and forcing video drivers to perform at peak level. SimTower may be “just a game”, but it’s a busy game, and it’s making your system work all the time... even when the window is minimized.
+
+If you're having trouble running SimTower for Windows, or are getting error messages, check out this section first (it’s why we put it near the top of the file).  These tips were compiled and written by the Virtual Adept Magi of Maxis Customer Support and QA., and contain enough information to make you an expert too (or at least enough to make you sound like one).
+
+Installation Problems
+
+NOTE: If you are using memory managers (such as QEMM) other than the standard utilities that come with DOS, these installation 

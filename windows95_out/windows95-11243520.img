@@ -1,0 +1,50 @@
+stall\Defaults\Data\Display\%%ComponentID\FRU,"SupportPhoneNumber",,"Unknown"
+
+;  Operational State info
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"OperationalStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"UsageState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"AvailabilityStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"AdministrativeState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"FatalErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"MajorErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\OperationalState,"WarningErrorCount",1,00
+
+;  Component ID group
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\Display\%%ComponentID\ComponentID,"Verify",1,02
+
+;  FRU (Field Replacable Unit)
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"Description",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"Model",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"PartNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"FRUSerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"RevisionLevel",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"WarrantyStartDate",1,
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"WarrantyDuration",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\FRU,"SupportPhoneNumber",,"Unknown"
+
+;  Operational State info
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"OperationalStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"UsageState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"AvailabilityStatus",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"AdministrativeState",1,01
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"FatalErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"MajorErrorCount",1,00
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\OperationalState,"WarningErrorCount",1,00
+
+;  Component ID group
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\ComponentID,"Manufacturer",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\ComponentID,"Product",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\ComponentID,"Version",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\ComponentID,"SerialNumber",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\ComponentID,"Installation",,"%DateTime"
+HKLM,DesktopManagement\Install\Defaults\Data\Keyboard\%%ComponentID\ComponentID,"Verify",1,02
+
+;  FRU (Field Replacable Unit)
+HKLM,DesktopManagement\Install\Defaults\Data\DiskDrive\%%ComponentID\FRU,"Description",,"Unknown"
+HKLM,DesktopManagement\Install\Defaults\Data\DiskDrive\%%ComponentID\FRU,"Manufacturer"

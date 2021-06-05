@@ -1,0 +1,126 @@
+dReg, Internal
+
+[Modem14]
+AddReg=All, Common, Modem14.AddReg, Internal
+
+[Modem16]
+AddReg=All, Common, Modem16.AddReg, External
+
+[Modem17]
+AddReg=All, Common, Modem17.AddReg, External
+
+[Modem18]
+AddReg=All, Common, Modem18.AddReg, External
+
+[Modem19]
+AddReg=All, Common, Modem19.AddReg, Internal
+
+[Modem20]
+AddReg=All, Common, Modem20.AddReg, Internal
+
+[Modem23]
+AddReg=All, Common, Modem23.AddReg, External
+
+[Modem24]
+AddReg=All, Common, Modem24.AddReg, Internal
+
+[Modem25]
+AddReg=All, Common, Modem25.AddReg, External
+
+[Modem26]
+AddReg=All, Common, Modem26.AddReg, External
+
+[Modem27]
+AddReg=All, Common, Modem27.AddReg, External
+
+[Modem28]
+AddReg=All, Common, Modem28.AddReg, External
+
+[Modem29]
+AddReg=All, Common, Modem29.AddReg, External
+
+[Modem30]
+AddReg=All, Common, Modem30.AddReg, External
+
+[Modem31]
+AddReg=All, Common, Modem31.AddReg, External
+
+[Modem32]
+AddReg=All, Common, Modem32.AddReg, External
+
+[Modem36]
+AddReg=All, Common, Modem36.AddReg, External
+
+[Modem37]
+AddReg=All, Common, Modem37.AddReg, External
+
+
+; AddReg sections
+
+[Modem1.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT \J0\N3\Q3\V4%%C1 S95=47  <cr>"
+
+[Modem2.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem3.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Settings, FlowControl_Off,, "$F5"
+HKR, Settings, FlowControl_Hard,, "$F4"
+HKR, Settings, FlowControl_Soft,, "$F0"
+HKR, Settings, ErrorControl_On,, "$E3"
+HKR, Settings, ErrorControl_Off,, "$E0"
+HKR, Settings, ErrorControl_Forced,, "$E4"
+HKR, Settings, Compression_On,, "$C1"
+HKR, Settings, Compression_Off,, "$C0"
+
+[Modem5.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,e1,00,00, 40,38,00,00
+HKR, Init,      2,, "AT &F V1 S95=47 <cr>"
+HKR, Settings, SpeedNegotiation_Off,, "%%E0"
+HKR, Settings, SpeedNegotiation_On,, "%%E1"
+
+[Modem7.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 77,03,00,00, 00,e1,00,00, 40,38,00,00
+
+[Modem8.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 00,c2,01,00, 00,4b,00,00
+HKR, Init,      2,, "AT &F <cr>"
+HKR, Settings, SpeedNegotiation_Off,, "%%E0"
+HKR, Settings, SpeedNegotiation_On,, "%%E1"
+
+[Modem9.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, d0,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+
+[Modem10.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, d0,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+
+[Modem12.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, 50,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<cr>"
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+
+[Modem13.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, f7,03,00,00, 80,25,00,00, 60,09,00,00
+HKR, Settings, FlowControl_Off,, ""
+HKR, Settings, FlowControl_Hard,, ""
+HKR, Settings, FlowControl_Soft,, ""
+HKR, Settings, ErrorControl_On,, ""
+HKR, Settings, ErrorControl_Off,, ""
+HKR, Settings, ErrorControl_Forced,, ""
+HKR, Settings, SpeedNegotiation_Off,, ""
+HKR, Settings, SpeedNegotiation_On,, ""
+
+[Modem14.AddReg]
+HKR,, Properties, 1, 80,01,00,00, ff,00,00,00, 00,00,00,00, 07,00,00,00, 0f,00,00,00, d0,03,00,00, 60,09,00,00, 60,09,00,00
+HKR, Init,      2,, "AT &F &C1&D2<

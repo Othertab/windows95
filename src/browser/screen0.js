@@ -1,5 +1,6 @@
 "use strict";
-var old_screen = screen;
+
+var screen_size = [screen.width, screen.height];
 
 /**
  * Adapter to use visual screen in browsers (in contrast to node)
@@ -10,15 +11,11 @@ var old_screen = screen;
 function ScreenAdapter(screen_container, bus) {
     console.assert(screen_container, "1st argument must be a DOM container");
 
-    const russian = true;
-
     var
         graphic_screen = screen_container.getElementsByTagName("canvas")[0],
         graphic_context = graphic_screen.getContext("2d", {
             alpha: false
         });
-
-    //text_screen = screen_container.getElementsByTagName("div")[0];
 
     var
         graphic_image_data,
@@ -37,16 +34,11 @@ function ScreenAdapter(screen_container, bus) {
         /** @type {number} */
         cursor_fg,
 
-        /** @type {boolean} */
-        cursor_show,
-
         /** @type {number} */
         scale_x = 1,
 
         /** @type {number} */
         scale_y = 1,
-
-        last_cursor = [0, 0, '#000000'],
 
         graphical_mode_width,
         graphical_mode_height,
@@ -54,7 +46,13 @@ function ScreenAdapter(screen_container, bus) {
         modified_pixel_min = 0,
         modified_pixel_max = 0,
 
+        full_screen = false,
+
+        last_cursor = [0, 0, '#000000'],
+
         font_size = 15,
+
+        cursor_show = false,
 
         changed_rows,
 
@@ -76,7 +74,6 @@ function ScreenAdapter(screen_container, bus) {
 
     var screen = this;
 
-    // 0x12345 -> "#012345"
     const hex_to_rgb = hex =>
         hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (m, r, g, b) => '#' + r + r + g + g + b + b)
         .substring(1).match(/.{2}/g)
@@ -98,6 +95,7 @@ function ScreenAdapter(screen_container, bus) {
             return col(n);
         return col_fix(n);
     }
+
 
     /**
      * Charmaps that constraint unicode sequences for the default dospage
@@ -145,78 +143,8 @@ function ScreenAdapter(screen_container, bus) {
         charmap[i] = String.fromCharCode(chr);
     }
 
-    if (russian) {
-        charmap[128] = 'А';
-        charmap[129] = 'Б';
-        charmap[130] = 'В';
-        charmap[131] = 'Г';
-        charmap[132] = 'Д';
-        charmap[133] = 'Е';
-        charmap[134] = 'Ж';
-        charmap[135] = 'З';
-        charmap[136] = 'И';
-        charmap[137] = 'Й';
-        charmap[138] = 'К';
-        charmap[139] = 'Л';
-        charmap[140] = 'М';
-        charmap[141] = 'Н';
-        charmap[142] = 'О';
-        charmap[143] = 'П';
-        charmap[144] = 'Р';
-        charmap[145] = 'С';
-        charmap[146] = 'Т';
-        charmap[147] = 'У';
-        charmap[148] = 'Ф';
-        charmap[149] = 'Х';
-        charmap[150] = 'Ц';
-        charmap[151] = 'Ч';
-        charmap[152] = 'Ш';
-        charmap[153] = 'Щ';
-        charmap[154] = 'Ъ';
-        charmap[155] = 'Ы';
-        charmap[156] = 'Ь';
-        charmap[157] = 'Э';
-        charmap[158] = 'Ю';
-        charmap[159] = 'Я';
-        charmap[160] = 'а';
-        charmap[161] = 'б';
-        charmap[162] = 'в';
-        charmap[163] = 'г';
-        charmap[164] = 'д';
-        charmap[165] = 'е';
-        charmap[166] = 'ж';
-        charmap[167] = 'з';
-        charmap[168] = 'и';
-        charmap[169] = 'й';
-        charmap[170] = 'к';
-        charmap[171] = 'л';
-        charmap[172] = 'м';
-        charmap[173] = 'н';
-        charmap[174] = 'о';
-        charmap[175] = 'п';
-        charmap[224] = 'р';
-        charmap[225] = 'с';
-        charmap[226] = 'т';
-        charmap[227] = 'у';
-        charmap[228] = 'ф';
-        charmap[229] = 'х';
-        charmap[230] = 'ц';
-        charmap[231] = 'ч';
-        charmap[232] = 'ш';
-        charmap[233] = 'щ';
-        charmap[234] = 'ъ';
-        charmap[235] = 'ы';
-        charmap[236] = 'ь';
-        charmap[237] = 'э';
-        charmap[238] = 'ю';
-        charmap[239] = 'я';
-        charmap[240] = 'Ё';
-        charmap[241] = 'ё';
-    }
-
     graphic_context["imageSmoothingEnabled"] = false;
 
-    //text_screen.style.display = "none";
     graphic_screen.style.display = "block";
 
     this.bus = bus;
@@ -310,15 +238,21 @@ function ScreenAdapter(screen_container, bus) {
 
     this.set_mode = function(graphical) {
         is_graphical = graphical;
-
         if (graphical) {
             graphic_screen.style.display = "block";
         } else {
             graphic_screen.style.display = "block";
-            graphic_screen.width = 720;
-            graphic_screen.height = 400;
-            graphic_screen.style.width = 720 * scale_x + "px";
-            graphic_screen.style.height = 400 * scale_y + "px";
+            if (full_screen) {
+                graphic_screen.width = 720;
+                graphic_screen.height = 400;
+                graphic_screen.style.width = screen_size[0] + "px";
+                graphic_screen.style.height = screen_size[1] + "px";
+            } else {
+                graphic_screen.width = 720;
+                graphic_screen.height = 400;
+                graphic_screen.style.width = 720 * scale_x + "px";
+                graphic_screen.style.height = 400 * scale_y + "px";
+            }
         }
     };
 
@@ -341,14 +275,6 @@ function ScreenAdapter(screen_container, bus) {
 
         text_mode_width = cols;
         text_mode_height = rows;
-
-        /*while (text_screen.childNodes.length > rows) {
-          text_screen.removeChild(text_screen.firstChild);
-        }
-
-        while (text_screen.childNodes.length < rows) {
-          text_screen.appendChild(document.createElement("div"));
-        }*/
 
         for (var i = 0; i < rows; i++) {
             this.text_update_row(i);
@@ -384,8 +310,6 @@ function ScreenAdapter(screen_container, bus) {
         graphical_mode_width = width;
         graphical_mode_height = height;
 
-        // add some scaling to tiny resolutions
-
         this.bus.send("screen-tell-buffer", [graphic_buffer32], [graphic_buffer32.buffer]);
         update_scale_graphic();
     };
@@ -400,26 +324,42 @@ function ScreenAdapter(screen_container, bus) {
     this.set_scale(scale_x, scale_y);
 
     function update_scale_text() {
-        //elem_set_scale(text_screen, scale_x, scale_y, true);
+        //elem_set_scale(graphic_screen, scale_x, scale_y, true);
     }
 
     function update_scale_graphic() {
         elem_set_scale(graphic_screen, scale_x, scale_y, false);
-        if (!is_graphical) {
-            graphic_screen.style.width = 720 * scale_x + "px";
-            graphic_screen.style.height = 400 * scale_y + "px";
-            graphic_screen.width = 720 * scale_x;
-            graphic_screen.height = 400 * scale_y;
-            font_size = 15 * scale_y;
-        } else if (graphic_screen.width == 320 && graphic_screen.height == 400) {
-            graphic_screen.style.width = 640 * scale_x + "px";
-            graphic_screen.style.height = 400 * scale_y + "px";
-        } else if (graphic_screen.width == 320 && graphic_screen.height == 200) {
-            graphic_screen.style.width = 640 * scale_x + "px";
-            graphic_screen.style.height = 400 * scale_y + "px";
+        if (full_screen) {
+            graphic_screen.style.width = old_screen.width + "px";
+            graphic_screen.style.height = old_screen.height + "px";
         } else {
-            graphic_screen.style.width = graphic_screen.width * scale_x + "px";
-            graphic_screen.style.height = graphic_screen.height * scale_y + "px";
+            if (!is_graphical) {
+                graphic_screen.style.width = 720 * scale_x + "px";
+                graphic_screen.style.height = 400 * scale_y + "px";
+                graphic_screen.width = 720 * scale_x;
+                graphic_screen.height = 400 * scale_y;
+                font_size = 15 * scale_y;
+            } else if (graphic_screen.width == 320 && graphic_screen.height == 400) {
+                graphic_screen.style.width = 640 * scale_x + "px";
+                graphic_screen.style.height = 400 * scale_y + "px";
+                startup_logo.style.width = 640 * scale_x + "px";
+                startup_logo.style.height = 400 * scale_y + "px";
+                graphic_screen.style.display = "none";
+                startup_logo.style.display = "block";
+                windows_started = false;
+            } else if (graphic_screen.width == 320 && graphic_screen.height == 200) {
+                graphic_screen.style.width = 640 * scale_x + "px";
+                graphic_screen.style.height = 400 * scale_y + "px";
+                windows_started = false;
+            } else {
+                graphic_screen.style.width = graphic_screen.width * scale_x + "px";
+                graphic_screen.style.height = graphic_screen.height * scale_y + "px";
+            }
+            if (parseInt(graphic_screen.style.width) == screen_size[0] &&
+                parseInt(graphic_screen.style.height) == screen_size[1] &&
+                confirm('Go Fullscreen?')) {
+
+            }
         }
     }
 
@@ -483,10 +423,9 @@ function ScreenAdapter(screen_container, bus) {
         if (!is_graphical) {
             cursor_show = !cursor_show;
             graphic_context.font = 'bold ' + font_size + 'px bold Liberation Mono, DejaVu Sans Mono, Courier New, monospace';
-
             graphic_context.fillStyle = cursor_show ? cursor_fg : cursor_bg;
             graphic_context.fillRect(
-                (9 * cursor_col - 1) * scale_x,
+                (8 * cursor_col - 1) * scale_x,
                 (16 * cursor_row + 14) * scale_y,
                 9 * scale_x,
                 2 * scale_y
@@ -503,45 +442,34 @@ function ScreenAdapter(screen_container, bus) {
             bg,
             fg;
 
-        //row_element = text_screen.childNodes[row];
-        //fragment = document.createElement("div");
-
         for (var i = 0; i < text_mode_width;) {
-            //color_element = document.createElement("span");
-
             bg_color = text_mode_data[offset + 1];
             fg_color = text_mode_data[offset + 2];
-
-            // color_element.style.backgroundColor = number_as_color(bg_color);
-            // color_element.style.color = number_as_color(fg_color);
 
             // put characters of the same color in one element
             while (i < text_mode_width &&
                 text_mode_data[offset + 1] === bg_color &&
                 text_mode_data[offset + 2] === fg_color) {
                 var ascii = text_mode_data[offset];
-
                 graphic_context.fillStyle = bg = number_as_color(bg_color);
                 graphic_context.fillRect(
-                    9 * i * scale_x,
+                    8 * i * scale_x,
                     16 * row * scale_y,
-                    9 * charmap[ascii].length * scale_x,
+                    8 * charmap[ascii].length * scale_x,
                     16 * scale_y
                 );
-
                 graphic_context.font = 'bold ' + font_size + 'px bold Liberation Mono, DejaVu Sans Mono, Courier New, monospace';
-
                 graphic_context.fillStyle = fg = number_as_color(fg_color);
                 graphic_context.fillText(
                     charmap[ascii],
-                    9 * i * scale_x,
+                    8 * i * scale_x,
                     (16 * row + 12) * scale_y
                 );
 
                 if (cursor_show) graphic_context.fillStyle = cursor_fg;
                 else graphic_context.fillStyle = cursor_bg;
                 graphic_context.fillRect(
-                    (9 * cursor_col - 1) * scale_x,
+                    (8 * cursor_col - 1) * scale_x,
                     (16 * cursor_row + 14) * scale_y,
                     9 * scale_x,
                     2 * scale_y
@@ -549,7 +477,7 @@ function ScreenAdapter(screen_container, bus) {
                 if (last_cursor[0] !== cursor_row || last_cursor[1] !== cursor_col) {
                     graphic_context.fillStyle = last_cursor[2];
                     graphic_context.fillRect(
-                        (9 * last_cursor[1] - 1) * scale_x,
+                        (8 * last_cursor[1] - 1) * scale_x,
                         (16 * last_cursor[0] + 14) * scale_y,
                         9 * scale_x,
                         2 * scale_y
@@ -565,19 +493,17 @@ function ScreenAdapter(screen_container, bus) {
                 offset += 3;
 
                 if (row === cursor_row) {
-                    if (i === cursor_col || i === cursor_col + 1) {
-                        cursor_bg = bg;
-                        cursor_fg = fg;
+                    if (i === cursor_col) {
+                        // next row will be cursor
+                        // create new element
+                        break;
+                    } else if (i === cursor_col + 1) {
+                        // found the cursor
                         break;
                     }
                 }
             }
-
-            // color_element.textContent = text;
-            // fragment.appendChild(color_element);
         }
-
-        // row_element.parentNode.replaceChild(fragment, row_element);
     };
 
     this.update_buffer = function(layers) {
@@ -618,16 +544,6 @@ function ScreenAdapter(screen_container, bus) {
             );
         });
     };
-
-    window.addEventListener('keydown', function(e) {
-        if (e.key == 'Escape' || e.code == 'Escape' || e.keyCode == 27) {
-            if (mouse_locked) {
-                mouse_locked = false;
-                document.exitPointerLock();
-                document.getElementById("toggle_mouse").onclick();
-            }
-        }
-    });
 
     this.init();
 }

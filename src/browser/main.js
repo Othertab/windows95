@@ -484,31 +484,12 @@
             }
         });
 
-        var stats_storage = {
-            read: 0,
-            read_sectors: 0,
-            write: 0,
-            write_sectors: 0,
-        };
-
         emulator.add_listener("ide-read-start", function() {
             $("info_storage").style.display = "block";
             $("info_storage_status").textContent = "Loading ...";
         });
         emulator.add_listener("ide-read-end", function(args) {
-            stats_storage.read += args[1];
-            stats_storage.read_sectors += args[2];
-
             $("info_storage_status").textContent = "Idle";
-            $("info_storage_bytes_read").textContent = stats_storage.read;
-            $("info_storage_sectors_read").textContent = stats_storage.read_sectors;
-        });
-        emulator.add_listener("ide-write-end", function(args) {
-            stats_storage.write += args[1];
-            stats_storage.write_sectors += args[2];
-
-            $("info_storage_bytes_written").textContent = stats_storage.write;
-            $("info_storage_sectors_written").textContent = stats_storage.write_sectors;
         });
 
         emulator.add_listener("mouse-enable", function(is_enabled) {
@@ -525,6 +506,18 @@
             }
         });
         emulator.add_listener("screen-set-size-graphical", function(args) {
+            if(args[0] == 320)
+            {
+              if(args[1] == 400)
+              {
+                args[0] = 640;
+              }
+              else if(args[1] == 200)
+              {
+                args[0] = 640;
+                args[1] = 400;
+              }
+            }
             $("info_res").textContent = args[0] + "x" + args[1];
             $("info_bpp").textContent = args[4];
         });

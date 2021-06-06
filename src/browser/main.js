@@ -363,19 +363,6 @@
                 }, CLEAR_STATS ? 5000 : 1000);
             }
 
-            if (settings.id === "dsl") {
-                setTimeout(() => {
-                    // hack: Start automatically
-                    emulator.keyboard_send_text("\n");
-                }, 3000);
-            } else if (settings.id == "android") {
-                setTimeout(() => {
-                    // hack: select vesa mode and start automatically
-                    emulator.keyboard_send_scancodes([0xe050, 0xe050 | 0x80]);
-                    emulator.keyboard_send_text("\n");
-                }, 3000);
-            }
-
             init_ui(settings, emulator);
 
             done && done(emulator);
@@ -500,8 +487,8 @@
                 $("info_vga_mode").textContent = "Graphical";
             } else {
                 $("info_vga_mode").textContent = "Text";
-                $("info_res").textContent = "-";
-                $("info_bpp").textContent = "-";
+                $("info_res").textContent = "720x400";
+                $("info_bpp").textContent = "4";
             }
         });
         emulator.add_listener("screen-set-size-graphical", function(args) {

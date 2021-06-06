@@ -619,15 +619,5 @@ function ScreenAdapter(screen_container, bus) {
         });
     };
 
-    window.addEventListener('keydown', function(e) {
-        if (e.key == 'Escape' || e.code == 'Escape' || e.keyCode == 27) {
-            if (mouse_locked) {
-                mouse_locked = false;
-                document.exitPointerLock();
-                document.getElementById("toggle_mouse").onclick();
-            }
-        }
-    });
-
     this.init();
 }

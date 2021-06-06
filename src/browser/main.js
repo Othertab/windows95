@@ -97,7 +97,6 @@
 
             var hda_file = $("hda_image").files[0];
             if (hda_file) {
-                last_file = hda_file;
                 settings.hda = {
                     buffer: hda_file
                 };

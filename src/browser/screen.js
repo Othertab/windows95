@@ -311,8 +311,11 @@ function ScreenAdapter(screen_container, bus) {
     this.set_mode = function(graphical) {
         is_graphical = graphical;
 
-        if (graphical) {
+        if (is_graphical) {
             graphic_screen.style.display = "block";
+            graphic_screen.style.width = graphical_mode_width * scale_x;
+            graphic_screen.style.height = graphical_mode_height * scale_y;
+			update_scale_graphic();
         } else {
             graphic_screen.style.display = "block";
             graphic_screen.width = 720;
@@ -371,8 +374,8 @@ function ScreenAdapter(screen_container, bus) {
         graphic_screen.width = width;
         graphic_screen.height = height;
 
-        //graphic_screen.style.width = width * scale_x + "px";
-        //graphic_screen.style.height = height * scale_y + "px";
+        graphic_screen.style.width = width * scale_x + "px";
+        graphic_screen.style.height = height * scale_y + "px";
 
         // Make sure to call this here, because pixels are transparent otherwise
         //screen.clear_screen();
@@ -411,15 +414,18 @@ function ScreenAdapter(screen_container, bus) {
             graphic_screen.width = 720 * scale_x;
             graphic_screen.height = 400 * scale_y;
             font_size = 15 * scale_y;
-        } else if (graphic_screen.width == 320 && graphic_screen.height == 400) {
+        }
+		if (is_graphical && graphic_screen.width == 320 && graphic_screen.height == 400) {
             graphic_screen.style.width = 640 * scale_x + "px";
             graphic_screen.style.height = 400 * scale_y + "px";
-        } else if (graphic_screen.width == 320 && graphic_screen.height == 200) {
+        } else if (is_graphical && graphic_screen.width == 320 && graphic_screen.height == 200) {
             graphic_screen.style.width = 640 * scale_x + "px";
             graphic_screen.style.height = 400 * scale_y + "px";
-        } else {
-            graphic_screen.style.width = graphic_screen.width * scale_x + "px";
-            graphic_screen.style.height = graphic_screen.height * scale_y + "px";
+        } else if(is_graphical) {
+            graphic_screen.width = graphical_mode_width;
+            graphic_screen.height = graphical_mode_height;
+            graphic_screen.style.width = graphical_mode_width * scale_x + "px";
+            graphic_screen.style.height = graphical_mode_height * scale_y + "px";
         }
     }
 

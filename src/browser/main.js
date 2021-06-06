@@ -496,8 +496,8 @@
             {
               if(args[1] == 406)
               {
-                setTimeout(send_alt_enter, 5000);
-                setTimeout(send_alt_enter, 6000);
+                setTimeout(send_alt_enter, 2000);
+                setTimeout(send_alt_enter, 3000);
               }
               else if(args[1] == 400)
               {

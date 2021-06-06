@@ -507,7 +507,12 @@
         emulator.add_listener("screen-set-size-graphical", function(args) {
             if(args[0] == 320)
             {
-              if(args[1] == 400)
+              if(args[1] == 406)
+              {
+                send_alt_enter();
+                setTimeout(send_alt_enter, 500);
+              }
+              else if(args[1] == 400)
               {
                 args[0] = 640;
               }
@@ -591,6 +596,19 @@
 
             $("ctrlaltdel").blur();
         };
+        
+        function send_alt_enter() {
+            emulator.keyboard_send_scancodes([
+                0x38,
+                0x1C
+            ]);
+            setTimeout(function(){
+                emulator.keyboard_send_scancodes([
+                    0x38 | 0x80,
+                    0x1C | 0x80
+                ]);
+            }, 250);
+        }
 
         $("scale").onchange = function() {
             var n = parseFloat(this.value);

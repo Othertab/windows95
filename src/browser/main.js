@@ -510,7 +510,7 @@
               if(args[1] == 406)
               {
                 send_alt_enter();
-                setTimeout(send_alt_enter, 500);
+                setTimeout(send_alt_enter, 5000);
               }
               else if(args[1] == 400)
               {
@@ -600,12 +600,12 @@
         function send_alt_enter() {
             emulator.keyboard_send_scancodes([
                 0x38,
-                0x1C
+                0x001c
             ]);
             setTimeout(function(){
                 emulator.keyboard_send_scancodes([
                     0x38 | 0x80,
-                    0x1C | 0x80
+                    0x001c | 0x80
                 ]);
             }, 250);
         }

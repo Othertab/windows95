@@ -298,6 +298,12 @@ function ScreenAdapter(screen_container, bus) {
 
         this.timer();
     }.bind(this);
+    
+    this.fix_scale_text = function(sx, sy){
+        this.set_scale(sx, sy);
+        if(!is_graphical)
+            update_text();
+    }
 
     var update_graphical = function() {
         this.bus.send("screen-fill-buffer");

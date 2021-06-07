@@ -302,6 +302,7 @@ function ScreenAdapter(screen_container, bus) {
     this.fix_scale_text = function(sx, sy){
         this.set_scale(sx, sy);
         if(!is_graphical)
+            alert('test!!!scale'),
             update_text();
     }
 
@@ -363,7 +364,7 @@ function ScreenAdapter(screen_container, bus) {
             this.text_update_row(i);
         }
 
-        update_scale_text();
+        update_scale_graphic();
     };
 
     this.set_size_graphical = function(width, height, buffer_width, buffer_height) {
@@ -403,7 +404,6 @@ function ScreenAdapter(screen_container, bus) {
         scale_x = s_x;
         scale_y = s_y;
 
-        update_scale_text();
         update_scale_graphic();
     };
     this.set_scale(scale_x, scale_y);

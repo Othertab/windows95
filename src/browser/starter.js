@@ -970,7 +970,7 @@ V86Starter.prototype.screen_set_scale = function(sx, sy)
 {
     if(this.screen_adapter)
     {
-        this.screen_adapter.set_scale(sx, sy);
+        this.screen_adapter.fix_scale_text(sx, sy);
     }
 };
 

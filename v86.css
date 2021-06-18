@@ -133,7 +133,6 @@ html {
 }
 ::-webkit-scrollbar {
     width: 20px;
-    background-image: url(../bg-pattern.b8125962.png);
     background-size: 20px;
 }
 ::-webkit-scrollbar-thumb {

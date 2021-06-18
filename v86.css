@@ -17,6 +17,19 @@
   background-color: #000;
 }
 
+.btn:before, button:before, input[type=submit]:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    border-color: #dedede grey grey #dedede;
+    border-style: solid;
+    border-width: 2px;
+}
+
 body {
   color: #fff;
   line-height: 1.5;
